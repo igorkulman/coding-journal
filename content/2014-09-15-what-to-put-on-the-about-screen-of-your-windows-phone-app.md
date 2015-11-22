@@ -22,7 +22,7 @@ After some trial and error I came up with a standardized about screen I now use 
 
 The About tab is the most important. It shows the version of the app, this is important when users report problems, information about the author and the designer of the app with Twitter contacts and buttons to send feedback via email and rate the app in the Windows Phone Store. Providing a feedback mechanism is really important, the users will write you about an issue they have with the app instead of just giving you a bad review in the Windows Phone Store.
 
-[<img src="http://blog.kulman.sk/wp-content/uploads/2014/09/about1.png"  class="alignnone size-full wp-image-1008" />][1]
+{{% img-responsive "/images/about1.png" %}}
 
 The screenshot shows the About page from my latest app [TvTime][2]. You can easily get the app version from the manifest using the [ManifestHelper][3] from the [Kulman.WP8 Nuget package][4].
 
@@ -30,7 +30,7 @@ You should know that submitting an app is just a beginning, you then have to ans
 
 I use the second tab, More apps, as a form of cross-promotion.
 
-[<img src="http://blog.kulman.sk/wp-content/uploads/2014/09/about2.png"  class="alignnone size-full wp-image-1009" />][5]
+{{% img-responsive "/images/about2.png" %}}
 
 If the users like your app, they may also like your other apps so why not make it easier for them to get them. I have a simple XML file with names, links and icons of my apps hosted on a webserver that the app downloads and displays, of course removing itself from the list.
 

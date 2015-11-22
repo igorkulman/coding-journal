@@ -23,4 +23,6 @@ I am not a mouse or a touch person, I like using the keyboard and keyboard short
 
 Implementing this functionality is really simple, you just need to handle the KeyUp event and listen for the Backspace key. You can implement the KeyUp event handler on every View in your app, but that is not necessary. You can just hook up the global Window.Current.CoreWindow.KeyUp event after you app starts.
 
+{{< gist b0f41a1a25acad0d17a4>}}
+
 If you implement this in your app, I am sure you will make some of your users more happy.

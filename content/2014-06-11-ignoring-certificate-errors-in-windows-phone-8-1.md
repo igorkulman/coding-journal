@@ -19,4 +19,6 @@ In Windows Phone 8.1 there are strangely two HttpClient classes, one in System.N
 
 Using the IHttpFilter, you can easily ignore certificate errors
 
+{{< gist 76c9d8f1e79b6fd41c33>}}
+
 but you have to get used to doing all the request in a different way, the Windows.Web.Http.HttpClient way that differs from the System.Net.Http.HttpClient way.

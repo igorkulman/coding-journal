@@ -26,11 +26,17 @@ Communicating with a JSON based REST service is a task that many Windows Phone a
 
 The usage of this base class is simple. Create your service class and inherit from BaseRestService. The minimum you need to do to make it work is to override the GetBaseUrl() method to set the base url for all the requests. You can (but do not have to) also override the GetRequestHeaders() method to set the default request headers.
 
+<script src="https://gist.github.com/igorkulman/405732bf92858dba1c3c.js?file=usage1.cs"></script>
+
 and you can now use the following protected methods
+
+<script src="https://gist.github.com/igorkulman/405732bf92858dba1c3c.js?file=methods.cs"></script>
 
 All the JSON serialization and deserialization is automatically done for you. If you need to execute some action before every request (like checking if the OAuth token expired and refreshing it), simply override the OnBeforeRequest() method.
 
 Methods in your service may then look like this
+
+<script src="https://gist.github.com/igorkulman/405732bf92858dba1c3c.js?file=usage2.cs"></script>
 
 In case of an error, the methods throw either a DeserialziationException with the original data if deserialization failed, or a ConnectionException with the HTTP status code.
 

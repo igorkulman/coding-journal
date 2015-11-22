@@ -26,9 +26,15 @@ Today I read Joost van Schaik&#8217;s blog post called [A behavior to show a Mes
 
 **Helper class**
 
+<script src="https://gist.github.com/igorkulman/fda1860b35d5312e9157.js?file=DialogHelper.cs"></script>
+
 with a simple usage in ViewModel
 
+<script src="https://gist.github.com/igorkulman/fda1860b35d5312e9157.js?file=usage.cs"></script>
+
 and in the View (making use of Caliburn.Micro mapping the AppBarButton with x:Name=&#8221;Message&#8221; to the Message method in the ViewModel
+
+<script src="https://gist.github.com/igorkulman/fda1860b35d5312e9157.js?file=usage.xaml"></script>
 
 If you want to show a dialog with just the Ok button, set cancelText to null and do not process the helper method&#8217;s result.
 
@@ -36,7 +42,11 @@ If you want to show a dialog with just the Ok button, set cancelText to null and
 
 If you do not like static classes, just make it service
 
+<script src="https://gist.github.com/igorkulman/fda1860b35d5312e9157.js?file=DialogHelperService.cs"></script>
+
 the usage in the ViewModel will change just slightly
+
+<script src="https://gist.github.com/igorkulman/fda1860b35d5312e9157.js?file=usage2.cs"></script>
 
 and you can easily mock the service and test the ViewModel.
 

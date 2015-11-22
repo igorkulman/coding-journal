@@ -30,19 +30,23 @@ Windows Phone 8.1 XAML contains a Pivot control that looks like the one from Win
 
 If you want to change the PivotItem header color in Windows Phone 7/8, you just define the color in the Header template:
 
+<script src="https://gist.github.com/igorkulman/a49d0c7d471c4de42521.js?file=wp8.xaml"></script>
+
 This works great, changing the color of the active PivotItem Header to the color you want and applying some opacity to the inactive PivotItem Headers.
 
-[<img src="http://blog.kulman.sk/wp-content/uploads/2014/12/header78.png" alt="" width="340" height="107" class="alignnone size-full wp-image-1063" />][1]
+[<img src="/images/header78.png" alt="" width="340" height="107" class="alignnone size-full wp-image-1063" />][1]
 
 **Windows Phone 8.1 XAML**
 
 If you apply the same Header template to PivotItem in Windows Phone 8.1 XAML, you will find that there is a bug in the control. The inactive PivotItem Headers do not get opacity change applied.
 
-[<img src="http://blog.kulman.sk/wp-content/uploads/2014/12/header81.png" alt="" width="343" height="99" class="alignnone size-full wp-image-1065" />][2]
+[<img src="/images/header81.png" alt="" width="343" height="99" class="alignnone size-full wp-image-1065" />][2]
 
 This is obviously a problem, if you do not want to do same SelectedIndex manipulation to change the color programatically for all the inactive PivotItem headers. 
 
-Lucliky, there is a way to fix this. You can redefine the PivotHeaderForegroundUnselectedBrush and PivotHeaderForegroundSelectedBrush to the active and inactive colors of your choice.
+Luckily, there is a way to fix this. You can redefine the PivotHeaderForegroundUnselectedBrush and PivotHeaderForegroundSelectedBrush to the active and inactive colors of your choice.
+
+<script src="https://gist.github.com/igorkulman/a49d0c7d471c4de42521.js?file=wp81.xaml"></script>
 
  [1]: http://blog.kulman.sk/wp-content/uploads/2014/12/header78.png
  [2]: http://blog.kulman.sk/wp-content/uploads/2014/12/header81.png
