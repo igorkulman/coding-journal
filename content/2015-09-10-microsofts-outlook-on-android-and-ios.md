@@ -1,6 +1,6 @@
 ---
 title: Microsoft’s Outlook on Android and iOS
-author: Igor Kulman
+author: Sponsored Content
 layout: post
 date: 2015-09-10
 url: /microsofts-outlook-on-android-and-ios/
