@@ -1,0 +1,13 @@
+baseurl = "http://blog.kulman.sk/"
+languageCode = "en-us"
+title = "Coding Journal"
+
+theme = "purehugo"
+Paginate = 10
+disqusShortname = "coudingjournal"
+
+[params]
+  twitterName = "igorkulman"
+  githubName = "igorkulman"
+  description = "Adventures in the world of C#, F# and WinRT"
+  google_analytics = "UA-49528577-2"  
