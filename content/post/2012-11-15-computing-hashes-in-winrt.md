@@ -23,4 +23,4 @@ If you ever generated a MD5 or SHA hash in C# you problaby uset the classes from
 
 Specifing the algoritm by its string name is not a good idea in my opinion, although you can use the names from the HashAlgorithmNames class. I would rather make the GetHash method private and create public method for all the algorithms
 
-{{< gist 5849455}}
+{{< gist 5849455>}}

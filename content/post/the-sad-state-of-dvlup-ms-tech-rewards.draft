@@ -1,0 +1,19 @@
++++
+Categories = [ "Rants" ]
+Description = ""
+Tags = []
+author = "Igor Kulman"
+date = "2015-11-22T22:41:12+01:00"
+title = "The sad state of DVLUP (MS Tech Rewards)"
+
++++
+
+If you are a Windows Phone developer you must know DVLUP. It was a program for developers developed by Nokia. The idea was simple. Do Windows Phone development related challenges, make your apps beter thanks to them, get points, exchange points for rewards. Sounds good, does it not?
+
+**Interesting, but location dependent**
+
+The problem with DVLUP was that it was location dependent. It opened in my countries maybe two years after US and developers from other "more important" countries could participate. The challanges were also location dependent, showing me only a small subset in my country. But they were interesting. They made me implement some new stuff into my apps that I would not do otherwise. And I got points for doing them. When I wanted to exchange the points for some rewards, there were not that many available in my country. No phones or other hardware like in the US. A Steam gift card was the only useful think that I could get. But I did not mind, I liked doing the challenges. 
+
+And then Microsoft bought Nokia and slowly DVLUP turned into MS Tech Rewards.
+
+**Pushing Universal Apps to hard**
