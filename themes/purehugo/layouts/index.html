@@ -8,7 +8,7 @@
             <!-- A wrapper for all the blog posts -->
             <div class="posts">
                 {{ range .Paginator.Pages }}
-                <h1 class="content-subhead">{{ .Date.Format "02 Jan 2006, 15:04" }}</h1>
+                <h1 class="content-subhead">{{ .Date.Format "02 Jan 2006" }}</h1>
                 <section class="post">
                     <header class="post-header">
 
@@ -27,7 +27,13 @@
                     </header>
 
                     <div class="post-description">
-                        {{ .Content }}
+                       {{ .Summary }}
+
+                        {{ if .Truncated }}
+  <div class="read-more-link">
+    <a href="{{ .RelPermalink }}">Read More…</a>
+  </div>
+  {{ end }}
                     </div>
                 </section>
                 {{ end }}
