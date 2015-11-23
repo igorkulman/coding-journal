@@ -31,7 +31,7 @@ Small and simple extension with just one task, displaying indent and page width 
 
 VSColorOutput can change the color of a line emitted to the output window based on specified rules. The rules consist of regular expressions. Rules map to classifications which in turn map to colors. The default patterns will color build errors in red, warnings in yellow/gold and successful build messages in green. It also colors the output of debug messages when running an app, so you can easily sort exceptions and your custom debug messages containing certain words. 
 
-![VSColorOutput][5]
+{{% img-responsive "/images/vscoloroutput.png" %}}
 
 **[Rename Visual Studio Windows Title][6]**
 
