@@ -21,13 +21,13 @@ tags:
 ---
 This blog post is inspired by the [7 open-source Visual Studio Extensions to make your life easier][1] article. In the article Igal Tabachnik showed his favorite Visual Studio extensions, that were quite interesting. I also use a few Visual Studio extensions that make my life easier, so I decided to share. 
 
+<!--more-->
+
 **[Indent Guides][2]**
 
 Small and simple extension with just one task, displaying indent and page width guides in Visual Studio text editor windows. There are three styles of guides: solid, dotted and dashed, available in thin and thick varieties and customizable color.
 
 {{% img-responsive "/images/guides.png" %}}
-
-<!--more-->
 
 **[VSColorOutput][4]**
 
