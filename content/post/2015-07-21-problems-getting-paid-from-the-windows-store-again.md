@@ -32,6 +32,8 @@ _Great news, your June payout was returned due to an internal issue; however, th
 
 I never got the money. The employee asked me a few times if I got the money and then resigned, telling me that it is my problem and I should check with my bank. Of course I checked with my bank, they do not have the money. If they had, they would transfer it to my account.
 
+<!--more-->
+
 **Will it happen again?**
 
 So the support is not helpful, I think I will never see this money and I can just hope the next payment in a couple of months will be successful. Will it?

@@ -27,6 +27,8 @@ The extension is called [Rename Visual Studio Window][1] and it works with Visua
 
 {{% img-responsive "/images/rename.png" %}}
 
+<!--more-->
+
 Your taskbar will then look like this
 
 {{% img-responsive "/images/trayalya.png" %}}

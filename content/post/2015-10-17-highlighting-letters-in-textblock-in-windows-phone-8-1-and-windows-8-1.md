@@ -29,6 +29,8 @@ In my current project I had to implement an interesting feature for both Windows
 
 {{% img-responsive "/images/highlighting.png" %}}
 
+<!--more-->
+
 The standard TextBlock used to display the movie titles does not support any kind of letter highlighting, so I had to write a custom one. I created a custom UserControl. The UserControl contains a few dependency properties Text, HighlightedText, HighlightBrush and a TextBlock. When Text or HighlightedText change, the Text is then split into multiple Runs that are added to the TextBlock.
 
 {{< gist 87b051f2f3a54bf895f0>}}

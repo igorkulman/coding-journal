@@ -30,6 +30,8 @@ The app is a Windows Phone 8 shopping app for the biggest Czech online retailer.
 
 In worst case the main screen contains over 10 hundred images. It was quite a hassle to make it work well in the Windows Phone 8 SDK (no, rewriting a shopping about with about 70 screens to Windows Phone 8.1 is not feasible). But it work juts fine. Until last week.
 
+<!--more-->
+
 **The problem**
 
 Last week, users started to report that the app freezes on the main screen, sometime making the whole phone freeze. This was really bad. Frozen app means not only angry customers but customer that do not buy stuff. So I started to investigate.

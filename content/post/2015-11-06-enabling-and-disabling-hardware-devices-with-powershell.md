@@ -21,6 +21,8 @@ I have a built-in fingerprint reader on my Thinkpad notebook that I use for logi
 
 Of course, I was looking for a way to automate this, because I do not think that this issue will be fixed any time soon by Microsoft or Lenovo. I found out there is a [PowerShell cmdlet that expose device enumeration and management APIs][1]. Using this cmdlet I wrote a simple PowerShell script to the the work.
 
+<!--more-->
+
 It has to be run with administrator privileges to work. Maybe I will go one step further and make this script run each time the notebook wakes up, just to be sure.
 
 {{< gist 3bea04333c0b47156c68>}}

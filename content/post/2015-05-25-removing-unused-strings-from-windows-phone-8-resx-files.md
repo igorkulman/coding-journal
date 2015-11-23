@@ -23,6 +23,8 @@ Using RESX files is the standard approach to Windows Phone 8 app localization, i
 
 To solve this problem I have created a simple command line utility, that is [available at Github][1]. This utility assumes that you use the standard localization approach from the templates (AppResources.{lang}.resx and LocalizedStrings.{value} in XAML).
 
+<!--more-->
+
 The usage is really simple. Just run the utility with the path to your project as a parameter. It will detect all resources files and remove all the unused strings from them.
 
  [1]: https://github.com/igorkulman/RemoveUnusedResources

@@ -27,6 +27,8 @@ WebAuthenticationBroker is a good idea but it is implemented rather poorly. It w
 
 The real problem s that the [MSDN sample][3] states it works with Google login but it does not. The sample thinks it gets the authentication token but it does not, it just gets the success code that you have to exchange for the authentication token yourself. 
 
+<!--more-->
+
 Lets start with a basic config
 
 <script src="https://gist.github.com/igorkulman/65a406f7f3cff48be3c5.js?file=config.cs"></script>

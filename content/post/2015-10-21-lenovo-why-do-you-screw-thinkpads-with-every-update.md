@@ -21,6 +21,8 @@ So why did I get the T440s? Because it seemed like a wise choice at the time, co
 
 But not really. As every Thinkpad fan can tell you, the quality of Thinkpads is declining (even when not counting the plastic Thinkpad Edge computers that are not &#8220;real&#8221; Thinkpads). It seems like Lenovo simply does not care, making the hardware worse and software even more so. Gone are the superb ThinkVantage tools, only the Thinkpad update utility remained. And it often install software and drivers that can screw up your computer. It happened to many times, this is the latest incident.
 
+<!--more-->
+
 **Security BIOS update**
 
 The latest problem is with a BIOS update. Lenovo releases BIOS 2.35 for my T440s, fixing a [SMM &#8220;Incursion&#8221; Attack][2]. The BIOS update as pushed to me as critical using the Thinkpad update tools and fixing security problems is always a good thing. So I installed it. And problems started.
