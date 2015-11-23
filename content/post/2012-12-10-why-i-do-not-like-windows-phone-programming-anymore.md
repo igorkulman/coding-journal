@@ -24,6 +24,8 @@ I really like Windows Phone 7 as a programmer. Although capabilities of this mob
 
 When I first got my hands on a Windows Phone 8 phone I was really disappointed. I wrote two concrete post about [troubles with Windows Phone Store region][1] and an [unaccountable approach to MP3 tags][2] but lets take it more generally. Windows Phone 8 feels like Windows Phone 7 written from scratch using another technology, visually looking nearly the same but full of bugs and unfinished things. I am really amazed at things that worked on Windows Phone 7 but work much worse on Windows Phone 8. I thought that only Czech and Slovak people suffered from the &#8220;not invented here&#8221; syndrome but clearly it might be a more widespread disease. 
 
+<!--more-->
+
 The advocates of throwing away Silverlight and writing everything from scratch always tell you that it allows you to share your code with Windows 8, use the same APIs and program the same way. And they try hard to persuade you that all the Windows Phone 7 apps run great on Windows Phone 8. Neither of this statements are completely true.
 
 **Running Windows Phone 7 apps on Windows Phone 8**

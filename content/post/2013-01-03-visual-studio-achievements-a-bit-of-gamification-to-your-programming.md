@@ -23,6 +23,8 @@ Gamification is a great concept that works really well for some people, includin
 
 You can find out interesting information about your programming, check out [my profile][7].
 
+<!--more-->
+
  [1]: http://stackoverflow.com/
  [2]: http://duolingo.com/
  [3]: http://visualstudiogallery.msdn.microsoft.com/bc7a433b-b594-48d4-bba2-a2f24774d02f

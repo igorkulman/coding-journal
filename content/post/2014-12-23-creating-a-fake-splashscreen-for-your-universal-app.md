@@ -32,6 +32,8 @@ In theory, it is quite simple:
 
 This works quite well with Windows 8.1, but on Windows Phone 8.1 there is a problem. When you run the Windows Phone 8.1 app, you will see a page transition happen between the real splashscreen and your SplashScreenView. This looks strange, so it is better to get rid of it. 
 
+<!--more-->
+
 **Managing the Frame transitions on Windows Phone 8.1**
 
 To fix this issue, you can disable the transitions on the frame and add them manually to each View other than SplashScreenView, but there is a better way. You can disable the transitions when creating the frame and the enable them after navigating from the SplashScreenView. Do not forget the [#ifdefs, because it is one of those many things that are Windows Phone specific in the Universal Apps][1].

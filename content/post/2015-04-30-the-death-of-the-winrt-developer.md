@@ -29,6 +29,8 @@ But allowing WPF apps to the Windows Store is a small news compared to the abili
 
 _Android developers will be able to submit versions of their apps, written in Java or C++, to the Windows Store in he form of APKs and have those apps work on Windows Phone 10 devices. Android developers should be able to start submitting apps to the Windows 10 Store some time in the next few months._
 
+<!--more-->
+
 So let get this straight. Who would want a native mobile Windows app developed, when they can just take their Android app and use it on Windows? What company would want to keep their mobile Windows team, when they can just use their Android team to make Windows apps? 
 
 <blockquote class="twitter-tweet" width="550">

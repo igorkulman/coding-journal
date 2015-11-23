@@ -31,6 +31,8 @@ This class contains a bunch of interesting fields
 
 {{< gist 5849507>}}
 
+<!--more-->
+
 All of these fields are of type Windows.Storage.Stream.Ibuffer, therefore COM calls. To use a value useable with .NET you have to use the DataReader, I get the unique device identifier from the hardwareId
 
 {{< gist 5849511>}}

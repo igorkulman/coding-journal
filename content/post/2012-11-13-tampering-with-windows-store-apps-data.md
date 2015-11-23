@@ -20,6 +20,8 @@ The only Windows Store app I use on my work notebook is WeatherFlow because of t
 
 Using the debugger and checking the value of ApplicationData.Current.LocalFolder I found out that all the data of Windows Store apps are stored in AppData\Local\Packages in your profile (for me it is C:\Users\Igor\AppData\Local\Packages). The name of the directory for the app you are lookin for usualy contain its name, it is 08C8076A.WeatherFlow_gyyqpbm0tqk6g for WeatherFlow. The directory for each app contains a few subdirectories
 
+<!--more-->
+
 AC
   
 LocalState

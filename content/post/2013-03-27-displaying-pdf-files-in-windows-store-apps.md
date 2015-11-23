@@ -21,6 +21,8 @@ There are a few 3rd party components for displaying PDF files in Windows Store a
 
 [ComponentOne][1] has a [PDFViewer component][2] as part of their [Studio for WinRT XAML][3] package. This package costs $895. There are [many limitations][4] when using this component that you need to be aware of. If you want to have more control over the rendered PDF files, you can get all the pages as FrameworkElements and do not need to use the PDFViewer as one monolitic component. It does not support all the fonts and complex documents are rendered really messed up, it was not usable for me at all.
 
+<!--more-->
+
 **Foxit Embedded PDF SDK**
 
 Foxit has a [Embedded PDF SDK for Windows RT][5] and [Embedded PDF SDK for Windows Store Apps][6] (what is the difference?). If you want to try it, you have to fill in a registration form. There is no information about pricing and you need to fill in another form to ask for a quotation. You can get the pages of the PDF files as images if you want more control, but the component only works with StorageFiles. It cannot open a custom stream (e.g: file in isolated storage with custom encryption).

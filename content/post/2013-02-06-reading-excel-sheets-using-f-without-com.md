@@ -19,6 +19,8 @@ Reading and writing Excel files from .NET is [very easy using the Microsoft.Offi
 
 I wanted to use the ExcelPackage from F# not C# so I wrote a [very simple F# wrapper][4], that you can freely use. For now it contains just a few methods
 
+<!--more-->
+
 Excel.getWorksheets
   
 Excel.getWorksheetByIndex

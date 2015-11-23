@@ -24,6 +24,8 @@ In order to use F# Interactive in Sublime Text 2, you have to install a few pack
   * **F#**
   * **SublimeREPL**
 
+<!--more-->
+
 **Configuration**
 
 The first package add F# support to Sublime Text 2 and the second one is a multipurpose REPL that can be used with many programming languages. After installing these packages, the F# REPL should immediately work if yoz have FSI in your path. Go to _Tools | SublimeREPL | F#_ to test it out. The F# REPL always starts with its working directory set to the directory of the currently opened and selected file.

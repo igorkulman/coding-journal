@@ -20,6 +20,8 @@ First, there is no exact information about how often a developer gets paid. The 
 
 The [$200 limit should be true for Windows Store][2], but Windows Phone Store is a different store with different rules.
 
+<!--more-->
+
 **No info about pending payments**
 
 Suppose the $200 limit is true. (Windows Store states: &#8220;To get paid from the Windows Store, you must have at least $200 in app sales pending payment&#8221;) It would be really useful to know how much money your apps have made in total and from the last payout, or in other words, the pending payments. Microsoft does not provide such info. Even the support is not able (or willing) to tell you this info.

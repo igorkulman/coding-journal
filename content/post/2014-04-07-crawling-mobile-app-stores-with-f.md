@@ -23,6 +23,8 @@ I wanted the script to be easily usable from outside of F# so first I created a 
 
 I also needed a helper function to download data from the web. I used a classic WebClient with user agent set to Chrome, because the Windows Phone Store API requires a user agent header
 
+<!--more-->
+
 <script src="https://gist.github.com/igorkulman/10019990.js?file=net.fs"></script>
 
 **Apple AppStore**

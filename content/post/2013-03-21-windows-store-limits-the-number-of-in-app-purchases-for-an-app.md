@@ -17,6 +17,8 @@ We developed a Windows 8 app for a local newspaper. The content consists of issu
 
 As far as I know there is no way around the limit. We need to either delete in-app purchases for old issues so user will no longer be able to buy them (which is stupid and as ot turns out not possible) or create new app with a different name and in-app purchases for another time period (which is even more stupid).
 
+<!--more-->
+
 Sure you can implement content purchasing using other ways, but they all have one big problem. There is no way your app can get the identity of the user. If you implement your own purchasing mechanism, you cannot pair the purchases with the user, only with the device. So the user would have to buy the same content on each device, if he reinstall his system, etc. That is usually not what you want.
 
  [1]: http://blog.kulman.sk/why-are-there-no-great-windows-8-apps-because-of-winrt-a-developers-view/

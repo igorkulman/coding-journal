@@ -20,6 +20,8 @@ If you have ever taken a DVLUP challenge you may have noticed, that they recomme
 
 After some trial and error I came up with a standardized about screen I now use in all my apps. It is a pivot with two tabs; About and More apps. 
 
+<!--more-->
+
 The About tab is the most important. It shows the version of the app, this is important when users report problems, information about the author and the designer of the app with Twitter contacts and buttons to send feedback via email and rate the app in the Windows Phone Store. Providing a feedback mechanism is really important, the users will write you about an issue they have with the app instead of just giving you a bad review in the Windows Phone Store.
 
 {{% img-responsive "/images/about1.png" %}}

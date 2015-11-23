@@ -28,6 +28,8 @@ One of the first things I had to do was localize it&#8217;s controls, because th
 
 To create your own localization, I suggest you create a new RESW file in your project. You can use and existing one, but I prefer to separate the texts for the Player Framework from texts for the rest of the app. 
 
+<!--more-->
+
 Next you have to find out the keys for the string you want to localize. You an [find them in the source code][2]. You can just copy the content of that RESW file to yours RESW file and localized everything.
 
 The last step is to let the PlayerFramework know about your RESW file using

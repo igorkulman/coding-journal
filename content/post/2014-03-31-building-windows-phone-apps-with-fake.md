@@ -19,6 +19,8 @@ I have been using FAKE for quite some time now on some fairly complex projects f
 
 The FAKE script I use can by used with any Windows Phone app, it will build all the projects and copy the XAP file to a release directory.
 
+<!--more-->
+
 <script src="https://gist.github.com/igorkulman/9842235.js?file=build.fsx"></script>
 
 To get the script started, you need a batch file

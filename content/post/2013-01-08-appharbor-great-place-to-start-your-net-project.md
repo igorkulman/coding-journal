@@ -25,6 +25,8 @@ AppHarbor is a flexible and scalable .NET Platform-as-a-Service, that you can ev
 
 There are [many add-on supported by AppHarbor][3], including SQL Server, MongoDB, RavenDB, MySQL, Memcacher &#8230; Many of these ad-ons offer free versions so you can test them for free. If you run into some problems, you can use [the support forums][4] or [StackOverflow][5].
 
+<!--more-->
+
 **Flexible deployment**
 
 The thing I like best about AppHarbor are the deployment options. You can push your .NET code to AppHarbor using Git, Mercurial, Subversion or Team Foundation Server with the complimentary Git service or through integrations offered in collaboration with [Bitbucket][6], [CodePlex][7] and [GitHub][8]. 

@@ -36,6 +36,8 @@ This works great, changing the color of the active PivotItem Header to the color
 
 {{% img-responsive "/images/header78.png" %}}
 
+<!--more-->
+
 **Windows Phone 8.1 XAML**
 
 If you apply the same Header template to PivotItem in Windows Phone 8.1 XAML, you will find that there is a bug in the control. The inactive PivotItem Headers do not get opacity change applied.

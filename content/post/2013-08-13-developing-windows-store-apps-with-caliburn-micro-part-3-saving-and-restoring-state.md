@@ -21,6 +21,8 @@ In the [previous post][1] I stated that a well-behaved Windows Store app should 
 
 Implementation of the above-mentioned scenario is not very complicated, thanks to the project setup. If you want your ViewModel to be able to save and restore state, implement the IHaveState interface. It contains two method that you can override; SaveState and LoadState. In bith method you have access to a page state dictionary that you can use to save and load the state. 
 
+<!--more-->
+
 Let us reuse the SecondPageViewModel from the last post. Implement IHaveState, add two string properties and use the SaveState and LoadState method to save and load them using the page state dictionary
 
 {{< gist 6173564>}}

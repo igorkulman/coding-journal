@@ -33,6 +33,8 @@ The have created a series of books for programmes called the [Succinctly series]
 
 All the 20 books covering topics like Data Structures, iOS, Windows Store apps, F#, Git, Gis, HTTP, JQuery, Knockout.js ann many more ale completely free and promise to stay free forever, including all the updates. They are all available in PDF and Kindle format.
 
+<!--more-->
+
 I have read two books so far; Git Succinctly and F# Succinctly. They were both well written and I would recommend them to programmers wanting to learn about those technologies.
 
 **The Syncfusion Raffle!**

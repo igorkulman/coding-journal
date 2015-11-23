@@ -26,6 +26,8 @@ Caching data is usually a good idea, especially when creating APIs for mobile cl
 
 ETag is a HTTP header that acts as a hash of the data. When the server returns a response, it computes a hash of the data and sends it to the client. When the client requests the data again, it includes the ETag in its request. The server compares the ETag with the hash of the current data and if they match (the data did not change), it returns an empty responses with a HTTP 304 status code.
 
+<!--more-->
+
 <script src="https://gist.github.com/igorkulman/4e6d24d0fedfe8361c6b.js?file=etagresponse.cs"></script>
 
 **NancyFX impelemntation**

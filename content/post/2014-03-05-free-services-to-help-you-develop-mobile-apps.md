@@ -21,6 +21,8 @@ I use Git as my source control system and all my private repos are stored at [Bi
 
 For each private repo you can create a private issue tracker also for free, so all your code and issues are at the same place. The main advantage is that source control and issue tracker are connected, so you can comment or close issues directly from Git commits.
 
+<!--more-->
+
 **Flurry: mobile analytics**
 
 I use [Flurry Analytics][4] to track the usage of my apps. Flurry supports Android, iOS, Windows Phone 8 and Blackberry. The tool is completely free and allows you to track events like app runs, unique users, page views or custom events with parameters. Tracking custom events with parameters is really handy, for example thanks to it I know how many users use which color theme in my Shopping List Simple app.

@@ -24,6 +24,8 @@ In a typical implementation, you usually have a base class implementing the inte
 
 or use a framework like MVVMLight, Prism or Caliburn Micro that provides such base class for you. In your view models you have properties using the PropertyChanged method
 
+<!--more-->
+
 {{< gist 5849364>}}
 
 You do not need to create such properties by hand, you can [use a snippet][1], but it is still a lot of code to do such a simple thing.

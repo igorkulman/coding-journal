@@ -19,6 +19,8 @@ When debugging a C# program in Visual Studio, I tend to always hover over the va
 
 This is not very comfortable, so thankfully, there is a way to make this experience better, using the [DebuggerDisplay][2] attribute. This attribute can be applied to any class (and struct, enum, property, field, delegate, assembly) and allows you to define the information about the class you wanto to see in the debugger. 
 
+<!--more-->
+
 Give the attribute a string to be displayed and in this string you can reference any data from the class:
 
 {{< gist 7640468>}}

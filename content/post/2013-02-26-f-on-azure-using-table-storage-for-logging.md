@@ -21,6 +21,8 @@ The first thing you need to do is to define your log entry class. You need to cr
 
 {{< gist 5822037>}}
 
+<!--more-->
+
 Alternatively you can make your class inherit from TableEntity that already contains the PartitionKey and RowKey properties. The Severity property is in my case just a simple discriminated union
 
 {{< gist 5822042>}}

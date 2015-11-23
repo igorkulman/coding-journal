@@ -21,6 +21,8 @@ If you want to test out navigation between ViewModels, you first need something 
 
 Caliburn Micro offers an easier way. If you want a Button to invoke a method on your ViewModel, just the give the button the same name as the name of the button. The method should be public void.
 
+<!--more-->
+
 On the MainViewModel, create a public void GoToSecondPage method:
 
 {{< gist 6103983>}}

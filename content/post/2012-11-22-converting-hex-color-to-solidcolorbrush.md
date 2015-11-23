@@ -17,3 +17,5 @@ tags:
 XAML supports stating color definitions as hexa strings (starting with #) but there is no built-in way to do it in C#, you must write your own method to do it, that might look like this
 
 {{< gist 5849452>}}
+
+<!--more-->

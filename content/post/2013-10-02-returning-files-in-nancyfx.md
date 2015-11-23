@@ -21,5 +21,7 @@ If you have an absolute path of a file, you cannot use it. You need to create a 
 
 {{< gist 6791265>}}
 
+<!--more-->
+
  [1]: http://nancyfx.org/
  [2]: https://github.com/NancyFx/Nancy/wiki/Introduction#the-super-duper-happy-path

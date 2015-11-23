@@ -24,6 +24,8 @@ JSON.NET is very easy to use; first you create a JObject instance
 
 {{< gist 5857544>}}
 
+<!--more-->
+
 from which you can get a collection (in our example of type TicketViewModel)
 
 {{< gist 5857549>}}

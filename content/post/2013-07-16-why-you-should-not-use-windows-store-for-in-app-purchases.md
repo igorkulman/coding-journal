@@ -19,6 +19,8 @@ I often wonder how can something as crucial as in-app purchases be so badly impl
 
 I previously wrote about the fact that [Windows Store limits the number of in-app purchases you can define for an app][1]. The current limit is 200. If you need more, say you sell a daily newspaper, you are out of luck and Windows Store&#8217;s in app-purchases are not for you.
 
+<!--more-->
+
 **Complicated receipt validation outside of .NET**
 
 If you use in-app purchases you surely want to validate them on your server, especially considering the very weak security that Windows 8 offers to Windows Store apps. If you are not using .NET on your server, there is no guide on how to do it. Microsoft only offers a code sample in C#, nothing else. Good luck finding a solution for say PHP, I could not find any.

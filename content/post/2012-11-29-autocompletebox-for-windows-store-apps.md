@@ -26,5 +26,8 @@ Installation using Nuget:
 Install-Package AutoCompleteBoxWinRT
 ```  
 
+<!--more-->
+
+
  [1]: http://winrtxamltoolkit.codeplex.com/
  [2]: http://msdn.microsoft.com/en-us/data/gg577609.aspx

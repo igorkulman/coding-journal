@@ -28,6 +28,8 @@ Our goal was to create a Pocket client that would be really easy to use and that
   * listening to articles aloud
   * sharing articles
 
+<!--more-->
+
 In version 1.2 we really concentrated on user feedback and added many features that our users requested. We love and users and want to make them happy.
 
 The app is free to use with one limitation, all the list display just 5 articles at any time. You can use an in-app purchase to get rid of the limitation and support further development of the app.

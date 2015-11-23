@@ -16,9 +16,11 @@ In both Windows Phone 7 and Windows Phone 8 the background agent is executed app
 
 You can use [ScheduledActionService.LaunchForTest][1] to test your background agent without waiting 30 minutes for the system to run it. What if you use this method in the OnInvoke method of your background agent?
 
+<!--more-->
+
 {{< gist 5849356>}}
 
-Your background agent gets executed every minute! I [created a simple demo][2] so you can see for yourself.
+Your background agent gets executed every minute! 
 
 I wonder if this code would pass certification. Has anyone tried to use it?
 

@@ -17,6 +17,8 @@ Connecting to servers with self-signed, expired or otherwise problematic certifi
 
 In Windows Phone 8.1 there are strangely two HttpClient classes, one in System.Net.Http and another in Windows.Web.Http. Normally you would go with the one in System.Net.Http because you are probably using it thanks to the mentioned Portable HTTP Client Libraries on every other platform. You are out of luck in Windows Phone 8.1 XAML, if you want to ignore certificate errors, you have to use the one from Windows.Web.Http, because only this one accepts an IHttpFilter as an argument.
 
+<!--more-->
+
 Using the IHttpFilter, you can easily ignore certificate errors
 
 {{< gist 76c9d8f1e79b6fd41c33>}}

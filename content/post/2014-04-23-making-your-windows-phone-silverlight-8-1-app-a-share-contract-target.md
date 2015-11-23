@@ -22,6 +22,8 @@ The problem is that [all the documentation I found][3] and also [the sample app]
 
 I had to make some digging and I finally found the solution in a build video called [Contracts and Pickers: Building Apps that Work Together on Windows][5]. 
 
+<!--more-->
+
 First you have to add the **Share Contract** ability to the new manifest file (Package.appxmanifest, the Declarations tab). If you want to receive links, Choose **weblink** as data format. This step is the same for Windows Runtime and for Silverlight apps, but all the other steps differ. 
 
 You can determine if your application was launched normally or as a Share Contract target in the application Launching event. If you cast the **LaunchingEventArgs** to **ShareLaunchingEventArgs** and the result is not null, your application was launched as a Share Contract target. The video recommend creating an internal property of type **ShareOperation** in App.xaml.cs and saving the data from **ShareLaunchingEventArgs** there:

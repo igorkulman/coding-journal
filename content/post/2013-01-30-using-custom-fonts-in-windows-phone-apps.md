@@ -22,6 +22,8 @@ The custom font must be a TTF, you can also use a ZIP file with multiple TTF fil
 
 Using a custom font in XAML is very straightforward. You just need to set the _FontFamily_ property to the font file path followed by a hash (#) and the font name:
 
+<!--more-->
+
 {{< gist 5849406>}}
 
 **Custom font and C#**

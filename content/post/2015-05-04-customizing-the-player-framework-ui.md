@@ -27,6 +27,8 @@ The first step is to obtain the Generic.xaml file that the Player Framework uses
 
 You can now edit the copied XAML file and customize it any way you want. If you do the styling for a Windows Phone app, keep in mind that the ControlPanel switches to the Compact states and a few transformations are applied by default, that can interfere with your styling. 
 
+<!--more-->
+
 Finally, you need to apply the style by adding it to the page with your player
 
 {{< gist 7bbbefc9a25afa07c5e1>}}

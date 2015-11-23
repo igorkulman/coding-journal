@@ -26,6 +26,8 @@ I have been owning and using a Raspberry Pi for over a year now. I started with 
 
 I always wanted a small cheap low power media center to watch downloaded TV shows on the TV. The Pi was an ideal machine to built. I connected the Pi to a power source, ethernet, external hard drive the TV using HDMI. My distro of choice was [RaspBMC][1] at first but then I switched to [XBIAN][2]. Using this setup, the PI run XBMC (a media center software), that scanned the connected hard drive, found all the downloaded TV shows, and downloaded their metadata to make the experience better. Thanks to HDMI throughput I was able to control XBMC on the PI using the TV remote, not keyboard or mouse needed. 
 
+<!--more-->
+
 I use torrents to get the TV shows I watch, because there is no other option in my country (no Netflix, no Amazon Prime ..). I installed a torrent client on the PI (transmission), so the PI could download the TV shows on its own. The torrent client came with a web UI, I opened a port my my router and I was able to add torrents from the office, from the phone, etc.
 
 So typically, on Monday, I came to the office in the morning. I realized, there was a new episode of say Top Gear last night. I opened the browser, found the right torrent and send it to the PI using the torrent clients web UI. When I came home in the afternoon, the TV shows was there, downloaded, waiting to be played on the TV.

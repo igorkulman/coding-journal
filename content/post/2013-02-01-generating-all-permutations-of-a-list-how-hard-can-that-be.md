@@ -19,6 +19,8 @@ The problem is naturally recursive. All the permutations of a list of n items co
 
 First I came up with F# code to solve it, after some yield googling:
 
+<!--more-->
+
 {{< gist 5849397>}}
 
 When I started to think about a C# solution I got stuck. The functional solution was still resonating in my head so I ended up basically rewriting F# to C#:

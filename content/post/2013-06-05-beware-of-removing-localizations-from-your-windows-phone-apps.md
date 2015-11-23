@@ -18,4 +18,6 @@ In my app I had three localizations: en-US (default), en and cs. I do not exactl
 
 **Once you add a localization to your app, never remove it!** If you do so, all the users who use your app with that localization will have update problems.
 
+<!--more-->
+
  [1]: http://phototimeline.kulman.sk/

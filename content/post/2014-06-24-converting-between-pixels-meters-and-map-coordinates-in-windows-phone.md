@@ -21,6 +21,8 @@ In my current project I needed to solve one quite interesting problem. Imagine y
 
 The client had an interesting requirement. When the user taps the pin and the label is shown, they wanted the label to be centered on the map (basically move the map so the label appears in the middle of the map).
 
+<!--more-->
+
 In Windows Phone you can only center the map to a GeoCoordinate. If you center the map to the tapped pin&#8217;s coordinate, it is not quite right, you also need to move it by half the width of the label to the left (and half of the height down). So the solution consists of two steps
 
   1. Convert half of the label width in pixels to meters for a given zoom level (pixels -> meters conversion)

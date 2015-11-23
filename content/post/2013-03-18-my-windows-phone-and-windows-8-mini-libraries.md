@@ -36,4 +36,6 @@ Code: <https://github.com/igorkulman/AutoCompleteBox>
   
 Nuget: <https://nuget.org/packages/AutoCompleteBoxWinRT/>
 
+<!--more-->
+
  [1]: https://nuget.org/packages/winrtxamltoolkit/

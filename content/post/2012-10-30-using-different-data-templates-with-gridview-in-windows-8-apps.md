@@ -19,6 +19,8 @@ GridView and ListView are the two of the most commonly used components in Window
 
 Using ItemTemplateSelector in Windows 8 apps is easier and more straightforward that in Windows Phone 7 (I wrote about that [here in Slovak][1]). All you need to do is to create a class inheriting from the DataTemplateSelector and set the ItemTemplateSelector property of GridView (or ListView) to this new class.
 
+<!--more-->
+
 When inheriting from the DataTemplateSelector you need to override the SelectTemplateCore method. In this method you have accees to the binded item and and you can use it to decide which DataTemplate to return. You can define your DataTemplates in the App.xaml and access them via the Application.Current.Resources array with casting, but that is a bad habbit. A better solution would be to define public DataTemplate properties in your class and assign them in XAML.
 
 A custom DataTemplateSelector class may look like this

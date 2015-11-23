@@ -21,6 +21,8 @@ The first method could take advantage of the GetFilesAsync method that returns a
 
 {{< gist 5849495>}}
 
+<!--more-->
+
 This method looks fairly simple, elegant and works if the folder contains only a few files. When the folder contains tens or hundreds of files, this method gets very slow. In a folder with approximately 100 files the method takes about 1.5 seconds to return the result.
 
 There is faster way, that works in constant time (about 50ms) even in folders with hundred files, but it is not so elegant. The idea is simple, try to access the files and if you get an exception, just return false.

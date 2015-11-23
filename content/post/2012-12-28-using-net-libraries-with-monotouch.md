@@ -22,6 +22,8 @@ MonoDevelop does not support Nuget so you have to get your libaries the old way.
 
 The right way to get a .NET library working with MonoTouch is downloading its source code and building it yourself. You can use MonoDevelop to build the source codes. The only think you have to do (at least for JSON.NET) is to change the .NET profile to an equivalent Mono profile in the project settings.
 
+<!--more-->
+
  [1]: http://blog.kulman.sk/monotouch-ios-development-for-net-programmers/
  [2]: http://james.newtonking.com/projects/json-net.aspx
  [3]: http://nuget.org/

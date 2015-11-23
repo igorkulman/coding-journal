@@ -22,6 +22,8 @@ I use two computers, my desktop computer located at home and set up for work and
 
 Of course, I can solve it by connecting to my home Raspberry Pi through SSH, waking the desktop computer over LAN from it, connecting to it using Remote Desktop to do the &#8216;git push&#8217; .. not really a simple solution, there must be a better way.
 
+<!--more-->
+
 So I came up with a really simple PowerShell script to iterate to a directory with git projects and execute &#8216;git push&#8217; on all of them
 
 {{< gist 275a76230757dcd48576>}}

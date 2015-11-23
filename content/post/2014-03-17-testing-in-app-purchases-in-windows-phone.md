@@ -20,6 +20,8 @@ To make in-app purchases implementation easier, I created a simple Windows Phone
 
 <script src="https://gist.github.com/igorkulman/9571908.js?file=IWindowsPhoneStoreService.cs"></script>
 
+<!--more-->
+
 **Private beta**
 
 If you publish your app as a private beta and add the in-app products, you can test them. All the in-app purchases are always free in this scenario. The disadvantage is that you cannot debug anything, it either works or it does not (if you use my [implementation from Kulman.WP8][3], it should :).

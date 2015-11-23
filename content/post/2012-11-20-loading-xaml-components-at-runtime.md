@@ -21,6 +21,8 @@ First you need to read the XAML file. You can use the standard API with Windows.
 
 {{< gist 5849482>}}
 
+<!--more-->
+
 Once you have the XAML read as string, you can use the XamlReader and cast it to a DependencyObject.
 
 {{< gist 5849490>}}

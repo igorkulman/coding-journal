@@ -30,6 +30,8 @@ The usage of this base class is simple. Create your service class and inherit fr
 
 and you can now use the following protected methods
 
+<!--more-->
+
 <script src="https://gist.github.com/igorkulman/405732bf92858dba1c3c.js?file=methods.cs"></script>
 
 All the JSON serialization and deserialization is automatically done for you. If you need to execute some action before every request (like checking if the OAuth token expired and refreshing it), simply override the OnBeforeRequest() method.

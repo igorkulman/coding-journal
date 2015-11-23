@@ -27,6 +27,8 @@ In [TvTime][2], all the server requests are GET request, so I remember the ETag 
 
 When the app wants to get some data, I perform a GET request including the ETag as the If-None-Match header. If my ETag matches with the ETag on the server, the server returns HTTP 304 Not Modified and I return the cached data from disk. Otherwise I read the response body and return it.
 
+<!--more-->
+
 {{< gist 55fa534bdcb4ab963253>}}
 
 This approach works with the portable Http client library, that you can use with Windows Phone 8 (Silverlight), 8.1 (Sliverlight), 8.1 XAML and Windows 8/8.1. If you only need to support Windows Phone 8.1 XAML and Windows 8.1, you may want to look into the Windows.Web.Http.HttpClient.

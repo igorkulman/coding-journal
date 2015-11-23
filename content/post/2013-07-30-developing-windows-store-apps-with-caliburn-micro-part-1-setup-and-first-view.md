@@ -21,6 +21,8 @@ I have been developing Windows Store apps for some time. I have always used MVVM
 
 [Caliburn Micro][1] is a small, yet powerful framework, designed for building applications across all Xaml Platforms. With strong support for MVVM and other proven UI patterns, Caliburn.Micro will enable you to build your solution quickly, without the need to sacrifice code quality or testability.
 
+<!--more-->
+
 **Unity**
 
 When I started with Calibun Micro I discovered an [article by Thomas Baker about using Unity as DI container with Caliburn Micro][2]. His article also contains code that makes it easy for you to save and load state when the app gets suspended. With his permission, I have [created a Nuget package][3] from his code, this article is going to use this package.

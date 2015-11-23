@@ -21,6 +21,8 @@ I have been using [Fody][2] for some time to [implement the INotifyPropertyChang
 
 There is a [Fody.MethodDecorator][4] extensions that allows you to execute your code on a methods start, exit and exception. Writing the exception to Console is trivial, but I wanted to use a implementation of my custom ILogFactory. 
 
+<!--more-->
+
 There was no way to inject a ILogFactory implementation into the InterceptorAttribute. The only way that could work would be to use a ServiceLocator and I did not want to do it.
 
 **Dynamic proxy!**

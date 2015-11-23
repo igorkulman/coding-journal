@@ -19,6 +19,8 @@ First, get a stream of the uploaded file.
 
 {{< gist 5849381>}}
 
+<!--more-->
+
 Next, read the whole file to a byte array
 
 {{< gist 5849384>}}

@@ -23,6 +23,8 @@ where you typically register your ViewModels as per request and services as sing
 
 Of course this is done just once, but having to register a ViewModel each time you create a new one can be a nuisance, especially in a large project. 
 
+<!--more-->
+
 There is a better way that uses reflection. First, you need to create attributes that will represent registration as per request and a s singleton:
 
 <script src="https://gist.github.com/igorkulman/0353b26073fc11d3635f.js?file=PerRequest.cs"></script>

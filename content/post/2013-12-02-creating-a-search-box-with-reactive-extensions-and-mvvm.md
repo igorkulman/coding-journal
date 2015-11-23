@@ -20,6 +20,8 @@ You can implement this functionality with some nasty code using a DispatcherTime
 
 Suppose the ViewModel contains a string property called SearchTerm (with two-way binding to the Search box) and an event called PropertyChanged (used for the INotifyPropertyChanged implementation). We need to observe the changes of the SearchTerm property. There is no way to do it directly, we need to observe the PropertyChanged event instead. 
 
+<!--more-->
+
 We need to create an observable from the PropertyChanged event, subscribe to it filtering only the PropertyChanged calls regarding the SearchTerm property, throttling for 0.5 seconds
 
 Using the throttle operator we will get exactly the desired behaviour of executing the Search method 0.5 seconds after the user stopped typing. 

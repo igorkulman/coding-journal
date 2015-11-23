@@ -18,6 +18,8 @@ Passing the certification in Windows Phone Store and Windows Store can be a very
 
 The certification process used to discover bugs I overlooked, so it was quite useful sometimes. But it is not anymore. Let me give you an example. I wanted to change one of my Windows Phone apps from free to paid with a 3 day trial. I have this functionality implemented in another of my apps so I simply copied the trial page, set is as the start page. I tested it in trial mode, it showed, in purchased mode, the app showed the real start page. I was under the impression that everything worked just fine.
 
+<!--more-->
+
 The app update passed the certification process without problems although it had one serious flaw discovered by new users. When a user started the app in trial mode, the trial page was shown. The trial page consisted of two buttons. One button to buy the app and another button to continue the trial. The button to continue the trial made the app crash. It is definitely my fault for not testing it properly but what did the Microsoft tester do for 5 days that they did not discover this bug? They may have tested in in purchased mode only, but that does not make any sense. I am inclined to believe the did not test it at all, just held it for 5 days.
 
 **Windows Store**

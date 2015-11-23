@@ -30,6 +30,8 @@ Today I read Joost van Schaik&#8217;s blog post called [A behavior to show a Mes
 
 with a simple usage in ViewModel
 
+<!--more-->
+
 <script src="https://gist.github.com/igorkulman/fda1860b35d5312e9157.js?file=usage.cs"></script>
 
 and in the View (making use of Caliburn.Micro mapping the AppBarButton with x:Name=&#8221;Message&#8221; to the Message method in the ViewModel

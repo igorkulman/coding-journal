@@ -17,4 +17,6 @@ When navigating in a Windows Store app, you can specify a navigation parameter. 
 
 I use mainly ints (article id, gallery id &#8230;) as navigation parameters but sometimes just on int is not enough. If I want to pass two int parameters, I &#8220;encode&#8221; them into an int and then &#8220;decode&#8221; back on the target page. I have a simple Utils class for this purpose.
 
+<!--more-->
+
 {{< gist 5849447>}}

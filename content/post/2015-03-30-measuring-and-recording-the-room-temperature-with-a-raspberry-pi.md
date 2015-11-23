@@ -27,6 +27,8 @@ To make the project, you will of course need a Raspberry Pi. I use my old Raspbe
 
 To connect the temperature sensor to the Pi, I suggest you follow the [YouTube tutorial for the kit][3]. You can also solder the temperature sensor and the resistor into one piece and connect it to the Pi using [this schema][4], so the result then looks like this
 
+<!--more-->
+
 {{% img-responsive "/images/pitherm.jpg" %}}
 
 **Drivers**

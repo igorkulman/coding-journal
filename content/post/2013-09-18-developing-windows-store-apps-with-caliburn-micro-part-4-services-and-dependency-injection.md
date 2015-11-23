@@ -26,6 +26,8 @@ In next installment we will be showing a list of products, so let&#8217;s create
 
 PropertyChangedBase is a base class implementing the INotifyPropertyChanged interface and the ImplementPropertyChanged attribute makes sure it&#8217;s method is called for all the property changes. (More about Fody [here][1])
 
+<!--more-->
+
 All the operations will be handled by a service implementing the IProductService interface:
 
 {{< gist 6606127>}}

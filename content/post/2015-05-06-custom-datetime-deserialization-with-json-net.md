@@ -21,6 +21,8 @@ Sometimes you cannot influence the design of the API you have to use and wonder,
 
 Luckily, JSON.NET makes plugging in custom serializers / deserializes quite easy. There are a few base classes to help you write your own converter, when dealing with DateTime you want to inherit the DateTimeConverterBase class.
 
+<!--more-->
+
 There are two methods in this class to override, WriteJson and ReadJson. All you custom serialization and deserialization logic should be placed there. 
 
 Here is a sample implementation:

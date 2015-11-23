@@ -22,6 +22,8 @@ I thought about using Lua but I needed an easy way to integrate with some classe
 
 I extracted the main idea of my implementation of the scripting console and [posted it on GitHub][2]. I will walk you through it in this blog post.
 
+<!--more-->
+
 **Basic implementation**
 
 My basic solution consists of a Textarea the user writes the script to, the script then gets executed by Roslyn and the final result is shown. I also included a basic Repository class to show, that the scripts can use classes from the project. In the real implementation I have a logger class showing the ongoing logs and results but as I said, the Github repo is just an extracted basic idea of the scripting console.
