@@ -5,6 +5,7 @@ Tags = []
 author = "Igor Kulman"
 date = "2015-11-25T12:41:12+01:00"
 title = "The sad state of DVLUP (MS Tech Rewards)"
+url = "/the-sad-state-of-dvlup-ms-tech-rewards/"
 
 +++
 
