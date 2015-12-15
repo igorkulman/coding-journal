@@ -44,7 +44,11 @@ You can connect the Microsoft Health app to the Microsoft Health Vault, which ha
 
 <img src="/images/BandDashboard2.png" style="max-width:800px" />
 
-There are not many 3rd party iOS apps, except big fitness apps like Strava, that can use the Band, but this is not a surprise. Band apps are maybe the only platform where Windows Phone has an advantage. Also there are not so many Web Tiles available, except for a couple of sports tiles made by the Bing team.
+**Apps and Web Tiles**
+
+There are not many 3rd party iOS apps, except big fitness apps like Strava, that can use the Band, but this is not a surprise. Band apps are maybe the only platform where Windows Phone has an advantage. Also there are not so many Web Tiles available, except for a couple of sports tiles made by the Bing team. 
+
+So I decided to write [my own tile, showing the schedule of three Czech cinemas](mshealth-webtile://?action=download-manifest&url=https://dl.dropboxusercontent.com/u/73642/kinoklub.webtile). The documentation for the Web Tiles is short and concise, the samples are ok, but there is no way to test your tiles other than deploying them to the real device. No data validity checker, no emulator and no good error messages. If you make a mistake, any mistake, be it an icon with wrong dimensions or invalid JSON manifest, the Microsoft Health app just gives you a generic error when trying to deploy the app to the Band.
 
 **Steps and Sleep tracking**
 
