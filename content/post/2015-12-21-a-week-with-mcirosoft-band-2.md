@@ -63,6 +63,10 @@ Sleep tracking is the feature I was looking forward to the most. The Band track 
 <img src="/images/BandSleep1.png" style="max-width:400px" />
 <img src="/images/BandSleep2.png" style="max-width:400px" />
 
+**Guided workouts**
+
+TODO
+
 **Notifications**
 
 I set the Band to show me notifications about incoming calls and SMS, nothing more. When a notifications is invoke, the Band vibrates. The default medium intensity is not very intense, so I had to set it to high to be aware of it. When you receive a SMS, the band can "read" it to you by showing it on the screen quickly, so you do not have to scroll. 
@@ -70,6 +74,11 @@ I set the Band to show me notifications about incoming calls and SMS, nothing mo
 I did not bother to set up notifications for other apps. But the Microsoft Health app also offered me notifications for Calendar, Facebook, Facebook Messenger, Twitter and a generic one called Notifications Center. 
 
 <img src="/images/BandUI1.png" style="max-width:400px" />
+
+
+**Battery usage**
+
+The Microsoft Band 2 will stay charged for 2 days when not using the GPS. It is long as typical smartwatches, but if you are used to classical watches like I am, it is a very short time. It means another device to check status and charge. The Band will tell you to charge it long in advance. One day, I got a message to charge it at about 1 PM. By the time I got home after 6 PM the band battery indicator was red, but the Band was still working. 
 
 **Annoyances**
 
@@ -81,10 +90,8 @@ Another annoyance is also related to notifications. If you turn on the band, ope
 
 The one problem with the Band I had was the broken UV sensor. I could not exchange the Band for a new one because I live in a country that is not supported and Band is not sold here. It looks like [broken UV sensor is a common problem on both Band and Band 2](https://answers.microsoft.com/en-us/band/forum/msband-band_hardware/microsoft-band-uv-sensor-does-not-seem-to-work/97a7c92c-f135-48cd-8945-3781434d309c). If you can buy it in a Microsoft Store (I was not), try if the UV sensor works, it may not.
 
-**Battery usage**
-
-The Microsoft Band 2 will stay charged for 2 days when not using the GPS. It is long as typical smartwatches, but if you are used to classical watches like I am, it is a very short time. It means another device to check status and charge. The Band will tell you to charge it long in advance. One day, I got a message to charge it at about 1pm. By the time I got home after 6pm the band battery indicator was red, but the Band was still working. 
+I called my local Microsoft technical support and the operator did not even know what Microsoft Band 2 was! After a while, maybe binging the name, she told me to get lost because they do not support it. Nice customer service as always, Microsoft. So my UV sensor remains broken and they do not care. So I tried the UK support web page. I tried for three days and I always got the same response, telling me that they are busy chatting with someone else and that I can give them a UK phone number and they will call me back. Of course I do nod have a UK phone number. My next step will be contacting the US support after the winter holidays and see how that goes.
 
 **Conclusion**
 
-The Microsoft Band 2 is a great health device. If you expectation are similar than mine than by all means get one. If you can, because Microsoft made a mistake, again, selling it only in the US and UK. I do not get why. The one things that really bugs me is that the UV sensor is broken and there is no way I can exchange it in my country. If you are a notification junkie looking for ways to stay connected, buy a smartwatch. 
+The Microsoft Band 2 is a great health device. If you expectation are similar than mine than by all means get one. If you live in the US, go buy it to a Microsoft Store and test if everything works as supposed to. It may not. If you live outside the US, be aware that you may be on your own when something goes wrong. If you want a smartwatch or a device to keep track of notification, the Band is not for you. 
