@@ -29,7 +29,7 @@ Wearing the band on the inside allows a nice feature, turning the watch face on 
 
 **Initial setup**
 
-After I installed the Microsoft Health app for iOS on my phone, the pairing was quick without any problems. The app installed a firmware updated to the Band 2 while pairing. The next day the Microsoft Health app was updated and it updated the firmware in the Band 2 again. This time  the firmware update brought two new functions: controlling the music playback and inactivity reminder. I do not much care about the music control, I listen only to podcasts and it did not work with the podcast app. Inactivity reminder is a great feature, reminding you to wake up and take a few steps when sitting idle for a long time. I really do not know why this function was not in the Band from the beginning. 
+After I installed the Microsoft Health app for iOS on my phone, the pairing was quick without any problems. The app installed a firmware updated to the Band 2 while pairing. The next day the Microsoft Health app was updated and it updated the firmware in the Band 2 again. This time  the firmware update brought two new functions: controlling the music playback and inactivity reminder. I do not much care about the music control and I can pause them using the button on my headphones. Inactivity reminder is a great feature, reminding you to wake up and take a few steps when sitting idle for a long time. I really do not know why this function was not in the Band from the beginning. 
 
 <img src="/images/BandSetup.png" style="max-width:400px" />
 <img src="/images/BandUI2.png" style="max-width:400px" />
@@ -62,10 +62,6 @@ Sleep tracking is the feature I was looking forward to the most. The Band track 
 
 <img src="/images/BandSleep1.png" style="max-width:400px" />
 <img src="/images/BandSleep2.png" style="max-width:400px" />
-
-**Guided workouts**
-
-TODO
 
 **Notifications**
 
