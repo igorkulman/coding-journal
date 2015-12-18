@@ -6,6 +6,7 @@ author = "Igor Kulman"
 date = "2015-12-21T09:29:12+01:00"
 title = "A week with Microsoft Band 2"
 url = "/a-week-with-microsoft-band-2"
+publishdate = "2015-12-21T09:29:12+01:00"
 
 +++
 
