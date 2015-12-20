@@ -26,7 +26,7 @@ I always thought the first Microsoft Band was big, bulky and did not look very g
 
 The device feels solid, I did not feel uncomfortable wearing. I though using the keyboard while wearing it maybe be a problem and it partially was. I could use the keyboard while using my desktop computer, but I had to be careful not to scratch the display on the edge when using my Thinkpad notebook. Using the Thinkpad while wearing the Band was not really comfortable, I had to position the hand differently that I am used to.
 
-Wearing the band on the inside allows a nice feature, turning the watch face on when you flip your wrist. This can save you precious battery compared to having the watch faces always visible. 
+Wearing the band on the inside allows a nice feature, turning the watch face on when you flip your wrist. This can save you precious battery compared to having the watch faces always visible, until you realize you turn your wrist a lot during the day, for example while eating. The band is made of rubber and it scratches quite easily.
 
 **Initial setup**
 
