@@ -41,6 +41,8 @@ So I turned off BitLocker, waited for my disk do get decrypted and disabled the 
 
 So now I have a BIOS (that I cannot get rid of) with the security fix for an obscure issue but my disk is not encrypted and when I loose my computer or it gets stolen, anyone can read my data. Again, great work Lenovo. Time to install TrueCrypt I guess.
 
+**Update**: it took two month for Lenovo to acknowledge the problem and release a fix.
+
  [1]: http://camerongray.me/2015/02/fitting-physical-trackpoint-buttons-to-a-lenovo-thinkpad-t440s/
  [2]: https://support.lenovo.com/us/en/product_security/smm_attack
  [3]: https://forums.lenovo.com/t5/ThinkPad-T400-T500-and-newer-T/T440s-beeps-while-putting-in-sleep-mode-and-a-blank-screen/m-p/2191866
