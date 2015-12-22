@@ -7,7 +7,7 @@
         <div>
             <!-- A wrapper for all the blog posts -->
             <div class="posts">
-                {{ range .Paginator.Pages }}
+                {{ range where .Paginator.Pages "Section" "==" "post"  }}
                 <h1 class="content-subhead">{{ .Date.Format "02 Jan 2006" }}</h1>
                 <section class="post">
                     <header class="post-header">
