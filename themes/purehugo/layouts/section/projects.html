@@ -1,0 +1,50 @@
+{{ partial "header.html" . }}
+
+<div id="layout" class="pure-g">
+    {{ partial "sidebar.html" . }}
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+    	
+    	<h1>Projects</h1>
+		<p>List of (not only) Windows Phone and Windows projects I worked on. Listed from most recent to oldest.</p>
+
+        <div>
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                {{ range sort $.Site.Data.projects "Id" "desc" }}
+                <h1 class="content-subhead space">{{ .Date }}</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a class="post-title">{{ .Title }}</a>
+
+                       
+                    </header>
+
+                    <div class="post-description">
+                       <p>{{ .Description }}</p>
+
+                       <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{ .Image }}">
+                    </div>
+                </section>
+                {{ end }}
+            </div>
+            
+            {{ partial "footer.html" . }}
+        </div>
+    </div>
+</div>
+
+{{ partial "analytics.html" . }}
+
+<script>
+function init() {
+var imgDefer = document.getElementsByTagName('img');
+for (var i=0; i<imgDefer.length; i++) {
+if(imgDefer[i].getAttribute('data-src')) {
+imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script>
+</body>
+</html>
