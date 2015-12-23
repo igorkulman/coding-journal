@@ -1,20 +1,11 @@
----
-title: 'AppHarbor: great place to start your .NET project'
-author: Igor Kulman
-layout: post
-date: 2013-01-08
-url: /appharbor-great-place-to-start-your-net-project/
-onswipe_thumb:
-  - SKIP
-dsq_thread_id:
-  - 1401133737
-categories:
-  - Programming in general
-  - Windows Azure
-tags:
-  - .net
-  - 'c#'
----
++++
+title = "AppHarbor: great place to start your .NET project"
+author = "Igor Kulman"
+date = "2013-01-08"
+url = "/appharbor-great-place-to-start-your-net-project/"
+categories = ["Programming in general","Windows Azure"]
+tags = [".net","c#"]
++++
 If you want to host your .NET project on the Internet, there are classic ASP.NET webhosting on one side of the spectrum and Microsoft Azure on the other. If you are looking for something in the middle, take a look at [AppHarbor][1]. 
 
 **AppHarbor**

@@ -1,19 +1,11 @@
----
-title: 'C# scripting console for ASP.NET MVC application'
-author: Igor Kulman
-layout: post
-date: 2014-01-09
-url: /c-scripting-console-for-asp-net-mvc-application/
-dsq_thread_id:
-  - 2102443109
-categories:
-  - Windows Azure
-tags:
-  - azure
-  - 'c#'
-  - mvc
-  - roslyn
----
++++
+title = "C# scripting console for ASP.NET MVC application"
+author = "Igor Kulman"
+date = "2014-01-09"
+url = "/c-scripting-console-for-asp-net-mvc-application/"
+categories = ["Windows Azure"]
+tags = ["azure","c#","mvc","roslyn"]
++++
 In a recent larger ASP.NET MVC project running in Windows Azure I needed to provide the advanced users a way to execute custom scripts directly through the webbrowser. A kind of a scripting console where users can create and execute their own scripts, that interact with the project and automate some tasks (that would otherwise require too many clicks).
 
 **Choosing the language**

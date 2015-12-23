@@ -1,18 +1,11 @@
----
-title: HTC 8X, Windows Phone 8 and playing music
-author: Igor Kulman
-layout: post
-date: 2012-11-24
-url: /htc-8x-windows-phone-8-and-playing-music/
-onswipe_thumb:
-  - SKIP
-dsq_thread_id:
-  - 1179172918
-categories:
-  - Windows Phone
-tags:
-  - Windows Phone
----
++++
+title = "HTC 8X, Windows Phone 8 and playing music"
+author = "Igor Kulman"
+date = "2012-11-24"
+url = "/htc-8x-windows-phone-8-and-playing-music/"
+categories = ["Windows Phone"]
+tags = ["Windows Phone"]
++++
 I use my Nokia Lumia 800 also as a music player, with a few annoyances but nothing I could not live with. When I tried to use the HTC 8X with Windows Phone 8 as a music player, the situation was quite different.
 
 The first thing that annoys me is more of a HTC&#8217;s fault than Windows Phone&#8217;s. The HTC 8X has Beats Audio. It does not really say what it is or does, it just says it is there. Every time you plug in your headset, a notification sound is played and a toast appears informing you that the Beats Audio is on. You can disable the sound only using the disable all other notifications option in settings, so you may loose some notifications you need. Disabling the toast is impossible. I naively thought that if I disable the Beats Audio completely the notification goes away. Silly me. The notifications just changes from Beats Audio on to Beats Audio off every damn time you plug in your headset.

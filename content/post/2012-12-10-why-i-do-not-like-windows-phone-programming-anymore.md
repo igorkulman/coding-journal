@@ -1,19 +1,11 @@
----
-title: Why I do not like Windows Phone programming anymore
-author: Igor Kulman
-layout: post
-date: 2012-12-10
-url: /why-i-do-not-like-windows-phone-programming-anymore/
-onswipe_thumb:
-  - SKIP
-dsq_thread_id:
-  - 1179173053
-categories:
-  - Windows Phone
-tags:
-  - Windows Phone
-  - winrt
----
++++
+title = "Why I do not like Windows Phone programming anymore"
+author = "Igor Kulman"
+date = "2012-12-10"
+url = "/why-i-do-not-like-windows-phone-programming-anymore/"
+categories = ["Windows Phone"]
+tags = ["Windows Phone","winrt"]
++++
 Before I start with the actual arguments I feel a need to state my background first so you do not mistake me with just another hater rattling about things he does not know. I have been a long time .NET developer, I have worked with winforms, webforms, mvc, compact framework. I really like C# and love F#. In February I started to work as a full time Windows Phone developer. Although I have been programming exclusively for Windows 8 for the last few months I have a ton of experience with Windows Phone programming. 
 
 **Good old Windows Phone 7 times**

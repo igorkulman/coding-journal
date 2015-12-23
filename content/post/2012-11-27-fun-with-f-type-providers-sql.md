@@ -1,20 +1,11 @@
----
-title: 'Fun with F# Type Providers: SQL'
-author: Igor Kulman
-layout: post
-date: 2012-11-27
-url: /fun-with-f-type-providers-sql/
-onswipe_thumb:
-  - SKIP
-dsq_thread_id:
-  - 1179173044
-categories:
-  - Functional programming
-tags:
-  - 'f#'
-  - functional
-  - sql
----
++++
+title = "Fun with F# Type Providers: SQL"
+author = "Igor Kulman"
+date = "2012-11-27"
+url = "/fun-with-f-type-providers-sql/"
+categories = ["Functional programming"]
+tags = ["f#","functional","sql"]
++++
 F# is a great language with a great potential that lets you express yourself more clearly and compactly. One of the best features that comes with F# 3.0 shipped with Visual Studio 2012 is Type Providers.
 
 **What are Type Providers?**

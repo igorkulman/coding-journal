@@ -1,29 +1,11 @@
----
-title: Changing the PivotItem header color in Windows Phone 8.1 XAML
-author: Igor Kulman
-layout: post
-date: 2014-12-29
-url: /changing-the-pivotitem-header-color-in-windows-phone-8-1-xaml/
-twitterCardType:
-  - summary
-cardImageWidth:
-  - 280
-cardImageHeight:
-  - 150
-cardImage_id:
-  - 1063
-cardImage:
-  - http://blog.kulman.sk/wp-content/uploads/2014/12/header78.png
-dsq_thread_id:
-  - 3369519491
-categories:
-  - Windows Phone
-tags:
-  - 'c#'
-  - Windows Phone
-  - winrt
-  - xaml
----
++++
+title = "Changing the PivotItem header color in Windows Phone 8.1 XAML"
+author = "Igor Kulman"
+date = "2014-12-29"
+url = "/changing-the-pivotitem-header-color-in-windows-phone-8-1-xaml/"
+categories = ["Windows Phone"]
+tags = ["c#","Windows Phone","winrt","xaml"]
++++
 Windows Phone 8.1 XAML contains a Pivot control that looks like the one from Windows Phone 7/8 and also should behave the same way, but does not. You will find the first problem with the new Pivot when you want to change the PivotItem header color.
 
 **Windows Phone 7/8**

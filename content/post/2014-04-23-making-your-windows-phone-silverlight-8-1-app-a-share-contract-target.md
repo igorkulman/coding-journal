@@ -1,19 +1,11 @@
----
-title: Making your Windows Phone Silverlight 8.1 app a Share Contract target
-author: Igor Kulman
-layout: post
-date: 2014-04-23
-url: /making-your-windows-phone-silverlight-8-1-app-a-share-contract-target/
-dsq_thread_id:
-  - 2633021647
-categories:
-  - Windows Phone
-tags:
-  - 'c#'
-  - Caliburn.Micro
-  - Windows Phone
-  - xaml
----
++++
+title = "Making your Windows Phone Silverlight 8.1 app a Share Contract target"
+author = "Igor Kulman"
+date = "2014-04-23"
+url = "/making-your-windows-phone-silverlight-8-1-app-a-share-contract-target/"
+categories = ["Windows Phone"]
+tags = ["c#","Caliburn.Micro","Windows Phone","xaml"]
++++
 Windows Phone 8.1 introduced many interesting new thing, the one I personally like the best as a developer is the Share Contract. The Share Contract allows your apps to share data using an unified and easy way and also to receive data from other apps. This functionality is important for my [Pock8][1] app, which is a Pocket client. By making Pock8 app a Share Contract target, the app can receive links from other apps, more importantly from the built-in webrowser (IE). This makes the app even more easy to use and valuable. 
 
 {{% img-responsive "/images/wp81.png" %}}
