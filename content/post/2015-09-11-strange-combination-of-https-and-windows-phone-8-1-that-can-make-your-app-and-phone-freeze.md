@@ -22,7 +22,7 @@ tags:
 ---
 Last week I came upon a really bizarre problem that you may also find interesting. Lets start with a bit of context.
 
-**Tl;Dr**: There seems to be a bug in Windows phone 8.1 that can make your app and the phone freezes when displaying images over HTTPS from some servers. Skip to [the end of this article][1] to see a video and get the source code.
+**Tl;Dr**: There seems to be a bug in Windows phone 8.1 that can make your app and the phone freezes when displaying images over HTTPS from some servers. Skip to [the end of this article](#bug) to see a video and get the source code.
 
 **The Windows Phone app**
 
@@ -49,5 +49,3 @@ Here is a sample app to reproduce the problem: <https://github.com/igorkulman/Wi
 I made a video using the sample app showing the problem
 
 {{< vimeo 138747871>}}
-
- [1]: #bug
