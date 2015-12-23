@@ -26,7 +26,8 @@
                        <p>{{ .Summary }}</p>
 
                         <p>
-                       <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="{{ .Title }}" data-src="{{ .Params.image }}">
+                        
+                       <img src="{{ .Params.image }}" alt="{{ .Title }}" class="pure-img" >
                        </p>                
 
                        {{ if isset .Params "link" }} {{ .Params.linkactiontitle }}: <a href="{{ .Params.link }}">{{ .Params.linkaction }}</a>  {{ end }}
@@ -43,14 +44,5 @@
 
 {{ partial "analytics.html" . }}
 
-<script>
-function init() {
-var imgDefer = document.getElementsByTagName('img');
-for (var i=0; i<imgDefer.length; i++) {
-if(imgDefer[i].getAttribute('data-src')) {
-imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-} } }
-window.onload = init;
-</script>
 </body>
 </html>
