@@ -1,11 +1,22 @@
-+++
-title = "Custom DateTime deserialization with JSON.NET"
-author = "Igor Kulman"
-date = "2015-05-06"
-url = "/custom-datetime-deserialization-with-json-net/"
-categories = ["Programming in general"]
-tags = ["c#"]
-+++
+---
+title: Custom DateTime deserialization with JSON.NET
+author: Igor Kulman
+layout: post
+date: 2015-05-06
+url: /custom-datetime-deserialization-with-json-net/
+twitterCardType:
+  - summary
+cardImageWidth:
+  - 280
+cardImageHeight:
+  - 150
+dsq_thread_id:
+  - 3740581549
+categories:
+  - Programming in general
+tags:
+  - 'c#'
+---
 Sometimes you cannot influence the design of the API you have to use and wonder, why the API uses so strangely serialized DateTime and how to handle it using JSON.NET. 
 
 Luckily, JSON.NET makes plugging in custom serializers / deserializes quite easy. There are a few base classes to help you write your own converter, when dealing with DateTime you want to inherit the DateTimeConverterBase class.

@@ -1,11 +1,19 @@
-+++
-title = "Creating a Search box with Reactive Extensions and MVVM"
-author = "Igor Kulman"
-date = "2013-12-02"
-url = "/creating-a-search-box-with-reactive-extensions-and-mvvm/"
-categories = ["Windows Phone"]
-tags = ["c#","Caliburn.Micro","Windows Phone","xaml"]
-+++
+---
+title: Creating a Search box with Reactive Extensions and MVVM
+author: Igor Kulman
+layout: post
+date: 2013-12-02
+url: /creating-a-search-box-with-reactive-extensions-and-mvvm/
+dsq_thread_id:
+  - 2017164604
+categories:
+  - Windows Phone
+tags:
+  - 'c#'
+  - Caliburn.Micro
+  - Windows Phone
+  - xaml
+---
 Having a Search box in a Windows Phone app is a common use-case but it is only rarely done right. A good Search box does not have a Search button associated with it that the users have to click when they are finished typing and want to start the search. A good Search box starts the search immediately when the user stops typing (for a certain period of time). 
 
 You can implement this functionality with some nasty code using a DispatcherTimer, or you can use [Reactive Extensions][1]. You can use Reactive Extensions directly on a TextBox representing the Search box, but if you use MVVM (and you should) you need to attach to the property associated with the Search box instead.

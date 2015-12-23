@@ -1,11 +1,26 @@
-+++
-title = "Leveraging ETag caching in Windows Phone and Windows apps"
-author = "Igor Kulman"
-date = "2015-04-20"
-url = "/leveraging-etag-caching-in-windows-phone-and-windows-apps/"
-categories = ["Windows Phone","WinRT"]
-tags = ["c#","Windows Phone","windows store","winrt"]
-+++
+---
+title: Leveraging ETag caching in Windows Phone and Windows apps
+author: Igor Kulman
+layout: post
+date: 2015-04-20
+url: /leveraging-etag-caching-in-windows-phone-and-windows-apps/
+twitterCardType:
+  - summary
+cardImageWidth:
+  - 280
+cardImageHeight:
+  - 150
+dsq_thread_id:
+  - 3697035225
+categories:
+  - Windows Phone
+  - WinRT
+tags:
+  - 'c#'
+  - Windows Phone
+  - windows store
+  - winrt
+---
 In my previous article I showed you [how to implements server side caching using ETag][1]. HTTP clients on other platforms can usually work with ETag automatically, but of course, the portable HTTP client used on Windows platforms cannot. You have to implement ETag handling yourself.
 
 In [TvTime][2], all the server requests are GET request, so I remember the ETag values for each Url (= each GET request). I store the ETag values in application local settings.

@@ -1,11 +1,20 @@
-+++
-title = "Fast way to check if a file exists in WinRT"
-author = "Igor Kulman"
-date = "2012-10-26"
-url = "/fast-way-to-check-if-a-file-exists-in-winrt/"
-categories = ["WinRT"]
-tags = ["c#","metro","winrt"]
-+++
+---
+title: Fast way to check if a file exists in WinRT
+author: Igor Kulman
+layout: post
+date: 2012-10-26
+url: /fast-way-to-check-if-a-file-exists-in-winrt/
+onswipe_thumb:
+  - SKIP
+dsq_thread_id:
+  - 1405278277
+categories:
+  - WinRT
+tags:
+  - 'c#'
+  - metro
+  - winrt
+---
 The StorageFolder class does not containt any method to determine if a file with given name exists in that folder. There are at least two ways how to implement such method, let us call it ContainsFileAsync.
 
 The first method could take advantage of the GetFilesAsync method that returns a readonly list of all the files in a folder as StorageFile objects. The StorageFile contains a property called Name that you could compare with the given filename. The whole code would look like this

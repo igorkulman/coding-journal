@@ -1,11 +1,18 @@
-+++
-title = "Windows Phone Store region messed up in Windows Phone 8"
-author = "Igor Kulman"
-date = "2012-11-23"
-url = "/store-region-messed-up-in-windows-phone-8/"
-categories = ["Windows Phone"]
-tags = ["Windows Phone"]
-+++
+---
+title: Windows Phone Store region messed up in Windows Phone 8
+author: Igor Kulman
+layout: post
+date: 2012-11-23
+url: /store-region-messed-up-in-windows-phone-8/
+onswipe_thumb:
+  - SKIP
+dsq_thread_id:
+  - 1179172616
+categories:
+  - Windows Phone
+tags:
+  - Windows Phone
+---
 If you use Windows Phone 7, your region for the Windows Phone Store is determined by the region of your Live ID you use with the phone. The region of your Live ID cannot be changed, so if you move to another country or just want to access apps that are not available in your country there is nothing you can to about it. Changing region in your phone does not help.
 
 The situation in Windows Phone 8 is different, more messed up. When I got my hands on the HTC 8X with Windows Phone 8, I logged with my Slovak LiveID. The Windows Phone Store showed apps available in Slovakia and I had no access to music or podcasts as expected. I listen to podcasts every day so I have an US Live ID I use with my Lumia 800 (and nowhere else and cannot be &#8220;merged&#8221; with my primary Live ID). 

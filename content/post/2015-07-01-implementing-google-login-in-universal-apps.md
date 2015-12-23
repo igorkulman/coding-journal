@@ -1,11 +1,26 @@
-+++
-title = "Implementing Google login in Universal Apps"
-author = "Igor Kulman"
-date = "2015-07-01"
-url = "/implementing-google-login-in-universal-apps/"
-categories = ["WinRT"]
-tags = ["c#","Google","windows store","winrt","xaml"]
-+++
+---
+title: Implementing Google login in Universal Apps
+author: Igor Kulman
+layout: post
+date: 2015-07-01
+url: /implementing-google-login-in-universal-apps/
+twitterCardType:
+  - summary
+cardImageWidth:
+  - 280
+cardImageHeight:
+  - 150
+dsq_thread_id:
+  - 3894585440
+categories:
+  - WinRT
+tags:
+  - 'c#'
+  - Google
+  - windows store
+  - winrt
+  - xaml
+---
 In a recent project I had to implement Google login to an Universal App. I decided to use the native [WebAuthenticationBroker][1] control and the implementation was not as straightforward as I hoped. By implementing Google login I mean getting the authentication token that you can then use with your server API.
 
 WebAuthenticationBroker is a good idea but it is implemented rather poorly. It works differently on Windows 8.1 and Windows Phone 8.1 due to the &#8220;AndContinue&#8221; pattern that Windows Phone 8.1 forces on you. You can solve this with [some ifdefs and platform specific code, as always][2].

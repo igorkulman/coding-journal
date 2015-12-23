@@ -1,11 +1,22 @@
-+++
-title = "Being a polyglot programmer"
-author = "Igor Kulman"
-date = "2012-11-06"
-url = "/being-a-polyglot-programmer/"
-categories = ["Programming in general"]
-tags = ["c#","f#","java","linq","nosql"]
-+++
+---
+title: Being a polyglot programmer
+author: Igor Kulman
+layout: post
+date: 2012-11-06
+url: /being-a-polyglot-programmer/
+onswipe_thumb:
+  - SKIP
+dsq_thread_id:
+  - 1179172624
+categories:
+  - Programming in general
+tags:
+  - 'c#'
+  - 'f#'
+  - java
+  - linq
+  - nosql
+---
 Many programmers learn one platform, one language and stay in their monoculture. Learning many different programming languages can definitely change your programming style and the way you think about problems. It was certainly beneficial for me, here is why.
 
 After learning Pascal, C in the first semester at the University I started be commercial programming career as a PHP developer (part time in the second semester).  It was easy to start with and in demand so finding a part time job was easy. I never liked the language, it was not &#8220;pure&#8221;, I especially hated the function naming and parameters orders inconsistencies.

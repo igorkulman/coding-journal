@@ -1,11 +1,16 @@
-+++
-title = "Succinctly series of free books for programmers"
-author = "Igor Kulman"
-date = "2013-08-20"
-url = "/succinctly-series-of-free-books-for-programmers/"
-categories = ["Programming in general"]
-tags = ["ebook"]
-+++
+---
+title: Succinctly series of free books for programmers
+author: Igor Kulman
+layout: post
+date: 2013-08-20
+url: /succinctly-series-of-free-books-for-programmers/
+dsq_thread_id:
+  - 1620576163
+categories:
+  - Programming in general
+tags:
+  - ebook
+---
 I have recently come across an intreresting project by [Syncfusion][1], a company providing software components for the Microsoft platform. 
 
 <table style="margin-bottom:20px;">

@@ -1,11 +1,27 @@
-+++
-title = "Player Framework localization"
-author = "Igor Kulman"
-date = "2015-04-27"
-url = "/player-framework-localization/"
-categories = ["Windows Phone","WinRT"]
-tags = ["c#","Windows Phone","windows store","winrt","xaml"]
-+++
+---
+title: Player Framework localization
+author: Igor Kulman
+layout: post
+date: 2015-04-27
+url: /player-framework-localization/
+twitterCardType:
+  - summary
+cardImageWidth:
+  - 280
+cardImageHeight:
+  - 150
+dsq_thread_id:
+  - 3716240076
+categories:
+  - Windows Phone
+  - WinRT
+tags:
+  - 'c#'
+  - Windows Phone
+  - windows store
+  - winrt
+  - xaml
+---
 In my recent universal (Windows Phone 8.1 and Windows 8.1) project I implemented PlayReady DRM protected smooth streaming movies playback using the [Player Framework][1]. This projects seems to be dead, but it is still the best option when implementing any kind of video playback. 
 
 One of the first things I had to do was localize it&#8217;s controls, because the app I worked on was in Czech and Slovak, not in English (the only language the Player Framework supports out of the box). Not all the texts an be localized, but the most visible ones like button labels and error messages can. 

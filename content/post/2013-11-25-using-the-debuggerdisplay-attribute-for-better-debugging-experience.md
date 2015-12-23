@@ -1,11 +1,18 @@
-+++
-title = "Using the DebuggerDisplay attribute for better debugging experience"
-author = "Igor Kulman"
-date = "2013-11-25"
-url = "/using-the-debuggerdisplay-attribute-for-better-debugging-experience/"
-categories = ["Programming in general"]
-tags = ["c#","debug","visual studio"]
-+++
+---
+title: Using the DebuggerDisplay attribute for better debugging experience
+author: Igor Kulman
+layout: post
+date: 2013-11-25
+url: /using-the-debuggerdisplay-attribute-for-better-debugging-experience/
+dsq_thread_id:
+  - 1997766167
+categories:
+  - Programming in general
+tags:
+  - 'c#'
+  - debug
+  - visual studio
+---
 When debugging a C# program in Visual Studio, I tend to always hover over the variables to glance at their values and structure instead of explicitly writing their names into the watch window. If I want to explore say a collection, I need to unfold each of the items using the + button to get an idea about the data:
 
 {{% img-responsive "/images/debug1.png" %}}

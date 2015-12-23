@@ -1,11 +1,27 @@
-+++
-title = "REST service base class for Windows Phone 8.1 XAML apps"
-author = "Igor Kulman"
-date = "2014-11-24"
-url = "/rest-service-base-class-for-windows-phone-8-1-xaml-apps/"
-categories = ["Windows Phone","WinRT"]
-tags = ["c#","nuget","Windows Phone","windows store","winrt"]
-+++
+---
+title: REST service base class for Windows Phone 8.1 XAML apps
+author: Igor Kulman
+layout: post
+date: 2014-11-24
+url: /rest-service-base-class-for-windows-phone-8-1-xaml-apps/
+dsq_thread_id:
+  - 3257698835
+twitterCardType:
+  - summary
+cardImageWidth:
+  - 280
+cardImageHeight:
+  - 150
+categories:
+  - Windows Phone
+  - WinRT
+tags:
+  - 'c#'
+  - nuget
+  - Windows Phone
+  - windows store
+  - winrt
+---
 Communicating with a JSON based REST service is a task that many Windows Phone apps have to do. My apps sure do it a lot so I came up with a base class that I use in all of them, [put it on Github][1] and [created a Nuget package][2], so your apps could use it to. 
 
 The usage of this base class is simple. Create your service class and inherit from BaseRestService. The minimum you need to do to make it work is to override the GetBaseUrl() method to set the base url for all the requests. You can (but do not have to) also override the GetRequestHeaders() method to set the default request headers.

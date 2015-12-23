@@ -1,11 +1,19 @@
-+++
-title = "Processing JSON in .NET"
-author = "Igor Kulman"
-date = "2012-11-01"
-url = "/processing-json-in-net/"
-categories = ["WinRT"]
-tags = ["c#","json"]
-+++
+---
+title: Processing JSON in .NET
+author: Igor Kulman
+layout: post
+date: 2012-11-01
+url: /processing-json-in-net/
+onswipe_thumb:
+  - 'http://blog.kulman.sk/wp-content/plugins/onswipe/thumb/thumb.php?src=http://blog.kulman.sk/wp-content/uploads/2012/10/jsonperformance.png&amp;w=600&amp;h=800&amp;zc=1&amp;q=75&amp;f=0'
+dsq_thread_id:
+  - 1423097820
+categories:
+  - WinRT
+tags:
+  - 'c#'
+  - json
+---
 JSON is a very popular format for exchanging data, especially in the world of web technologies and JavaScript. The .NET platform contains a native support for this format but a better alternative is to use the JSON.NET library.
 
 **JSON.NET**

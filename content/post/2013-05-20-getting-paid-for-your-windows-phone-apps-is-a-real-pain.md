@@ -1,11 +1,17 @@
-+++
-title = "Windows Phone Store and problems with payments"
-author = "Igor Kulman"
-date = "2013-05-20"
-url = "/getting-paid-for-your-windows-phone-apps-is-a-real-pain/"
-categories = ["Windows Phone"]
-tags = ["c#","Windows Phone"]
-+++
+---
+title: Windows Phone Store and problems with payments
+author: Igor Kulman
+layout: post
+date: 2013-05-20
+url: /getting-paid-for-your-windows-phone-apps-is-a-real-pain/
+dsq_thread_id:
+  - 1401926592
+categories:
+  - Windows Phone
+tags:
+  - 'c#'
+  - Windows Phone
+---
 I have been a Windows Phone developer for over a year now and my paid apps made me some money. The small amount of money made is not interesting, more interesting is that getting the money from Microsoft has been a real pain. Maybe because I live **outside the US**, maybe it is a geographically independent problem. If you are a developer and live outside the US, I really want to hear your experience.
 
 **No exact info about payment rules?**

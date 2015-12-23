@@ -1,11 +1,20 @@
-+++
-title = "Using different data templates with GridView in Windows 8 apps"
-author = "Igor Kulman"
-date = "2012-10-30"
-url = "/using-different-data-templates-with-gridview-in-windows-8-apps/"
-categories = ["WinRT"]
-tags = ["c#","metro","winrt"]
-+++
+---
+title: Using different data templates with GridView in Windows 8 apps
+author: Igor Kulman
+layout: post
+date: 2012-10-30
+url: /using-different-data-templates-with-gridview-in-windows-8-apps/
+onswipe_thumb:
+  - SKIP
+dsq_thread_id:
+  - 1394834316
+categories:
+  - WinRT
+tags:
+  - 'c#'
+  - metro
+  - winrt
+---
 GridView and ListView are the two of the most commonly used components in Windows 8 apps. Items in these two components are displayed according to the DataTemplate give as the ItemTemplate property. If you do not want to display all the items the same way, you need to use a custom ItemTemplateSelector.
 
 Using ItemTemplateSelector in Windows 8 apps is easier and more straightforward that in Windows Phone 7 (I wrote about that [here in Slovak][1]). All you need to do is to create a class inheriting from the DataTemplateSelector and set the ItemTemplateSelector property of GridView (or ListView) to this new class.

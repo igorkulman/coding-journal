@@ -1,11 +1,17 @@
-+++
-title = "run background agent every minute'"
-author = "Igor Kulman"
-date = "2013-06-12"
-url = "/windows-phone-run-background-agent-every-minute/"
-categories = ["Windows Phone"]
-tags = ["background agent","c#"]
-+++
+---
+title: 'Windows Phone: run background agent every minute'
+author: Igor Kulman
+layout: post
+date: 2013-06-12
+url: /windows-phone-run-background-agent-every-minute/
+dsq_thread_id:
+  - 1394771013
+categories:
+  - Windows Phone
+tags:
+  - background agent
+  - 'c#'
+---
 In both Windows Phone 7 and Windows Phone 8 the background agent is executed approximately every 30 minutes. If you want to run your code more often, for example to create an app showing actual time on the live tile, you are out of luck. Are you? 
 
 You can use [ScheduledActionService.LaunchForTest][1] to test your background agent without waiting 30 minutes for the system to run it. What if you use this method in the OnInvoke method of your background agent?

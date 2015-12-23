@@ -1,11 +1,21 @@
-+++
-title = "Using .NET libraries with MonoTouch"
-author = "Igor Kulman"
-date = "2012-12-28"
-url = "/using-net-libraries-with-monotouch/"
-categories = ["Programming in general"]
-tags = ["c#","iOS","Mono","MonoTouch"]
-+++
+---
+title: Using .NET libraries with MonoTouch
+author: Igor Kulman
+layout: post
+date: 2012-12-28
+url: /using-net-libraries-with-monotouch/
+onswipe_thumb:
+  - SKIP
+dsq_thread_id:
+  - 1414920204
+categories:
+  - Programming in general
+tags:
+  - 'c#'
+  - iOS
+  - Mono
+  - MonoTouch
+---
 I have been [playing with MonoTouch][1] only for a few days when I already started to miss all the .NET libraries I commonly use. The first one I needed to get working with MonoTouch was [JSON.NET][2].
 
 MonoDevelop does not support Nuget so you have to get your libaries the old way. I downloaded JSON.NET package from [Nuget.org][3], but it does not contain a DLL built for Mono. Harldy any Nuget package does. You can reference a DLL built for .NET, MonoDevelop will recognize it and even offer you IntelliSense but your project will not get built.

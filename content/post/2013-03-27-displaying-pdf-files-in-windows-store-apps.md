@@ -1,11 +1,18 @@
-+++
-title = "Displaying PDF files in Windows Store apps"
-author = "Igor Kulman"
-date = "2013-03-27"
-url = "/displaying-pdf-files-in-windows-store-apps/"
-categories = ["WinRT"]
-tags = ["c#","pdf","winrt"]
-+++
+---
+title: Displaying PDF files in Windows Store apps
+author: Igor Kulman
+layout: post
+date: 2013-03-27
+url: /displaying-pdf-files-in-windows-store-apps/
+dsq_thread_id:
+  - 1179173189
+categories:
+  - WinRT
+tags:
+  - 'c#'
+  - pdf
+  - winrt
+---
 Displaying PDF files in a mobile apps is a valid use case and there are many iOS and Android app that do it. WinRT has no APIs for displaying PDF files. The only thing you can do with a PDF in WinRT is to display it in the default PDF viewer app using the Windows.System.Launcher.LaunchFileAsync method. This is typicaly not what you want to do. This method takes the user out of your app and more importantly the PDF can be copied, shared, etc. 
 
 There are a few 3rd party components for displaying PDF files in Windows Store apps, each has some problems and restrictions.

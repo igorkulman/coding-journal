@@ -1,11 +1,20 @@
-+++
-title = "Converting between pixels, meters and map coordinates in Windows Phone"
-author = "Igor Kulman"
-date = "2014-06-24"
-url = "/converting-between-pixels-meters-and-map-coordinates-in-windows-phone/"
-categories = ["Windows Phone","WinRT"]
-tags = ["c#","map","Windows Phone","xaml"]
-+++
+---
+title: Converting between pixels, meters and map coordinates in Windows Phone
+author: Igor Kulman
+layout: post
+date: 2014-06-24
+url: /converting-between-pixels-meters-and-map-coordinates-in-windows-phone/
+dsq_thread_id:
+  - 2791561091
+categories:
+  - Windows Phone
+  - WinRT
+tags:
+  - 'c#'
+  - map
+  - Windows Phone
+  - xaml
+---
 In my current project I needed to solve one quite interesting problem. Imagine you have a map with some pins representing points of interest. If the user taps on a pin, a label with the place title is shown like on this image (that is not from the real project, obviously).
 
 {{% img-responsive "/images/image_thumb_4_4.png" %}}

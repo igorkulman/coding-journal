@@ -1,11 +1,25 @@
-+++
-title = "Strange combination of HTTPS and Windows Phone 8.1 that can make your app and phone freeze"
-author = "Igor Kulman"
-date = "2015-09-11"
-url = "/strange-combination-of-https-and-windows-phone-8-1-that-can-make-your-app-and-phone-freeze/"
-categories = ["Windows Phone"]
-tags = ["c#","Windows Phone","winrt","xaml"]
-+++
+---
+title: Strange combination of HTTPS and Windows Phone 8.1 that can make your app and phone freeze
+author: Igor Kulman
+layout: post
+date: 2015-09-11
+url: /strange-combination-of-https-and-windows-phone-8-1-that-can-make-your-app-and-phone-freeze/
+twitterCardType:
+  - summary
+cardImageWidth:
+  - 280
+cardImageHeight:
+  - 150
+dsq_thread_id:
+  - 4119721143
+categories:
+  - Windows Phone
+tags:
+  - 'c#'
+  - Windows Phone
+  - winrt
+  - xaml
+---
 Last week I came upon a really bizarre problem that you may also find interesting. Lets start with a bit of context.
 
 **Tl;Dr**: There seems to be a bug in Windows phone 8.1 that can make your app and the phone freezes when displaying images over HTTPS from some servers. Skip to [the end of this article](#bug) to see a video and get the source code.

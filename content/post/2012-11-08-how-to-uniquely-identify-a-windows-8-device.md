@@ -1,11 +1,26 @@
-+++
-title = "How to uniquely identify a Windows 8 device"
-author = "Igor Kulman"
-date = "2012-11-08"
-url = "/how-to-uniquely-identify-a-windows-8-device/"
-categories = ["WinRT"]
-tags = ["c#","metro","winrt"]
-+++
+---
+title: How to uniquely identify a Windows 8 device
+author: Igor Kulman
+layout: post
+date: 2012-11-08
+url: /how-to-uniquely-identify-a-windows-8-device/
+onswipe_thumb:
+  - SKIP
+dsq_thread_id:
+  - 1404773828
+twitterCardType:
+  - summary
+cardImageWidth:
+  - 280
+cardImageHeight:
+  - 150
+categories:
+  - WinRT
+tags:
+  - 'c#'
+  - metro
+  - winrt
+---
 When developing a Windows 8 app you may need to uniquely identify the device the app runs on. One reason may be the implementation of in-app purchases.
   
 The Windows.System.Profile namespace contains HardwareToken that you can get by calling HardwareIdentification.GetPackageSpecificToken(null)

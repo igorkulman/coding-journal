@@ -1,11 +1,19 @@
-+++
-title = "What to put on the about screen of your Windows Phone app"
-author = "Igor Kulman"
-date = "2014-09-15"
-url = "/what-to-put-on-the-about-screen-of-your-windows-phone-app/"
-categories = ["Windows Phone"]
-tags = ["c#","Windows Phone","windows store","xaml"]
-+++
+---
+title: What to put on the about screen of your Windows Phone app
+author: Igor Kulman
+layout: post
+date: 2014-09-15
+url: /what-to-put-on-the-about-screen-of-your-windows-phone-app/
+dsq_thread_id:
+  - 3019986177
+categories:
+  - Windows Phone
+tags:
+  - 'c#'
+  - Windows Phone
+  - windows store
+  - xaml
+---
 The about screen of a Windows Phone app is usually the most overlooked part of the app. Sure, the users usually visit it only once, after installing the app, if ever, but it is a part of your Windows Phone app that you could put to a good use. 
 
 If you have ever taken a DVLUP challenge you may have noticed, that they recommend you place a text describing your app on the about screen. I really do not agree with this. If users install your app, they know what the app does and if they cannot figure it out, then your UI is a failure and the about screen will not save you.

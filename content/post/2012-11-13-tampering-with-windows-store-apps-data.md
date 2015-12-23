@@ -1,11 +1,19 @@
-+++
-title = "Tampering with Windows Store apps data"
-author = "Igor Kulman"
-date = "2012-11-13"
-url = "/tampering-with-windows-store-apps-data/"
-categories = ["WinRT"]
-tags = ["security","winrt"]
-+++
+---
+title: Tampering with Windows Store apps data
+author: Igor Kulman
+layout: post
+date: 2012-11-13
+url: /tampering-with-windows-store-apps-data/
+onswipe_thumb:
+  - SKIP
+dsq_thread_id:
+  - 1179172736
+categories:
+  - WinRT
+tags:
+  - security
+  - winrt
+---
 Windows Store apps run in a sandbox with their data isolated from each other. So how secure is this storage from tampering by the user? It turns out not much. 
 
 The only Windows Store app I use on my work notebook is WeatherFlow because of the live tile. The app allows you to add your city and view weather forecast for it. But there is now way to get rid of the default cities like New York, Tokyo, etc. that are in the app when you first run it. This realy annoyed me so I started to poke around. 

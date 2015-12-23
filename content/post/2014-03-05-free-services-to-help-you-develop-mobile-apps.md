@@ -1,11 +1,18 @@
-+++
-title = "Free services to help you develop mobile apps"
-author = "Igor Kulman"
-date = "2014-03-05"
-url = "/free-services-to-help-you-develop-mobile-apps/"
-categories = ["Windows Phone"]
-tags = ["bugsense","flurry","Windows Phone"]
-+++
+---
+title: Free services to help you develop mobile apps
+author: Igor Kulman
+layout: post
+date: 2014-03-05
+url: /free-services-to-help-you-develop-mobile-apps/
+dsq_thread_id:
+  - 2365112270
+categories:
+  - Windows Phone
+tags:
+  - bugsense
+  - flurry
+  - Windows Phone
+---
 If you develop mobile or any other kinds of apps, you need to have your source code versioned and stored in a safe place, cooperate with other people, track information about the usage of your apps and track all the errors that may occur. There are many free services that may help you with those tasks. In this article I will give you a list of the ones I use when developing [my apps][1].
 
 **Bitbucket: source control and issue tracker**

@@ -1,11 +1,19 @@
-+++
-title = "Visual Studio template for Caliburn.Micro Windows Phone apps"
-author = "Igor Kulman"
-date = "2014-11-03"
-url = "/visual-studio-template-for-caliburn-micro-windows-phone-apps/"
-categories = ["Windows Phone"]
-tags = ["c#","Caliburn.Micro","Windows Phone","xaml"]
-+++
+---
+title: Visual Studio template for Caliburn.Micro Windows Phone apps
+author: Igor Kulman
+layout: post
+date: 2014-11-03
+url: /visual-studio-template-for-caliburn-micro-windows-phone-apps/
+dsq_thread_id:
+  - 3186665284
+categories:
+  - Windows Phone
+tags:
+  - 'c#'
+  - Caliburn.Micro
+  - Windows Phone
+  - xaml
+---
 I have been building Windows Phone apps using the [Caliburn.Micro][1] framework for some time now. Setting up a new project takes some time and can be easily automated, so I decided to create a Visual Studio template for Windows Phone apps build with Caliburn.Micro.
 
 The templates can be downloaded from [the Visual Studio Extensions gallery][2] and used to build Windows Phone 8 and Windows Phone 8.1 Silverlight apps. It contains the basic setup with Caliburn Micro and [Fody][3], with a sample view and viewmodel.
