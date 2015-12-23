@@ -1,20 +1,11 @@
----
-title: 'Developing Windows Store apps with Caliburn Micro Part 1: setup and first view'
-author: Igor Kulman
-layout: post
-date: 2013-07-30
-url: /developing-windows-store-apps-with-caliburn-micro-part-1-setup-and-first-view/
-dsq_thread_id:
-  - 1547598275
-categories:
-  - WinRT
-tags:
-  - 'c#'
-  - Caliburn.Micro
-  - fody
-  - Unity
-  - winrt
----
++++
+title = "setup and first view'"
+author = "Igor Kulman"
+date = "2013-07-30"
+url = "/developing-windows-store-apps-with-caliburn-micro-part-1-setup-and-first-view/"
+categories = ["WinRT"]
+tags = ["c#","Caliburn.Micro","fody","Unity","winrt"]
++++
 I have been developing Windows Store apps for some time. I have always used MVVM, but mostly &#8220;my own&#8221; MVVM. I have finally decided to use a &#8220;real&#8221; MVVM framework and I have chosen Caliburn Micro, because I did not like MVVM very much. In this article I am going to show you how to use Caliburn Micro, Unity and Fody to develop Windows Store apps. 
 
 **Caliburn Micro**

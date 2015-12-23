@@ -1,17 +1,11 @@
----
-title: Do you need to create a special Windows Phone 8 build of your Windows Phone app?
-author: Igor Kulman
-layout: post
-date: 2013-04-15
-url: /do-you-need-to-create-a-special-windows-phone-8-build-of-your-windows-phone-app/
-dsq_thread_id:
-  - 1400611288
-categories:
-  - Windows Phone
-tags:
-  - 'c#'
-  - Windows Phone
----
++++
+title = "Do you need to create a special Windows Phone 8 build of your Windows Phone app?"
+author = "Igor Kulman"
+date = "2013-04-15"
+url = "/do-you-need-to-create-a-special-windows-phone-8-build-of-your-windows-phone-app/"
+categories = ["Windows Phone"]
+tags = ["c#","Windows Phone"]
++++
 If you create a Windows Phone app and you want it to be able to run on both Windows Phone 7 and Windows Phone 8, you target Windows Phone 7 and the app runs on Windows Phone 8 automatically. But is it really enough to create a Windows Phone 7 buíld? Not if you want to create a really well designed app.
 
 The problem with Windows Phone 8 from a designers point of view is that it introduces two new display resolutions. Windows Phone 7 supports just one resolution, WVGA of 800x480px. Windows Phone 8 adds WXGA (1280&#215;768) and 720p (1280&#215;720). If you run your Windows Phone 7 app on a WXGA device, the app is proportionally scaled by a factor of 1.6 to fill out the whole screen. As long as you provide all your images scaled by the same factor, the app looks ok.

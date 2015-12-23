@@ -1,19 +1,11 @@
----
-title: Useful tools for Windows Store developers
-author: Igor Kulman
-layout: post
-date: 2013-04-18
-url: /useful-tools-for-windows-store-developers/
-dsq_thread_id:
-  - 1405667874
-categories:
-  - Windows Phone
-  - WinRT
-tags:
-  - 'c#'
-  - windows store
-  - xaml
----
++++
+title = "Useful tools for Windows Store developers"
+author = "Igor Kulman"
+date = "2013-04-18"
+url = "/useful-tools-for-windows-store-developers/"
+categories = ["Windows Phone","WinRT"]
+tags = ["c#","windows store","xaml"]
++++
 I recently discovered two really neet tools that helped me with Windows Store app development. 
 
 **Windows Store Icon Maker**

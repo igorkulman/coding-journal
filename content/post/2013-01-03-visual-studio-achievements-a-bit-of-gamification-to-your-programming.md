@@ -1,18 +1,11 @@
----
-title: 'Visual Studio Achievements: a bit of gamification to your programming'
-author: Igor Kulman
-layout: post
-date: 2013-01-03
-url: /visual-studio-achievements-a-bit-of-gamification-to-your-programming/
-onswipe_thumb:
-  - http://visualstudiogallery.msdn.microsoft.com/site/view/file/63443/1/VisualStudio_badges_2.jpg
-dsq_thread_id:
-  - 1407664273
-categories:
-  - Programming in general
-tags:
-  - visual studio
----
++++
+title = "a bit of gamification to your programming'"
+author = "Igor Kulman"
+date = "2013-01-03"
+url = "/visual-studio-achievements-a-bit-of-gamification-to-your-programming/"
+categories = ["Programming in general"]
+tags = ["visual studio"]
++++
 Gamification is a great concept that works really well for some people, including me. Gamification may very well be the reason for success of projects like [StackOveflow][1] or [Duolingo][2].
 
 **Visual Studio Achievements**

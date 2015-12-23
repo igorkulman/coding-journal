@@ -1,18 +1,11 @@
----
-title: 'Crawling mobile app stores with F#'
-author: Igor Kulman
-layout: post
-date: 2014-04-07
-url: /crawling-mobile-app-stores-with-f/
-dsq_thread_id:
-  - 2593262745
-categories:
-  - Functional programming
-tags:
-  - 'f#'
-  - Windows Phone
-  - windows store
----
++++
+title = "'Crawling mobile app stores with F#'"
+author = "Igor Kulman"
+date = "2014-04-07"
+url = "/crawling-mobile-app-stores-with-f/"
+categories = ["Functional programming"]
+tags = ["f#","Windows Phone","windows store"]
++++
 Some time ago I needed a way to programatically search the Apple AppStore and Google Play Store to get some info about apps for a project. I decided to write an F# script for that task and later added support for Windows Phone Store.
 
 **Types**

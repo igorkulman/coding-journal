@@ -1,24 +1,11 @@
----
-title: Measuring and recording the room temperature with a Raspberry Pi
-author: Igor Kulman
-layout: post
-date: 2015-03-30
-url: /measuring-and-recording-the-room-temperature-with-a-raspberry-pi/
-twitterCardType:
-  - summary
-cardImageWidth:
-  - 280
-cardImageHeight:
-  - 150
-dsq_thread_id:
-  - 3639414591
-categories:
-  - Raspberry Pi
-tags:
-  - IoT
-  - python
-  - raspberry pi
----
++++
+title = "Measuring and recording the room temperature with a Raspberry Pi"
+author = "Igor Kulman"
+date = "2015-03-30"
+url = "/measuring-and-recording-the-room-temperature-with-a-raspberry-pi/"
+categories = ["Raspberry Pi"]
+tags = ["IoT","python","raspberry pi"]
++++
 The Raspberry Pi is a small embedded computing device that you can use for [many different software and hardware projects][1]. One of the first projects I did with the Pi was turning it into a device that would measure, record and display the room temperature.
 
 **Hadrware**

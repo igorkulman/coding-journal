@@ -1,19 +1,11 @@
----
-title: INotifyPropertyChanged the easy way in Windows Phone and Windows 8
-author: Igor Kulman
-layout: post
-date: 2013-06-06
-url: /inotifypropertychanged-the-easy-way-in-windows-phone-and-windows-8/
-dsq_thread_id:
-  - 1398868542
-categories:
-  - Windows Phone
-  - WinRT
-tags:
-  - 'c#'
-  - fody
-  - mvvm
----
++++
+title = "INotifyPropertyChanged the easy way in Windows Phone and Windows 8"
+author = "Igor Kulman"
+date = "2013-06-06"
+url = "/inotifypropertychanged-the-easy-way-in-windows-phone-and-windows-8/"
+categories = ["Windows Phone","WinRT"]
+tags = ["c#","fody","mvvm"]
++++
 If you develop Windows Phone, Windows 8, Silverlight or WPF apps using the MVVM pattern, you are familiar with the INotifyPropertyChanged interface.
 
 **Typical implementation**
