@@ -36,7 +36,7 @@ In worst case the main screen contains over 10 hundred images. It was quite a ha
 
 Last week, users started to report that the app freezes on the main screen, sometime making the whole phone freeze. This was really bad. Frozen app means not only angry customers but customer that do not buy stuff. So I started to investigate.
 
-First I thought there may be a problem in the app, although the app was last updated more than a month ago and the problem started only last week. Everything worked fine in the emulator, the problem was reproducible only on real devices. I tried showing only one carousel to make the app render much less data, did not help. I tried making the app show only one product in the only one carousel, still a problem. So it looked like the images were the problem. I tried replacing all the real image urls with random images from [lorempixel.com][2] and the app worked just fine.
+First I thought there may be a problem in the app, although the app was last updated more than a month ago and the problem started only last week. Everything worked fine in the emulator, the problem was reproducible only on real devices. I tried showing only one carousel to make the app render much less data, did not help. I tried making the app show only one product in the only one carousel, still a problem. So it looked like the images were the problem. I tried replacing all the real image urls with random images from [lorempixel.com](http://lorempixel.com) and the app worked just fine.
 
 I determined that the source of the problems are the images on the server. Talking with the server customer&#8217;s people I found out that the images on the server were exchanged for bigger one because of the iPhones. But it did not make sense. I tried using much bigger random images and the app worked fine. I tried downloading the images and using them locally, the app worked fine.
 
@@ -51,4 +51,3 @@ I made a video using the sample app showing the problem
 {{< vimeo 138747871>}}
 
  [1]: #bug
- [2]: http://lorempixel.com
