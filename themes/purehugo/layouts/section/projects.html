@@ -17,7 +17,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a class="post-title">{{ .Title }}</a>
+                        <a href="{{ .Permalink }}" class="post-title">{{ .Title }}</a>
 
                        
                     </header>
@@ -26,7 +26,7 @@
                        <p>{{ .Summary }}</p>
 
                         <p>
-                       <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{ .Params.image }}">
+                       <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="{{ .Title }}" data-src="{{ .Params.image }}">
                        </p>                
 
                        {{ if isset .Params "link" }} {{ .Params.linkactiontitle }}: <a href="{{ .Params.link }}">{{ .Params.linkaction }}</a>  {{ end }}
