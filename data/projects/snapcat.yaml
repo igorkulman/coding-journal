@@ -3,3 +3,6 @@ Title: "Snapcat"
 Description: "The only Windows Phone application that allows cats to take selfies."
 Image: "/images/snapcat.png"
 Id: 88
+Link: "https://www.microsoft.com/en-us/store/apps/snapcat/9nblggh094js"
+LinkTitle: "Windows Store"
+LinkAction: "Download"

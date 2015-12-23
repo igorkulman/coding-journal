@@ -3,3 +3,6 @@ Title: "TvTime"
 Description: "Windows Phone application for tracking your favorite TV shows."
 Image: "/images/tvtime.png"
 Id: 93
+Link: "https://www.microsoft.com/en-us/store/apps/tvtime/9wzdncrdktkk"
+LinkTitle: "Windows Store"
+LinkAction: "Download"

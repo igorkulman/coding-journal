@@ -3,3 +3,6 @@ Title: "Pock8"
 Description: "Unofficial Windows Phone client application for the Pocket (formerly Read it later) service."
 Image: "/images/pocket.png"
 Id: 90
+Link: "https://www.microsoft.com/en-us/store/apps/pock8/9wzdncrdktl2"
+LinkTitle: "Windows Store"
+LinkAction: "Download"

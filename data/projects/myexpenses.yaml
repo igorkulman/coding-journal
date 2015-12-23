@@ -3,3 +3,6 @@ Title: "MyExpenses"
 Description: "Windows Phone client application for the MyExpenses.eu service."
 Image: "/images/myexpenses.png"
 Id: 84
+Link: "https://www.microsoft.com/sk-sk/store/apps/myexpenses/9nblggh094kh"
+LinkTitle: "Windows Store"
+LinkAction: "Download"

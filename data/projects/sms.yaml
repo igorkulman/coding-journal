@@ -3,3 +3,6 @@ Title: "SMS Jízdenka"
 Description: "Windows Phone application allowing SMS ticket ordering in Czech Republic."
 Image: "/images/sms.png"
 Id: 76
+Link: "https://www.microsoft.com/en-us/store/apps/sms-jizdenka/9nblggh090vq"
+LinkTitle: "Windows Store"
+LinkAction: "Download"
