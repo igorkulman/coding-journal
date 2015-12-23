@@ -7,4 +7,8 @@
     <priority>{{ .Sitemap.Priority }}</priority>{{ end }}
   </url>
   {{ end }}
+   <url>
+    <loc>http://blog.kulman.sk/projects</loc>
+    <lastmod>2015-12-22T15:44:50+01:00</lastmod>
+  </url>
 </urlset>
