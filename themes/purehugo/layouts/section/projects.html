@@ -11,8 +11,9 @@
         <div>
             <!-- A wrapper for all the blog posts -->
             <div class="posts">
-                {{ range sort $.Site.Data.projects "Id" "desc" }}
-                <h1 class="content-subhead space">{{ .Date }}</h1>
+                {{ $paginator := .Paginate (where .Data.Pages "Section" "projects") }}
+                {{ range .Paginator.Pages }}
+                <h1 class="content-subhead space">{{ .Params.Period }}</h1>
                 <section class="post">
                     <header class="post-header">
 
@@ -22,18 +23,19 @@
                     </header>
 
                     <div class="post-description">
-                       <p>{{ .Description }}</p>
+                       <p>{{ .Summary }}</p>
 
                         <p>
-                       <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{ .Image }}">
-                       </p>
+                       <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{ .Params.image }}">
+                       </p>                
 
-                       {{ if isset . "Link" }} {{ .LinkTitle }}: <a href="{{ .Link }}">{{ .LinkAction }}</a>  {{ end }}
+                       {{ if isset .Params "link" }} {{ .Params.linkactiontitle }}: <a href="{{ .Params.link }}">{{ .Params.linkaction }}</a>  {{ end }}
                     </div>
                 </section>
                 {{ end }}
             </div>
             
+            {{ partial "pagination.html" . }}
             {{ partial "footer.html" . }}
         </div>
     </div>
