@@ -24,7 +24,11 @@
                     <div class="post-description">
                        <p>{{ .Description }}</p>
 
+                        <p>
                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{ .Image }}">
+                       </p>
+
+                       {{ if isset . "Link" }} {{ .LinkTitle }}: <a href="{{ .Link }}">{{ .LinkAction }}</a>  {{ end }}
                     </div>
                 </section>
                 {{ end }}
