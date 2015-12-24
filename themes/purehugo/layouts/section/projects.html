@@ -13,7 +13,7 @@
             <div class="posts">
                 {{ $paginator := .Paginate (where .Data.Pages "Section" "projects") }}
                 {{ range .Paginator.Pages }}
-                <h1 class="content-subhead space">{{ .Params.Period }}</h1>
+                <h1 class="content-subhead space">{{ .Params.period }}</h1>
                 <section class="post">
                     <header class="post-header">
 
