@@ -5,16 +5,14 @@
 
     <div class="content pure-u-1 pure-u-md-3-4">
     	
-    	<h1>Projects</h1>
-		<p>List of (not only) Windows Phone and Windows projects I worked on. Listed from most recent to oldest.</p>
-
+    	
         <div>
             <!-- A wrapper for all the blog posts -->
             <div class="posts">
                 {{ $paginator := .Paginate (where .Data.Pages "Section" "projects") }}
                 {{ range .Paginator.Pages }}
-                <h1 class="content-subhead space">{{ .Params.period }}</h1>
-                <section class="post">
+                <h1 class="content-subhead">{{ .Params.period }}</h1>
+                <section class="post space">
                     <header class="post-header">
 
                         <a href="{{ .Permalink }}" class="post-title">{{ .Title }}</a>

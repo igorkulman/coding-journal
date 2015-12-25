@@ -12,8 +12,8 @@ li.menu-item
 ul.menu{
 	margin-top: 32px;
 }
-h1.space{
-	margin-top: 5em;
+.space{
+	margin-bottom: 5em;
 }
 @media (max-width:48em){
 	li.menu-item{display: inline;padding-right: 20px;}
