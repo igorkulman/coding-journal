@@ -56,6 +56,7 @@ So I decided to write [my own tile, showing the schedule of three Czech cinemas]
 The Band counts your steps, distance traveled, floors climbed and checks your heart rate while at it. If you go for a run you can enable GPS and track your route.
 
 <img src="/images/BandSteps.png" style="max-width:400px" />
+<img src="/images/BandGPS.png" style="max-width:400px" />
 
 I could not have the Band on me while going to my Wing Chun practice. It would get destroyed. No similar devices are meant to be used when doing martial arts. It is a shame, I would be really interested to see my heart rate history doing the practice. 
 
@@ -79,11 +80,15 @@ I did not bother to set up notifications for other apps. But the Microsoft Healt
 
 The Microsoft Band 2 will stay charged for 2 days when not using the GPS. It is long as typical smartwatches, but if you are used to classical watches like I am, it is a very short time. It means another device to check status and charge. The Band will tell you to charge it long in advance. One day, I got a message to charge it at about 1 PM. By the time I got home after 6 PM the band battery indicator was red, but the Band was still working. 
 
+The Band charges really slow, compared to a phone or basically any other device. It wants you to think the process is faster, adding a percentage points every minute but then it gets stuck at 99% for about 40 minutes. You will always need at least two hours to charge it.
+
 **Annoyances**
 
 All the notifications and all the data are take from the phone and not really configurable. There is one thing that got me really annoyed when I discovered it. The iOS calendar app creates a calendar of peoples' birthdays. I have this calendar turned of in the iOS Calendar app and also in Sunrise, my calendar app of choice. But the Band does not respect this settings and also there is not configuration possible. So your calendar gets littered with birthdays and possible birthday notifications and there is nothing that you can do about it. Except disabling the calendar functionality on the Band. I know, I contacted Microsoft support (half an hour with probably an Indian guy, no solution, just my heart rate rising - Band told me).
 
 Another annoyance is also related to notifications. If you turn on the Band, open a tile or go to some menu, turn off the Band, go on with your day and a notification approves, guess what happens? The Band vibrates, you turn it on and you are still in the last menu or tile and have no idea, what the notification was about. 
+
+If you switch your phone to a do not disturb mode, the Band completely ignores it and still notifies you about event, although your phone does not. You have to Switch the Band to a do not distrub mode separately every time. 
 
 **Problems**
 
