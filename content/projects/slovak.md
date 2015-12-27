@@ -4,7 +4,7 @@ id = "75"
 period = "March 2012 - April 2012"
 image = "/images/slovak.png"
 date = "2015-12-18T06:56:44"
-link = "https"
+link = "https://www.microsoft.com/sk-sk/store/apps/slovak-apps/9wzdncrdktl1"
 linkActionTitle = "Windows Store"
 linkAction = "Download"
 +++
