@@ -13,7 +13,7 @@ ul.menu{
 	margin-top: 32px;
 }
 .space{
-	margin-bottom: 5em;
+	margin-bottom: 3em;
 }
 @media (max-width:48em){
 	li.menu-item{display: inline;padding-right: 20px;}

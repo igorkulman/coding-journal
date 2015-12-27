@@ -28,7 +28,10 @@
                        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="pure-img" >
                        </p>                
 
+                        <p>
+                         {{ if isset .Params "company" }} Contracted by: {{ .Params.company }} <br />  {{ end }}
                        {{ if isset .Params "link" }} {{ .Params.linkactiontitle }}: <a href="{{ .Params.link }}">{{ .Params.linkaction }}</a>  {{ end }}
+                       </p>
                     </div>
                 </section>
                 {{ end }}

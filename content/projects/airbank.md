@@ -7,6 +7,7 @@ date = "2015-12-19T02:56:44"
 link = "https://www.microsoft.com/en-us/store/apps/air-bank/9nblgggz36rj"
 linkActionTitle = "Windows Store"
 linkAction = "Download"
+company = "Inmite, s.r.o"
 +++
 
 Windows Phone mobile banking application for Air Bank.

@@ -7,6 +7,7 @@ date = "2015-12-18T16:56:44"
 link = "https://www.microsoft.com/cs-cz/store/apps/blikocinkofon/9nblgggzkflx"
 linkActionTitle = "Windows Store"
 linkAction = "Download"
+company = "Inmite, s.r.o"
 +++
 
 Christmas themed marketing application for Windows Phone.
