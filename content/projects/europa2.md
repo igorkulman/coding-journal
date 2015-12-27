@@ -6,4 +6,4 @@ image = "/images/europa.png"
 date = "2015-12-18T03:56:44"
 +++
 
-Windows Phone application for the Európa 2 radio station.
+Windows Phone application for the Európa 2 radio station. Taken over by another developer and redesigned. 
