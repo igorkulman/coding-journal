@@ -7,7 +7,7 @@ categories = ["Windows Phone"]
 +++
 To those who don’t know, Microsoft launched several months ago Outlook for Android and iOS phones and tablets. Microsoft’s new brand of Outlook have replace the failing “Outlook-branded apps” that are only available to the current subscribers of Office 365. The upheaval comes after Microsoft acquired San Francisco-based company, [Acompli.com][1]. 
 
-{{% img-responsive "/images/Outlook-Best-New-Apps.png" %}}
+<img src="/images/Outlook-Best-New-Apps.png" class="pure-img-width">
 
 Acompli is an “advanced email application that empowers professionals to do more with emails, full calendaring, easy file sharing and log all the important people in one email format.” The format supports Microsoft’s Office 365, Gmail and Google Apps.
 

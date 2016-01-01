@@ -32,18 +32,18 @@ The device feels solid, I did not feel uncomfortable wearing. I though using the
 
 After I installed the Microsoft Health app for iOS on my phone, the pairing was quick without any problems. The app installed a firmware updated to the Band 2 while pairing. The next day the Microsoft Health app was updated and it updated the firmware in the Band 2 again. This time  the firmware update brought two new functions: controlling the music playback and inactivity reminder. I do not much care about the music controls, I can pause my podcasts using the button on my headphones. Inactivity reminder is a great feature, reminding you to wake up and take a few steps when sitting idle for a long time. I really do not know why this function was not in the Band from the beginning. 
 
-<img src="/images/BandSetup.png" style="max-width:400px" />
-<img src="/images/BandUI2.png" style="max-width:400px" />
+<img src="/images/BandSetup.png" class="pure-img-width">
+<img src="/images/BandUI2.png" class="pure-img-width">
 
 **Microsoft Health and Health Dashboard**
 
 Microsoft Health is the app you use to configure and manage your Band. It has a "windowsy" look and feel event on iOS (including messed up margins on some screens). It can import data from the iOS Health app, so it can show you number of steps that the iPhone records. But it cannot export the data back to iOS Health. This means that data like the data about your sleep can be accessed only from the Microsoft Health app and are not propagated to other iOS app that can import data from iOS Health. 
 
-<img src="/images/BandDashboard1.png" style="max-width:800px" />
+<img src="/images/BandDashboard1.png" class="pure-img">
 
 You can connect the Microsoft Health app to the Microsoft Health Vault, which has a nice web dashboard. This dashboard is more detailed and more simple to use that the app in the phone. But you have to be ok with your data being exported to some Microsoft data center. If you choose to use the Health Vault you can compare your data to groups of other people. I do not know about any other platforms that allows you to do this. And it is always nice to compare your data to people of similar age, height and weight and see that you condition is not as bad as you may have thought. 
 
-<img src="/images/BandDashboard2.png" style="max-width:800px" />
+<img src="/images/BandDashboard2.png" class="pure-img">
 
 **Apps and Web Tiles**
 
@@ -55,8 +55,8 @@ So I decided to write [my own tile, showing the schedule of three Czech cinemas]
 
 The Band counts your steps, distance traveled, floors climbed and checks your heart rate while at it. If you go for a run you can enable GPS and track your route.
 
-<img src="/images/BandSteps.png" style="max-width:400px" />
-<img src="/images/BandGPS.png" style="max-width:400px" />
+<img src="/images/BandSteps.png" class="pure-img-width">
+<img src="/images/BandGPS.png" class="pure-img-width">
 
 I could not have the Band on me while going to my Wing Chun practice. It would get destroyed. No similar devices are meant to be used when doing martial arts. It is a shame, I would be really interested to see my heart rate history doing the practice. 
 
@@ -64,8 +64,8 @@ The best feature for me was the already mentioned inactivity timer. I left it on
 
 Sleep tracking is the feature I was looking forward to the most. The Band track the time it takes you to fall asleep, the length and quality of your sleep (deep and light sleep cycles), the number of times you wake up and your heart rate. It can function as an alarm, waking you up in the morning by vibrating on your wrist. The alarm can be set to a specific time or you can use the smart alarm feature. The smart alarm monitors your sleep cycle and always wakes you up in a light sleep phase, up to 30 minutes before the time you set. For me it basically meant getting up 30 minutes earlier every day.
 
-<img src="/images/BandSleep1.png" style="max-width:400px" />
-<img src="/images/BandSleep2.png" style="max-width:400px" />
+<img src="/images/BandSleep1.png" class="pure-img-width">
+<img src="/images/BandSleep2.png" class="pure-img-width">
 
 **Notifications**
 
@@ -73,8 +73,7 @@ I set the Band to show me notifications for incoming calls and SMS, nothing more
 
 I did not bother to set up notifications for other apps. But the Microsoft Health app also offered me notifications for Calendar, Facebook, Facebook Messenger, Twitter and a generic one called Notifications Center. 
 
-<img src="/images/BandUI1.png" style="max-width:400px" />
-
+<img src="/images/BandUI1.png" class="pure-img-width">
 
 **Battery usage**
 
@@ -88,7 +87,7 @@ All the notifications and all the data are take from the phone and not really co
 
 Another annoyance is also related to notifications. If you turn on the Band, open a tile or go to some menu, turn off the Band, go on with your day and a notification approves, guess what happens? The Band vibrates, you turn it on and you are still in the last menu or tile and have no idea, what the notification was about. 
 
-If you switch your phone to a do not disturb mode, the Band completely ignores it and still notifies you about event, although your phone does not. You have to Switch the Band to a do not distrub mode separately every time. 
+If you switch your phone to a do not disturb mode, the Band completely ignores it and still notifies you about event, although your phone does not. You have to Switch the Band to a do not disturb mode separately every time. 
 
 **Problems**
 
@@ -99,3 +98,7 @@ I called my local Microsoft technical support and the operator did not even know
 **Conclusion**
 
 The Microsoft Band 2 is a great health device. If you expectation are similar than mine than by all means get one. If you live in the US, go buy it to a Microsoft Store and test if everything works as supposed to. It may not. If you live outside the US, be aware that you may be on your own when something goes wrong. If you want a smartwatch or a device to keep track of notification, the Band is not for you. 
+
+**Update**: After another week, the display started acting up in watch mode. Some number are displayed strangely broken. At this point, I am not sure I can recommend the device anymore. Two hardware problems in two weeks, not a great user experience
+
+<img src="/images/BandDisplay.jpg" class="pure-img-width">

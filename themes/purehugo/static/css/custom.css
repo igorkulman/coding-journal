@@ -18,5 +18,9 @@ ul.menu{
 @media (max-width:48em){
 	li.menu-item{display: inline;padding-right: 20px;}
 	ul.menu{	margin-top: 12px; margin-bottom: -32px}
-	.wide-only{display:none;}
+	.wide-only{display:none;}	
+	.pure-img-width{max-width: 100%; display:block; height:auto;}
+}
+@media (min-width: 49em){
+	.pure-img-width{max-width: 400px; display:inline; height:auto;}
 }
