@@ -10,4 +10,4 @@ linkAction = "Download"
 company = "Inmite, s.r.o"
 +++
 
-Windows Phone mobile banking application for Air Bank.
+Windows Phone mobile banking application for Air Bank. Create the core of the application, including security and API communication implementation. Later take over by another developer. 
