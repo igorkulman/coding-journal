@@ -22,6 +22,6 @@ You can download the app for free <a title="TvTime download" href="http://www.wi
 
 <!--more-->
 
- <img  src="http://qrfree.kaywa.com/?l=1&#038;s=8&#038;d=http%3A%2F%2Fwww.windowsphone.com%2Fs%3Fappid%3D517d314b-cf64-41ed-9407-21b2c6e546c0" width="150" height="150" />
+<a href="https://www.microsoft.com/store/apps/9wzdncrdktkk?ocid=badge"><img src="https://assets.windowsphone.com/d86ab9b4-2f3d-4a94-92f8-1598073e7343/English_Get_it_Win_10_InvariantCulture_Default.png" srcset="https://assets.windowsphone.com/5d2bd562-d242-4538-85f4-857d6457404b/English_Get_it_Win_10_InvariantCulture_Default.png 2x"  alt="Get it on Windows 10" /></a>
 
  [1]: http://blog.kulman.sk/wp-content/uploads/2014/09/tvtimepromo.jpg
