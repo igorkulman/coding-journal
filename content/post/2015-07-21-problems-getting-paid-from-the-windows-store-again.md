@@ -1,23 +1,11 @@
----
-title: Problems getting paid from the Windows Store, again
-author: Igor Kulman
-layout: post
-date: 2015-07-21
-url: /problems-getting-paid-from-the-windows-store-again/
-twitterCardType:
-  - summary
-cardImageWidth:
-  - 280
-cardImageHeight:
-  - 150
-dsq_thread_id:
-  - 3956844858
-categories:
-  - Windows Phone
-  - WinRT
-tags:
-  - windows store
----
++++
+title = "Problems getting paid from the Windows Store, again"
+author = "Igor Kulman"
+date = "2015-07-21"
+url = "/problems-getting-paid-from-the-windows-store-again/"
+categories = ["Windows Phone","WinRT"]
+tags = ["windows store"]
++++
 I do not make much money on my Windows Phone apps (who does?), but when the payout time comes every couple of months, I expect the money to be delivered. Dealing with Microsoft, I should know better. 
 
 **Failed payment**

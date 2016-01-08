@@ -1,20 +1,11 @@
----
-title: 'Using Sublime Text 2 as F# REPL'
-author: Igor Kulman
-layout: post
-date: 2013-01-15
-url: /using-sublime-text-2-as-f-repl/
-onswipe_thumb:
-  - SKIP
-dsq_thread_id:
-  - 1179173080
-categories:
-  - Functional programming
-tags:
-  - 'f#'
-  - repl
-  - sublime text
----
++++
+title = "Using Sublime Text 2 as F# REPL"
+author = "Igor Kulman"
+date = "2013-01-15"
+url = "/using-sublime-text-2-as-f-repl/"
+categories = ["Functional programming"]
+tags = ["f#","repl","sublime text"]
++++
 [Sublime Text 2][1] is a great multi-purpose text editor that you can run on Windows, MacOS and Linux. You can configure Sublime Text 2 to higlight and compile F# files and even to use F# Interactive and make it a F# REPL. Using Sublime Text 2 as F# REPL is useful when you work on MacOS and Linux (F# 3.0 works great with [Mono][2]) and cannot use Visual Studio 2012. If you are new to Sublime Text 2, check out the [Perfect Workflow in Sublime Text: Free Course][3].
 
 **Installing necessary packages**

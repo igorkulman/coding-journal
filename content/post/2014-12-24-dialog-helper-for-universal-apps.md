@@ -1,27 +1,11 @@
----
-title: Dialog helper for Universal Apps the easy way
-author: Igor Kulman
-layout: post
-date: 2014-12-24
-url: /dialog-helper-for-universal-apps/
-twitterCardType:
-  - summary
-cardImageWidth:
-  - 280
-cardImageHeight:
-  - 150
-dsq_thread_id:
-  - 3355663322
-categories:
-  - Windows Phone
-  - WinRT
-tags:
-  - 'c#'
-  - Windows Phone
-  - windows store
-  - winrt
-  - xaml
----
++++
+title = "Dialog helper for Universal Apps the easy way"
+author = "Igor Kulman"
+date = "2014-12-24"
+url = "/dialog-helper-for-universal-apps/"
+categories = ["Windows Phone","WinRT"]
+tags = ["c#","Windows Phone","windows store","winrt","xaml"]
++++
 Today I read Joost van Schaik&#8217;s blog post called [A behavior to show a MessageDialog from a MVVMLight viewmodel in Universal apps–with callbacks][1]. I am not a MVVMLight guy (I use Caliburn.Micro) and I personally use an approach that uses a little less code, employing a helper class.
 
 **Helper class**

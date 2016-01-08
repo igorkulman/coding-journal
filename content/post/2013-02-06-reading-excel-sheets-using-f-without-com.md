@@ -1,18 +1,11 @@
----
-title: 'Reading Excel sheets using F# without COM'
-author: Igor Kulman
-layout: post
-date: 2013-02-06
-url: /reading-excel-sheets-using-f-without-com/
-dsq_thread_id:
-  - 1179172727
-categories:
-  - Functional programming
-tags:
-  - excel
-  - 'f#'
-  - Mono
----
++++
+title = "Reading Excel sheets using F# without COM"
+author = "Igor Kulman"
+date = "2013-02-06"
+url = "/reading-excel-sheets-using-f-without-com/"
+categories = ["Functional programming"]
+tags = ["excel","f#","Mono"]
++++
 I needed to create an utility that would read Excel 2010 files (.xlsx) and generate XML files from them according to some specific rules. The catch was that the utility needed to run on MacOS instead of Windows.
 
 Reading and writing Excel files from .NET is [very easy using the Microsoft.Office.Interop assemblies][1] but they use Excel through COM and that makes them unusable outside of Windows. I found some 3rd party libraries for working with Excel and analzyed them with [The Mono Migration Analzyer][2] (MoMA). MoMA is a handy tool that analyzes .NET assemblies and tells you if they will run on Mono. Many of the Excel libraries I found were unusable for my use-case because they were using PInvoke calls. Only the [ExcelPackage library][3] runs on Mono.

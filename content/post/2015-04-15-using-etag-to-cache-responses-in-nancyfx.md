@@ -1,25 +1,11 @@
----
-title: Using ETag to cache responses in NancyFX
-author: Igor Kulman
-layout: post
-date: 2015-04-15
-url: /using-etag-to-cache-responses-in-nancyfx/
-twitterCardType:
-  - summary
-cardImageWidth:
-  - 280
-cardImageHeight:
-  - 150
-dsq_thread_id:
-  - 3682883854
-categories:
-  - Windows Azure
-tags:
-  - asp
-  - azure
-  - 'c#'
-  - NancyFX
----
++++
+title = "Using ETag to cache responses in NancyFX"
+author = "Igor Kulman"
+date = "2015-04-15"
+url = "/using-etag-to-cache-responses-in-nancyfx/"
+categories = ["Windows Azure"]
+tags = ["asp","azure","c#","NancyFX"]
++++
 Caching data is usually a good idea, especially when creating APIs for mobile clients and the user may pay for each transferred byte. There are many approaches to caching data (I recommend reading [this article][1]), in my last NancyFX project I used ETag.
 
 **ETag**

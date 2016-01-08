@@ -1,27 +1,11 @@
----
-title: Why Universal Apps as not as universal as you may think
-author: Igor Kulman
-layout: post
-date: 2014-12-18
-url: /why-universal-apps-as-not-as-universal-as-you-may-think/
-dsq_thread_id:
-  - 3335846014
-twitterCardType:
-  - summary
-cardImageWidth:
-  - 280
-cardImageHeight:
-  - 150
-categories:
-  - Windows Phone
-  - WinRT
-tags:
-  - 'c#'
-  - Windows Phone
-  - windows store
-  - winrt
-  - xaml
----
++++
+title = "Why Universal Apps as not as universal as you may think"
+author = "Igor Kulman"
+date = "2014-12-18"
+url = "/why-universal-apps-as-not-as-universal-as-you-may-think/"
+categories = ["Windows Phone","WinRT"]
+tags = ["c#","Windows Phone","windows store","winrt","xaml"]
++++
 I have been developing Windows Phone apps for a few years now, always sticking to Silverlight and keeping using Silverlight also after Microsoft announced the WinRT flavor of Windows Phone apps and the so called Universal Apps. The Windows Phone 8.0 and 8.1 Silverlight APIs have some limitations, but are now well known do not contain many bugs. They are the safe choice if you want to create a Windows Phone apps. And do not forget that there are still many device running Windows Phone 8 (like Verizon customers in the US) that never got the 8.1 updated promised to everyone during the summer. 
 
 **Really universal?**

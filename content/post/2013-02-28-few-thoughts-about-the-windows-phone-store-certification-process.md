@@ -1,17 +1,11 @@
----
-title: Few thoughts about the Windows (Phone) Store certification process
-author: Igor Kulman
-layout: post
-date: 2013-02-28
-url: /few-thoughts-about-the-windows-phone-store-certification-process/
-dsq_thread_id:
-  - 1179172989
-categories:
-  - Windows Phone
-tags:
-  - Windows Phone
-  - windows store
----
++++
+title = "Few thoughts about the Windows (Phone) Store certification process"
+author = "Igor Kulman"
+date = "2013-02-28"
+url = "/few-thoughts-about-the-windows-phone-store-certification-process/"
+categories = ["Windows Phone"]
+tags = ["Windows Phone","windows store"]
++++
 Passing the certification in Windows Phone Store and Windows Store can be a very painful process, but after a few tries you get enough experience to pass your apps on the first try. You may sometimes get a tester who is really dumb and fails your app for a made up reason but usually it is just enough to submit it again so another testers gets to test it. Lately I have been seeing a strange shift in the testing quality done in the certification process. 
 
 **Windows Phone Store**

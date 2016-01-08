@@ -1,20 +1,11 @@
----
-title: Customizing semantic zoom in Windows 8 apps
-author: Igor Kulman
-layout: post
-date: 2012-10-24
-url: /customizing-semantic-zoom-in-windows-8-apps/
-onswipe_thumb:
-  - SKIP
-dsq_thread_id:
-  - 1405985971
-categories:
-  - WinRT
-tags:
-  - 'c#'
-  - metro
-  - winrt
----
++++
+title = "Customizing semantic zoom in Windows 8 apps"
+author = "Igor Kulman"
+date = "2012-10-24"
+url = "/customizing-semantic-zoom-in-windows-8-apps/"
+categories = ["WinRT"]
+tags = ["c#","metro","winrt"]
++++
 Semantic zoom is an important part of all Windows 8 apps, it is a distinctive feature that differentiates them from other platforms. The SemanticZoom component works fine if you want the default experience, but if you want some customization you have to try a bit harder.
 
 The problem with the SemanticZoom component is, that as a child of it&#8217;s Semantic­Zoom.ZoomedIn­View and SemanticZoom.Zo­omedOutView elements, displaying the two states, you can use only two standard components; GridView and ListView. You cannot use the Grid and show mixed content. If you use one of these components, then clicking on any item in the zoomed out state shows you the group in the zoomed in state. You cannot implement any custom behaviour, the ItemClick event gets completely ignored. So how do you customize the SemanticZoom component?

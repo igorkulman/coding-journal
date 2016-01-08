@@ -1,18 +1,11 @@
----
-title: 'F# on Azure: using Table Storage for logging'
-author: Igor Kulman
-layout: post
-date: 2013-02-26
-url: /f-on-azure-using-table-storage-for-logging/
-dsq_thread_id:
-  - 1179173108
-categories:
-  - Functional programming
-  - Windows Azure
-tags:
-  - azure
-  - 'f#'
----
++++
+title = "F# on Azure: using Table Storage for logging"
+author = "Igor Kulman"
+date = "2013-02-26"
+url = "/f-on-azure-using-table-storage-for-logging/"
+categories = ["Functional programming","Windows Azure"]
+tags = ["azure","f#"]
++++
 Windows Azure finally has a good F# support. Creating F# Worker Roles is supported right from the wizzard in Visual Studio and you can create a F# Web Role using the [F# C# MVC template][1]. I decided to try it out and the first thing I needed to implement was logging. I decided for logging to Azure Table Storage.
 
 I assume you have a basic idea of how Azure Table Storage works. If not, there is a [good guide on the Windows Azure website][2].

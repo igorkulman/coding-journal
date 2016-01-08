@@ -1,24 +1,11 @@
----
-title: Visual Studio extensions to make your life easier
-author: Igor Kulman
-layout: post
-date: 2015-11-02
-url: /visual-studio-extensions-to-make-your-life-easier/
-twitterCardType:
-  - summary
-cardImageWidth:
-  - 280
-cardImageHeight:
-  - 150
-cardImage:
-  - https://visualstudiogallery.msdn.microsoft.com/f4d9c2b5-d6d7-4543-a7a5-2d7ebabc2496/image/file/63101/9/screenshot.png?Id=63101
-dsq_thread_id:
-  - 4281997150
-categories:
-  - Programming in general
-tags:
-  - visual studio
----
++++
+title = "Visual Studio extensions to make your life easier"
+author = "Igor Kulman"
+date = "2015-11-02"
+url = "/visual-studio-extensions-to-make-your-life-easier/"
+categories = ["Programming in general"]
+tags = ["visual studio"]
++++
 This blog post is inspired by the [7 open-source Visual Studio Extensions to make your life easier][1] article. In the article Igal Tabachnik showed his favorite Visual Studio extensions, that were quite interesting. I also use a few Visual Studio extensions that make my life easier, so I decided to share. 
 
 <!--more-->

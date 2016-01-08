@@ -1,20 +1,10 @@
----
-title: Lenovo, why do you screw Thinkpads with every update?
-author: Igor Kulman
-layout: post
-date: 2015-10-21
-url: /lenovo-why-do-you-screw-thinkpads-with-every-update/
-twitterCardType:
-  - summary
-cardImageWidth:
-  - 280
-cardImageHeight:
-  - 150
-dsq_thread_id:
-  - 4246210117
-categories:
-  - Rants
----
++++
+title = "Lenovo, why do you screw Thinkpads with every update?"
+author = "Igor Kulman"
+date = "2015-10-21"
+url = "/lenovo-why-do-you-screw-thinkpads-with-every-update/"
+categories = ["Rants"]
++++
 I have a Lenovo Thinpad T440s that I got about a year ago after a great experience with a company issued Lenovo Thinkpad T420 I used for about two and half years before that. I use it daily for on-site work, not so much at home, where I have a desktop computer. The T440s is thinner and lighter than T420, but otherwise everything is just worse. You cannot change RAM or disk so easily as on the T420, the keyboard and trackpoint are worse (the trackpoint does not have physical buttons like on the T420 but [I had it replaced for one that does][1]). 
 
 So why did I get the T440s? Because it seemed like a wise choice at the time, compared to the competition. It has a trackpoint, fingerprint reader, a keyboard with all the keys in the right place and it is, after all, a Thinkpad, a sturdy and reliable work machine build from good materials. 
@@ -41,7 +31,7 @@ So I turned off BitLocker, waited for my disk do get decrypted and disabled the 
 
 So now I have a BIOS (that I cannot get rid of) with the security fix for an obscure issue but my disk is not encrypted and when I loose my computer or it gets stolen, anyone can read my data. Again, great work Lenovo. Time to install TrueCrypt I guess.
 
-**Update**: After two months, Lenovo finally acknowledged the problem and released a new BIOS fit the fix.
+**Update**: it took two month for Lenovo to acknowledge the problem and release a fix.
 
  [1]: http://camerongray.me/2015/02/fitting-physical-trackpoint-buttons-to-a-lenovo-thinkpad-t440s/
  [2]: https://support.lenovo.com/us/en/product_security/smm_attack

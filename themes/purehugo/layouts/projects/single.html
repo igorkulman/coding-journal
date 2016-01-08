@@ -1,0 +1,43 @@
+{{ partial "header.html" . }}
+
+<div id="layout" class="pure-g">
+    {{ partial "sidebar.html" . }}
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead">{{ .Params.period }}</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="{{ .Permalink }}" class="post-title">{{ .Title }}</a>
+
+                      
+                    </header>
+
+                  
+                    <div class="post-description">
+                        {{ .Content }}
+
+                         <p>
+                       <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                       </p>                
+
+                       {{ if isset .Params "link" }} {{ .Params.linkactiontitle }}: <a href="{{ .Params.link }}">{{ .Params.linkaction }}</a>  {{ end }}
+                    </div>
+
+
+                    
+
+                    
+                </section>
+            </div>
+            {{ partial "footer.html" . }}
+        </div>
+    </div>
+</div>
+
+{{ partial "analytics.html" . }}
+</body>
+</html>
