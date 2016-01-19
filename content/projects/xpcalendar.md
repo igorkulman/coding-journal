@@ -1,10 +1,10 @@
-https://www.microsoft.com/store/apps/9NBLGGH58GQL+++
++++
 title = "XP Calendar"
 id = "99"
 period = "December 2015 - December 2015"
 image = "/images/xp.png"
 date = "2015-12-19T06:56:45"
-link = "https://www.microsoft.com/store/apps/9NBLGGH58GQL"
+link = "https://www.microsoft.com/sk-sk/store/apps/xp-calendar/9nblggh58gql"
 linkActionTitle = "Windows Store"
 linkAction = "Download"
 +++
