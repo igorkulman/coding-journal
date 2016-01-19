@@ -99,4 +99,4 @@ I called my local Microsoft technical support and the operator did not even know
 
 The Microsoft Band 2 is a great health device. If you expectation are similar than mine than by all means get one. If you live in the US, go buy it to a Microsoft Store and test if everything works as supposed to. It may not. If you live outside the US, be aware that you may be on your own when something goes wrong. If you want a smartwatch or a device to keep track of notification, the Band is not for you. 
 
-**Update**: I finally manage to chat with the UK support. I got a UPS label and sent the Band to Germany for repairs. It should be back in 5 to 8 business days. 
+**Update**: I finally manage to chat with the UK support. I got a UPS label and sent the Band to Germany for repairs. After 6 work days I got a new Band.
