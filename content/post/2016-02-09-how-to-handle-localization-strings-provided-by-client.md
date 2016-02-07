@@ -19,11 +19,11 @@ In Windows Phone 8.1 (and 10) you should use RESW files for localization. This i
 
 <!--more-->
 
-There is no way to make any script generate a RESW file with duplicated string matching the multiple usages of each string. If you have a localized string with a key Game and 2 TextBlocks and 1 Buttons that use it, you need to put it into the RESW file 3 times, once for each UI element. Madness. 
+There is no way to make any script generate a RESW file with duplicated string matching the multiple usages of each string. If you have a localized string with a key Game and 2 TextBlocks and 1 Buttons that use it, you need to put it into the RESW file 3 times, once for each UI element. SO instead of a Game key, you would have a GameTextBlock.Text key, an AnotherGameTextBlock.Text and a GameButton.Content key, all with the same value and applied in design time. Madness. 
 
 **Using RESX files on Windows Phone 8.1**
 
-One approach to solve this problem is to use the good old RESX files with your Windows Phone 8.1 project. Typically by creating a PCL with the RESX files, doing a bit of configuration for the supported languages and linking this PCL project to your Windows Phone 8.1 project. You can find a few articles about this approach online and also a few gotchas and their solutions. It sounds like a good idea at first, but it is too problematic for my tastes. 
+One approach to solve this problem is to use the good old RESX files with your Windows Phone 8.1 project. Typically by creating a Portable Class Library (PCL) with the RESX files, doing a bit of configuration for the supported languages and linking this PCL project to your Windows Phone 8.1 project. You can find a few articles about this approach online and also a few gotchas and their solutions. It sounds like a good idea at first, but it is too problematic for my tastes. 
 
 I tried this approach but ended frustrated with too many problems too solve, like Visual Studio hanging when deploying to a device when using RESX files. So I decided to go with a custom solution.
 
@@ -63,10 +63,16 @@ The code to generate this is part of the script
 
 When you put all this pieces together, you have a RESW files with all the localization strings and a localization class that can be generated on demand. I run the script and generate the files every time there is an update in the git submodule with the JSON localization files.
 
-When I want to use any of these localization string in XAML, I simply use it like this for any UI element
+When I want to use any of these localization string in XAML, I simply use it like this
 
 <script src="https://gist.github.com/igorkulman/53a29b6e2143cac1ec8a.js?file=xaml-usage.xaml"></script>
 
-and like this from C# code when needed
+Using a binding allows me to use to use the same localization keys for many elements and I do not have to duplicate the keys like in the x:Uid scenario. 
+
+If I need to used a localization string in C#, I have a strongly typed access to it
 
 <script src="https://gist.github.com/igorkulman/53a29b6e2143cac1ec8a.js?file=csharp-usage.cs"></script>
+
+instead of creating a `ResourceLoader` instance and calling `GetString` with a string parameter. 
+
+Another approach would be having a public property with the `AppResources` instance in a `ViewModel` base class, it would make the binding shorter. 
