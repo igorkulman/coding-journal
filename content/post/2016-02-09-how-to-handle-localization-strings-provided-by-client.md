@@ -4,7 +4,7 @@ Description = "I currently work on a Windows Phone 8.1 app for a client with an 
 Tags = []
 author = "Igor Kulman"
 date = "2016-02-09T09:29:12+01:00"
-title = "How to handle localization string provided by the client in a Windows Phone app"
+title = "How to handle localization strings provided by the client in a Windows Phone app"
 url = "/how-to-handle-localization-strings-provided-by-client"
 
 +++
