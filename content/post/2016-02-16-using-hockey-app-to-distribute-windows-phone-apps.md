@@ -1,9 +1,9 @@
 +++
-Categories = [ "Windows Phone", "HockeyApp" ]
+Categories = [ "Windows Phone", "Hockey App", "Windows Store" ]
 Description = "Distributing Windows Phone apps to testers has always been a pain. The Private Beta in the Windows Store intended for this is not very flexible and it got much worse with Windows 10 (generating promotional code that can take up to 24 hours). One of the better ways to solve the beta build distribution is using a service like [Hockey App](http://hockeyapp.net/), that Microsoft recently acquired. To be able to use Hockey App (or any other service) you need to buy a $299 certificate from Symantec. You then use the certificate to sign the XAP or APPX files of your app. Those signed binaries can be than installed on devices with the correct application enrollment token directly from Hockey App, bypassing the Windows Store."
 Tags = []
 author = "Igor Kulman"
-date = "2016-02-23T09:29:12+01:00"
+date = "2016-02-16T09:29:12+01:00"
 title = "Using Hockey App to distribute Windows Phone apps"
 url = "/using-hockey-app-to-distribute-windows-phone-apps"
 
@@ -43,5 +43,8 @@ For XAP files it is just calling the right PowerShell script with the correct pa
 
 and the result is .. an error `Signtool Error: This file format cannot be signed because it is not recognized`. So I had to do some research. I found a [developer describing the same problem on StackOverflow](https://stackoverflow.com/questions/20970686/error-signing-windows-phone-xap-file-signtool-error-this-file-format-cannot). The solution was to install [Silverlight 5.1.30514.0](http://downloads.tomsguide.com/silverlight-microsoft,0301-10659.html). This was really strange, it is a Silverlight runtime not an SDK and it does not get installed with Visual Studio or the Windows Phone SDK.
 
-**Disributing the app**
+**Distributing the app**
 
+Once you upload a signed binary to Hockey App, your testers can download it using a web browser to their devices. Each device needs to install the company profile (the application enrollment token) once, and then can install the builds you provide.
+
+Installation of the Windows Phone app builds is a bit strange, no install progress or success messages, the app just appears in the list ofter one or two minutes. But it works, and it is much faster and more flexible than the Private Beta provides by the Windows Store.
