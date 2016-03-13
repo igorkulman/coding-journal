@@ -33,6 +33,6 @@ and the Take photo option uses CameraCaptureUI to directly take a photo
 
 <script src="https://gist.github.com/igorkulman/2885b4a6faa5b0861f17.js?file=camera-uwp.cs"></script>       
 
-The result might look like this.       
+The result might look like this. Do not forget to add an option to delete the photo if one is already chosen.
 
 {{% img-responsive "/images/uwp2.gif" %}}
