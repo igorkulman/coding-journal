@@ -35,7 +35,7 @@ as a result you will get three files: AET.aet, AET.aetx, AET.xml. Get the AET.ae
 
 **Signing the binary**
 
-Each time you submit a new build to Hockey App, you need to sign the binary (XAP in my case) with the certificate. The [signing process differs for XAP and APPX files](https://msdn.microsoft.com/en-us/library/windows/apps/dn168929(v=vs.105).aspx).
+Each time you submit a new build to Hockey App, you need to sign the binary (XAP in my case) with the certificate. The <a href="https://msdn.microsoft.com/en-us/library/windows/apps/dn168929(v=vs.105).aspx">signing process differs for XAP and APPX files</a>.
 
 For XAP files it is just calling the right PowerShell script with the correct parameters
 
