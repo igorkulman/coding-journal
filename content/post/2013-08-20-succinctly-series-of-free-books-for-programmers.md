@@ -11,15 +11,15 @@ I have recently come across an intreresting project by [Syncfusion][1], a compan
 <table style="margin-bottom:20px;">
   <tr>
     <td width="200">
-      <img src="http://www.syncfusion.com/Content/en-US/Downloads/Images/Ebooks/git_img.PNG" width="120" height="160" />
+      <img src="//www.syncfusion.com/Content/en-US/Downloads/Images/Ebooks/git_img.PNG" width="120" height="160" />
     </td>
     
     <td width="200">
-      <img src="http://www.syncfusion.com/Content/en-US/Downloads/Images/Ebooks/fsharp-succinctly.PNG" width="120" height="160" />
+      <img src="//www.syncfusion.com/Content/en-US/Downloads/Images/Ebooks/fsharp-succinctly.PNG" width="120" height="160" />
     </td>
     
     <td>
-      <img src="http://www.syncfusion.com/Content/en-US/Downloads/Images/Ebooks/iOS_succinctly.PNG" width="120" height="160" class="alignnone" />
+      <img src="//www.syncfusion.com/Content/en-US/Downloads/Images/Ebooks/iOS_succinctly.PNG" width="120" height="160" class="alignnone" />
     </td>
   </tr>
 </table>

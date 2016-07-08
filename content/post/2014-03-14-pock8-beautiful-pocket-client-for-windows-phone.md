@@ -28,7 +28,7 @@ The app is free to use with one limitation, all the list display just 5 articles
 
 For more info about [Pock8][1], follow the app on Twitter at [@pock8app][4].
 
-<img src="http://qrcode.kaywa.com/img.php?s=6&#038;d=http%3A%2F%2Fwindowsphone.com%2Fs%3Fappid%3Dc00715a7-d2d4-48c1-94e2-2ecc7c1b798b" alt="Pock8" style="max-width:100px" />
+<img src="//qrcode.kaywa.com/img.php?s=6&#038;d=http%3A%2F%2Fwindowsphone.com%2Fs%3Fappid%3Dc00715a7-d2d4-48c1-94e2-2ecc7c1b798b" alt="Pock8" style="max-width:100px" />
 
  [1]: http://t.co/YMtrM84rwI
  [2]: http://windowsphone.com/s?appid=b2667b3c-9272-4416-b0be-c8adadc651e4
