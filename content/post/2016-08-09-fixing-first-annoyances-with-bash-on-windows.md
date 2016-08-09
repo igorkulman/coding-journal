@@ -3,7 +3,7 @@ Categories = [ "Windows", "Bash", "Linux" ]
 Description = "When you enable the Linux Subsystem on Windows in the Windows 10 Anniversary Update so you can use Bash and all the GNU utilities, you may encounter a few annoyances like strange error messages, wrong language settings, etc. Here is how to fix the ones I encountered."
 Tags = []
 author = "Igor Kulman"
-date = "2016-08-10T09:29:12+01:00"
+date = "2016-08-09T09:29:12+01:00"
 title = "Fixing first annoyances with Bash on Windows"
 url = "/fixing-first-annoyances-with-bash-on-windows"
 
