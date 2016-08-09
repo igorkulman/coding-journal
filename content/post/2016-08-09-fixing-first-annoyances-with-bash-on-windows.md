@@ -41,8 +41,8 @@ When you try `ping` you will get and error message saying `ping: icmp open socke
 
 When everything fails, open the command prompt as Administrator and use 
 
-<script src="https://gist.github.com/igorkulman/8ad13c532296b721d50a1898745e40d1.js?file=install.cmd"></script>
+<script src="https://gist.github.com/igorkulman/8ad13c532296b721d50a1898745e40d1.js?file=uninstall.cmd"></script>
 
 to completely uninstall the Linux Subsystem on Windows. Just to be sure, you may also want to remove the `%localappdata%\Lxss` directory. You can install the Linux Subsystem on Windows back using
 
-<script src="https://gist.github.com/igorkulman/8ad13c532296b721d50a1898745e40d1.js?file=uninstall.cmd"></script>
+<script src="https://gist.github.com/igorkulman/8ad13c532296b721d50a1898745e40d1.js?file=install.cmd"></script>
