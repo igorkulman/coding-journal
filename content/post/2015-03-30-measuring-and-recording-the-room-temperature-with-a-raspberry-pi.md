@@ -22,13 +22,13 @@ To connect the temperature sensor to the Pi, I suggest you follow the [YouTube t
 
 The advantage of using the DS18B20 temperature sensor is that Raspbian and all the other Raspbian based Linux distors for the Pi contain drivers for it. There are two drivers that you need to load to make it work, the w1-gpio and the w1-therm. You can load them using
 
-<script src="https://gist.github.com/igorkulman/824c700681a8b6497ca8.js?file=drivers.sh"></script>
+<div data-gist="824c700681a8b6497ca8" data-file="drivers.sh"></div>
 
 or just add them to /etc/modules so they autoload with each boot of the Pi. 
 
 When the temperature sensor is connected and both drivers are loaded, a new device will appear in /sys/bus/w1/devices/. On my Pi, it is 28-000004e23e98, execute
 
-<script src="https://gist.github.com/igorkulman/824c700681a8b6497ca8.js?file=id.sh"></script>
+<div data-gist="824c700681a8b6497ca8" data-file="id.sh"></div>
 
 to find the id on yours.
 
@@ -40,7 +40,7 @@ I am a .NET developer but running Mono on the Pi just seems strange to me, so I 
 
 Getting the temperature is a matter of a simple cat command to the right place
 
-<script src="https://gist.github.com/igorkulman/824c700681a8b6497ca8.js?file=cat.sh"></script>
+<div data-gist="824c700681a8b6497ca8" data-file="cat.sh"></div>
 
 and parsing the result. 
 

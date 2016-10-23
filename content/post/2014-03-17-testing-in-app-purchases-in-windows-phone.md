@@ -10,7 +10,7 @@ Windows Phone Store does not offer developers any sandbox to test in-app purchas
 
 To make in-app purchases implementation easier, I created a simple Windows Phone Store service interface in my [Kulman.WP8][1] library (also [available on Nuget][2])
 
-<script src="https://gist.github.com/igorkulman/9571908.js?file=IWindowsPhoneStoreService.cs"></script>
+<div data-gist="9571908" data-file="IWindowsPhoneStoreService.cs"></div>
 
 <!--more-->
 
@@ -30,11 +30,11 @@ To mock in-app purchases you can use the [Mock In-App Purchase Library][4]. To m
 
 And setup the products you want to use at your app startup
 
-<script src="https://gist.github.com/igorkulman/9571908.js?file=SetupMockIAP.cs"></script>
+<div data-gist="9571908" data-file="SetupMockIAP.cs"></div>
 
 The advantage of this approach is that you just switch the IWindowsStoreService implementation between then mock on and the [real one][3], depending on the situation. For example (Caliburn.Micro Bootstrapper)
 
-<script src="https://gist.github.com/igorkulman/9571908.js?file=IAP.cs"></script>
+<div data-gist="9571908" data-file="IAP.cs"></div>
 
  [1]: https://github.com/igorkulman/Kulman.WP8
  [2]: http://www.nuget.org/packages/Kulman.WP8/

@@ -12,7 +12,7 @@ Windows Phone 8.1 XAML contains a Pivot control that looks like the one from Win
 
 If you want to change the PivotItem header color in Windows Phone 7/8, you just define the color in the Header template:
 
-<script src="https://gist.github.com/igorkulman/a49d0c7d471c4de42521.js?file=wp8.xaml"></script>
+<div data-gist="a49d0c7d471c4de42521" data-file="wp8.xaml"></div>
 
 This works great, changing the color of the active PivotItem Header to the color you want and applying some opacity to the inactive PivotItem Headers.
 
@@ -30,4 +30,4 @@ This is obviously a problem, if you do not want to do same SelectedIndex manipul
 
 Luckily, there is a way to fix this. You can redefine the PivotHeaderForegroundUnselectedBrush and PivotHeaderForegroundSelectedBrush to the active and inactive colors of your choice.
 
-<script src="https://gist.github.com/igorkulman/a49d0c7d471c4de42521.js?file=wp81.xaml"></script>
+<div data-gist="a49d0c7d471c4de42521" data-file="wp81.xaml"></div>

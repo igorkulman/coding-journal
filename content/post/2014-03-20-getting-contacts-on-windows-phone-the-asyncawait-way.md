@@ -8,13 +8,13 @@ tags = ["c#","Windows Phone"]
 +++
 Getting contacts info on Windows Phone means using a callback based API provided by the Windows Phone SDK
 
-<script src="https://gist.github.com/igorkulman/9572748.js?file=Contacts.Standard.cs"></script>
+<div data-gist="9572748" data-file="Contacts.Standard.cs"></div>
 
 I really dislike all the callback-based API so I was looking for a way to convert it to an async/await based API. And it is quite easy to do so
 
 <!--more-->
 
-<script src="https://gist.github.com/igorkulman/9572748.js?file=AddressBookService.cs"></script>
+<div data-gist="9572748" data-file="AddressBookService.cs"></div>
 
 You can find this implementation in my [Kulman.WP8][1] library (also [available on Nuget][2])
 

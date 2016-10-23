@@ -14,14 +14,14 @@ I have not been able the reason why this happens but the solution is quite simpl
 
 <!--more-->
 
-<script src="https://gist.github.com/igorkulman/9572347.js?file=line.xaml"></script>
+<div data-gist="9572347" data-file="line.xaml"></div>
 
 Doing this in XAML for every page is not very convenient, a better solution would be to set the negative top margin on the whole application frame
 
-<script src="https://gist.github.com/igorkulman/9572347.js?file=line.cs"></script>
+<div data-gist="9572347" data-file="line.cs"></div>
 
 If you use Caliburn.Micro, you need to override the CreatePhoneApplicationFrame in the Bootstrapper instead
 
-<script src="https://gist.github.com/igorkulman/9572347.js?file=line.caliburn.cs"></script>
+<div data-gist="9572347" data-file="line.caliburn.cs"></div>
 
  [1]: http://blog.kulman.sk/wp-content/uploads/2014/03/line.png
