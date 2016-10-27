@@ -13,11 +13,11 @@ In the last few months I have been noticing a huge decline in software quality o
 
 I am programmer so I know that software has and always will have bugs. My points is not buggy software in general but that software contains more bugs with every release and that stay unfixed. 
 
-<!-- more -->
-
 ## Windows 10
 
 Windows 10 updates are where I notice the software quality degradation the most. I cannot remember a bigger Windows 10 update that did not break something for me or millions of other users (like the [Anniversary Update breaking millions of webcams](https://www.thurrott.com/windows/windows-10/76719/microsoft-broken-millions-webcams-windows-10-anniversary-update)). I do think this is because of my hardware configuration. I experience all the problem usually on both my laptop and my desktop computer.
+
+<!--more-->
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Thank you <a href="https://twitter.com/Windows">@Windows</a> 10 for promptly installing all updates without asking and deleting all my unsaved changes 💩.</p>&mdash; Tomas Petricek (@tomaspetricek) <a href="https://twitter.com/tomaspetricek/status/789495984682364928">October 21, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

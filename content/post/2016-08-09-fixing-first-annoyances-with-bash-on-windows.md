@@ -11,11 +11,11 @@ url = "/fixing-first-annoyances-with-bash-on-windows"
 
 When you enable the Linux Subsystem on Windows in the Windows 10 Anniversary Update so you can use Bash and all the GNU utilities, you may encounter a few annoyances like strange error messages, wrong language settings, etc. Here is how to fix the ones I encountered.
 
-<!--more -->
-
 **Adding Bash to cmder**
 
 If you use [cmder](http://cmder.net/), you can add a new Bash task like this.
+
+<!--more-->
 
 {{% img-responsive "/images/bash-cmder.png" %}}
 
