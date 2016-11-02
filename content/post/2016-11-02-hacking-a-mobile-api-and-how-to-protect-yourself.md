@@ -3,7 +3,7 @@ Categories = [ "Security", "Mobile"]
 Description = "Sometimes when I use a mobile app that provides data that I find useful my curiosity awakens and I ask myself a question: how does the communication work and how hard would it be to break their security and access the data outside of the app? Mobile apps I have encountered are generally not very well secured and stealing their data is not much of a challenge. But what can the authors of the app do about it? "
 Tags = []
 author = "Igor Kulman"
-date = "2016-11-03T09:29:12+01:00"
+date = "2016-11-02T09:29:12+01:00"
 title = "Hacking a mobile API and how to protect yourself"
 url = "/hacking-a-mobile-api-and-how-to-protect-yourself"
 
