@@ -19,12 +19,12 @@
     <meta property="og:title" content="{{ .Title }} &middot; {{ .Site.Title }}">
     <meta property="og:description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
   
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/pure-min.css">
     {{ "<!--[if lte IE 8]>" | safeHTML }}
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/grids-responsive-old-ie-min.css">
     {{ "<![endif]-->" | safeHTML }}
     {{ "<!--[if gt IE 8]><!-->" | safeHTML }}
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/grids-responsive-min.css">
     {{ "<!--<![endif]-->" | safeHTML }}
 
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/all.min.css?v=2">       
