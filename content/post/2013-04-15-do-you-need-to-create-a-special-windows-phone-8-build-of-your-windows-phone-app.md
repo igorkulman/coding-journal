@@ -18,6 +18,6 @@ The problem is 720p, because it is a different aspect ratio (16:9 vs 15:9). Your
 
 This makes all the Windows Phone 7 apps look bad on a 720p devices like the HTC 8X I currently use. If you create a Windows Phone 8 project with exactly the same XAML, the app will look ok on a 720p device, no padding added to top or bottom. Another advantage of a special Windows Phone 8 build is that the app will start much faster.
 
-To sum it up, if you want your app to look great on all devices, always create a separate Windows Phone 8 build. It is usually as simple as creating a new Windows Phone 8 project and adding all the existing files as links. You can find more info about this technique on [Nokia Dev Wiki][2].
+To sum it up, if you want your app to look great on all devices, always create a separate Windows Phone 8 build. It is usually as simple as creating a new Windows Phone 8 project and adding all the existing files as links. You can find more info about this technique on Nokia Dev Wiki.
 
- [2]: http://www.developer.nokia.com/Community/Wiki/Maintaining_a_WP7_and_WP8_version_of_a_same_Silverlight_application
+

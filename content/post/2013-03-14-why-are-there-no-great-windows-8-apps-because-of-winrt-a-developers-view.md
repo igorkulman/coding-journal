@@ -6,7 +6,7 @@ url = "/why-are-there-no-great-windows-8-apps-because-of-winrt-a-developers-view
 categories = ["WinRT"]
 tags = ["c#","winrt"]
 +++
-Let&#8217;s face it, there are no really great apps for Windows 8 and the number of trashy apps is also very low compared to the Android and iOS ecosystems. Microsoft looks really desperate to bring more apps and developers to the ecosystem. Instead of improving the API and its capabilities, Microsoft just generates [desperately looking campaigns to improve the apps count][1]. I sometimes wonder if they ever realize that the number of apps is not important when people cannot find the apps they are used to use on Android or iOS in the Windows Store.
+Let&#8217;s face it, there are no really great apps for Windows 8 and the number of trashy apps is also very low compared to the Android and iOS ecosystems. Microsoft looks really desperate to bring more apps and developers to the ecosystem. Instead of improving the API and its capabilities, Microsoft just generates desperately looking campaigns to improve the apps count. I sometimes wonder if they ever realize that the number of apps is not important when people cannot find the apps they are used to use on Android or iOS in the Windows Store.
 
 {{% img-responsive "/images/microsoft-surface-2-650x0.jpg" %}}
 
@@ -32,7 +32,7 @@ Do not forget about the [strange behavior of the Windows Store certification pro
 
 I am really fed up with telling customers who want an (complex iOS clone) app the magic words &#8220;it is not possible in Windows 8&#8221;.
 
- [1]: http://build.windowsstore.com/keepthecash
+
  [2]: http://blog.kulman.sk/tampering-with-windows-store-apps-data/
  [3]: http://stackoverflow.com/questions/15367922/ziparchive-with-password-in-windows-store-apps
  [4]: https://github.com/adamhathcock/sharpcompress

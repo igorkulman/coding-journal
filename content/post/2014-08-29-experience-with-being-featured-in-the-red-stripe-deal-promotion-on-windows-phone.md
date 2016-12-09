@@ -6,7 +6,7 @@ url = "/experience-with-being-featured-in-the-red-stripe-deal-promotion-on-windo
 categories = ["Windows Phone"]
 tags = ["c#","Windows Phone"]
 +++
-I was offered to to take part in the Red Stripe Deal promotion on Windows Phone with my [Shopping List Simple][1] app from 21st August to 28th August. 
+I was offered to to take part in the Red Stripe Deal promotion on Windows Phone with my Shopping List Simple app from 21st August to 28th August. 
 
 {{% img-responsive "/images/sk.png" %}}
 
@@ -44,5 +44,5 @@ So what did the Red Stripe Deal bring me? Many new users, but many of them angry
 
 I told the users to contact Microsoft support as Microsoft support told me, but they report the support cannot / will not help them. The support guy I am in contact with did not want to believe this, so I had to ask one user for a screenshot of Microsoft support telling him they cannot help and send it to him. Did not help either.
 
- [1]: http://shoppinglist.kulman.sk/
+
  [3]: https://answers.microsoft.com/en-us/winphone/forum/wp7-sync/errors-of-c101a7d1-and-c101a006-on-windows-phone/822ec1be-9d07-4c0a-a4eb-7c6edf63e52d?page=2
