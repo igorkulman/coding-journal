@@ -4,7 +4,7 @@ title = "About"
 
 +++
 
-{{% img-responsive "https://avatars1.githubusercontent.com/u/4746070?v=3&s=460" %}}
+{{% img-responsive "https://avatars1.githubusercontent.com/u/4746070?v=3&s=320" %}}
 
 **Igor Kulman** is currently working as Windows Phone and Windows developer, also building applications for Microsoft Azure and playing with F#. Interested in programming languages, functional programming and data science.
 
