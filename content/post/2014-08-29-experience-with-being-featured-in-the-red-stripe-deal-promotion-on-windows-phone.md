@@ -22,9 +22,9 @@ Another positive effect was that I got contacted by users offering translations 
 
 **Negatives**
 
-As soon as the Red Stripe Deal promotion ended, I submitted a new version of the app with the two new translations &#8230; and the problems started. The users started to report that the update fails to install, usually with 80004005 as the error code. If you try to google this code, you find out it is too generic, ranging from Zune to XBOX and that no helpful info can be found about this error code. 
+As soon as the Red Stripe Deal promotion ended, I submitted a new version of the app with the two new translations and the problems started. The users started to report that the update fails to install, usually with 80004005 as the error code. If you try to google this code, you find out it is too generic, ranging from Zune to XBOX and that no helpful info can be found about this error code. 
 
-I contacted Microsoft support and they, as usual, were not helpful at all. They replied that everything is ok with the app, the error code indicates WiFi issues, so it is a problem on the users&#8217; end and that they should contact the support.
+I contacted Microsoft support and they, as usual, were not helpful at all. They replied that everything is ok with the app, the error code indicates WiFi issues, so it is a problem on the users end and that they should contact the support.
 
 There was another problem. Users who got the app for free thanks to the Red Stripe Deal and uninstalled it, had to pay for when reinstalling. This really sucks and I am sure that in the past, when you got an app while it was free you never had to pay for it in the future. It looks like things changed, because I got this from Microsoft:
 
