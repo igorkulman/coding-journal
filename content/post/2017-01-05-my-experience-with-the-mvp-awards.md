@@ -2,7 +2,6 @@
 Categories = [ "Windows Phone"]
 Description = "Getting a MVP is a big thing when you are a developer working with the Microsoft stack. It is supposed to be some kind of approval a sign that you are doing something well. I applied for the MVP award back in 2012 and then got nominated in 2016. I want to tell you about both cases because they really made me thing that the whole MVP concept is just wrong."
 Tags = []
-draft = true
 author = "Igor Kulman"
 date = "2017-01-05T09:29:12+01:00"
 title = "My (negative) experience with the Microsoft MVP awards"
@@ -38,6 +37,6 @@ I asked if the call was mandatory, the response was that it was not. By my local
 
 I joined the call and listened in. Took me about 20 minutes to leave it. It was everything I remember hating about the program, telling the nominees to focus on numbers, fill in as much stuff as they could no matter the quality, etc. Those people from CEE, Russia & CIS were a bit delusional for my taste, especially with emails starting with stuff like "Thank you again for your interest to our amazing MVP Award Program!". They did not ask for anything after the call or contact me in any way. 
 
-As expected, I did not get the MVP. So I checked who got the MVP for the same category and the same country. It was someone with basically no online presence (no web or blog or Github or StackOverflow) other than a Twitter with no original content just retweeting stuff praising Microsoft. I guess he matches the profile they look for. 
+As expected, I did not get the MVP. I was curious so I checked who got the MVP for the same category and the same country. I found the name and wanted to check who he was and what he did. It was hard because he had basically no online presence (no web or blog or Github or StackOverflow) other than a Twitter with no original content just retweeting stuff praising Microsoft. I do not know who he could have put into the numbers oriented form. Then I wrote an email to the CEE, Russia & CIS telling them I am curious how the awarding works, what was the reason for people not getting MVP etc. I never heard back.
 
 Seems to me that nothing has changed about the MVP awards in my region and probably never will. This is definitely not something I want to take part in anymore.
