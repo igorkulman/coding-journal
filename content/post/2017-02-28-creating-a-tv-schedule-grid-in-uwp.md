@@ -6,7 +6,6 @@ author = "Igor Kulman"
 date = "2017-02-28T09:29:12+01:00"
 title = "Creating a TV schedule grid in UWP"
 url = "/creating-a-tv-schedule-grid-in-uwp"
-draft = true
 
 +++
 
