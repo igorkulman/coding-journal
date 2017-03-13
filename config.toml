@@ -1,13 +1,40 @@
 baseurl = "https://blog.kulman.sk"
 languageCode = "en-us"
 title = "Coding Journal"
-
-theme = "purehugo"
+googleAnalytics = "UA-49528577-2"
+theme = "beautifulhugo"
 Paginate = 10
 disqusShortname = "coudingjournal"
 
 [params]
   twitterName = "igorkulman"
   githubName = "igorkulman"
-  description = "Adventures in the world of C#, F# and WinRT"
-  google_analytics = "UA-49528577-2"  
+  subtitle = "Adventures in the world of C#, F#, Swift with Windows and iOS"  
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = true
+  comments = true
+  logo = "img/avatar-icon.png"
+  favicon = "img/favicon.ico"
+
+[Author]
+  name = "Igor Kulman"
+  email = "igor@kulman.sk"
+  github = "igorkulman"
+  twitter = "igorkulman"  
+  stackoverflow = "users/581164/igor-kulman"
+
+[[menu.main]]
+    name = "Blog"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 2          
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3      

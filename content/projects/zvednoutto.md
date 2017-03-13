@@ -9,4 +9,4 @@ linkActionTitle = "AppStore"
 linkAction = "Download"
 +++
 
-Na iOS app for the Czech market that identifies spam calls on your iPhone the moment they arrive.
+An iOS app for the Czech market that identifies spam calls on your iPhone the moment they arrive.
