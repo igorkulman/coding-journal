@@ -47,7 +47,7 @@ The main idea is simple, you declare what UI elements are connected to what prop
 
 [Bond](https://github.com/ReactiveKit/Bond) is a Swift library based on [ReactiveKit](https://github.com/ReactiveKit/ReactiveKit) that allows you to do binding in a simple way. The documentation is quite sufficient and there is also a [quite nice tutorial](https://www.raywenderlich.com/123108/bond-tutorial). It allows not only data binding basic UI elements like text fields but also supports data binding table views. So I tried it first.
 
-I created a ViewModel with a property for the selected country, another property for the mobile number and a signal telling if the mobile number is valid. The ViewModel is quite simple, creating the validation signal in a nice declarative way
+I created a ViewModel with a property for the selected country, another property for the mobile number and a signal telling if the mobile number is valid. Every time the mobile number or the selected country changes, the validity signal also changes automatically. The ViewModel is quite simple, creating the validation signal in a nice declarative way
 
 <div data-gist="2bb98d3398d1f211ba0f81c0f6ee90e7" data-file="BondVM.swift"></div>
 
@@ -59,7 +59,7 @@ I used Bond for a while but when I wanted to do more reactive programming, Bond 
 
 ### RxSwift vs ReactiveSwift
 
-[RxSwift](https://github.com/ReactiveX/RxSwift) and [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) are two most popular reactive programming libraries for iOS. I recommend you read an [article comparing those two libraries](https://www.raywenderlich.com/126522/reactivecocoa-vs-rxswift) and choose the one that you like best. I chose RxSwift because it is a Swift implementation of the .NET Reactive Extensions I am familiar with and the documentation is so much better. 
+[RxSwift](https://github.com/ReactiveX/RxSwift) and [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) are two most popular reactive programming libraries for iOS. I recommend you read an [article comparing those two libraries](https://www.raywenderlich.com/126522/reactivecocoa-vs-rxswift) and choose the one that you like best. I chose RxSwift because it is a Swift implementation of the .NET Reactive Extensions I am familiar with and the documentation is so much better. There is also a [RxSwift community repository](https://github.com/RxSwiftCommunity/) with extension that add support for table views, gestures, etc. 
 
 The ViewModel looks a bit different when using RxSwift than when using Bond, but the main idea is the same
 
