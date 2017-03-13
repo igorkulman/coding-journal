@@ -9,7 +9,7 @@ disqusShortname = "coudingjournal"
 [params]
   twitterName = "igorkulman"
   githubName = "igorkulman"
-  subtitle = "Adventures in the world of C#, F#, Swift with Windows and iOS"  
+  subtitle = "Adventures in the world of C#, F# and Swift on Windows and iOS"  
   dateFormat = "January 2, 2006"
   commit = false
   rss = true
