@@ -36,7 +36,7 @@
   {{ else if .Params.subtitle }}
     <meta property="og:description" content="{{ .Params.subtitle }}">
   {{ else }}
-    <meta property="og:description" content="{{ .Content | plainify | htmlEscape | truncate 200 }}">
+    <meta property="og:description" content="{{ .Content | plainify | htmlEscape }}">
   {{ end }}
 
   <meta property="og:type" content="website" />
@@ -75,7 +75,7 @@
   {{ else if .Params.subtitle }}
     <meta name="twitter:description" content="{{ .Params.subtitle }}">
   {{ else }}
-    <meta name="twitter:description" content="{{ .Content | plainify | htmlEscape | truncate 200 }}">
+    <meta name="twitter:description" content="{{ .Content | plainify | htmlEscape  }}">
   {{ end }}
 
   {{ if .Params.share_img }}
