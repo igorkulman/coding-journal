@@ -1,6 +1,6 @@
 baseurl = "https://blog.kulman.sk"
 languageCode = "en-us"
-title = "Coding Journal"
+title = "Igor Kulman"
 googleAnalytics = "UA-49528577-2"
 theme = "beautifulhugo"
 Paginate = 10
@@ -16,6 +16,7 @@ disqusShortname = "coudingjournal"
   comments = true
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
+  blogTitle = "Coding Journal"
 
 [Author]
   name = "Igor Kulman"
@@ -35,6 +36,6 @@ disqusShortname = "coudingjournal"
     weight = 2          
 
 [[menu.main]]
-    name = "About"
+    name = "About me / contact"
     url = "/about/"
     weight = 3      
