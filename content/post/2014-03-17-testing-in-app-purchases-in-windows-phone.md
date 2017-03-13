@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-03-17"
 url = "/testing-in-app-purchases-in-windows-phone/"
 categories = ["Windows Phone"]
-tags = ["c#","inapp","Windows Phone","windows store"]
+tags = ["Csharp","In-app purchases","Windows Phone","Windows Store"]
 +++
 Windows Phone Store does not offer developers any sandbox to test in-app purchases in their apps, like stores on other platforms do. If you want test in-app purchases in your Windows Phone apps, you need to use other options.
 

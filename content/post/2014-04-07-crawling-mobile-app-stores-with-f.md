@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-04-07"
 url = "/crawling-mobile-app-stores-with-f/"
 categories = ["Functional programming"]
-tags = ["f#","Windows Phone","windows store"]
+tags = ["Fsharp","Windows Phone","Windows Store"]
 +++
 Some time ago I needed a way to programatically search the Apple AppStore and Google Play Store to get some info about apps for a project. I decided to write an F# script for that task and later added support for Windows Phone Store.
 

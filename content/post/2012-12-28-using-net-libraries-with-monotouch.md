@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2012-12-28"
 url = "/using-net-libraries-with-monotouch/"
 categories = ["Programming in general"]
-tags = ["c#","iOS","Mono","MonoTouch"]
+tags = ["Csharp","iOS","Mono","MonoTouch"]
 +++
 I have been [playing with MonoTouch][1] only for a few days when I already started to miss all the .NET libraries I commonly use. The first one I needed to get working with MonoTouch was [JSON.NET][2].
 

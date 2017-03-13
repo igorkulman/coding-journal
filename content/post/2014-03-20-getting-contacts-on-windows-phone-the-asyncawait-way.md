@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-03-20"
 url = "/getting-contacts-on-windows-phone-the-asyncawait-way/"
 categories = ["Windows Phone"]
-tags = ["c#","Windows Phone"]
+tags = ["Csharp","Windows Phone"]
 +++
 Getting contacts info on Windows Phone means using a callback based API provided by the Windows Phone SDK
 

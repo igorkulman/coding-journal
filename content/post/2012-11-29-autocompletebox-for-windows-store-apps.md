@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2012-11-29"
 url = "/autocompletebox-for-windows-store-apps/"
 categories = ["WinRT"]
-tags = ["nuget","winrt"]
+tags = ["Nuget","WinRT"]
 +++
 There is no AutoCompleteBox control that can be used when building Windows Store apps in C# and XAML so I decided to create one, because I needed it for a project. Currently it supports only String collections and the selected value must be accessed using code behind, but this will hopefully change. 
 

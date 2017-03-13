@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-09-15"
 url = "/what-to-put-on-the-about-screen-of-your-windows-phone-app/"
 categories = ["Windows Phone"]
-tags = ["c#","Windows Phone","windows store","xaml"]
+tags = ["Csharp","Windows Phone","Windows Store","XAML"]
 +++
 The about screen of a Windows Phone app is usually the most overlooked part of the app. Sure, the users usually visit it only once, after installing the app, if ever, but it is a part of your Windows Phone app that you could put to a good use. 
 

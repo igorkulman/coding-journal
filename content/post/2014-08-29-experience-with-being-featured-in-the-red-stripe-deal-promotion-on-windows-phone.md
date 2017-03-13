@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-08-29"
 url = "/experience-with-being-featured-in-the-red-stripe-deal-promotion-on-windows-phone/"
 categories = ["Windows Phone"]
-tags = ["c#","Windows Phone"]
+tags = ["Csharp","Windows Phone"]
 +++
 I was offered to to take part in the Red Stripe Deal promotion on Windows Phone with my Shopping List Simple app from 21st August to 28th August. 
 

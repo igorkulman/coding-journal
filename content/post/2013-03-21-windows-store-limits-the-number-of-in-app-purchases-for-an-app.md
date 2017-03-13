@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-03-21"
 url = "/windows-store-limits-the-number-of-in-app-purchases-for-an-app/"
 categories = ["WinRT"]
-tags = ["windows store"]
+tags = ["Windows Store","WinRT"]
 +++
 Windows 8 development has [many problems and pitfalls because of WinRT][1]. Windows Store, the only distribution channel for Windows 8 apps, has some problems too. One of them is really serious for everyone who wants to create a newspaper or newsreader app with in-app purchases. 
 

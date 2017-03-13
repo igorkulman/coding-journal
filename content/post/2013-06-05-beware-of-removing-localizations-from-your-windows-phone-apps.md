@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-06-05"
 url = "/beware-of-removing-localizations-from-your-windows-phone-apps/"
 categories = ["Windows Phone"]
-tags = ["c#","Windows Phone"]
+tags = ["Csharp","Windows Phone"]
 +++
 
 When I released version 2.0 of my app Photo Timeline, some users reported updating problems. I finally found out what caused the problem and submited a new build to the Windows Phone store.

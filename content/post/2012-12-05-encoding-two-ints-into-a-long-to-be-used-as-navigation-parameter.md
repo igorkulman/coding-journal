@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2012-12-05"
 url = "/encoding-two-ints-into-a-long-to-be-used-as-navigation-parameter/"
 categories = ["WinRT"]
-tags = ["winrt"]
+tags = ["WinRT"]
 +++
 When navigating in a Windows Store app, you can specify a navigation parameter. This navigation parameter can be any object but there is a problem. When the application is suspended, this navigation parameter is saved by the LayoutAwarePage. This works only with primitive data types, unless you change the implementation of the class which instances you pass as the navigation parameter.
 

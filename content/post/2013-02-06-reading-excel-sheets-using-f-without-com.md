@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-02-06"
 url = "/reading-excel-sheets-using-f-without-com/"
 categories = ["Functional programming"]
-tags = ["excel","f#","Mono"]
+tags = ["Excel","Fsharp","Mono"]
 +++
 I needed to create an utility that would read Excel 2010 files (.xlsx) and generate XML files from them according to some specific rules. The catch was that the utility needed to run on MacOS instead of Windows.
 

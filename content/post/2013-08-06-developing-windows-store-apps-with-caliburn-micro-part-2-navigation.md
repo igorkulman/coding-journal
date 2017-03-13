@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-08-06"
 url = "/developing-windows-store-apps-with-caliburn-micro-part-2-navigation/"
 categories = ["WinRT"]
-tags = ["c#","Caliburn.Micro","winrt"]
+tags = ["Csharp","Caliburn-Micro","WinRT"]
 +++
 In this second part you will add another ViewModel and View and implement navigation between two ViewModels, including saving the navigation state between starts. The code is as always [available at Github][1].
 

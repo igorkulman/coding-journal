@@ -1,7 +1,7 @@
 ﻿+++
 Categories = [ "MacOS", "Hackintosh"]
 Description = "When you start using macOS after years of using Windows there are some things you expect to work in certain ways. One of those things is the ways the OS handles keyboard input and keyboard shortcuts. This is especially important if you still also use Windows and use a Windows keyboard with macOS. Here are a few things regarding the keyboard that help me when using macOS working on a side project."
-Tags = []
+Tags = ["MacOS", "Hackintosh"]
 author = "Igor Kulman"
 date = "2017-01-31T09:29:12+01:00"
 title = "Using macOS with a Windows keyboard"

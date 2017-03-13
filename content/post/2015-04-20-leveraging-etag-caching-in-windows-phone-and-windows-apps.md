@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2015-04-20"
 url = "/leveraging-etag-caching-in-windows-phone-and-windows-apps/"
 categories = ["Windows Phone","WinRT"]
-tags = ["c#","Windows Phone","windows store","winrt"]
+tags = ["Csharp","Windows Phone","Windows Store","WinRT"]
 +++
 In my previous article I showed you [how to implements server side caching using ETag][1]. HTTP clients on other platforms can usually work with ETag automatically, but of course, the portable HTTP client used on Windows platforms cannot. You have to implement ETag handling yourself.
 

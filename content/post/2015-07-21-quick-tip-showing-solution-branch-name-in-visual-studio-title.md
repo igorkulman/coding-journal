@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2015-07-21"
 url = "/quick-tip-showing-solution-branch-name-in-visual-studio-title/"
 categories = ["Programming in general"]
-tags = ["git","Tip","visual studio"]
+tags = ["Git","Tip","Visual Studio"]
 +++
 By default, Visual Studio shows the name of the opened solution name in the title. This makes it easier to navigate among multiple instances of Visual Studio. You see the solution name next to the Visual Studio icon in the taskbar and also in the task manager, when you have to (and we all sometimes have to) kill the right Visual Studio because it stopped responding.
 

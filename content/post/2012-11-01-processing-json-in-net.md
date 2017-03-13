@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2012-11-01"
 url = "/processing-json-in-net/"
 categories = ["WinRT"]
-tags = ["c#","json"]
+tags = ["Csharp","JSON","WinRT"]
 +++
 JSON is a very popular format for exchanging data, especially in the world of web technologies and JavaScript. The .NET platform contains a native support for this format but a better alternative is to use the JSON.NET library.
 

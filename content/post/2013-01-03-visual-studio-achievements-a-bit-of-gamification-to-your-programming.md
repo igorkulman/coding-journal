@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-01-03"
 url = "/visual-studio-achievements-a-bit-of-gamification-to-your-programming/"
 categories = ["Programming in general"]
-tags = ["visual studio"]
+tags = ["Visual Studio"]
 +++
 Gamification is a great concept that works really well for some people, including me. Gamification may very well be the reason for success of projects like [StackOveflow][1] or [Duolingo][2].
 

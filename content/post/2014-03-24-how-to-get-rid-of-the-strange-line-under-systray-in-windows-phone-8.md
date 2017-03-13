@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-03-24"
 url = "/how-to-get-rid-of-the-strange-line-under-systray-in-windows-phone-8/"
 categories = ["Windows Phone"]
-tags = ["c#","Windows Phone","xaml"]
+tags = ["Csharp","Windows Phone","XAML"]
 +++
 If you create an Windows Phone 8 app and test it only on WVGA and 720p devices or emulators, you may be surprised how you app looks on a WXGA device (or emulator). 
 

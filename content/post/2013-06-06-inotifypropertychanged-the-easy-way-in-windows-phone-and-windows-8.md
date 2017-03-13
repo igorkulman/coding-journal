@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-06-06"
 url = "/inotifypropertychanged-the-easy-way-in-windows-phone-and-windows-8/"
 categories = ["Windows Phone","WinRT"]
-tags = ["c#","fody","mvvm"]
+tags = ["Csharp","Fody","MVVM", "Windows Phone","WinRT"]
 +++
 If you develop Windows Phone, Windows 8, Silverlight or WPF apps using the MVVM pattern, you are familiar with the INotifyPropertyChanged interface.
 

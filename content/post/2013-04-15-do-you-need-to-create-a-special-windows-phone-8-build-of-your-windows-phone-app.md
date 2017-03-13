@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-04-15"
 url = "/do-you-need-to-create-a-special-windows-phone-8-build-of-your-windows-phone-app/"
 categories = ["Windows Phone"]
-tags = ["c#","Windows Phone"]
+tags = ["Csharp","Windows Phone"]
 +++
 If you create a Windows Phone app and you want it to be able to run on both Windows Phone 7 and Windows Phone 8, you target Windows Phone 7 and the app runs on Windows Phone 8 automatically. But is it really enough to create a Windows Phone 7 buíld? Not if you want to create a really well designed app.
 

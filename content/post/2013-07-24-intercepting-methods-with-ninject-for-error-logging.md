@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-07-24"
 url = "/intercepting-methods-with-ninject-for-error-logging/"
 categories = ["Windows Azure"]
-tags = ["azure","c#","ninject"]
+tags = ["Azure","Csharp","Ninject"]
 +++
 I am currently working on a fairly large Windows Azure projects that among other things conatins a Web Role where I use [Ninject][1] as a dependency container. As the business logic library grew larger I found myself writing a lot of repeating boiler plate code to log exceptions in many important methods. I wantet to remove all the boiler plate code and create a custom attribute, say LogErrorAttribute with one simple goal: each method decorated woth this attribute should log info about any occuring exception.
 

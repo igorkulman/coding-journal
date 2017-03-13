@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2015-04-27"
 url = "/player-framework-localization/"
 categories = ["Windows Phone","WinRT"]
-tags = ["c#","Windows Phone","windows store","winrt","xaml"]
+tags = ["Csharp","Windows Phone","Windows Store","WinRT","XAML"]
 +++
 In my recent universal (Windows Phone 8.1 and Windows 8.1) project I implemented PlayReady DRM protected smooth streaming movies playback using the [Player Framework][1]. This projects seems to be dead, but it is still the best option when implementing any kind of video playback. 
 

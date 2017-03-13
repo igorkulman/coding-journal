@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-11-24"
 url = "/rest-service-base-class-for-windows-phone-8-1-xaml-apps/"
 categories = ["Windows Phone","WinRT"]
-tags = ["c#","nuget","Windows Phone","windows store","winrt"]
+tags = ["Csharp","Nuget","Windows Phone","Windows Store","WinRT"]
 +++
 Communicating with a JSON based REST service is a task that many Windows Phone apps have to do. My apps sure do it a lot so I came up with a base class that I use in all of them, [put it on Github][1] and [created a Nuget package][2], so your apps could use it to. 
 

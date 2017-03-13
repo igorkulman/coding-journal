@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2015-01-12"
 url = "/nancyfx-authentication-for-rest-api/"
 categories = ["Windows Azure"]
-tags = ["azure","c#","NancyFX","security"]
+tags = ["Azure","Csharp","NancyFX","Security"]
 +++
 NancyFX is a great .NET framework well suited for creating REST APIs. There are many ways how to approach authentication, the simplest one is the good old Forms Authentication. The idea of Forms Authentication is that the user logs in with a username and password and gets a cookie, the protected endpoints then check the cookie. NancyFX supports Forms Authentication with the [Nancy.Authentication.Forms][1] package. The [documentation describes how to use it on a web page][2], but to use it with a REST API a few changes are needed.
 

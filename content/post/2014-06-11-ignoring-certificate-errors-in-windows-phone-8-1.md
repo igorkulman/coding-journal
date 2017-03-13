@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-06-11"
 url = "/ignoring-certificate-errors-in-windows-phone-8-1/"
 categories = ["Windows Phone"]
-tags = ["c#","Windows Phone","winrt"]
+tags = ["Csharp","Windows Phone","WinRT", "Security"]
 +++
 Connecting to servers with self-signed, expired or otherwise problematic certificates has always been a problem in Windows Phone. There is no way to ignore certificate errors in Windows Phone 7 and Windows Phone 8, not even using the new Portable HTTP Client Libraries. If you are dealing with a self-signed certificate on the server, you have to somehow get it (may not always be possible) and install it on the device or in the emulator (for emulator every time you close and start it again). Ignoring certificate errors would be a much more comfortable approach. Of course, only do it in development with dev servers, not in production.
 

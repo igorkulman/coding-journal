@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-03-14"
 url = "/pock8-beautiful-pocket-client-for-windows-phone/"
 categories = ["Windows Phone"]
-tags = ["c#","Caliburn.Micro","fody","Windows Phone"]
+tags = ["Windows Phone"]
 +++
 Recently I have released a new Windows Phone app called [Pock8][1]. Pock8 is a beautiful Pocket (formerly Read It Later) client for Windows Phone. The design of the app was created by Jan Marek who worked with my on the [Shopping List Simple][2] app. 
 

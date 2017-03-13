@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2012-10-26"
 url = "/fast-way-to-check-if-a-file-exists-in-winrt/"
 categories = ["WinRT"]
-tags = ["c#","metro","winrt"]
+tags = ["Csharp","WinRT"]
 +++
 The StorageFolder class does not containt any method to determine if a file with given name exists in that folder. There are at least two ways how to implement such method, let us call it ContainsFileAsync.
 

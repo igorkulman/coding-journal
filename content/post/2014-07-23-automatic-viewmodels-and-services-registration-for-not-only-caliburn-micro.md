@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-07-23"
 url = "/automatic-viewmodels-and-services-registration-for-not-only-caliburn-micro/"
 categories = ["Windows Phone"]
-tags = ["c#","Caliburn.Micro","Windows Phone","windows store","winrt"]
+tags = ["Csharp","Caliburn-Micro","Windows Phone","Windows Store","WinRT"]
 +++
 My MVVM framework of choice, Caliburn.Micro, provides a simple Dependency Injection container, where you have to register all your ViewModels and Services. This is done in the Bootstraper&#8217;s Configure method and may look like this:
 

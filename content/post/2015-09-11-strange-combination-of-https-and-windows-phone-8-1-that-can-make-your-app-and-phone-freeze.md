@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2015-09-11"
 url = "/strange-combination-of-https-and-windows-phone-8-1-that-can-make-your-app-and-phone-freeze/"
 categories = ["Windows Phone"]
-tags = ["c#","Windows Phone","winrt","xaml"]
+tags = ["Csharp","Windows Phone","WinRT","XAML"]
 +++
 Last week I came upon a really bizarre problem that you may also find interesting. Lets start with a bit of context.
 

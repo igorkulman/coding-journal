@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-09-18"
 url = "/developing-windows-store-apps-with-caliburn-micro-part-4-services-and-dependency-injection/"
 categories = ["WinRT"]
-tags = ["c#","Caliburn.Micro","fody","metro","winrt","xaml"]
+tags = ["Csharp","Caliburn-Micro","Fody","WinRT","XAML"]
 +++
 In this installment of the series I will show you how user data services. We will finally use the Unity DI container that is part of the project setup.
 

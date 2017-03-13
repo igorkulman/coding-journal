@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-12-02"
 url = "/creating-a-search-box-with-reactive-extensions-and-mvvm/"
 categories = ["Windows Phone"]
-tags = ["c#","Caliburn.Micro","Windows Phone","xaml"]
+tags = ["Csharp","Caliburn-Micro","Windows Phone","XAML"]
 +++
 Having a Search box in a Windows Phone app is a common use-case but it is only rarely done right. A good Search box does not have a Search button associated with it that the users have to click when they are finished typing and want to start the search. A good Search box starts the search immediately when the user stops typing (for a certain period of time). 
 

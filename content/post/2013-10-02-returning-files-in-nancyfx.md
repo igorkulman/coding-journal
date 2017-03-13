@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-10-02"
 url = "/returning-files-in-nancyfx/"
 categories = ["Windows Azure"]
-tags = ["azure","c#","NancyFX"]
+tags = ["Azure","Csharp","NancyFX"]
 +++
 In my current project, I have chosen [NancyFx][1] to implement a REST API. NancyFx is a .NET framework known for its &#8220;[super-duper-happy-path][2]&#8220;. 
 

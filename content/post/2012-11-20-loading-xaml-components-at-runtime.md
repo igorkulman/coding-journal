@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2012-11-20"
 url = "/loading-xaml-components-at-runtime/"
 categories = ["WinRT"]
-tags = ["c#","winrt","xaml"]
+tags = ["Csharp","WinRT","XAML"]
 +++
 When I had to create a library to generate UI elements with animated image Ads I found out that creating complicated UI elements in code with bindings is not as easy as doing the same in XAML. A better way is to create your UI elements and bindings in a XAML file (if they are not very dynamic of course), load the XAML at runtime, parse it and set its DataContext.
 

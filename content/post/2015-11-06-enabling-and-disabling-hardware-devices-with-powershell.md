@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2015-11-06"
 url = "/enabling-and-disabling-hardware-devices-with-powershell/"
 categories = ["PowerShell"]
-tags = ["powershell"]
+tags = ["PowerShell"]
 +++
 I have a built-in fingerprint reader on my Thinkpad notebook that I use for loging in almost exclusively. I say almost because since I upgraded to Windows 10 it sometimes just stops working when the computer wakes up from sleep. I found out that to make it work again I have to go to the Device Manager, find it, disable it and enabled it back again. 
 

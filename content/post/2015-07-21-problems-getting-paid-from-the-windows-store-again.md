@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2015-07-21"
 url = "/problems-getting-paid-from-the-windows-store-again/"
 categories = ["Windows Phone","WinRT"]
-tags = ["windows store"]
+tags = ["Windows Store", "WinRT"]
 +++
 I do not make much money on my Windows Phone apps (who does?), but when the payout time comes every couple of months, I expect the money to be delivered. Dealing with Microsoft, I should know better. 
 

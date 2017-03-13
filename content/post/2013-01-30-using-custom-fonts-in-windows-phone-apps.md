@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-01-30"
 url = "/using-custom-fonts-in-windows-phone-apps/"
 categories = ["Windows Phone"]
-tags = ["c#","Windows Phone"]
+tags = ["Csharp","Windows Phone"]
 +++
 Windows Phone allows yout to use custom TTF fonts in your apps. Using a custom font from XAML or C# is easy, but your run into troubles when you want to use if from a Background Agent (e.g: for updating a Live Tile).
 

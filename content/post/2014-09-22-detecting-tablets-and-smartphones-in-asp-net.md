@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-09-22"
 url = "/detecting-tablets-and-smartphones-in-asp-net/"
 categories = ["WinRT"]
-tags = ["web","asp","c#"]
+tags = ["ASP","Csharp"]
 +++
 I recently worked on an ASP.NET application that needed to detect if users were coming from tablets or smartphones. The project used data from <http://user-agent-string.info/> to do this detection, but the result were not really good. We needed a better solution, so I came up with using [WURFL][1].
 

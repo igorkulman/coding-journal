@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-12-23"
 url = "/creating-a-fake-splashscreen-for-your-universal-app/"
 categories = ["Windows Phone","WinRT"]
-tags = ["c#","Windows Phone","windows store","winrt","xaml"]
+tags = ["Csharp","Windows Phone","Windows Store","WinRT","XAML"]
 +++
 Sometimes you may want your app to display the startup splashscreen a bit longer, so you can initialize or fetch some data necessary for the app to run. To achieve this, you can create a fake splaschreen, a View that looks just like the splashscreen, does all the work and redirects to the real main View afterwards. 
 

@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2012-11-08"
 url = "/how-to-uniquely-identify-a-windows-8-device/"
 categories = ["WinRT"]
-tags = ["c#","metro","winrt"]
+tags = ["Csharp","WinRT"]
 +++
 When developing a Windows 8 app you may need to uniquely identify the device the app runs on. One reason may be the implementation of in-app purchases.
   

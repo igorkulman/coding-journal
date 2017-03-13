@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-04-18"
 url = "/useful-tools-for-windows-store-developers/"
 categories = ["Windows Phone","WinRT"]
-tags = ["c#","windows store","xaml"]
+tags = ["Csharp","Windows Store","XAML","WinRT"]
 +++
 I recently discovered two really neet tools that helped me with Windows Store app development. 
 

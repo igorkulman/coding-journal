@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2015-05-04"
 url = "/customizing-the-player-framework-ui/"
 categories = ["Windows Phone","WinRT"]
-tags = ["c#","Windows Phone","winrt","xaml"]
+tags = ["Csharp","Windows Phone","WinRT","XAML"]
 +++
 In my last article I gave you a tip on how to localize the Player Framework, in this article I will show you have to customize the UI of the actual player. 
 

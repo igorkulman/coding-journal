@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2012-11-13"
 url = "/tampering-with-windows-store-apps-data/"
 categories = ["WinRT"]
-tags = ["security","winrt"]
+tags = ["Security","WinRT"]
 +++
 Windows Store apps run in a sandbox with their data isolated from each other. So how secure is this storage from tampering by the user? It turns out not much. 
 

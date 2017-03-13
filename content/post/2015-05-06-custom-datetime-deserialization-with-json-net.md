@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2015-05-06"
 url = "/custom-datetime-deserialization-with-json-net/"
 categories = ["Programming in general"]
-tags = ["c#"]
+tags = ["Csharp"]
 +++
 Sometimes you cannot influence the design of the API you have to use and wonder, why the API uses so strangely serialized DateTime and how to handle it using JSON.NET. 
 

@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-03-31"
 url = "/building-windows-phone-apps-with-fake/"
 categories = ["Windows Phone"]
-tags = ["f#","FAKE","Windows Phone"]
+tags = ["Fsharp","FAKE","Windows Phone"]
 +++
 [FAKE][1] is a build automation system with capabilities which are similar to make and rake. It is using an easy domain-specific language (DSL) so that you can start using it without learning F#. If you need more than the default functionality you can either write F# or simply reference .NET assemblies.
 

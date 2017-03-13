@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-08-20"
 url = "/succinctly-series-of-free-books-for-programmers/"
 categories = ["Programming in general"]
-tags = ["ebook"]
+tags = ["Ebooks"]
 +++
 I have recently come across an intreresting project by [Syncfusion][1], a company providing software components for the Microsoft platform. 
 

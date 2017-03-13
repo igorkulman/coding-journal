@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-12-24"
 url = "/dialog-helper-for-universal-apps/"
 categories = ["Windows Phone","WinRT"]
-tags = ["c#","Windows Phone","windows store","winrt","xaml"]
+tags = ["Csharp","Windows Phone","Windows Store","WinRT","XAML"]
 +++
 Today I read Joost van Schaik&#8217;s blog post called [A behavior to show a MessageDialog from a MVVMLight viewmodel in Universal apps–with callbacks][1]. I am not a MVVMLight guy (I use Caliburn.Micro) and I personally use an approach that uses a little less code, employing a helper class.
 

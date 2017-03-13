@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-08-13"
 url = "/developing-windows-store-apps-with-caliburn-micro-part-3-saving-and-restoring-state/"
 categories = ["WinRT"]
-tags = ["c#","Caliburn.Micro","windows store","winrt","xaml"]
+tags = ["Csharp","Caliburn-Micro","Windows Store","WinRT","XAML"]
 +++
 In the [previous post][1] I stated that a well-behaved Windows Store app should remeber the View the user navigated to before suspension and navigate to this View upon next run. The View can contain some input that the user can fill in. A well-behaved Windows Store app should remember the user&#8217;s input and restore it after suspension. 
 

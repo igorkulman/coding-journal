@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-03-18"
 url = "/my-windows-phone-and-windows-8-mini-libraries/"
 categories = ["Windows Phone","WinRT"]
-tags = ["c#","Windows Phone","winrt"]
+tags = ["Csharp","Windows Phone","WinRT"]
 +++
 I am a big fan of open-source software. I decided to make my mini-libraries, that I use for Windows Phone and Windows 8 development, available to everyone who would be interested. Both are basically a collection of useful utilities and components that I wrote myself or found on various forums and slightly modified. Source code is available on BitBucket and packages on Nuget.
 

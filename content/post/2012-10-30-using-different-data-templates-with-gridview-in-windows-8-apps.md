@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2012-10-30"
 url = "/using-different-data-templates-with-gridview-in-windows-8-apps/"
 categories = ["WinRT"]
-tags = ["c#","metro","winrt"]
+tags = ["Csharp","WinRT"]
 +++
 GridView and ListView are the two of the most commonly used components in Windows 8 apps. Items in these two components are displayed according to the DataTemplate give as the ItemTemplate property. If you do not want to display all the items the same way, you need to use a custom ItemTemplateSelector.
 

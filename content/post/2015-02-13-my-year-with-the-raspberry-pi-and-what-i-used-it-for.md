@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2015-02-13"
 url = "/my-year-with-the-raspberry-pi-and-what-i-used-it-for/"
 categories = ["Programming in general"]
-tags = ["linux","nodejs","raspberrypi","xbmc"]
+tags = ["Linux","nodejs","Raspberry Pi","XBMC"]
 +++
 I have been owning and using a Raspberry Pi for over a year now. I started with Raspberry Pi model B and now I added Raspberry Pi 2 immediately after it was announced. Thanks to the fact that an IoT version of Windows 10 will run on the Pi, there is quite a hype about the Pi 2. Many people who did not care about the Pi before are now buying it because of that hype. And mostly they do not know what to do with it. So here is a list of things I used the Pi for, maybe you can get inspired.
 

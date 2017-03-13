@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2015-11-02"
 url = "/visual-studio-extensions-to-make-your-life-easier/"
 categories = ["Programming in general"]
-tags = ["visual studio"]
+tags = ["Visual Studio"]
 +++
 This blog post is inspired by the [7 open-source Visual Studio Extensions to make your life easier][1] article. In the article Igal Tabachnik showed his favorite Visual Studio extensions, that were quite interesting. I also use a few Visual Studio extensions that make my life easier, so I decided to share. 
 

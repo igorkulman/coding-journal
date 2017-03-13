@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2015-05-25"
 url = "/removing-unused-strings-from-windows-phone-8-resx-files/"
 categories = ["Windows Phone"]
-tags = ["c#","Windows Phone","xaml"]
+tags = ["Csharp","Windows Phone","XAML"]
 +++
 Using RESX files is the standard approach to Windows Phone 8 app localization, it is even contained in the standard project templates. When you work on a project for a longer time, you may get to a situation that your RESX files contain strings that you no longer use. This is a problem especially when you want to add a new localization, because it is slower and kind of wasteful localizing unused strings.
 

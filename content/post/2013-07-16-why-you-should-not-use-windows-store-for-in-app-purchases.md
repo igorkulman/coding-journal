@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2013-07-16"
 url = "/why-you-should-not-use-windows-store-for-in-app-purchases/"
 categories = ["WinRT"]
-tags = ["c#","windows store","winrt"]
+tags = ["Csharp","Windows Store","WinRT"]
 +++
 I often wonder how can something as crucial as in-app purchases be so badly implemented in Windows Store. I really do not recommend anyone to use Windows Store&#8217;s built in in-app purchases. Use a third party provider or implement your own purchase mechanism, Microsoft is ok with that. You will be better of than using the built-in one. Here is why.
 

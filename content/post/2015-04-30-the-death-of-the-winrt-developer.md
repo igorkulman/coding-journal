@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2015-04-30"
 url = "/the-death-of-the-winrt-developer/"
 categories = ["Windows Phone","WinRT"]
-tags = ["Windows Phone","windows store","winrt","xaml"]
+tags = ["Windows Phone","Windows Store","WinRT","XAML"]
 +++
 As many other Windows Phone / Windows 8 / Universal apps developers (lets just call us WinRT developers) I watched the Build 2015 keynote last night. And I did not like it. I know Microsoft does not know to communicate but the message for me was clear. We, the WinRT developer, are no longer needed.
 

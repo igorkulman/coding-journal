@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-09-16"
 url = "/tvtime-track-your-favorite-tv-shows-on-windows-phone/"
 categories = ["Windows Phone"]
-tags = ["c#","Windows Phone","windows store","xaml"]
+tags = ["Csharp","Windows Phone","Windows Store","XAML"]
 +++
 We have just had released a new app called TvTime. TvTime is a simple and beautiful app for tracking your favorite TV Shows. Simply add a find the TV Shows you like, add them to the list and get detailed information about actors, air times and episodes. If you decide to track unwatched episodes, you will always know what you have already seen. So get TvTime now so you never miss your favorite TV Show!
 

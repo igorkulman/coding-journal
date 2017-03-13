@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2014-11-03"
 url = "/visual-studio-template-for-caliburn-micro-windows-phone-apps/"
 categories = ["Windows Phone"]
-tags = ["c#","Caliburn.Micro","Windows Phone","xaml"]
+tags = ["Csharp","Caliburn-Micro","Windows Phone","XAML"]
 +++
 I have been building Windows Phone apps using the [Caliburn.Micro][1] framework for some time now. Setting up a new project takes some time and can be easily automated, so I decided to create a Visual Studio template for Windows Phone apps build with Caliburn.Micro.
 

@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2012-12-19"
 url = "/monotouch-ios-development-for-net-programmers/"
 categories = ["Programming in general"]
-tags = ["c#","iOS","Mono"]
+tags = ["Csharp","iOS","Mono"]
 +++
 Beeing [quite disappointed with the Windows Phone platform recently][1] I started to look for other ways to use my .NET skills and to develop for a mobile platform at the same time. I found [MonoTouch][2], a product from Xamarin that allows you to build iOS apps using C# with Mono. 
 

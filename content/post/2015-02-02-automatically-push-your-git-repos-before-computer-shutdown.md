@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2015-02-02"
 url = "/automatically-push-your-git-repos-before-computer-shutdown/"
 categories = ["PowerShell"]
-tags = ["git","powershell"]
+tags = ["Git","PowerShell"]
 +++
 I use two computers, my desktop computer located at home and set up for work and play and a work notebook (company provided) that I usually leave at the office. I use both computers for work and sometimes I forget to do &#8216;git push&#8217; when working at my home desktop computer. The next day, when using the work notebook, I wonder where the code from the previous day has disappeared.
 

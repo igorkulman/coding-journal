@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2012-10-24"
 url = "/customizing-semantic-zoom-in-windows-8-apps/"
 categories = ["WinRT"]
-tags = ["c#","metro","winrt"]
+tags = ["Csharp","WinRT"]
 +++
 Semantic zoom is an important part of all Windows 8 apps, it is a distinctive feature that differentiates them from other platforms. The SemanticZoom component works fine if you want the default experience, but if you want some customization you have to try a bit harder.
 
