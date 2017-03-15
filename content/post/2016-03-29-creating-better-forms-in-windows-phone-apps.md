@@ -6,6 +6,7 @@ author = "Igor Kulman"
 date = "2016-03-29T09:29:12+01:00"
 title = "Creating better forms in Windows Phone apps"
 url = "/creating-better-forms-in-windows-phone-apps"
+share_img = "/images/forms1.gif"
 
 +++
 

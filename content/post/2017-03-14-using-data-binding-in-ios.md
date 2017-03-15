@@ -6,7 +6,7 @@ author = "Igor Kulman"
 date = "2017-03-14T09:29:12+01:00"
 title = "Using data binding in iOS"
 url = "/using-data-binding-in-ios"
-draft = false
+share_img = "/images/iosvalidation.gif"
 
 +++
 

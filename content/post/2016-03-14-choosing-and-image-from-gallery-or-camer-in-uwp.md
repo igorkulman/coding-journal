@@ -6,6 +6,7 @@ author = "Igor Kulman"
 date = "2016-03-14T09:29:12+01:00"
 title = "Choosing an image from gallery or camera a bit better in Universal Windows apps"
 url = "/choosing-an-image-from-gallery-or-camera-in-uwp"
+share_img = "/images/wpa81.gif"
 
 +++
 
