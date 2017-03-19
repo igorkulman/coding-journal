@@ -16,11 +16,11 @@ I am currently working on a UWP app for a cable TV company. The app allows their
 
 The TV schedule grid shows a TV schedule for all the subscribed channels for a given day. The channels are being shown in rows and the columns represent TV shows. The grid is scrollable in both directions and the channel logos are sticky. The users can be subscribed up 70 channels and all of this should work reasonably well even on a Windows Phone.
 
-<!--more-->
-
 This is how the result looks in a Windows Phone emulator. Spoiler: there is just no way to make it so smooth on a real Windows Phone device.
 
 {{% img-responsive "/images/tvgrid.gif" %}}
+
+<!--more-->
 
 ## XAML controls
 
