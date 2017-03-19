@@ -7,6 +7,7 @@ date = "2017-03-21T09:29:12+01:00"
 title = "Using MVVM with tables and cells in iOS"
 url = "/using-mvvm-with-tables-in-ios"
 draft = true
+share_img = "/images/iostablemvvm.gif"
 
 +++
 

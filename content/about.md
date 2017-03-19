@@ -10,13 +10,13 @@ subtitle = "Who am I?"
 <p class="about-text">
 <span class="fa fa-briefcase about-icon"></span>
 
-Currently an a <b>software engineer</b> at <a href="https://www.teamwire.eu/">Teamwire</a> mostly handling Windows Phone development and venturing into iOS development. Still doing freelance work when the opportunity arises. Previously worked as <b>.NET developer</b> (<a href="https://www.alza.cz">Alza.cz</a>, <a href="https://www.inmite,eu">Inmite</a>) focused on Windows Phone and Microsoft Azure.
+Currently an a <b>Software Engineer</b> at <a href="https://www.teamwire.eu/">Teamwire</a> mostly handling Windows Phone development and venturing into iOS development. Still doing freelance work when the opportunity arises. Previously worked as <b>.NET Developer</b> (<a href="https://www.alza.cz">Alza.cz</a>, <a href="https://www.inmite,eu">Inmite</a>) focused on Windows Phone and Microsoft Azure.
 
 </p>
 
 <p class="about-text">
 <span class="fa fa-graduation-cap about-icon"></span>
-Obtained my master's degree in <strong>Computer Science</strong> from the Charles University in Prague (the faculty of Mathematics and Physics) focusing on <b>software engineering</b>.
+Obtained my master's degree in <strong>Computer Science</strong> from the Charles University in Prague (the faculty of Mathematics and Physics) focusing on <b>Software Engineering</b>.
 </p>
 
 <p class="about-text">
