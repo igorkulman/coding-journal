@@ -3,7 +3,7 @@ Categories = [ "MacOS", "Hackintosh"]
 Description = ""
 Tags = []
 author = "Igor Kulman"
-date = "2017-03-24T09:29:12+01:00"
+date = "2017-03-28T09:29:12+01:00"
 title = "My experience running a hackintosh"
 url = "/my-experience-running-a-hackintosh"
 draft = true
@@ -11,7 +11,7 @@ share_img = "/images/hackintosh.png"
 
 +++
 
-A few months ago I decided to take part in an iOS project. The first problem I needed to solve was to be able to run macOS Sierra and XCode. I did not really want to buy an overpriced MacBook without function keys or and underpowered Mac Mini. Especially when I own a nearly 4 years old desktop computer that is still usable for all my needs. A few iOS developers I know recommended I go the Hackintosh way.
+A few months ago I decided to take part in an iOS project. The first problem I needed to solve was to be able to run macOS Sierra and XCode. I did not really want to buy an overpriced MacBook without function keys or and underpowered Mac Mini. Especially when I own a more than 3 years old desktop computer that is still usable for all my needs. A few iOS developers I know recommended I go the Hackintosh way.
 
 ## Hackintosh
 
@@ -37,9 +37,9 @@ I installed macOS on a separate SSD, so I had no problem with the UEFI loader co
 
 ## Performance
 
-I performed some tests with the few benchmarks that have both a Windows and a macOS version and the results were quite similar. There was basically no performance degradation on the macOS. I compared my Geekbench 4 results to the Apple hardware and I was quite surprised. My 4 years old desktop computer had basically the same single core performance score as a i5 MacBook Pro (13-inch Late 2016) and about 20% better performance as this MacBook Pro. 
+I performed some tests with the few benchmarks that have both a Windows and a macOS version and the results were quite similar. There was basically no performance degradation on the macOS. I compared my Geekbench 4 results to the Apple hardware and I was quite surprised. My more than 3 years old desktop computer had basically the same single core performance score as a i5 MacBook Pro (13-inch Late 2016) and about 20% better multicore performance as this MacBook Pro. 
 
-I know it is not fair to compare desktop computers to laptops (desktop i5 has 4 cores, laptop i5 only 2) but I am still amazed that the current generation overpriced i5 MacBook Pro does not have a better performance that my 4 years old desktop. And I still have some room for overclocking. I think [Apple has really given up on machines for developers](https://news.ycombinator.com/item?id=13797042).
+I know it is not fair to compare desktop computers to laptops (desktop i5 has 4 cores, laptop i5 only 2) but I am still amazed that the current generation overpriced i5 MacBook Pro does not have a better performance that my more than 3 years old desktop. And I still have some room for overclocking. I think [Apple has really given up on machines for developers](https://news.ycombinator.com/item?id=13797042).
 
 ## Using macOS and software
 
