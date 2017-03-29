@@ -6,7 +6,6 @@ author = "Igor Kulman"
 date = "2017-03-28T09:29:12+01:00"
 title = "My experience running a hackintosh"
 url = "/my-experience-running-a-hackintosh"
-draft = true
 share_img = "/images/hackintosh.png"
 
 +++
@@ -47,4 +46,4 @@ I was surprised that basically everything worked out of the box. I had some prob
 
 My Windows keyboard [needed some setup](using-macos-with-a-windows-keyboard). The back and forward buttons on my gaming mouse do not work, but I got around it using [BetterTouchTool](http://sunpech.com/2015/04/map-your-mouses-back-and-forward). If you have a WiFi card (I do not) it will probably not work. There are some alternatives you can use, like [this WiFi card with Bluetooth that even support hand-off](https://www.amazon.de/Bluetooth-PCI-Express-BCM94360CD-Hackintosh-Flughafen/dp/B00MBP25UK/ref=sr_1_1?ie=UTF8&qid=1487424169&sr=8-1&keywords=Hackintosh).
 
-Software like XCode also runs fine, including iOS simulators. Overall macOS behaves just like it was installed on an Apple machine.
+Software like XCode also runs fine, including iOS simulators. Overall macOS behaves just like it was installed on an Apple machine. The macOS updates also work without a problem, just check [tonymacx86.com](https://www.tonymacx86.com/) before applying them to be sure. 
