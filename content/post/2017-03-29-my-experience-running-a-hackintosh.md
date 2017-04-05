@@ -1,11 +1,11 @@
 ﻿+++
 Categories = [ "MacOS", "Hackintosh"]
 Description = ""
-Tags = []
 author = "Igor Kulman"
 date = "2017-03-29T09:29:12+01:00"
 title = "My experience running a hackintosh"
 url = "/my-experience-running-a-hackintosh"
+Tags = ["MacOS", "Hackintosh", "iOS"]
 share_img = "/images/hackintosh.png"
 
 +++
