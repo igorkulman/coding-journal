@@ -6,7 +6,6 @@ author = "Igor Kulman"
 date = "2017-04-05T09:29:12+01:00"
 title = "Generating a list of libraries your iOS app uses"
 url = "/generating-a-list-of-libraries-your-ios-app-uses"
-draft = true
 
 +++
 
@@ -19,3 +18,5 @@ There is currently no support for using multiple Carthage files (when you have m
 <!--more-->
 
 You can then read the `plist` file in your app and show it as a list of libraries like I do
+
+{{% img-responsive "/images/licenses.gif" %}}
