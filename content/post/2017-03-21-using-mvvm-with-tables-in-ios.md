@@ -55,6 +55,4 @@ The tricky part is the `UITableViewCell` and making the UI work with the ViewMod
 
 <div data-gist="a2c5b63f835e8bd01df89566a5627d6b" data-file="SyncStepCell.swift"></div>
 
-Just do not forget that cells in the table view get recycled. Before that happens, you need to remove the bindings in the `prepareForReuse` method by disposing the bag that holds them. 
-
 My `UITableViewCell` just "waits" for the ViewModel and then sets up all the necessary bindings. Again, no direct access to the UI elements, just making everything work in a simple declarative way.
