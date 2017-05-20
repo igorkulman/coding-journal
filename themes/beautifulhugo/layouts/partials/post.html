@@ -27,11 +27,7 @@
 </div>
 
       {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (.Site.Params.comments)) }}
-        {{ if .Site.DisqusShortname }}
-          <div class="disqus-comments">
-            {{ template "_internal/disqus.html" . }}
-          </div>
-        {{ end }}
+       <a class="muut" href="https://muut.com/i/codingjournal/comments" type="dynamic">codingjournal</a> <script src="//cdn.muut.com/1/moot.min.js"></script>
       {{ end }}
 
     </div>
