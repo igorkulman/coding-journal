@@ -7,7 +7,6 @@ date = "2017-05-23T09:29:12+01:00"
 title = "Re-signing iOS apps"
 url = "/resigning-ios-apps"
 share_img = "/images/easyresigny.png"
-draft = true
 
 +++
 
