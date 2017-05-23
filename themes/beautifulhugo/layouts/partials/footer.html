@@ -199,25 +199,6 @@
 <script src="{{ .Site.BaseURL }}/js/main.js"></script>
 <script src="{{ .Site.BaseURL }}/js/gist.js"></script>
 
-<script type="text/javascript">
-$(function(){
-  $('#show-comments').on('click', function(){
-    var disqus_shortname = 'your_disqus_user_name';
-
-    (function() {
-      var disqus = document.createElement('script'); 
-      disqus.type = 'text/javascript'; 
-      disqus.async = true;
-      disqus.src = '//' + '{{.Site.DisqusShortname}}' + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(disqus);
-    })();
-
-    $(this).hide(); // Hide the button
-  });
-});
-
-</script>
-<script id="dsq-count-scr" src="//{{.Site.DisqusShortname}}.disqus.com/count.js" async></script>
 
 
 {{ template "_internal/google_analytics.html" . }}
