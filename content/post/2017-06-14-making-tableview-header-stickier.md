@@ -6,7 +6,6 @@ author = "Igor Kulman"
 date = "2017-06-14T09:29:12+01:00"
 title = "Making UITableView's header 'stickier'"
 url = "/making-tableview-header-stickier"
-draft = true
 share_img = "/images/stickyheader.gif"
 
 +++
