@@ -4,7 +4,7 @@ Description = "When you create a UITableViewCell that you want to use with multi
 Tags = ["iOS", "Swift"]
 author = "Igor Kulman"
 date = "2017-06-20T09:29:12+01:00"
-title = "Simpler and safe custom table view cells with Reusable"
+title = "Simpler and safer iOS custom table view cells with Reusable"
 url = "/simpler-and-safer-custom-tableview-cells"
 
 +++
