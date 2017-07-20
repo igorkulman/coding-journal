@@ -19,7 +19,7 @@ There are some good tools to help you to create animations like this on both Win
 
 ## ScreenToGif (Windows)
 
-[ScreenToGif](http://www.screentogif.com/) is a simple but powerful portable Windows app that helps you record your screen and save it as a Gif. You can record the whole screen or just a custom window. This is ideal for example for recording the behaviour of your apps in an emulator, recording just the emulator window.
+[ScreenToGif](http://www.screentogif.com/) is a simple but powerful portable Windows app that helps you record your screen and save it as a Gif. You can record the whole screen or just a custom window. This is ideal for example for recording the behavior of your apps in an emulator, recording just the emulator window.
 
 ## Gipphy (macOS)
 
