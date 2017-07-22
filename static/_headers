@@ -1,3 +1,15 @@
+/:post/
+  Link: </css/bootstrap.min.css>; rel=preload; as=stylesheet
+  Link: </css/main.css>; rel=preload; as=stylesheet
+  Link: </css/lora.css>; rel=preload; as=stylesheet
+  Link: </css/sans.css>; rel=preload; as=stylesheet
+  Link: </css/font-awesome.min.css>; rel=preload; as=stylesheet
+  Link: </js/bootstrap.min.js>; rel=preload; as=script
+  Link: </js/jquery-1.12.4.min.js>; rel=preload; as=script
+  Link: </js/main.js>; rel=preload; as=script
+  Link: </js/gist.js>; rel=preload; as=script
+  Link: </img/avatar-icon.png>; rel=preload; as=image
+
 /
   Link: </css/bootstrap.min.css>; rel=preload; as=stylesheet
   Link: </css/main.css>; rel=preload; as=stylesheet
