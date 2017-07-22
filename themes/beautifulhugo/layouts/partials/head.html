@@ -27,11 +27,11 @@
 
   <link rel="alternate" href="{{ "/index.xml" | absURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
 
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />  
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/lora.css" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/sans.css" />  
 
   <!-- Facebook OpenGraph tags -->
   {{ if .Site.Params.fb_app_id }}
