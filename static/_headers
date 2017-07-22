@@ -4,7 +4,7 @@
   Link: </js/gist.js>; rel=preload; as=script
   Link: </img/avatar-icon.png>; rel=preload; as=image
 
-/*/index.html
+/:post/index.html
   Link: </css/main.css>; rel=preload; as=stylesheet
   Link: </js/main.js>; rel=preload; as=script
   Link: </js/gist.js>; rel=preload; as=script
