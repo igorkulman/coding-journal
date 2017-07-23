@@ -1,7 +1,7 @@
 +++
-Categories = ["macOS", "Software", "Wondows"]
+Categories = ["macOS", "Software", "Windows"]
 Description = ""
-Tags = ["macOS", "Software", "Wondows"]
+Tags = ["macOS", "Software", "Windows"]
 author = "Igor Kulman"
 date = "2017-07-25T09:29:12+01:00"
 title = "Creating animations of your apps"
