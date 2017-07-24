@@ -1,4 +1,4 @@
-baseurl = "https://blog.kulman.sk"
+baseurl = "https://deploy-preview-2--coding-journal.netlify.com"
 languageCode = "en-us"
 title = "Igor Kulman"
 googleAnalytics = "UA-49528577-2"
