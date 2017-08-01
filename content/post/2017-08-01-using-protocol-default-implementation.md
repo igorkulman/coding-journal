@@ -6,7 +6,6 @@ author = "Igor Kulman"
 date = "2017-08-01T09:29:12+01:00"
 title = "Using protocol default implementation instead of abstract classes"
 url = "/using-protocol-default-implementation"
-draft = true
 
 +++
 
