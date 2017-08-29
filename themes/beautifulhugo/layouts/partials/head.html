@@ -79,6 +79,7 @@
 
   {{ if .Params.share_img }}
     <meta name="twitter:image" content="{{ .Params.share_img | absURL }}" />
+    <meta property="og:image" content="{{ .Params.share_img | absURL }}" />
   {{ else if isset .Params.bigimg 0 }}
     <meta name="twitter:image" content="{{ (index .Params.bigimg 0).src | absURL }}" />
   {{ else if .Site.Params.logo }}
