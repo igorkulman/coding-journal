@@ -19,6 +19,6 @@ The whole process should be easy, just connecting the iPhone to the computer wit
 
 <!--more-->
 
-Some experiments with `ping` showed that I can reach IP addresses like 8.8.8.8 just fine, but DNS does not work. Running `cat /etc/resolv.conf` showed that the DNS server is still set to the IP address of my router. 
+After killing mDNSResponder with `killall -HUP mDNSResponder` I was able to `ping` IP addresses like 8.8.8.8 just fine, but DNS did not work. Running `cat /etc/resolv.conf` showed that the DNS server was still set to the IP address of my router. 
 
-The solution was to set the DNS for the tethering connection manually with `networksetup -setdnsservers "iPhone USB" 8.8.8.8` and flushing the cache using `dscacheutil -flushcache`. 
+The solution was to set the DNS for the tethering connection manually with `networksetup -setdnsservers "iPhone USB" 8.8.8.8` and flush the cache using `dscacheutil -flushcache`. 
