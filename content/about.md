@@ -9,7 +9,7 @@ subtitle = "Who am I?"
 
 <p class="about-text">
 <span class="fa fa-briefcase about-icon"></span>
-Currently a <b>Software Engineer</b> at <a href="https://www.teamwire.eu/">Teamwire</a> working on the new iOS secure messaging app after the death of Windows Phone. Still doing freelance work when the opportunity arises. Previously worked as <b>.NET Developer</b> (<a href="https://www.alza.cz">Alza.cz</a>, <a href="https://www.inmite,eu">Inmite</a>) mostly focused on Windows development and Microsoft Azure.
+Currently a <b>Software Engineer</b> at <a href="https://www.teamwire.eu/">Teamwire</a> working on the new iOS secure messaging app after the death of Windows Phone. Still doing freelance work when the opportunity arises. Previously worked as <b>.NET Developer</b> (<a href="https://www.alza.cz">Alza.cz</a>, <a href="https://www.inmite.eu">Inmite</a>) mostly focused on Windows development and Microsoft Azure.
 </p>
 
 <p class="about-text">
