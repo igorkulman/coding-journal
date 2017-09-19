@@ -7,7 +7,6 @@ date = "2017-09-19T09:29:12+01:00"
 title = "Fixing problems with iPhone USB tethering on macOS"
 url = "/fixing-iphone-usb-tethering-on-macos"
 share_img = "/images/tethering.png"
-draft = true
 
 +++
 
