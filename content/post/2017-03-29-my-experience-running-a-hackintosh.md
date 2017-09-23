@@ -34,6 +34,8 @@ I [created a installation disk](https://www.tonymacx86.com/threads/unibeast-inst
 
 I installed macOS on a separate SSD, so I had no problem with the UEFI loader conflicting with Windows. The only problem is that my Windows 10 install is MBR not UEFI so Clover (the Hackintosh UEFI loader) cannot run it. I solved it by having the SSD with Windows as primary boot device so Windows boots automatically when I turn on the computer. When I want to boot macOS I just press F12 to get to the BIOS boot menu and choose the macOS drive to boot from manually.
 
+{{% img-responsive "/images/hackintosh.png" %}}
+
 ## Performance
 
 I performed some tests with the few benchmarks that have both a Windows and a macOS version and the results were quite similar. There was basically no performance degradation on the macOS. I compared my Geekbench 4 results to the Apple hardware and I was quite surprised. My more than 3 years old desktop computer had basically the same single core performance score as a i5 MacBook Pro (13-inch Late 2016) and about 20% better multicore performance as this MacBook Pro. 
