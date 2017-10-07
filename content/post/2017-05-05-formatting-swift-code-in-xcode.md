@@ -1,5 +1,5 @@
 +++
-Categories = [ "iOS"]
+Categories = [ "iOS", "XCode", "Swift"]
 Description = "When I started using XCode I was really surprised about the really poor implementation of its code formatting functionality. It kind of formats the alignment of the code but ignores unnecessary spaces and a lot of other things. Formatting the source code and keeping the style consistent is really important to me so I was looking for a solution."
 Tags = ["iOS", "XCode", "Swift"]
 author = "Igor Kulman"
