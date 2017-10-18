@@ -4,6 +4,10 @@ id = "78"
 period = "November 2016 - May 2017"
 image = "/images/4net.jpg"
 date = "2017-05-17T06:56:45"
+link = "https://www.microsoft.com/cs-cz/store/p/4nettv/9p1z09d44jc3"
+linkActionTitle = "Windows Store"
+linkAction = "Download"
+company = "SKOUMAL"
 +++
 
-Universal Windows Platform application for the Czech online TV platfrom 4NET.TV.
+Universal Windows Platform application running on desktops and phones for the Czech online TV platfrom 4NET.TV.
