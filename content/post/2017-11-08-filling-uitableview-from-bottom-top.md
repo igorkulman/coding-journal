@@ -27,6 +27,8 @@ The first two situations are easy to accomplish, but the last one is not. I coul
 
 Another solution is to rotate the `UITableView` by 180 degrees; rotating it upside down. Of course you have to also "flip" your data source but that is trivial to achieve. The advantage is that you do not have to do any scrolling when new messages are added to the bottom (which is the top of the rotated `UITableView`) and if you use batch updates instead of reload neither when older messages are loaded.
 
+<!--more-->
+
 After you rotate the `UITableView`
 
 <div data-gist="3cda3da3437713da8d1613bb88af42c5" data-file="tableview-flip.swift"></div>
