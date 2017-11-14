@@ -10,4 +10,4 @@ linkAction = "Download"
 company = "SKOUMAL"
 +++
 
-Universal Windows Platform application running on desktops and phones for the Czech online TV platfrom 4NET.TV.
+Universal Windows Platform application running on desktop, phone and XBox One for the Czech online TV platfrom 4NET.TV.
