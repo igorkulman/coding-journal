@@ -56,3 +56,5 @@ The tricky part is the `UITableViewCell` and making the UI work with the ViewMod
 <div data-gist="a2c5b63f835e8bd01df89566a5627d6b" data-file="SyncStepCell.swift"></div>
 
 My `UITableViewCell` just "waits" for the ViewModel and then sets up all the necessary bindings. Again, no direct access to the UI elements, just making everything work in a simple declarative way.
+
+If you want a more complex example of MVVM and binding, check out my [iOS sample app on Github](https://github.com/igorkulman/iOSSampleApp).
