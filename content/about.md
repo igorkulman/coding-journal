@@ -29,7 +29,7 @@ Take a look at my <strong><a href="/projects">projects</a></strong> and my <stro
 
 <p class="about-text">
 <span class="fa fa-globe about-icon"></span>
-I also write a <a href="htts://www.kulman.sk">blog in Slovak about non-programming stuff</a>, check it out if you can read in.
+I also write a <a href="https://www.kulman.sk">blog in Slovak about non-programming stuff</a>, check it out if you can read in.
 </p>
 
 </div>
