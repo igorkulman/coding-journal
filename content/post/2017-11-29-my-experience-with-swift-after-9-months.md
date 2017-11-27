@@ -49,3 +49,7 @@ The Apple [documentation about Swift](https://developer.apple.com/swift/) is sur
 I like podcasts, podcasts are the main source of information about programming for me. There are some really good podcasts in the .NET world, not only about Microsoft technologies ([MSDevShow](https://msdevshow.com/)) but also some with a broader reach ([.NET Rocks](https://www.dotnetrocks.com/), [Coding Blocks](https://www.codingblocks.net/)). 
 
 I had some troubles finding something similar for Swift and iOS. I tried [Inside iOS Dev](http://insideiosdev.com/) but I do not think it is that great. I got recommendations for [Fireside Swift](https://twitter.com/fireside_swift) and [Swift by Sundell](https://www.swiftbysundell.com/podcast/) so trying out those two now. More tips are welcomed. 
+
+### Conclusion
+
+I enjoy using and learning Swift, I am getting quite proficient using it. I do not regret to switch away from Windows development. 
