@@ -28,6 +28,8 @@ In Swift I really like immutability, non-nullability, extensions with default im
 
 Using a concept like async/await is so much better than callbacks, even [JavaScript is getting async/await now](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) so Swift should be next. It would make the code so much more readable and easier to reason about.
 
+I am building an [sample iOS app on Github](https://github.com/igorkulman/iOSSampleApp) with all the thing I learned about Swift an iOS, especially about high level architecture, you may check it out. 
+
 ### Swift toolchain
 
 What I really hate is the lack of [ABI stability](https://github.com/apple/swift/blob/master/docs/ABIStabilityManifesto.md) and its consequences. My problem is that when Apple releases a new version of Xcode that includes a newer version of Swift I have to rebuild all m dependencies because I use [Carthage](https://github.com/Carthage/Carthage) (not only because it reminds me of [Nuget](https://www.nuget.org/) from the .NET world, so linking dependencies as frameworks instead of sources but I also really dislike Pods).
