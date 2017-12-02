@@ -24,9 +24,15 @@ As a side note I remember reading [Masterminds of Programming](http://amzn.to/2z
 
 <!--more-->
 
-In Swift I really like immutability, non-nullability, extensions with default implementation and the whole focus on [protocols instead of inheritance](/using-protocol-default-implementation/). There is just one thing I really miss and hope Swift would get it soon and that is the async/await from C#. 
+In Swift I really like immutability, non-nullability, extensions with default implementation and the whole focus on [protocols instead of inheritance](/using-protocol-default-implementation/). 
 
-Using a concept like async/await is so much better than callbacks, even [JavaScript is getting async/await now](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) so Swift should be next. It would make the code so much more readable and easier to reason about.
+In situations where I used inheritance, like abstract classes that are not available in Swift, in the past I now use protocols with default implementations, it makes the code easier to reason about. Sometimes I stumble upon stuff I cannot do with just protocols, like the template pattern, so I have to find a way around that.
+
+I also enjoy are the functional concepts like `map`, `filter`, `reduce`, they remind me of F# and LINQ in C# and allow me to write concise declarative code that is easy to read and understand. 
+
+I had some problems with the way Swift approaches generics (`associated type` in protocol and `typealias` in implementation), it requires a bit different mindset.
+
+There is just one thing I really miss and hope Swift would get it soon and that is the async/await from C#. Using a concept like async/await is so much better than callbacks, even [JavaScript is getting async/await now](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) so Swift should be next. It would make the code so much more readable and easier to reason about.
 
 I am building an [sample iOS app on Github](https://github.com/igorkulman/iOSSampleApp) with all the thing I learned about Swift an iOS, especially about high level architecture, you may check it out. 
 
