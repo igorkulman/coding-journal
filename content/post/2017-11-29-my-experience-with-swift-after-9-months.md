@@ -32,7 +32,7 @@ I also enjoy are the functional concepts like `map`, `filter`, `reduce`, they re
 
 I had some problems with the way Swift approaches generics (`associated type` in protocol and `typealias` in implementation), it requires a bit different mindset.
 
-There is just one thing I really miss and hope Swift would get it soon and that is the async/await from C#. Using a concept like async/await is so much better than callbacks, even [JavaScript is getting async/await now](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) so Swift should be next. It would make the code so much more readable and easier to reason about.
+There is one thing I really miss and hope Swift would get soon and that is the async/await from C#. Using a concept like async/await is so much better than callbacks, even [JavaScript is getting async/await now](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) so Swift should be next. It would make the code so much more readable and easier to reason about, because concurrency and asynchrony is hard if there are no language constructs to help you with that. Swift only has callback which can quickly lead to a callback in a callback in a callback. You can of course use some promise library or RxSwift (like I do), but something like async/await should be a part of the language. 
 
 I am building an [sample iOS app on Github](https://github.com/igorkulman/iOSSampleApp) with all the thing I learned about Swift an iOS, especially about high level architecture, you may check it out. 
 
