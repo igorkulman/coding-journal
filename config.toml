@@ -1,7 +1,6 @@
 baseurl = "https://blog.kulman.sk"
 languageCode = "en-us"
 title = "Igor Kulman"
-googleAnalytics = "UA-49528577-2"
 theme = "beautifulhugo"
 Paginate = 10
 disqusShortname = "coudingjournal"
