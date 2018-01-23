@@ -41,8 +41,6 @@ When the view controller finishes, it just tells the registration coordinator th
 
 It may display step 2, it may skip to step 3 if for example step 2 is not needed because the application has the data from some other source like MDM. The coordinator decides what is displayed next. 
 
-You can create a whole hierarchy of coordinators if you like, making them as granular as you need. Your application may start with an `AppCoordinator`. It checks if the user is already registered. If not, it starts the `RegistrationCoordinator` as its child and waits for it to finish to start the `DashboardCoordinator`.
-
 #### Implementation
 
 You do not need any special frameworks to create coordinators. A coordinator can be a simple protocol with `start` method
@@ -55,6 +53,16 @@ where you just put your navigation logic
 
 It does not even matter how you create the UI for your view controllers. You can create your UI in code, in a XIB file, on the storyboard, the coordinators do not care, as long as you can create an instance of your view controllers in code. 
 
+You can create a whole hierarchy of coordinators if you like, making them as granular as you need. Your application may start with an `AppCoordinator`. 
+
+<div data-gist="f5d825e91e3c03ad64c2c19235152e8c" data-file="AppDelegate.swift"></div>
+
+It checks if the user is already registered. If not, it starts the `RegistrationCoordinator` as its child and waits for it to finish to start the `DashboardCoordinator`.
+
+<div data-gist="f5d825e91e3c03ad64c2c19235152e8c" data-file="AppCoordinator.swift"></div>
+
+Notice the `childCoordinators` dictionary in the `AppCoordinator`. We need to store our coordinator instances in this dictionary so ARC does not clean them. We clean them manually when they are no longer needed (`registrationCoordinatorDidFinish()`).
+
 #### Advantages
 
 Thanks to coordinators your view controllers do not know about each other and do not handle navigation. And the best thing is, you can reuse them. Suppose you have a profile view controller. You can use it in the registration flow to gather some user data like name and email and then push another step when it is finished, or you may show it modally from another coordinator as part of user settings.
@@ -66,4 +74,4 @@ To sum it up, coordinators
 * make your view controllers reusable in different contexts
 * organize your application by use case scenarios
 
-If you want to see coordinators in practice together with the other concepts I will talk about in the next posts, check out [my sample iOS application at Github](https://github.com/igorkulman/iOSSampleApp). It contains a two level hierarchy of coordinators and also shows you how to use child coordinators. 
+If you want to see coordinators in practice together with the other concepts I will talk about in the next posts, check out [my sample iOS application at GitHub](https://github.com/igorkulman/iOSSampleApp). It contains a two level hierarchy of coordinators and also shows you how to use child coordinators. 
