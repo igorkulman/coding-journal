@@ -43,4 +43,4 @@ The AppConnect SDK is now properly added to your project but to actually use it 
 
 Do not forget to define it as a bridging header in your projects configuration. 
 
-Now you can use the AppConnect SDK in exactly the same way as described in the documentation for Objective-C. 
+Now you can use the AppConnect SDK in exactly the same way as described in the documentation for Objective-C. You just need to disable bitcode for your project, otherwise it will not build because of the libcrypto.a library.
