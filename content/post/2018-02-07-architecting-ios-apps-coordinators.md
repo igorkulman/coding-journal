@@ -11,7 +11,9 @@ url = "/architecting-ios-apps-coordinators"
 
 When switching from Windows Phone development to iOS I had about 3 months to learn iOS and Swift before starting the work on an actual iOS application. I had a chance to build the application from scratch with a colleague so I wanted the application to be really well written and architected. 
 
-I started to look at some iOS tutorials and other peoples iOS code and I found stuff that I really disliked. There were three big things in particular that I disliked, that I want to show you together with solutions I found. This first post deals with navigation. 
+I started to look at some iOS tutorials and other peoples' iOS code. Learning and using Swift was easy (read more about [my Swift experience in a separate blog post](/my-experience-with-swift-after-9-months)) but when reading about using the iOS SDK and especially application architecture I found stuff that I really disliked. 
+
+There were three big things in particular that I disliked, that I want to show you together with solutions I found. This first post deals with navigation. 
 
 ### The problem
 
