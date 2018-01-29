@@ -1,77 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  {{ partial "head.html" . }}
-
-  <body>
-
-    {{ partial "nav.html" . }}
-
-    {{ if isset .Site.Params.bigimg 0 }}
-      <div id="header-big-imgs" data-num-img={{len .Site.Params.bigimg}} {{range $i, $img := .Site.Params.bigimg}}data-img-src-{{add $i 1}}="{{$img.src}}" data-img-desc-{{add $i 1}}="{{$img.desc}}"{{end}}></div>
-    {{ end }}
-
-   <header class="header-section {{ if isset .Site.Params.bigimg 0 }}has-img{{ end }}">
-      {{ if isset .Site.Params.bigimg 0 }}
-        <div class="intro-header big-img">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="page-heading">
-                  <h1>{{.Site.Params.blogTitle}}</h1>
-                  {{if .Site.Params.subtitle}}
-                    <hr class="small">
-                    <span class="page-subheading">{{.Site.Params.subtitle}}</span>
-                  {{end}}
-                </div>
-              </div>
-            </div>
+{{ define "main" }}
+  <div role="main" class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        {{ with .Content }}
+          <div class="well">
+            {{.}}
           </div>
-          <span class="img-desc" style="display: inline;"></span>
-        </div>
-      {{end}}
-      <div class="intro-header no-img">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-              <div class="page-heading">
-                 <h1>{{.Site.Params.blogTitle}}</h1>
-                {{if .Site.Params.subtitle}}
-                  <hr class="small">
-                  <span class="page-subheading">{{.Site.Params.subtitle}}</span>
-                {{end}}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+        {{ end }}
 
-
-    <div role="main" class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="posts-list">
-            {{ $pag := .Paginate (where .Data.Pages "Type" "post") }}
-            {{ range $pag.Pages }}
-              <article class="post-preview">
+        <div class="posts-list">
+          {{ $pag := .Paginate (where .Data.Pages "Type" "post") }}
+          {{ range $pag.Pages }}
+            <article class="post-preview">
               <a href="{{ .Permalink }}">
                 <h2 class="post-title">{{ .Title }}</h2>
-
                 {{ if .Params.subtitle }}
                   <h3 class="post-subtitle">
                   {{ .Params.subtitle }}
                   </h3>
                 {{ end }}
+                {{ if .Params.image }}
+                <img src="{{ .Params.image }}" class="img-title" />
+                {{ end }}
               </a>
 
-              <p class="post-meta">
-                Posted on {{ .Date.Format .Site.Params.dateFormat }}
-              </p>
+              {{ partial "post_meta.html" . }}
               <div class="post-entry">
                 {{ if .Truncated }}
                   {{ .Summary }}
-                  <a href="{{ .Permalink }}" class="post-read-more">[Read&nbsp;More]</a>
+                  <a href="{{ .Permalink }}" class="post-read-more">[{{ i18n "readMore" }}]</a>
                 {{ else }}
                   {{ .Content }}
                 {{ end }}
@@ -80,34 +37,29 @@
               {{ if .Params.tags }}
                 <span class="post-meta">
                 {{ range .Params.tags }}
-                  #<a href="/tags/{{ . | urlize }}">{{ . }}</a>&nbsp;
+                  #<a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
                 {{ end }}
                 </span>
               {{ end }}
-
-              </article>
-            {{ end }}
-          </div>
-
-          {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-            <ul class="pager main-pager">
-              {{ if .Paginator.HasPrev }}
-                <li class="previous">
-                  <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}">&larr; Newer Posts</a>
-                </li>
-              {{ end }}
-              {{ if .Paginator.HasNext }}
-                <li class="next">
-                  <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}">Older Posts &rarr;</a>
-                </li>
-              {{ end }}
-            </ul>
+            </article>
           {{ end }}
         </div>
+
+        {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+          <ul class="pager main-pager">
+            {{ if .Paginator.HasPrev }}
+              <li class="previous">
+                <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newerPosts" }}</a>
+              </li>
+            {{ end }}
+            {{ if .Paginator.HasNext }}
+              <li class="next">
+                <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "olderPosts" }} &rarr;</a>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
       </div>
     </div>
-
-    {{ partial "footer.html" . }}
-
-  </body>
-</html>
+  </div>
+{{ end }}
