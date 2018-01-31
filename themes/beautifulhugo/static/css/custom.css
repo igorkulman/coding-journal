@@ -24,3 +24,6 @@ table tr, table tr th, table tr td {
     position: relative;
     margin-left: 30px;
 }
+img.pure-img {
+	margin: 0px;
+}
