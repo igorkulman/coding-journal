@@ -24,8 +24,11 @@ table tr, table tr th, table tr td {
     position: relative;
     margin-left: 30px;
 }
-img.pure-img {
-	margin: 0px;
+.pure-img, .pure-img-width {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0;
 }
 
 /* lora-regular - latin */
