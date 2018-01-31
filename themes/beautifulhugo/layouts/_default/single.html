@@ -1,25 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
+{{ define "main" }}
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        {{ .Content }}
+      </article>
 
-  {{ partial "head.html" . }}
+      {{ if ne .Type "page" }}
+        <ul class="pager blog-pager">
+          {{ if .PrevInSection }}
+            <li class="previous">
+              <a href="{{ .PrevInSection.Permalink }}" data-toggle="tooltip" data-placement="top" title="{{ .PrevInSection.Title }}">&larr; {{ i18n "previousPost" }}</a>
+            </li>
+          {{ end }}
+          {{ if .NextInSection }}
+            <li class="next">
+              <a href="{{ .NextInSection.Permalink }}" data-toggle="tooltip" data-placement="top" title="{{ .NextInSection.Title }}">{{ i18n "nextPost" }} &rarr;</a>
+            </li>
+          {{ end }}
+        </ul>
 
-  <body>
-
-    {{ partial "nav.html" . }}
-    {{ partial "header_wp.html" . }}
-
-    <div class="container" role="main">
-      {{ if eq .Type "post" }}
-        {{ partial "post.html" . }}
-      {{ else if eq .Type "page" }}
-        {{ partial "page.html" . }}
-      {{ else }}
-        NO MATCHING PARTIAL
-        {{.Content}}
+          
       {{ end }}
+
+
+      {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (ne .Type "page"))) }}
+        {{ if .Site.DisqusShortname }}
+        <div class="disqus-comments">                  
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="{{ trim .Permalink "/" }}">comments</span></button>
+            <div id="disqus_thread"></div>
+
+            <script type="text/javascript">
+              var disqus_config = function () {
+              this.page.url = '{{ trim .Permalink "/" }}';
+            };
+
+          </script>
+          </div>
+        {{ end }}
+        {{ if .Site.Params.staticman }}
+          <div class="staticman-comments">
+            {{ partial "staticman-comments.html" . }}
+          </div>
+        {{ end }}
+      {{ end }}
+
     </div>
-
-    {{ partial "footer.html" . }}
-
-  </body>
-</html>
+  </div>
+</div>
+{{ end }}

@@ -1,6 +1,6 @@
 ---
+title: "{{ replace .TranslationBaseName "-" " " | title }}"
+date: {{ .Date }}
 subtitle: ""
-comments: 
 tags: []
-bigimg: [{}]
 ---
