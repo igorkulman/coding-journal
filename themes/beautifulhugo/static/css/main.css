@@ -22,7 +22,7 @@ p + p {
     margin: 24px 0 6px 0;
 }
 p a {
-  text-decoration: underline
+  /* text-decoration: underline */
   color: #008AFF;
 }
 h1,h2,h3,h4,h5,h6 {
@@ -633,7 +633,7 @@ table {
   padding: 0;
 }
 table tr {
-  /*border-top: 1px solid #cccccc;*/
+  border-top: 1px solid #cccccc;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
@@ -643,13 +643,13 @@ table tr:nth-child(2n) {
 }
 table tr th {
   font-weight: bold;
-  /*border: 1px solid #cccccc;*/
+  border: 1px solid #cccccc;
   text-align: left;
   margin: 0;
   padding: 6px 13px;
 }
 table tr td {
-  /*border: 1px solid #cccccc;*/
+  border: 1px solid #cccccc;
   text-align: left;
   margin: 0;
   padding: 6px 13px;
@@ -681,18 +681,4 @@ table tr td :last-child {
 input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gsc-search-button {
   box-sizing: content-box;
   line-height: normal;
-}
-
-.navbar-nav a, a.navbar-brand{
-  text-decoration:none;
-}
-
-a, p a {
-  color: #404040;
-  text-decoration: underline;
-}
-
-.post-preview p a {
-  color: #337ab7;
-  text-decoration: none;
 }

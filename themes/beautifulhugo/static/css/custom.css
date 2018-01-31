@@ -1,0 +1,26 @@
+.navbar-nav a, a.navbar-brand{
+  text-decoration:none;
+}
+
+a, p a {
+  color: #404040;
+  text-decoration: underline;
+}
+
+.post-preview p a {
+  color: #337ab7;
+  text-decoration: none;
+}
+table tr, table tr th, table tr td {
+	border: 0px;
+}
+.about-icon {
+    font-size: 24px;
+    position: absolute;
+    left: -40px;
+    margin-top: 5px;
+}
+.about-text {
+    position: relative;
+    margin-left: 30px;
+}
