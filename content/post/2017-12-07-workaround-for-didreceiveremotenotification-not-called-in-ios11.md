@@ -4,7 +4,7 @@ Description = "When your iOS application receives a push notification while in f
 Tags = ["iOS", "Swift"]
 author = "Igor Kulman"
 date = "2017-12-07T09:29:12+01:00"
-title = "Workaround for didReceiveRemoteNotification not getting called in foreground on iOS 11"
+title = "Workaround for receive remote notification callback not getting called in foreground on iOS 11"
 url = "/workaround-for-didreceiveremotenotification-not-called-in-ios11"
 
 +++
