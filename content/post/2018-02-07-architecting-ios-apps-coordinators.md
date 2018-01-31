@@ -1,6 +1,6 @@
 +++
 Categories = ["Swift", "iOS"]
-Description = ""
+Description = "When I started to look at some iOS tutorials and other peoples' iOS code. Learning and using Swift was easy but when reading about using the iOS SDK and especially application architecture I found stuff that I really disliked. There were three big things in particular that I disliked, that I want to show you together with solutions I found. This first post deals with navigation. "
 Tags = ["Swift", "iOS"]
 author = "Igor Kulman"
 date = "2018-02-07T09:29:12+01:00"
