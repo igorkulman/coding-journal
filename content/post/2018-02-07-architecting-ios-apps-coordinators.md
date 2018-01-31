@@ -55,7 +55,11 @@ where you just put your navigation logic
 
 It does not even matter how you create the UI for your view controllers. You can create your UI in code, in a XIB file, on the storyboard, the coordinators do not care, as long as you can create an instance of your view controllers in code. 
 
-You can create a whole hierarchy of coordinators if you like, making them as granular as you need. Your application may start with an `AppCoordinator`. 
+You can create a whole hierarchy of coordinators if you like, making them as granular as you need. 
+
+{{% img-responsive "/images/coordinators.png" %}}
+
+Your application may start with an `AppCoordinator`. 
 
 <div data-gist="f5d825e91e3c03ad64c2c19235152e8c" data-file="AppDelegate.swift"></div>
 
