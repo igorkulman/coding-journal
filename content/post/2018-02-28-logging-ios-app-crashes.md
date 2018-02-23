@@ -29,6 +29,8 @@ After downloading the latest PLCrashReporter and adding it to your project as a 
 
 In the application I currently work on I use [CleanroomLogger](https://github.com/emaloney/CleanroomLogger) for all the logging, giving the user the ability to export all the logs and send them using the standard iOS share. 
 
+<!--more-->
+
 When the application crashes and is opened again, I want to get the crash report and log it. Your use case may be different, you may want to send the crash report to your server, etc.
 
 <div data-gist="608103ed0fa2138175e2cbae99d5cbf1" data-file="AppDelegate-CrashReporting.swift"></div>
