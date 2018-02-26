@@ -1,32 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  {{ partial "head.html" . }}
-
-  <body>
-
-    {{ partial "nav.html" . }}
-    {{ partial "header_wp.html" . }}
-
-    <div class="container" role="main">
-
+{{ define "main" }}
 <div class="container" role="main">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      {{ .Content }}
-      
-       <p>
+      <article role="main" class="blog-post">
+        {{ .Content }}
+
+        <p>
                        <img src="{{ .Params.image }}" alt="{{ .Title }}">
-                       </p>                
+                       </p>     
 
                        {{ if isset .Params "link" }} {{ .Params.linkactiontitle }}: <a href="{{ .Params.link }}">{{ .Params.linkaction }}</a>  {{ end }}
+      </article>
+
     </div>
   </div>
 </div>
-
-    </div>
-
-    {{ partial "footer.html" . }}
-
-  </body>
-</html>
+{{ end }}

@@ -59,6 +59,9 @@
                 {{ if eq .Type "post" }}
                   {{ partial "post_meta.html" . }}
                 {{ end }}
+                {{ if eq .Type "projects" }}
+                  {{ partial "project_meta.html" . }}
+                {{ end }}
             </div>
           </div>
         </div>
