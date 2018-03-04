@@ -2,7 +2,7 @@
 title = "Počasie Pluska.sk"
 id = "81"
 period = "June 2012 - July 2012"
-image = "/images/pocasie.jpg"
+image = "/images/projects/pocasie.jpg"
 date = "2015-12-18T12:56:44"
 +++
 

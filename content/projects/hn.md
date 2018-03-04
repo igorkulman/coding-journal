@@ -2,7 +2,7 @@
 title = "Hospodářské noviny"
 id = "86"
 period = "October 2013 - February 2014"
-image = "/images/hn.jpg"
+image = "/images/projects/hn.jpg"
 date = "2015-12-18T17:56:44"
 company = "Inmite, s.r.o"
 +++

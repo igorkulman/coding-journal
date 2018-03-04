@@ -2,7 +2,7 @@
 title = "Swift Pascal Interpreter"
 id = "79"
 period = "December 2017 - January 2018"
-image = "/images/spi.png"
+image = "/images/projects/spi.png"
 date = "2018-02-26T06:56:45"
 link = "https://github.com/igorkulman/SwiftPascalInterpreter"
 linkActionTitle = "Open source"

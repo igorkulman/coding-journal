@@ -2,7 +2,7 @@
 title = "Lepší místo"
 id = "104"
 period = "February 2016 - March 2016"
-image = "/images/lepsimisto.png"
+image = "/images/projects/lepsimisto.png"
 date = "2016-03-28T07:56:44"
 link = "https://www.microsoft.com/store/apps/9NBLGGH5TCNF"
 linkActionTitle = "Windows Store"

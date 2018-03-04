@@ -2,7 +2,7 @@
 title = "Heureka"
 id = "80"
 period = "June 2012 - July 2012"
-image = "/images/heurekacz.png"
+image = "/images/projects/heurekacz.png"
 date = "2015-12-18T11:56:44"
 company = "Inmite, s.r.o"
 +++

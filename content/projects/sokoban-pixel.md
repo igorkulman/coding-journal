@@ -2,7 +2,7 @@
 title = "Sokoban Pixel"
 id = "75"
 period = "May 2016 - June 2016"
-image = "/images/sokoban-pixel.png"
+image = "/images/projects/sokoban-pixel.png"
 date = "2016-06-12T06:56:45"
 link = "https://www.microsoft.com/store/apps/9nblggh4xdln"
 linkActionTitle = "Windows Store"

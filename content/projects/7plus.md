@@ -2,7 +2,7 @@
 title = "Stánok 7 Plus"
 id = "85"
 period = "October 2012 - November 2012"
-image = "/images/7plus.jpg"
+image = "/images/projects/7plus.jpg"
 date = "2015-12-18T16:56:44"
 +++
 
