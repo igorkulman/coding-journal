@@ -6,6 +6,7 @@ author = "Igor Kulman"
 date = "2018-03-27T08:29:12+01:00"
 title = "Workaround for UINavigationBar button remaining faded after back navigation"
 url = "/workaround-for-faded-navbar-button"
+share_img = "/images/ios112bug.gif"
 
 +++
 
