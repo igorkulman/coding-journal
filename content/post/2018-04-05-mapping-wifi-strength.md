@@ -24,8 +24,6 @@ Doing a WiFi signal strength survey in NetSpot involves three simple steps. Firs
 
 Then you need to tell NetSpot the scale of that floor plan. You do this by placing two points on the floor plan and setting a distance between them. I choose the width of one of the rooms as scale because I know exact dimensions of every room. But you can use anything, you can for example measure the width of a door in your apartment.
 
-{{% img-responsive "/images/netspot4.png" %}}
-
 The final most important step is taking the WiFi signal strength measurements in multiple locations in the apartment. You position yourself somewhere in the apartment and click on that location on the floor plane in NetSpot. NetSpot takes a measurement and shows you what part of the floor plan is covered by this measurement. 
 
 <!--more-->
