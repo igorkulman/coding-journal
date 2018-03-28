@@ -28,7 +28,7 @@ The final most important step is taking the WiFi signal strength measurements in
 
 <!--more-->
 
-{{% img-responsive "/images/netspot5.png" %}}
+{{% img-responsive "/images/netspot3.png" %}}
 
 The you move to a next location in the apartment and repeat. You can any number of measurements you want, the more you take, the better. The basic idea is to take enough measurements to cover the whole area.
 
@@ -45,8 +45,6 @@ You can compare it with WiFi signal strength of your neighbors' networks reachin
 {{% img-responsive "/images/netspot2.png" %}}
 
 If you click any point on the floor map you can see signal strength of all the detected WiFi networks
-
-{{% img-responsive "/images/netspot3.png" %}}
 
 ### Conclusion
 
