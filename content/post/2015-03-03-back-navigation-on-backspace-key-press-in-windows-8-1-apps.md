@@ -3,8 +3,8 @@ title = "Back navigation on Backspace key press in Windows 8.1 apps"
 author = "Igor Kulman"
 date = "2015-03-03"
 url = "/back-navigation-on-backspace-key-press-in-windows-8-1-apps/"
-categories = ["WinRT"]
-tags = ["Csharp","Windows Store","WinRT"]
+categories = ["Windows Phone", "Windows Store"]
+tags = ["Windows Phone", "Windows Store"]
 +++
 I am not a mouse or a touch person, I like using the keyboard and keyboard shortcuts for everything. So when I (have to) use a Windows 8.1 Metro app, I always miss when the app does not navigate back when I press the Backspace key, just like the browser does. 
 

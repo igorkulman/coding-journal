@@ -4,7 +4,8 @@ author = "Igor Kulman"
 date = "2015-04-15"
 url = "/using-etag-to-cache-responses-in-nancyfx/"
 categories = ["Windows Azure"]
-tags = ["ASP","Azure","Csharp","NancyFX"]
+tags = ["ASP","Azure","NancyFX"]
+keywords = ["ASP","Azure","NancyFX", "Cloud"]
 +++
 Caching data is usually a good idea, especially when creating APIs for mobile clients and the user may pay for each transferred byte. There are many approaches to caching data (I recommend reading [this article][1]), in my last NancyFX project I used ETag.
 

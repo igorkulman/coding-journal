@@ -2,6 +2,7 @@
 Categories = [ "Windows Phone"]
 Description = "Getting a MVP is a big thing when you are a developer working with the Microsoft stack. It is supposed to be some kind of approval a sign that you are doing something well. I applied for the MVP award back in 2012 and then got nominated in 2016. I want to tell you about both cases because they really made me thing that the whole MVP concept is just wrong."
 Tags = ["Windows Phone"]
+Keywords = ["Windows Phone", "MVP", "XAML", "Csharp"]
 author = "Igor Kulman"
 date = "2017-01-05T09:29:12+01:00"
 title = "My (negative) experience with the Microsoft MVP awards"

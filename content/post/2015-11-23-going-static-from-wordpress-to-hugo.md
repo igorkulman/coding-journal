@@ -2,6 +2,7 @@
 Categories = ["Web"]
 Description = ""
 Tags = [ "Hugo", "static", "Wordpress"]
+Keywords = [ "Hugo", "static", "Wordpress"]
 author = "Igor Kulman"
 date = "2015-11-23T13:13:55+01:00"
 title = "Going static: From Wordpress to Hugo"

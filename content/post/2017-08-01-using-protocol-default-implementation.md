@@ -2,6 +2,7 @@
 Categories = ["iOS", "Swift"]
 Description = "When I started using Swift the first thing I started missing was the support for abstract classes. I was used to using abstract classes for my ViewModels, especially to implement the template pattern, but also to provide some basic methods, like showing dialogs, that the ViewModels may need. Of course there are some tricks to do abstract classes like checking in the class type in constructor and throwing an error if it is the abstract class type, but Swift is a language based on protocols so there are better ways to achieve the same results just using the protocols. "
 Tags = ["iOS", "Swift"]
+Keywords = ["iOS", "Swift", "Patterns", "Architecture", "Protocols"]
 author = "Igor Kulman"
 date = "2017-08-01T09:29:12+01:00"
 title = "Using protocol default implementation instead of abstract classes"

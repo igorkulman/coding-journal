@@ -2,6 +2,7 @@
 Categories = ["Swift", "iOS"]
 Description = "About 9 months ago I basically left the world of Windows development because of the death of Windows Phone and me being really fed up with Microsoft. I got a chance to work on a complete native rewrite of an iOS application so I turned my desktop PC into a hackintosh and started learning Swift and iOS development. This post describes my experience and feelings about Swift, the language, tooling, resources after 9 months. I will probably write another post about my experience with iOS development and the iOS community."
 Tags = ["Swift", "iOS"]
+Keywords = ["Swift", "iOS", "OpenSource", "Experience"]
 author = "Igor Kulman"
 date = "2017-11-29T09:29:12+01:00"
 title = "My experience with Swift after 9 months"

@@ -3,8 +3,9 @@ title = "Implementing Google login in Universal Apps"
 author = "Igor Kulman"
 date = "2015-07-01"
 url = "/implementing-google-login-in-universal-apps/"
-categories = ["WinRT"]
-tags = ["Csharp","Google","Windows Store","WinRT","XAML"]
+categories = ["Windows Store", "Windows Phone"]
+tags = ["Windows Store", "Windows Phone", "XAML"]
+keywords = ["Windows Store", "Windows Phone", "XAML", "Google", "OAuth"]
 +++
 In a recent project I had to implement Google login to an Universal App. I decided to use the native [WebAuthenticationBroker][1] control and the implementation was not as straightforward as I hoped. By implementing Google login I mean getting the authentication token that you can then use with your server API.
 

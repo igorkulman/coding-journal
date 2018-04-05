@@ -1,7 +1,8 @@
 +++
-Categories = [ "iOS", "Swift", "Reactive", "RxSwift"]
+Categories = [ "iOS", "Swift", "RxSwift"]
 Description = ""
-Tags = ["iOS", "Swift", "Reactive", "RxSwift", "MVVM"]
+Tags = ["iOS", "Swift", "RxSwift", "MVVM"]
+Keywords = ["iOS", "Swift", "RxSwift", "MVVM", "UITableView", "UIKit"]
 author = "Igor Kulman"
 date = "2017-03-21T09:29:12+01:00"
 title = "Using MVVM with tables and cells in iOS"
