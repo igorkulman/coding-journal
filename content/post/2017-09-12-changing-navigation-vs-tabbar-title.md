@@ -2,6 +2,7 @@
 Categories = ["iOS", "Swift"]
 Description = "The UI of the iOS app I currently work on contains a tab bar with Profile as the title of one of the included tabs. This Profile tab contains a view controller with a navigation bar where I wanted the title to be set as You profile."
 Tags = ["iOS", "Swift"]
+Keywords = ["iOS", "Swift", "UINavigationBar"]
 author = "Igor Kulman"
 date = "2017-09-12T09:29:12+01:00"
 title = "iOS tip: Changing navigation bar vs tab bar title"

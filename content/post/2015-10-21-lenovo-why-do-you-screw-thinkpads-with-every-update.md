@@ -4,6 +4,7 @@ author = "Igor Kulman"
 date = "2015-10-21"
 url = "/lenovo-why-do-you-screw-thinkpads-with-every-update/"
 categories = ["Rants"]
+keywords = ["Rants", "Bugs", "Experience"]
 +++
 I have a Lenovo Thinpad T440s that I got about a year ago after a great experience with a company issued Lenovo Thinkpad T420 I used for about two and half years before that. I use it daily for on-site work, not so much at home, where I have a desktop computer. The T440s is thinner and lighter than T420, but otherwise everything is just worse. You cannot change RAM or disk so easily as on the T420, the keyboard and trackpoint are worse (the trackpoint does not have physical buttons like on the T420 but [I had it replaced for one that does][1]). 
 

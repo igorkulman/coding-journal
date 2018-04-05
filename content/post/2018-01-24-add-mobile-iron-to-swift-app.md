@@ -2,6 +2,7 @@
 Categories = ["Swift", "iOS", "MobileIron"]
 Description = "If you work on an iOS application intended for corporate environments, you are probably familiar with MobileIron AppConnect, because it is the most commonly used MDM solution. They have an SDK for iOS with stated support for Objective-C, Xamarin C# bindings and an Cordova plugin. If your application is written completely in Swift, there is some bad news in the documentation, it says you cannot use it with Swift."
 Tags = ["Swift", "iOS", "MobileIron"]
+Keywords = ["Swift", "iOS", "MobileIron", "MDM", "AppConnect"]
 author = "Igor Kulman"
 date = "2018-01-24T09:29:12+01:00"
 title = "Adding MobileIron AppConnect to a Swift application"

@@ -2,6 +2,7 @@
 Categories = [ "Windows Phone", "UWP", "XAML" ]
 Description = "When Microsoft announced the Windows 10 developer platform, they also announced bridges to make porting apps from Android, iOS and Web easier. Those bridges are now either dead (Android) or unusable (iOS) but there is another tool that can be considered a bridge left. It is called Mobilize.net Silverlight Bridge and it is not from Microsoft. It promises converting existing Windows Phone 8 (Silverlight apps) to the Universal Windows Platform. Considering the majority of apps in the Windows Phone Store are Windows Phone 8 apps and the fact that Android and iOS developers do not really care about Windows, Mobilize.net seem to be the most useful of the bridges, because there is no easy porting apps from Windows Phone 8 to UWP, just rewriting. So I tried it out."
 Tags = ["Windows Phone", "UWP", "XAML"]
+Keywords = ["Windows Phone", "UWP", "XAML"]
 author = "Igor Kulman"
 date = "2015-12-18T09:29:12+01:00"
 title = "Mobilize.net: Converting Windows Phone 8 apps to UWP? Not really"

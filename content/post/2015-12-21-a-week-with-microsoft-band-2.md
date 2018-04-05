@@ -2,6 +2,7 @@
 Categories = [ "Microsoft Band", "iOS" ]
 Description = "About a week ago I got a Microsoft Band 2. I really wanted to try out the device, because this second generation does not look as hideous as the first one, there are new sensors added and generally it should be a visible improvement over the original Band. I have been an iPhone users for about two years now (approximately the time since last good Windows Phone device was released), currently using iPhone 6s so I was also curious to know how well the Band 2 works with iOS. This blog post sums up my impressions after a week of using the Microsoft Band 2 with my iPhone."
 Tags = ["Microsoft Band", "iOS"]
+Keywords = ["Microsoft Band", "iOS", "Wearables"]
 author = "Igor Kulman"
 date = "2015-12-21T09:29:12+01:00"
 title = "A week with Microsoft Band 2"

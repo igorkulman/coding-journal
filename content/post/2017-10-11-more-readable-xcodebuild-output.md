@@ -1,7 +1,8 @@
 +++
-Categories = ["iOS", "macOS", "XCode"]
+Categories = ["iOS", "macOS", "Xcode"]
 Description = "If you use Continuous Integration (CI) builds or build your app from the command line using `xcodebuild` you know that the output is not pretty and not very readable. Reading the build output is important when a CI build breaks"
-Tags = ["iOS", "macOS", "XCode"]
+Tags = ["iOS", "macOS", "Xcode"]
+Keywords = ["iOS", "macOS", "Xcode", "CI", "Xcpretty"]
 author = "Igor Kulman"
 date = "2017-10-11T09:29:12+01:00"
 title = "More readable XCode build output for CI"

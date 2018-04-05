@@ -1,7 +1,8 @@
 +++
-Categories = [ "Windows Phone", "Hockey App", "Windows Store" ]
+Categories = [ "Windows Phone", "HockeyApp", "Windows Store" ]
 Description = "Distributing Windows Phone apps to testers has always been a pain. The Private Beta in the Windows Store intended for this is not very flexible and it got much worse with Windows 10 (generating promotional code that can take up to 24 hours). One of the better ways to solve the beta build distribution is using a service like [Hockey App](http://hockeyapp.net/), that Microsoft recently acquired. To be able to use Hockey App (or any other service) you need to buy a $299 certificate from Symantec. You then use the certificate to sign the XAP or APPX files of your app. Those signed binaries can be than installed on devices with the correct application enrollment token directly from Hockey App, bypassing the Windows Store."
-Tags = [ "Windows Phone", "Hockey App", "Windows Store"]
+Tags = [ "Windows Phone", "HockeyApp", "Windows Store"]
+Keywords = ["Windows Phone", "Windows Store", "HockeyApp"]
 author = "Igor Kulman"
 date = "2016-02-16T09:29:12+01:00"
 title = "Using Hockey App to distribute Windows Phone apps"

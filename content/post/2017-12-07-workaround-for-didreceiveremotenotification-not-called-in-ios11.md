@@ -2,6 +2,7 @@
 Categories = ["iOS", "Swift"]
 Description = "When your iOS application receives a push notification while in foreground, the didReceiveRemoteNotification method in the application's AppDelegate gets called. You get the whole push notification payload and you can react to it. But there is a problem introduced in iOS 11, then fixed and then broken again that ądidReceiveRemoteNotification does not get called when a push notification arrives and the application is in foreground. This can be really bad if your application depends on reliable push notifications while running."
 Tags = ["iOS", "Swift"]
+Keywords = ["Swift", "iOS", "iOS11", "Workaround", "iOSbug", "PushNotifications"]
 author = "Igor Kulman"
 date = "2017-12-07T09:29:12+01:00"
 title = "Workaround for receive remote notification callback not getting called in foreground on iOS 11"

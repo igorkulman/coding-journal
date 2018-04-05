@@ -2,6 +2,7 @@
 Categories = ["macOS", "Hardware"]
 Description = "If you run macOS side by side with Windows or have some drives formated with NTFS, you may not want them to get automatically mounted when you start macOS. I have a Windows 10 SSD with NFTS and a data HDD with NTFS next to my macOS SSD and I do not use any o those two drivers when booted in macOS, so I was looking for a way to have them not mounted at startup. "
 Tags = ["macOS", "Hardware"]
+Keywords = ["macOS", "Hardware", "Sleep", "Disk"]
 author = "Igor Kulman"
 date = "2017-12-05T09:29:12+01:00"
 title = "Preventing Windows drives from getting automatically mounted on macOS"

@@ -2,6 +2,7 @@
 Categories = ["macOS", "Clonezilla", "Hackintosh"]
 Description = "If you are a macOS user you may be used to Time Machine as the standard for backups. Time Machine is fine if you want to backup your files and configuration, but if for example your disk dies or your hackintosh completely breaks with some bad update, there are better and faster ways to get it up and running again. "
 Tags = ["macOS", "Clonezilla", "Hackintosh"]
+Keywords = ["macOS", "Clonezilla", "Hackintosh", "Backup"]
 author = "Igor Kulman"
 date = "2018-02-14T09:29:12+01:00"
 title = "Using CloneZilla for regular hackintosh backups"

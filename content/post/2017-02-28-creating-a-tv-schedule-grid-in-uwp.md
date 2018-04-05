@@ -2,6 +2,7 @@
 Categories = [ "Windows Phone", "UWP"]
 Description = "I am currently working on a UWP app for a cable TV company. The app allows their clients to watch the TV channels they are subscribed to with additional information like the TV schedule, information about TV shows, recording TV shows for watching later, etc. One of the main functionalities of the app is a TV schedule grid. Creating this TV schedule grid in UWP is not so easy, especially because of the poor XAML rendering performance"
 Tags = ["Windows Phone", "UWP", "XAML"]
+Keywords = ["Windows Phone", "UWP", "XAML", "Csharp", "Win2D"]
 author = "Igor Kulman"
 date = "2017-02-28T09:29:12+01:00"
 title = "Creating a TV schedule grid in UWP"

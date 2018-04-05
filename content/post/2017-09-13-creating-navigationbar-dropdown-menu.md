@@ -2,6 +2,7 @@
 Categories = ["iOS", "Swift"]
 Description = "Working on an iOS app I had to implement a filter for the table view displayed on screen. The filter should have contained 5 items and be accessible when tapping the screen title in the navigation bar. My first idea was to use an UIAlertController with those 5 options. It worked but it looked really ugly, So I started searching for a better, nicer solution. Ideally some kind of a dropdown menu."
 Tags = ["iOS", "Swift"]
+Keywords = ["iOS", "Swift", "UIAlertController", "UI"]
 author = "Igor Kulman"
 date = "2017-09-12T09:29:12+01:00"
 title = "Creating a dropdown menu from iOS navigation bar"

@@ -1,7 +1,8 @@
 +++
-Categories = [ "Windows Phone", "WinRT" ]
+Categories = [ "Windows Phone", "Windows Store" ]
 Description = "I currently work on a Windows Phone 8.1 app for a client with an interesting approach to app localization. They have a Google Docs sheet with all the localization string for the app in all the supported languages and a tool that converts this localization strings in to per-language versioned JSON files. The generated JSON files are kept in a git repository. The Android, iOS and now my Windows Phone app should have the git repository added as a submodule. When a new version of the JSON files with the localization appear in the submodule, the app should use them. Seems reasonable and efficient, so how to approach this on Windows Phone?"
-Tags = [ "Windows Phone", "WinRT"]
+Tags = [ "Windows Phone", "Windows Store"]
+Keywords = ["Windows Phone", "Windows Store"]
 author = "Igor Kulman"
 date = "2016-02-09T09:29:12+01:00"
 title = "How to handle localization strings provided by the client in a Windows Phone app"
