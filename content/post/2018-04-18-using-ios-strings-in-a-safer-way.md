@@ -1,6 +1,6 @@
 +++
 Categories = ["Swift", "iOS"]
-Description = "When developing any application it is a good practice not to hard-code your strings but to use some kind of a strings file. In iOS you typically use the standard `Localizable.strings` file as storage and some string based API to use those strings. This of course works but it is not exactly "safe", if you make a typo the compiler has no way to warn you and you, or worse your customers, will find out at runtime. There is a better way."
+Description = "When developing any application it is a good practice not to hard-code your strings but to use some kind of a strings file. In iOS you typically use the standard Localizable.strings file as storage and some string based API to use those strings. This of course works but it is not exactly safe, if you make a typo the compiler has no way to warn you and you, or worse your customers, will find out at runtime. There is a better way."
 Tags = ["Swift", "iOS"]
 Keywords = ["Swift", "iOS", "Swiftgen"]
 author = "Igor Kulman"
