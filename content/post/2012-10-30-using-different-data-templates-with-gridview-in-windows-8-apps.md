@@ -16,16 +16,16 @@ When inheriting from the DataTemplateSelector you need to override the SelectTem
 
 A custom DataTemplateSelector class may look like this
 
-{{< gist 5849469>}}
+{{% gist id="5849469" %}}
 
 This class chooses one of two DataTemplates (MagazineTemplate, BigMagazineTemplate) according to the item&#8217;s IsTop boolean property.
 
 In your XAML, first declare the MainGridTemplateSelector and set the DataTemplate properties class
 
-{{< gist 5849474>}}
+{{% gist id="5849474" %}}
 
 Where MagazineTemplate and BigMagazineTemplate are DataTemplates defined in your XAML. Then simply set the ItemTemplateSelector property of the GridView (ListView)
 
-{{< gist 5849477>}}
+{{% gist id="5849477" %}}
 
  [1]: http://www.kulman.sk/sk/content/wp7-ako-zobrazovat-objekty-roznych-typov-v-listboxe

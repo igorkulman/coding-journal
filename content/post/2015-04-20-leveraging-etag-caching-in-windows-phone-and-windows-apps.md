@@ -14,7 +14,7 @@ When the app wants to get some data, I perform a GET request including the ETag 
 
 <!--more-->
 
-{{< gist 55fa534bdcb4ab963253>}}
+{{% gist id="55fa534bdcb4ab963253" %}}
 
 This approach works with the portable Http client library, that you can use with Windows Phone 8 (Silverlight), 8.1 (Sliverlight), 8.1 XAML and Windows 8/8.1. If you only need to support Windows Phone 8.1 XAML and Windows 8.1, you may want to look into the Windows.Web.Http.HttpClient.
 

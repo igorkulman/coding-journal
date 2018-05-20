@@ -21,7 +21,7 @@ I like this feature so much I decided to set Visual Studio Code as my Git merge 
 
 Using Visual Studio Code as a merge tool for Git when using command line means editing your `.gitconfig`. You just need to define a new tool called `code` and set it as the default merge tool.
 
-<div data-gist="6796eb6deb669c773c8ef86dd433b34e" data-file="gitconfig"></div>
+{{% gist id="6796eb6deb669c773c8ef86dd433b34e" file="gitconfig" %}}
 
 <!--more-->
 
@@ -31,11 +31,11 @@ If you use Git Tower as you GUI client for Git, adding Using Visual Studio Code 
 
 The definition for Visual Studio Code may look like this
 
-<div data-gist="6796eb6deb669c773c8ef86dd433b34e" data-file="CompareTools.plist"></div>
+{{% gist id="6796eb6deb669c773c8ef86dd433b34e" file="CompareTools.plist" %}}
 
 It calls a bash script `code.sh` when invoked, that runs Visual Studio Code with the same parameters as in the Git merge tool definition in `.gitconfig`, it is just referenced a differently. 
 
-<div data-gist="6796eb6deb669c773c8ef86dd433b34e" data-file="code.sh"></div>
+{{% gist id="6796eb6deb669c773c8ef86dd433b34e" file="code.sh" %}}
 
 Do not forget to make the bash script runnable by calling `chmod +x bash.sh`.
 

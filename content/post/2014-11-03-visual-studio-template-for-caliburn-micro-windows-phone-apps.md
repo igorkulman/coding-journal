@@ -12,6 +12,8 @@ The templates can be downloaded from [the Visual Studio Extensions gallery][2] a
 
 The [source code is available on GitHub][4], so if you want to modify it to best suit your needs, feel free to do it.
 
+{{% github-repo "igorkulman/CaliburnWP8AppVSIX" %}}
+
 <!--more-->
 
  [1]: https://github.com/Caliburn-Micro/Caliburn.Micro

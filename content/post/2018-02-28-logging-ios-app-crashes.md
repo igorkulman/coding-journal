@@ -24,7 +24,7 @@ It is a Objective-C framework with latest version from 2014, but it still works 
 
 After downloading the latest PLCrashReporter and adding it to your project as a linked framework, you need to import it in bridging header
 
-<div data-gist="608103ed0fa2138175e2cbae99d5cbf1" data-file="briding-header.h"></div>
+{{% gist id="608103ed0fa2138175e2cbae99d5cbf1" file="briding-header.h" %}}
 
 ### Usage
 
@@ -34,4 +34,4 @@ In the application I currently work on I use [CleanroomLogger](https://github.co
 
 When the application crashes and is opened again, I want to get the crash report and log it. Your use case may be different, you may want to send the crash report to your server, etc.
 
-<div data-gist="608103ed0fa2138175e2cbae99d5cbf1" data-file="AppDelegate-CrashReporting.swift"></div>
+{{% gist id="608103ed0fa2138175e2cbae99d5cbf1" file="AppDelegate-CrashReporting.swift" %}}

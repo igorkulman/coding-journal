@@ -16,11 +16,11 @@ Implementation of the above-mentioned scenario is not very complicated, thanks t
 
 Let us reuse the SecondPageViewModel from the last post. Implement IHaveState, add two string properties and use the SaveState and LoadState method to save and load them using the page state dictionary
 
-{{< gist 6173564>}}
+{{% gist id="6173564" %}}
 
 To test it, first add two TextBoxes to the SecondPageView with two-way binding
 
-{{< gist 6173636>}}
+{{% gist id="6173636" %}}
 
 Now run the application, navigate to the SecondPageViewModel and fill in the TextBoxes. Switch to Visual Studio and invoke the Suspend and Shutdown command. When you run the application again, you will see the SecondPageViewModel with TextBoxes with the same values as before the suspension.
 
@@ -29,3 +29,5 @@ The code is again [available at Github][2]. If you are interested in the impleme
  [1]: http://blog.kulman.sk/developing-windows-store-apps-with-caliburn-micro-part-2-navigation/ "Developing Windows Store apps with Caliburn Micro Part 2: navigation"
  [2]: https://github.com/igorkulman/CaliburnDemoWinRT
  [3]: http://nybbles.blogspot.cz/2013/02/winrt-caliburnmicro-and-ioc-part-3.html
+
+{{% github-repo "igorkulman/CaliburnDemoWinRT" %}}

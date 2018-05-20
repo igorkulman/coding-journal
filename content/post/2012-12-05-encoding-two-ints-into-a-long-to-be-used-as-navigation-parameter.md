@@ -12,4 +12,4 @@ I use mainly ints (article id, gallery id &#8230;) as navigation parameters but 
 
 <!--more-->
 
-{{< gist 5849447>}}
+{{% gist id="5849447" %}}

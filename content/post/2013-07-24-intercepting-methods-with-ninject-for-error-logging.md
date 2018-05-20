@@ -26,19 +26,19 @@ First you need to install [Ninject.Extensions.Interception][6]. It has no depede
 
 First, create a class implementing the IInterceptor interface
 
-{{< gist 6045777>}}
+{{% gist id="6045777" %}}
 
 This class wraps the intercepted method invocation into a try..catch block and logs any occuring exception using my custom ILogFactory, including parameter values.
 
 Next, create a class implementing the InterceptAttribute
 
-{{< gist 6045812>}}
+{{% gist id="6045812" %}}
 
 This attribute uses the Ninject kernel to get an instance of the ErrorLoggingInterceptor so you do not have to concern yourself explictily with providing an ILogFactory implementation, Ninject will do all the work.
 
 Now you can use the LogErrorAttribute to mark any method, but keep in mind that all the marked methods must be virtual
 
-{{< gist 6045825>}}
+{{% gist id="6045825" %}}
 
  [1]: http://www.ninject.org/
  [2]: https://github.com/Fody/Fody

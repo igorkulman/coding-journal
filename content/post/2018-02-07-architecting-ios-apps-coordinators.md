@@ -20,7 +20,7 @@ There were three big things in particular that I disliked, that I want to show y
 
 When going through some iOS tutorials I found code like this a lot
 
-<div data-gist="f5d825e91e3c03ad64c2c19235152e8c" data-file="badcode.swift"></div>
+{{% gist id="f5d825e91e3c03ad64c2c19235152e8c" file="badcode.swift" %}}
 
 When you are a long-time iOS developer, you may have seen and probably written code like this. All the tutorials contain code likes this. It may look perfectly OK to you. But for me, coming from the .NET world, this was a real WTF moment:
 
@@ -48,11 +48,11 @@ It may display step 2, it may skip to step 3 if for example step 2 is not needed
 
 You do not need any special frameworks to create coordinators. A coordinator can be a simple protocol with `start` method
 
-<div data-gist="f5d825e91e3c03ad64c2c19235152e8c" data-file="coordinator.swift"></div>
+{{% gist id="f5d825e91e3c03ad64c2c19235152e8c" file="coordinator.swift" %}}
 
 where you just put your navigation logic
 
-<div data-gist="f5d825e91e3c03ad64c2c19235152e8c" data-file="usage.swift"></div>
+{{% gist id="f5d825e91e3c03ad64c2c19235152e8c" file="usage.swift" %}}
 
 It does not even matter how you create the UI for your view controllers. You can create your UI in code, in a XIB file, on the storyboard, the coordinators do not care, as long as you can create an instance of your view controllers in code. 
 
@@ -62,11 +62,11 @@ You can create a whole hierarchy of coordinators if you like, making them as gra
 
 Your application may start with an `AppCoordinator`. 
 
-<div data-gist="f5d825e91e3c03ad64c2c19235152e8c" data-file="AppDelegate.swift"></div>
+{{% gist id="f5d825e91e3c03ad64c2c19235152e8c" file="AppDelegate.swift" %}}
 
 It checks if the user is already registered. If not, it starts the `RegistrationCoordinator` as its child and waits for it to finish to start the `DashboardCoordinator`.
 
-<div data-gist="f5d825e91e3c03ad64c2c19235152e8c" data-file="AppCoordinator.swift"></div>
+{{% gist id="f5d825e91e3c03ad64c2c19235152e8c" file="AppCoordinator.swift" %}}
 
 Notice the `childCoordinators` dictionary in the `AppCoordinator`. We need to store our coordinator instances in this dictionary so ARC does not clean them. We clean them manually when they are no longer needed (`registrationCoordinatorDidFinish()`).
 
@@ -82,3 +82,5 @@ To sum it up, coordinators
 * organize your application by use case scenarios
 
 If you want to see coordinators in practice together with the other concepts I will talk about in the next posts, check out [my sample iOS application at GitHub](https://github.com/igorkulman/iOSSampleApp). It contains a two level hierarchy of coordinators and also shows you how to use child coordinators. 
+
+{{% github-repo "igorkulman/iOSSampleApp" %}}

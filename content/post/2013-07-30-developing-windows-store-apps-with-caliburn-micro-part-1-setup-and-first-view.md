@@ -41,11 +41,11 @@ PropertyChanged.Fody now knows that it should call the NotifyOfPropertyChange me
 
 Next make you app inherit from CaliburnUnityApplication by changing App.xaml to
 
-{{< gist 6088861>}}
+{{% gist id="6088861" %}}
 
 and cleaning up and changing App.xaml.cs to
 
-{{< gist 6088871>}}
+{{% gist id="6088871" %}}
 
 **First ViewModel**
 
@@ -53,19 +53,19 @@ Now you can create your first ViewModel and your first View. Caliburn Micro uses
 
 create a new string property called Title. Add the ImplementPropertyChanged attribute to the class. This makes NotifyPropertyChanged.Fody call the NotifyOfPropertyChange whenever any of the properties (just Title for now) changes. Assing some text to the Title property in the constructor:
 
-{{< gist 6088988>}}
+{{% gist id="6088988" %}}
 
 **First View**
 
 Now create a view for the MainViewModel as a Blank Page. According to the naming conventions, it needs to be called MainView and created in the Views folder. Add a TextBlock to the View. To bind the text of this TextBlock to the Title property, you could use Text=&#8221;{Binding Title}&#8221;. This works just fine but you do not have to do it. Just name the TextBlock the same as the property you want it to bind to (in our case Title):
 
-{{< gist 6089012>}}
+{{% gist id="6089012" %}}
 
 **Navigating to the view**
 
 There is only one more thing left to do. You need to tell the framework to navigate to the MainView when the app starts. This is done in the OnLaunched method in App.xaml.cs
 
-{{< gist 6089032>}}
+{{% gist id="6089032" %}}
 
 **Run you app**
 
@@ -82,3 +82,5 @@ You can find the [code on Github][9] and stay tuned for Part 2!
  [7]: http://www.nuget.org/packages/Caliburn.Micro.Unity.WinRT/
  [8]: http://www.nuget.org/packages/PropertyChanged.Fody/
  [9]: https://github.com/igorkulman/CaliburnDemoWinRT
+
+{{% github-repo "igorkulman/CaliburnDemoWinRT" %}}

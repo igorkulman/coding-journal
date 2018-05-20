@@ -32,13 +32,16 @@ Excel.getRow
 
 but I will be adding a few more soon. The usage is really simple. For example, if you want to read the whole sheet number 1 from a file called text.xlsx, use
 
-{{< gist 5822019>}}
+{{% gist id="5822019" %}}
 
 **EDIT**: Now available as a Nuget package:
 
 ```fsharp
 PM> Install-Package ExcelPackageF
 ```
+
+{{% github-repo "igorkulman/ExcelPackageF" %}}
+
 
  [1]: http://blogs.msdn.com/b/jackhu/archive/2011/04/19/fsharp-amp-excel-io-reading-and-writeing-to-excel.aspx
  [2]: http://www.mono-project.com/MoMA

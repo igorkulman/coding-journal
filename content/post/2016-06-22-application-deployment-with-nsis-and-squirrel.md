@@ -10,7 +10,7 @@ url = "/application-deployment-with-nsis-and-squirrel"
 
 +++
 
-Currently working on a WPF app as a side project for [Netglade](http://www.netglade.cz/) I came upon and interesting requirement regarding installation and deployment of the application. As a result I ended with some Squirrel and NSIS knowledge I would like to share.
+Currently working on a WPF app as a side project I came upon and interesting requirement regarding installation and deployment of the application. As a result I ended with some Squirrel and NSIS knowledge I would like to share.
 
 <!--more-->
 

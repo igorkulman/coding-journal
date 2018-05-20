@@ -17,22 +17,22 @@ Working on an iOS app I had to implement a filter for the table view displayed o
 
 I found multiple libraries for an iOS dropdown menu, but I liked [BTNavigationDropdownMenu](https://github.com/PhamBaTho/BTNavigationDropdownMenu) the best. The usage is really simple. First you define the items for the dropdown as an string array
 
-<div data-gist="f94f4bf63eb2d540b7bd34178fcf0300" data-file="items.swift"></div>
+{{% gist id="f94f4bf63eb2d540b7bd34178fcf0300" file="items.swift" %}}
 
 create the menu instance
 
-<div data-gist="f94f4bf63eb2d540b7bd34178fcf0300" data-file="create.swift"></div>
+{{% gist id="f94f4bf63eb2d540b7bd34178fcf0300" file="create.swift" %}}
 
 <!--more-->
 
 and set it as the navigation item's title view
 
-<div data-gist="f94f4bf63eb2d540b7bd34178fcf0300" data-file="set.swift"></div>
+{{% gist id="f94f4bf63eb2d540b7bd34178fcf0300" file="set.swift" %}}
 
 and react to the user selection
 
-<div data-gist="f94f4bf63eb2d540b7bd34178fcf0300" data-file="react.swift"></div>
+{{% gist id="f94f4bf63eb2d540b7bd34178fcf0300" file="react.swift" %}}
 
 The library allows you to customize the UI, which will come handy. You can set the arrow to black, disable the tick next to the selected item, remove the item separators or make the the navigation bar title look the same as the default look
 
-<div data-gist="f94f4bf63eb2d540b7bd34178fcf0300" data-file="setup.swift"></div>
+{{% gist id="f94f4bf63eb2d540b7bd34178fcf0300" file="setup.swift" %}}

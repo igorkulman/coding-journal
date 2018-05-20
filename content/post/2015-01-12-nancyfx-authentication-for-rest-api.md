@@ -18,17 +18,17 @@ There are things you want to do differently in a REST API than on a web page. If
 
 Suppose you have Forms Authentication set up according to the documentation, with a IUserMapper and IUserIdentity implementation. Disabling the redirects is easy, just set a flag on the FormsAuthenticationConfiguration in your Bootstrapper:
 
-<div data-gist="2430a948fe6c426cdd01" data-file="Bootstrapper.cs"></div>
+{{% gist id="2430a948fe6c426cdd01" file="Bootstrapper.cs" %}}
 
 **Changing Login and Logout methods**
 
 The login implementation from the documentation uses the LoginAndRedirect method. There is also LoginWithoutRedirect method you want to use, but I found out it does not set the authentication cookie (when it does not think the request is an AJAX request), so the login basically does not work. A workaround I found is to call the LoginAndRedirect method, but only get the authentication cookie from the response ad return it manually:
 
-<div data-gist="2430a948fe6c426cdd01" data-file="login.cs"></div>
+{{% gist id="2430a948fe6c426cdd01" file="login.cs" %}}
 
 The logout implementation just needs to call LogoutWithoutRedirect and return HTTP 200:
 
-<div data-gist="2430a948fe6c426cdd01" data-file="logout.cs"></div>
+{{% gist id="2430a948fe6c426cdd01" file="logout.cs" %}}
 
  [1]: https://www.nuget.org/packages/Nancy.Authentication.Forms/
  [2]: https://github.com/NancyFx/Nancy/wiki/Forms-Authentication

@@ -14,12 +14,12 @@ First I came up with F# code to solve it, after some yield googling:
 
 <!--more-->
 
-{{< gist 5849397>}}
+{{% gist id="5849397" %}}
 
 When I started to think about a C# solution I got stuck. The functional solution was still resonating in my head so I ended up basically rewriting F# to C#:
 
-{{< gist 5849399>}}
+{{% gist id="5849399" %}}
 
 Looking for other functional solutions I found a realy neat way to generate permutations in Haskell, thanks to the generators
 
-{{< gist 5849402>}}
+{{% gist id="5849402" %}}

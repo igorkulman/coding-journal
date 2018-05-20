@@ -20,15 +20,15 @@ Using Swift and protocols there is another way. Protocols in Swift are really si
 
 In Swift, you start with a protocol 
 
-<div data-gist="052d8de0c2bc1239b42b0da0c8fd2a0e" data-file="AlertCapable.swift"></div>
+{{% gist id="052d8de0c2bc1239b42b0da0c8fd2a0e" file="AlertCapable.swift" %}}
 
 and add a default implementation of this protocol applicable to all the ViewControllers
 
-<div data-gist="052d8de0c2bc1239b42b0da0c8fd2a0e" data-file="UIViewControllerAlertCapable.swift"></div>
+{{% gist id="052d8de0c2bc1239b42b0da0c8fd2a0e" file="UIViewControllerAlertCapable.swift" %}}
 
 If you now add this protocol to a ViewController
 
-<div data-gist="052d8de0c2bc1239b42b0da0c8fd2a0e" data-file="Usage.swift"></div>
+{{% gist id="052d8de0c2bc1239b42b0da0c8fd2a0e" file="Usage.swift" %}}
 
 the ViewController does not have to implement the `showAlert` because a default implementation exists. It can just use it in any of its methods. 
 

@@ -23,13 +23,13 @@ To connect the temperature sensor to the Pi, I suggest you follow the [YouTube t
 
 The advantage of using the DS18B20 temperature sensor is that Raspbian and all the other Raspbian based Linux distors for the Pi contain drivers for it. There are two drivers that you need to load to make it work, the w1-gpio and the w1-therm. You can load them using
 
-<div data-gist="824c700681a8b6497ca8" data-file="drivers.sh"></div>
+{{% gist id="824c700681a8b6497ca8" file="drivers.sh" %}}
 
 or just add them to /etc/modules so they autoload with each boot of the Pi. 
 
 When the temperature sensor is connected and both drivers are loaded, a new device will appear in /sys/bus/w1/devices/. On my Pi, it is 28-000004e23e98, execute
 
-<div data-gist="824c700681a8b6497ca8" data-file="id.sh"></div>
+{{% gist id="824c700681a8b6497ca8" file="id.sh" %}}
 
 to find the id on yours.
 
@@ -41,7 +41,7 @@ I am a .NET developer but running Mono on the Pi just seems strange to me, so I 
 
 Getting the temperature is a matter of a simple cat command to the right place
 
-<div data-gist="824c700681a8b6497ca8" data-file="cat.sh"></div>
+{{% gist id="824c700681a8b6497ca8" file="cat.sh" %}}
 
 and parsing the result. 
 
@@ -52,6 +52,8 @@ You can then use the /history endpoint to get the temperature stats.
 {{% img-responsive "/images/pi-history.png" %}}
 
 You can get, download, fork the whole project from <https://github.com/igorkulman/rpi-thermometer>.
+
+{{% github-repo "igorkulman/rpi-thermometer" %}}
 
  [1]: http://blog.kulman.sk/my-year-with-the-raspberry-pi-and-what-i-used-it-for/ "My year with the Raspberry Pi and what I used it for"
  [2]: https://www.modmypi.com/raspberry-pi/set-up-kits/project-kits/raspberry-pi-youtube-workshop-kit

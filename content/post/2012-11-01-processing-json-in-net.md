@@ -14,17 +14,17 @@ JSON is a very popular format for exchanging data, especially in the world of we
 
 JSON.NET is very easy to use; first you create a JObject instance
 
-{{< gist 5857544>}}
+{{% gist id="5857544" %}}
 
 <!--more-->
 
 from which you can get a collection (in our example of type TicketViewModel)
 
-{{< gist 5857549>}}
+{{% gist id="5857549" %}}
 
 filling the TicketViewModel instance from the JObject
 
-{{< gist 5857554>}}
+{{% gist id="5857554" %}}
 
 **DataContractJsonSerializer**
 
@@ -32,7 +32,7 @@ If you do not want or cannot use JSON.NET you can use the already mentioned Data
 
 Using the DataContractJsonSerializer is a less readable than using JSON.NET
 
-{{< gist 5857558>}}
+{{% gist id="5857558" %}}
 
  [1]: http://james.newtonking.com/projects/json-net.aspx
  [2]: https://nuget.org/packages/Newtonsoft.Json

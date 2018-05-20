@@ -12,13 +12,13 @@ If you develop Windows Phone, Windows 8, Silverlight or WPF apps using the MVVM 
 
 In a typical implementation, you usually have a base class implementing the interface, like
 
-{{< gist 5849361>}}
+{{% gist id="5849361" %}}
 
 or use a framework like MVVMLight, Prism or Caliburn Micro that provides such base class for you. In your view models you have properties using the PropertyChanged method
 
 <!--more-->
 
-{{< gist 5849364>}}
+{{% gist id="5849364" %}}
 
 You do not need to create such properties by hand, you can [use a snippet][1], but it is still a lot of code to do such a simple thing.
 
@@ -30,7 +30,7 @@ You do not need to create such properties by hand, you can [use a snippet][1], b
 
 Fody has a [PropertyChanged addin][4] that does all the INotifyPropertyChanged plumbing for you. If you want the same behavior as in my typical implementation example, there is no need for a base class. Install the [PropertyChanged.Fody Nuget package][4], decorate your view model class with the ImplementPropertyChanged attribute and use just basic properties
 
-{{< gist 5849367>}}
+{{% gist id="5849367" %}}
 
 That is it. Less code, the same behaviour. You can verify it with tools like [Telerik JustDecompile][5].
 
@@ -38,15 +38,15 @@ That is it. Less code, the same behaviour. You can verify it with tools like [Te
 
 Fody does all the plumbing for you. It even knows that the FullName property uses FirstName and Surname and raises the PropertyChanged event for it when any og the two properties changes. The PropertyChanged.Fody addin [contains attributes][6], that you can use to define dependencies 
 
-{{< gist 5849371>}}
+{{% gist id="5849371" %}}
 
 or to raise the PropertyChanged event for any other property
 
-{{< gist 5849373>}}
+{{% gist id="5849373" %}}
 
 Sometimes you want to execute some additional code in the setter. Fody allows it, just create a method with the [name On\_PropertyName\_Changed][7]
 
-{{< gist 5849376>}}
+{{% gist id="5849376" %}}
 
 If you use a framework and you want to raise the PropertyChanged event through a method of this framework, it is not a problem. You just need to [set the EventInvokerNames options][8]. The Fody [documentation even describes what to set for some of the frameworks][9] so you do not have to figure it out for yourself.
 

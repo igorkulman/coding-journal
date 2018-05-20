@@ -29,4 +29,4 @@ The whole experience becomes much better
 
 Implementation is also simple.
 
-<script src="https://gist.github.com/igorkulman/250de623e9213bc3bf90.js"></script>
+{{% gist id="250de623e9213bc3bf90" %}}

@@ -18,7 +18,7 @@ Caliburn Micro offers an easier way. If you want a Button to invoke a method on 
 
 On the MainViewModel, create a public void GoToSecondPage method:
 
-{{< gist 6103983>}}
+{{% gist id="6103983" %}}
 
 In the MainView create a Button with x:Name=&#8221;GoToSecondPage&#8221;. When you start the application and click the button, a message dialog is shown, so you know the autobinding beetween your Button and your GoToSecondPage method works. 
 
@@ -28,21 +28,21 @@ As you may have noticed, a INavigationService is injected into the MainViewModel
 
 In the ViewModels folder create a new ViewModel called SecondPageViewModel with one string property Title (exactly the same as the MainViewModel):
 
-{{< gist 6103938>}}
+{{% gist id="6103938" %}}
 
 In the Views folder, create a new View called SecondPageView as a Blank Page. Give it some colorful background so it is clearly distinguishable from the MainView:
 
-{{< gist 6104005>}}
+{{% gist id="6104005" %}}
 
 Now you can finally make the GoToSecondPage method navigate the user to the SecondPageViewModel. To do this, first get the Uri from the INavigationService using the strongly typed UriFor<.> method and then call the Navigate method:
 
-{{< gist 6104023>}}
+{{% gist id="6104023" %}}
 
 **Navigation with parameters**
 
 In many cases you need to navigate to a ViewModel passing the ViewModel some parameters. This is as easy as adding a call to WithParam to your navigation code:
 
-{{< gist 6104042>}}
+{{% gist id="6104042" %}}
 
 You can use the WithParam method to give the ViewModel as many parameters as you want.
 
@@ -54,10 +54,12 @@ You need to fix this so when the suspended application starts again, it will sho
 
 First you need to make the Views inherit from the Caliburn.Micro.Unity.WinRT.Code.AppPage insted of Page and delete theirs OnNavigateTo methods. Then you need to explicitly save the state when the application starts. Open the App.xaml.cs and add the following method:
 
-{{< gist 6104122>}}
+{{% gist id="6104122" %}}
 
 If you now navigate to second page, suspend and shutdown the application and start it again, you will see the second page.
 
 There is currently no way to navigate back from the SecondPageViewModel to the MianViewModel. I am fairly confident you can implement it by yourself using the INavigationService&#8217;s GoBack method.
 
  [1]: https://github.com/igorkulman/CaliburnDemoWinRT
+
+{{% github-repo "igorkulman/CaliburnDemoWinRT" %}}

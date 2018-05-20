@@ -12,7 +12,7 @@ In one use case I generate a ZIP file in the temp folder and I want the API to r
 
 If you have an absolute path of a file, you cannot use it. You need to create a StreamResponse and return the file as an attachment
 
-{{< gist 6791265>}}
+{{% gist id="6791265" %}}
 
 <!--more-->
 

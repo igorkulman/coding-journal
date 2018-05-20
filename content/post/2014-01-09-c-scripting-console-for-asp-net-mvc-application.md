@@ -22,7 +22,7 @@ My basic solution consists of a Textarea the user writes the script to, the scri
 
 To execute a C# script in your ASP.NET MVC (or any other) application, you first need to install the Roslyn package and its dependencies
 
-<script src="https://gist.github.com/igorkulman/8159321.js?file=roslyn-nuget.ps"></script>
+{{% gist id="8159321" file="roslyn-nuget.ps" %}}
 
 Let&#8217;s suppose you have the C# script you want to execute in a string variable called command obtained from the mentioned Textarea. First, you need to create the scripting engine and a session
 
@@ -30,19 +30,19 @@ There are ScriptEngine classes, one for C# and one for VB.NET so choose the one 
 
 To use a class as the context for the scripts, just pass it to the Roslyn session
 
-<script src="https://gist.github.com/igorkulman/8159321.js?file=roslyn-session.cs"></script>
+{{% gist id="8159321" file="roslyn-session.cs" %}}
 
 If you want to use more than the core C# libraries, you need to do some referencing and importing. If you are using a class as the context for the scripts, you need to reference its assembly. Suppose you want to use classes and methods from System.Xml and System.Xml.Linq in your scripts. First, you need to add references to the session
 
-<script src="https://gist.github.com/igorkulman/8159321.js?file=roslyn-context.cs"></script>
+{{% gist id="8159321" file="roslyn-context.cs" %}}
 
 and then import them to the session
 
-<script src="https://gist.github.com/igorkulman/8159321.js?file=roslyn-import.cs"></script>
+{{% gist id="8159321" file="roslyn-import.cs" %}}
 
 Everything is set up now, so just execute the script and get the result
 
-<script src="https://gist.github.com/igorkulman/8159321.js?file=roslyn-exec.cs"></script>
+{{% gist id="8159321" file="roslyn-exec.cs" %}}
 
 The result of the script is the result of the last expression of the script so I recommend using a logger class in the context if you want to get more information about the execution of your script.
 
@@ -56,3 +56,5 @@ Source code: [WebConsole][4]
  [2]: http://igorkulman.github.io/WebConsole/
  [3]: http://codemirror.net/
  [4]: https://github.com/igorkulman/WebConsole
+
+{{% github-repo "igorkulman/WebConsole" %}}

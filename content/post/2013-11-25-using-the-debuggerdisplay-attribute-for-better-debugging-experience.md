@@ -16,7 +16,7 @@ This is not very comfortable, so thankfully, there is a way to make this experie
 
 Give the attribute a string to be displayed and in this string you can reference any data from the class:
 
-{{< gist 7640468>}}
+{{% gist id="7640468" %}}
 
 When you hover over the data now, you will see a nice readable &#8220;labels&#8221;:
 

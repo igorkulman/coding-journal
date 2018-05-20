@@ -50,11 +50,11 @@ The main idea is simple, you declare what UI elements are connected to what prop
 
 I created a ViewModel with a property for the selected country, another property for the mobile number and a signal telling if the mobile number is valid. Every time the mobile number or the selected country changes, the validity signal also changes automatically. The ViewModel is quite simple, creating the validation signal in a nice declarative way
 
-<div data-gist="2bb98d3398d1f211ba0f81c0f6ee90e7" data-file="BondVM.swift"></div>
+{{% gist id="2bb98d3398d1f211ba0f81c0f6ee90e7" file="BondVM.swift" %}}
 
 Binding this ViewModel to the ViewController is also quite simple
 
-<div data-gist="2bb98d3398d1f211ba0f81c0f6ee90e7" data-file="BondBinding.swift"></div>
+{{% gist id="2bb98d3398d1f211ba0f81c0f6ee90e7" file="BondBinding.swift" %}}
 
 I used Bond for a while but when I wanted to do more reactive programming, Bond was not enough. It is a data binding library, it works well for data binding but if you want to do more you have to choose something more powerful. So I switched to RxSwift.
 
@@ -64,11 +64,11 @@ I used Bond for a while but when I wanted to do more reactive programming, Bond 
 
 The ViewModel looks a bit different when using RxSwift than when using Bond, but the main idea is the same
 
-<div data-gist="2bb98d3398d1f211ba0f81c0f6ee90e7" data-file="RxSwift.swift"></div>
+{{% gist id="2bb98d3398d1f211ba0f81c0f6ee90e7" file="RxSwift.swift" %}}
 
 The actual bindings are also quite similar. The main difference is it is more visible what is being bound to what and in what direction
 
-<div data-gist="2bb98d3398d1f211ba0f81c0f6ee90e7" data-file="RxSwiftBinding.swift"></div>
+{{% gist id="2bb98d3398d1f211ba0f81c0f6ee90e7" file="RxSwiftBinding.swift" %}}
 
 Compare this to the amount of code you would have to write using the "standard" iOS way.
 
@@ -77,3 +77,5 @@ Compare this to the amount of code you would have to write using the "standard" 
 I think data binding is a great concept that makes your code more declarative, more elegant and much simpler. It has been widely used in the Microsoft platforms with XAML, now it is also available in Android so it is time that iOS developers make a mental switch from delegates and start programming in a more declarative and reactive way. It is definitely worth it.
 
 If you want a more complex example of MVVM and binding, check out my [iOS sample app on Github](https://github.com/igorkulman/iOSSampleApp).
+
+{{% github-repo "igorkulman/iOSSampleApp" %}}
