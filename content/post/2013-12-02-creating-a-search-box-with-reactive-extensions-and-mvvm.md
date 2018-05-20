@@ -18,16 +18,16 @@ We need to create an observable from the PropertyChanged event, subscribe to it 
 
 Using the throttle operator we will get exactly the desired behaviour of executing the Search method 0.5 seconds after the user stopped typing. 
 
-{{< gist 7657908>}}
+{{% gist id="7657908" %}}
 
 However, there is a small problem. The SearchTerm property changes (and fires the PropertyChanged event) only when the Search box loses focus. We need to make the SearchTerm property change after each letter typed instead. In WPF that would be trivial using UpdateTrigger, but Windows Phone does not support UpdateTrigger. 
 
 We need to create a custom binding utility
 
-{{< gist 7657969>}}
+{{% gist id="7657969" %}}
 
 and apply it to the Search box
 
-{{< gist 7658031>}}
+{{% gist id="7658031" %}}
 
  [1]: http://msdn.microsoft.com/en-us/data/gg577609.aspx

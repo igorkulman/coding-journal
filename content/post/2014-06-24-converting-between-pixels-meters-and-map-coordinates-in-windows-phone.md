@@ -25,11 +25,11 @@ The map component in Windows Phone 8 and 8.1 has quite a [nice documentation][2]
 
 I created two helper functions to take care of this first conversion
 
-<div data-gist="9fa0a229b9c2db57a172" data-file="meters.cs"></div>
+{{% gist id="9fa0a229b9c2db57a172" file="meters.cs" %}}
 
 The second conversion is more difficult, especially if you want to do it really well. I found a [simple solution that works quite ok when you are not right at the poles][3] and used it. The helper function looks like this.
 
-<div data-gist="9fa0a229b9c2db57a172" data-file="coords.cs"></div>
+{{% gist id="9fa0a229b9c2db57a172" file="coords.cs" %}}
 
 Now you just need to put it all together and you are done.
 

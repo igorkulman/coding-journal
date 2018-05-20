@@ -12,7 +12,7 @@ You can use [ScheduledActionService.LaunchForTest][1] to test your background ag
 
 <!--more-->
 
-{{< gist 5849356>}}
+{{% gist id="5849356" %}}
 
 Your background agent gets executed every minute! 
 

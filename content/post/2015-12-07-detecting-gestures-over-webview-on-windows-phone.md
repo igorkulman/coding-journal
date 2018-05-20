@@ -20,6 +20,6 @@ The idea was simple. If you cannot recognize the swipe event over the WebView in
 
 First you include Hammer into your HTML, then you set it up to listen over an HTML element and lastly you subscribe to events you are interested in. The only reasonable action you can execute is notify the WebView using the `window.external.notify` function.
 
-{{< gist f7c559775ef3e57906ed>}} 
+{{% gist id="f7c559775ef3e57906ed" %}}
 
 The C#/XAML part of the solution consists just of handling the WebView's `ScriptNotify` event and implementing your action according to the value you receive.

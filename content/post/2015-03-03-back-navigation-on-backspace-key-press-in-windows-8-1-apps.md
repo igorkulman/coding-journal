@@ -12,6 +12,6 @@ Implementing this functionality is really simple, you just need to handle the Ke
 
 <!--more-->
 
-{{< gist b0f41a1a25acad0d17a4>}}
+{{% gist id="b0f41a1a25acad0d17a4" %}}
 
 If you implement this in your app, I am sure you will make some of your users more happy.

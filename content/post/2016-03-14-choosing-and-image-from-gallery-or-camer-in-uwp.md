@@ -21,7 +21,7 @@ In Windows Phone 8.1, this task is quite simple, just use the `FileOpenPicker`. 
 
 The code for this is relatively simple, although the `AndContinue` pattern can be a pain
 
-<script src="https://gist.github.com/igorkulman/2885b4a6faa5b0861f17.js?file=pick-wpa81.cs"></script>
+{{% gist id="2885b4a6faa5b0861f17" file="pick-wpa81.cs" %}}
 
 In Windows 10 Mobile, the `FileOpenPicker` has been changed to be more customizable. This make the process of  taking a new photo using the phone's camera totally hidden. Not a chance a common user will discover it, just take a look at this animation.
 
@@ -29,11 +29,11 @@ In Windows 10 Mobile, the `FileOpenPicker` has been changed to be more customiza
 
 So how to make this experience a bit better for the user? My solution is instead of launching the `FileOpenPicker` showing a `Flyout` with two options; Choose from gallery and Take photo. The Choose from gallery option just launches the `FileOpenPicker`
 
-<script src="https://gist.github.com/igorkulman/2885b4a6faa5b0861f17.js?file=pick-uwp.cs"></script>
+{{% gist id="2885b4a6faa5b0861f17" file="pick-uwp.cs" %}}
 
 and the Take photo option uses CameraCaptureUI to directly take a photo
 
-<script src="https://gist.github.com/igorkulman/2885b4a6faa5b0861f17.js?file=camera-uwp.cs"></script>       
+{{% gist id="2885b4a6faa5b0861f17" file="camera-uwp.cs" %}}
 
 The result might look like this. Do not forget to add an option to delete the photo if one is already chosen.
 

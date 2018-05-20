@@ -25,7 +25,7 @@ The fist thing you may notice when using macOS with a Windows keyboard is that t
 
 If you are a programmer you probably use Home and End keys to navigate to the beginning and end of the current line a lot. Those keys work differently on macOS, pressing them will make your cursor jump to the beginning or the end of a file and drive you nuts. Luckily, there is quite an easy way to fix it. Create a `DefaultKeyBinding.dict` file in `~/Library/KeyBindings` to remap them
 
-<div data-gist="8b7ccbb32a639b7fdb2efaa5f4b02d6d"></div>
+{{% gist id="8b7ccbb32a639b7fdb2efaa5f4b02d6d" %}}
 
 It is best to logout and log back in for the apps to notice this change.
 
@@ -35,11 +35,11 @@ If you use the Terminal app (you should really try [Hyper](https://hyper.is/) in
 
 Windows keyboard do not usually have Volume up and Volume down keys but you can quite simply create custom keyboard shortcuts for this functionality using Automator. Open Automator and create two Services executing Apple script. One for Volume up
 
-<div data-gist="871c92d9fdadf8dea25d4bbbae28ce66" data-file="volumeup.applescript"></div>
+{{% gist id="871c92d9fdadf8dea25d4bbbae28ce66" file="volumeup.applescript" %}}
 
 and another one for volume down
 
-<div data-gist="871c92d9fdadf8dea25d4bbbae28ce66" data-file="volumedown.applescript"></div>
+{{% gist id="871c92d9fdadf8dea25d4bbbae28ce66" file="volumedown.applescript" %}}
 
 You can then open System preferences | Keyboard | Keyboard shortcuts | Services and assign those two services any keyboard shortcut you want. I use Control + Command + Up for Volume up and Control + Command + Down for Volume down.
 

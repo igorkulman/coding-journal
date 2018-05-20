@@ -15,4 +15,4 @@ Of course, I was looking for a way to automate this, because I do not think that
 
 It has to be run with administrator privileges to work. Maybe I will go one step further and make this script run each time the notebook wakes up, just to be sure.
 
-{{< gist 3bea04333c0b47156c68>}}
+{{% gist id="3bea04333c0b47156c68" %}}

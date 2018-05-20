@@ -27,7 +27,7 @@ To get started with Win2D just install the `Win2D.uwp` Nuget package and add a `
 
 Before drawing any resources you need to first load them. This should be done in the `CreateResources` event of the `CanvasControl`. This method should not be async so if you need to load your resources asynchronously (as you always do) you need to use a trick with a separate method
 
-<div data-gist="39f73f5117a02c94fbe3b85ec57bb8a8" data-file="load.cs"></div>
+{{% gist id="39f73f5117a02c94fbe3b85ec57bb8a8" file="load.cs" %}}
 
 The code snippet also shows how to load a simple image as a resources. You probably will not need to load anything other that images in a simple game.
 
@@ -35,7 +35,7 @@ The code snippet also shows how to load a simple image as a resources. You proba
 
 To make the `CanvasControl` draw your game you need to hook up the `Draw` event and put all you rendering logic there. There are basically just two things you will want to render, text and images
 
-<div data-gist="39f73f5117a02c94fbe3b85ec57bb8a8" data-file="draw.cs"></div>
+{{% gist id="39f73f5117a02c94fbe3b85ec57bb8a8" file="draw.cs" %}}
 
 Both methods have many overloads so it is up to you to choose the one that suits you best. There are also other methods for drawing primitives like likes or circles, take a look at the [documentation](http://microsoft.github.io/Win2D/html/Introduction.htm). When creating a pixel art game, make use you use the `CanvasImageInterpolation.NearestNeighbor` otherwise your images will look blurred if not on sufficient resolution.
 
@@ -51,7 +51,7 @@ First you should handle input from the keyboard, so the game is comfortably play
 
 If you want to make your game playable on the XBox One or on the PC with a XBox One controller, you should handle the controller input. Handling the controller input is the same as handling the keyboard, you just check for different keys. The resulting code may look like this.
 
-<div data-gist="39f73f5117a02c94fbe3b85ec57bb8a8" data-file="input.cs"></div>
+{{% gist id="39f73f5117a02c94fbe3b85ec57bb8a8" file="input.cs" %}}
 
 If you want to make your game run on XBox One and do not have an XBox One to test it, just get the XBox One controller, connect it to your PC with an USB cable and make sure the whole game is controllable and playable just with it, without the keyboard or mouse.
 

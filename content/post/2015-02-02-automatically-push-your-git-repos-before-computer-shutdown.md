@@ -14,6 +14,6 @@ Of course, I can solve it by connecting to my home Raspberry Pi through SSH, wak
 
 So I came up with a really simple PowerShell script to iterate to a directory with git projects and execute &#8216;git push&#8217; on all of them
 
-{{< gist 275a76230757dcd48576>}}
+{{% gist id="275a76230757dcd48576" %}}
 
 To make the script execute on each computer shutdown, run **gpedit.msc** and go to **Computer Configuration** | **Windows Settings** | **Scripts (Startup/Shutdown)** | **Shutdown** and add the script. Adding the script just by referencing the .ps1 file did not work for me, I had to add the path to PowerShell (%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe) with the script as a parameter.

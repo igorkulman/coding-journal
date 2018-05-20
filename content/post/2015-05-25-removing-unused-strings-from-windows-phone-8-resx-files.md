@@ -16,3 +16,5 @@ To solve this problem I have created a simple command line utility, that is [ava
 The usage is really simple. Just run the utility with the path to your project as a parameter. It will detect all resources files and remove all the unused strings from them.
 
  [1]: https://github.com/igorkulman/RemoveUnusedResources
+
+{{% github-repo "igorkulman/RemoveUnusedResources" %}}

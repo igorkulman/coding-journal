@@ -32,15 +32,15 @@ Another solution is to rotate the `UITableView` by 180 degrees; rotating it upsi
 
 After you rotate the `UITableView`
 
-<div data-gist="3cda3da3437713da8d1613bb88af42c5" data-file="tableview-flip.swift"></div>
+{{% gist id="3cda3da3437713da8d1613bb88af42c5" file="tableview-flip.swift" %}}
 
 you have to also rotate all the cells
 
-<div data-gist="3cda3da3437713da8d1613bb88af42c5" data-file="cell-flip.swift"></div>
+{{% gist id="3cda3da3437713da8d1613bb88af42c5" file="cell-flip.swift" %}}
 
 When you do this you immediately notice that the scrollbar is on the wrong side of the `UITableView`. You can fix this by setting
 
-<div data-gist="3cda3da3437713da8d1613bb88af42c5" data-file="scrollbar-flip.swift"></div>
+{{% gist id="3cda3da3437713da8d1613bb88af42c5" file="scrollbar-flip.swift" %}}
 
 but this is not a very good solution. It depends on the width of the `UITableView` so you have to observe its changes and set it again with every change so the scrollbar is in the correct place when the user rotates the device and changes between portrait and landscape. 
 
@@ -52,8 +52,8 @@ The best solution I found is to flip the `UITableView`'s Y axis. It gives you al
 
 So flip the `UITableView`
 
-<div data-gist="3cda3da3437713da8d1613bb88af42c5" data-file="tableview-y-flip.swift"></div>
+{{% gist id="3cda3da3437713da8d1613bb88af42c5" file="tableview-y-flip.swift" %}}
 
 and flip your cells in the same way
 
-<div data-gist="3cda3da3437713da8d1613bb88af42c5" data-file="cell-y-flip.swift"></div>
+{{% gist id="3cda3da3437713da8d1613bb88af42c5" file="cell-y-flip.swift" %}}

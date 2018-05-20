@@ -14,11 +14,11 @@ WURFL, the Wireless Universal Resource FiLe, is a Device Description Repository 
 
 After installing the Nuget package, you need to setup WURLF in your Global.asax file
 
-<script src="https://gist.github.com/igorkulman/dc65bf6d68aec59d57e2.js?file=wurlf_setup.cs"></script>
+{{% gist id="dc65bf6d68aec59d57e2" file="wurlf_setup.cs" %}}
 
 I recommend setting the match mode to accuracy instead of speed, to get the best results. Using the WURFL library is also quite easy, just pass the user agent string and get the properties you want.
 
-<script src="https://gist.github.com/igorkulman/dc65bf6d68aec59d57e2.js?file=wurfl_usage.cs"></script>
+{{% gist id="dc65bf6d68aec59d57e2" file="wurfl_usage.cs" %}}
 
  [1]: http://wurfl.sourceforge.net/
  [2]: https://www.nuget.org/packages/WURFL_Official_API/

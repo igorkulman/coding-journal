@@ -34,13 +34,13 @@ Of course there is a better, more declarative way.
 
 First you need a ViewModel for all the steps of the flow. My flow is connected to application synchronization, so my ViewModel is called `SyncStepViewModel`
 
-<div data-gist="a2c5b63f835e8bd01df89566a5627d6b" data-file="SyncStepViewModel.swift"></div>
+{{% gist id="a2c5b63f835e8bd01df89566a5627d6b" file="SyncStepViewModel.swift" %}}
 
 This ViewModel has a title, contains property determining if the flow step is currently running, property for the current progress percentage and a computed property for the step title. This computer property just adds the progress percentage at the end of the title when applicable. 
 
 The ViewModel for the screen just needs to hold the array of the flow steps in an observable way, so let's make it easy
 
-<div data-gist="a2c5b63f835e8bd01df89566a5627d6b" data-file="SyncViewModel.swift"></div>
+{{% gist id="a2c5b63f835e8bd01df89566a5627d6b" file="SyncViewModel.swift" %}}
 
 This ViewModel will of course contains some logic to add the flow steps to the array. 
 
@@ -48,14 +48,16 @@ This ViewModel will of course contains some logic to add the flow steps to the a
 
 Binding the `SyncViewModel` to the `UITableView` in the `UIViewController` is really easy
 
-<div data-gist="a2c5b63f835e8bd01df89566a5627d6b" data-file="SyncViewController.swift"></div>
+{{% gist id="a2c5b63f835e8bd01df89566a5627d6b" file="SyncViewController.swift" %}}
 
 It is just a few lines of declarative code and no delegates!
 
 The tricky part is the `UITableViewCell` and making the UI work with the ViewModel. As you can see from the previous snippet, I do not access any of the UI elements of my `SyncStepCell` I just assign the ViewModel. The `SyncStepCell` takes care of the rest using data binding
 
-<div data-gist="a2c5b63f835e8bd01df89566a5627d6b" data-file="SyncStepCell.swift"></div>
+{{% gist id="a2c5b63f835e8bd01df89566a5627d6b" file="SyncStepCell.swift" %}}
 
 My `UITableViewCell` just "waits" for the ViewModel and then sets up all the necessary bindings. Again, no direct access to the UI elements, just making everything work in a simple declarative way.
 
 If you want a more complex example of MVVM and binding, check out my [iOS sample app on Github](https://github.com/igorkulman/iOSSampleApp).
+
+{{% github-repo "igorkulman/iOSSampleApp" %}}

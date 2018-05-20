@@ -24,7 +24,7 @@ In this article I will show you how to use the Type Prvoder for SQL. If you want
 
 First you need to define a datasource. The only thing needed for this is a connection string. The connection string can be changed at runtime but you must provide a valid one for the compilation time so the F# compiler can &#8220;detect&#8221; the structure of your data. Let us create a module, that will hold our connection string and schema information.
 
-{{< gist 5857569>}}
+{{% gist id="5857569" %}}
 
 That is everything you need, if the schema of your database changes the F# compiler will notice.
 
@@ -32,13 +32,13 @@ That is everything you need, if the schema of your database changes the F# compi
 
 With the schema information in place we can now start querying the database. We will create a Factory class with the connection string as a parameter
 
-{{< gist 5857575>}}
+{{% gist id="5857575" %}}
 
 Now create a method, write db. and wait for a moment. IntelliSense will show you all the available tables in the database. If you query a table and write a dot again, you will be shown all the columns of the table. Pretty cool. 
 
 You can query the database using the query { expression }, where expression is a normal F# expression, for example
 
-{{< gist 5857577>}}
+{{% gist id="5857577" %}}
 
 Notice how the IntelliSense offers you a complete list of the columns if you write d. in the where clause.
 
@@ -46,11 +46,11 @@ Notice how the IntelliSense offers you a complete list of the columns if you wri
 
 Inserting data is basically identical to the C# approach when using LINQ to SQL
 
-{{< gist 5857579>}}
+{{% gist id="5857579" %}}
 
 The same is true for updating the data
 
-{{< gist 5857580>}}
+{{% gist id="5857580" %}}
 
 **Conclusion**
 

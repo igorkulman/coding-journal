@@ -66,3 +66,5 @@ The [Semantic analyzer](https://github.com/igorkulman/SwiftPascalInterpreter/Pas
 #### Interpreter
 
 The [Interpreter](https://github.com/igorkulman/SwiftPascalInterpreter/PascalInterpreter/PascalInterpreter/Interpreter/Interpreter.swift) reads the AST representing the Pascal program from Parser and interprets it by walking the AST recursively. It can handle basic Pascal programs.
+
+{{% github-repo "igorkulman/SwiftPascalInterpreter" %}}

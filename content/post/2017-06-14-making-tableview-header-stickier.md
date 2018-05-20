@@ -27,18 +27,18 @@ The `contentOffset` may help you with not showing the header when the `UITableVi
 
 By using the `contentInset` property you can affect the scrollable area of the `UITableView`. You can inset the scrollable area top by the height of the header so it is off the screen and you can never scroll to it
 
-<div data-gist="95b406f633b24471490673317c3cc3f0" data-file="inset.swift"></div>
+{{% gist id="95b406f633b24471490673317c3cc3f0" file="inset.swift" %}}
 
 It remains visible when the `UITableView` bounces. This gives the users a visual clue that something is there and they might try to scroll to it. 
 
 Now we need to detect that the user dragged the `UITableView` to see the whole header. It corespondents to the user scrolling the `UITableView` down so far that the vertical scroll position represented by `contentOffset.y` is less than zero. When that happens we just reset the `contentInset.y` back to `0`. This makes the `UITableView` behave like a standard `UITableView` with a header. 
 
-<div data-gist="95b406f633b24471490673317c3cc3f0" data-file="show.swift"></div>
+{{% gist id="95b406f633b24471490673317c3cc3f0" file="show.swift" %}}
 
 The last step is switching back to the initial states when the user scrolls and the header comes out of view. Again, we check the vertical scroll position represented by the `contentOffset.y` property and when it is more that the header height, we inset the `UITableView` again. 
 
-<div data-gist="95b406f633b24471490673317c3cc3f0" data-file="hide.swift"></div>
+{{% gist id="95b406f633b24471490673317c3cc3f0" file="hide.swift" %}}
 
 The best place for both checks seems to be the `scrollViewWillBeginDecelerating` method, making the changes while the scroll is still in progress.
 
-<div data-gist="95b406f633b24471490673317c3cc3f0" data-file="all.swift"></div>
+{{% gist id="95b406f633b24471490673317c3cc3f0" file="all.swift" %}}

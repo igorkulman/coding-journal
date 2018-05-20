@@ -15,7 +15,7 @@ ETag is a HTTP header that acts as a hash of the data. When the server returns a
 
 <!--more-->
 
-<div data-gist="4e6d24d0fedfe8361c6b" data-file="etagresponse.cs"></div>
+{{% gist id="4e6d24d0fedfe8361c6b" file="etagresponse.cs" %}}
 
 **NancyFX impelemntation**
 
@@ -25,6 +25,6 @@ There are two parameters in this method, because you may sometimes want to compu
 
 Using this method is the really simple
 
-<div data-gist="4e6d24d0fedfe8361c6b" data-file="usage.cs"></div>
+{{% gist id="4e6d24d0fedfe8361c6b" file="usage.cs" %}}
 
  [1]: http://frontendplay.com/2013/05/22/http-caching-demystified/

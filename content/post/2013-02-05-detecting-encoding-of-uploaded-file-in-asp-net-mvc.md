@@ -10,14 +10,14 @@ Uploading a file in ASP.NET MVC is very easy, but there is no easy way to detect
 
 First, get a stream of the uploaded file.
 
-{{< gist 5849381>}}
+{{% gist id="5849381" %}}
 
 <!--more-->
 
 Next, read the whole file to a byte array
 
-{{< gist 5849384>}}
+{{% gist id="5849384" %}}
 
 Finally the trick is to try all the encodings you think the file may be in and chech if if fails or not
 
-{{< gist 5849390>}}
+{{% gist id="5849390" %}}

@@ -18,16 +18,16 @@ So how do you get rid of all those strings when using custom cells with `UITable
 
 <!--more-->
 
-<div data-gist="161f8a13a4c69d53639c1691ddbc87d9" data-file="definition.swift"></div>
+{{% gist id="161f8a13a4c69d53639c1691ddbc87d9" file="definition.swift" %}}
 
 This assumes that your XIB for that class has the same name as the Swift class. The protocol adds to properties to your class, one for the XIB name and another one for the reuse identifier. The default implementation takes care of setting them both to the name of your class.
 
 To register the `UITableViewCell` class you just use
 
-<div data-gist="161f8a13a4c69d53639c1691ddbc87d9" data-file="registration.swift"></div>
+{{% gist id="161f8a13a4c69d53639c1691ddbc87d9" file="registration.swift" %}}
 
 and the actual usage is also very simple
 
-<div data-gist="161f8a13a4c69d53639c1691ddbc87d9" data-file="usage.swift"></div>
+{{% gist id="161f8a13a4c69d53639c1691ddbc87d9" file="usage.swift" %}}
 
 As promised, both registration and usage of the custom `UITableViewCell` can be done without the use any strings.

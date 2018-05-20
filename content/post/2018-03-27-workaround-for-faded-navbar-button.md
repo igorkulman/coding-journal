@@ -25,10 +25,10 @@ You can work around this bug by setting the `UINavigationBar.tintAdjustmentMode`
 
 A much better solution is to work around the bug in the `UINavigationControllerDelegate`:
 
-<div data-gist="0de10c8b24b35a6a7759bd950f49ecc6" data-file="UINavigationControllerDelegate.swift"></div>
+{{% gist id="0de10c8b24b35a6a7759bd950f49ecc6" file="UINavigationControllerDelegate.swift" %}}
 
 If your application uses just one `UINavigationController` set its delegate and be done with it. If you use more than one, like I do in the application I work on, the best solution is probably creating a custom `UINavigationController` inheriting from the `UINavigationController`, setting it to be its own delegate and work around the bug in the `UINavigationControllerDelegate`:
 
-<div data-gist="0de10c8b24b35a6a7759bd950f49ecc6" data-file="AppNavigationController.swift"></div>
+{{% gist id="0de10c8b24b35a6a7759bd950f49ecc6" file="AppNavigationController.swift" %}}
 
 This way you also have a place to accommodate all the future iOS bugs related to navigation, that will be introduced in the next releases.

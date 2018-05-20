@@ -33,6 +33,8 @@ Reading the temperature using the command line is not really comfortable, so I c
 
 Later I added a WiFi module and tried powering the PI from a battery bank. I basically created a WiFi enabled thermometer, that looked a bit strange. I think I need to get a small LCD display, so there is no need to open a browser when you just want to know the temperature. 
 
+{{% github-repo "igorkulman/rpi-thermometer" %}}
+
 **NAS and backups**
 
 I had an external disk connected to the PI so I also ran Samba. I used it to offload some of my data to the PI. I am quite a paranoid person, so I also cloned all my personal and work Git repos to the PI and wrote a script that ran &#8220;git pull&#8221; on all of them every night. 

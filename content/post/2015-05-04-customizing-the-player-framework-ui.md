@@ -17,4 +17,4 @@ You can now edit the copied XAML file and customize it any way you want. If you 
 
 Finally, you need to apply the style by adding it to the page with your player
 
-{{< gist 7bbbefc9a25afa07c5e1>}}
+{{% gist id="7bbbefc9a25afa07c5e1" %}}

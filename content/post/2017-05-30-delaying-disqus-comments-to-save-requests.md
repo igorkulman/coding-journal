@@ -25,18 +25,18 @@ Most of my blog posts do not have any comments so making about 50 unnecessary re
 
 The idea is simple, add a "Show comments" button at the end of the page and embed the Disqus JavaScript file when the user clicks that button. This can be done with a simple JavaScript function
 
-<div data-gist="47e9d4dc4bbb5279267a58d7bc794944" data-file="load.js"></div>
+{{% gist id="47e9d4dc4bbb5279267a58d7bc794944" file="load.js" %}}
 
 The problem is that Disqus does not work that well and sometimes does not load the comments when there is an extra trailing slash in the URL so I recommend setting the post URL explicitly by adding another piece of JavaScript
 
-<div data-gist="47e9d4dc4bbb5279267a58d7bc794944" data-file="config.js"></div>
+{{% gist id="47e9d4dc4bbb5279267a58d7bc794944" file="config.js" %}}
 
 Now you just need to add the actual "Show comments" button and you are done. To make the user experience better I decided to show the number of comments on that button. You need to embed a Disqus JavaScript file for that but it makes just one request, so it is reasonable
 
-<div data-gist="47e9d4dc4bbb5279267a58d7bc794944" data-file="count.html"></div>
+{{% gist id="47e9d4dc4bbb5279267a58d7bc794944" file="count.html" %}}
 
 This JavaScript will find all elements with class `disqus-comment-count` on the website and fetch the comments count for their `data-disqus-url` attribute. The resulting "Show comments" button may then look like this
 
-<div data-gist="47e9d4dc4bbb5279267a58d7bc794944" data-file="button.html"></div>
+{{% gist id="47e9d4dc4bbb5279267a58d7bc794944" file="button.html" %}}
 
 And that is it. If you want to see it in action, just click the button below near the end of this page. If you want to see it all integrated, just look at the source code of this page. 

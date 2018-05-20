@@ -20,6 +20,8 @@ Install-Package AutoCompleteBoxWinRT
 
 <!--more-->
 
+{{% github-repo "igorkulman/AutoCompleteBox" %}}
+
 
  [1]: http://winrtxamltoolkit.codeplex.com/
  [2]: http://msdn.microsoft.com/en-us/data/gg577609.aspx

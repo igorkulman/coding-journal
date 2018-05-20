@@ -20,7 +20,7 @@ First you have to add the **Share Contract** ability to the new manifest file (P
 
 You can determine if your application was launched normally or as a Share Contract target in the application Launching event. If you cast the **LaunchingEventArgs** to **ShareLaunchingEventArgs** and the result is not null, your application was launched as a Share Contract target. The video recommend creating an internal property of type **ShareOperation** in App.xaml.cs and saving the data from **ShareLaunchingEventArgs** there:
 
-<div data-gist="11111043" data-file="AssociationUriMapper.cs"></div>
+{{% gist id="11111043" file="AssociationUriMapper.cs" %}}
 
 (I use Caliburn.Micro so I do it in the OnLaunch method of the Bootstrapper)
 
@@ -28,7 +28,7 @@ The next thing to do is to show a separate sharing page instead of the page you 
 
 If you use Caliburn.Micro as I do, do not forget to register the AssociationUriMapper in the Boostrappers CreatePhoneApplicationFrame method:
 
-<div data-gist="11111043" data-file="CreatePhoneApplicationFrame.cs"></div>
+{{% gist id="11111043" file="CreatePhoneApplicationFrame.cs" %}}
 
  [1]: http://t.co/YMtrM84rwI
  [3]: http://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh871367.aspx

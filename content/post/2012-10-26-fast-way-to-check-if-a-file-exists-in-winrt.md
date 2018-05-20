@@ -10,7 +10,7 @@ The StorageFolder class does not containt any method to determine if a file with
 
 The first method could take advantage of the GetFilesAsync method that returns a readonly list of all the files in a folder as StorageFile objects. The StorageFile contains a property called Name that you could compare with the given filename. The whole code would look like this
 
-{{< gist 5849495>}}
+{{% gist id="5849495" %}}
 
 <!--more-->
 
@@ -18,6 +18,6 @@ This method looks fairly simple, elegant and works if the folder contains only a
 
 There is faster way, that works in constant time (about 50ms) even in folders with hundred files, but it is not so elegant. The idea is simple, try to access the files and if you get an exception, just return false.
 
-{{< gist 5849500>}}
+{{% gist id="5849500" %}}
 
 Although I am a big fan of elegance and readability when coding, I prefer and use the second method.

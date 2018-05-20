@@ -17,25 +17,25 @@ The real problem s that the [MSDN sample][3] states it works with Google login b
 
 Lets start with a basic config
 
-<div data-gist="65a406f7f3cff48be3c5" data-file="config.cs"></div>
+{{% gist id="65a406f7f3cff48be3c5" file="config.cs" %}}
 
 The important things here are your Google app id and Google app secret. The GoogleStartUri also contains permissions that you want to get (profile, https://www.googleapis.com/auth/plus.login and https://www.googleapis.com/auth/plus.me email in my case).
 
 You use this config with a WebAuthenticationBroker call
 
-<div data-gist="65a406f7f3cff48be3c5" data-file="login.cs"></div>
+{{% gist id="65a406f7f3cff48be3c5" file="login.cs" %}}
 
 on Windows 8.1 you get the response data immediately. On Windows Phone 8.1, you have to implement the &#8220;AndContinue&#8221; pattern. 
 
 You use the response data to parse out the success code
 
-<div data-gist="65a406f7f3cff48be3c5" data-file="GetGoogleSuccessCode.cs"></div>
+{{% gist id="65a406f7f3cff48be3c5" file="GetGoogleSuccessCode.cs" %}}
 
 Now that you have the success code, you can exchange it for the authentication token
 
 And now you finally have a way to get the authentication token and implement Google login.
 
-<div data-gist="65a406f7f3cff48be3c5" data-file="GetToken.cs"></div>
+{{% gist id="65a406f7f3cff48be3c5" file="GetToken.cs" %}}
 
  [1]: https://msdn.microsoft.com/en-us/library/windows.security.authentication.web.webauthenticationbroker.aspx
  [2]: http://blog.kulman.sk/why-universal-apps-as-not-as-universal-as-you-may-think/

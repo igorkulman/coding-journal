@@ -19,4 +19,4 @@ Implementing this kind of hovers is really easy thanks to the `ToolTipService` t
 
 <!--more-->
 
-<script src="https://gist.github.com/igorkulman/c7320d81f9b882bcfd69.js"></script>
+{{% gist id="c7320d81f9b882bcfd69" %}}
