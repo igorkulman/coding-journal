@@ -7,6 +7,7 @@ author = "Igor Kulman"
 date = "2018-07-18T08:29:12+01:00"
 title = "Creating and using your own Xcode file templates"
 url = "/creating-your-own-xcode-templates"
+share_img = "/images/XcodeTemplates.png"
 
 +++
 
@@ -22,9 +23,11 @@ Having to crate files with the same structure over and over again manually is a 
 
 All the Xcode custom file templates are located in `~/Library/Developer/Xcode/Templates/File Templates` and grouped into sections by their folder name. If you want Xcode to show a "Custom" section at the bottom of the new file dialog, just create a `~/Library/Developer/Xcode/Templates/File Templates/Custom` folder.
 
+{{% img-responsive "/images/XcodeTemplates.png" %}}
+
 ### File template structure
 
-Each file template is a separate folder with a name ending in `.xctemplate`. If you want to create a "ViewController with Delegate" file template, you have to create a folder named `ViewController with Delegate.xctemplate` in `~/Library/Developer/Xcode/Templates/File Templates/Custom`. 
+Each file template is a separate folder with a name ending in `.xctemplate`. If you want to create a simle "Swift Class" file template, you have to create a folder named `ViewController with Delegate.xctemplate` in `~/Library/Developer/Xcode/Templates/File Templates/Custom`. 
 
 Each file template folder should contain at least 3 files:
 
@@ -34,7 +37,7 @@ Each file template folder should contain at least 3 files:
 
 <!--more-->
 
-You are not limited to just 1 template file, you can create more. This can be useful if you want to create a `UIViewController` together with a XIB or a ViewModel
+You are not limited to just 1 template file, you can create more. This can be useful if you want to create a `UIViewController` [together with a XIB or a ViewModel](https://github.com/igorkulman/xcode-templates/tree/master/Templates/ViewController%20and%20ViewModel.xctemplate).
 
 #### Template description
 
@@ -51,4 +54,4 @@ My template for a `UIViewController` with a delegate looks like this
 
 {{% gist id="c518c66de96b1c9d8c879414089fb7e6" file="___FILEBASENAME___.swift" %}}
 
-If you do not want to start from scratch, just [download my template](/files/SampleTemplate.zip), copy it to `~/Library/Developer/Xcode/Templates/File Templates/Custom` and adjust it to your needs.
+If you do not want to start from scratch, take a look at [my sample Xcode templates on Github](https://github.com/igorkulman/xcode-templates).
