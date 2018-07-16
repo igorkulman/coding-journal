@@ -2,3 +2,6 @@
 x-frame-options: SAMEORIGIN
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
+Referrer-Policy: no-referrer-when-downgrade
+X-Frame-Options: DENY
+Feature-Policy: accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'
