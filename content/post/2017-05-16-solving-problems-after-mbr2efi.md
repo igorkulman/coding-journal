@@ -18,10 +18,7 @@ The upgrade from MBR to EFI went fine on both my desktop computer and my Thinkpa
 
 ### Fixing broken Hyper-V
 
-On both my computer Hyper-V stopped working after the upgrade. When trying to run a Windows Phone emulator I just got an error message
-
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Anyone seeing this after upgrading to Creators Update? No emulators work now.  <a href="https://twitter.com/hashtag/Windows10?src=hash">#Windows10</a> <a href="https://t.co/MTzIlCHCw1">pic.twitter.com/MTzIlCHCw1</a></p>&mdash; Igor Kulman (@igorkulman) <a href="https://twitter.com/igorkulman/status/855788447977672706">April 22, 2017</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+On both my computer Hyper-V stopped working after the upgrade. When trying to run a Windows Phone emulator I just got an error message.
 
 Virtualization was still enabled in BIOS. I ran the [CoreInfo](http://technet.microsoft.com/en-us/sysinternals/cc835722) tool and it told me virtualization is enabled but Hyper-V is disabled. So I uninstalled Hyper-V, restarted the computer and installed Hyper-V back. That fixed the problem. 
 
