@@ -9,7 +9,7 @@ subtitle = "Who am I?"
 
 <p class="about-text">
 <span class="fa fa-briefcase about-icon"></span>
-Currently a <b>Software Engineer</b> at <a href="https://www.teamwire.eu/">Teamwire</a> working on the new iOS secure messaging app after the death of Windows Phone. Still doing freelance work when the opportunity arises. Previously worked as <b>.NET Developer</b> (<a href="https://www.alza.cz">Alza.cz</a>, <a href="https://www.inmite.eu">Inmite</a>) mostly focused on Windows development and Microsoft Azure.
+Currently the <b>lead iOS developer</b> at <a href="https://www.teamwire.eu/">Teamwire</a> working on the new iOS secure messaging app after the death of Windows Phone. Still doing freelance work when the opportunity arises. Previously worked as <b>.NET Developer</b> (<a href="https://www.alza.cz">Alza.cz</a>, <a href="https://www.inmite.eu">Inmite</a>) mostly focused on Windows development and Microsoft Azure.
 </p>
 
 <p class="about-text">
@@ -30,6 +30,11 @@ Take a look at my <strong><a href="/projects">projects</a></strong> and my <stro
 <p class="about-text">
 <span class="fa fa-globe about-icon"></span>
 I also write a <a href="https://www.kulman.sk">blog in Slovak about non-programming stuff</a>, check it out if you can read in.
+</p>
+
+<p class="about-text">
+<span class="fa fa-microphone about-icon"></span>
+If you want to know more about the way I work, read my <a href="https://remotehabits.com/interview/interview-with-igor-kulman-a-software-engineer-building-ios-apps-remotely">interview about working from home</a>, check out my <a href="https://thesweetsetup.com/igor-kulmans-macos-iphone-and-watch-setup/">macOS and iOS work setup</a> or listen to a <a href="https://learnswift.fireside.fm/18">podcast espisode about my experience learning Swift</a>.
 </p>
 
 </div>
