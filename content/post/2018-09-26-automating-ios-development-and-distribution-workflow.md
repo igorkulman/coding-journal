@@ -49,21 +49,33 @@ In terms of the Gitlab's `.gitlab-ci.yml`, omitting some pre-build stuff like re
 
 {{% gist id="053b5d140194e20c5845e166a86b6e0c" file="gitlab-ci.yml" %}}
 
-I use [Fastlane](https://fastlane.tools/), it is a great tool I really recommend. In my case it logs into the Apple account, downloads or regenerates the provisioning profiles that are needed for the builds, build sthe app, runs all the unit and UI tests, creates and distributes the IPA.
+I use [Fastlane](https://fastlane.tools/), it is a great tool I really recommend. 
 
-In the deploy stage I also use a [Fastlane plugin to add a "BETA" word and build number to the app badge before build](https://github.com/HazAT/badge) so testers can easily distinguish if they use the AppStore or the development version. 
+Running the tests is really simple
+
+{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="Fastfile-tests.ruby" %}}
+
+Before building the app I make Fastlane first log into the Apple account (`cert`) and download or regenerate the provisioning profiles (`sigh`) that are needed for the build
+
+{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="Fastfile-build.ruby" %}}
 
 ### Automatic build distribution
 
 As I already mentioned, every time a pull request is merged in Gitlab, the CI creates an ad-hoc IPA and deploys it. In my case, the deployment has two steps. 
 
+{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="Fastfile-deploy.ruby" %}}
+
 The first step is deploying the actual IPA to [Installr](http://installrapp.com/). Installr is an simple build distribution service, that you can use for free without any serious limitations. You can make it send email to your testers every time a new build is uploaded or you can just send out the builds manually when needed.
 
 The second step is uploading the debug symbols to [HockeyApp](https://www.hockeyapp.net/). I do not use HockeyApp for build distribution, I prefer Installr and I do not use it for crash reporting, because it is considered a security risk in some environments so I just cannot use it. 
 
-So why do I upload the debug symbols to HockeyApp? For symbolication. When I get logs from the app and they include a crash log, I just upload the crash log to HockeyApp and it gets automatically symbolicated in a few minutes. I do not have to do it manually and I can link the symbolicated crash log to an issue in Gitlab that I typically create for every reported crash.
+So why do I upload the debug symbols to HockeyApp? For symbolication. When testers send me logs from the app and they include a crash log, I just upload the crash log to HockeyApp and it gets automatically symbolicated in a few minutes. I do not have to do it manually and I can link the symbolicated crash log to an issue in Gitlab that I typically create for every reported crash. 
 
 The automatic builds are ad-hoc builds and use the AppStore app id not the development app id to be as close to the AppStore version as possible.
+
+I also use a [Fastlane plugin to add a "BETA" word and build number to the app badge before build](https://github.com/HazAT/badge) so testers can easily distinguish if they use the AppStore or the development version. 
+
+{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="Fastfile-badge.ruby" %}}
 
 ### Automatic screenshots generation
 
