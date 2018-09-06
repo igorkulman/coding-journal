@@ -63,7 +63,9 @@ The automatic builds are ad-hoc builds and use the AppStore app id not the devel
 
 ### Automatic screenshots generation
 
-It is a good practice to make your AppStore screenshot show the current version of the app change them as the app UI changes
+It is a good practice to make your AppStore screenshot show the current version of the app change them as the app UI changes. Making new screenshots manually is a real pain, especially if your app is localized into multiple languages or you do not use the screenshots directly but embed them into images with some marketing texts. Luckily you can [automate the process with Fastlane](https://docs.fastlane.tools/getting-started/ios/screenshots/).
+
+The idea is simple, you add helper class to you UI tests project and then create a new UI test method that goes over all the screens you want to make a screenshot of calling the helper class at the right moment. You can configure Fastlane to run this UI test method for different languages and device, generating everything in one go.
 
 ### Cooperation with the testers
 
