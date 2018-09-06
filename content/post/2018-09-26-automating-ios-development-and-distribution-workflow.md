@@ -45,7 +45,11 @@ My setup is really simple
 * each push to Gitlab causes the app to build and run all the unit and UI tests
 * each merge of a pull request causes the app to build, create an ad-hoc IPA and deploy it to a build distribution system
 
-I use [Fastlane](https://fastlane.tools/), it is a great tool I really recommend. In my case it logs into the Apple account, downloads or regenarets the provisioning profiles that are needed for the builds, build sthe app, runs all the unit and UI tests, creates and distirbutes the IPA.
+In terms of the Gitlab's `.gitlab-ci.yml`, omitting some pre-build stuff like restoring Carthage cache, setting environment variables, etc. it may be just two phases, one running unit tests on all branches and the other doing build and deploy on the develop branch.
+
+{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="gitlab-ci.yml" %}}
+
+I use [Fastlane](https://fastlane.tools/), it is a great tool I really recommend. In my case it logs into the Apple account, downloads or regenerates the provisioning profiles that are needed for the builds, build sthe app, runs all the unit and UI tests, creates and distributes the IPA.
 
 In the deploy stage I also use a [Fastlane plugin to add a "BETA" word and build number to the app badge before build](https://github.com/HazAT/badge) so testers can easily distinguish if they use the AppStore or the development version. 
 
@@ -65,7 +69,17 @@ The automatic builds are ad-hoc builds and use the AppStore app id not the devel
 
 It is a good practice to make your AppStore screenshot show the current version of the app change them as the app UI changes. Making new screenshots manually is a real pain, especially if your app is localized into multiple languages or you do not use the screenshots directly but embed them into images with some marketing texts. Luckily you can [automate the process with Fastlane](https://docs.fastlane.tools/getting-started/ios/screenshots/).
 
-The idea is simple, you add helper class to you UI tests project and then create a new UI test method that goes over all the screens you want to make a screenshot of calling the helper class at the right moment. You can configure Fastlane to run this UI test method for different languages and device, generating everything in one go.
+The idea is simple, you add helper class to you UI tests project and then create a new UI test method that goes over all the screens you want to make a screenshot of calling the helper class at the right moment. 
+
+{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="ui-tests.swift" %}}
+
+You can configure Fastlane to run this UI test method for different languages and device, generating everything in one go in your `Snapfile`
+
+{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="Snapfile.ruby" %}}
+
+And add a Fastline lane to have it execute when you run `fastlane screenshots`
+
+{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="Fastfile-sreenshots.ruby" %}}
 
 ### Cooperation with the testers
 
