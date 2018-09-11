@@ -7,6 +7,7 @@ author = "Igor Kulman"
 date = "2018-09-26T08:29:12+01:00"
 title = "Automating your iOS app development and distribution workflow"
 url = "/automating-ios-development-and-distribution-workflow"
+share_img = "/images/runner_logo.png"
 
 +++
 
