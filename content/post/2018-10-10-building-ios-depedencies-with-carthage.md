@@ -25,7 +25,7 @@ Developers typically try to speed things up with multiple approaches
 I personally started with the second approach, but had to abandon it because of the repo size. After a few trials and errors I came up with this variation with the third approach
 
 * Keep just `Cartfile` and `Cartfiles.resolved` in the repo
-* Have the CI cache the `Carthage/Build` folder between builds for each Xcode version. When I update Xcode on the build server, I change the name of the cache (e.g from `xcode93` to `xcode94`)
+* Have the CI cache the `Carthage/Build` folder between builds
 
 <!--more-->
 
@@ -33,7 +33,7 @@ I [use Gitlab CI](/automating-ios-development-and-distribution-workflow), so I j
 
 {{% gist id="841cdfc6097016f1998f250dc49e0084" file="gitlab-ci.yml" %}}
 
-Gitlab CI restores the built dependencies from the cache, uses them in the build and then caches them again when the build finishes.
+Gitlab CI restores the built dependencies from the cache, uses them in the build and then caches them again when the build finishes. I use the Xcode version as the cache key (e.g `xcode94`) because every Xcode version typically comes with a different version of Swift causing a need for rebuilding all the dependencies. 
 
 This approach is really simple, your repo will not get big and all the dependencies are build just once per Xcode version in the CI. 
 
@@ -41,4 +41,4 @@ When a new developer joins the project or does a `git pull` with changes requiri
 
 {{% gist id="841cdfc6097016f1998f250dc49e0084" file="update.sh" %}}
 
-the developer can download and use the current build dependencies. 
+the developer can download and use the current build dependencies without wasting time doing any Carthage builds. This of course requires the developers to use the same version of Xcode as the build server, but that is necessary anyways with the way Swift is coupled with Xcode.
