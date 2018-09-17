@@ -13,7 +13,7 @@ share_img = "/images/runner_logo.png"
 
 I am a big fan of automation in software development so when I started doing iOS development one of my goals was to automate everything on the iOS project. 
 
-No more manual versioning, manual build distribution .. let the computers do the work for me. Here is the setup I ended up with. 
+No more manual versioning, manual build distribution... let the computers do the work for me. Here is the setup I ended up with. 
 
 ### Separate app ids for development and distribution
 
@@ -25,8 +25,8 @@ There is also another problem you will encounter if you use push notifications. 
 
 To counter that, I use separate app ids
 
-* *com.company.app* with push notifications set to production for development
-* *com.company.app.dev* with push notifications set to sandbox for AppStore and ad-hoc distribution
+* *com.company.app* with push notifications set to production for AppStore and ad-hoc distribution
+* *com.company.app.dev* with push notifications set to sandbox for development
 
 This of course requires your backend to support it by choosing the right push notifications certificate depending on the app id.
 
@@ -66,9 +66,9 @@ As I already mentioned, every time a pull request is merged in Gitlab, the CI cr
 
 {{% gist id="053b5d140194e20c5845e166a86b6e0c" file="Fastfile-deploy.ruby" %}}
 
-The first step is deploying the actual IPA to [Installr](http://installrapp.com/). Installr is an simple build distribution service, that you can use for free without any serious limitations. You can make it send email to your testers every time a new build is uploaded or you can just send out the builds manually when needed.
+The first step deploys the actual IPA to [Installr](http://installrapp.com/). Installr is an simple build distribution service, that you can use for free without any serious limitations. You can make it send email to your testers every time a new build is uploaded or you can just send out the builds manually when needed.
 
-The second step is uploading the debug symbols to [HockeyApp](https://www.hockeyapp.net/). I do not use HockeyApp for build distribution, I prefer Installr and I do not use it for crash reporting, because it is considered a security risk in some environments so I just cannot use it. 
+The second step uploads the debug symbols to [HockeyApp](https://www.hockeyapp.net/). I do not use HockeyApp for build distribution, I prefer Installr and I do not use it for crash reporting, because it is considered a security risk in some environments so I just cannot use it. 
 
 So why do I upload the debug symbols to HockeyApp? For symbolication. When testers send me logs from the app and they include a crash log, I just upload the crash log to HockeyApp and it gets automatically symbolicated in a few minutes. I do not have to do it manually and I can link the symbolicated crash log to an issue in Gitlab that I typically create for every reported crash. 
 
@@ -80,7 +80,7 @@ I also use a [Fastlane plugin to add a "BETA" word and build number to the app b
 
 ### Automatic screenshots generation
 
-It is a good practice to make your AppStore screenshot show the current version of the app change them as the app UI changes. Making new screenshots manually is a real pain, especially if your app is localized into multiple languages or you do not use the screenshots directly but embed them into images with some marketing texts. Luckily you can [automate the process with Fastlane](https://docs.fastlane.tools/getting-started/ios/screenshots/).
+It is a good practice to make your AppStore screenshots show the current version of the app and change them as the app UI changes. Making new screenshots manually is a real pain, especially if your app is localized into multiple languages or you do not use the screenshots directly but embed them into images with some marketing texts. Luckily you can [automate the process with Fastlane](https://docs.fastlane.tools/getting-started/ios/screenshots/).
 
 The idea is simple, you add helper class to you UI tests project and then create a new UI test method that goes over all the screens you want to make a screenshot of calling the helper class at the right moment. 
 
