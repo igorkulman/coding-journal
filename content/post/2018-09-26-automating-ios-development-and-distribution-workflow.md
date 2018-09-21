@@ -48,23 +48,104 @@ My setup is really simple
 
 In terms of the Gitlab's `.gitlab-ci.yml`, omitting some pre-build stuff like restoring Carthage cache, setting environment variables, etc. it may be just two phases, one running unit tests on all branches and the other doing build and deploy on the develop branch.
 
-{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="gitlab-ci.yml" %}}
+{{< highlight yaml >}}
+stages:
+  - unit_tests
+  - deploy
+
+unit_tests:
+  dependencies: []
+  stage: unit_tests
+  artifacts:
+    paths:
+      - fastlane/logs
+  script:
+    - fastlane tests
+  tags:
+    - ios_11-0
+
+deploy:
+  dependencies: []
+  stage: deploy
+  script:
+    - fastlane set_badge
+    - fastlane build
+    - fastlane deploy 
+  only:
+    - develop
+  tags:  
+- ios_11-0
+{{< / highlight >}}
 
 I use [Fastlane](https://fastlane.tools/), it is a great tool I really recommend. 
 
 Running the tests is really simple
 
-{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="Fastfile-tests.ruby" %}}
+{{< highlight ruby >}}
+desc "Run all unit tests"
+lane :tests do
+  run_tests(devices: ["iPhone 6s"],
+            scheme: "Crypto")
+  run_tests(devices: ["iPhone 6s"],
+            scheme: "Core")
+  run_tests(workspace: "YourApp.xcworkspace",
+            devices: ["iPhone 6s"],
+            skip_testing: "YourAppUITests",
+            scheme: "Teamwire")
+end
+{{< / highlight >}}
 
 Before building the app I make Fastlane first log into the Apple account (`cert`) and download or regenerate the provisioning profiles (`sigh`) that are needed for the build
 
-{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="Fastfile-build.ruby" %}}
+{{< highlight ruby >}}
+desc "Builds the app, generates IPA"
+lane :build do
+  cert
+  
+  identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+  notification_extension_identifier = identifier + ".NotificationServiceExtension"
+  share_extension_identifier = identifier + ".ShareExtension"
+
+  sigh(adhoc: true, app_identifier: identifier)
+  sigh(adhoc: true, app_identifier: notification_extension_identifier)
+  sigh(adhoc: true, app_identifier: share_extension_identifier)  
+  
+  gym(scheme: "YourApp", clean: true, workspace: "YourApp.xcworkspace", output_directory: "build", output_name: "YourApp.ipa",
+              export_options: {
+              	method: "ad-hoc",
+              	iCloudContainerEnvironment: "Production",
+              	uploadSymbols: true,                  
+               }, include_bitcode: false)
+end
+{{< / highlight >}}
 
 ### Automatic build distribution
 
 As I already mentioned, every time a pull request is merged in Gitlab, the CI creates an ad-hoc IPA and deploys it. In my case, the deployment has two steps. 
 
-{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="Fastfile-deploy.ruby" %}}
+{{< highlight ruby >}}
+desc "Deploys built app to Installr"
+lane :deploy_to_installr do
+  commit = last_git_commit
+  short_hash = commit[:abbreviated_commit_hash]
+  releaseNotes = "Automatic Gitlab build ("+number_of_commits.to_s+", last commit "+short_hash+")"
+
+  installr(
+    api_token: ENV["INSTALLR_API_KEY"],
+    ipa: "build/YourApp.ipa",
+    notes: releaseNotes,
+  )
+end  
+
+desc "Deploys built app to HockeyApp"
+lane :deploy_to_hockeyapp do
+  hockey(
+    api_token: ENV["HOCKEYAPP_API_KEY"]
+    ipa: "build/YourApp.ipa",
+    dsym: "build/YourApp.app.dSYM.zip"
+  )
+end
+{{< / highlight >}}
 
 The first step deploys the actual IPA to [Installr](http://installrapp.com/). Installr is an simple build distribution service, that you can use for free without any serious limitations. You can make it send email to your testers every time a new build is uploaded or you can just send out the builds manually when needed.
 
@@ -76,7 +157,20 @@ The automatic builds are ad-hoc builds and use the AppStore app id not the devel
 
 I also use a [Fastlane plugin to add a "BETA" word and build number to the app badge before build](https://github.com/HazAT/badge) so testers can easily distinguish if they use the AppStore or the development version. 
 
-{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="Fastfile-badge.ruby" %}}
+{{< highlight ruby >}}
+desc "Sets app badge"
+lane :set_badge do
+  version = get_version_number(
+    xcodeproj: "YouApp/YouApp.xcodeproj",
+    target: "YouApp")
+  build = number_of_commits.to_s
+
+  add_badge(                
+    shield: version+"-"+build+"-green",    
+    glob: "/**/YouApp/YouApp/Assets.xcassets/AppIcon.appiconset/*.{png,PNG}",
+  )
+end
+{{< / highlight >}}
 
 ### Automatic screenshots generation
 
@@ -84,15 +178,67 @@ It is a good practice to make your AppStore screenshots show the current version
 
 The idea is simple, you add helper class to you UI tests project and then create a new UI test method that goes over all the screens you want to make a screenshot of calling the helper class at the right moment. 
 
-{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="ui-tests.swift" %}}
+{{< highlight swift >}}
+func testScreenshots() {
+  app.switchToProfile()
+    snapshot("05-Profile")
+
+    app.switchToContacts()
+    snapshot("04-Contacts")
+
+    app.switchToInbox()
+    snapshot("01-Inbox")
+        
+    let tablesQuery = app.tables
+    tablesQuery.cells.element(boundBy: 0).tap()
+    snapshot("06-Alert-Chat-detail")
+        
+    app.navigationBars.buttons.element(boundBy: 0).tap()
+
+    app.tables.cells.element(boundBy: 2).tap()
+    snapshot("02-Chat-detail")
+
+    let addButton = app.buttons["addAttachmentButton"]
+    expect(addButton.exists).to(beTrue())
+    addButton.tap()
+    snapshot("03-Attachments")
+}
+{{< / highlight >}}
 
 You can configure Fastlane to run this UI test method for different languages and device, generating everything in one go in your `Snapfile`
 
-{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="Snapfile.ruby" %}}
+{{< highlight ruby >}}
+ devices([
+   "iPhone 7 Plus",
+   "iPad Pro (12.9-inch)"
+ ])
+
+ languages([
+   "en-US",
+   "de-DE"
+ ])
+
+# The name of the scheme which contains the UI Tests
+scheme("YourApp")
+
+# Where should the resulting screenshots be stored?
+ output_directory("./fastlane/screenshots")
+
+# remove the '#' to clear all previously generated screenshots before creating new ones
+clear_previous_screenshots(true)
+{{< / highlight >}}
 
 And add a Fastline lane to have it execute when you run `fastlane screenshots`
 
-{{% gist id="053b5d140194e20c5845e166a86b6e0c" file="Fastfile-sreenshots.ruby" %}}
+{{< highlight ruby >}}
+platform :ios do
+  desc "Generate new localized screenshots"
+  lane :screenshots do
+    capture_screenshots(scheme: "YourApp")
+    frame_screenshots(silver: true)
+  end
+end
+{{< / highlight >}}
 
 ### Cooperation with the testers
 
