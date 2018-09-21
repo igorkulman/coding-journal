@@ -38,11 +38,72 @@ The first step is to create a directory and empty RESW files for each supported 
 
 Then write a script that generates all the RESW files from the newest JSON localization files
 
-{{% gist id="53a29b6e2143cac1ec8a" file="localization-converter-1.cs" %}}
+{{< highlight csharp >}}
+//directories representing the versions (e.g. 1.0, 1.0)
+var dirs = Directory.GetDirectories(@"..\..\..\SecretProject-localization\export");
+
+//the newest version
+var version = dirs.Select(l => new Version(l.Split(Path.DirectorySeparatorChar).Last())).Max();
+
+//all the localization keys
+var keys = new HashSet<string>();
+
+//each JSON file represents string for one language
+var files = Directory.GetFiles(@"..\..\..\SecretProject-localization\export\"+ version).Where(l=>l.EndsWith(".json"));
+foreach (var file in files)
+{
+    //RESW XML header
+    var sb = new StringBuilder();
+    sb.AppendLine(
+        "<?xml version=\"1.0\" encoding=\"utf-8\"?><root>  <xsd:schema id=\"root\" xmlns=\"\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\">    <xsd:import namespace=\"http://www.w3.org/XML/1998/namespace\" />    <xsd:element name=\"root\" msdata:IsDataSet=\"true\">      <xsd:complexType>        <xsd:choice maxOccurs=\"unbounded\">          <xsd:element name=\"metadata\">            <xsd:complexType>              <xsd:sequence>                <xsd:element name=\"value\" type=\"xsd:string\" minOccurs=\"0\" />              </xsd:sequence>              <xsd:attribute name=\"name\" use=\"required\" type=\"xsd:string\" />              <xsd:attribute name=\"type\" type=\"xsd:string\" />              <xsd:attribute name=\"mimetype\" type=\"xsd:string\" />              <xsd:attribute ref=\"xml:space\" />            </xsd:complexType>          </xsd:element>          <xsd:element name=\"assembly\">            <xsd:complexType>              <xsd:attribute name=\"alias\" type=\"xsd:string\" />              <xsd:attribute name=\"name\" type=\"xsd:string\" />            </xsd:complexType>          </xsd:element>          <xsd:element name=\"data\">            <xsd:complexType>              <xsd:sequence>                <xsd:element name=\"value\" type=\"xsd:string\" minOccurs=\"0\" msdata:Ordinal=\"1\" />                <xsd:element name=\"comment\" type=\"xsd:string\" minOccurs=\"0\" msdata:Ordinal=\"2\" />              </xsd:sequence>              <xsd:attribute name=\"name\" type=\"xsd:string\" use=\"required\" msdata:Ordinal=\"1\" />              <xsd:attribute name=\"type\" type=\"xsd:string\" msdata:Ordinal=\"3\" />              <xsd:attribute name=\"mimetype\" type=\"xsd:string\" msdata:Ordinal=\"4\" />              <xsd:attribute ref=\"xml:space\" />            </xsd:complexType>          </xsd:element>          <xsd:element name=\"resheader\">            <xsd:complexType>              <xsd:sequence>                <xsd:element name=\"value\" type=\"xsd:string\" minOccurs=\"0\" msdata:Ordinal=\"1\" />              </xsd:sequence>              <xsd:attribute name=\"name\" type=\"xsd:string\" use=\"required\" />            </xsd:complexType>          </xsd:element>        </xsd:choice>      </xsd:complexType>    </xsd:element>  </xsd:schema>  <resheader name=\"resmimetype\">    <value>text/microsoft-resx</value>  </resheader>  <resheader name=\"version\">    <value>2.0</value>  </resheader>  <resheader name=\"reader\">    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>  </resheader>  <resheader name=\"writer\">    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>  </resheader>");
+
+    
+    //read and parse the JSON file
+    var content = File.ReadAllText(file);
+    var j = JObject.Parse(content);
+    
+    IDictionary<string, JToken> strings = (JObject)j["strings"];
+
+    //get all the localization keys
+    foreach (var key in strings.Keys.Distinct())
+    {
+        var safeKey = key.Replace(".", "_DOT_").Replace("-", "_DASH_");
+
+        //add an XML entry to the RESW file
+        sb.AppendLine($"<data name=\"{safeKey}\" xml:space=\"preserve\">");
+        sb.AppendLine($"<value>{strings[key].ToString().Replace("&","&amp;")}</value>");
+        sb.AppendLine("</data>");
+
+        //save the key for later use
+        keys.Add(safeKey);
+    }
+
+    //end the RESW file
+    sb.AppendLine("</root>");
+
+    var pathsParts = file.Split(Path.DirectorySeparatorChar);
+    var filenameParts = pathsParts.Last().Split('.');
+
+    //write the RESW content to a correct file on the disk
+    var suffix = filenameParts[0];
+    var filename = @"..\..\..\SecretProject\strings\"+suffix+@"\Resources.resw";
+    File.WriteAllText(filename, sb.ToString());
+}
+{{< / highlight >}}
 
 Now with the RESW files populated with all the localization string it is time to put them to use. First I created a `LocalizedStrings` class very similar to the one in Windows Phone 8:
 
-{{% gist id="53a29b6e2143cac1ec8a" file="LocalizedStrings.cs" %}}
+{{< highlight csharp >}}
+public class LocalizedStrings
+{
+    public AppResources LocalizedResources { get; }
+
+    public LocalizedStrings()
+    {
+        LocalizedResources = new AppResources();
+    }
+}
+{{< / highlight >}}
 
 and added it to `App.xaml` as a dictionary resources called `S`
 
@@ -50,15 +111,50 @@ and added it to `App.xaml` as a dictionary resources called `S`
 
 The interesting ans still missing part is the `AppResources` class referenced in `LocalizedStrings`. It is a partial class, consisting of `ResourceLoader` instance to get the string at runtime and a Singleton to get the string from C# code
 
-{{% gist id="53a29b6e2143cac1ec8a" file="AppResources.cs" %}}
+{{< highlight csharp >}}
+public partial class AppResources
+{
+    private static readonly ResourceLoader _resourceLoader;       
+
+        static AppResources()
+        {
+            _resourceLoader=new ResourceLoader();
+        }
+
+        internal AppResources()
+        {
+            
+        }
+}
+{{< / highlight >}}
 
 The second part of this class is generated by the same script that generates the RESW files. For each key in the localization string, it generates a property like this in the `AppResources` class
 
-{{% gist id="53a29b6e2143cac1ec8a" file="AppResources.strings.cs" %}}
+{{< highlight csharp >}}
+public string Game => _resourceLoader.GetString("Game");
+{{< / highlight >}}
 
 The code to generate this is part of the script
 
-{{% gist id="53a29b6e2143cac1ec8a" file="localization-converter-2.cs" %}}
+{{< highlight csharp >}}
+var sbx = new StringBuilder();
+sbx.AppendLine("namespace SecretProject.Localization");
+sbx.AppendLine("{");
+sbx.AppendLine(" public partial class AppResources");
+sbx.AppendLine("    {");
+
+foreach (var key in keys)
+{
+    sbx.AppendLine($"        public string {key} => _resourceLoader.GetString(\"{key}\");");
+}
+
+sbx.AppendLine("        public string GetString(string key) => _resourceLoader.GetString(key);");
+
+sbx.AppendLine("    }");
+sbx.AppendLine("}");
+
+File.WriteAllText(@"..\..\..\SecretProject\Localization\AppResources.strings.cs", sbx.ToString());
+{{< / highlight >}}
 
 **The result**
 
@@ -66,13 +162,17 @@ When you put all this pieces together, you have a RESW files with all the locali
 
 When I want to use any of these localization string in XAML, I simply use it like this
 
-{{% gist id="53a29b6e2143cac1ec8a" file="xaml-usage.xaml" %}}
+{{< highlight xml >}}
+<TextBlock Text="{Binding LocalizedResources.Game, Source={StaticResource S}}" />
+{{< / highlight >}}
 
 Using a binding allows me to use to use the same localization keys for many elements and I do not have to duplicate the keys like in the x:Uid scenario. 
 
 If I need to used a localization string in C#, I have a strongly typed access to it
 
-{{% gist id="53a29b6e2143cac1ec8a" file="csharp-usage.cs" %}}
+{{< highlight csharp >}}
+var text = AppResources.Game;
+{{< / highlight >}}
 
 instead of creating a `ResourceLoader` instance and calling `GetString` with a string parameter. 
 

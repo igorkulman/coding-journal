@@ -41,11 +41,43 @@ PropertyChanged.Fody now knows that it should call the NotifyOfPropertyChange me
 
 Next make you app inherit from CaliburnUnityApplication by changing App.xaml to
 
-{{% gist id="6088861" %}}
+{{< highlight xml >}}
+<code:CaliburnUnityApplication
+    x:Class="Fraus.WordTrainerBasic.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
+    xmlns:code="using:Caliburn.Micro.Unity.WinRT.Code">
+
+    <code:CaliburnUnityApplication.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/StandardStyles.xaml"/>                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </code:CaliburnUnityApplication.Resources>
+</code:CaliburnUnityApplication>
+{{< / highlight >}}
 
 and cleaning up and changing App.xaml.cs to
 
-{{% gist id="6088871" %}}
+{{< highlight csharp >}}
+sealed partial class App : CaliburnUnityApplication
+    {        
+        public App()
+        {
+              
+            this.InitializeComponent();
+        }
+
+        protected override async void OnLaunched(LaunchActivatedEventArgs args)
+        {            
+            if (args.PreviousExecutionState != ApplicationExecutionState.Running)
+            {
+                //first View to navigate to goes here            
+            }
+        }
+    }
+{{< / highlight >}}
 
 **First ViewModel**
 
@@ -53,19 +85,51 @@ Now you can create your first ViewModel and your first View. Caliburn Micro uses
 
 create a new string property called Title. Add the ImplementPropertyChanged attribute to the class. This makes NotifyPropertyChanged.Fody call the NotifyOfPropertyChange whenever any of the properties (just Title for now) changes. Assing some text to the Title property in the constructor:
 
-{{% gist id="6088988" %}}
+{{< highlight csharp >}}
+[ImplementPropertyChanged]
+public class MainViewModel: ViewModelBase
+{
+  public string Title { get; set; }
+
+  public MainViewModel(INavigationService navigationService) : base(navigationService)
+  {
+    Title = "Caliburn Demo";
+  }
+}
+{{< / highlight >}}
 
 **First View**
 
 Now create a view for the MainViewModel as a Blank Page. According to the naming conventions, it needs to be called MainView and created in the Views folder. Add a TextBlock to the View. To bind the text of this TextBlock to the Title property, you could use Text=&#8221;{Binding Title}&#8221;. This works just fine but you do not have to do it. Just name the TextBlock the same as the property you want it to bind to (in our case Title):
 
-{{% gist id="6089012" %}}
+{{< highlight xml >}}
+<Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+  <TextBlock x:Name="Title" />
+</Grid>
+{{< / highlight >}}
 
 **Navigating to the view**
 
 There is only one more thing left to do. You need to tell the framework to navigate to the MainView when the app starts. This is done in the OnLaunched method in App.xaml.cs
 
-{{% gist id="6089032" %}}
+{{< highlight csharp >}}
+sealed partial class App : CaliburnUnityApplication
+    {        
+        public App()
+        {
+              
+            this.InitializeComponent();
+        }
+ 
+        protected override async void OnLaunched(LaunchActivatedEventArgs args)
+        {            
+            if (args.PreviousExecutionState != ApplicationExecutionState.Running)
+            {
+               await DisplayRootView(typeof(MainView));        
+            }
+        }
+    }
+{{< / highlight >}}
 
 **Run you app**
 

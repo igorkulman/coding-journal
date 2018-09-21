@@ -50,11 +50,32 @@ The main idea is simple, you declare what UI elements are connected to what prop
 
 I created a ViewModel with a property for the selected country, another property for the mobile number and a signal telling if the mobile number is valid. Every time the mobile number or the selected country changes, the validity signal also changes automatically. The ViewModel is quite simple, creating the validation signal in a nice declarative way
 
-{{% gist id="2bb98d3398d1f211ba0f81c0f6ee90e7" file="BondVM.swift" %}}
+{{< highlight swift >}}
+class NumberSelectionViewModel {
+    let selectedCountry = Observable<CountryDefinition?>(nil)
+    let phoneNumber = Observable<String?>(nil)
+    let isValid: Signal<Bool, Property<Any>.Error>
+    
+    init() {
+        isValid = combineLatest(self.selectedCountry, self.phoneNumber) {
+            (country: CountryDefinition?, number: String?) in if let number = number, let parsedNumber = try? NBPhoneNumberUtil.sharedInstance().parse(number, defaultRegion: country?.isoCode ?? "de") {
+                return NBPhoneNumberUtil.sharedInstance().isValidNumber(parsedNumber)
+            } else {
+                return false
+            }
+        }
+    }
+}
+{{< / highlight >}}
 
 Binding this ViewModel to the ViewController is also quite simple
 
-{{% gist id="2bb98d3398d1f211ba0f81c0f6ee90e7" file="BondBinding.swift" %}}
+{{< highlight swift >}}
+numberTextField.reactive.text.bidirectionalBind(to: viewModel.phoneNumber).dispose(in: reactive.bag)
+numberTextField.reactive.textColor.bind(signal: viewModel.isValid.map({ [unowned self] (isValid) in return isValid ? self.view.tintColor : UIColor.red})).dispose(in: reactive.bag)
+
+self.navigationItem.rightBarButtonItem.reactive.isEnabled.bind(signal: viewModel.isValid).dispose(in: reactive.bag)
+{{< / highlight >}}
 
 I used Bond for a while but when I wanted to do more reactive programming, Bond was not enough. It is a data binding library, it works well for data binding but if you want to do more you have to choose something more powerful. So I switched to RxSwift.
 
@@ -64,11 +85,32 @@ I used Bond for a while but when I wanted to do more reactive programming, Bond 
 
 The ViewModel looks a bit different when using RxSwift than when using Bond, but the main idea is the same
 
-{{% gist id="2bb98d3398d1f211ba0f81c0f6ee90e7" file="RxSwift.swift" %}}
+{{< highlight swift >}}
+class NumberSelectionViewModel {
+    let selectedCountry = Variable<CountryDefinition?>(nil)
+    let phoneNumber = Variable<String?>(nil)
+    let isValid : Observable<Bool>
+    
+    init() {        
+        isValid = Observable.combineLatest(selectedCountry.asObservable(), phoneNumber.asObservable()) {
+            (country: CountryDefinition?, number: String?)->Bool in if let number = number, let parsedNumber = try? NBPhoneNumberUtil.sharedInstance().parse(number, defaultRegion: country?.isoCode ?? "de") {
+                return NBPhoneNumberUtil.sharedInstance().isValidNumber(parsedNumber)
+            } else {
+                return false
+            }
+        }
+    }
+}
+{{< / highlight >}}
 
 The actual bindings are also quite similar. The main difference is it is more visible what is being bound to what and in what direction
 
-{{% gist id="2bb98d3398d1f211ba0f81c0f6ee90e7" file="RxSwiftBinding.swift" %}}
+{{< highlight swift >}}
+numberTextField.rx.text.bindTo(viewModel.phoneNumber).disposed(by: disposeBag)
+
+viewModel.isValid.bindTo(navigationItem.rightButtonItem.rx.isEnabled).disposed(by: disposeBag)
+viewModel.isValid.asObservable().map({[unowned self] (isValid) in return isValid ? self.view.tintColor : UIColor.red}).bindTo(numberTextField.rx.textColor).disposed(by: disposeBag)
+{{< / highlight >}}
 
 Compare this to the amount of code you would have to write using the "standard" iOS way.
 

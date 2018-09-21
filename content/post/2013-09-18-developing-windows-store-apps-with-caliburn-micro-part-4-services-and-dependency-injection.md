@@ -20,17 +20,55 @@ PropertyChangedBase is a base class implementing the INotifyPropertyChanged inte
 
 All the operations will be handled by a service implementing the IProductService interface:
 
-{{% gist id="6606127" %}}
+{{< highlight csharp >}}
+public interface IProductService
+{
+  List<Product> GetAll();
+  Product Get(int id);
+}
+{{< / highlight >}}
 
 You can implement this interface any way you want. To keep things simple I chose an implementation with two hardcoded products:
 
-{{% gist id="6606170" %}}
+{{< highlight csharp >}}
+public class ProductService: IProductService
+{
+  private readonly List<Product> _products = new List<Product>()
+  {
+    new Product
+    {
+      Id = 1,
+      Name = "Product 1"
+    },
+    new Product
+    {
+      Id = 2,
+      Name = "Product 2"
+    }
+  };
+  
+  public List<Product> GetAll()
+  {
+    return _products;
+  }
+
+  public Product Get(int id)
+  {
+    return _products.SingleOrDefault(l => l.Id == id);
+  }
+}
+{{< / highlight >}}
 
 **Registering services**
 
 All our services need to be registered with the Unity DI container before being used. The place to do it is the App class (App.xaml.cs file). You can override the Configure method to do it:
 
-{{% gist id="6607482" %}}
+{{< highlight csharp >}}
+protected override void Configure()
+{
+  container.RegisterType<IProductService, ProductService>(new ContainerControlledLifetimeManager());
+}
+{{< / highlight >}}
 
 This registers the ProductService class to the IProductService interface. The new ContainerControlledLifetimeManager() parameter is Unity&#8217;s way of setting the registration to be a singleton.
 
@@ -38,7 +76,20 @@ This registers the ProductService class to the IProductService interface. The ne
 
 Injecting the ProductService into our MainViewModel is very simple. Just declare a IProductService variable and initialize it from constructor. Unity will take care of the rest:
 
-{{% gist id="6607538" %}}
+{{< highlight csharp >}}
+[ImplementPropertyChanged]
+public class MainViewModel: ViewModelBase
+{
+  public string Title { get; set; }
+  private readonly IProductService _productService;
+
+  public MainViewModel(INavigationService navigationService, IProductService productService) : base(navigationService)
+  {
+    _productService = productService;
+    Title = "Caliburn Demo";
+  }
+}
+{{< / highlight >}}
 
 Next time we will implement a typical master-detail scenario showing products usign the ProductService whe have created. All the code is again [available at GitHub][2].
 

@@ -14,6 +14,20 @@ In Windows Phone 8.1 there are strangely two `HttpClient` classes, one in `Syste
 
 Using the `IHttpFilter`, you can easily ignore certificate errors
 
-{{% gist id="76c9d8f1e79b6fd41c33" %}}
+{{< highlight csharp >}}
+    var filter = new HttpBaseProtocolFilter();
+#if DEBUG
+    // *******************
+    // IGNORING CERTIFACTE PROBLEMS
+    // *******************
+    filter.IgnorableServerCertificateErrors.Add(ChainValidationResult.IncompleteChain);
+    filter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Expired);
+    filter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Untrusted);
+    filter.IgnorableServerCertificateErrors.Add(ChainValidationResult.InvalidName);
+    // *******************
+#endif
+
+    var httpClient = new Windows.Web.Http.HttpClient(filter);
+{{< / highlight >}}
 
 but you have to get used to doing all the request in a different way, the `Windows.Web.Http.HttpClient` way that differs from the `System.Net.Http.HttpClient` way.

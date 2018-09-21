@@ -24,7 +24,9 @@ It is a Objective-C framework with latest version from 2014, but it still works 
 
 After downloading the latest PLCrashReporter and adding it to your project as a linked framework, you need to import it in bridging header
 
-{{% gist id="608103ed0fa2138175e2cbae99d5cbf1" file="briding-header.h" %}}
+{{< highlight h >}}
+#import <CrashReporter/CrashReporter.h>
+{{< / highlight >}}
 
 ### Usage
 
@@ -34,4 +36,32 @@ In the application I currently work on I use [CleanroomLogger](https://github.co
 
 When the application crashes and is opened again, I want to get the crash report and log it. Your use case may be different, you may want to send the crash report to your server, etc.
 
-{{% gist id="608103ed0fa2138175e2cbae99d5cbf1" file="AppDelegate-CrashReporting.swift" %}}
+{{< highlight swift >}}
+extension AppDelegate {    
+    func setupCrashReporting() {
+        guard let crashReporter = PLCrashReporter.shared() else {
+            return
+        }
+
+        if crashReporter.hasPendingCrashReport() {
+            handleCrashReport(crashReporter)
+        }
+
+        if !crashReporter.enable() {
+            Log.error?.message("Could not enable crash reporter")
+        }
+    }
+
+    func handleCrashReport(_ crashReporter: PLCrashReporter) {
+        guard let crashData = try? crashReporter.loadPendingCrashReportDataAndReturnError(), let report = try? PLCrashReport(data: crashData), !report.isKind(of: NSNull.classForCoder()) else {
+            crashReporter.purgePendingCrashReport()
+            return
+        }
+
+        let crash: NSString = PLCrashReportTextFormatter.stringValue(for: report, with: PLCrashReportTextFormatiOS)! as NSString
+        // process the crash report, send it to a server, log it, etc
+        Log.error?.message("CRASH REPORT:\n \(crash)")
+        crashReporter.purgePendingCrashReport()
+    }
+}
+{{< / highlight >}}

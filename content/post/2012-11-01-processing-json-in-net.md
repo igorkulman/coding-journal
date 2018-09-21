@@ -14,17 +14,29 @@ JSON is a very popular format for exchanging data, especially in the world of we
 
 JSON.NET is very easy to use; first you create a JObject instance
 
-{{% gist id="5857544" %}}
+{{< highlight csharp >}}
+JObject o = JObject.Parse(jsonString);
+{{< / highlight >}}
 
 <!--more-->
 
 from which you can get a collection (in our example of type TicketViewModel)
 
-{{% gist id="5857549" %}}
+{{< highlight csharp >}}
+Tickets = new ObservableCollection<TicketViewModel>((o["tickets"].Select(ticket => new TicketViewModel(ticket)).OrderBy(l => l.City).ToList()));
+{{< / highlight >}}
 
 filling the TicketViewModel instance from the JObject
 
-{{% gist id="5857554" %}}
+{{< highlight csharp >}}
+public TicketViewModel(Newtonsoft.Json.Linq.JToken ticket) 
+{
+    _city = (string)ticket.SelectToken("city"); 
+    _cityCes = (string)ticket.SelectToken("city_ces");      
+    _currency = (string)ticket.SelectToken("currency");  
+    .... 
+} 
+{{< / highlight >}}
 
 **DataContractJsonSerializer**
 
@@ -32,7 +44,14 @@ If you do not want or cannot use JSON.NET you can use the already mentioned Data
 
 Using the DataContractJsonSerializer is a less readable than using JSON.NET
 
-{{% gist id="5857558" %}}
+{{< highlight csharp >}}
+DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Tickets)); 
+Tickets tickets; 
+using (MemoryStream stream = new MemoryStream(Encoding.Unicode.GetBytes(responseText))) 
+{
+    root = serializer.ReadObject(stream) as Tickets; 
+}
+{{< / highlight >}}
 
  [1]: http://james.newtonking.com/projects/json-net.aspx
  [2]: https://nuget.org/packages/Newtonsoft.Json

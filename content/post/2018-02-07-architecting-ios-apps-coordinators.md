@@ -20,7 +20,15 @@ There were three big things in particular that I disliked, that I want to show y
 
 When going through some iOS tutorials I found code like this a lot
 
-{{% gist id="f5d825e91e3c03ad64c2c19235152e8c" file="badcode.swift" %}}
+{{< highlight swift >}}
+class ProfileViewController: UIViewController {
+  
+  @objc func donection(sender: UIButton) {
+    let vc = PreferencesViewController()
+    navigationController?.pushViewController(vc, animated: true)
+  }
+}
+{{< / highlight >}}
 
 When you are a long-time iOS developer, you may have seen and probably written code like this. All the tutorials contain code likes this. It may look perfectly OK to you. But for me, coming from the .NET world, this was a real WTF moment:
 
@@ -48,11 +56,44 @@ It may display step 2, it may skip to step 3 if for example step 2 is not needed
 
 You do not need any special frameworks to create coordinators. A coordinator can be a simple protocol with `start` method
 
-{{% gist id="f5d825e91e3c03ad64c2c19235152e8c" file="coordinator.swift" %}}
+{{< highlight swift >}}
+protocol Coordinator: class {    
+    func start()
+}
+{{< / highlight >}}
 
 where you just put your navigation logic
 
-{{% gist id="f5d825e91e3c03ad64c2c19235152e8c" file="usage.swift" %}}
+{{< highlight swift >}}
+class RegistrationCoordinator: Coordinator {  
+  
+  let navigationController: UINavigationController
+  
+  init(navigationController: UINavigationController) {
+    self.navigationController = navigationController
+  }
+  
+  func start() {
+    showProfileForm()
+  }
+  
+  func showProfileForm() {
+    let vc = // get ProfileViewController from DI container, XIB, Storyboard, etc
+    vc.delegate = self
+    navigationController.pushViewController(vc, animated: true)
+  }
+  
+  func showPreferencesForm() {
+    ...
+  }
+}
+
+extension RegistrationCoordinator: ProfileViewControllerDelegate {
+    func profileViewControllerDidFinish() {
+      showPreferencesForm()
+    }
+}
+{{< / highlight >}}
 
 It does not even matter how you create the UI for your view controllers. You can create your UI in code, in a XIB file, on the storyboard, the coordinators do not care, as long as you can create an instance of your view controllers in code. 
 
@@ -62,11 +103,74 @@ You can create a whole hierarchy of coordinators if you like, making them as gra
 
 Your application may start with an `AppCoordinator`. 
 
-{{% gist id="f5d825e91e3c03ad64c2c19235152e8c" file="AppDelegate.swift" %}}
+{{< highlight swift >}}
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+      window = UIWindow()
+      appCoordinator = AppCoordinator(window: window!)
+      appCoordinator.start()
+
+      window?.makeKeyAndVisible()
+      return true
+  }
+}
+{{< / highlight >}}
 
 It checks if the user is already registered. If not, it starts the `RegistrationCoordinator` as its child and waits for it to finish to start the `DashboardCoordinator`.
 
-{{% gist id="f5d825e91e3c03ad64c2c19235152e8c" file="AppCoordinator.swift" %}}
+{{< highlight swift >}}
+// MARK: - Coordinator keys
+
+enum AppChildCoordinator {
+    case registration
+    case dashboard
+}
+
+class AppCoordinator: Coordinator {  
+
+  // MARK: - Properties
+
+  private let window: UIWindow
+  private var childCoordinators = [AppChildCoordinator: Coordinator]()
+  private let navigationController: UINavigationController
+
+  init(window: UIWindow, container: Container) {
+    self.window = window
+    navigationController = UINavigationController()    
+    self.window.rootViewController = navigationController
+  }
+  
+  func start() {  
+    if isLoggedIn {            
+      showDashborad()
+    } else {
+      showRegistration()
+    }
+  }
+  
+  private func showRegistration() {
+    let registrationCoordinator = RegistrationCoordinator(navigationController: navigationController)
+    childCoordinators[.registration] = registrationCoordinator        
+    registrationCoordinator.delegate = self
+    registrationCoordinator.start()
+  }
+  
+  private func showDashboard() {
+    ...
+  }
+}
+
+extension AppCoordinator: RegistrationCoordinatorDelegate {
+  func registrationCoordinatorDidFinish() {
+    childCoordinators[.registration] = nil
+    showDashborad()
+  }
+}
+{{< / highlight >}}
 
 Notice the `childCoordinators` dictionary in the `AppCoordinator`. We need to store our coordinator instances in this dictionary so ARC does not clean them. We clean them manually when they are no longer needed (`registrationCoordinatorDidFinish()`).
 
