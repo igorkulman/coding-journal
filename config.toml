@@ -16,6 +16,7 @@ disqusShortname = "coudingjournal"
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
   blogTitle = "Coding Journal"
+  readingTime = true
 
 [Author]
   name = "Igor Kulman"
