@@ -19,4 +19,14 @@ Implementing this kind of hovers is really easy thanks to the `ToolTipService` t
 
 <!--more-->
 
-{{% gist id="c7320d81f9b882bcfd69" %}}
+{{< highlight xml >}}
+<Grid Height="60"
+      Background="Transparent"
+      micro:Message.Attach="[Event Tapped] = [Action NavigateToEbooks]">
+    <ToolTipService.ToolTip>
+        <TextBlock Text="Ebooks"
+                   x:Uid="EbooksTB" />
+    </ToolTipService.ToolTip>
+    <!-- icon -->
+</Grid>
+{{< / highlight >}}

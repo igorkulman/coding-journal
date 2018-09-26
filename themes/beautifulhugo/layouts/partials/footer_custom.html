@@ -3,16 +3,7 @@ If you want to include any custom html just before </body>, put it in /layouts/p
 Do not put anything in this file - it's only here so that hugo won't throw an error if /layouts/partials/footer_custom.html doesn't exist.
 -->
 
-<script src="{{ "js/gist.js" | absURL }}"></script>
-<script src="{{ "js/lazyload.js" | absURL }}"></script>
-
-<script>
-        document.addEventListener("DOMContentLoaded", function () {
-            new IOlazy();
-            window.gistAsync();
-        });
-        </script>
-      
+     
       <script type="text/javascript">
       $(function(){
         $('#show-comments').on('click', function(){

@@ -14,14 +14,27 @@ I have not been able the reason why this happens but the solution is quite simpl
 
 <!--more-->
 
-{{% gist id="9572347" file="line.xaml" %}}
+{{< highlight xml >}}
+<Grid x:Name="LayoutRoot" Margin="0 -1 0 0">
+{{< / highlight >}}
 
 Doing this in XAML for every page is not very convenient, a better solution would be to set the negative top margin on the whole application frame
 
-{{% gist id="9572347" file="line.cs" %}}
+{{< highlight csharp >}}
+private void InitializePhoneApplication()
+{
+    RootFrame.Margin = new Thickness(0, -1, 0, 0);
+}
+{{< / highlight >}}
 
 If you use Caliburn.Micro, you need to override the CreatePhoneApplicationFrame in the Bootstrapper instead
 
-{{% gist id="9572347" file="line.caliburn.cs" %}}
+{{< highlight csharp >}}
+protected override PhoneApplicationFrame CreatePhoneApplicationFrame()
+{
+    var frame = new PhoneApplicationFrame { Margin = new Thickness(0, -1, 0, 0) };
+    return frame;
+}
+{{< / highlight >}}
 
  [1]: http://blog.kulman.sk/wp-content/uploads/2014/03/line.png

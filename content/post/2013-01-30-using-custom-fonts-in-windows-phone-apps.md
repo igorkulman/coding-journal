@@ -18,13 +18,17 @@ Using a custom font in XAML is very straightforward. You just need to set the _F
 
 <!--more-->
 
-{{% gist id="5849406" %}}
+{{< highlight xml >}}
+<TextBlock Text="Font test" FontFamily=".\Fonts\meteocons.ttf#Meteocons" />
+{{< / highlight >}}
 
 **Custom font and C#**
 
 Using a custom font from C# follows the same principle. You just need to set the _FontFamily_ property to a new FontFamily instance created by the constructor that takes a font family name as a parameter:
 
-{{% gist id="5849415" %}}
+{{< highlight csharp >}}
+textBlock.FontFamily = new FontFamily(".\Fonts\meteocons.ttf#Meteocons");
+{{< / highlight >}}
 
 **Custom font and Background Agent**
 
@@ -32,4 +36,9 @@ Using a custom font from a Background Agent is a bit tricky. If you want to use 
 
 A possible workaround is to to read the font file as a stream and set this stream to the TextBlock&#8217;s _FontSource_ property before setting the _FontFamily_ property:
 
-{{% gist id="5849421" %}}
+{{< highlight csharp >}}
+var uri = new Uri("Fonts/meteocons.ttf", UriKind.Relative);
+var streamInfo = Application.GetResourceStream(uri);
+textBlock.FontSource = new FontSource(streamInfo.Stream);
+textBlock = new FontFamily("Meteocons");
+{{< / highlight >}}

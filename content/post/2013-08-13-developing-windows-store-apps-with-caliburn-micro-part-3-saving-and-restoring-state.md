@@ -16,11 +16,51 @@ Implementation of the above-mentioned scenario is not very complicated, thanks t
 
 Let us reuse the SecondPageViewModel from the last post. Implement IHaveState, add two string properties and use the SaveState and LoadState method to save and load them using the page state dictionary
 
-{{% gist id="6173564" %}}
+{{< highlight csharp >}}
+[ImplementPropertyChanged]
+public class SecondPageViewModel: ViewModelBase, IHaveState
+{
+    public string Title { get; set; }
+    public string Property1 { get; set; }
+    public string Property2 { get; set; }
+
+    public SecondPageViewModel(INavigationService navigationService) : base(navigationService)
+    {
+        Title = "Second Page";
+    }
+
+    public void GoBack()
+    {
+        this.navigationService.GoBack();
+    }
+
+    public override void LoadState(string Parameter, Dictionary<string, object> statePageState)
+    {
+        Property1 = (string)statePageState["Property1"];
+        Property2 = (string)statePageState["Property2"];
+    }
+
+    public override void SaveState(Dictionary<string, object> statePageState, List<Type> knownTypes)
+    {
+        statePageState.Add("Property1", Property1);
+        statePageState.Add("Property2", Property2);
+    }
+}
+{{< / highlight >}}
 
 To test it, first add two TextBoxes to the SecondPageView with two-way binding
 
-{{% gist id="6173636" %}}
+{{< highlight xml >}}
+ <Grid Background="Red">
+  <TextBlock x:Name="Title" />
+  <Button Content="Go back" x:Name="GoBack" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top"/>
+
+<TextBox HorizontalAlignment="Left" Margin="80,201,0,0" TextWrapping="Wrap" Text="{Binding Property1, Mode=TwoWay}" VerticalAlignment="Top" Width="170" />
+  <TextBlock HorizontalAlignment="Left" Margin="10,210,0,0" TextWrapping="Wrap" Text="Property1:" VerticalAlignment="Top"/>
+  <TextBox HorizontalAlignment="Left" Margin="80,238,0,0" TextWrapping="Wrap" Text="{Binding Property2, Mode=TwoWay}" VerticalAlignment="Top" Width="170" />
+  <TextBlock HorizontalAlignment="Left" Margin="10,248,0,0" TextWrapping="Wrap" Text="Property2:" VerticalAlignment="Top"/>
+</Grid>
+{{< / highlight >}}
 
 Now run the application, navigate to the SecondPageViewModel and fill in the TextBoxes. Switch to Visual Studio and invoke the Suspend and Shutdown command. When you run the application again, you will see the SecondPageViewModel with TextBoxes with the same values as before the suspension.
 

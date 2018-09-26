@@ -29,4 +29,30 @@ The whole experience becomes much better
 
 Implementation is also simple.
 
-{{% gist id="250de623e9213bc3bf90" %}}
+{{< highlight csharp >}}
+protected override void OnNavigatedTo(NavigationEventArgs e)
+{
+    base.OnNavigatedTo(e);
+
+    InputPane.GetForCurrentView().Showing += OnKeyboardShowing;
+    InputPane.GetForCurrentView().Hiding += OnKeyboardHiding;
+}
+
+protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
+{
+    base.OnNavigatingFrom(e);
+
+    InputPane.GetForCurrentView().Showing -= OnKeyboardShowing;
+    InputPane.GetForCurrentView().Hiding -= OnKeyboardHiding;
+}
+
+private void OnKeyboardShowing(InputPane sender, InputPaneVisibilityEventArgs args)
+{
+    MainPanel.Margin = new Thickness(0, 0, 0, args.OccludedRect.Height);
+}
+
+private void OnKeyboardHiding(InputPane sender, InputPaneVisibilityEventArgs args)
+{
+    MainPanel.Margin = new Thickness(0);
+}
+{{< / highlight >}}

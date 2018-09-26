@@ -14,12 +14,42 @@ First I came up with F# code to solve it, after some yield googling:
 
 <!--more-->
 
-{{% gist id="5849397" %}}
+{{< highlight fsharp >}}
+let rec permutations (input: 'a list) = seq {
+    if (input.IsEmpty) then 
+        yield []
+    else
+        
+            for i in input do
+            yield! input
+                    |> List.filter (fun x-> x<> i) 
+                    |> permutations
+                    |> Seq.map (fun x->i::x)
+    }
+{{< / highlight >}}
 
 When I started to think about a C# solution I got stuck. The functional solution was still resonating in my head so I ended up basically rewriting F# to C#:
 
-{{% gist id="5849399" %}}
+{{< highlight fsharp >}}
+public IEnumerable<IEnumerable<T>> Permutation<T>(IEnumerable<T> input)
+{            
+    if (input == null || !input.Any()) yield break;
+    if (input.Count() == 1) yield return input;
+
+    foreach (var item in input)
+    {
+        var next  = input.Where(l => !l.Equals(item)).ToList();
+        foreach (var perm in Permutation(next))
+        {
+            yield return (new List<T>{item}).Concat(perm);
+        }
+    }
+}
+{{< / highlight >}}
 
 Looking for other functional solutions I found a realy neat way to generate permutations in Haskell, thanks to the generators
 
-{{% gist id="5849402" %}}
+{{< highlight fsharp >}}
+perms [] = [[]]
+perms xs = [ x:ps | x <- xs , ps <- perms ( xs\\[x] ) ]
+{{< / highlight >}}

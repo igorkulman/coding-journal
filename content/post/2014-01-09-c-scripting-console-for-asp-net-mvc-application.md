@@ -22,7 +22,9 @@ My basic solution consists of a Textarea the user writes the script to, the scri
 
 To execute a C# script in your ASP.NET MVC (or any other) application, you first need to install the Roslyn package and its dependencies
 
-{{% gist id="8159321" file="roslyn-nuget.ps" %}}
+{{< highlight ps >}}
+Install-Package Roslyn
+{{< / highlight >}}
 
 Let&#8217;s suppose you have the C# script you want to execute in a string variable called command obtained from the mentioned Textarea. First, you need to create the scripting engine and a session
 
@@ -30,19 +32,31 @@ There are ScriptEngine classes, one for C# and one for VB.NET so choose the one 
 
 To use a class as the context for the scripts, just pass it to the Roslyn session
 
-{{% gist id="8159321" file="roslyn-session.cs" %}}
+{{< highlight csharp >}}
+var roslynEngine = new ScriptEngine();
+Roslyn.Scripting.Session session = roslynEngine.CreateSession();
+{{< / highlight >}}
 
 If you want to use more than the core C# libraries, you need to do some referencing and importing. If you are using a class as the context for the scripts, you need to reference its assembly. Suppose you want to use classes and methods from System.Xml and System.Xml.Linq in your scripts. First, you need to add references to the session
 
-{{% gist id="8159321" file="roslyn-context.cs" %}}
+{{< highlight csharp >}}
+var context = new ScriptingContext();
+var roslynEngine = new ScriptEngine();
+Roslyn.Scripting.Session session = roslynEngine.CreateSession(context);
+{{< / highlight >}}
 
 and then import them to the session
 
-{{% gist id="8159321" file="roslyn-import.cs" %}}
+{{< highlight csharp >}}
+session.ImportNamespace("System.Linq");
+session.ImportNamespace("System.Xml.Linq");
+{{< / highlight >}}
 
 Everything is set up now, so just execute the script and get the result
 
-{{% gist id="8159321" file="roslyn-exec.cs" %}}
+{{< highlight csharp >}}
+var res = session.Execute(command);
+{{< / highlight >}}
 
 The result of the script is the result of the last expression of the script so I recommend using a logger class in the context if you want to get more information about the execution of your script.
 

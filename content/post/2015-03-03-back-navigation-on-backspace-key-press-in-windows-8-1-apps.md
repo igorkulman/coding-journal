@@ -12,6 +12,24 @@ Implementing this functionality is really simple, you just need to handle the Ke
 
 <!--more-->
 
-{{% gist id="b0f41a1a25acad0d17a4" %}}
+{{< highlight csharp >}}
+ Window.Current.CoreWindow.KeyUp += (_, args) =>
+{
+    if (args.VirtualKey == VirtualKey.Back)
+    {
+        var element = FocusManager.GetFocusedElement();
+        if (element is TextBox || element is PasswordBox)
+        {
+            return; //do not disturb user when typing
+        }
+     
+        var frame = (Frame)Window.Current.Content;
+        if (frame.CanGoBack)
+        {
+            frame.GoBack();
+        }
+    }
+};
+{{< / highlight >}}
 
 If you implement this in your app, I am sure you will make some of your users more happy.

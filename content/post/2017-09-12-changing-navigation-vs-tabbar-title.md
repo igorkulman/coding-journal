@@ -14,14 +14,20 @@ The UI of the iOS app I currently work on contains a tab bar with "Profile" as t
 
 So I set the tab bar item's title to "Profile" and wanted to set the navigation bar title of the view controller the standard way
 
-{{% gist id="09ec3afdfb30dbed5216e777ee326c9d" file="title.swift" %}}
+{{< highlight swift >}}
+title = "Your profile"
+{{< / highlight >}}
 
 I noticed that this also changes the title in the tab bar. After some research I found out that changing the view controller's title property changes bot the title in the navigation bar and in the bar bar. But you can change the title just for the navigation bar
 
 <!--more-->
 
-{{% gist id="09ec3afdfb30dbed5216e777ee326c9d" file="navbar.swift" %}}
+{{< highlight swift >}}
+navigationItem.title = "Your profile"
+{{< / highlight >}}
 
 and just for the tab bar
 
-{{% gist id="09ec3afdfb30dbed5216e777ee326c9d" file="tabbar.swift" %}}
+{{< highlight swift >}}
+tabBarItem.title = "Profile"
+{{< / highlight >}}

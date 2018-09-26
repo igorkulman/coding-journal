@@ -14,7 +14,51 @@ When the app wants to get some data, I perform a GET request including the ETag 
 
 <!--more-->
 
-{{% gist id="55fa534bdcb4ab963253" %}}
+{{< highlight csharp >}}
+/// <summary>
+/// Gets stream data from the server. Uses ETag to cache data locally
+/// </summary>
+/// <param name="url">Url to get data from</param>
+/// <returns>Stream data</returns>
+[NotNull]
+private async Task<Stream> GetData([NotNull] string url)
+{
+    var client = new HttpClient();
+
+    var key = MD5.GetMd5String(url); //Urls can be long and create strange characters, using a hash instead
+    var etag = (string)_settingsService.Get(key); //current ETag for the reques
+
+    var request = new HttpRequestMessage
+    {
+        Method = HttpMethod.Get,
+        RequestUri = new Uri(url)
+    };
+
+    if (!String.IsNullOrEmpty(etag)) //if there is a saved ETag, use it
+    {
+        request.Headers.TryAddWithoutValidation("If-None-Match", etag);
+    }
+
+    var response = await client.SendAsync(request);
+
+    if (response.StatusCode == HttpStatusCode.NotModified) //ETag matches, no newer data available
+    {
+        var file = await ApplicationData.Current.LocalFolder.GetFileAsync(key);
+        return await file.OpenStreamForReadAsync().ConfigureAwait(false); //return cached data
+    }
+
+    var newFile = await ApplicationData.Current.LocalFolder.CreateFileAsync(key, CreationCollisionOption.ReplaceExisting);
+    using (var stream = await response.Content.ReadAsStreamAsync().ConfigureAwait(false)) //get content
+    {
+        using (var outputStream = await newFile.OpenStreamForWriteAsync()) //save to cache
+        {
+            await stream.CopyToAsync(outputStream);
+            _settingsService.Set(key, response.Headers.ETag.Tag); //save etag
+        }
+    }
+    return await newFile.OpenStreamForReadAsync().ConfigureAwait(false); //return (fresh) from cache
+}
+{{< / highlight >}}
 
 This approach works with the portable Http client library, that you can use with Windows Phone 8 (Silverlight), 8.1 (Sliverlight), 8.1 XAML and Windows 8/8.1. If you only need to support Windows Phone 8.1 XAML and Windows 8.1, you may want to look into the Windows.Web.Http.HttpClient.
 

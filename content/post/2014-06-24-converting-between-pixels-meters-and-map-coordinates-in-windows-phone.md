@@ -25,11 +25,27 @@ The map component in Windows Phone 8 and 8.1 has quite a [nice documentation][2]
 
 I created two helper functions to take care of this first conversion
 
-{{% gist id="9fa0a229b9c2db57a172" file="meters.cs" %}}
+{{< highlight csharp >}}
+public static double MetersToPixels(double meters, double latitude, double zoomLevel)
+{
+    var pixels = meters / (156543.04 * Math.Cos(latitude) / (Math.Pow(2, zoomLevel)));
+    return Math.Abs(pixels);
+}
+
+public static double PixelsToMeters(double pixels, double latitude, double zoomLevel)
+{
+    return pixels  * (156543.04 * Math.Cos(latitude) / (Math.Pow(2, zoomLevel)));            
+}
+{{< / highlight >}}
 
 The second conversion is more difficult, especially if you want to do it really well. I found a [simple solution that works quite ok when you are not right at the poles][3] and used it. The helper function looks like this.
 
-{{% gist id="9fa0a229b9c2db57a172" file="coords.cs" %}}
+{{< highlight csharp >}}
+public static GeoCoordinate AddMetersToGeoCoordinate(GeoCoordinate current, double metersH, double metersV)
+{
+    return new GeoCoordinate(current.Latitude + (metersH / (111111)), current.Longitude + (metersV / (111111 * Math.Cos(current.Latitude))));
+}
+{{< / highlight >}}
 
 Now you just need to put it all together and you are done.
 

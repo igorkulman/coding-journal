@@ -12,4 +12,22 @@ I use mainly ints (article id, gallery id &#8230;) as navigation parameters but 
 
 <!--more-->
 
-{{% gist id="5849447" %}}
+{{< highlight csharp >}}
+public static class Utils
+{
+    public static long MakeLong(int left, int right)
+    {
+        long res = left;
+        res = (res << 32);
+        res = res | (long)right;
+        return res;
+    }
+
+    public static Tuple<int, int> MakeTwoInts(long x)
+    {
+        int a = (int)(x & 0xffffffffL);
+        int b = (int)(x >> 32);
+        return Tuple.Create(b, a);
+    }
+}
+{{< / highlight >}}

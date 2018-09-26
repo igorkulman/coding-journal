@@ -25,18 +25,45 @@ Most of my blog posts do not have any comments so making about 50 unnecessary re
 
 The idea is simple, add a "Show comments" button at the end of the page and embed the Disqus JavaScript file when the user clicks that button. This can be done with a simple JavaScript function
 
-{{% gist id="47e9d4dc4bbb5279267a58d7bc794944" file="load.js" %}}
+{{< highlight js >}}
+$(function(){
+  $('#show-comments').on('click', function(){
+    var disqus_shortname = '{{.Site.DisqusShortname}}';
+
+    (function() {
+      var disqus = document.createElement('script'); 
+      disqus.type = 'text/javascript'; 
+      disqus.async = true;
+      disqus.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(disqus);
+    })();
+
+    $(this).hide(); // Hide the button
+  });
+});
+{{< / highlight >}}
 
 The problem is that Disqus does not work that well and sometimes does not load the comments when there is an extra trailing slash in the URL so I recommend setting the post URL explicitly by adding another piece of JavaScript
 
-{{% gist id="47e9d4dc4bbb5279267a58d7bc794944" file="config.js" %}}
+{{< highlight js >}}
+var disqus_config = function () {
+  this.page.url = '{{ trim .Permalink "/" }}';
+};
+{{< / highlight >}}
 
 Now you just need to add the actual "Show comments" button and you are done. To make the user experience better I decided to show the number of comments on that button. You need to embed a Disqus JavaScript file for that but it makes just one request, so it is reasonable
 
-{{% gist id="47e9d4dc4bbb5279267a58d7bc794944" file="count.html" %}}
+{{< highlight html >}}
+<script id="dsq-count-scr" src="//{{.Site.DisqusShortname}}.disqus.com/count.js" async></script>
+{{< / highlight >}}
 
 This JavaScript will find all elements with class `disqus-comment-count` on the website and fetch the comments count for their `data-disqus-url` attribute. The resulting "Show comments" button may then look like this
 
-{{% gist id="47e9d4dc4bbb5279267a58d7bc794944" file="button.html" %}}
+{{< highlight html >}}
+<div class="disqus-comments">                  
+  <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="{{ trim .Permalink "/" }}">comments</span></button>
+  <div id="disqus_thread"></div>
+</div>
+{{< / highlight >}}
 
 And that is it. If you want to see it in action, just click the button below near the end of this page. If you want to see it all integrated, just look at the source code of this page. 

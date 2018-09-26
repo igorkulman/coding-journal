@@ -32,13 +32,21 @@ Excel.getRow
 
 but I will be adding a few more soon. The usage is really simple. For example, if you want to read the whole sheet number 1 from a file called text.xlsx, use
 
-{{% gist id="5822019" %}}
+{{< highlight fsharp >}}
+let data = 
+        "test.xlsx"
+        |> Excel.getWorksheetByIndex 1
+        |> Excel.getContent 
+
+data 
+    |> Seq.iter (fun x-> printfn "%s" x)
+{{< / highlight >}}
 
 **EDIT**: Now available as a Nuget package:
 
-```fsharp
+{{< highlight powershell >}}
 PM> Install-Package ExcelPackageF
-```
+{{< / highlight >}}
 
 {{% github-repo "igorkulman/ExcelPackageF" %}}
 

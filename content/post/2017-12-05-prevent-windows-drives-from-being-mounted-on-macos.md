@@ -7,7 +7,6 @@ author = "Igor Kulman"
 date = "2017-12-05T09:29:12+01:00"
 title = "Preventing Windows drives from getting automatically mounted on macOS"
 url = "/prevent-windows-drives-from-being-mounted-on-macos"
-share_img = "/images/nomount.png"
 
 +++
 
@@ -29,4 +28,12 @@ where "XXXXXXXXXXXXXXXXX" is the correct UUID, `ntfs` is the filesystem and 'ro,
 
 The resulting configuration may look like this
 
-{{% img-responsive "/images/nomount.png" %}}
+{{< highlight bash >}}
+#
+# Warning - this file should only be modified with vifs(8)
+#
+# Failure to do so is unsupported and may be destructive.
+#
+UUID=8CCC7F74-CB0B-44BE-A423-FEA4B8314646 none ntfs ro,noauto
+UUID=82D51380-0E13-4B98-8CEB-B87715F82056 none ntfs ro,noauto
+{{< / highlight >}}
