@@ -3,19 +3,7 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        {{ .Content }}
-
-        {{ if .Site.Params.showRelatedPosts }}
-          {{ $related := .Site.RegularPages.Related . | first 3 }}
-          {{ with $related }}
-          <h4 class="see-also">{{ i18n "seeAlso" }}</h4>
-          <ul>
-          {{ range . }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-          {{ end }}
-          </ul>
-          {{ end }}
-        {{ end }}
+        {{ .Content }}       
 
         {{ if .Params.tags }}
           <div class="blog-tags">
@@ -33,7 +21,21 @@
               </ul>
             </section>
         {{ end }}
+
+          {{ if .Site.Params.showRelatedPosts }}
+          {{ $related := .Site.RegularPages.Related . | first 3 }}
+          {{ with $related }}
+          <h4 class="see-also">{{ i18n "seeAlso" }}</h4>
+          <ul>
+          {{ range . }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+          </ul>
+          {{ end }}
+        {{ end }}
       </article>
+
+
 
       {{ if ne .Type "page" }}
         <ul class="pager blog-pager">
