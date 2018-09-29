@@ -5,19 +5,36 @@
       <article role="main" class="blog-post">
         {{ .Content }}
 
-
-        {{ $related := .Site.RegularPages.Related . | first 3 }}
-        {{ with $related }}
-        <h4 class="see-also">See Also</h4>
-        <ul>
-        {{ range . }}
-          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ if .Site.Params.showRelatedPosts }}
+          {{ $related := .Site.RegularPages.Related . | first 3 }}
+          {{ with $related }}
+          <h4 class="see-also">{{ i18n "seeAlso" }}</h4>
+          <ul>
+          {{ range . }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+          </ul>
+          {{ end }}
         {{ end }}
-      </ul>
-      {{ end }}
 
+        {{ if .Params.tags }}
+          <div class="blog-tags">
+            {{ range .Params.tags }}
+              <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
+            {{ end }}
+          </div>
+        {{ end }}
+
+        {{ if $.Param "socialShare" }}
+            <hr/>
+            <section id="social-share">
+              <ul class="list-inline footer-links">
+                {{ partial "share-links" . }}
+              </ul>
+            </section>
+        {{ end }}
       </article>
-      
+
       {{ if ne .Type "page" }}
         <ul class="pager blog-pager">
           {{ if .PrevInSection }}
@@ -31,15 +48,14 @@
             </li>
           {{ end }}
         </ul>
-
-          
       {{ end }}
 
 
       {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (ne .Type "page"))) }}
         {{ if .Site.DisqusShortname }}
-        <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="{{ trim .Permalink "/" }}">comments</span></button>
+          {{ if .Site.Params.delayDisqus }}
+          <div class="disqus-comments">                  
+            <button id="show-comments" class="btn btn-default" type="button">{{ i18n "show" }} <span class="disqus-comment-count" data-disqus-url="{{ trim .Permalink "/" }}">{{ i18n "comments" }}</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
@@ -49,6 +65,11 @@
 
           </script>
           </div>
+          {{ else }}
+          <div class="disqus-comments">
+            {{ template "_internal/disqus.html" . }}
+          </div>
+          {{ end }}
         {{ end }}
         {{ if .Site.Params.staticman }}
           <div class="staticman-comments">

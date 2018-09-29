@@ -63,4 +63,12 @@
 - id: yourWebsite
   translation: "You website"
 
+# Related posts
+- id: seeAlso
+  translation: "See also"
 
+# Delayed Disqus
+- id: show
+  translation: "Show"
+- id: comments
+  translation: "comments"  
