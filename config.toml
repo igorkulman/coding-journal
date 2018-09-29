@@ -23,8 +23,8 @@ disqusShortname = "coudingjournal"
   email = "igor@kulman.sk"
   github = "igorkulman"
   twitter = "igorkulman"
-  instagram = "igorkulman"
   stackoverflow = "users/581164/igor-kulman"
+  500px = "igorkulman"
 
 [[menu.main]]
     name = "Blog"
