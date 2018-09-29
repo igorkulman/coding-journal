@@ -172,6 +172,10 @@ lane :set_badge do
 end
 {{< / highlight >}}
 
+resulting in
+
+{{% img-responsive "/images/fastlane_badge.png" %}}
+
 ### Automatic screenshots generation
 
 It is a good practice to make your AppStore screenshots show the current version of the app and change them as the app UI changes. Making new screenshots manually is a real pain, especially if your app is localized into multiple languages or you do not use the screenshots directly but embed them into images with some marketing texts. Luckily you can [automate the process with Fastlane](https://docs.fastlane.tools/getting-started/ios/screenshots/).
