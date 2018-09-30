@@ -13,10 +13,13 @@ disqusShortname = "coudingjournal"
   commit = false
   rss = true
   comments = true
-  logo = "img/avatar-icon.png"
-  favicon = "img/favicon.ico"
+  logo = "images/avatar-icon.png"
+  favicon = "favicon.ico"
   blogTitle = "Coding Journal"
   readingTime = true
+  delayDisqus = true
+  showRelatedPosts = true
+  since = 2012
 
 [Author]
   name = "Igor Kulman"

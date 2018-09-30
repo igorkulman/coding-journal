@@ -12,15 +12,17 @@
   {{- if .Site.Params.staticman -}}
     &nbsp;|&nbsp;  <i class="fa fa-comment-o"></i>
     {{ $slug := replace .URL "/" "" }}
-    {{ $comments := index $.Site.Data.comments $slug }}
-    {{ if $comments }}
-      {{ if gt (len $comments) 1  }}
-        {{ len $comments  }} {{ i18n "moreComment" }}
+    {{ if .Site.Data.comments }}
+      {{ $comments := index $.Site.Data.comments $slug }}
+      {{ if $comments }}
+        {{ if gt (len $comments) 1  }}
+          {{ len $comments  }} {{ i18n "moreComment" }}
+        {{ else }}
+          {{ len $comments  }} {{ i18n "oneComment" }}
+        {{ end }}
       {{ else }}
-        {{ len $comments  }} {{ i18n "oneComment" }}
+        0 {{ i18n "oneComment" }}
       {{ end }}
-    {{ else }}
-      0 {{ i18n "oneComment" }}
     {{ end }}
   {{ end }}
   {{ if .IsTranslated -}}

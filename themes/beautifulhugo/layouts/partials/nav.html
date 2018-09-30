@@ -62,15 +62,15 @@
       </ul>
     </div>
 
-    <div class="avatar-container">
-      <div class="avatar-img-border">
-        {{ if isset .Site.Params "logo" }}
+    {{ if isset .Site.Params "logo" }}
+      <div class="avatar-container">
+        <div class="avatar-img-border">
           <a title="{{ .Site.Title }}" href="{{ "" | absLangURL }}">
             <img class="avatar-img" src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" />
           </a>
-        {{ end }}
+        </div>
       </div>
-    </div>
+    {{ end }}
 
   </div>
 </nav>

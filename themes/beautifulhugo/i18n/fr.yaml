@@ -8,7 +8,7 @@
 - id: lastModified
   translation: "(Dernière modification le {{ .Count }})"
 - id: translationsLabel
-  translation: "Autres langues: "
+  translation: "Autres langues : "
 - id: translationsSeparator
   translation: ", "
 - id: readMore
@@ -33,7 +33,7 @@
 
 # Footer
 - id: poweredBy # Accepts HTML
-  translation: 'Cabure avec <a href="http://gohugo.io">Hugo v{{ .Hugo.Version }}</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapté en <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>'
+  translation: 'Carbure avec <a href="http://gohugo.io">Hugo v{{ .Hugo.Version }}</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapté en <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>'
 
 # Navigation
 - id: toggleNavigation
