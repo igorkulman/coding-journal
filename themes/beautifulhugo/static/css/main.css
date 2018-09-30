@@ -623,7 +623,7 @@ footer .theme-by {
 
 /* --- Pager --- */
 
-.pager li a {
+.pager li a, .disqus-comments button {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
@@ -635,12 +635,14 @@ footer .theme-by {
   color: #404040;
 }
 @media only screen and (min-width: 768px) {
-  .pager li a {
+  .pager li a, .disqus-comments button {
     padding: 15px 25px;
   }
 }
 .pager li a:hover,
-.pager li a:focus {
+.pager li a:focus,
+.disqus-comments button:hover, 
+.disqus-comments button:focus {
   color: #FFF;
   background: #0085a1;
   border: 1px solid #0085a1;
