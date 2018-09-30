@@ -121,12 +121,12 @@
 <!-- End Piwik Code -->
 {{ end }}
 
-{{ if .Site.Params.delayDisqus }}
+{{ if (.Site.Params.delayDisqus) (and .Site.DisqusShortname) }}
 <!-- Delayed Disqus -->
 <script type="text/javascript">
 $(function(){
   $('#show-comments').on('click', function(){
-    var disqus_shortname = 'coudingjournal';
+    var disqus_shortname = '{{ .Site.DisqusShortname }}';
       
     (function() {
       var disqus = document.createElement('script'); 
@@ -141,7 +141,7 @@ $(function(){
   });
       
 </script>
-<script id="dsq-count-scr" src="//coudingjournal.disqus.com/count.js" async></script>
+<script id="dsq-count-scr" src="//{{ .Site.DisqusShortname }}.disqus.com/count.js" async></script>
 <!-- End Delayed Disqus -->
 {{ end }}
 
