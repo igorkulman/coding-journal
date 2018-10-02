@@ -52,3 +52,9 @@ else
 ${PROJECT_DIR}/support/verify-string-files -master ${SRCROOT}/iOSSampleApp/Resources/Base.lproj/Localizable.strings -warning-level warning
 fi
 {{< / highlight >}}
+
+### iOSLocalizationEditor
+
+If you want to use an external GUI tool, check out my [open-source iOSLocalizationEditor](https://github.com/igorkulman/iOSLocalizationEditor) that shows you all your localizations for every language side by side.
+
+{{% github-repo "igorkulman/iOSLocalizationEditor" %}}
