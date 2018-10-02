@@ -21,9 +21,9 @@ The best thing about this tool is that you can integrate it to your build proces
 
 ### Build process integration
 
-The tool is available only as source code, so you have to build it first. I put the built binary to a [`support` folder](https://github.com/igorkulman/iOSSampleApp/tree/master/support) of my projects. 
+The tool is available only as source code, so you have to build it first. I put the built binary to a [`support`](https://github.com/igorkulman/iOSSampleApp/tree/master/support) folder of my projects. 
 
-Then I have a [`Build-Phases` folder](https://github.com/igorkulman/iOSSampleApp/tree/master/Build-Phases) with all the script used in the build process. I think it is a much better solution than embedding the script right into the Xcode project.
+Then I have a [`Build-Phases`](https://github.com/igorkulman/iOSSampleApp/tree/master/Build-Phases) folder with all the script used in the build process. I think it is a much better solution than embedding the script right into the Xcode project.
 
 To integrate `verify-string-files` you just need a really simple script, providing the path to the base localization file
 
@@ -52,6 +52,12 @@ else
 ${PROJECT_DIR}/support/verify-string-files -master ${SRCROOT}/iOSSampleApp/Resources/Base.lproj/Localizable.strings -warning-level warning
 fi
 {{< / highlight >}}
+
+In Xcode, just add a new `Run scrip phase` and call this script
+
+{{% img-responsive "/images/verify-string-files-setup.png" %}}
+
+and do not forget to `chmod +x` the actual file.
 
 ### iOSLocalizationEditor
 
