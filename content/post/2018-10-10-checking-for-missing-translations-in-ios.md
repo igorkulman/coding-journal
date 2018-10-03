@@ -31,6 +31,8 @@ To integrate `verify-string-files` you just need a really simple script, providi
 ${PROJECT_DIR}/support/verify-string-files -master ${SRCROOT}/iOSSampleApp/Resources/Base.lproj/Localizable.strings
 {{< / highlight >}}
 
+In Xcode, just add a new `Run scrip phase` and call `$SRCROOT/Build-Phases/check-strings` where `check-strings` is the script name. Just do not forget to `chmod +x` the actual file. 
+
 This will result in build errors when there are missing string, shown directly in the base localization file
 
 {{% img-responsive "/images/verify-string-files-error.png" %}}
@@ -52,12 +54,6 @@ else
 ${PROJECT_DIR}/support/verify-string-files -master ${SRCROOT}/iOSSampleApp/Resources/Base.lproj/Localizable.strings -warning-level warning
 fi
 {{< / highlight >}}
-
-In Xcode, just add a new `Run scrip phase` and call this script
-
-{{% img-responsive "/images/verify-string-files-setup.png" %}}
-
-and do not forget to `chmod +x` the actual file.
 
 ### iOSLocalizationEditor
 
