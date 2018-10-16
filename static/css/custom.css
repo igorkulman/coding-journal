@@ -1,33 +1,59 @@
 table tr, table tr th, table tr td {
-	border: 0px;
+  border: 0px;
 }
+
 .about-icon {
-    font-size: 24px;
-    position: absolute;
-    left: -40px;
-    margin-top: 5px;
+  font-size: 24px;
+  position: absolute;
+  left: -40px;
+  margin-top: 5px;
 }
+
 .about-text {
-    position: relative;
-    margin-left: 30px;
+  position: relative;
+  margin-left: 30px;
 }
+
 .pure-img, .pure-img-width {
-    max-width: 100%;
-    display: block;
-    height: auto;
-    margin: 0;
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0;
 }
+
 body {
-	display: initial;
+  display: initial;
 }
+
 h4.see-also {
   margin-top: 20px
 }
+
 .disqus-comments {
-    margin-top: 20px;
+  margin-top: 20px;
 }
+
 @import url(https://cdn.rawgit.com/tonsky/FiraCode/1.206/distr/fira_code.css);
+.highlight pre code {
+  font-family: 'Fira Code', 'Lora', 'Times New Roman', serif;
+}
+
+.highlight tr, .highlight pre {
+  border: none;
+}
+
+.highlight pre {
+  border-top-left-radius: 4px;
+  border-top-right-radius: unset;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: unset;
+  overflow: auto;
+}
+
+.highlight pre {
+  border-radius: unset;
+}
 
 .highlight pre code {
-	font-family: 'Fira Code', 'Lora', 'Times New Roman', serif;
+  white-space: pre;
 }
