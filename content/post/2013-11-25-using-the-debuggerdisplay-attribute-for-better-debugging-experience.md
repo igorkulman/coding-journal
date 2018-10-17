@@ -16,7 +16,14 @@ This is not very comfortable, so thankfully, there is a way to make this experie
 
 Give the attribute a string to be displayed and in this string you can reference any data from the class:
 
-{{% gist id="7640468" %}}
+{{< highlight csharp >}}
+ [DebuggerDisplay("ID = {ID} | Title = {Title}")]    
+ public class PocketItem
+ {
+   public int ID {get;set;}
+   public string Title {get;set;}
+ }
+{{< / highlight >}}
 
 When you hover over the data now, you will see a nice readable &#8220;labels&#8221;:
 

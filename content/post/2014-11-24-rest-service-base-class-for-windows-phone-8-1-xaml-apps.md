@@ -10,19 +10,52 @@ Communicating with a JSON based REST service is a task that many Windows Phone a
 
 The usage of this base class is simple. Create your service class and inherit from BaseRestService. The minimum you need to do to make it work is to override the GetBaseUrl() method to set the base url for all the requests. You can (but do not have to) also override the GetRequestHeaders() method to set the default request headers.
 
-{{% gist id="405732bf92858dba1c3c" file="usage1.cs" %}}
+{{< highlight csharp >}}
+public class MyDataService: BaseRestService
+{
+  protected override string GetBaseUrl()
+  {
+    return "my base url";
+  }
+  
+  protected override Dictionary<string, string> GetRequestHeaders()
+  {
+    return new Dictionary<string, string>
+    {
+      {"Accept-Encoding", "gzip, deflate"},
+      {"Accept", "application/json"},
+    };
+  }
+}
+{{< / highlight >}}
 
 and you can now use the following protected methods
 
 <!--more-->
 
-{{% gist id="405732bf92858dba1c3c" file="methods.cs" %}}
+{{< highlight csharp >}}
+Task<T> Get<T>(string url);
+Task<T> Put<T>(string url, object request);
+Task<T> Post<T>(string url, object request);
+Task<T> Patch<T>(string url, object request);
+Task Delete(string url);
+{{< / highlight >}}
 
 All the JSON serialization and deserialization is automatically done for you. If you need to execute some action before every request (like checking if the OAuth token expired and refreshing it), simply override the OnBeforeRequest() method.
 
 Methods in your service may then look like this
 
-{{% gist id="405732bf92858dba1c3c" file="usage2.cs" %}}
+{{< highlight csharp >}}
+public Task<List<Account>> GetAccounts()
+{
+  return Get<List<Account>>("/accounts");
+}
+
+public Task<Account> UpdateAccount(Account account)
+{
+  return Patch<Account>("/accounts",account);
+}
+{{< / highlight >}}
 
 In case of an error, the methods throw either a DeserialziationException with the original data if deserialization failed, or a ConnectionException with the HTTP status code.
 

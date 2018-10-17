@@ -10,17 +10,68 @@ Today I read Joost van Schaik&#8217;s blog post called [A behavior to show a Mes
 
 **Helper class**
 
-{{% gist id="fda1860b35d5312e9157" file="DialogHelper.cs" %}}
+{{< highlight csharp >}}
+/// <summary>
+/// Helper class for showing message dialogs
+/// </summary>
+public static class DialogHelper
+{
+    /// <summary>
+    /// Shows a dialog with given message and ok/cancel buttons. 
+    /// </summary>
+    /// <param name="message">Message</param>
+    /// <param name="title">Title</param>
+    /// <param name="okText">OK text (optional)</param>
+    /// <param name="cancelText">Cancel text (optional)</param>
+    /// <returns>True if ok pressed, false otherwise</returns>
+    public static async Task<bool> ShowMessageDialog(string message, string title, string okText, string cancelText)
+    {
+        bool result = false;
+        var dialog = new MessageDialog(message, title);
+
+        if (!string.IsNullOrWhiteSpace(okText))
+        {
+            dialog.Commands.Add(new UICommand(okText, cmd => result = true));
+        }
+
+        if (!string.IsNullOrWhiteSpace(cancelText))
+        {
+            dialog.Commands.Add(new UICommand(cancelText, cmd => result = false));
+        }
+
+        await dialog.ShowAsync();            
+        return result;
+    }
+}
+{{< / highlight >}}
 
 with a simple usage in ViewModel
 
 <!--more-->
 
-{{% gist id="fda1860b35d5312e9157" file="usage.cs" %}}
+{{< highlight csharp >}}
+public async void Message()
+{
+    var res = await DialogHelper.ShowMessageDialog("Do you really want to do this?","My Title","Hell yeah!","No way");
+    if (res)
+    {
+        Result = "Hell yeah!";
+    } else 
+    {
+       Result = "NOOOO!";
+    }
+}
+{{< / highlight >}}
 
 and in the View (making use of Caliburn.Micro mapping the AppBarButton with x:Name=&#8221;Message&#8221; to the Message method in the ViewModel
 
-{{% gist id="fda1860b35d5312e9157" file="usage.xaml" %}}
+{{< highlight xml >}}
+<Page.BottomAppBar>
+<CommandBar>
+  <AppBarButton Icon="Accept" Label="go ask!"  x:Name="Message" />
+</CommandBar>
+</Page.BottomAppBar>
+{{< / highlight >}}
 
 If you want to show a dialog with just the Ok button, set cancelText to null and do not process the helper method&#8217;s result.
 
@@ -28,11 +79,56 @@ If you want to show a dialog with just the Ok button, set cancelText to null and
 
 If you do not like static classes, just make it service
 
-{{% gist id="fda1860b35d5312e9157" file="DialogHelperService.cs" %}}
+{{< highlight csharp >}}
+/// <summary>
+/// Helper class for showing message dialogs
+/// </summary>
+public class DialogHelperService
+{
+    /// <summary>
+    /// Shows a dialog with given message and ok/cancel buttons. 
+    /// </summary>
+    /// <param name="message">Message</param>
+    /// <param name="title">Title</param>
+    /// <param name="okText">OK text (optional)</param>
+    /// <param name="cancelText">Cancel text (optional)</param>
+    /// <returns>True if ok pressed, false otherwise</returns>
+    public async Task<bool> ShowMessageDialog(string message, string title, string okText, string cancelText)
+    {
+        bool result = false;
+        var dialog = new MessageDialog(message, title);
+ 
+        if (!string.IsNullOrWhiteSpace(okText))
+        {
+            dialog.Commands.Add(new UICommand(okText, cmd => result = true));
+        }
+ 
+        if (!string.IsNullOrWhiteSpace(cancelText))
+        {
+            dialog.Commands.Add(new UICommand(cancelText, cmd => result = false));
+        }
+ 
+        await dialog.ShowAsync();            
+        return result;
+    }
+}
+{{< / highlight >}}
 
 the usage in the ViewModel will change just slightly
 
-{{% gist id="fda1860b35d5312e9157" file="usage2.cs" %}}
+{{< highlight csharp >}}
+public async void Message()
+{
+    var res = await _dialogHelperService.ShowMessageDialog("Do you really want to do this?","My Title","Hell yeah!","No way");
+    if (res)
+    {
+        Result = "Hell yeah!";
+    } else 
+    {
+       Result = "NOOOO!";
+    }
+}
+{{< / highlight >}}
 
 and you can easily mock the service and test the ViewModel.
 

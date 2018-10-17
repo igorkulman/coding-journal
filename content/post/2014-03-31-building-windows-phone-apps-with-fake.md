@@ -14,11 +14,57 @@ The FAKE script I use can by used with any Windows Phone app, it will build all 
 
 <!--more-->
 
-{{% gist id="9842235" file="build.fsx" %}}
+{{< highlight fsharp >}}
+// include Fake lib
+#r @"tools\FAKE\tools\FakeLib.dll"
+open Fake
+ 
+RestorePackages()
+
+// Properties
+let buildDir = @".\build\"
+let packagesDir = @".\packages"
+let releaseDir = @".\release"
+
+// Targets
+Target "Clean" (fun _ ->
+    CleanDirs [buildDir; releaseDir]
+)
+
+Target "Build" (fun _ ->
+    !! @"**/*.csproj"
+      |> MSBuildRelease buildDir "Build"
+      |> Log "AppBuild-Output: "
+)
+
+Target "Deploy" (fun _ ->
+    !! (buildDir + "*.xap")         
+        |> Copy releaseDir
+)
+
+Target "Default" (fun _ ->
+    trace "Build completed"
+)
+
+// Dependencies
+"Clean"  
+  ==> "Build"  
+  ==> "Deploy"
+  ==> "Default" 
+ 
+// start build
+Run "Default"
+{{< / highlight >}}
 
 To get the script started, you need a batch file
 
-{{% gist id="9842235" file="build.bat" %}}
+{{< highlight bat >}}
+@echo off
+cls
+"tools\nuget\nuget.exe" "install" "FAKE" "-OutputDirectory" "tools" "-ExcludeVersion"
+"tools\FAKE\tools\Fake.exe" build.fsx
+pause
+{{< / highlight >}}
 
 and Nuget.exe in tools\NuGet directory.
 

@@ -20,15 +20,32 @@ Using Swift and protocols there is another way. Protocols in Swift are really si
 
 In Swift, you start with a protocol 
 
-{{% gist id="052d8de0c2bc1239b42b0da0c8fd2a0e" file="AlertCapable.swift" %}}
+{{< highlight swift >}}
+protocol AlertCapable: class {
+    func showAlert(message: String)
+}
+{{< / highlight >}}
 
 and add a default implementation of this protocol applicable to all the ViewControllers
 
-{{% gist id="052d8de0c2bc1239b42b0da0c8fd2a0e" file="UIViewControllerAlertCapable.swift" %}}
+{{< highlight swift >}}
+
+extension AlertCapable where Self: UIViewController {
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "error".localized, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "dialogconfirm".localized, style: UIAlertActionStyle.default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+}
+{{< / highlight >}}
 
 If you now add this protocol to a ViewController
 
-{{% gist id="052d8de0c2bc1239b42b0da0c8fd2a0e" file="Usage.swift" %}}
+{{< highlight swift >}}
+class RegistrationViewController: UIViewController, AlertCapable {
+  ...
+}
+{{< / highlight >}}
 
 the ViewController does not have to implement the `showAlert` because a default implementation exists. It can just use it in any of its methods. 
 

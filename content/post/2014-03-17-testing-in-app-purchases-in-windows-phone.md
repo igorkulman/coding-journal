@@ -10,7 +10,34 @@ Windows Phone Store does not offer developers any sandbox to test in-app purchas
 
 To make in-app purchases implementation easier, I created a simple Windows Phone Store service interface in my [Kulman.WP8][1] library (also [available on Nuget][2])
 
-{{% gist id="9571908" file="IWindowsPhoneStoreService.cs" %}}
+{{< highlight csharp >}}
+    /// <summary>
+    /// Interface for Windows Phone Store service
+    /// </summary>
+    public interface IWindowsPhoneStoreService
+    {
+        /// <summary>
+        /// Checks if a product is purchased
+        /// </summary>
+        /// <param name="productId">Product id</param>
+        /// <returns>True if the product is purchased</returns>
+        bool IsPurchased(string productId);
+
+        /// <summary>
+        /// Tries to purchase a product
+        /// </summary>
+        /// <param name="productId">Product id</param>
+        /// <returns>True on success, false otherwise</returns>
+        Task<bool> Purchase(string productId);
+
+        /// <summary>
+        /// Gets the price of a product
+        /// </summary>
+        /// <param name="productId">Product id</param>
+        /// <returns>Product price</returns>
+        Task<string> GetPrice(string productId);        
+    }
+{{< / highlight >}}
 
 <!--more-->
 
@@ -30,11 +57,39 @@ To mock in-app purchases you can use the [Mock In-App Purchase Library][4]. To m
 
 And setup the products you want to use at your app startup
 
-{{% gist id="9571908" file="SetupMockIAP.cs" %}}
+{{< highlight csharp >}}
+private void SetupMockIAP()
+{
+            MockIAP.Init();
+ 
+            MockIAP.RunInMockMode(true);
+            MockIAP.SetListingInformation(1, "en-us", "A description", "1", "TestApp");
+ 
+            // Add some more items manually.
+            ProductListing p = new ProductListing
+            {
+                Name = "img.2",
+                ImageUri = new Uri("/Res/Image/2.jpg", UriKind.Relative),
+                ProductId = "img.2",
+                ProductType = Windows.ApplicationModel.Store.ProductType.Durable,
+                Keywords = new string[] { "image" },
+                Description = "An image",
+                FormattedPrice = "1.0",
+                Tag = string.Empty
+            };
+            MockIAP.AddProductListing("img.2", p);
+}
+{{< / highlight >}}
 
 The advantage of this approach is that you just switch the IWindowsStoreService implementation between then mock on and the [real one][3], depending on the situation. For example (Caliburn.Micro Bootstrapper)
 
-{{% gist id="9571908" file="IAP.cs" %}}
+{{< highlight csharp >}}
+#if DEBUG
+            container.RegisterSingleton(typeof(IWindowsPhoneStoreService), "windowsPhoneStoreService", typeof(MockWindowsPhoneStoreService));
+#else
+            container.RegisterSingleton(typeof(IWindowsPhoneStoreService), "windowsPhoneStoreService", typeof(WindowsPhoneStoreService));
+#endif
+{{< / highlight >}}
 
  [1]: https://github.com/igorkulman/Kulman.WP8
  [2]: http://www.nuget.org/packages/Kulman.WP8/

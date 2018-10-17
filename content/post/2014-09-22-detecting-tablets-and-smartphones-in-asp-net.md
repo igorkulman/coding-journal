@@ -14,11 +14,19 @@ WURFL, the Wireless Universal Resource FiLe, is a Device Description Repository 
 
 After installing the Nuget package, you need to setup WURLF in your Global.asax file
 
-{{% gist id="dc65bf6d68aec59d57e2" file="wurlf_setup.cs" %}}
+{{< highlight csharp >}}
+var wurflDataFile = HttpContext.Current.Server.MapPath("~/App_Data/wurfl-latest.zip");
+var configurer = new InMemoryConfigurer().MainFile(wurflDataFile).SetMatchMode(MatchMode.Accuracy);
+WURFLManagerBuilder.Build(configurer);
+{{< / highlight >}}
 
 I recommend setting the match mode to accuracy instead of speed, to get the best results. Using the WURFL library is also quite easy, just pass the user agent string and get the properties you want.
 
-{{% gist id="dc65bf6d68aec59d57e2" file="wurfl_usage.cs" %}}
+{{< highlight csharp >}}
+var device = WURFLManagerBuilder.Instance.GetDeviceForRequest(context.Request.UserAgent);
+var isTablet = Boolean.Parse(device.GetCapability("is_tablet"));
+var isMobileDevice = Boolean.Parse(device.GetCapability("is_smartphone"));
+{{< / highlight >}}
 
  [1]: http://wurfl.sourceforge.net/
  [2]: https://www.nuget.org/packages/WURFL_Official_API/

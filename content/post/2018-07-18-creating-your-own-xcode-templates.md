@@ -43,7 +43,31 @@ You are not limited to just 1 template file, you can create more. This can be us
 
 The `TemplateInfo.plist` file contains basic template description. The important thing is template `Kind` and the `MainTemplateFile`. You can also set a default filename with `DefaultCompletionName`
 
-{{% gist id="c518c66de96b1c9d8c879414089fb7e6" file="TemplateInfo.plist" %}}
+{{< highlight plist >}}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>Swift Class</string>
+	<key>Summary</key>
+	<string>Swift Class</string>
+	<key>SortOrder</key>
+	<string>30</string>
+	<key>AllowedTypes</key>
+	<array>
+		<string>public.swift-source</string>
+	</array>
+	<key>DefaultCompletionName</key>
+	<string>Class</string>
+	<key>MainTemplateFile</key>
+	<string>___FILEBASENAME___.swift</string>
+</dict>
+</plist>
+
+{{< / highlight >}}
 
 
 #### Template file
@@ -52,6 +76,23 @@ You can put basically anything into the actual template file. You can use text m
 
 My template for a Swift class looks like this
 
-{{% gist id="c518c66de96b1c9d8c879414089fb7e6" file="___FILEBASENAME___.swift" %}}
+{{< highlight swift >}}
+//
+//  ___FILENAME___
+//  ___PROJECTNAME___
+//
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  ___COPYRIGHT___
+//
+
+import Foundation
+
+class ___FILEBASENAMEASIDENTIFIER___ {
+        
+        init() {
+                
+        }
+}
+{{< / highlight >}}
 
 If you do not want to start from scratch, take a look at [my sample Xcode templates on Github](https://github.com/igorkulman/xcode-templates).

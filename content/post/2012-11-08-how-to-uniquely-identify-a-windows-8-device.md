@@ -10,24 +10,42 @@ When developing a Windows 8 app you may need to uniquely identify the device the
   
 The Windows.System.Profile namespace contains HardwareToken that you can get by calling HardwareIdentification.GetPackageSpecificToken(null)
 
-{{% gist id="5849503" %}}
+{{< highlight csharp >}}
+var packageSpecificToken = Windows.System.Profile.HardwareIdentification.GetPackageSpecificToken(null);
+{{< / highlight >}}
 
 This class contains a bunch of interesting fields
 
-{{% gist id="5849507" %}}
+{{< highlight csharp >}}
+var hardwareId = packageSpecificToken.Id;
+var signature = packageSpecificToken.Signature;
+var certificate = packageSpecificToken.Certificate;
+{{< / highlight >}}
 
 <!--more-->
 
 All of these fields are of type Windows.Storage.Stream.Ibuffer, therefore COM calls. To use a value useable with .NET you have to use the DataReader, I get the unique device identifier from the hardwareId
 
-{{% gist id="5849511" %}}
+{{< highlight csharp >}}
+var dataReader = Windows.Storage.Streams.DataReader.FromBuffer(hardwareId);
+var array = new byte[hardwareId.Length];dataReader.ReadBytes(array)
+{{< / highlight >}}
 
 The resulting byte array can be converted to an UTF8 string
 
-{{% gist id="5849513" %}}
+{{< highlight csharp >}}
+string uuid = System.Text.Encoding.UTF8.GetString(array, 0, array.Length); 
+{{< / highlight >}}
 
 I prefer concatenating the bytes to a string
 
-{{% gist id="5849515" %}}
+{{< highlight csharp >}}
+StringBuilder sb = new StringBuilder();
+for (var i = 0; i < array.Length; i++)
+{        
+    sb.Append(array[i].ToString());
+} 
+string uuid = sb.ToString();
+{{< / highlight >}}
 
 **Update:** The hardware token of a device can change with hardware changes. Even small hardware changes like disabling Bluetooth can change the hardware token. You should generate it just once and save it.

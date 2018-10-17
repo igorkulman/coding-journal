@@ -14,6 +14,14 @@ body {
   margin-bottom:50px;
   flex: 1 0 auto;
 }
+
+@media only screen and (max-width: 767px) {
+.container[role=main] {
+    margin-left: 0;
+    margin-right: 0;
+}
+}
+
 p {
   line-height: 1.5;
   margin: 6px 0;
@@ -67,6 +75,23 @@ hr.small {
 
 .hideme {
   display: none;
+}
+
+div.panel-body a.list-group-item {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  border-radius: 0;
+  border: none;
+}
+div.panel-group .panel {
+    border-radius: 0;
+}
+div.panel-group .panel+.panel {
+    margin-top: 0;
+}
+
+div.panel-body a.list-group-item.view-all {
+  font-weight: 600;
 }
 
 ::-moz-selection {
@@ -402,10 +427,18 @@ footer .theme-by {
   margin-bottom: 30px;
 }
 
+.blog-tags:before {
+  content: "Tags: ";
+}
+
 .blog-tags a {
   color: #008AFF;
   text-decoration: none;
   padding: 0px 5px;
+}
+
+.blog-tags a:before {
+  content: "#";
 }
 
 .blog-tags a:hover {
@@ -590,7 +623,7 @@ footer .theme-by {
 
 /* --- Pager --- */
 
-.pager li a {
+.pager li a, .disqus-comments button {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
@@ -602,12 +635,14 @@ footer .theme-by {
   color: #404040;
 }
 @media only screen and (min-width: 768px) {
-  .pager li a {
+  .pager li a, .disqus-comments button {
     padding: 15px 25px;
   }
 }
 .pager li a:hover,
-.pager li a:focus {
+.pager li a:focus,
+.disqus-comments button:hover, 
+.disqus-comments button:focus {
   color: #FFF;
   background: #0085a1;
   border: 1px solid #0085a1;
@@ -619,6 +654,10 @@ footer .theme-by {
 
 .pager.blog-pager {
   margin-top:10px;
+}
+
+h4.panel-title > span.badge {
+    float: right;
 }
 
 @media only screen and (min-width: 768px) {
@@ -681,4 +720,27 @@ table tr td :last-child {
 input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gsc-search-button {
   box-sizing: content-box;
   line-height: normal;
+}
+
+/* IPython split style */
+div.splitbox {width:100%; overflow:auto;}
+
+div.splitbox div.left {
+               width:48%;
+               display:inline-block;
+               float:left;}
+div.splitbox div.right {
+               width:48%;
+               display:inline-block;
+               float:right;}
+
+@media only screen and (max-width: 600px) {
+div.splitbox div.left {
+               width:100%;
+               display:inline-block;
+               float:left;}
+div.splitbox div.right {
+               width:100%;
+               display:inline-block;
+               float:left;}
 }

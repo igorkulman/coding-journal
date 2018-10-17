@@ -18,7 +18,9 @@ Next you have to find out the keys for the string you want to localize. You an [
 
 The last step is to let the PlayerFramework know about your RESW file using
 
-{{% gist id="a5dcc1537cb977d023b4" %}}
+{{< highlight csharp >}}
+MediaPlayer.ResourceLoader = ResourceLoader.GetForCurrentView("PlayerFramework"); //using PlayerFramework.resw in the project
+{{< / highlight >}}
 
  [1]: https://playerframework.codeplex.com/
  [2]: https://playerframework.codeplex.com/SourceControl/latest#Win8.Xaml.Localize.Win81/en-US/PlayerFramework.resw

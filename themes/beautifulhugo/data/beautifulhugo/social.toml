@@ -29,6 +29,12 @@ title = "GitLab"
 icon = "fa-gitlab"
 
 [[social_icons]]
+id = "bitbucket"
+url = "https://bitbucket.org/%s"
+title = "Bitbucket"
+icon = "fa-bitbucket"
+
+[[social_icons]]
 id = "twitter"
 url = "https://twitter.com/%s"
 title = "Twitter"
@@ -123,3 +129,9 @@ id = "telegram"
 url = "https://telegram.me/%s"
 title = "Telegram"
 icon = "fa-telegram"
+
+[[social_icons]]
+id = "500px"
+url = "https://500px.com/%s"
+title = "500px"
+icon = "fa-500px"
