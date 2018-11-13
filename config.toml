@@ -4,6 +4,7 @@ title = "Igor Kulman"
 theme = "beautifulhugo"
 Paginate = 10
 disqusShortname = "coudingjournal"
+enableRobotsTXT = true
 
 [params]
   twitterName = "igorkulman"
