@@ -4,7 +4,7 @@ Description = ""
 Tags = ["Swift", "iOS", "Xcode"]
 Keywords = ["Swift", "iOS", "Xcode"]
 author = "Igor Kulman"
-date = "2018-12-05T05:29:12+01:00"
+date = "2018-11-28T05:29:12+01:00"
 title = "Unit testing view controller memory leaks"
 url = "/unit-testing-memory-leaks"
 
