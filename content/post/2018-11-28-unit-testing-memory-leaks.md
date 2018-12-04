@@ -12,7 +12,7 @@ url = "/unit-testing-memory-leaks"
 
 After adding a new feature to the iOS app I currently works on I noticed an unexpected memory spike after the app was used for a while. This usually means a memory leak; some object not being deallocated after it is no longed need. This is often caused by using `self` without `unowned` / `weak` or by forgetting to make the delegates `weak` (tools like [SwiftLint](https://github.com/realm/SwiftLint) can warn you about this case).
 
-In my case the problem vas a `UIViewController` not being deallocated after being removed from the navigation stuck because of a error in a binding. I found the bug using the Instruments in Xcode but it got me ask some questions. What if there are memory leaks in other parts for the app, in flows that are not used so much? Is there a way to somehow automatically test for memory leaks? I found [SpecLeaks](https://github.com/leandromperez/specleaks) as the best way to answer those questions.  
+In my case the problem was a `UIViewController` not being deallocated after being removed from the navigation stuck because of a error in a binding. I found the bug using the Instruments in Xcode but it got me ask some questions. What if there are memory leaks in other parts for the app, in flows that are not used so much? Is there a way to somehow automatically test for memory leaks? I found [SpecLeaks](https://github.com/leandromperez/specleaks) as the best way to answer those questions.  
 
 ### SpecLeaks
 
