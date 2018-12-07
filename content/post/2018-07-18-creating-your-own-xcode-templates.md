@@ -1,6 +1,6 @@
 +++
 Categories = ["Swift", "iOS", "Xcode"]
-Description = ""
+Description = "Working on an iOS or macOS project in Xcode you typically create classes with the same structure over and over again. I use coordinators so I am creating new `UIViewControllers`, each time referencing RxSwift, having methods for setting up UI, bindings .. most of the time also containing a delegate for the coordinator. Having to create files with the same structure over and over again manually is a waste of time, a much better solution is creating Xcode file templates for those files."
 Tags = ["Swift", "iOS", "Xcode"]
 Keywords = ["Swift", "iOS", "Xcode"]
 author = "Igor Kulman"

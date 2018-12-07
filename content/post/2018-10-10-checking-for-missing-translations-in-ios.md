@@ -1,6 +1,6 @@
 +++
 Categories = ["Swift", "iOS", "Xcode"]
-Description = ""
+Description = "When you work on an iOS app localized into multiple languages one of the biggest challenges is making sure that everything is translated, no string is missing in any language. Xcode does not provide any tool to make this easier for you, but there are some 3rd party tools that you can integrate into your workflow."
 Tags = ["Swift", "iOS", "Xcode"]
 Keywords = ["Swift", "iOS", "Xcode"]
 author = "Igor Kulman"

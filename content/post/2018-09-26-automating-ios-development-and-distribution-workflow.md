@@ -1,6 +1,6 @@
 +++
 Categories = ["Swift", "iOS", "Xcode"]
-Description = ""
+Description = "I am a big fan of automation in software development so when I started doing iOS development one of my goals was to automate everything on the iOS project. No more manual versioning, manual build distribution... let the computers do the work for me. Here is the setup I ended up with."
 Tags = ["Swift", "iOS", "Xcode"]
 Keywords = ["Swift", "iOS", "Xcode"]
 author = "Igor Kulman"
