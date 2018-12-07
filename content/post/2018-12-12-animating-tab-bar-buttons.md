@@ -19,7 +19,7 @@ This is a very subtle animation that I really like so I decided to do the same f
 
 The first step is to find the right place to insert the bounce animation into. When you tap a button in the tab bar, the `tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem)` method of the `UITabBarController` gets called. You cannot override this method in extension, so you have to create a new subclass. 
 
-This method ives you the selected `UITabBarItem` but you need to get to the actual view and its image. I found out that the tab bar contains (at least in my case) an background subview and then subviews corresponding to the tab bar buttons, so when a tab bar button at index N is tapped, its subview is at N+1. 
+This method gives you the selected `UITabBarItem` but you need to get to the actual view and its image. I found out that the tab bar contains (at least in my case) a background subview and then subviews corresponding to the tab bar buttons, so when a tab bar button at index N is tapped, its subview is at N+1.
 
 {{< highlight swift >}}
 class AnimatedTabBarController: UITabBarController {
@@ -35,7 +35,7 @@ class AnimatedTabBarController: UITabBarController {
 }
 {{< / highlight >}}
 
-To create a bounce animation we can use `CAKeyframeAnimation` and animate the `transform.scale` key path. Basically you need to make the image bigger, then slightly smaller and original size again. This is the animation I use
+To create a bounce animation we can use `CAKeyframeAnimation` and animate the `transform.scale` key path. Basically, you need to make the image bigger, then slightly smaller and original size again. This is the animation I use
 
 <!--more-->
 
