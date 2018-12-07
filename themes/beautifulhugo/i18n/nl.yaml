@@ -62,3 +62,13 @@
   translation: "Jouw e-mailadres"
 - id: yourWebsite
   translation: "Jouw website"
+
+# Delayed Disqus
+- id: show
+  translation: "Laat"
+- id: comments
+  translation: "reacties zien" 
+
+# Related posts
+- id: seeAlso
+  translation: "Zie ook"

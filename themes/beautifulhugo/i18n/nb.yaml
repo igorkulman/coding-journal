@@ -63,4 +63,12 @@
 - id: yourWebsite
   translation: "Din webside"
 
+# Delayed Disqus
+- id: show
+  translation: "Vis"
+- id: comments
+  translation: "kommentarer" 
 
+# Related posts
+- id: seeAlso
+  translation: "Se også"

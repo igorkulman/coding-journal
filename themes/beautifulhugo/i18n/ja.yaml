@@ -38,6 +38,8 @@
 # Navigation
 - id: toggleNavigation
   translation: "メニューを切り替え"
+- id: languageSwitcherLabel
+  translation: "言語"
 - id: gcseLabelShort
   translation: "検索"
 - id: gcseLabelLong
@@ -61,6 +63,12 @@
 - id: yourWebsite
   translation: "You website"
 
+# Delayed Disqus
+- id: show
+  translation: "ショー"
+- id: comments
+  translation: "コメント" 
 
-
-
+# Related posts
+- id: seeAlso
+  translation: "も参照してください"

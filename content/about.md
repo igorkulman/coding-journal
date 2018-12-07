@@ -23,7 +23,7 @@ This blog mostly covers my <b>programming experience</b> venturing into the worl
 </p>
 
 <p class="about-text">
-<span class="fa fa-file-text-o about-icon"></span>
+<span class="fa fa-file-alt about-icon"></span>
 Take a look at my <strong><a href="/projects">projects</a></strong> and my <strong><a href="https://github.com/igorkulman">open-source software</a></strong>  to get a better understanding of my work.
 </p>
 
