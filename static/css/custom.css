@@ -33,11 +33,6 @@ h4.see-also {
   margin-top: 20px;
 }
 
-@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.206/distr/fira_code.css);
-.highlight pre code {
-  font-family: 'Fira Code', 'Lora', 'Times New Roman', serif;
-}
-
 .highlight tr, .highlight pre {
   border: none;
 }
