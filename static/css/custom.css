@@ -19,6 +19,7 @@ table tr, table tr th, table tr td {
   display: block;
   height: auto;
   margin: 0;
+  margin-bottom: 1em
 }
 
 body {
