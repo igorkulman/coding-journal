@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        {{ .Content }}       
+        {{ .Content }}
 
         {{ if .Params.tags }}
           <div class="blog-tags">
@@ -35,8 +35,6 @@
         {{ end }}
       </article>
 
-
-
       {{ if ne .Type "page" }}
         <ul class="pager blog-pager">
           {{ if .PrevInSection }}
@@ -57,7 +55,7 @@
         {{ if .Site.DisqusShortname }}
           {{ if .Site.Params.delayDisqus }}
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">{{ i18n "show" }} <span class="disqus-comment-count" data-disqus-url="{{ trim .Permalink "/" }}">{{ i18n "comments" }}</span></button>                        
+            <button id="show-comments" class="btn btn-default" type="button">{{ i18n "show" }} <span class="disqus-comment-count" data-disqus-url="{{ trim .Permalink "/" }}">{{ i18n "comments" }}</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
