@@ -11,7 +11,7 @@ Source code for my programming blog located at [blog.kulman.sk](https://blog.kul
 ### Built With
 
 * [Hugo](http://gohugo.io) - Static site generator
-* [Beautiful Hugo](https://github.com/igorkulman/beautifulhugo) - Theme
+* [Beautiful Hugo](https://github.com/halogenica/beautifulhugo) - Theme
 * [Netlify](https://www.netlify.com/) - Hosting
 
 ### Author
