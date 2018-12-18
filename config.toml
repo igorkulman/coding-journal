@@ -28,7 +28,6 @@ enableRobotsTXT = true
   github = "igorkulman"
   twitter = "igorkulman"
   stackoverflow = "users/581164/igor-kulman"
-  500px = "igorkulman"
 
 [[menu.main]]
     name = "Blog"
