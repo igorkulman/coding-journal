@@ -12,7 +12,7 @@ url = "/mobilize-net-converting-windows-phone-apps-to-uwp"
 
 When Microsoft announced the Windows 10 developer platform, they also announced bridges to make porting apps from Android, iOS and Web easier. Those bridges are now either dead (Android) or unusable (iOS) but there is another tool that can be considered a bridge left. It is called [Mobilize.net Silverlight](http://www.mobilize.net/download-silverlight-bridge) Bridge and it is not from Microsoft. It promises converting existing Windows Phone 8 (Silverlight apps) to the Universal Windows Platform. Considering the majority of apps in the Windows Phone Store are Windows Phone 8 apps and the fact that Android and iOS developers do not really care about Windows, Mobilize.net seem to be the most useful of the bridges, because there is no easy porting apps from Windows Phone 8 to UWP, just rewriting. So I tried it out.
 
-{{% img-responsive "/images/Windows10-Devices.png?t=1449725816496&width=425&height=210" %}}
+{{% img-responsive "/images/Windows10-Devices.png" %}}
 
 Mobilize.net is currently in technical preview. After you download and install it, it integrates into Visual Studio 2015 and there is a new context menu for Windows Phone 8 project, allowing you to convert them to UWP apps. If you use it, you get a dialog windows and a conversion process that will fail most of the times with a strange error. At least for me it did. 
 
