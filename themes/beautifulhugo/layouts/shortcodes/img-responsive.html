@@ -1,1 +1,8 @@
-<img class="pure-img" src="{{ index .Params 0 }}" alt="" >
+{{ $src := index .Params 0 }}
+{{ $config := imageConfig (printf "/static/%s" $src) }}
+
+<div class="image_placeholder">
+<div class="placeholder" data-large="{{ index .Params 0 }}">  
+  <div style="padding-bottom: {{ div (mul $config.Height 100.0) $config.Width }}%;"></div>
+</div>
+</div>

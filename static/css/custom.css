@@ -53,3 +53,33 @@ h4.see-also {
 .highlight pre code {
   white-space: pre;
 }
+section.issues {    
+    padding: 10px 20px;
+    border-left: 10px solid #777;
+    background-color: #F5F5F5;
+}
+
+.placeholder {
+  background-color: #f6f6f6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder img {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 1s linear;
+}
+
+.placeholder img.loaded {
+  opacity: 1;
+}
+
+.image_placeholder{  
+  display: block;
+}
