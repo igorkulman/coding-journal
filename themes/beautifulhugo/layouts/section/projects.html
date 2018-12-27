@@ -68,9 +68,9 @@
               </p>
               <div class="post-entry">
                
-                  {{ .Summary }}
+                <p>  {{ .Summary }} </p>
                 
-               <p>  <img src="{{ .Params.image }}" alt="{{ .Title }}" class="pure-img" ></p>
+               {{ partial "project-image" .  (dict "image" (.Params.image)) }}
                        
 
                         <p>
