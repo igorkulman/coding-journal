@@ -75,7 +75,7 @@
 
                         <p>
                          {{ if isset .Params "company" }} Contracted by: {{ .Params.company }} <br />  {{ end }}
-                       {{ if isset .Params "link" }} {{ .Params.linkactiontitle }}: <a href="{{ .Params.link }}">{{ .Params.linkaction }}</a>  {{ end }}
+                       {{ if isset .Params "link" }} {{ .Params.linkactiontitle }}: <a class="external" href="{{ .Params.link }}">{{ .Params.linkaction }}</a>  {{ end }}
                        </p>
               </div>
 

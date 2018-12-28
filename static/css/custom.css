@@ -89,3 +89,6 @@ section.issues {
 .image_placeholder{  
   display: block;
 }
+a.external {
+  color: #008AFF;
+}
