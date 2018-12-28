@@ -50,7 +50,7 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           <div class="posts-list">
-            {{ $pag := .Paginate (where .Data.Pages "Section" "projects") }}
+            {{ $pag := .Paginate (where .Data.Pages "Section" "projects") 5 }}
             {{ range $pag.Pages }}
               <article class="post-preview">
               <a href="{{ .Permalink }}">
@@ -68,14 +68,14 @@
               </p>
               <div class="post-entry">
                
-                  {{ .Summary }}
+                <p>  {{ .Summary }} </p>
                 
-               <p>  <img src="{{ .Params.image }}" alt="{{ .Title }}" class="pure-img" ></p>
+               {{ partial "project-image" .  (dict "image" (.Params.image)) }}
                        
 
                         <p>
                          {{ if isset .Params "company" }} Contracted by: {{ .Params.company }} <br />  {{ end }}
-                       {{ if isset .Params "link" }} {{ .Params.linkactiontitle }}: <a href="{{ .Params.link }}">{{ .Params.linkaction }}</a>  {{ end }}
+                       {{ if isset .Params "link" }} {{ .Params.linkactiontitle }}: <a class="external" href="{{ .Params.link }}">{{ .Params.linkaction }}</a>  {{ end }}
                        </p>
               </div>
 

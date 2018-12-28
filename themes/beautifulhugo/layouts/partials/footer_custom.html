@@ -2,3 +2,30 @@
 If you want to include any custom html just before </body>, put it in /layouts/partials/footer_custom.html
 Do not put anything in this file - it's only here so that hugo won't throw an error if /layouts/partials/footer_custom.html doesn't exist.
 -->
+<script type="text/javascript">
+
+
+$(function () {
+    document.querySelectorAll('div.placeholder').forEach( div => {
+        if ( ! div.hasAttribute("data-large")) {
+            return;
+        }
+
+        const original = div.getAttribute("data-large");
+        fetch(original)
+            .then(function (response) {
+                if (response && response.status == 200){                    
+                    var image = new Image();
+                    image.setAttribute("src", original)
+                    image.onload = function () {
+                      image.classList.add('loaded');
+                    };
+                    div.append(image);
+                }
+            })
+            .catch(function(err) {
+                console.error('lazy error: ', err);
+            });
+    });
+});
+</script>
