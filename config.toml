@@ -2,7 +2,7 @@ baseurl = "https://blog.kulman.sk"
 languageCode = "en-us"
 title = "Igor Kulman"
 theme = "beautifulhugo"
-Paginate = 10
+Paginate = 5
 disqusShortname = "coudingjournal"
 enableRobotsTXT = true
 
