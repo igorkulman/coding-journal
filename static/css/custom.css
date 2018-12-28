@@ -19,6 +19,7 @@ table tr, table tr th, table tr td {
   display: block;
   height: auto;
   margin: 0;
+  margin-bottom: 1em
 }
 
 body {
@@ -31,11 +32,6 @@ h4.see-also {
 
 .disqus-comments {
   margin-top: 20px;
-}
-
-@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.206/distr/fira_code.css);
-.highlight pre code {
-  font-family: 'Fira Code', 'Lora', 'Times New Roman', serif;
 }
 
 .highlight tr, .highlight pre {
@@ -56,4 +52,43 @@ h4.see-also {
 
 .highlight pre code {
   white-space: pre;
+}
+section.issues {    
+    padding: 10px 20px;
+    border-left: 10px solid #777;
+    background-color: #F5F5F5;
+}
+
+.placeholder {
+  background-color: #f6f6f6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder img {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 1s linear;
+}
+
+.img-small {
+  filter: blur(50px);
+  /* this is needed so Safari keeps sharp edges */
+  transform: scale(1);
+}
+
+.placeholder img.loaded {
+  opacity: 1;
+}
+
+.image_placeholder{  
+  display: block;
+}
+a.external {
+  color: #008AFF;
 }
