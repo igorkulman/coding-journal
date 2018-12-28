@@ -3,28 +3,29 @@ If you want to include any custom html just before </body>, put it in /layouts/p
 Do not put anything in this file - it's only here so that hugo won't throw an error if /layouts/partials/footer_custom.html doesn't exist.
 -->
 <script type="text/javascript">
-window.onload = function() {
 
-  var placeholder = $('.placeholder');
 
-  placeholder.each( function(index) {
-    // 1: load small image and show it
-    var smallImgElement = $(this).find('.img-small');
-    var img = new Image();
-    img.src = smallImgElement.attr('src');
-    img.onload = function () {
-      smallImgElement.addClass('loaded');
-    };
+$(function () {
+    document.querySelectorAll('div.placeholder').forEach( div => {
+        if ( ! div.hasAttribute("data-large")) {
+            return;
+        }
 
-    // 2: load large image
-    var imgLarge = new Image();
-    imgLarge.src = $(this).data('large');
-    imgLarge.onload = function () {
-      imgLarge.classList.add('loaded');
-    };
-    $(this).append(imgLarge);
-
-  })
-
-}
+        const original = div.getAttribute("data-large");
+        fetch(original)
+            .then(function (response) {
+                if (response && response.status == 200){                    
+                    var image = new Image();
+                    image.setAttribute("src", original)
+                    image.onload = function () {
+                      image.classList.add('loaded');
+                    };
+                    div.append(image);
+                }
+            })
+            .catch(function(err) {
+                console.error('lazy error: ', err);
+            });
+    });
+});
 </script>
