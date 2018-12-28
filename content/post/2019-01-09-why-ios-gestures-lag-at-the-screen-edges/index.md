@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2019-01-09T05:29:12+01:00"
 title = "Why is there a \"lag\" in iOS gesture detection near the edges of the screen?"
 url = "/why-ios-gestures-lag-at-the-screen-edges"
-share_img = "/images/quick-recording-middle.png"
+share_img = "/why-ios-gestures-lag-at-the-screen-edges/quick-recording-middle.png"
 
 +++
 
@@ -19,11 +19,11 @@ The task was simple. In the chat detail screen I had to add a voice recording bu
 
 The message input was located in the bottom right corner of the screen when keyboard was not shown
 
-{{% img-responsive "/images/quick-recording-bottom.png" %}}
+{{% post-image "quick-recording-bottom.png" %}}
 
 and moved up with the keyboard
 
-{{% img-responsive "/images/quick-recording-middle.png" %}}
+{{% post-image "quick-recording-middle.png" %}}
 
 ### The problem
 
