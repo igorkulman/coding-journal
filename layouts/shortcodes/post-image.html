@@ -1,7 +1,7 @@
 {{ $image := (.Page.Resources.GetMatch  (index .Params 0)) }}
 {{ $placeholder := $image.Resize "48x q20" }} 
 
-<div class="image_placeholder" style="max-width: {{$image.Width}}px">
+<div class="image_placeholder" style="max-width: {{ if index .Params 1 }}{{index .Params 1}}{{ else }}{{$image.Width}}px{{end}}">
 <div class="placeholder" data-large="{{ $image.Permalink }}">  
   <img src="{{ $placeholder.Permalink }}" class="img-small loaded">
   <div style="padding-bottom: {{ div (mul $image.Height 100.0) $image.Width }}%;"></div>
