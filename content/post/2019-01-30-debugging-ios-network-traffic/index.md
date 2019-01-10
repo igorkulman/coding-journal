@@ -27,8 +27,6 @@ brew install mitmproxy
 
 and run the command line interface with a simple `mitmproxy` proxy command. The command line interface takes some time to get used to. If you want something simpler, run the `mitmweb` command to get a web interface.
 
-{{% post-image "mitmweb.png" %}}
-
 ## Setting up the iOS device
 
 ### Proxy
@@ -58,3 +56,5 @@ Then go to **Settings | General | About | Certificate Trust Settings** and give 
 You can now start doing network requests on your iOS device by opening websites in Safari, using various apps and see them in mitmproxy. 
 
 Apps that take security more seriously will stop working, because they do certificate pinning and there is no good way to debug their network requests (try refreshing the feed in Twitter for example).
+
+{{% post-image "mitmweb.png" %}}
