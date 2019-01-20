@@ -28,7 +28,12 @@ Let&#8217;s start buidling a simple demo application. This demo application will
 
 Create a Blank App. Add the [Caliburn.Micro.Unity.WinRT][7] package from Nuget. It will install all the dependencies you need. Install [PropertyChanged.Fody][8] from Nuget. Next you need to hook up PropertyChanged.Fody with Fody. Open FodyWeavers.xml and change it to
 
-{{< gist 6088620>}}
+{{< highlight xml >}}
+<?xml version="1.0" encoding="utf-8"?>
+<Weavers>
+  <PropertyChanged EventInvokerNames="NotifyOfPropertyChange" />
+</Weavers>
+{{< / highlight >}}
 
 PropertyChanged.Fody now knows that it should call the NotifyOfPropertyChange method from Caliburn Micro when a property gets changed. Let&#8217;s do some cleanup next. Delete MainPage.xaml, rename the Common folder to Resources and create a few additional folders: 
 

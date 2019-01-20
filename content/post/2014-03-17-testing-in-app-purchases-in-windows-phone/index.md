@@ -53,7 +53,94 @@ If your app is already in the Windows Phone Store, create an in-app product and 
 
 To mock in-app purchases you can use the [Mock In-App Purchase Library][4]. To make testing easier, implement my interface using this library
 
-{{< gist 9571846>}}
+{{< highlight csharp >}}
+using MockIAPLib;
+using Store = MockIAPLib;
+
+namespace YourAPP
+{
+    
+    /// <summary>
+    /// Service for mocking in-app purchases in debug mode
+    /// </summary>
+    public class MockWindowsPhoneStoreService: IWindowsPhoneStoreService
+    {
+        /// <summary>
+        /// Checks if a product is purchased
+        /// </summary>
+        /// <param name="productId">Product id</param>
+        /// <returns>True if the product is purchased</returns>
+        public bool IsPurchased(string productId)
+        {
+            if (String.IsNullOrEmpty(productId)) return false;
+
+            var licenseInformation = CurrentApp.LicenseInformation;
+            return licenseInformation.ProductLicenses[productId].IsActive;
+        }
+
+        /// <summary>
+        /// Tries to purchase a product
+        /// </summary>
+        /// <param name="productId">Product id</param>
+        /// <returns>True on success, false otherwise</returns>
+        public async Task<bool> Purchase(string productId)
+        {
+            if (String.IsNullOrEmpty(productId))
+            {
+                return false;
+            }
+
+
+            try
+            {
+                await CurrentApp.RequestProductPurchaseAsync(productId, false);
+
+                try
+                {
+                    var licenses = CurrentApp.LicenseInformation.ProductLicenses;
+                    if (licenses[productId].IsConsumable && licenses[productId].IsActive)
+                    {
+                        CurrentApp.ReportProductFulfillment(productId);
+                    }
+                }
+                catch (Exception e)
+                {
+
+                }
+
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Gets the price of a product
+        /// </summary>
+        /// <param name="productId">Product id</param>
+        /// <returns>Product price</returns>
+        public async Task<string> GetPrice(string productId)
+        {
+            try
+            {
+                var products = await CurrentApp.LoadListingInformationAsync();
+
+                var product = products.ProductListings.SingleOrDefault(l => l.Value.ProductId == productId);
+                if (product.Value == null) return string.Empty;
+
+                return product.Value.FormattedPrice;
+            }
+            catch
+            {
+                return string.Empty;
+            }
+        }
+    }
+}
+{{< / highlight >}}
 
 And setup the products you want to use at your app startup
 

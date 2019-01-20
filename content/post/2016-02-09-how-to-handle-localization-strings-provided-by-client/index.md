@@ -107,7 +107,9 @@ public class LocalizedStrings
 
 and added it to `App.xaml` as a dictionary resources called `S`
 
-{{% gist id="53a29b6e2143cac1ec8a" file="App.xaml" %}}
+{{< highlight csharp >}}
+<local:LocalizedStrings x:Key="S" />
+{{< / highlight >}}
 
 The interesting ans still missing part is the `AppResources` class referenced in `LocalizedStrings`. It is a partial class, consisting of `ResourceLoader` instance to get the string at runtime and a Singleton to get the string from C# code
 

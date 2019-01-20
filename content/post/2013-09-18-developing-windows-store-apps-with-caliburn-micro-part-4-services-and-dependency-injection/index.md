@@ -12,7 +12,14 @@ In this installment of the series I will show you how user data services. We wil
 
 In next installment we will be showing a list of products, so let&#8217;s create a simple Product class first in the Data directory:
 
-{{< gist 6606102>}}
+{{< highlight csharp >}}
+[ImplementPropertyChanged]
+public class Product : PropertyChangedBase
+{
+  public int Id { get; set; }
+  public string Name { get; set; }
+}
+{{< / highlight >}}
 
 PropertyChangedBase is a base class implementing the INotifyPropertyChanged interface and the ImplementPropertyChanged attribute makes sure it&#8217;s method is called for all the property changes. (More about Fody [here][1])
 

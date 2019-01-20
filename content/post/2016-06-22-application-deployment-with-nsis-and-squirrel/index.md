@@ -54,4 +54,4 @@ The final solution consisted of multiple things combined together. We added Squi
 
 To make Squirrel work in this scenario we also had to create a `SquirrelTemp` directory one level above the install directory and make it writeable. 
 
-We also had to create a [custom update logic](https://gist.github.com/igorkulman/702be46eacba7bfe3f1444815aef645a) to check for new releases and restart the app with full path to correct exe file, but in the ends, it all works.
+We also had to create a custom update logic to check for new releases and restart the app with full path to correct exe file, but in the ends, it all works.
