@@ -33,6 +33,8 @@ Apple basically blocks NVIDIA from releasing web drivers for Mojave, that us the
 
 Mojave natively supports GPU from AMD. You can buy a **RX 560**, **RX 570**, **RX 580**, **Vega 56** or **Vega 64** and it should work out of the box, no extra drivers needed. I did not even have to install [Lilu](https://github.com/acidanthera/Lilu) or [Whatevergreen](https://github.com/acidanthera/WhateverGreen).  
 
+<!--more-->
+
 ### Switching to RX 570
 
 I am not a fan of AMD GPUs to be honest but I decided to buy a **RX 570** to be able to update to run Mojave in expectation of Xcode 10.2. The **RX 570** (8 GB variant) seemed like the closets option to my **GTX 1060** (6 GB variant) and it is quite cheap, you can get it under 200€.
