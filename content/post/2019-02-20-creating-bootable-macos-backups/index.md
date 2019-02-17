@@ -1,7 +1,7 @@
 +++
-Categories = ["macOS"]
+Categories = ["macOS", "Hackintosh"]
 Description = "When I turned my computer into a Hackintosh about 2 years ago I knew I needed a good backup solution. The idea was that if something goes wrong, like a macOS update breaking the installation or the failure of a macOS SSD, I need to be able to be back up and running in a few minutes."
-Keywords = ["macOS"]
+Keywords = ["macOS", "Hackintosh"]
 author = "Igor Kulman"
 date = "2019-02-20T05:29:12+01:00"
 title = "Creating bootable macOS backups"
@@ -22,6 +22,12 @@ The backups worked fine, when I bought a bigger SSD for macOS and just restored 
 
 The problem is that requirements change over time, most of the time after problems you did not expect before.
 
+#### Size dependent on the filesystem
+
+**CloneZilla** works well with `HFS+`, can detect used and free space. This means it only backs up the used space, so the resulting image is not as big as your SSD and the process is fast. When you update to `APFS` this is no longer true. **CloneZilla** backs it up sector by sector, the resulting image is as big as the SSD and it is slow.
+
+#### Inflexibility for smaller fixes
+
 Once I updated **Clover** and my Hackintosh did not boot, got stuck on some error message. The problem was that the **Clover** installer decided not to check `OsxAptioFix3Drv-64.efi` by default anymore and this module got deleted. 
 
 Doing a full restore from an image seemed like a waste of time when I just needed to restore one missing file. So I used **Clover** on my `Unibeast` flash drive that I keep safe and booted the Hackintosh with it. This screwed up iMessage (different serial number). I then reinstalled **Clover** checking `OsxAptioFix3Drv-64.efi`, booted backed normally and fixed iMessage. 
@@ -30,7 +36,7 @@ This made me realize that image based backups are not ideal for real world probl
 
 ## Bootable macOS backups
 
-I stumbled upon **[Carbon Copy Cloner](https://bombich.com/)**; a backup tool that offers bootable backups for macOS. I bought another SSD for bootable backups and got to work.
+I stumbled upon [Carbon Copy Cloner](https://bombich.com/); a backup tool that offers bootable backups for macOS. I bought another SSD for bootable backups and got to work.
 
 ### Preparing the SSD
 
