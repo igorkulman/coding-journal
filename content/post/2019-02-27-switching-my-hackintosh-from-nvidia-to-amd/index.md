@@ -41,7 +41,7 @@ I switched the GPUs, booted High Sierra and the RX 570 just worked. No extra set
 
 ### Update to Mojave
 
-The update to Mojave went fine, no problems during the process. 
+I did a [full disk backup with CloneZilla](/using-clonezilla-for-hackintosh-backups/) and updated to Mojave. The update went fine, no problems during the process. 
 
 The only thing that did not work right a way was sound. The [Clover ALC script](https://github.com/toleda/audio_CloverALC) I used in High Sierra to get my **ALC887** working is no longer supported in Mojave. 
 
