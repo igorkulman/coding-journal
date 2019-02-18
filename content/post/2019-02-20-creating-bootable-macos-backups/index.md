@@ -74,6 +74,8 @@ If **Clover** shows up and macOS boots up, you are all set. You can check the cu
 
 With all of the setup now done, you should schedule **Carbon Copy Cloner** do do a periodic backup. The backup will be incremental, so it will not take as much time as the first backup. It will be done in the background so you wil probably not even notice it.
 
+{{% post-image "Schedule.png" %}}
+
 ## Conclusion
 
 With bootable macOS backups using **Carbon Copy Cloner** I get automatic incremental backups that I do not have to think about. When anything happens, I can boot from the backup SSD, fix broken **Clover**, continue working or let **Carbon Copy Cloner** do a restore.
