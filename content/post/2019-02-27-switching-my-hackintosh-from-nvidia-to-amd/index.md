@@ -47,7 +47,7 @@ The only thing that did not work right a way was sound. The [Clover ALC script](
 
 To get your sound working in Mojave you now have to use [AppleALC](https://github.com/acidanthera/AppleALC), which is a **Lilu** plugin and supports [a lot of sound card codecs](https://github.com/acidanthera/AppleALC/wiki/Supported-codecs). My **ALC887** is directly supported so I just installed the **kext** using **Kext Utility** without any modifications and the sound started working after restart, both playback and recording, using my gaming headset. 
 
-Mojave disabled **subpixel antialiasing**, so if you use a low resolution display, like 1080p, all the fonts look terrible. I run and old 1080p display next to a 4K display and it was really visible. Running `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO` and rebooting macOS made it better but it still feels off.
+Mojave disabled **subpixel antialiasing**, so if you use a low resolution display, like 1080p, all the fonts look terrible. I run and old FullHD display next to a 4K display and it was really visible. Running `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO` and rebooting macOS made it better but it still feels off.
 
 ### RX 570 in Windows 10
 
