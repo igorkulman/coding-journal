@@ -1,6 +1,6 @@
 +++
 Categories = ["macOS", "Hackintosh"]
-Description = ""
+Description = "Apple blocks NVIDIA from releasing graphic drivers for Mojave, so I had no choice but to switch to an RX 570. The macOS experience was smooth, but Windows ..."
 Tags = ["macOS", "Hackintosh"]
 Keywords = ["macOS", "Hackintosh"]
 author = "Igor Kulman"
