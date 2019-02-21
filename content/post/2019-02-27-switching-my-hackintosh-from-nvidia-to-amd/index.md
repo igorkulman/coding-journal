@@ -1,6 +1,6 @@
 +++
 Categories = ["macOS", "Hackintosh"]
-Description = "Apple blocks NVIDIA from releasing graphic drivers for Mojave, so I had no choice but to switch to an RX 570. The macOS experience was smooth, but Windows ..."
+Description = "Apple blocks NVIDIA from releasing graphic drivers for Mojave, so I had no choice but to switch to an RX 570. The macOS experience was smooth, but the GPU is not a food product."
 Tags = ["macOS", "Hackintosh"]
 Keywords = ["macOS", "Hackintosh"]
 author = "Igor Kulman"
@@ -53,9 +53,9 @@ Mojave disabled **subpixel antialiasing**, so if you use a low resolution displa
 
 The AMD drivers are notoriously bad, especially for gaming when you will get a few more FPS in some game but a huge FPS drop in others. 
 
-You will also encounter additional problems. When Windows 10 is booting, both my displays show the Windows logo. After the boot is complete, the second display just turns off and it is not even detected by Windows 10. To make it work I have to physically unplug it and plug it back in. The same thing happens when the computer wakes up from sleep. This seems to be an [unresolved AMD issue as old as the GPU](https://community.amd.com/thread/225828).
+You will also encounter additional problems. When Windows 10 is booting, both my displays show the Windows logo. After the boot is complete, the second display just turns off and it is not even detected by Windows 10. There are many users on the AMD forums and Reddit complaining about this issue but with no solution.
 
-Or when I plug in my VR headset (HDMI + USB) the second display just turns off. Again I have to manually unplug it and plug it back in. When I keep the VR headset connected to HDMI when I sleep the computer, does not matter if it is booted to Windows 10 or Mojave, both displays are black when I wake it up and only a restart helps. 
+Or when I keep my VR headset connected to HDMI when I sleep the computer, does not matter if it is booted to Windows 10 or Mojave, both displays are black when I wake it up and only a restart helps. 
 
 I never had such problems with any NVIDIA GPU.
 
