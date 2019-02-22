@@ -47,13 +47,15 @@ The only thing that did not work right a way was sound. The [Clover ALC script](
 
 To get your sound working in Mojave you now have to use [AppleALC](https://github.com/acidanthera/AppleALC), which is a **Lilu** plugin and supports [a lot of sound card codecs](https://github.com/acidanthera/AppleALC/wiki/Supported-codecs). My **ALC887** is directly supported so I just installed the **kext** using **Kext Utility** without any modifications and the sound started working after restart, both playback and recording, using my gaming headset. 
 
-Mojave disabled **subpixel antialiasing**, so if you use a low resolution display, like 1080p, all the fonts look terrible. I run and old FullHD display next to a 4K display and it was really visible. Running `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO` and rebooting macOS made it better but it still feels off.
+Mojave disabled **subpixel antialiasing**, so if you use a low resolution display, like FullHD, all the fonts look terrible. I run and old FullHD display next to a 4K display and it was really visible. Running `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO` and rebooting macOS made it better but it still feels off.
 
 ### RX 570 in Windows 10
 
 The AMD drivers are notoriously bad, especially for gaming when you will get a few more FPS in some game but a huge FPS drop in others. 
 
-You will also encounter additional problems. When Windows 10 is booting, both my displays show the Windows logo. After the boot is complete, the second display just turns off and it is not even detected by Windows 10. There are many users on the AMD forums and Reddit complaining about this issue but with no solution.
+You will also encounter additional problems. When Windows 10 is booting, both my displays show the Windows logo. After the boot is complete, the second display connected via DVI just turns off and it is not even detected by Windows 10. There are many users on the AMD forums and Reddit complaining about this issue but with no solution. 
+
+Some kind of DisplayPort to DVI cable might work better, but the GPU has a DVI port so it should work directly. Especially when it works in macOS and before Windows 10 is booted, meaning it is a driver issue. 
 
 Or when I keep my VR headset connected to HDMI when I sleep the computer, does not matter if it is booted to Windows 10 or Mojave, both displays are black when I wake it up and only a restart helps. 
 
