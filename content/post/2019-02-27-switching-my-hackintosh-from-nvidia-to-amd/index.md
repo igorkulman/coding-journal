@@ -43,6 +43,8 @@ I switched the GPUs, booted High Sierra and the RX 570 just worked. No extra set
 
 I did a [full disk backup with CloneZilla](/using-clonezilla-for-hackintosh-backups/) and updated to Mojave. The update went fine, no problems during the process. 
 
+{{% post-image "mojave.png" %}}
+
 The only thing that did not work right a way was sound. The [Clover ALC script](https://github.com/toleda/audio_CloverALC) I used in High Sierra to get my **ALC887** working is no longer supported in Mojave. 
 
 To get your sound working in Mojave you now have to use [AppleALC](https://github.com/acidanthera/AppleALC), which is a **Lilu** plugin and supports [a lot of sound card codecs](https://github.com/acidanthera/AppleALC/wiki/Supported-codecs). My **ALC887** is directly supported so I just installed the **kext** using **Kext Utility** without any modifications and the sound started working after restart, both playback and recording, using my gaming headset. 
