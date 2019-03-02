@@ -65,6 +65,6 @@ I never had such problems with any NVIDIA GPU.
 
 ## Conclusion
 
-The AMD GPUs are good enough for driving your (4K) display in macOS, you basically have no other choice when you need to run Mojave. They work out of the box, no extra steps needed. 
+The AMD GPUs are good enough for driving your (4K) displays in macOS, you basically have no other choice when you need to run Mojave. They work out of the box, no extra steps needed. 
 
-But that is about it. They are just not good products overall. If you dual boot to Windows on your Hackintosh, the experience there will be quite bad. I am not trying to sell my GTX 1060 right a way just in case Apple changes their mind (yeah, I know).
+If you dual boot to Windows on your Hackintosh, the experience there will not be ideal, quite worse than using a NVIDIA GPU.
