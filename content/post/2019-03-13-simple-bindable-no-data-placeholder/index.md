@@ -23,8 +23,9 @@ I created a simple `UITableView` extension to show the placeholder with a specif
 {{< highlight swift >}}
 extension UITableView {
     func setNoDataPlaceholder(_ message: String) {
-        let label = PlaceholderLabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         label.text = message
+        // styling
         label.sizeToFit()
 
         self.isScrollEnabled = false
@@ -34,36 +35,7 @@ extension UITableView {
 }
 {{< / highlight >}}
 
-`PlaceholderLabel` is a `UILabel` subclass with some custom styling. I am not a fan of inheritance but you just cannot do stuff like `UILabel` padding without subclassing it
-
-{{< highlight swift >}}
-final class PlaceholderLabel: UILabel {
-    private let padding: CGFloat = 8.0
-
-    override func drawText(in rect: CGRect) {
-        let insets = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-        setNeedsLayout()
-        return super.drawText(in: rect.inset(by: insets))
-    }
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-
-        textColor = .black
-        numberOfLines = 0
-        textAlignment = .center
-        font = UIFont.preferredFont(forTextStyle: .body)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-{{< / highlight >}}
-
 To hide it when no longer needed I created another extension method
-
-<!--more-->
 
 {{< highlight swift >}}
 extension UITableView {
@@ -77,6 +49,8 @@ extension UITableView {
 
 With this I would have to call those two extension method manually depending on the data in the `UITableView` which is unnecessary manual work. 
 
+<!--more-->
+
 ## Making the placeholder bindable
 
 I use `RxSwift` in the project so I made it bindable.
@@ -84,8 +58,8 @@ I use `RxSwift` in the project so I made it bindable.
 {{< highlight swift >}}
 extension Reactive where Base: UITableView {
     func isEmpty(message: String) -> Binder<Bool> {
-        return Binder(base) { tableView, isLoading in
-            if isLoading {
+        return Binder(base) { tableView, isEmpty in
+            if isEmpty {
                 tableView.setNoDataPlaceholder(message)
             } else {
                 tableView.removeNoDataPlaceholder()
@@ -95,13 +69,13 @@ extension Reactive where Base: UITableView {
 }
 {{< / highlight >}}
 
-This extension ads an `isEmpty` function to every `UITableView` that you can call with the desired "no data" message and get back a property that you can use for binding
+This extension adds an `isEmpty` function to every `UITableView` that you can call with the desired "no data" message and get back a property that you can use for binding
 
 {{< highlight swift >}}
 let isEmpty = tableView.rx.isEmpty(message: L10n.noResponses)
 viewModel.responses.map({ $0.count <= 0 }).distinctUntilChanged().bind(to: isEmpty).disposed(by: disposeBag)
 {{< / highlight >}}
 
-The `L10n.noResponses` is just a [safer way to use translated strings](/using-ios-strings-in-a-safer-way/) and `viewModel.responses` is a [and observble backing the `UITableView` data](/using-mvvm-with-tables-in-ios/).
+The `L10n.noResponses` is just a [safer way to use translated strings](/using-ios-strings-in-a-safer-way/) and `viewModel.responses` is a [and observable backing the `UITableView` data](/using-mvvm-with-tables-in-ios/).
 
 With this binding you can be sure the placeholder is only shown when needed, without any manual calls to the two extension methods.
