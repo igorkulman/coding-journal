@@ -1,6 +1,6 @@
 +++
 Categories = ["macOS", "Swift"]
-Description = ""
+Description = "When I started working on my open-source Localization Editor, which is a macOS application, I encountered some things that were a bit strange compared to iOS development. One of those things is that copy & paste does not automatically work on a NSTextField. You have to implement it yourself."
 Tags = ["macOS", "Swift"]
 Keywords = ["macOS", "Swift"]
 author = "Igor Kulman"
