@@ -21,6 +21,7 @@ enableRobotsTXT = true
   delayDisqus = true
   showRelatedPosts = true
   since = 2012
+  selfHosted = true
 
 [Author]
   name = "Igor Kulman"
