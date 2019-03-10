@@ -61,12 +61,22 @@
   </div>
 </footer>
 
+{{- if .Site.Params.selfHosted -}}
+{{- if .Site.Params.useKaTeX }}
+<script src="{{ "js/katex.min.js" | absURL }}"></script>
+<script src="{{ "js/auto-render.min.js" | absURL }}"></script>
+{{- end }}
+<script src="{{ "js/jquery.min.js" | absURL }}"></script>
+<script src="{{ "js/bootstrap.min.js" | absURL }}"></script>
+{{- else -}}
 {{- if .Site.Params.useKaTeX }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
 {{- end }}
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+{{- end }}
+
 <script src="{{ "js/main.js" | absURL }}"></script>
 {{- if .Site.Params.staticman }}
 <script src="{{ "js/staticman.js" | absURL }}"></script>
@@ -78,12 +88,19 @@
 {{- end -}}
 {{- if .Site.Params.useKaTeX }}
 <script> renderMathInElement(document.body); </script>
-{{- end }}
+{{- end -}}
+
 {{- if .Site.Params.usePhotoswipe }}
+{{- if .Site.Params.selfHosted -}}
+<script src="{{ "js/photoswipe.min.js" | absURL }}"></script>
+<script src="{{ "js/photoswipe-ui-default.min.js" | absURL }}"></script>
+{{- else -}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+{{- end -}}
 <script src="{{ "js/load-photoswipe.js" | absURL }}"></script>
-{{- end }}
+{{- end -}}
+
 <!-- Google Custom Search Engine -->
 {{ if .Site.Params.gcse }}
 <script>
