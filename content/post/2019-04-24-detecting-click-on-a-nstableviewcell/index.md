@@ -1,6 +1,6 @@
 +++
 Categories = ["macOS", "Swift"]
-Description = ""
+Description = "When you use NSTableView in an macOS application, there is no direct way to know a specific NSTableViewCell was clicked by the user. In my Localization Editor project I wanted the user to be able to focus a NSTextField when clicking anywhere in the NSTableViewCell it is contained in, so I had to implement it myself."
 Tags = ["macOS", "Swift"]
 Keywords = ["macOS", "Swift"]
 author = "Igor Kulman"
@@ -10,7 +10,7 @@ url = "/detecting-click-on-a-nstableviewcell"
 
 +++
 
-When you use `NSTableView` in an macOS application, there is no direct way to know a specific `NSTableViewCell` was clicked by the user. In my [Localization Editor](https://github.com/igorkulman/iOSLocalizationEditor) project I wanted the user to by able to focus a `NSTextField` when clicking anywhere in the `NSTableViewCell` it is contained in, so I had to implement it myself.
+When you use `NSTableView` in an macOS application, there is no direct way to know a specific `NSTableViewCell` was clicked by the user. In my [Localization Editor](https://github.com/igorkulman/iOSLocalizationEditor) project I wanted the user to be able to focus a `NSTextField` when clicking anywhere in the `NSTableViewCell` it is contained in, so I had to implement it myself.
 
 I created a new delegate extending the `NSTableViewDelegate` with one additional method informing about a `NSTableViewCell` getting clicked
 
@@ -20,7 +20,7 @@ protocol NSTableViewClickableDelegate: NSTableViewDelegate {
 }
 {{< /highlight >}}
 
-Then I added an extension to the `NSTableView` to computed the index of the clicked `NSTableViewCell`
+Then I added an extension to the `NSTableView` to compute the index of the clicked `NSTableViewCell`
 
 {{< highlight swift >}}
 extension NSTableView {
