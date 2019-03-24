@@ -26,13 +26,13 @@ The problem is that requirements change over time, most of the time after proble
 
 #### Size dependent on the filesystem
 
-**CloneZilla** works well with `HFS+`, can detect used and free space. This means it only backs up the used space, so the resulting image is not as big as your SSD and the process is fast. When change the filesystem to `APFS`, for example when [updating to Mojave](/switching-my-hackintosh-from-nvidia-to-amd) this is no longer true. **CloneZilla** does not support `APFS` so it backs it up sector by sector, the resulting image is as big as the SSD and the process is quite slow.
+**CloneZilla** works well with `HFS+`, can detect used and free space. This means it only backs up the used space, so the resulting image is not as big as your SSD and the process is fast. When you change the filesystem to `APFS`, for example when [updating to Mojave](/switching-my-hackintosh-from-nvidia-to-amd) this is no longer true. **CloneZilla** does not support `APFS` so it backs it up sector by sector, the resulting image is as big as the SSD and the process is quite slow.
 
 #### Inflexibility for smaller fixes
 
-One time I updated **Clover** and my Hackintosh did not boot anymore, got stuck on some error message. The problem was that the **Clover** installer decided not to check `OsxAptioFix3Drv-64.efi` by default anymore and this module got deleted. 
+One time I updated **Clover** and my Hackintosh did not boot, got stuck on some error message. The problem was that the **Clover** installer decided not to check `OsxAptioFix3Drv-64.efi` by default anymore and this module got deleted. 
 
-Doing a full restore from an image seemed like a waste of time when I just needed to restore one missing file. So I used **Clover** on my `Unibeast` flash drive that I keep safe and booted the Hackintosh with it. This screwed up iMessage (different serial number). I then reinstalled **Clover** checking `OsxAptioFix3Drv-64.efi`, booted backed normally and fixed iMessage. 
+Doing a full restore from an image seemed like a waste of time when I just needed to restore one missing file. I used **Clover** on my `Unibeast` flash drive that I keep safe and booted the Hackintosh with it. This screwed up iMessage (different serial number). I then reinstalled **Clover** checking `OsxAptioFix3Drv-64.efi`, booted backed normally and fixed iMessage. 
 
 This made me realize that image based backups are not ideal for real world problems (you probably screw up your **EFI** or **kext**s more often that your SSD dies) and I got looking for some other solution.
 
@@ -74,7 +74,7 @@ If **Clover** shows up and macOS boots up, you are all set. You can check the cu
 
 ### Scheduling the backup
 
-With all of the setup now done, you should schedule **Carbon Copy Cloner** do do a periodic backup. The backup will be incremental, so it will not take as much time as the first backup. It will be done in the background so you wil probably not even notice it.
+With all of the setup now done, you should schedule **Carbon Copy Cloner** do do a periodic backup. The backup will be incremental, so it will not take as much time as the first backup. It will be done in the background so you will probably not even notice it.
 
 {{% post-image "Schedule.png" %}}
 
