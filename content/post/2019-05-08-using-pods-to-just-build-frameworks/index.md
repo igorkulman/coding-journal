@@ -4,7 +4,7 @@ Description = ""
 Tags = ["iOS", "Xcode", "Carthage", "Cocoapods"]
 Keywords = ["iOS", "Xcode", "Carthage", "Cocoapods"]
 author = "Igor Kulman"
-date = "2019-05-15T05:29:12+01:00"
+date = "2019-05-08T05:29:12+01:00"
 title = "Using Cocoapods to just build frameworks for use elsewhere"
 url = "/using-pods-to-just-build-frameworks"
 
