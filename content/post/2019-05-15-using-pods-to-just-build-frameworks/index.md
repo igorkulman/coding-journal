@@ -100,4 +100,12 @@ I had to make slight changes to the script because `GRDB.swift` uses  `GRDB.swif
 
 I also added a script that copies the resulting fat `GRDB.framework` and `SQLCipher.framework` to a directory in the main project. 
 
+When you update the libraries using `CocoaPods` and the project gets regenerated, you can then just revert the project changes so you do not have to add the aggregated target again.
+
 With this setup, whenever I need to build a new version of `GRDB.swift`, I just update `CocoaPods` in the  `GRDB.framework` project, add back all the scripts (stored in separate `.sh` files and linked) and run the aggregate target. After a few minutes the frameworks are built and ready in the correct folder.
+
+I created a Github repository showing the whole project: https://www.github.com/igorkulman/GRDBCipher.
+
+{{% github-repo "igorkulman/GRDBCipher" %}}
+
+## Adding the frameworks to the main main project
