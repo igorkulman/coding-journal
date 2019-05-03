@@ -106,6 +106,8 @@ With this setup, whenever I need to build a new version of `GRDB.swift`, I just 
 
 I created a Github repository showing the whole project: https://www.github.com/igorkulman/GRDBCipher.
 
-{{% github-repo "igorkulman/GRDBCipher" %}}
-
 ## Adding the frameworks to the main main project
+
+With the fat  `GRDB.framework` and `SQLCipher.framework` files built, you can now just embed them to your application like any other static framework. 
+
+{{% github-repo "igorkulman/GRDBCipher" %}}
