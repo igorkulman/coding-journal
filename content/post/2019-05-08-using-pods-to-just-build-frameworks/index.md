@@ -7,6 +7,7 @@ author = "Igor Kulman"
 date = "2019-05-08T05:29:12+01:00"
 title = "Using CocoaPods to just build frameworks for use elsewhere"
 url = "/using-pods-to-just-build-frameworks"
+share_img = "/using-pods-to-just-build-frameworks/logo.png"
 
 +++
 
