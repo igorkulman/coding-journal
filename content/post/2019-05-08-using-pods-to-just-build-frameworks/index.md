@@ -1,6 +1,6 @@
 +++
 Categories = ["iOS", "Xcode", "Carthage", "Cocoapods"]
-Description = ""
+Description = "I am definitely not a fan of CocoaPods, I use Carthage in all of my projects. It is not ideal but I have a way of using it that works for me. Recently I was faced with a problem that made me use CocoaPods but in a quite different way, just to build some frameworks to be used elsewhere without CocoaPods."
 Tags = ["iOS", "Xcode", "Carthage", "Cocoapods"]
 Keywords = ["iOS", "Xcode", "Carthage", "Cocoapods"]
 author = "Igor Kulman"
