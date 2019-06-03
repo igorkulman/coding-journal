@@ -1,6 +1,6 @@
 +++
 Categories = ["iOS", "Xcode"]
-Description = ""
+Description = "If you use the standard iOS UIAlertController to present the user with a list of actions, there is not much you can do about styling each of the UIAlertActions shown. The text of the shown UIAlertAction uses the UIView's tint color, so you can use the UIAppearence API to change it to any color you want, but the same color for all the `UIAlertAction`s. If you set the style to destructive instead of default, the text is shown as red, not affected by the tint color."
 Tags = ["iOS", "Xcode"]
 Keywords = ["iOS", "Xcode"]
 author = "Igor Kulman"
