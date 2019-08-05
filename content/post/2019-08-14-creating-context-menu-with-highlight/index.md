@@ -7,6 +7,7 @@ author = "Igor Kulman"
 date = "2019-08-14T05:29:12+01:00"
 title = "Creating iOS context menu with highlight and dim"
 url = "/creating-context-menu-with-highlight"
+share_img = "/creating-context-menu-with-highlight/Menu.png"
 
 +++
 
