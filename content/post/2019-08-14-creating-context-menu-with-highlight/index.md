@@ -1,6 +1,6 @@
 +++
 Categories = ["iOS", "Swift", "Xcode"]
-Description = ""
+Description = "The iOS messaging application I work on features a context menu in the chat. You long-press any message in the chat and a context menu appears. This menu was originally implemented with the standard UIMenuController. The UIMenuController is an old-style iOS API that is hard to use and does not work very well. In some situation tapping its items just did not call the assigned selectors and the menu did not work."
 Tags = ["iOS", "Swift", "Xcode"]
 Keywords = ["iOS", "Swift", "Xcode"]
 author = "Igor Kulman"
@@ -10,6 +10,18 @@ url = "/creating-context-menu-with-highlight"
 share_img = "/creating-context-menu-with-highlight/Menu.png"
 
 +++
+
+The iOS messaging application I work on features a context menu in the chat. You long-press any message in the chat and a context menu appears. This menu was originally implemented with the standard `UIMenuController`. 
+
+The `UIMenuController` is an old-style iOS API that is hard to use and does not work very well. In some situation tapping its items just did not call the assigned selectors and the menu did not work. 
+
+As part of the ongoing redesign of the application I decided to implement a new custom context menu that would looks as the designed imagined and more importantly work reliably. I did not want to use any 3rd party library to keep it as simple and possible.
+
+Using just `UIKit` I came up with a context menu with a dim effect and a highlight on the selected item
+
+{{% post-image "animation.gif" %}}
+
+<!--more-->
 
 ### 1. New `UIWindow`
 
@@ -35,7 +47,7 @@ final class MessageContextMenuWindow: UIWindow {
 
 If you now create this window and make it visible, it will be shown on top of your main window without dismissing the keyboard, but it will be transparent for now
 
-{{% post-image "TransparentWindow.png" "200px" %}}
+{{% post-image "TransparentWindow.png" "300px" %}}
 
 ### 2. `UIViewController` with the original view snapshot
 
@@ -54,7 +66,7 @@ UIView.animate(withDuration: backgroundDuration) {
 
 to get the dim effect
 
-{{% post-image "DimEffect.png" "200px"%}}
+{{% post-image "DimEffect.png" "300px"%}}
 
 #### Highlighted original view
 
@@ -129,6 +141,8 @@ extension MessageContextMenuWindowViewController: UIPopoverPresentationControlle
 
 If you forget to set the delegate and override `adaptivePresentationStyle` the `popover` will be shown fullscreen.
 
+### 4. The result
+
 The context menu is now finished
 
-{{% post-image "Menu.png" "200px" %}}
+{{% post-image "Menu.png" "300px" %}}
