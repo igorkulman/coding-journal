@@ -1,6 +1,6 @@
 +++
 Categories = ["iOS", "Swift", "Xcode"]
-Description = "The iOS messaging application I work on features a context menu in the chat. You long-press any message in the chat and a context menu appears. This menu was originally implemented with the standard UIMenuController. The UIMenuController is an old-style iOS API that is hard to use and does not work very well. In some situation tapping its items just did not call the assigned selectors and the menu did not work."
+Description = "The iOS messaging application I work on features a context menu in the chat. You long-press any message in the chat and the context menu appears. This menu was originally implemented using the standard UIMenuController. The UIMenuController is an old-style iOS API that is hard to use and does not work very well. In some situations tapping its items just did not call the assigned selectors and the menu did not work."
 Tags = ["iOS", "Swift", "Xcode"]
 Keywords = ["iOS", "Swift", "Xcode"]
 author = "Igor Kulman"
@@ -11,27 +11,29 @@ share_img = "/creating-context-menu-with-highlight/Menu.png"
 
 +++
 
-The iOS messaging application I work on features a context menu in the chat. You long-press any message in the chat and a context menu appears. This menu was originally implemented with the standard `UIMenuController`. 
+The iOS messaging application I work on features a context menu in the chat. You long-press any message in the chat and the context menu appears. This menu was originally implemented using the standard `UIMenuController`. 
 
-The `UIMenuController` is an old-style iOS API that is hard to use and does not work very well. In some situation tapping its items just did not call the assigned selectors and the menu did not work. 
+The `UIMenuController` is an old-style iOS API that is hard to use and does not work very well. In some situations tapping its items just did not call the assigned selectors and the menu did not work. 
 
-As part of the ongoing redesign of the application I decided to implement a new custom context menu that would looks as the designed imagined and more importantly work reliably. I did not want to use any 3rd party library to keep it as simple and possible.
+As part of the ongoing redesign of the application I decided to implement a new custom context menu that would look as the designer imagined and more importantly work reliably. I did not want to use any 3rd party library to keep it as simple and possible.
 
 Using just `UIKit` I came up with a context menu with a dim effect and a highlight on the selected item
 
 {{% post-image "animation.gif" %}}
 
+Here is how I approached building it. 
+
 <!--more-->
 
 ### 1. New `UIWindow`
 
-The first step is to create a new `UIWindow` and put it on top of the main application window. This is it needed mostly to show the context menu as a standard `UIViewController` presented as `.popover` without dismissing the keyboard.
+The first step was to create a new `UIWindow` and put it on top of the main application window. This was needed mostly to show the context menu as a standard `UIViewController` presented as `.popover` without dismissing the keyboard.
 
 If you just create a new `UIWindow` and make it visible, it is shown under the keyboard window. To make it show above the keyboard window you need to set its `windowLevel` to a value higher that the `windowLevel` of the keyboard window. 
 
-But this does not work as expected since iOS 11. The setter would not allow you to assign a value higher than `windowLevel` of the keyboard window, it will be always `1` less. 
+This does not work as expected on iOS 11 and newer. The setter would not allow you to assign a value higher than the `windowLevel` of the keyboard window, it will be always `1` less. 
 
-The solution to this is to create a custom class inheriting from `UIWindow` and overriding the `windowLevel` getter with some hard-coded hight value
+The solution to this was to create a custom class inheriting from `UIWindow` and overriding the `windowLevel` getter with some hard-coded high value
 
 {{< highlight swift >}}
 final class MessageContextMenuWindow: UIWindow {
@@ -51,11 +53,11 @@ If you now create this window and make it visible, it will be shown on top of yo
 
 ### 2. `UIViewController` with the original view snapshot
 
-The next step is to create a `UIViewController` that will be shown in the new window. 
+The next step was to create a `UIViewController` that will be shown in the new window. 
 
 #### Dim effect
 
-First just set the background to some level of semi-transparent black
+First I just set the background to some level of semi-transparent black
 
 {{< highlight swift >}}
 let backgroundDuration: TimeInterval = 0.1
@@ -70,9 +72,9 @@ to get the dim effect
 
 #### Highlighted original view
 
-The next step is taking the original view, for example the `contentView` of the `UITableViewCell` and highlight it in this new `UIViewController`. 
+The next step was taking the original view, for example the `contentView` of the `UITableViewCell` and highlight it in this new `UIViewController`. 
 
-With `focusedView` as the original view your first create a snapshot from this view
+With `focusedView` as the original view I first created a snapshot from this view
 
 {{< highlight swift >}}
 guard let snapshotView = focusedView.snapshotView(afterScreenUpdates: false) else {
@@ -80,15 +82,15 @@ guard let snapshotView = focusedView.snapshotView(afterScreenUpdates: false) els
 }
 {{< /highlight>}}
 
-This creates a new `UIView` that is "flat" (no subviews) and looks exactly like the original view.
+This created a new `UIView` that is "flat" (no subviews) and looked exactly like the original view.
 
-This snapshot view then needs to be added to the `UIViewController`
+This snapshot view then needed to be added to the `UIViewController`
 
 {{< highlight swift >}}
 view.addSubview(snapshotView)
 {{< /highlight>}}
 
-The trick here is to position it exactly over the original view in the main application window. To do this you need to convert the position of the original view to the position in the `UIViewController`
+The trick here was to position it exactly over the original view in the main application window. To do this I needed to convert the position of the original view to the position in the `UIViewController`
 
 {{< highlight swift >}}
 guard let focusedViewSuperview = focusedView.superview else {
@@ -99,13 +101,13 @@ let convertedFrame = view.convert(focusedView.frame, from: focusedViewSuperview)
 snapshotView.frame = convertedFrame
 {{< /highlight>}}
 
-With the you can now see the view highlighted        
+With that you can now see the view highlighted        
 
 {{% post-image "HighlightEffect.png" "200px" %}}
 
 ### 3. `UIViewController` shown as `.popover`
 
-The final step is to show the actual context menu. I wanted to keep it simple so I just use an `UITableViewController` with fixed size
+The final step was to show the actual context menu. I wanted to keep it simple so I just used an `UITableViewController` with fixed size
 
 {{< highlight swift >}}
 override func viewDidLoad() {
@@ -117,7 +119,7 @@ override func viewDidLoad() {
 }
 {{< /highlight>}}
 
-and present it like a `.popover`
+and presented it like a `.popover`
 
 {{< highlight swift >}}
 let vc = MessageContextMenuViewController(message: message)
@@ -143,6 +145,6 @@ If you forget to set the delegate and override `adaptivePresentationStyle` the `
 
 ### 4. The result
 
-The context menu is now finished
+The context menu was now finished
 
 {{% post-image "Menu.png" "300px" %}}
