@@ -82,6 +82,7 @@ div.panel-body a.list-group-item {
   font-weight: 800;
   border-radius: 0;
   border: none;
+  font-size: 16px;
 }
 div.panel-group .panel {
     border-radius: 0;
@@ -370,14 +371,19 @@ footer .theme-by {
   margin-bottom: 10px;
 }
 .post-preview .post-meta,
-.post-heading .post-meta {
+.post-heading .post-meta,
+.page-meta {
   color: #808080;
   font-size: 18px;
   font-style: italic;
   margin: 0 0 10px;
 }
+.page-meta {
+  align-self: center;
+}
 .post-preview .post-meta a,
-.post-heading .post-meta a {
+.post-heading .post-meta a,
+.page-meta a {
   color: #404040;
   text-decoration: none;
 }
@@ -501,7 +507,8 @@ footer .theme-by {
   transition: opacity 1s linear;
 }
 .intro-header .page-heading,
-.intro-header .tags-heading {
+.intro-header .tags-heading,
+.intro-header .categories-heading {
   text-align: center;
 }
 .intro-header.big-img .page-heading,
@@ -511,7 +518,8 @@ footer .theme-by {
   text-shadow: 1px 1px 3px #000;
 }
 .intro-header .page-heading h1,
-.intro-header .tags-heading h1 {
+.intro-header .tags-heading h1,
+.intro-header .categories-heading h1 {
   margin-top: 0;
   font-size: 50px;
 }
@@ -566,7 +574,8 @@ footer .theme-by {
     padding: 150px 0;
   }
   .intro-header .page-heading h1,
-  .intro-header .tags-heading h1 {
+  .intro-header .tags-heading h1,
+  .intro-header .categories-heading h1 {
     font-size: 80px;
   }
   .intro-header .post-heading h1 {

@@ -33,7 +33,7 @@
 
 # Footer
 - id: poweredBy # Accepts HTML
-  translation: '<a href="http://gohugo.io">Hugo v{{ .Site.Hugo.Version }}</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>'
+  translation: '<a href="https://gohugo.io">Hugo v{{ .Site.Hugo.Version }}</a> angetrieben &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> angepasst von <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>'
 
 # Navigation
 - id: toggleNavigation
@@ -57,7 +57,7 @@
 - id: useMarkdown
   translation: "Sie können Markdown-Syntax verwenden"
 - id: yourName
-  translation: "Irh Name"
+  translation: "Ihr Name"
 - id: yourEmail
   translation: "Ihre Emailadresse"
 - id: yourWebsite

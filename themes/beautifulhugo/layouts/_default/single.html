@@ -23,14 +23,19 @@
         {{ end }}
 
         {{ if .Site.Params.showRelatedPosts }}
-          {{ $related := .Site.RegularPages.Related . | first 3 }}
-          {{ with $related }}
-          <h4 class="see-also">{{ i18n "seeAlso" }}</h4>
-          <ul>
-          {{ range . }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ range first 1 (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+            {{ $.Scratch.Set "has_related" true }}
           {{ end }}
-          </ul>
+
+          {{ if $.Scratch.Get "has_related" }}
+                  <h4 class="see-also">{{ i18n "seeAlso" }}</h4>
+                  <ul>
+                {{ $num_to_show := .Site.Params.related_content_limit | default 5 }}
+                {{ range first $num_to_show (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+              </ul>
+
           {{ end }}
         {{ end }}
       </article>
