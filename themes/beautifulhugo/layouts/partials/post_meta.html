@@ -11,10 +11,12 @@
   {{ if .Site.Params.wordCount }}
     &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" }}
   {{ end }}
-  {{ if .Params.author }}
-    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;{{ .Params.author | safeHTML }}
-  {{ else }}
-    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;{{ .Site.Author.name | safeHTML }}
+  {{ if not .Site.Params.hideAuthor }}
+    {{ if .Params.author }}
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;{{ .Params.author | safeHTML }}
+    {{ else }}
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;{{ .Site.Author.name | safeHTML }}
+    {{ end }}
   {{ end }}
   {{- if .Site.Params.staticman -}}
     &nbsp;|&nbsp;<i class="fas fa-comment"></i>&nbsp;

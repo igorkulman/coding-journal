@@ -33,7 +33,7 @@
 
 # Footer
 - id: poweredBy # Accepts HTML
-  translation: '<a href="http://gohugo.io">Hugo v{{ .Site.Hugo.Version }}</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>'
+  translation: '<a href="https://gohugo.io">Hugo v{{ .Site.Hugo.Version }}</a> napędzany &nbsp;&bull;&nbsp; Motyw <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> przystosowany od <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>'
 
 # Navigation
 - id: toggleNavigation

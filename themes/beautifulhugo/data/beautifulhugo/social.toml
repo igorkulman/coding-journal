@@ -11,12 +11,6 @@ title = "Facebook"
 icon = "fab fa-facebook"
 
 [[social_icons]]
-id = "googleplus"
-url = "https://plus.google.com/%s"
-title = "Google+"
-icon = "fab fa-google-plus"
-
-[[social_icons]]
 id = "github"
 url = "https://github.com/%s"
 title = "GitHub"
@@ -39,6 +33,12 @@ id = "twitter"
 url = "https://twitter.com/%s"
 title = "Twitter"
 icon = "fab fa-twitter"
+
+[[social_icons]]
+id = "slack"
+url = "https://%s.slack.com/"
+title = "Slack"
+icon = "fab fa-slack"
 
 [[social_icons]]
 id = "reddit"
@@ -110,7 +110,7 @@ icon = "fas fa-gamepad"
 id = "keybase"
 url = "https://keybase.io/%s"
 title = "Keybase"
-icon = "fas fa-key"
+icon = "fab fa-keybase"
 
 [[social_icons]]
 id = "vk"
@@ -135,3 +135,27 @@ id = "500px"
 url = "https://500px.com/%s"
 title = "500px"
 icon = "fab fa-500px"
+
+[[social_icons]]
+id = "codepen"
+url = "https://codepen.io/%s"
+title = "CodePen"
+icon = "fab fa-codepen"
+
+[[social_icons]]
+id = "kaggle"
+url = "https://www.kaggle.com/%s"
+title = "kaggle"
+icon = "fab fa-kaggle"
+
+[[social_icons]]
+id = "mastodon"
+url = "https://%s"
+title = "Mastodon"
+icon = "fab fa-mastodon"
+
+[[social_icons]]
+id = "weibo"
+url = "https://weibo.com/%s"
+title = "Weibo"
+icon = "fab fa-weibo"
