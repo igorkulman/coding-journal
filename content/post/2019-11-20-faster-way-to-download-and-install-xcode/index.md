@@ -4,7 +4,7 @@ Description = "As an iOS developer you need to periodically update your Xcode, o
 Tags = ["iOS", "Swift", "Xcode"]
 Keywords = ["iOS", "Swift", "Xcode"]
 author = "Igor Kulman"
-date = "2019-11-14T05:29:12+01:00"
+date = "2019-11-20T05:29:12+01:00"
 title = "Faster way to download and install Xcode"
 url = "/faster-way-to-download-and-install-xcode"
 
