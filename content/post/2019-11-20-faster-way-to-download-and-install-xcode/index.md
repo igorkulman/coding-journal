@@ -11,7 +11,7 @@ share_img = "/faster-way-to-download-and-install-xcode/xcode-icon-17.jpg"
 
 +++
 
-As an iOS developer you need to periodically update your Xcode, on your own machine and on your CI/CD server. There are multiple ways to do this so do not waste your time and use the fastest way possible. 
+As an iOS developer you need to periodically update your Xcode, on your own machine and on your CI/CD server if you [automate your development workflow](/automating-ios-development-and-distribution-workflow/). There are multiple ways to do this so do not waste your time and use the fastest way possible. 
 
 ### Forget Mac App Store, use Apple Developer Portal
 
