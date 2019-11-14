@@ -41,7 +41,7 @@ enableRobotsTXT = true
     weight = 2
 
 [[menu.main]]
-    name = "About me / contact"
+    name = "About me"
     url = "/about/"
     weight = 3
 
