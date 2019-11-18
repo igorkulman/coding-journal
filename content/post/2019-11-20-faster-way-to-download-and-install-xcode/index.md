@@ -15,7 +15,7 @@ As an iOS developer you need to periodically update your Xcode, on your own mach
 
 ### Forget Mac App Store, use Apple Developer Portal
 
-Installing Xcode from the Mac App Store might seem like a convenient way to do so but it is too slow and inflexible. You cannot use the Mac App Store to install multiple version of Xcode at the same time if you need them, like when testing with a Xcode beta for an upcoming iOS release and download from the Mac App Store is incredibly slow.
+Installing Xcode from the Mac App Store might seem like a convenient way to do so but it is too slow and inflexible. You cannot use the Mac App Store to install multiple version of Xcode at the same time if you need them, like when testing with a Xcode beta for an upcoming iOS release. Download from the Mac App Store is incredibly slow and sometimes not even available for days after release (like 11.2.1).
 
 The place to go is the [Apple Developer Portal](https://developer.apple.com/download/) where you can find all the Xcode versions, including the betas.
 
