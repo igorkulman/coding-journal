@@ -1,3 +1,5 @@
-"ignoredFiles": [
-    "themes/beautifulhugo/static/fontawesome/webfonts/*"
-]
+{
+    "ignoredFiles": [
+        "themes/beautifulhugo/static/fontawesome/webfonts/*"
+    ]
+}
