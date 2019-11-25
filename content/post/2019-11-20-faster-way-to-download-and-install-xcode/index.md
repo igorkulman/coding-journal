@@ -17,7 +17,7 @@ As an iOS developer you need to periodically update your Xcode, on your own mach
 
 Installing Xcode from the Mac App Store might seem like a convenient way to do so but it is too slow and inflexible. You cannot use the Mac App Store to install multiple version of Xcode at the same time if you need them, like when testing with a Xcode beta for an upcoming iOS release. Download from the Mac App Store is incredibly slow and sometimes not even available for days after release (like 11.2.1).
 
-The place to go is the [Apple Developer Portal](https://developer.apple.com/download/) where you can find all the Xcode versions, including the betas.
+The place to go is the [Apple Developer Portal](https://developer.apple.com/download/) where you can find all the Xcode versions, including the betas. 
 
 ### Faster download with `aria2`
 
@@ -40,6 +40,12 @@ exec(command)
 {{< /highlight >}}
 
 This script downloads the given Xcode by URL from the Apple Developer Portal, but uses up to 16 separate connections to do so. You will see a significant download speed improvement.
+
+Make sure you use the "More" site at [https://developer.apple.com/download/more/](https://developer.apple.com/download/) even for downloading the latest version of Xcode. 
+
+{{< post-image "more.png" >}}
+
+When copying the `ADCDownloadAuth` cookie make sure you copy the correct value, Safari adds all kinds stuff around it when you just use "copy value". 
 
 ### Faster install with `xip` and deleting previous Xcode first
 
