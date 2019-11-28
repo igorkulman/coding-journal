@@ -6,6 +6,11 @@ Paginate = 5
 disqusShortname = "coudingjournal"
 enableRobotsTXT = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
   twitterName = "igorkulman"
   githubName = "igorkulman"
