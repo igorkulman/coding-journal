@@ -195,10 +195,11 @@ img {
 
 .navbar-custom .avatar-container {
   opacity: 1;
+  visibility: visible;
   position: absolute;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  -moz-transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
   left: 50%;
   width: 50px;
   margin-top: -25px;
@@ -220,6 +221,7 @@ img {
 
 .navbar-custom.top-nav-short .avatar-container{
   opacity: 0;
+  visibility: hidden;
 }
 
 .navbar-custom.top-nav-expanded .avatar-container  {
