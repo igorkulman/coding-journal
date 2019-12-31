@@ -11,6 +11,9 @@ enableRobotsTXT = true
     [markup.goldmark.renderer]
       unsafe = true
 
+[permalinks]
+  post = "/:slug/"
+
 [params]
   twitterName = "igorkulman"
   githubName = "igorkulman"
