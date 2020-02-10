@@ -15,7 +15,7 @@ When my ISP had a problem resulting in Internet outage for multiple hours and I 
 
 The whole process should be easy, just connecting the iPhone to the computer with an USB cable and turning on the Personal hotspot in the Settings. The iPhone immediately registered 1 connection, but Internet did not work on the computer, although everything looked fine in System Preferences
 
-{{% post-image "tethering.png" %}}
+![iPhone tethering](tethering.png)
 
 <!--more-->
 

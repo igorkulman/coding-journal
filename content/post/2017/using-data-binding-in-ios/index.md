@@ -17,7 +17,7 @@ When I started working on a native iOS project after a few years of Windows (Pho
 
 Let's use a simple example scenario. You have a screen where the users have to choose their country and then enter their mobile number. The number has to be validated with respect to the selected country and if everything is ok the Next button should become visible. So basically it should work like this
 
-{{% post-image "iosvalidation.gif" %}}
+![Form validation](iosvalidation.gif)
 
 <!--more-->
 

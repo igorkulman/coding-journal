@@ -174,7 +174,7 @@ end
 
 resulting in
 
-{{% post-image "fastlane_badge.png" %}}
+![Customized app icon](fastlane_badge.png)
 
 ### Automatic screenshots generation
 

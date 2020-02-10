@@ -35,7 +35,7 @@ When you have `mitmproxy` or `mitmweb` running you now need to set your iOS devi
 
 <!--more-->
 
-{{% post-image "proxy.png" "350px" %}}
+![Proxy setting on iOS](proxy.png)
 
 The fastest way to find out the IP address  of your computer is running `ifconfig | grep inet`.
 
@@ -45,11 +45,11 @@ This is sufficient to debug HTTP traffic, but if you want to debug HTTPS traffic
 
 Open Safari on your iOS device, navigate to `mitm.it` and install the certificate for the Apple devices. 
 
-{{% post-image "cert.png" "350px" %}}
+![Installing certificate on iOS](cert.png)
 
 Then go to **Settings | General | About | Certificate Trust Settings** and give the installed certificate full trust.
 
-{{% post-image "trust.png" "350px" %}}
+![Trusting certificate on iOS](trust.png)
 
 ## Debugging network requests
 
@@ -57,4 +57,4 @@ You can now start doing network requests on your iOS device by opening websites 
 
 Apps that take security more seriously will stop working, because they do certificate pinning and there is no good way to debug their network requests (try refreshing the feed in Twitter for example).
 
-{{% post-image "mitmweb.png" %}}
+![mitmproxy web UI](mitmweb.png)

@@ -35,7 +35,7 @@ I [created a installation disk](https://www.tonymacx86.com/threads/unibeast-inst
 
 I installed macOS on a separate SSD, so I had no problem with the UEFI loader conflicting with Windows. The only problem is that my Windows 10 install is MBR not UEFI so Clover (the Hackintosh UEFI loader) cannot run it. I solved it by having the SSD with Windows as primary boot device so Windows boots automatically when I turn on the computer. When I want to boot macOS I just press F12 to get to the BIOS boot menu and choose the macOS drive to boot from manually.
 
-{{% post-image "hackintosh.png" %}}
+![Hackintosh running macOS Sierra](hackintosh.png)
 
 ## Performance
 

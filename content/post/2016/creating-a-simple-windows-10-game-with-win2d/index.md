@@ -13,7 +13,7 @@ share_img = "/images/sokoban-gameplay.gif"
 
 Some time ago while looking at some pixel art work I got an idea to create a retro pixel art game for Windows 10. The choice was obvious, [Sokoban](https://www.microsoft.com/store/apps/9nblggh4xdln). I have a very special relationship with the Sokoban game. The Delpi version of Sokoban was the first game I ever created. I later ported it to all the platforms I played with, namely J2ME (for my Siemens S60 phone), Linux (using Kylix which was basically a Delphi for Linux), Windows Phone 7 and now [Sokoban Pixel](https://www.microsoft.com/store/apps/9nblggh4xdln) for the Universal Windows Platform.
 
-{{% post-image "sokoban-gameplay.gif" %}}
+![Playing Sokoban](sokoban-gameplay.gif)
 
 <!--more-->
 
@@ -100,7 +100,7 @@ If you want to make your game run on XBox One and do not have an XBox One to tes
 
 Making your game playable on a phone or on a tablet is a bit tricky. There are no input devices usually attached, so you have to come up with your own. There are many ways to handle this. You can recognizes swipes on the device, or make the user tilt the device. But the solution I like the best is to render a simple d-pad in the right corner of the screen. This way the user can hold the device in both hands and use the right thumb to play the game.
 
-{{% post-image "sokoban-dpad.png" %}}
+![DPad for navigation](sokoban-dpad.png)
 
 **Conclusion**
 

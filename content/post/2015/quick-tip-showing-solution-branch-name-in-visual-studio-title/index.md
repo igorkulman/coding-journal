@@ -13,12 +13,12 @@ I work with Git, switching branches frequently, especially working on features a
 
 The extension is called [Rename Visual Studio Window][1] and it works with Visual Studio 2015, 2013, 2012, 2010. This extension supports Git, so you can easily add the branch name to the title with a config like mine using [gitBranchName].
 
-{{% post-image "rename.png" %}}
+![Rename Visual Studio Window](rename.png)
 
 <!--more-->
 
 Your taskbar will then look like this
 
-{{% post-image "trayalya.png" %}}
+![Multiple projects in tray](trayalya.png)
 
  [1]: https://visualstudiogallery.msdn.microsoft.com/f3f23845-5b1e-4811-882f-60b7181fa6d6

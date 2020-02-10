@@ -19,11 +19,11 @@ The task was simple. In the chat detail screen I had to add a voice recording bu
 
 The message input was located in the bottom right corner of the screen when keyboard was not shown
 
-{{% post-image "quick-recording-bottom.png" %}}
+![Button without keyboard](quick-recording-bottom.png)
 
 and moved up with the keyboard
 
-{{% post-image "quick-recording-middle.png" %}}
+![Button with keyboard](quick-recording-middle.png)
 
 ### The problem
 

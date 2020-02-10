@@ -8,7 +8,7 @@ tags = ["Csharp","Caliburn-Micro","Windows Phone","XAML"]
 +++
 Windows Phone 8.1 introduced many interesting new thing, the one I personally like the best as a developer is the Share Contract. The Share Contract allows your apps to share data using an unified and easy way and also to receive data from other apps. This functionality is important for my [Pock8][1] app, which is a Pocket client. By making Pock8 app a Share Contract target, the app can receive links from other apps, more importantly from the built-in webrowser (IE). This makes the app even more easy to use and valuable. 
 
-{{% post-image "wp81.png" %}}
+![Pock8 as share target](wp81.png)
 
 The problem is that [all the documentation I found][3] and also [the sample app][4] are for Windows Runtime. Pock8 is a Silverligt app and I have no intentions to rewrite it to Windows Runtime. 
 

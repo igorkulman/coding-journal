@@ -39,4 +39,4 @@ You can find multiple [tutorials](https://gist.github.com/chaitanyagupta/9a2a13f
 
 And you are done!
 
-{{% post-image "easyresigny.png" %}}
+![EasyResigny](easyresigny.png)

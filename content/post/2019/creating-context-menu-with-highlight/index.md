@@ -19,7 +19,7 @@ As part of the ongoing redesign of the application I decided to implement a new 
 
 Using just `UIKit` I came up with a context menu with a dim effect and a highlight on the selected item
 
-{{% post-image "animation.gif" %}}
+![Context menu with highlight and dim](animation.gif)
 
 Here is how I approached building it. 
 
@@ -49,7 +49,7 @@ final class MessageContextMenuWindow: UIWindow {
 
 If you now create this window and make it visible, it will be shown on top of your main window without dismissing the keyboard, but it will be transparent for now
 
-{{% post-image "TransparentWindow.png" "300px" %}}
+![Transparent window overlay](TransparentWindow.png)
 
 ### 2. `UIViewController` with the original view snapshot
 
@@ -68,7 +68,7 @@ UIView.animate(withDuration: backgroundDuration) {
 
 to get the dim effect
 
-{{% post-image "DimEffect.png" "300px"%}}
+![Dim effect](DimEffect.png)
 
 #### Highlighted original view
 
@@ -103,7 +103,7 @@ snapshotView.frame = convertedFrame
 
 With that you can now see the view highlighted        
 
-{{% post-image "HighlightEffect.png" "200px" %}}
+![Highlight effect](HighlightEffect.png)
 
 ### 3. `UIViewController` shown as `.popover`
 
@@ -147,4 +147,4 @@ If you forget to set the delegate and override `adaptivePresentationStyle` the `
 
 The context menu was now finished
 
-{{% post-image "Menu.png" "300px" %}}
+![Completed menu](Menu.png)

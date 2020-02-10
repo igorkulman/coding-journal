@@ -6,13 +6,13 @@ url = "/why-are-there-no-great-windows-8-apps-because-of-winrt-a-developers-view
 categories = ["WinRT"]
 tags = ["Csharp","winrt"]
 +++
-Let&#8217;s face it, there are no really great apps for Windows 8 and the number of trashy apps is also very low compared to the Android and iOS ecosystems. Microsoft looks really desperate to bring more apps and developers to the ecosystem. Instead of improving the API and its capabilities, Microsoft just generates desperately looking campaigns to improve the apps count. I sometimes wonder if they ever realize that the number of apps is not important when people cannot find the apps they are used to use on Android or iOS in the Windows Store.
+Let's face it, there are no really great apps for Windows 8 and the number of trashy apps is also very low compared to the Android and iOS ecosystems. Microsoft looks really desperate to bring more apps and developers to the ecosystem. Instead of improving the API and its capabilities, Microsoft just generates desperately looking campaigns to improve the apps count. I sometimes wonder if they ever realize that the number of apps is not important when people cannot find the apps they are used to use on Android or iOS in the Windows Store.
 
-{{% post-image "microsoft-surface-2-650x0.jpg" %}}
+![Microsoft Surface](microsoft-surface-2-650x0.jpg)
 
 So why are there so few Windows 8 apps? I will tell you my (and only my) opinion and experience. I developed a few Windows 8 apps, some of them fairly complex. I tried to develop a few really great apps but many of those projects never got done. The reason is the API (WinRT).
 
-Let&#8217;s start with something (that should be) trivial. Imagine you want to **display HTML files with images, CSS, JS in a WebView**. It is a common scenario for displaying downloaded manuals, interactive texts, etc. It can be done on Android, iOS and even on Windows Phone by copying the data to isolated storage and pointing the WebView there. 
+Let's start with something (that should be) trivial. Imagine you want to **display HTML files with images, CSS, JS in a WebView**. It is a common scenario for displaying downloaded manuals, interactive texts, etc. It can be done on Android, iOS and even on Windows Phone by copying the data to isolated storage and pointing the WebView there. 
 
 This scenario is impossible in WinRT. You can reference files in Isolated Storage (Local / Roaming folders) using the ms-appdata protocol, but the WebView does not work with it. You can use the NavigateToString method to display one HTML file, but all the images, CSS, JS references must be internet URLs, you cannot reference other local files. The only way around this issue is to inline all the CSS, JS and images (as base64) to the HTML file. Really messy, painful and slow and not really an option if you have JS reading XML files and inserting external images.
 

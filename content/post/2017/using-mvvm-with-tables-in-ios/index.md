@@ -18,7 +18,7 @@ When I ventured into native iOS development I immediately took a look at the pos
 
 Let's start with simple example scenario. You want to show progress of some flow that contains of multiple steps, each of the steps can be either running or complete. When a step is running it can report its progress. You want to display this flow in a table that looks like this
 
-{{% post-image "iostablemvvm.gif" %}}
+![Dynamic list of steps](iostablemvvm.gif)
 
 <!--more-->
 

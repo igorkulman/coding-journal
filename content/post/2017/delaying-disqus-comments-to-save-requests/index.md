@@ -17,7 +17,7 @@ The advantage of Disqus is that you do not need to host the comments yourself, a
 
 The problem with Disqus is that this one JavaScript file you embed to your website makes about 50 requests when a page loads. And that is a lot!
 
-{{% post-image "disqus.png" %}}
+![Disqus network requests](disqus.png)
 
 <!--more-->
 

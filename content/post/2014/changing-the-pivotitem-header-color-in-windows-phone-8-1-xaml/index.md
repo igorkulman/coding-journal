@@ -20,7 +20,7 @@ If you want to change the PivotItem header color in Windows Phone 7/8, you just 
 
 This works great, changing the color of the active PivotItem Header to the color you want and applying some opacity to the inactive PivotItem Headers.
 
-{{% post-image "header78.png" %}}
+![Pivot header on Windows Phone 7 and 8](header78.png)
 
 <!--more-->
 
@@ -28,7 +28,7 @@ This works great, changing the color of the active PivotItem Header to the color
 
 If you apply the same Header template to PivotItem in Windows Phone 8.1 XAML, you will find that there is a bug in the control. The inactive PivotItem Headers do not get opacity change applied.
 
-{{% post-image "header81.png" %}}
+![Pivot header on Windows Phone 8.1 XAML](header81.png)
 
 This is obviously a problem, if you do not want to do same SelectedIndex manipulation to change the color programatically for all the inactive PivotItem headers. 
 

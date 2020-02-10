@@ -17,7 +17,7 @@ To connect the temperature sensor to the Pi, I suggest you follow the [YouTube t
 
 <!--more-->
 
-{{% post-image "pitherm.jpg" %}}
+![Raspberry Pi with temperature sensor](pitherm.jpg)
 
 **Drivers**
 
@@ -42,7 +42,7 @@ to find the id on yours.
 
 I am a .NET developer but running Mono on the Pi just seems strange to me, so I decided to use Node.js to create the UI. You can find the [whole project on Github][6]. It is a simple Node.js server that gets the temperature and shows it.
 
-{{% post-image "pi-ui.png" %}}
+![Temperature UI](pi-ui.png)
 
 Getting the temperature is a matter of a simple cat command to the right place
 
@@ -56,7 +56,7 @@ I decided to use SQLite for storing the data and create a simple endpoint that g
 
 You can then use the /history endpoint to get the temperature stats.
 
-{{% post-image "pi-history.png" %}}
+![Temperature history chart](pi-history.png)
 
 You can get, download, fork the whole project from <https://github.com/igorkulman/rpi-thermometer>.
 

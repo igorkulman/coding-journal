@@ -19,7 +19,7 @@ The TV schedule grid shows a TV schedule for all the subscribed channels for a g
 
 This is how the result looks in a Windows Phone emulator. Spoiler: there is just no way to make it so smooth on a real Windows Phone device.
 
-{{% post-image "tvgrid.gif" %}}
+![TV grid](tvgrid.gif)
 
 <!--more-->
 

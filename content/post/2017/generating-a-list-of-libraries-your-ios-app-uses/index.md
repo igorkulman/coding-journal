@@ -21,4 +21,4 @@ There is currently no support for using multiple Carthage files (when you have m
 
 You can then read the `plist` file in your app and show it as a list of libraries like I do
 
-{{% post-image "licenses.gif" %}}
+![List of used licenses](licenses.gif)

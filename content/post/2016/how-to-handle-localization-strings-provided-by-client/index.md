@@ -34,7 +34,7 @@ Finally I decided to generate a class that would look and behave similar to the 
 
 The first step is to create a directory and empty RESW files for each supported language in the Windows Phone 8.1 project
 
-{{% post-image "languages.png" %}}
+![Project languages](languages.png)
 
 Then write a script that generates all the RESW files from the newest JSON localization files
 

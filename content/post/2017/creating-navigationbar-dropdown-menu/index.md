@@ -13,7 +13,7 @@ share_img = "/images/dropdown.gif"
 
 Working on an iOS app I had to implement a filter for the table view displayed on screen. The filter should have contained 5 items and be accessible when tapping the screen title in the navigation bar. My first idea was to use an `UIAlertController` with those 5 options. It worked but it looked really ugly, So I started searching for a better, nicer solution. Ideally some kind of a dropdown menu.
 
-{{% post-image "dropdown.gif" %}}
+![Dropdown menu](dropdown.gif)
 
 I found multiple libraries for an iOS dropdown menu, but I liked [BTNavigationDropdownMenu](https://github.com/PhamBaTho/BTNavigationDropdownMenu) the best. The usage is really simple. First you define the items for the dropdown as an string array
 

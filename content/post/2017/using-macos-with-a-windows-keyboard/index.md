@@ -17,7 +17,7 @@ When you start using macOS after years of using Windows there are some things yo
 
 The fist thing you may notice when using macOS with a Windows keyboard is that the modifier keys are not in the right order. The order of the modifier keys on an Apple keyboard is Control, Option, Command but the Ctrl, Windows, Alt keys on a Windows keyboard map to Control, Command, Option by default. You can fix the order of the modifier keys in System Preferences | Keyboard | Modifier keys
 
-{{% post-image "macoskeymapping.png" %}}
+![Mapping macOS keys](macoskeymapping.png)
 
 <!--more-->
 
@@ -83,4 +83,4 @@ end run
 
 You can then open System preferences | Keyboard | Keyboard shortcuts | Services and assign those two services any keyboard shortcut you want. I use Control + Command + Up for Volume up and Control + Command + Down for Volume down.
 
-{{% post-image "volumeshortcuts.png" %}}
+![macOS volume shortcuts](volumeshortcuts.png)

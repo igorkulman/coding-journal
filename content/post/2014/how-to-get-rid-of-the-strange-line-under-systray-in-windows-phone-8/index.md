@@ -8,9 +8,9 @@ tags = ["Csharp","Windows Phone","XAML"]
 +++
 If you create an Windows Phone 8 app and test it only on WVGA and 720p devices or emulators, you may be surprised how you app looks on a WXGA device (or emulator). 
 
-{{% post-image "line.png" %}}
+![1px bug](line.png)
 
-I have not been able the reason why this happens but the solution is quite simple. Set your page&#8217;s top border to -1. 
+I have not been able the reason why this happens but the solution is quite simple. Set your page's top border to -1. 
 
 <!--more-->
 

@@ -13,7 +13,7 @@ share_img = "/images/merge-conflict.png"
 
 Visual Studio Code is a neat editor with many good functionalities but I especially like the way it shows Git merge conflicts. Instead of a 2-way or a 3-way split it just shows one window with both changes, nicely highlighted with colors and actions. 
 
-{{% post-image "merge-conflict.png" %}}
+![Merge conflict in VSCode](merge-conflict.png)
 
 I like this feature so much I decided to set Visual Studio Code as my Git merge tool for both the command line and Git Tower.
 
@@ -74,4 +74,4 @@ Do not forget to make the bash script runnable by calling `chmod +x bash.sh`.
 
 When you restart Git Tower, you will now see Visual Studio Code among the merge tools options.
 
-{{% post-image "tower-merge.png" %}}
+![Setting VSCode as merge tool in Git Tower](tower-merge.png)

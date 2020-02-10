@@ -28,7 +28,7 @@ So the support is not helpful, I think I will never see this money and I can jus
 
 I took a look at my payout settings in the new Dev Center and it is a mess
 
-{{% post-image "payout.png" %}}
+![Adding payout account](payout.png)
 
 It previous pages is telling my that everything is ok and my data is valid, but is it? Those four radios do not give me the confidence to believe it. Especially seeing my old account (x3168) that was there in the Windows Store and I deleted it. I used to get the payment to the x0026 account that was in my Windows Phone Store account. 
 

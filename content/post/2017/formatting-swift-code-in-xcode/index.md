@@ -17,7 +17,7 @@ When I started using XCode I was really surprised about the really poor implemen
 
 [SwiftFormat](https://github.com/nicklockwood/SwiftFormat) is a code library and command-line tool for reformatting swift code. It applies a set of rules to the formatting and space around the code, leaving the meaning intact. 
 
-{{% post-image "swiftformat.png" %}}
+![SwiftFormat Xcode integration](swiftformat.png)
 
 <!--more-->
 
