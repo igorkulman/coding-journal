@@ -10,9 +10,9 @@ Gamification is a great concept that works really well for some people, includin
 
 **Visual Studio Achievements**
 
-[Visual Studio Achievements][3] is Visual Studio plugin that rewards you for good practices like having 1000 localized values ([Localization Master][4]) and even for bad practices like writin a single line of 300 characters long ([Scroll Bar Wizard][5]). For some of the achievements you need to have FxCop installed, but the majority get awareded without the need for it.
+[Visual Studio Achievements][3] is Visual Studio plugin that rewards you for good practices like having 1000 localized values ([Localization Master][4]) and even for bad practices like writing a single line of 300 characters long ([Scroll Bar Wizard][5]). For some of the achievements you need to have FxCop installed, but the majority get awarded without the need for it.
 
-{{% post-image "VisualStudio_badges_2.jpg" %}}
+![Visual Studio achievements](VisualStudio_badges_2.jpg)
 
 You can find out interesting information about your programming, check out [my profile][7].
 

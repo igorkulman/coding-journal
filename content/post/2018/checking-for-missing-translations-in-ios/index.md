@@ -35,7 +35,7 @@ In Xcode, just add a new `Run scrip phase` and call `$SRCROOT/Build-Phases/check
 
 This will result in build errors when there are missing string, shown directly in the base localization file
 
-{{% post-image "verify-string-files-error.png" %}}
+![Error: missing translations](verify-string-files-error.png)
 
 <!--more-->
 

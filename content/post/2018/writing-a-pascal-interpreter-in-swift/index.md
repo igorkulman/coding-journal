@@ -27,7 +27,7 @@ But the biggest challenge was that the series ended before introducing function 
 
 The goal was to be able to interpret a `Pascal` program like [factorial computation](https://github.com/igorkulman/SwiftPascalInterpreter/blob/master/Examples/factorial.pas) or a [simple number guessing game](https://github.com/igorkulman/SwiftPascalInterpreter/blob/master/Examples/game.pas).
 
-{{% post-image "factorial.gif" %}}
+![Interpreting a Pascal program](factorial.gif)
 
 <!--more-->
 
@@ -43,13 +43,13 @@ The current implementation supports arithmetic expressions, if statements with s
 
 You can also access many useful extensions, like printing the abstract syntax tree of the program in a "graphic" representation. There are many things missing, like support for arrays and records or most of the default functions. 
 
-{{% post-image "playground.png" %}}
+![Project playground](playground.png)
 
 #### Lexer
 
 The [Lexer](https://github.com/igorkulman/SwiftPascalInterpreter/PascalInterpreter/PascalInterpreter/Lexer/Lexer.swift) reads the Pascal program as `String` (a sequence of characters) and converts it into a sequence of [Tokens](https://github.com/igorkulman/SwiftPascalInterpreter/PascalInterpreter/PascalInterpreter/Lexer/Token.swift). You can see the result by trying it our in the Playground or on the [unit tests](https://github.com/igorkulman/SwiftPascalInterpreter/PascalInterpreter/PascalInterpreterTests/LexerTests.swift).
 
-{{% post-image "lexer.png" %}}
+![Lexer](lexer.png)
 
 #### Parser
 
@@ -57,7 +57,7 @@ The [Parser](https://github.com/igorkulman/SwiftPascalInterpreter/PascalInterpre
 
 You can see what the AST looks like in the [unit tests](https://github.com/igorkulman/SwiftPascalInterpreter/PascalInterpreter/PascalInterpreterTests/ParserTests.swift) or in the Playground where you can also use the `printTree()` method on any AST to see its visual representation printed into the console.
 
-{{% post-image "parser.png" %}}
+![Parser](parser.png)
 
 #### Semantic analyzer
 

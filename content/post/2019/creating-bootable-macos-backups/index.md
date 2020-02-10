@@ -48,13 +48,13 @@ Once you plug in the backup SSD, you need to format it to **Mac OS Extended (Jou
 
 In the macOS **Disk Utility** you need to switch the view to **Show all devices**. Make sure the Scheme is set to **GUID Partition Map**, otherwise the backup will not be bootable.
 
-{{% post-image "Formatting.png" %}}
+![Formatting external drive](Formatting.png)
 
 ### Cloning macOS
 
 Once you format the backup SSD, just run **Carbon Copy Cloner** and use it to make a full backup. This step takes some time, you are cloning a live system and doing it for the first time. Be patient.
 
-{{% post-image "Clone.png" %}}
+![Cloning with Carbon Copy Cloner](Clone.png)
 
 If it offers to also create an recovery partition on the backup SSD, go for it, it takes just about 1 GB and you might need it one day.
 
@@ -70,13 +70,13 @@ To test that the newly created backup is really bootable, restart your computer 
 
 If **Clover** shows up and macOS boots up, you are all set. You can check the current boot drive in the **About This Mac** dialog to be 100% sure.
 
-{{% post-image "BootedBackup.png" %}}
+![macOS backup booted from external drive](BootedBackup.png)
 
 ### Scheduling the backup
 
 With all of the setup now done, you should schedule **Carbon Copy Cloner** do do a periodic backup. The backup will be incremental, so it will not take as much time as the first backup. It will be done in the background so you will probably not even notice it.
 
-{{% post-image "Schedule.png" %}}
+![Carbon Copy Cloner schedule](Schedule.png)
 
 ## Conclusion
 

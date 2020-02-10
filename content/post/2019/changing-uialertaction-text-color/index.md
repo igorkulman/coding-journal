@@ -17,7 +17,7 @@ The text of the shown `UIAlertAction` uses the `UIView`'s tint color, so you can
 
 `UIAlertController` with one `default` and one `destructive` action might then look like this with dark blue set as the global tint color using `UIAppearence`:
 
-{{% post-image "default.png" %}}
+![Default UIAlertController appearance](default.png)
 
 The red color for the destructive option does not look that great, especially if your app uses a different shade of red everywhere else. 
 
@@ -41,6 +41,6 @@ extension UIAlertAction {
 
 to use the correct shade of red for your destructive actions
 
-{{% post-image "color.png" %}}
+![Customized UIAlertController appearance](color.png)
 
 or to make any of the `UIAlertAction`s to be shown in any color you want or need.

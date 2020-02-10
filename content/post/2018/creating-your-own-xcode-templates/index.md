@@ -23,7 +23,7 @@ Having to create files with the same structure over and over again manually is a
 
 All the Xcode custom file templates are located in `~/Library/Developer/Xcode/Templates/File Templates` and grouped into sections by their folder name. If you want Xcode to show a "Custom" section at the bottom of the new file dialog, just create a `~/Library/Developer/Xcode/Templates/File Templates/Custom` folder.
 
-{{% post-image "XcodeTemplates.png" %}}
+![Custom Xcode templates](XcodeTemplates.png)
 
 ### File template structure
 

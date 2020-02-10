@@ -15,7 +15,7 @@ Working on na iOS app I had to solve a interesting UI problem. The screen had to
 
 To better imagine the requirements, take a look at this animation
 
-{{% post-image "stickyheader.gif" %}}
+![Sticky header in UITableView](stickyheader.gif)
 
 Notice that you see that the header is there but I have to really drag the `UITableView` to make it visible. It then disappears when I scroll the `UITableView`. 
 

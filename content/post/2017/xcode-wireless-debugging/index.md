@@ -15,7 +15,7 @@ One of the best XCode 9 features is the ability to deploy and debug iOS app on y
 
 Setting it up is really easy. Connect the device using a cable like you normally do and go to `Window | Devices and Simulators`. You will see a new checkbox next to your iOS 11 devices called `Connect via Network` (see screenshot below), so check it. Now you can disconnect the cable and debug on your device over WiFi, the device has to be on the same network as your computer of course. 
 
-{{% post-image "wifideploy.png" %}}
+![Deployinh over Wifi](wifideploy.png)
 
 <!--more-->
 

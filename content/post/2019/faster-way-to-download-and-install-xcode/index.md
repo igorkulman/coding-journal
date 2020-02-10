@@ -43,7 +43,7 @@ This script downloads the given Xcode by URL from the Apple Developer Portal, bu
 
 Make sure you use the "More" site at [https://developer.apple.com/download/more/](https://developer.apple.com/download/) even for downloading the latest version of Xcode. 
 
-{{< post-image "more.png" >}}
+![Apple Developer Portal downloads](more.png)
 
 When copying the `ADCDownloadAuth` cookie make sure you copy the correct value, Safari adds all kinds stuff around it when you just use "copy value". 
 

@@ -15,7 +15,7 @@ The iOS 11 has many bugs, more are introduced with every update. I only just rec
 
 The registration flow contains a few screens to gather the user data. The navigation among those screens ([managed by a coordinator](/architecting-ios-apps-coordinators/)) is done by Back and Next buttons in the `UINavigationBar`. The users can at any time get back to the previous screen, and if they are running iOS 11.2 they will see the bug:
 
-{{% post-image "ios112bug.gif" %}}
+![iOS 11.2 navbar bug](ios112bug.gif)
 
 The users tap the Next button to go to the next screen and when they get back, the Next button is faded. It works, can be tapped, but does not look right. This only happens on iOS 11.2.
 

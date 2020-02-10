@@ -58,7 +58,7 @@ There are a few companies that sell the PCIe card and a Wi-Fi + Bluetooth module
 
 I bought [ABWB 802,11 AC WI-FI + Bluetooth 4.0 PCI-Express (PCI-E) BCM943602CS Combo Card](https://www.amazon.de/Bluetooth-PCI-Express-BCM943602CS-Hackintosh-Flughafen/dp/B00MBP25UK), found it on German Amazon. 
 
-{{% post-image "card.png" %}}
+![WiFI card](card.png)
 
 On AliExpress you can find the [FV-T919 PCIe card](https://www.aliexpress.com/item/Fenvi-FV-T919-802-11AC-Desktop-Wifi-Card-802-11-A-B-G-N-AC-BCM94360CD/32778371977.html).
 

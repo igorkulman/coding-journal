@@ -15,7 +15,7 @@ If you are a Windows Phone user you must know that filling in forms in apps is u
 
 The typical struggle to get to the last input fields and the submit button may look like this
 
-{{% post-image "forms1.gif" %}}
+![Form navigation](forms1.gif)
 
 There is no guidance on how to approach this. Take a look at the Store app on Windows 10 mobile, the perfect example of bad UI and UX directly from Microsoft and try review an app. You fill in the title of the review, then struggle to go into the review text input, you have to tap somewhere above the input to hide the keyboard, but not to hit the stars control ... just an UX disaster. 
 
@@ -25,7 +25,7 @@ There is one simple thing you can do to make the experience much better for the 
 
 The whole experience becomes much better
 
-{{% post-image "forms2.gif" %}}
+![Better form navigation](forms2.gif)
 
 Implementation is also simple.
 

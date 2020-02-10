@@ -18,7 +18,7 @@ If you use [cmder](http://cmder.net/), you can add a new Bash task like this.
 
 <!--more-->
 
-{{% post-image "bash-cmder.png" %}}
+![Bash in Cmder](bash-cmder.png)
 
 If you do not use cmder, you should. It is a nice terminal app, enables copy and paste and editors like `vim` and `nano` work with it in Bash unlike when using the bash.exe directly.
 

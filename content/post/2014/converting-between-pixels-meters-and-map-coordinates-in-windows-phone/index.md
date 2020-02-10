@@ -8,7 +8,7 @@ tags = ["Csharp","Map","Windows Phone","XAML"]
 +++
 In my current project I needed to solve one quite interesting problem. Imagine you have a map with some pins representing points of interest. If the user taps on a pin, a label with the place title is shown like on this image (that is not from the real project, obviously).
 
-{{% post-image "image_thumb_4_4.png" %}}
+![Map pin](image_thumb_4_4.png)
 
 The client had an interesting requirement. When the user taps the pin and the label is shown, they wanted the label to be centered on the map (basically move the map so the label appears in the middle of the map).
 

@@ -99,7 +99,7 @@ It does not even matter how you create the UI for your view controllers. You can
 
 You can create a whole hierarchy of coordinators if you like, making them as granular as you need. 
 
-{{% post-image "coordinators.png" %}}
+![Coordinators diagram](coordinators.png)
 
 Your application may start with an `AppCoordinator`. 
 

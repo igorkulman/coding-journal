@@ -25,11 +25,11 @@ There is one more great thing that XMC provides and that is streaming your conte
 
 I am not a hardware guy but I wanted to do some hardware experimenters to use the PIs GPIO ports. I found a simple thermometer scheme, bought the components (a thermometer sensor and a resistor) a made a colleague solder it for me. I connected the thermometer the PI and I was able to read the temperature in the room.
 
-{{% post-image "pitherm.jpg" %}}
+![Raspberry Pi with temperature sensor](pitherm.jpg)
 
 Reading the temperature using the command line is not really comfortable, so I created a web UI for the thermometer. I wrote it in Node.js, because it seemed like an interesting platform to try. I made the whole project open source, and you can find it at <https://github.com/igorkulman/rpi-thermometer>. 
 
-{{% post-image "pi-ui.png" %}}
+![Temperature UI](pi-ui.png)
 
 Later I added a WiFi module and tried powering the PI from a battery bank. I basically created a WiFi enabled thermometer, that looked a bit strange. I think I need to get a small LCD display, so there is no need to open a browser when you just want to know the temperature. 
 

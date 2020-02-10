@@ -15,7 +15,7 @@ When developing Windows Phone apps you may encounter a use case when you have to
 
 In Windows Phone 8.1, this task is quite simple, just use the `FileOpenPicker`. It allows you to pick a photo from the gallery or take a new photo. Just take a look at this animation showing how the users takes a new photo using the phone's camera.
 
-{{% post-image "wpa81.gif" %}}
+![FileOpenPicker in Windows Phone 8.1](wpa81.gif)
 
 <!--more-->
 
@@ -33,7 +33,7 @@ openPicker.PickSingleFileAndContinue();
 
 In Windows 10 Mobile, the `FileOpenPicker` has been changed to be more customizable. This make the process of  taking a new photo using the phone's camera totally hidden. Not a chance a common user will discover it, just take a look at this animation.
 
-{{% post-image "uwp.gif" %}}
+![Gallery picker](uwp.gif)
 
 So how to make this experience a bit better for the user? My solution is instead of launching the `FileOpenPicker` showing a `Flyout` with two options; Choose from gallery and Take photo. The Choose from gallery option just launches the `FileOpenPicker`
 
@@ -66,4 +66,4 @@ if (file != null)
 
 The result might look like this. Do not forget to add an option to delete the photo if one is already chosen.
 
-{{% post-image "uwp2.gif" %}}
+![Avatar picker](uwp2.gif)

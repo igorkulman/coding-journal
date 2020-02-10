@@ -20,7 +20,7 @@ Recently, a client was thinking about adding a Windows Phone app for their servi
 
 In theory, Universal Apps are supposed to make code sharing between Windows Phone and Windows 8.1 simple and allow you to reuse as much code as possible. This works on the trivial Microsoft samples, but try to create a real world app. I have a business logic project with API calls, storage, etc. in a portable class library (like I always did before Universal Apps existed) and I created an Universal App from the template. And the #ifdef hell started. 
 
-{{% post-image "56995992.jpg" %}}
+![IFDEFS, IFDEFS everywhere](56995992.jpg)
 
 **#ifdefs everywhere**
 

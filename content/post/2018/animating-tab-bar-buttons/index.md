@@ -13,7 +13,7 @@ share_img = "/images/tw-animation.gif"
 
 If you use the Twitter app on iOS you might have noticed that tapping the buttons in the tab bar makes them bounces. 
 
-{{% post-image "twitter-animation.gif" %}}
+![Twitter tab bar animation](twitter-animation.gif)
 
 This is a very subtle animation that I really like so I decided to do the same for the tab bar in the app I currently work on. 
 
@@ -48,7 +48,7 @@ bounceAnimation.calculationMode = CAAnimationCalculationMode.cubic
 
 It is more visible as the one in the Twitter app, you can tweak the values to get the animation you like best.
 
-{{% post-image "tw-animation.gif" %}}
+![Custom tab bar animation](tw-animation.gif)
 
 The resulting class code looks like this
 

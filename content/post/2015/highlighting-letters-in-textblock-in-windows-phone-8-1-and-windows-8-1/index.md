@@ -9,7 +9,7 @@ keywords = ["Windows Phone","Windows Store","XAML"]
 +++
 In my current project I had to implement an interesting feature for both Windows Phone 8.1 and Windows 8.1 project of the Universal app. The idea is simply. The users want to search for a movie. They enter a search term into a TextBox and a list of results is shown. The results should have the search term highlighted in them.
 
-{{% post-image "highlighting.png" %}}
+![Searcg term highlight](highlighting.png)
 
 <!--more-->
 

@@ -12,7 +12,7 @@ The problem with Windows Phone 8 from a designers point of view is that it intro
 
 The problem is 720p, because it is a different aspect ratio (16:9 vs 15:9). Your Windows Phone 7 app running on a 720p app is first scaled by a factor of 1.5 to 1200&#215;720 and the rest of the display (80px) is padded on top or bottom, depending on the VerticalAlignment. By default, the padding is added to the top of your app making your header 80px higher:
 
-{{% post-image "wp7header.png" %}}
+![Windows Phone 7 app header on Windows Phone 8 device](wp7header.png)
 
 <!--more-->
 

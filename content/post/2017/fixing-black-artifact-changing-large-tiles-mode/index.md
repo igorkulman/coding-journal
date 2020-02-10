@@ -15,12 +15,12 @@ One of the new features of iOS 11 is the ability to display large headers in the
 
 But there is a problem. If you navigate from a view controller with large titles enabled to a view controller with large titles disabled, you will see a black artifact under the change animation:
 
-{{% post-image "blackartifact.gif" %}}
+![Black navigation artifact](blackartifact.gif)
 
 The black artifact comes from the navigation controller. If you set the `backgroundColor` of the navigation controller's `view` to any, like red, it will replace the black artifact with an artifact of that color. The solution is to set the color of the color of you UI, white in my case:
 
 <!--more-->
 
-{{% post-image "noartifact.gif" %}}
+![Black navigation artifact fixed](noartifact.gif)
 
 Now the animation looks ok, no visible artifact. The problem is, you cannot set it globally using `UIAppearance`, so you can either set `navigationController.view.backgroundColor = UIColor.white` on every navigation controller in your app, or create a custom navigation controller inheriting from `UINavigationController` and use it everywhere where needed.

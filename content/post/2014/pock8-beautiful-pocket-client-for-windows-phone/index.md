@@ -8,7 +8,7 @@ tags = ["Windows Phone"]
 +++
 Recently I have released a new Windows Phone app called [Pock8][1]. Pock8 is a beautiful Pocket (formerly Read It Later) client for Windows Phone. The design of the app was created by Jan Marek who worked with my on the [Shopping List Simple][2] app. 
 
-{{% post-image "pocket.png" %}}
+![Pock8](pocket.png)
 
 Our goal was to create a Pocket client that would be really easy to use and that would have a nice and simple design. I think we have achieved our goal. The main features of the app are
 

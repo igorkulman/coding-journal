@@ -37,9 +37,9 @@ internal enum L10n {
 }
 {{< / highlight >}}
 
-Simple strings are generated as properties and strings with formatting parameters as functions, so you always known how many parameters to use. It also makes it easier to find the correct string by showing the strings in Xcode intellisense
+Simple strings are generated as properties and strings with formatting parameters as functions, so you always known how many parameters to use. It also makes it easier to find the correct string by showing the strings in Xcode code completion
 
-{{% post-image "iosstrings.png" %}}
+![Strings code completion](iosstrings.png)
 
 If you want a more complete example, take a look at my [iOS sample app on Github](https://github.com/igorkulman/iOSSampleApp)
 
