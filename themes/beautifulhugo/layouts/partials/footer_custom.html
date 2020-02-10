@@ -12,11 +12,13 @@ $(function () {
         }
 
         const original = div.getAttribute("data-large");
+        const alt =  div.getAttribute("data-alt");
         fetch(original)
             .then(function (response) {
                 if (response && response.status == 200){                    
                     var image = new Image();
                     image.setAttribute("src", original)
+                    image.setAttribute("alt", alt)
                     image.onload = function () {
                       image.classList.add('loaded');
                     };
