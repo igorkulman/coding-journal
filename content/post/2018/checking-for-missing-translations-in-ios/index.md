@@ -45,7 +45,7 @@ If you just want it to produce warning instead of errors, you just add `-warning
 ${PROJECT_DIR}/support/verify-string-files -master ${SRCROOT}/iOSSampleApp/Resources/Base.lproj/Localizable.strings -warning-level warning
 {{< / highlight >}}
 
-or you can make it even better but making the tool produce errors in production builds but warning in debug builds
+or you can make it even better by making the tool produce errors in production builds but warning in debug builds
 
 {{< highlight bash >}}
 if [ "${CONFIGURATION}" = "Release" ]; then
