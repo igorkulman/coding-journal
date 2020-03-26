@@ -1,5 +1,5 @@
 {
     "ignoredFiles": [
-        "themes/beautifulhugo/static/fontawesome/webfonts/*"
+        "*.svg"
     ]
 }
