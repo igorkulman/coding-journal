@@ -41,4 +41,6 @@ Luckily **I found a workaround!**.
 
 If you do not run the script directly with `swift` but instead compile it first with `swiftc` and then run the binary, everything works just fine.
 
+**Update**: The problem is caused by having other tools that bundle Swift libraries installed on the system, like `swiftlint` and uninstalling them solves the crash.
+
 <!--more-->
