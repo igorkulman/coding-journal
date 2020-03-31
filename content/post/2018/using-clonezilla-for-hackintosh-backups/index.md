@@ -11,6 +11,8 @@ share_img = "/using-clonezilla-for-hackintosh-backups/clonezilla.jpg"
 
 +++
 
+**Update**: With macOS Catalina I switched to [bootable daily incremental backups](/creating-bootable-macos-backups).
+
 If you are a macOS user you may be used to Time Machine as the standard for backups. Time Machine is fine if you want to backup your files and configuration, but if for example your disk dies or your hackintosh completely breaks with some bad update, there are better and faster ways to get it up and running again. 
 
 ## Requirements
