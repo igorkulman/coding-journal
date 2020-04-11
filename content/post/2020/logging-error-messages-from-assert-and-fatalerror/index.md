@@ -36,10 +36,21 @@ but this is really not ideal, it is just writing boilerplate code you can easily
 I have not found a way to directly log the `fatalerror` message, so I created my own fail method
 
 {{< highlight swift >}}
-func fail(_ message: String, file: String = #file, function: String = #function, line: Int = #line) -> Never {
-    let formattedMessage = "[\(filename):\(line) \(function)]: \(message)"
-    Log.error?.message(formattedMessage, log: OSLog.conditions, type: .error)
-    fatalError(formattedMessage)
+func fail(_ logMessage: String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
+    let formattedMessage = formatLogMessage(logMessage, file: file, function: function, line: line)
+    Log.error?.message(formattedMessage)
+    fatalError(formattedMessage, file: file, line: line)
+}
+{{< / highlight >}}
+
+You can format the message you log any way you want, I just log the filename, function name and line number. Getting the filename from a `StaticString` is a bit tricky though
+
+{{< highlight swift >}}
+func formatLogMessage(_ logString: String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) -> String {
+    let filename = (file.withUTF8Buffer {
+        String(decoding: $0, as: UTF8.self)
+    } as NSString).lastPathComponent
+    return "[\(filename):\(line) \(function)]: \(logString)"
 }
 {{< / highlight >}}
 
@@ -54,17 +65,17 @@ In my code base I also define a `failDebug(message:)` method with the same code 
 <!--more-->
 
 {{< highlight swift >}}
-func failDebug(_ message: String, file: String = #file, function: String = #function, line: Int = #line) -> Never {
-    let formattedMessage = "[\(filename):\(line) \(function)]: \(message)"
-    Log.error?.message(formattedMessage, log: OSLog.conditions, type: .error)
-    assertionFailure(formattedMessage)
+func failDebug(_ logMessage: String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
+    let formattedMessage = formatLogMessage(logMessage, file: file, function: function, line: line)
+    Log.error?.message(formattedMessage)
+    assertionFailure(formattedMessage, file: file, line: line)
 }
 {{< / highlight >}}
 
 You can also add a `notImplemented` method in a similar way
 
 {{< highlight swift >}}
-func notImplemented(file: String = #file, function: String = #function, line: Int = #line) -> Never {
+func notImplemented(file: StaticString = #file, function: StaticString = #function, line: UInt = #line) -> Never {
     fail("Method not implemented.", file: file, function: function, line: line)
 }
 {{< / highlight >}}
@@ -72,9 +83,11 @@ func notImplemented(file: String = #file, function: String = #function, line: In
 or a custom `assertDebug` method with a condition
 
 {{< highlight swift >}}
-func assertDebug(_ condition: @autoclosure () -> Bool, _ logMessage: String, file: String = #file, function: String = #function, line: Int = #line) {
+func assertDebug(_ condition: @autoclosure () -> Bool, _ logMessage: String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
+    #if DEBUG
     if !condition() {
-        failDebug(logMessage)
+        failDebug(logMessage, file: file, function: function, line: line)
     }
+    #endif
 }
 {{< / highlight >}}
