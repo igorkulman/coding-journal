@@ -43,7 +43,7 @@ You are not limited to just 1 template file, you can create more. This can be us
 
 The `TemplateInfo.plist` file contains basic template description. The important thing is template `Kind` and the `MainTemplateFile`. You can also set a default filename with `DefaultCompletionName`
 
-{{< highlight plist >}}
+{{< highlight xml >}}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
