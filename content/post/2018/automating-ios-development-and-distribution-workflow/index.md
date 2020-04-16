@@ -44,7 +44,7 @@ The iOS project I work on uses self-hosted [Gitlab](https://gitlab.com/) instanc
 My setup is really simple
 
 * each push to Gitlab causes the app to build and run all the unit and UI tests
-* each merge of a pull request causes the app to build, create an ad-hoc IPA and deploy it to a build distribution system
+* each merge of a pull request causes the app to build, to create an ad-hoc IPA and to deploy it to a build distribution system
 
 In terms of the Gitlab's `.gitlab-ci.yml`, omitting some pre-build stuff like restoring Carthage cache, setting environment variables, etc. it may be just two phases, one running unit tests on all branches and the other doing build and deploy on the develop branch.
 
@@ -84,13 +84,17 @@ Running the tests is really simple
 {{< highlight ruby >}}
 desc "Run all unit tests"
 lane :tests do
-  run_tests(devices: ["iPhone 6s"],
-            scheme: "Crypto")
-  run_tests(devices: ["iPhone 6s"],
+  run_tests(devices: ["iPhone 8"],
+            workspace: "sources/Teamwire.xcworkspace",
+            scheme: "TWCrypto")
+
+  run_tests(devices: ["iPhone 8"],
+            workspace: "sources/Teamwire.xcworkspace",
             scheme: "Core")
-  run_tests(workspace: "YourApp.xcworkspace",
-            devices: ["iPhone 6s"],
-            skip_testing: "YourAppUITests",
+  
+  run_tests(devices: ["iPhone 8"],
+            workspace: "sources/Teamwire.xcworkspace",
+            skip_testing: "TeamwireUITests",
             scheme: "Teamwire")
 end
 {{< / highlight >}}
@@ -110,7 +114,7 @@ lane :build do
   sigh(adhoc: true, app_identifier: notification_extension_identifier)
   sigh(adhoc: true, app_identifier: share_extension_identifier)  
   
-  gym(scheme: "YourApp", clean: true, workspace: "YourApp.xcworkspace", output_directory: "build", output_name: "YourApp.ipa",
+  gym(scheme: "Teamwire", clean: true, workspace: "sources/Teamwire.xcworkspace", output_directory: "build", output_name: "Teamwire.ipa",
               export_options: {
               	method: "ad-hoc",
               	iCloudContainerEnvironment: "Production",
@@ -121,37 +125,28 @@ end
 
 ### Automatic build distribution
 
-As I already mentioned, every time a pull request is merged in Gitlab, the CI creates an ad-hoc IPA and deploys it. In my case, the deployment has two steps. 
+As I already mentioned, every time a pull request is merged in Gitlab, the CI creates an ad-hoc IPA and deploys it. 
 
 {{< highlight ruby >}}
-desc "Deploys built app to Installr"
-lane :deploy_to_installr do
-  commit = last_git_commit
-  short_hash = commit[:abbreviated_commit_hash]
-  releaseNotes = "Automatic Gitlab build ("+number_of_commits.to_s+", last commit "+short_hash+")"
-
-  installr(
-    api_token: ENV["INSTALLR_API_KEY"],
-    ipa: "build/YourApp.ipa",
-    notes: releaseNotes,
-  )
-end  
-
-desc "Deploys built app to HockeyApp"
-lane :deploy_to_hockeyapp do
-  hockey(
-    api_token: ENV["HOCKEYAPP_API_KEY"]
-    ipa: "build/YourApp.ipa",
-    dsym: "build/YourApp.app.dSYM.zip"
+desc "Deploys built app to AppCenter"
+lane :deploy do
+  # Deploy to AppCenter
+  appcenter_upload(
+    api_token: ENV["APPCENTER_API_TOKEN"],
+    owner_name: "igorkulman",
+    owner_type: "user",
+    app_name: "Teamwire-Beta",
+    file: "build/Teamwire.ipa",
+    notify_testers: false,
+    destinations: "*",
+    dsym: "build/Teamwire.app.dSYM.zip"
   )
 end
 {{< / highlight >}}
 
-The first step deploys the actual IPA to [Installr](http://installrapp.com/). Installr is an simple build distribution service, that you can use for free without any serious limitations. You can make it send email to your testers every time a new build is uploaded or you can just send out the builds manually when needed.
+This step deploys the actual IPA to [AppCenter](https://appcenter.ms/). AppCenter can be used as a build distribution service for free without any serious limitations. You can make it send emails to your testers every time a new build is uploaded or you can just send out the builds manually when needed.
 
-The second step uploads the debug symbols to [HockeyApp](https://www.hockeyapp.net/). I do not use HockeyApp for build distribution, I prefer Installr and I do not use it for crash reporting, because it is considered a security risk in some environments so I just cannot use it. 
-
-So why do I upload the debug symbols to HockeyApp? For symbolication. When testers send me logs from the app and they include a crash log, I just upload the crash log to HockeyApp and it gets automatically symbolicated in a few minutes. I do not have to do it manually and I can link the symbolicated crash log to an issue in Gitlab that I typically create for every reported crash. 
+Not only the app IPA but also debug symbols are uploaded to AppCenter for symbolication. When testers send me logs from the app and they include a crash log, I just upload the crash log to AppCenter and it gets automatically symbolicated in a few minutes. I do not have to do it manually and I can link the symbolicated crash log to an issue in Gitlab that I typically create for every reported crash. 
 
 The automatic builds are ad-hoc builds and use the AppStore app id not the development app id to be as close to the AppStore version as possible.
 
@@ -223,7 +218,7 @@ You can configure Fastlane to run this UI test method for different languages an
  ])
 
 # The name of the scheme which contains the UI Tests
-scheme("YourApp")
+scheme("TeamwireUITests")
 
 # Where should the resulting screenshots be stored?
  output_directory("./fastlane/screenshots")
@@ -238,7 +233,7 @@ And add a Fastline lane to have it execute when you run `fastlane screenshots`
 platform :ios do
   desc "Generate new localized screenshots"
   lane :screenshots do
-    capture_screenshots(scheme: "YourApp")
+    capture_screenshots(scheme: "TeamwireUITests")
     frame_screenshots(silver: true)
   end
 end
@@ -246,8 +241,8 @@ end
 
 ### Cooperation with the testers
 
-The whole setup really shines when I deal with the testers. I never create builds for them to test manually. The testers can always download the latest build from Installr by themselves or I ca use the Installr web UI to send them a specific build.
+The whole setup really shines when I deal with the testers. I never create builds for them to test manually. The testers can always download the latest build from AppCenter by themselves or I ca use the AppCenter web UI to send them a specific build.
 
-When I fix a bug, I just add a comment "fixed in build XYZ" to the Gitlab issue. Fixing a bug means merging a pull request for that bug, so a new build is automatically created and uploaded to Installr for the testers to try out.
+When I fix a bug, I just add a comment "fixed in build XYZ" to the Gitlab issue. Fixing a bug means merging a pull request for that bug, so a new build is automatically created and uploaded to AppCenter for the testers to try out.
 
 When a new build is being tested, the testers can easily tell which bugs are already fixed in that build and should be verified.
