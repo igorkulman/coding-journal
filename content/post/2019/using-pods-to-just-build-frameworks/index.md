@@ -109,4 +109,26 @@ I created a Github repository showing the whole project: https://www.github.com/
 
 Both `GRDB.framework` and `SQLCipher.framework` built as fat libraries can be embedded to the application just like any other static framework. 
 
-{{% github-repo "igorkulman/GRDBCipher" %}}
+**Update:** Meanwhile I found a much simpler solution. Just install the [cocoapods-rome](https://github.com/CocoaPods/Rome) plugin for `CocoaPods` and use it in a `Podfile`
+
+{{< highlight ruby >}}
+platform :ios, '10.0'
+use_frameworks!
+
+plugin 'cocoapods-rome', {:pre_compile => Proc.new { |installer|
+installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['BITCODE_GENERATION_MODE'] = 'bitcode'
+      config.build_settings['ENABLE_BITCODE'] = 'YES'
+      config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'YES'
+    end
+end
+
+target 'GRDBCipher' do
+    # GRDB with SQLCipher 4
+    pod 'GRDB.swift/SQLCipher'
+    pod 'SQLCipher', '~> 4.0'
+end
+{{< /highlight >}}
+
+With this `Podfile` running `pod install` will build both `GRDB.framework` and `SQLCipher.framework`.
