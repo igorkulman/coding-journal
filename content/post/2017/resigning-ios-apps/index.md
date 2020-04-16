@@ -40,3 +40,5 @@ You can find multiple [tutorials](https://gist.github.com/chaitanyagupta/9a2a13f
 And you are done!
 
 ![EasyResigny](easyresigny.png)
+
+**Update:** EasyResigny does not work well if your app includes extensions, like a share extension or a notification service extension. The only tool that can help with resigning an app with extension is [Fastlane](https://fastlane.tools/) and its [resign method](https://docs.fastlane.tools/actions/resign/) where you can provide specific provisioning profiles for each app id.
