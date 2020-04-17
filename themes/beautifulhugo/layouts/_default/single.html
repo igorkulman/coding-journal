@@ -55,6 +55,13 @@
         </ul>
       {{ end }}
 
+      dd
+      {{ if .Site.Params.staticman }}
+        <div class="staticman-comments">
+          {{ partial "staticman-comments.html" . }}
+        </div>
+      {{ end }}
+
 
       {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (ne .Type "page"))) }}
         {{ if .Site.DisqusShortname }}
@@ -76,11 +83,7 @@
           </div>
           {{ end }}
         {{ end }}
-        {{ if .Site.Params.staticman }}
-          <div class="staticman-comments">
-            {{ partial "staticman-comments.html" . }}
-          </div>
-        {{ end }}
+       
       {{ end }}
 
     </div>

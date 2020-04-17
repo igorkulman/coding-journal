@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Igor Kulman"
 theme = "beautifulhugo"
 Paginate = 5
-disqusShortname = "coudingjournal"
 enableRobotsTXT = true
 
 [markup]
@@ -65,3 +64,5 @@ weight = 150
 name  = "tags"
 weight = 100
  
+[Params.staticman]
+  api = "http://localhost:8888/.netlify/functions/staticman/igorkulman/staticmantest/master"
