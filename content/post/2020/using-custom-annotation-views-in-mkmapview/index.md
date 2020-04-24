@@ -7,6 +7,7 @@ author = "Igor Kulman"
 date = "2020-04-29T05:29:12+01:00"
 title = "Using custom annotation views in MKMapview"
 url = "/using-custom-annotation-views-in-mkmapview"
+share_img = "/using-custom-annotation-views-in-mkmapview/LiveLocationMap.jpg"
 
 +++
 
@@ -67,11 +68,13 @@ mapView.register(LocationAnnotationView.self, forAnnotationViewWithReuseIdentifi
 
 This is enough to make `MKMapView` to completely handle creating and recycling instances of your custom `MKAnnotationView`s for you. No need to implement any `MKMapView` delegate methods for providing annotation views.
 
+![Custom MKAnnotationView](LiveLocationMap.jpg)
+
+<!--more-->
+
 #### Using multiple custom MKAnnotationViews
 
 If you want to use multiple types of annotation in your `MKMapView` you need to register them all if different reuse identifiers. 
-
-<!--more-->
 
 {{< highlight swift >}}
 mapView.register(LocationAnnotationView.self, forAnnotationViewWithReuseIdentifier: LocationAnnotationView.reuseIdentifier)
