@@ -11,7 +11,7 @@ share_img = "/using-custom-annotation-views-in-mkmapview/LiveLocationMap.jpg"
 
 +++
 
-If you want to display completely custom views as "pins" on the map in iOS, you use annotations. All your pins data needs to be represented as object conforming to the `MKAnnotation` protocol, with `title`, `subtitle` and `coordinate` as the required properties.
+If you want to display completely custom views as "pins" on the map in iOS, you should use annotations. All your data needs to be represented as objects conforming to the `MKAnnotation` protocol, with `title`, `subtitle` and `coordinate` as the required properties.
 
 ### Custom view implementation
 
@@ -52,7 +52,7 @@ final class LocationAnnotationView: MKAnnotationView, Reusable {
 }
 {{< /highlight >}}
 
-The `MKAnnotationView` is aligned to the position on map with the bottom left corner. If your `MKAnnotationView` looks like a pin for example, you need to align it to the position on the map with the bottom center point. To do that you use the `centerOffset` property as shown.
+The `MKAnnotationView` is by default aligned to the position on map with the bottom left corner. If your `MKAnnotationView` looks like a pin for example, you need to align it to the position on the map with the bottom center point. To do that you use the `centerOffset` property as shown.
 
 ### Registering the custom view with MKMapView
 
@@ -74,7 +74,7 @@ This is enough to make `MKMapView` to completely handle creating and recycling i
 
 #### Using multiple custom MKAnnotationViews
 
-If you want to use multiple types of annotation in your `MKMapView` you need to register them all if different reuse identifiers. 
+If you want to use multiple types of annotations in your `MKMapView`, you need to register them all with different reuse identifiers. 
 
 {{< highlight swift >}}
 mapView.register(LocationAnnotationView.self, forAnnotationViewWithReuseIdentifier: LocationAnnotationView.reuseIdentifier)
@@ -83,7 +83,7 @@ mapView.register(LiveLocationDataMapAnnotationView.self, forAnnotationViewWithRe
 
 I [use the Reusable library that automatically provides reuse identifiers](/simpler-and-safer-custom-tableview-cells/) but you can use any reusable identifier string you like
 
-Next you need to implement the `mapView(_:viewFor:)` method of the `MKMapViewDelegate` and decide which of those custom `MKAnnotationView`s if used for which `MKAnnotationView`
+Next you need to implement the `mapView(_:viewFor:)` method of the `MKMapViewDelegate` and decide which of those custom `MKAnnotationView`s is used for which `MKAnnotation`
 
 {{< highlight swift >}}
 func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
