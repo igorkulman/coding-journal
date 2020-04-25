@@ -81,7 +81,7 @@ mapView.register(LocationAnnotationView.self, forAnnotationViewWithReuseIdentifi
 mapView.register(LiveLocationDataMapAnnotationView.self, forAnnotationViewWithReuseIdentifier: LiveLocationDataMapAnnotationView.reuseIdentifier)
 {{< /highlight >}}
 
-I [use the Reusable library that automatically provides reuse identifiers](https://blog.kulman.sk/simpler-and-safer-custom-tableview-cells/) but you can use any reusable identifier string you like
+I [use the Reusable library that automatically provides reuse identifiers](/simpler-and-safer-custom-tableview-cells/) but you can use any reusable identifier string you like
 
 Next you need to implement the `mapView(_:viewFor:)` method of the `MKMapViewDelegate` and decide which of those custom `MKAnnotationView`s if used for which `MKAnnotationView`
 
