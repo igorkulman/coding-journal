@@ -11,13 +11,13 @@ share_img = "/using-custom-annotation-views-in-mkmapview/LiveLocationMap.jpg"
 
 +++
 
-If you want to display completely custom views as "pins" on the map in iOS, you should use annotations. All your data needs to be represented as objects conforming to the `MKAnnotation` protocol, with `title`, `subtitle` and `coordinate` as the required properties.
+If you want to display completely custom views as "pins" on the map in your iOS application, you should use annotations. All your data needs to be represented as objects conforming to the `MKAnnotation` protocol, with `title`, `subtitle` and `coordinate` as the required properties.
 
 ### Custom view implementation
 
 Visually you represent an `MKAnnotation` with a `MKAnnotationView`. You can create a custom class that subclasses `MKAnnotationView` and implement your custom UI in that class. 
 
-Here is an example `MKAnnotationView` with fixed size that displays just one custom view
+Here is an sample `MKAnnotationView` with fixed size that displays just one custom view
 
 {{< highlight swift >}}
 final class LocationAnnotationView: MKAnnotationView, Reusable {
@@ -52,7 +52,7 @@ final class LocationAnnotationView: MKAnnotationView, Reusable {
 }
 {{< /highlight >}}
 
-The `MKAnnotationView` is by default aligned to the position on map with the bottom left corner. If your `MKAnnotationView` looks like a pin for example, you need to align it to the position on the map with the bottom center point. To do that you use the `centerOffset` property as shown.
+The `MKAnnotationView` is by default aligned to its corresponding position on map with the bottom left corner. If your `MKAnnotationView` looks like a pin for example, you need to align it to the position on the map with the bottom center point. To do that you use the `centerOffset` property as shown.
 
 ### Registering the custom view with MKMapView
 
