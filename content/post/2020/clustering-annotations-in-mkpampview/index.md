@@ -7,6 +7,7 @@ author = "Igor Kulman"
 date = "2020-05-06T05:29:12+01:00"
 title = "Clustering annotations in MKMapView"
 url = "/clustering-annotations-in-mkpampview"
+share_img = "/workaround-for-swift-scripts-crash/MapCluster.png"
 
 +++
 
@@ -17,6 +18,8 @@ If you need to display many annotations in your `MKMapView` it is recommended to
 This means instead of showing all the visible annotations you group annotations that are close together into one single annotation cluster representing them instead. 
 
 This cluster annotation usually shows the number of annotations it represents. As you then zoom in to get finer detail the clusters break up and show the actual annotations.
+
+![Map clustering](MapCluster.png)
 
 Clustering is supported in `MKMapView` on iOS 11 and newer, no need to use any custom library. If you need to support older versions of iOS, there are libraries like [Cluster](https://github.com/efremidze/Cluster) that you can use.
 
@@ -67,6 +70,8 @@ final class LocationDataMapClusterView: MKAnnotationView {
 {{< /highlight >}}
 
 The idea is the same as when [custom annotation view](/using-custom-annotation-views-in-mkmapview), but there is a difference. You need to define `displayPriority` to tell the map that your cluster annotation has a higher priority that normal annotation.
+
+<!--more-->
 
 ### Registering the custom cluster view with MKMapView
 
