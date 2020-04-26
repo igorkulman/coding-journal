@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2020-05-13T05:29:12+01:00"
 title = "Animating annotations position change in MKMapView"
 url = "/animating-annotation-position-change-on-ios"
-share_img = "/animating-annotation-position-change-on-ios/MapCluster.png"
+share_img = "/animating-annotation-position-change-on-ios/MapSmooth.gif"
 
 +++
 
@@ -33,6 +33,10 @@ final class LocationViewModel: NSObject, MKAnnotation {
 
 With this change you will notice that the annotation now moves on the map, but it is not smooth, it basically jumps from the old position to the new one.
 
+![Annotation jumping on coordinate change](MapJump.gif)
+
+<!--more-->
+
 ### Animating the coordinate update
 
 To make the position change smooth you need just use `UIVIew.animate` when updating the `coordinate` property
@@ -42,4 +46,13 @@ UIView.animate(0.3) {
     coordinate = updatedPosition
 }
 {{< /highlight >}}
+
+With this change you can see annotation moving smoothly to the new position
  
+![Smooth annotation movement](MapSmooth.gif)
+
+### Pulse effect
+
+If you want to make it clear to the user that the annotation changed its position because its data was updated, you can show a pulse animation like in the animated GIFs in this post. 
+
+It is quite easy just use the [Pulsator](https://github.com/shu223/Pulsator/) library.
