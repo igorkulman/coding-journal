@@ -1,8 +1,8 @@
 +++
-Categories = ["iOS", "Xcode"]
+Categories = ["iOS", "Xcode", "UIWebView"]
 Description = "Apple has deprecated UIWebView and will not be accepting new apps with UIWebView starting April 2020 and app updates with UIWebView starting December 2020. If your app uses UIWebView you should replace it with WKWebView."
-Tags = ["iOS", "Xcode"]
-Keywords = ["iOS", "Xcode"]
+Tags = ["iOS", "Xcode", "UIWebView"]
+Keywords = ["iOS", "Xcode", "UIWebView"]
 author = "Igor Kulman"
 date = "2020-03-18T05:29:12+01:00"
 title = "Determining which frameworks use UIWebView"
