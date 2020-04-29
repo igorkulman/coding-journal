@@ -5,7 +5,7 @@ Tags = ["iOS", "Xcode", "MapKit"]
 Keywords = ["iOS", "Xcode", "MapKit"]
 author = "Igor Kulman"
 date = "2020-04-29T05:29:12+01:00"
-title = "Using custom annotation views in MKMapview"
+title = "Using custom annotation views in MKMapView"
 url = "/using-custom-annotation-views-in-mkmapview"
 share_img = "/using-custom-annotation-views-in-mkmapview/LiveLocationMap.jpg"
 
