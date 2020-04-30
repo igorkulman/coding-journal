@@ -8,6 +8,7 @@ date = "2020-05-13T05:29:12+01:00"
 title = "Animating annotations position change in MKMapView"
 url = "/animating-annotation-position-change-on-ios"
 share_img = "/animating-annotation-position-change-on-ios/MapSmooth.gif"
+series = "Using MKMapView and MapKit on iOS"
 
 +++
 
