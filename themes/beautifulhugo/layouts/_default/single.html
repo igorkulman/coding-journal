@@ -22,7 +22,16 @@
             </section>
         {{ end }}
 
-        {{ if .Site.Params.showRelatedPosts }}
+        {{ if .Params.series }} 
+          <h4 class="see-also">{{ .Params.series }}</h4>
+          <ul>
+            {{ range where .Site.Pages.ByDate "Params.series" .Params.series }}
+      <li><a href="{{.Permalink}}">{{.LinkTitle}}</a></li>      
+  {{ end }}            
+          </ul>
+        
+
+        {{ else if .Site.Params.showRelatedPosts }}
           {{ range first 1 (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
             {{ $.Scratch.Set "has_related" true }}
           {{ end }}

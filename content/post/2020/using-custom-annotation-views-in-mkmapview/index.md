@@ -8,6 +8,7 @@ date = "2020-04-29T05:29:12+01:00"
 title = "Using custom annotation views in MKMapView"
 url = "/using-custom-annotation-views-in-mkmapview"
 share_img = "/using-custom-annotation-views-in-mkmapview/LiveLocationMap.jpg"
+series = "Using MKMapView and MapKit on iOS"
 
 +++
 
