@@ -74,10 +74,7 @@
 
   {{- if .Site.Params.useHLJS }}
   <link rel="stylesheet" href="{{ "css/highlight.min.css" | absURL }}" />
-  {{- else -}}
-  <link rel="stylesheet" href="{{ "css/syntax.css" | absURL }}" />
   {{- end -}}
-  <link rel="stylesheet" href="{{ "css/codeblock.css" | absURL }}" />
   
   {{- if .Site.Params.staticman.recaptcha -}}
   <script src='https://www.google.com/recaptcha/api.js'></script>
