@@ -65,8 +65,7 @@
 <script src="{{ "js/katex.min.js" | absURL }}"></script>
 <script src="{{ "js/auto-render.min.js" | absURL }}"></script>
 {{- end }}
-<script src="{{ "js/jquery.min.js" | absURL }}"></script>
-<script src="{{ "js/bootstrap.min.js" | absURL }}"></script>
+<script src="{{ "js/bootstrap.native.js" | absURL }}"></script>
 {{- else -}}
 {{- if .Site.Params.useKaTeX }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
@@ -141,24 +140,29 @@
 {{ if and .Site.Params.delayDisqus .Site.DisqusShortname }}
 <!-- Delayed Disqus -->
 <script type="text/javascript">
-$(function(){
-  $('#show-comments').on('click', function(){
-    var disqus_shortname = '{{ .Site.DisqusShortname }}';
-      
-    (function() {
-      var disqus = document.createElement('script'); 
-      disqus.type = 'text/javascript'; 
+  var button = document.getElementById("show-comments")
+  if (button != null) {    
+    var countScript = document.createElement('script');
+    countScript.type = 'text/javascript';
+    countScript.src = "//{{.Site.DisqusShortname}}.disqus.com/count.js";
+    countScript.id = "dsq-count-scr";
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(countScript);
+
+    var clickHandler = function(){
+      var disqus_shortname = '{{.Site.DisqusShortname}}';
+
+      var disqus = document.createElement('script');
+      disqus.type = 'text/javascript';
       disqus.async = true;
       disqus.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(disqus);
-    })();
-      
-    $(this).hide(); 
-    });
-  });
-      
+
+      button.style.display = 'none';
+  };
+
+  button.addEventListener('click', clickHandler, false);
+}
 </script>
-<script id="dsq-count-scr" src="//{{ .Site.DisqusShortname }}.disqus.com/count.js" async></script>
 <!-- End Delayed Disqus -->
 {{ end }}
 
