@@ -9,7 +9,7 @@ subtitle = "Who am I?"
 
 <p class="about-text">
 <span class="fa fa-briefcase about-icon"></span>
-Doing <strong>mobile applications development since 2011</strong>, currently as the <strong>lead iOS developer</strong> at <a href="https://www.teamwire.eu/">Teamwire</a> working on the new iOS secure messaging app after the death of Windows Phone. 
+Doing <strong>mobile applications development since 2011</strong>, currently as the <strong>lead iOS developer</strong> at <a href="https://www.teamwire.eu/">Teamwire</a>, working on the new iOS secure messaging application written in <strong>Swift</strong> after the death of Windows Phone. 
 </p>
 
 <p class="about-text">
