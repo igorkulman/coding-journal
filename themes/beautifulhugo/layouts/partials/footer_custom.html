@@ -3,40 +3,24 @@ If you want to include any custom html just before </body>, put it in /layouts/p
 Do not put anything in this file - it's only here so that hugo won't throw an error if /layouts/partials/footer_custom.html doesn't exist.
 -->
 <script type="text/javascript">
-
-
-$(function () {
-    document.querySelectorAll('div.placeholder').forEach( div => {
-        if ( ! div.hasAttribute("data-large")) {
-            return;
-        }
-
-        const original = div.getAttribute("data-large");
-        const alt =  div.getAttribute("data-alt");
-        fetch(original)
-            .then(function (response) {
-                if (response && response.status == 200){                    
-                    var image = new Image();
-                    image.setAttribute("src", original)
-                    image.setAttribute("alt", alt)
-                    image.onload = function () {
-                      image.classList.add('loaded');
-                    };
-                    div.append(image);
-                }
-            })
-            .catch(function(err) {
-                console.error('lazy error: ', err);
-            });
-    });
-});
+  var elems = document.getElementsByTagName('div'), i;
+      for (i in elems) {
+          if(elems[i].className != null && (' '+elems[i].className+' ').indexOf(' placeholder ') > -1) {
+            var imgLarge = new Image();
+            imgLarge.src = elems[i].getAttribute("data-large")
+            imgLarge.alt = elems[i].getAttribute("data-alt")
+            imgLarge.onload = function () {
+              this.classList.add('loaded');
+            };
+           elems[i].appendChild(imgLarge);
+          }
+      }
 </script>
 
 <!-- Matomo -->
 <script type="text/javascript">
   var _paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDoNotTrack", true]);
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */  
   _paq.push(["disableCookies"]);
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
