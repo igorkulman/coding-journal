@@ -70,7 +70,7 @@ It calls a bash script `code.sh` when invoked, that runs Visual Studio Code with
 code --wait $4
 {{< / highlight >}}
 
-Do not forget to make the bash script runnable by calling `chmod +x bash.sh`.
+Do not forget to make the bash script runnable by calling `chmod +x code.sh`.
 
 When you restart Git Tower, you will now see Visual Studio Code among the merge tools options.
 
