@@ -6,7 +6,7 @@ Keywords = ["iOS", "Xcode", "MapKit"]
 author = "Igor Kulman"
 date = "2020-06-10T05:29:12+01:00"
 title = "A few reason why your MKMapView unexpectedly crashes and how to fix them"
-url = "/ew-reasons-mkmapview-crashes"
+url = "/few-reasons-mkmapview-crashes"
 series = "Using MKMapView and MapKit on iOS"
 
 +++
@@ -58,6 +58,8 @@ Which would make sense, when the user moves the map or zooms it there might be s
 The interesting thing was **this only happened when using annotation clustering**. It never happened with "plain" annotations. 
 
 With this observation it looked like `MKMapView` trying to recompute the clusters causing the crash.
+
+<!--more-->
 
 ### First idea: ignore the exception
 
