@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2020-05-06T05:29:12+01:00"
 title = "Clustering annotations in MKMapView"
 url = "/clustering-annotations-in-mkpampview"
-share_img = "/workaround-for-swift-scripts-crash/MapCluster.png"
+share_img = "/clustering-annotations-in-mkpampview/MapCluster.png"
 series = "Using MKMapView and MapKit on iOS"
 
 +++
