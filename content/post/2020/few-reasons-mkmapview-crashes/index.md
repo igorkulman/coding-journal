@@ -15,7 +15,7 @@ In the last few months I have been working more intensively with `MapKit`, doing
 
 I have encountered a few problem resulting in `MKMapView` quite unexpectedly crashing the whole application that I had to fix, or maybe better to say, work around.
 
-## MKMapView crashing the view controller on dismiss
+### MKMapView crashing the view controller on dismiss
 
 During the application testing I noticed a very strange bug. Sometimes when I dismissed the view controller with `MKMapView` the application just crashed. 
 
@@ -31,15 +31,13 @@ deinit {
 }
 {{< /highlight >}}
 
-## Crashing when animating annotation position changes
+### Crashing when animating annotation position changes
 
 The second crash I encountered was a bit more tricky. The application started crashing when I implemented [animating the annotation position changes](/animating-annotation-position-change-on-ios).
 
-The way this works is you have a collection of your annotation objects, each has a `coordinate` property that needs to be `@objc dynamic` because `MKMapView` uses KVO to observe it. If you just update the property, the annotation changes its position on the map.
+The way this works is you have a collection of your annotation objects, each has a `coordinate` property that needs to be `@objc dynamic` because `MKMapView` uses KVO to observe it. When you update this property the annotation changes its position on the map.
 
-If you want to animate the position change on the map, you need to wrap the property change into `UIView.animate`.
-
-Doing this the application started crashing when the user moved the map, or zoomed it, or sometimes just after a while with the user not doing anything a all
+If you want to animate the position change on the map, you need to wrap the `coordinate` property assignment into `UIView.animate`. Doing this the application started crashing when the user moved the map, or zoomed it, or sometimes just after a while with the user not doing anything a all
 
 The exception said
 
@@ -49,9 +47,9 @@ Collection was mutated while being enumerated.
 
 but the annotation collection was not really mutated as a whole, some annotation in that collection was mutated by updating its `coordinate` property.
 
-### Theory about the crash
+#### Theory about the crash
 
-The situation when the crash was happening led me to believ that there was some timing issue, my code updating the annotation at the same the `MKMapView` processes it. 
+The circumstances of the crash led me to believe that there was some timing issue, my code updating the annotation at the same the `MKMapView` processes it in some way. 
 
 Which would make sense, when the user moves the map or zooms it there might be some processing needed to bring annotations into view or hide them.
 
@@ -61,9 +59,9 @@ With this observation it looked like `MKMapView` trying to recompute the cluster
 
 <!--more-->
 
-### First idea: ignore the exception
+#### First idea: ignore the exception
 
-The first idea was just catch and ignore the exception, the annotation data gets updated quite frequently in the application so loosing a few data points that will later get updated anyways does not have to be a big deal.
+The first idea was to just catch and ignore the exception, the annotation data gets updated quite frequently in the application so loosing a few data points that will later get updated anyway does not have to be a big deal.
 
 But how do you catch an Objective-C runtime exception in Swift so you can ignore it? Turns out there is a way. 
 
@@ -97,7 +95,7 @@ UIView.animate(withDuration: 0.3) { [weak self] in
 
 Not exactly a great solution but it was a start.
 
-### Second idea: not processing the data when user interaction is in progress
+#### Second idea: not processing the data when user interaction is in progress
 
 A much better solution would be to **detect when the user actually interacts with the map and not do any data updates while that happens**.
 
@@ -120,10 +118,10 @@ This worked quite well but I was still not able to completely remove the previou
 
 #### Improving the queue performance
 
-The main problem with this solution was that with the user interacting a lot with the map and with lots of data updates coming to the app the queue became quite full and slow to fully process.
+The main problem with this solution was that with the user interacting a lot with the map and with lots of data updates coming to the application the queue became long and slow to fully process.
 
-In my specific case there was an easy optimization I could make. When the application receives an data update for a specific annotation it can first remove data update for the same annotation from the queue and process it or enqueue it as needed.
+In my specific case there was an easy optimization I could make. When the application receives a data update for a specific annotation it can first remove a data update for the same annotation from the queue.
 
-The reason is that the user only cares about the final position of the annotations. There is no point moving the annotation to some intermediate position just to move it again to the final position a while later. 
+The reason is that the user only cares about the final position of the annotations. There is no point moving an annotation to some intermediate position just to move it again to the final position a while later on the next queue pass. 
 
 With this optimization the queue can never be bigger that the total number of annotations.
