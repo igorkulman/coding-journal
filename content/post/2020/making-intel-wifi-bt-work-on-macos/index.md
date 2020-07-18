@@ -81,3 +81,12 @@ This project aims to replicate the standard macOS Wi-Fi management UI. It is sti
 
 You get an app in the menu bar that shows the status of your Wi-Fi connection, you can see all the available networks and connect to them.
 
+#### Building the app
+
+The easiest way to build the project on Catalina with Xcode 11.5 is to clone the repository and run
+
+{{< highlight bash >}}
+xcodebuild -workspace HeliPort.xcworkspace -scheme HeliPort -configuration Release -derivedDataPath build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+{{< / highlight >}}
+
+You will then find `HeliPort.app` in `./build/Build/Products/Release`.
