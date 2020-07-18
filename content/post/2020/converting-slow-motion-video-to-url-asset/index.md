@@ -5,7 +5,7 @@ Tags = ["iOS", "Xcode"]
 Keywords = ["iOS", "Xcode"]
 author = "Igor Kulman"
 date = "2020-07-22T05:29:12+01:00"
-title = "Converting slow motion video to an URL asset"
+title = "Converting slow motion video to an URL asset for upload"
 url = "/converting-slow-motion-video-to-url-asset"
 
 +++
