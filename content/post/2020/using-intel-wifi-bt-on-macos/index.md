@@ -21,7 +21,7 @@ Later I discovered and [open-source project that aims to make Intel Wi-Fi and Bl
 
 To get Intel Bluetooth working you need [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware). It is a macOS kernel extension that that uses firmware binaries from Linux to make Bluetooth work.
 
-Make sure your specific Intel card is supported, download the latest release and use the two kexts; `IntelBluetoothFirmware.kext` and `IntelBluetoothInjector.kext`. If you use `Clover` just copy them to `EFI/Clover/Kexts/Other`.
+Make sure your specific Intel card is supported, download the [latest release](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) and use the two kexts; `IntelBluetoothFirmware.kext` and `IntelBluetoothInjector.kext`. If you use `Clover` just copy them to `EFI/Clover/Kexts/Other`.
 
 Make sure you do not use any of `AirportBrcmFixup`, `BT4LEContinuityFixup`, `BrcmBluetoothInjector`, `BrcmPatchRAM3` so you do not create a conflict.
 
@@ -33,7 +33,7 @@ After reboot Bluetooth will appear in System Preferences and you will be able to
 
 To get Intel Wi-Fi working you need [itlwm](https://github.com/OpenIntelWireless/itlwm). Similar to `IntelBluetoothFirmware` it is a macOS kernel extension using firmware from Linux. 
 
-Make sure your specific Intel card is supported and download the latest release. The release includes two kexts; `itlwm.kext` and `itlwmx.kext`. The `itlwmx.kext` is for use with the Intel X cards, like `Intel X200`, the `itlwm.kext` is for all the older cards like mine.
+Make sure your specific Intel card is supported and download the [latest release](https://github.com/OpenIntelWireless/itlwm/releases). The release includes two kexts; `itlwm.kext` and `itlwmx.kext`. The `itlwmx.kext` is for use with the Intel X cards, like `Intel X200`, the `itlwm.kext` is for all the older cards like mine.
 
 #### Networks management
 
@@ -67,4 +67,4 @@ This project aims to replicate the standard macOS Wi-Fi management UI.
 
 ![HeliPort features](HeliPort.png)
 
-Just download the latest release, copy it to Applications and launch it.
+Just download the [latest release](https://github.com/OpenIntelWireless/HeliPort/releases), copy it to Applications and launch it.
