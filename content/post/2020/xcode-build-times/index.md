@@ -19,9 +19,9 @@ With [Xcode build times](https://github.com/matopeto/xcode-build-times) you can 
 
 ### Xcode build times
 
-Xcode build times is a PHP script that tracks all your daily builds and their duration. 
+Xcode build times is a script that tracks all your daily builds and their duration. 
 
-You just set it up in Xcode to be called on build start, success and fail as stated in the project README. No need to deal with PHP in any way, it is included in macOS by default.
+You just set it up in Xcode to be called on build start, success and fail as stated in the project README. 
 
 It script is intended to be used as a plugin for [BitBar](https://github.com/matryer/bitbar). BitBar is a open source tool that allows you to show any script output in the macOS menu bar. 
 
