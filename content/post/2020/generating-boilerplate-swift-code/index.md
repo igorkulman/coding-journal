@@ -94,25 +94,97 @@ public protocol Permissions {
     var inviteMembers: Permission { get }
     var leaveConversation: Permission { get }
     var attachments: Permission { get }
-    var interactiveAttachments: Permission { get }
-    var accessCamera: Permission { get }
-    var notificationPreview: Permission { get }
-    var autoSaveMedia: Permission { get }
-    var blockingUsers: Permission { get }
-    var replyFromNotifications: Permission { get }
-    var closeSessions: Permission { get }
-    var changePassword: Permission { get }
-    var closeChats: Permission { get }
-    var liveLocation: Permission { get }
-    var internalBrowser: Permission { get }
-    var disableReadReceipts: Permission { get }
-    var deleteMessages: Permission { get }
 }
 {{< /highlight >}}
 
-You can then also generate different implementation of this protocol, for example parsing those permissions from the backend or from an MDM.
+You can then also generate different implementation of this protocol, for example parsing those permissions from the backend or from an MDM
 
-If you then need to add support for a new permission in the future, you just add it to the CSV file and the Swift code gets regenerated. No need to add the permissions manually to the protocol or to its different implementations.
+{{< highlight swift >}}
+%{
+  import csv
+
+  permissions = []
+
+  source_file = open('Data/permissions.csv', 'rb')
+  for line in csv.DictReader(source_file, delimiter = ','):
+      permissions.append(line["Name"])
+}%
+import Foundation
+
+struct AppConfigPermissions: Permissions {
+    % for permission in permissions:
+    let ${permission}: Permission
+    % end
+
+    init(config: [String: Any]) {
+        let getPermissionForKey = { (key: String) -> Permission in
+            if let value = config[key] as? Bool {
+                switch value {
+                case true:
+                    return .Allow
+                case false:
+                    return .Deny
+                }
+            }
+            return .Undefined
+        }
+
+        % for permission in permissions:
+        ${permission} = getPermissionForKey("allow${permission[:1].upper() + permission[1:]}")
+        % end
+    }
+}
+{{< /highlight >}}
+
+generates
+
+{{< highlight swift >}}
+import Foundation
+
+struct AppConfigPermissions: Permissions {
+    let accessPhotos: Permission
+    let accessVideos: Permission
+    let accessMicrophone: Permission
+    let accessLocation: Permission
+    let accessCalendar: Permission
+    let fileSharing: Permission
+    let openIn: Permission
+    let copyPaste: Permission
+    let emailConversation: Permission
+    let inviteMembers: Permission
+    let leaveConversation: Permission
+    let attachments: Permission
+
+    init(config: [String: Any]) {
+        let getPermissionForKey = { (key: String) -> Permission in
+            if let value = config[key] as? Bool {
+                switch value {
+                case true:
+                    return .Allow
+                case false:
+                    return .Deny
+                }
+            }
+            return .Undefined
+        }
+
+        accessPhotos = getPermissionForKey("allowAccessPhotos")
+        accessVideos = getPermissionForKey("allowAccessVideos")
+        accessMicrophone = getPermissionForKey("allowAccessMicrophone")
+        accessLocation = getPermissionForKey("allowAccessLocation")
+        accessCalendar = getPermissionForKey("allowAccessCalendar")
+        fileSharing = getPermissionForKey("allowFileSharing")
+        openIn = getPermissionForKey("allowOpenIn")
+        copyPaste = getPermissionForKey("allowCopyPaste")
+        emailConversation = getPermissionForKey("allowEmailConversation")
+        inviteMembers = getPermissionForKey("allowInviteMembers")
+        leaveConversation = getPermissionForKey("allowLeaveConversation")
+        attachments = getPermissionForKey("allowAttachments")
+    }
+}
+{{< /highlight >}}
+
+If you then need to add support for a new permission in the future, you **just add it to the CSV file and the Swift code gets regenerated**. No need to add the permissions manually to the protocol or to its different implementations.
 
 ### Generating code
 
