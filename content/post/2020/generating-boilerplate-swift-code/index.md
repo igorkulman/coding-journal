@@ -36,7 +36,7 @@ I put it directly to the project directory and include it in the source control 
 
 GYB templates for generating Swift source file look like Swift source files with some Python snippets for code generation.
 
-This is probably best shown oin an actual example. Let's say you have a list of permissions that the app needs to support. Those permissions are then a part of a protocol and of a struct.
+This is probably best shown on an actual example. Let's say you have a list of permissions that the app needs to support. Those permissions are then a part of a protocol and of a struct.
 
 <!--more-->
 
@@ -51,6 +51,7 @@ You can create a template that generates the protocol from a CSV with the permis
   for line in csv.DictReader(source_file, delimiter = ','):
       permissions.append(line["Name"])
 }%
+import Foundation
 
 public enum Permission {
     case Allow
@@ -68,6 +69,46 @@ public protocol Permissions {
 This GYB template really looks like a Swift source file just with one difference. Instead of manually adding properties for all the permission you just use a `for` loop to have those properties generated.
 
 You can use `% code: ... % end` to manage control flow, like using the `for` loop in this example, or `%{ code }` to evaluate Python code, like printing the permission names read from the CSV file.
+
+The resulting Swift file might look something like this
+
+{{< highlight swift >}}
+import Foundation
+
+public enum Permission {
+    case Allow
+    case Deny
+    case Undefined
+}
+
+public protocol Permissions {
+    var accessPhotos: Permission { get }
+    var accessVideos: Permission { get }
+    var accessMicrophone: Permission { get }
+    var accessLocation: Permission { get }
+    var accessCalendar: Permission { get }
+    var fileSharing: Permission { get }
+    var openIn: Permission { get }
+    var copyPaste: Permission { get }
+    var emailConversation: Permission { get }
+    var inviteMembers: Permission { get }
+    var leaveConversation: Permission { get }
+    var attachments: Permission { get }
+    var interactiveAttachments: Permission { get }
+    var accessCamera: Permission { get }
+    var notificationPreview: Permission { get }
+    var autoSaveMedia: Permission { get }
+    var blockingUsers: Permission { get }
+    var replyFromNotifications: Permission { get }
+    var closeSessions: Permission { get }
+    var changePassword: Permission { get }
+    var closeChats: Permission { get }
+    var liveLocation: Permission { get }
+    var internalBrowser: Permission { get }
+    var disableReadReceipts: Permission { get }
+    var deleteMessages: Permission { get }
+}
+{{< /highlight >}}
 
 You can then also generate different implementation of this protocol, for example parsing those permissions from the backend or from an MDM.
 
