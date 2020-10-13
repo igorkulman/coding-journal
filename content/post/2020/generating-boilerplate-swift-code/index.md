@@ -191,7 +191,22 @@ If you then need to add support for a new permission in the future, you **just a
 
 With the `GYB` templates created you now need to make Xcode generate the `Swift` source files from those templates. Ideally only when the templates change, not on every build.
 
-I use a script that relies on a naming convention. The template is always called `SomeFile.swift.gyb` and it generated `SomeFile.swift`. This script is added as a build phase of the Xcode project
+I use a script that relies on a naming convention. The template is always called `SomeFile.swift.gyb` and it generated `SomeFile.swift`. 
+
+This script 
+
+{{< highlight bash >}}
+for INFILE in ${!SCRIPT_INPUT_FILE_*};
+do
+    file=${!INFILE}
+    if [ ${file: -4} == ".gyb" ]; then
+        echo "Processing template $file"
+        "${PROJECT_DIR}/support/gyb" --line-directive '' -o "${file%.gyb}" "$file"
+    fi
+done
+{{< /highlight >}}
+
+is added as a build phase of the Xcode project
 
 ![Code generation build phase](BuildPhase.png)
 
