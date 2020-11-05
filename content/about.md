@@ -9,7 +9,7 @@ subtitle = "Who am I?"
 
 <p class="about-text">
 <span class="fa fa-briefcase about-icon"></span>
-Doing <strong>mobile applications development since 2011</strong>, currently as the <strong>lead iOS developer</strong> at <a href="https://www.teamwire.eu/">Teamwire</a>, working on the new iOS secure messaging application written in <strong>Swift</strong> after the death of Windows Phone. 
+Doing mobile applications development for almost a decade, currently helping to build privacy focused apps as an <strong>iOS developer</strong> in the Core Team at <a href="https://www.protonmail.com/">ProtonMail</a>. Previously built the industry leading corporate secure messaging applications at <a href="https://www.teamwire.eu">Teamwire</a> as the lead iOS developer. 
 </p>
 
 <p class="about-text">
