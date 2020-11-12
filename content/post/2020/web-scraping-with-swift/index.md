@@ -29,8 +29,8 @@ This is quite an artificial example but the idea is simple. You use the develope
 You first need to read the website and parse it
 
 {{< highlight swift >}}
-let content = try! String(contentsOf: URL(string: "https://news.ycombinator.com/")!)
-let doc: Document = try! SwiftSoup.parse(content)
+let content = try String(contentsOf: URL(string: "https://news.ycombinator.com/")!)
+let doc: Document = try SwiftSoup.parse(content)
 {{< /highlight >}}
 
 Looking at the `HTML` you can see it uses a table layout and all the posts are in a rows of a table with a class called `itemlist`. 
@@ -38,20 +38,20 @@ Looking at the `HTML` you can see it uses a table layout and all the posts are i
 <!--more-->
 
 {{< highlight swift >}}
-let table = try! doc.select("table.itemlist").first()!
-let rows = try! table.select("tr")
+let table = try doc.select("table.itemlist").first()!
+let rows = try table.select("tr")
 {{< /highlight >}}
 
 You need to find rows that have to cells with a class called `title`, get the second cell and read the text nested in its hyperlink element
 
 {{< highlight swift >}}
-let title = rows.compactMap { row -> String? in
-    let cells = try! row.select("td.title")
-    guard cells.count == 2 else {
-        return nil
+let title = rows.compactMap { row throws -> String? in
+    let cells = try row.select("td.title")
+    guard cells.count == 2, let link = try cells[1].select("a").first() else {
+        return nil // wrong row
     }
 
-    return try! cells[1].select("a").first()!.text()
+    return try link.text()
 }
 {{< /highlight >}}
 
