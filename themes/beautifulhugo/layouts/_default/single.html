@@ -90,6 +90,11 @@
             {{ partial "staticman-comments.html" . }}
           </div>
         {{ end }}
+        {{ if .Site.Params.utterancesRepo }}
+          <div>
+            {{ partial "utterances-comments.html" . }}
+          </div>
+        {{ end }}
       {{ end }}
 
     </div>

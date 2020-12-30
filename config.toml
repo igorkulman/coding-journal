@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Igor Kulman"
 theme = "beautifulhugo"
 Paginate = 5
-disqusShortname = "coudingjournal"
 enableRobotsTXT = true
 
 [markup]
@@ -26,10 +25,10 @@ enableRobotsTXT = true
   favicon = "favicon.ico"
   blogTitle = "Coding Journal"
   readingTime = true
-  delayDisqus = true
   showRelatedPosts = true
   since = 2012
   selfHosted = true
+  utterancesRepo = "igorkulman/coding-journal"
 
 [Author]
   name = "Igor Kulman"
