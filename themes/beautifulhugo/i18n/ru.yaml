@@ -1,12 +1,12 @@
 # Content
 - id: dateFormat
-  translation: "Январь 2, 2006"
+  translation: "02.01.2006"
 - id: shortdateFormat
   translation: "2 Jan, 2006 15:04:05"
 - id: postedOnDate
-  translation: "Опубликовано {{ .Count }}"
+  translation: "Опубликовано {{ . }}"
 - id: lastModified
-  translation: "(Последнее изменение {{ .Count }})"
+  translation: "(Последнее изменение {{ . }})"
 - id: translationsLabel
   translation: "Другие языки: "
 - id: translationsSeparator

@@ -4,9 +4,9 @@
 - id: shortdateFormat
   translation: "2 Jan 2006 15:04:05"
 - id: postedOnDate
-  translation: "Redatto il {{ .Count }}"
+  translation: "Redatto il {{ . }}"
 - id: lastModified
-  translation: "(Ultima modifica il {{ .Count }})"
+  translation: "(Ultima modifica il {{ . }})"
 - id: translationsLabel
   translation: "Altre lingue: "
 - id: translationsSeparator

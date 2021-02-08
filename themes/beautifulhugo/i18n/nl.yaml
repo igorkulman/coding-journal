@@ -4,9 +4,9 @@
 - id: shortdateFormat
   translation: "2 Jan, 2006 15:04:05"
 - id: postedOnDate
-  translation: "Gepost op {{ .Count }}"
+  translation: "Gepost op {{ . }}"
 - id: lastModified
-  translation: "(Laatst gewijzigd op {{ .Count }})"
+  translation: "(Laatst gewijzigd op {{ . }})"
 - id: translationsLabel
   translation: "Andere talen: "
 - id: translationsSeparator
@@ -65,9 +65,9 @@
 
 # Delayed Disqus
 - id: show
-  translation: "Laat"
+  translation: "Laat zien"
 - id: comments
-  translation: "reacties zien" 
+  translation: "reacties"
 
 # Related posts
 - id: seeAlso
