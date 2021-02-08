@@ -4,9 +4,9 @@
 - id: shortdateFormat
   translation: "2 Jan, 2006 15:04:05"
 - id: postedOnDate
-  translation: "Afiŝiĝis je {{ .Count }}"
+  translation: "Afiŝiĝis je {{ . }}"
 - id: lastModified
-  translation: "(Laste aliiĝis je {{ .Count }})"
+  translation: "(Laste aliiĝis je {{ . }})"
 - id: translationsLabel
   translation: "Aliaj lingvoj: "
 - id: translationsSeparator
