@@ -28,14 +28,14 @@ let bitmap = NSBitmapImageRep(cgImage: cgImage)
 convert it to grayscale
 
 {{< highlight swift >}}
-let greyScale = bitmap.converting(to: .genericGray, renderingIntent: .default)
+let grayscale = bitmap.converting(to: .genericGray, renderingIntent: .default)
 {{< /highlight >}}
 
 and then construct an `NSImage` from the result.
 
 {{< highlight swift >}}
-let greyImage = NSImage(size: greyScale.size)
-greyImage.addRepresentation(greyScale)
+let grayImage = NSImage(size: grayscale.size)
+greyImage.addRepresentation(grayscale)
 {{< /highlight >}}
 
 Putting it all together as an NSImage extension might look like this
@@ -51,13 +51,13 @@ extension NSImage {
 
         let bitmap = NSBitmapImageRep(cgImage: image)
 
-        guard let greyScale = bitmap.converting(to: .genericGray, renderingIntent: .default) else {
+        guard let grayscale = bitmap.converting(to: .genericGray, renderingIntent: .default) else {
             return nil
         }
 
-        let greyImage = NSImage(size: greyScale.size)
-        greyImage.addRepresentation(greyScale)
-        return greyImage
+        let grayImage = NSImage(size: grayscale.size)
+        grayImage.addRepresentation(grayscale)
+        return grayImage
     }
 }
 {{< /highlight >}}
