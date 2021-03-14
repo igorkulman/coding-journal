@@ -3,7 +3,4 @@ If you want to include any custom html just before </head>, put it in /layouts/p
 Do not put anything in this file - it's only here so that hugo won't throw an error if /layouts/partials/head_custom.html doesn't exist.
 -->
  <link rel="stylesheet" href="{{ "css/custom.css" | absURL }}" />
- {{ if in (.Site.BaseURL | string) "blog.kulman.sk" }}
- <script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"igorkulman",utcoffset:"1"}))};sessionStorage.setItem("_swa","1");</script>
- {{ end }}
  
