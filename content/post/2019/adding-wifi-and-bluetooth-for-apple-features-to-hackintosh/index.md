@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2019-06-12T05:29:12+01:00"
 title = "Adding Wi-Fi and Bluetooth to hackintosh to enable Apple-specific features"
 url = "/adding-wifi-and-bluetooth-for-apple-features-to-hackintosh"
-share_img = "/adding-wifi-and-bluetooth-for-apple-features-to-hackintosh/card.png"
+share_img = "/adding-wifi-and-bluetooth-for-apple-features-to-hackintosh/card.jpg"
 
 +++
 
@@ -58,7 +58,7 @@ There are a few companies that sell the PCIe card and a Wi-Fi + Bluetooth module
 
 I bought [ABWB 802,11 AC WI-FI + Bluetooth 4.0 PCI-Express (PCI-E) BCM943602CS Combo Card](https://www.amazon.de/Bluetooth-PCI-Express-BCM943602CS-Hackintosh-Flughafen/dp/B00MBP25UK), found it on German Amazon. 
 
-![WiFI card](card.png)
+![WiFI card](card.jpg)
 
 On AliExpress you can find the [FV-T919 PCIe card](https://www.aliexpress.com/item/Fenvi-FV-T919-802-11AC-Desktop-Wifi-Card-802-11-A-B-G-N-AC-BCM94360CD/32778371977.html).
 
