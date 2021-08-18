@@ -5,7 +5,7 @@ Tags = ["Windows Phone", "Windows Store", "Windows 8"]
 Keywords = ["Windows Phone", "Windows Store", "Windows 8"]
 author = "Igor Kulman"
 date = "2021-09-01T05:29:12+01:00"
-title = "My negative experience dealing with Microsoft in the old Windows Phone times"
+title = "My experience dealing with Microsoft in the old Windows Phone times"
 url = "/dealing-with-microsoft-in-wp-times"
 
 +++
