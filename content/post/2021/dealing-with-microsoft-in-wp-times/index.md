@@ -22,13 +22,11 @@ My times of doing Windows Phone development are long over as the platform has be
 
 ## Windows Phone app competitions
 
-Shortly after publishing my first Windows Phone apps I got approached by a developer evangelist from the Slovak branch of Microsoft. Seeing my existing apps he offered me a **Nokia Lumia 800 in exchange for publishing 3 new apps in the Slovak Windows Phone Store** and I agreed. 
+In 2012 the Czech Microsoft started a **competition giving every developer a Nokia Lumia 800 for publishing 3 apps to the Windows Phone Store**. 
 
-In spring of 2012 first preview of Windows 8 was released and I got access to to it from that developer evangelist. I created a **TV Schedule app for Windows 8** which was the absolutely **first Slovak app for Windows 8**. He also connected me with Slovak publishing company to create a small weather app for them. The relationship was going well.
+The problem was the **quality of those apps did not matter at all**. The goal was to increases the number of the apps as much as possible, probably reaching some arbitrary number set by Redmond.
 
 ![Nokia Lumia 800](lumia.png)
-
-Meanwhile in the Czech Republic the local Microsoft branch started a **competition giving every developer a Nokia Lumia 800 for publishing 3 apps to the Windows Phone Store**. The problem was the quality of those apps did not matter at all. The goal was to increases the number of the apps as much as possible, probably reaching some arbitrary number set by Redmond.
 
 The Czech **Windows Phone Store was flooded by crappy apps created only because of this competition**, not having any real value for the user. I remember an app with one input and one button doing some kind of number conversion. 
 
@@ -37,6 +35,8 @@ Microsoft just wanted to bump the app numbers count by any means necessary to be
 <!--more-->
 
 ## The advent of Windows 8
+
+In spring of 2012 first preview of Windows 8 was released and I got access to to it from a Slovak developer evangelist. I created a **TV Schedule app for Windows 8** which was the absolutely **first Slovak app for Windows 8**. He also connected me with Slovak publishing company to create a small weather app for them. The relationship was going well.
 
 I worked at a mobile development company in the Czech Republic at the time so the Czech Microsoft approached us via a developer evangelist to **create a Windows 8 app for the official launch of Windows 8**.
 
