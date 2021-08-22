@@ -114,3 +114,8 @@ The client decided to consult with Slovak Microsoft. The result was I was taken 
 
 ## Conclusion
 
+Sometimes I miss the old Windows Phone times. I was creating a new mobile app from scratch every few months in my day job and on the side. 
+
+Basically every company getting some funding wanted a mobile app, some even an Windows Phone app, as having a mobile app was considered to be trendy, even though most of the apps were never updated.
+
+The one thing I definitely do not miss is having to deal with the local Microsoft branches.
