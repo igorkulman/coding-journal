@@ -32,7 +32,7 @@ The Czech Windows Phone Store was flooded by crappy apps created only because of
 
 Microsoft just wanted to bump the app numbers count by any means necessary to be able to compare the Windows Phone Store to other mobile app stores.
 
-This also reminded me that Microsoft was really bad at competitions overall, another example was [destroying DVLUP after purchasing Nokia](the-sad-state-of-dvlup-ms-tech-rewards/). 
+This also reminded me that Microsoft was really bad at competitions overall, another example was [destroying DVLUP after purchasing Nokia](/the-sad-state-of-dvlup-ms-tech-rewards/). 
 
 <!--more-->
 
