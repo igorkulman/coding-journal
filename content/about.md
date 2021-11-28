@@ -9,7 +9,7 @@ subtitle = "Who am I?"
 
 <p class="about-text">
 <span class="fa fa-briefcase about-icon"></span>
-Doing mobile applications development for almost a decade, currently helping to build privacy focused apps as an <strong>iOS developer</strong> in the Core Team at <a href="https://www.protonmail.com/">ProtonMail</a>. Previously built the industry leading corporate secure messaging applications at <a href="https://www.teamwire.eu">Teamwire</a> as the lead iOS developer. 
+Doing mobile applications development for a decade, currently helping to build privacy focused apps as an <strong>iOS developer</strong> in in the VPN team at <a href="https://www.protonmail.com/">ProtonMail</a>. Previously built the industry leading corporate secure messaging applications at <a href="https://www.teamwire.eu">Teamwire</a> as the lead iOS developer. 
 </p>
 
 <p class="about-text">
@@ -24,7 +24,7 @@ This blog mostly covers my <strong>programming experience</strong> venturing int
 
 <p class="about-text">
 <span class="fa fa-file-alt about-icon"></span>
-Take a look at my <a href="/projects">projects</a> and my <a href="https://github.com/igorkulman">open-source software</a> to get a better understanding of my work.
+Take a look at my  <a href="https://github.com/igorkulman">open-source software</a> to get a better understanding of my work.
 </p>
 
 <p class="about-text">
