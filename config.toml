@@ -39,14 +39,9 @@ enableRobotsTXT = true
   stackoverflow = "users/581164/igor-kulman"
 
 [[menu.main]]
-    name = "Blog"
-    url = "/"
-    weight = 1
-
-[[menu.main]]
     name = "About me"
     url = "/about/"
-    weight = 3
+    weight = 1
 
 [related]
 threshold = 80
