@@ -7,6 +7,7 @@ author = "Igor Kulman"
 date = "2021-12-21T05:29:12+01:00"
 title = "Automatically merging conflicts in Xcode project files"
 url = "/automatically-merge-xcode-project-conflicts"
+share_img = "/automatically-merge-xcode-project-conflicts/kintsugi.png"
 
 +++
 
