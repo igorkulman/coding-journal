@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Igor Kulman"
 theme = "beautifulhugo"
 Paginate = 5
-disqusShortname = "coudingjournal"
 enableRobotsTXT = true
 
 [markup]
@@ -25,8 +24,7 @@ enableRobotsTXT = true
   logo = "images/avatar-icon.png"
   favicon = "favicon.ico"
   blogTitle = "Coding Journal"
-  readingTime = true
-  delayDisqus = true
+  readingTime = true  
   showRelatedPosts = true
   since = 2012
   selfHosted = true
