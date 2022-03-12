@@ -38,7 +38,3 @@ If you want to know more about the way I work, read my <a href="https://remoteha
 </p>
 
 </div>
-
-# Contact
-
-If you want to get in touch, [drop me an email](mailto:igor@kulman.sk) or [tweet to me](https://www.twitter.com/igorkulman).
