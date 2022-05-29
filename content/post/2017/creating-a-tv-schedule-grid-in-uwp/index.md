@@ -59,7 +59,6 @@ Creating something like a TV schedule grid in UWP with good performance is simpl
 
 Even Microsoft XAML apps suffer from poor rendering performance. Just take a look at the list in the Add or remove programs section of Windows 10 settings. This is how it behaves on ma quad-core i5, 16 GB RAM and GTX 660. 
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">When clients tell you your <a href="https://twitter.com/hashtag/uwp?src=hash">#uwp</a> app is slow and lists lag, just show them how Microsoft does it in <a href="https://twitter.com/hashtag/Windows10?src=hash">#Windows10</a>. Nothing better you can do. <a href="https://t.co/rnDWLFEHeb">pic.twitter.com/rnDWLFEHeb</a></p>&mdash; Igor Kulman (@igorkulman) <a href="https://twitter.com/igorkulman/status/818938357275328514">January 10, 2017</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{{< stweet "818938357275328514" >}}
 
 If Microsoft cannot create a well-performing lists in XAML and UWP, you as a developer cannot do much better no matter how hard you try.

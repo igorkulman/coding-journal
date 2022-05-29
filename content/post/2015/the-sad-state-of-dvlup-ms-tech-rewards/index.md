@@ -32,7 +32,6 @@ I think that making all the challenges for Windows 10 apps only made the develop
 
 Some of the DVLUP challenges were making you to implement unique Windows Phone features to your apps. It sometimes looked a bit forceful, but generally it was ok. Now that Windows 10 Mobile lost all of the Windows Phone unique features, the challenges are getting really stupid sometimes. Just take a look at a challenge called [Give Your Windows 10 App a Festive Holiday Glow](https://rewards.msdn.microsoft.com/Challenge/1c0a75a4-e198-4d52-9be2-5f9d2279848c). Reminds me of times when people put JavaScript snow on their websites in Winter. About 15 years ago. And it looks like I am not the only one who thinks it is really stupid
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Oh god no <a href="https://twitter.com/MSTechRewards">@MSTechRewards</a> please don&#39;t make people do shitty stuff like this <a href="https://t.co/Pmm4ofyT5c">https://t.co/Pmm4ofyT5c</a></p>&mdash; Morten Nielsen (@dotMorten) <a href="https://twitter.com/dotMorten/status/667743323633774592">November 20, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{{< stweet "667743323633774592" >}}
 
 For me, DVLUP is dead, I really do not want to rewrite my apps for Windows 10 and add Christmas theming to them. It makes me sad it ended this way.
