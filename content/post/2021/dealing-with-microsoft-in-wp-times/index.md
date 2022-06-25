@@ -14,7 +14,7 @@ This summer marks exactly a decade since I started doing mobile apps development
 
 The app solved a practical problem for me, keeping track of new episodes. I later rewrote the app as TvTime which was one of my most successful Windows Phone apps.
 
-![TvTime for Windows Phone](tvtime.png)
+![TvTime for Windows Phone](tvtime.jpg)
 
 My times of doing Windows Phone development are long over as the platform has been dead for many years but this reminded me of all the struggles I had to deal with when interacting with the local Microsoft branch.
 
@@ -26,7 +26,7 @@ In 2012 the Czech Microsoft started a competition giving every developer a Nokia
 
 The problem was the quality of those apps did not matter at all. The goal was to increases the number of the apps as much as possible, probably reaching some arbitrary number set by Redmond.
 
-![Nokia Lumia 800](lumia.png)
+![Nokia Lumia 800](lumia.jpg)
 
 The Czech Windows Phone Store was flooded by crappy apps created only because of this competition, not having any real value for the user. I remember an app with one input and one button doing some kind of number conversion. 
 
