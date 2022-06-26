@@ -1,9 +1,50 @@
 {{- $image := .Page.Resources.GetMatch .Destination -}}
-{{- $placeholder := $image.Resize "48x q20" -}} 
 
-<div class="image_placeholder" style="max-width: {{- $image.Width -}}px">
-<div class="placeholder" data-large="{{ $image.Permalink }}" data-alt="{{ $.Text }}">  
-  <img src="{{ $placeholder.Permalink }}" class="img-small loaded">
-  <div style="padding-bottom: {{ div (mul $image.Height 100.0) $image.Width }}%;"></div>
-</div>
-</div>
+<picture>
+  {{ $folder := replace .Page.File "/index.md" "" }}
+  {{ $isJPG := eq (path.Ext .Destination) ".jpg" }}
+  {{ $isPNG := eq (path.Ext .Destination) ".png" }}
+
+  {{ if ($isPNG) -}}
+    {{ $avifPath:= replace .Destination ".png" ".avif" }}
+    {{ $avifPathStatic:= printf "content/%s/%s" $folder $avifPath }}
+
+    {{ if (fileExists $avifPathStatic) -}}
+      {{ $avifUrl:= replace $image.Permalink ".png" ".avif" }}
+      <source srcset="{{ $avifUrl }}" type="image/avif" >
+    {{- end }}
+
+    {{ $webpPath:= replace .Destination ".png" ".webp" }}
+    {{ $webpPathStatic:= printf "content/%s/%s" $folder $webpPath }}    
+
+    {{ if (fileExists $webpPathStatic) -}}
+     {{ $webpUrl:= replace $image.Permalink ".png" ".webp" }}
+      <source srcset="{{ $webpUrl }}" type="image/webp" >
+    {{- end }}
+  {{- end }}
+
+  {{ if ($isJPG) -}}
+    {{ $avifPath:= replace .Destination ".jpg" ".avif" }}
+    {{ $avifPathStatic:= printf "content/%s/%s" $folder $avifPath }}
+
+    {{ if (fileExists $avifPathStatic) -}}
+      {{ $avifUrl:= replace $image.Permalink ".jpg" ".avif" }}
+      <source srcset="{{ $avifUrl }}" type="image/avif" >
+    {{- end }}
+
+    {{ $webpPath:= replace .Destination ".jpg" ".webp" }}
+    {{ $webpPathStatic:= printf "content/%s/%s" $folder $webpPath }}    
+
+    {{ if (fileExists $webpPathStatic) -}}
+     {{ $webpUrl:= replace $image.Permalink ".jpg" ".webp" }}
+      <source srcset="{{ $webpUrl }}" type="image/webp" >
+    {{- end }}
+  {{- end }}  
+  
+  <img
+    src="{{ $image.Permalink }}"
+    alt="{{ $.Text }}"
+    loading="lazy"
+    decoding="async"
+  />
+</picture>
