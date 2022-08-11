@@ -37,4 +37,9 @@ I also write a <a href="https://www.kulman.sk">blog in Slovak about non-programm
 If you want to know more about the way I work, read my <a href="https://remotehabits.com/interview/interview-with-igor-kulman-a-software-engineer-building-ios-apps-remotely">interview about working from home</a>, check out my <a href="https://thesweetsetup.com/igor-kulmans-macos-iphone-and-watch-setup/">macOS and iOS work setup</a> or listen to a <a href="https://devchat.tv/iphreaks/ips-264-pitching-to-swift-with-igor-kulman/">podcast episode about my experience trying to pitch a proposal for Swift</a>.
 </p>
 
+<p class="about-text">
+<span class="fa fa-envelope about-icon"></span>
+Want to get it touch with me? Check the links below in the footer. Email is the preferred form of communication.
+</p>
+
 </div>
