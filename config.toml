@@ -35,6 +35,7 @@ enableRobotsTXT = true
   github = "igorkulman"
   twitter = "igorkulman"
   stackoverflow = "users/581164/igor-kulman"
+  linkedin = "igorkulman"
 
 [[menu.main]]
     name = "About me"
