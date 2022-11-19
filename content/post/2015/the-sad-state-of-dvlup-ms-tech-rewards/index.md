@@ -14,7 +14,7 @@ If you are a Windows Phone developer you must know DVLUP. It was a program for d
 
 **Interesting, but location dependent**
 
-The problem with DVLUP was that it was location dependent. It opened in my countries maybe two years after US and developers from other "more important" countries could participate. The challenges were also location dependent, showing me only a small subset in my country. But they were interesting. They made me implement some new stuff into my apps that I would not do otherwise. And I got points for doing them. When I wanted to exchange the points for some rewards, there were not that many available in my country. No phones or other hardware like in the US. A Steam gift card was the only useful think that I could get. But I did not mind, I liked doing the challenges. 
+The problem with DVLUP was that it was location dependent. It opened in my countries maybe two years after US and developers from other "more important" countries could participate. The challenges were also location dependent, showing me only a small subset in my country. But they were interesting. They made me implement some new stuff into my apps that I would not do otherwise. And I got points for doing them. When I wanted to exchange the points for some rewards, there were not that many available in my country. No phones or other hardware like in the US. A Steam gift card was the only useful think that I could get. But I did not mind, I liked doing the challenges.
 
 And then Microsoft bought Nokia and slowly DVLUP turned into MS Tech Rewards.
 
@@ -30,8 +30,6 @@ Sure, they will tell you that making a 8 or 8.1 app into a 10 app is not rewriti
 
 I think that making all the challenges for Windows 10 apps only made the developer participate a lot less. Otherwise they would not come with the new stupid rules. One of the rules is that you have to participate challenges with a given period, otherwise your earned points (the points you cannot spend on anything useful) would expire!
 
-Some of the DVLUP challenges were making you to implement unique Windows Phone features to your apps. It sometimes looked a bit forceful, but generally it was ok. Now that Windows 10 Mobile lost all of the Windows Phone unique features, the challenges are getting really stupid sometimes. Just take a look at a challenge called [Give Your Windows 10 App a Festive Holiday Glow](https://rewards.msdn.microsoft.com/Challenge/1c0a75a4-e198-4d52-9be2-5f9d2279848c). Reminds me of times when people put JavaScript snow on their websites in Winter. About 15 years ago. And it looks like I am not the only one who thinks it is really stupid
-
-{{< stweet "667743323633774592" >}}
+Some of the DVLUP challenges were making you to implement unique Windows Phone features to your apps. It sometimes looked a bit forceful, but generally it was ok. Now that Windows 10 Mobile lost all of the Windows Phone unique features, the challenges are getting really stupid sometimes. Just take a look at a challenge called [Give Your Windows 10 App a Festive Holiday Glow](https://rewards.msdn.microsoft.com/Challenge/1c0a75a4-e198-4d52-9be2-5f9d2279848c). Reminds me of times when people put JavaScript snow on their websites in Winter. About 15 years ago. And it looks like I am not the only one who thinks it is really stupid.
 
 For me, DVLUP is dead, I really do not want to rewrite my apps for Windows 10 and add Christmas theming to them. It makes me sad it ended this way.

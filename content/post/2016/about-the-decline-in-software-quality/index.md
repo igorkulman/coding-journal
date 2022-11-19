@@ -20,13 +20,9 @@ Windows 10 updates are where I notice the software quality degradation the most.
 
 <!--more-->
 
-{{< stweet "789495984682364928" >}}
-
 The worst thing about Windows updates is that you cannot refuse them and not install them. They will install if you want them or not. You just need to leave your computer for a minute and Windows 10 will install updates that will break something. In an ideal scenario you may not loose your work.
 
 For example the latest update from last week made Windows 10 on my laptop think that I have 4 extra displays and Windows 10 now sometimes decides to open a window on one of those non-existent displays so I cannot get to it.
-
-{{< stweet "788074304533594117" >}}
 
 There are also some login issues. If I turn on my laptop at work, connect it to an external display and connect a keyboard or mouse when on the login screen, Windows 10 decides I entered a password and starts a login attempt that never ends. I have to put the computer to sleep and wake it up again to be able to login.
 
@@ -38,19 +34,13 @@ I rather not mention Windows 10 Mobile in a great detail. Microsoft took a fast,
 
 Software quality of iOS has been declining since iOS 7 but it is most visible in iOS 10. It is another update where Apple added a bunch of new features to have something to show at the keynote, keeping all the old bugs and adding some new ones. For me iOS 10 was the first iOS update (since iOS 7) that did not succeed, my iPhone ended in a state where I had to download and install iTunes (which is another kind of software hell on Windows) and restore with a new update attempt over the wire (with my nearly broken lightning cable).
 
-{{< stweet "776369944351170560" >}}
-
 Sometimes Apple just removes features you rely on for no good reason. Since iOS 7 I had my phone set to English as display language, Czech Republic as my region and using Slovak regional settings. That way my phone UI was in English, just showing Slovak dates and times and Kč as currency symbol. Apple completely removed this level of user control in iOS 10. So now when I want English as my display language I have to live with everything displaying in English. So in the morning I do not see 8:00 Pondelok on the lockscreen but 08:00 Monday (yes also with the leading zero). This is not just my problem, [many people complain about this on Apple forums](https://discussions.apple.com/thread/7663783?start=0&tstart=0), mostly people living abroad or say Canadians wanting their phones UI in English but French dates and times.
-
-{{< stweet "789399680614436864" >}}
 
 Talking about adding new features to iOS 10 I have to mention Bedtime. The idea of Bedtime, copied from 3rd party apps, is simple, making you go to band at the same time every day. But it does not work. You set the time to go to bed and to wake up in the app. In addition you set how many minutes before you go to bed you want to receive a notification. But this notification is not reliable at all. For me it is about 50% reliable and according to people complaining on forums I am not alone. How hard could it be for Apple to show a notification from an Apple system app on Apple iOS at the same time every day?
 
 ## watchOS
 
 The watchOS running on Apple Watch is in a league on its own regarding bugs and unfinished features. Especially all the fitness features feel rough and unfinished. Take something as a simple as a reminder to stand up and move a bit when you have been sitting for a while. On my Microsoft Band (a product with great firmware but really bad build quality) I could set the reminder to only work between 9am and 6pm with a 1 hour interval. The Apple Watch only has one setting for this feature: on/off. So if you enable it, the reminder will also bug you in the evening when you really do not want to move anymore. Or the reminder [can wake you up in the middle of the night and tell you to stand up and move](https://discussions.apple.com/thread/7538178?start=0&tstart=0). What about just allowing the user to set a time range?
-
-{{< stweet "598466624245657600" >}}
 
 Image having you iPhone set to enable the Do Not Disturb mode automatically every day after 11pm. If someone calls you after 11pm, the iPhone will not ring. If one of your contacts marked as favorite calls you, the iPhone will ring as it should. But the Apple Watch sees the Do Not Disturb mode and just ignores everything. It does not care that your iPhone is ringing, the Apple Watch just quietly rests on your wrist. There are so many problems like this.
 

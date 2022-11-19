@@ -51,14 +51,12 @@ Win2D supports [offscreen drawing](https://microsoft.github.io/Win2D/html/Offscr
 
 Solving cache invalidation is quite easy in this case, the texture becomes invalid only when the TV show it represents becomes active (meaning it is currently being broadcasted on a given channel making it gray) or inactive (black). Of course you cannot cache everything, only a certain number of textures, but it is easily solved by setting a limit on the number of cached textures.
 
-With this performance improvement the TV schedule grid became quite tolerable on a Lumia 950, but still slow on a Lumia 750. Sadly, there was nothing else I could do about it. I asked about it on Twitter and found another developer who implemented a TV schedule grid in his app. He also used Win2D but just omitted it from the phone version, because of performance. 
+With this performance improvement the TV schedule grid became quite tolerable on a Lumia 950, but still slow on a Lumia 750. Sadly, there was nothing else I could do about it. I asked about it on Twitter and found another developer who implemented a TV schedule grid in his app. He also used Win2D but just omitted it from the phone version, because of performance.
 
 ## Conclusion
 
-Creating something like a TV schedule grid in UWP with good performance is simply impossible using XAML controls. You can use Win2D to gain some performance but the result is still not exactly great on Windows Phones. 
+Creating something like a TV schedule grid in UWP with good performance is simply impossible using XAML controls. You can use Win2D to gain some performance but the result is still not exactly great on Windows Phones.
 
-Even Microsoft XAML apps suffer from poor rendering performance. Just take a look at the list in the Add or remove programs section of Windows 10 settings. This is how it behaves on ma quad-core i5, 16 GB RAM and GTX 660. 
-
-{{< stweet "818938357275328514" >}}
+Even Microsoft XAML apps suffer from poor rendering performance. Just take a look at the list in the Add or remove programs section of Windows 10 settings. This is how it behaves on ma quad-core i5, 16 GB RAM and GTX 660.
 
 If Microsoft cannot create a well-performing lists in XAML and UWP, you as a developer cannot do much better no matter how hard you try.
