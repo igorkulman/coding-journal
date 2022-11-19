@@ -24,7 +24,7 @@ enableRobotsTXT = true
   logo = "images/avatar-icon.png"
   favicon = "favicon.ico"
   blogTitle = "Coding Journal"
-  readingTime = true  
+  readingTime = true
   showRelatedPosts = true
   since = 2012
   selfHosted = true
@@ -34,6 +34,7 @@ enableRobotsTXT = true
   email = "igor@kulman.sk"
   github = "igorkulman"
   twitter = "igorkulman"
+  mastodon = "mastodon.cloud/@igorkulman"
   stackoverflow = "users/581164/igor-kulman"
   linkedin = "igorkulman"
 
