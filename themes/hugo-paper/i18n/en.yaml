@@ -1,0 +1,10 @@
+- id: prev_page
+  translation: 'Prev Page'
+
+- id: next_page
+  translation: 'Next Page'
+
+# Related posts
+- id: seeAlso
+  translation: "See also"
+

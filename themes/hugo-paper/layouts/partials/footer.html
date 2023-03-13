@@ -1,0 +1,35 @@
+<footer
+  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-50"
+>
+  <div class="mr-auto">
+    &copy; {{ now.Year }}
+    <a class="link" href="{{ `` | absURL }}">{{ site.Title }}</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >Theme Paper</a
+  >
+</footer>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.kulman.sk/";
+    _paq.push(['setTrackerUrl', u+'unicorn']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'rainbow'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="https://analytics.kulman.sk/unicorn?idsite=2&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
