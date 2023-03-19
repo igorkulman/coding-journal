@@ -7,6 +7,7 @@ author = "Igor Kulman"
 date = "2023-04-29T05:29:12+01:00"
 title = "Using Critical Alerts in iOS applications"
 url = "/using-critical-alerts-on-ios"
+share_img = "/using-critical-alerts-on-ios/critical.jpg"
 
 +++
 
