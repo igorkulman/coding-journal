@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2017-01-31T09:29:12+01:00"
 title = "Using macOS with a Windows keyboard"
 url = "/using-macos-with-a-windows-keyboard"
-share_img = "/images/macoskeymapping.png"
+images = ["/images/macoskeymapping.png"]
 
 +++
 

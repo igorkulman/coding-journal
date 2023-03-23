@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2021-03-17T05:29:12+01:00"
 title = "Reading environment variables from iOS and macOS unit tests"
 url = "/reading-environment-variables-from-unit-tests"
-share_img = "/reading-environment-variables-from-unit-tests/scheme.png"
+images = ["/reading-environment-variables-from-unit-tests/scheme.png"]
 
 +++
 

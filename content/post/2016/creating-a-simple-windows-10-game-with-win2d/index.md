@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2016-06-15T09:29:12+01:00"
 title = "Creating a simple Windows 10 game with Win2D"
 url = "/creating-a-simple-windows-10-game-with-win2d"
-share_img = "/images/sokoban-gameplay.gif"
+images = ["/images/sokoban-gameplay.gif"]
 
 +++
 

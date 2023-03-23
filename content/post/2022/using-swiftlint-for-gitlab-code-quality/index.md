@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2022-06-15T05:29:12+01:00"
 title = "Using SwiftLint to generate code quality report for Gitlab"
 url = "/using-swiftlint-for-gitlab-code-quality"
-share_img = "/using-swiftlint-for-gitlab-code-quality/quality.png"
+images = ["/using-swiftlint-for-gitlab-code-quality/quality.png"]
 
 +++
 

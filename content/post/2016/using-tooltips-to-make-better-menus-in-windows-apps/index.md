@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2016-03-23T09:29:12+01:00"
 title = "Using Tooltips to make better menus in Windows apps"
 url = "/using-tooltips-to-make-better-menus-in-windows-apps"
-share_img = "/images/tooltips.gif"
+images = ["/images/tooltips.gif"]
 
 +++
 

@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2018-01-10T09:29:12+01:00"
 title = "Writing a simple Pascal interpreter in Swift"
 url = "/writing-a-pascal-interpreter-in-swift"
-share_img = "/images/factorial.gif"
+images = ["/images/factorial.gif"]
 
 +++
 

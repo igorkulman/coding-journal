@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2017-04-05T09:29:12+01:00"
 title = "Generating a list of libraries your iOS app uses"
 url = "/generating-a-list-of-libraries-your-ios-app-uses"
-share_img = "/images/licenses.gif"
+images = ["/images/licenses.gif"]
 
 +++
 

@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2017-11-15T09:29:12+01:00"
 title = "Using Visual Studio Code as Git merge tool"
 url = "/using-vscode-as-git-merge-tool"
-share_img = "/images/merge-conflict.png"
+images = ["/images/merge-conflict.png"]
 
 +++
 

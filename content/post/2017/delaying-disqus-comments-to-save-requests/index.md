@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2017-05-30T09:29:12+01:00"
 title = "Delaying Disqus comments to save (a ton of) requests"
 url = "/delaying-disqus-comments-to-save-requests"
-share_img = "/images/disqus.png"
+images = ["/images/disqus.png"]
 
 +++
 

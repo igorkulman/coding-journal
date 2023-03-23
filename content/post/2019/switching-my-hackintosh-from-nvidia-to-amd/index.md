@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2019-02-27T05:29:12+01:00"
 title = "Switching my Hackintosh from NVIDIA to AMD because of Mojave"
 url = "/switching-my-hackintosh-from-nvidia-to-amd"
-share_img = "/switching-my-hackintosh-from-nvidia-to-amd/logo.jpg"
+images = ["/switching-my-hackintosh-from-nvidia-to-amd/logo.jpg"]
 
 +++
 

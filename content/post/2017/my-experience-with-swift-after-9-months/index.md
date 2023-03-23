@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2017-11-29T09:29:12+01:00"
 title = "My experience with Swift after 9 months"
 url = "/my-experience-with-swift-after-9-months"
-share_img = "/my-experience-with-swift-after-9-months/swift.png"
+images = ["/my-experience-with-swift-after-9-months/swift.png"]
 
 +++
 

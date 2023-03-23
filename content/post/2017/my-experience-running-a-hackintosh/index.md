@@ -7,7 +7,7 @@ title = "My experience running a hackintosh"
 url = "/my-experience-running-a-hackintosh"
 Tags = ["MacOS", "Hackintosh"]
 Keywords = ["MacOS", "Hackintosh", "Experience"]
-share_img = "/images/hackintosh.png"
+images = ["/images/hackintosh.png"]
 
 +++
 

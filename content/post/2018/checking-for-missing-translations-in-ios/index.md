@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2018-10-10T08:29:12+01:00"
 title = "Checking for missing translations in iOS projects"
 url = "/checking-for-missing-translations-in-ios"
-share_img = "/images/verify-string-files-error.png"
+images = ["/images/verify-string-files-error.png"]
 
 +++
 

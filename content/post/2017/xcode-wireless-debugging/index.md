@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2017-10-07T09:29:12+01:00"
 title = "iOS tip: Wireless debugging from XCode"
 url = "/xcode-wireless-debugging"
-share_img = "/images/wifideploy.png"
+images = ["/images/wifideploy.png"]
 
 +++
 

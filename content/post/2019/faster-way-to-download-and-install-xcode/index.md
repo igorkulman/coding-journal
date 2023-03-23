@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2019-11-20T05:29:12+01:00"
 title = "Faster way to download and install Xcode"
 url = "/faster-way-to-download-and-install-xcode"
-share_img = "/faster-way-to-download-and-install-xcode/xcode-icon-17.jpg"
+images = ["/faster-way-to-download-and-install-xcode/xcode-icon-17.jpg"]
 
 +++
 

@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2019-05-29T05:29:12+01:00"
 title = "Editing macOS app About dialog"
 url = "/editing-macos-app-about-dialog"
-share_img = "/editing-macos-app-about-dialog/dialog.png"
+images = ["/editing-macos-app-about-dialog/dialog.png"]
 
 +++
 

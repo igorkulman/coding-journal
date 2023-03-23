@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2020-10-07T05:29:12+01:00"
 title = "Generating boilerplate Swift code with GYB"
 url = "/generating-boilerplate-swift-code"
-share_img = "/generating-boilerplate-swift-code/BuildPhase.png"
+images = ["/generating-boilerplate-swift-code/BuildPhase.png"]
 
 +++
 

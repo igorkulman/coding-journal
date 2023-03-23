@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2021-02-17T05:29:12+01:00"
 title = "Graying out images in Cocoa"
 url = "/graying-out-images"
-share_img = "/graying-out-images/flags.png"
+images = ["/graying-out-images/flags.png"]
 
 +++
 

@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2019-06-12T05:29:12+01:00"
 title = "Adding Wi-Fi and Bluetooth to hackintosh to enable Apple-specific features"
 url = "/adding-wifi-and-bluetooth-for-apple-features-to-hackintosh"
-share_img = "/adding-wifi-and-bluetooth-for-apple-features-to-hackintosh/card.jpg"
+images = ["/adding-wifi-and-bluetooth-for-apple-features-to-hackintosh/card.jpg"]
 
 +++
 

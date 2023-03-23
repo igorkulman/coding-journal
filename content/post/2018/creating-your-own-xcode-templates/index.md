@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2018-07-18T08:29:12+01:00"
 title = "Creating and using your own Xcode file templates"
 url = "/creating-your-own-xcode-templates"
-share_img = "/images/XcodeTemplates.png"
+images = ["/images/XcodeTemplates.png"]
 
 +++
 

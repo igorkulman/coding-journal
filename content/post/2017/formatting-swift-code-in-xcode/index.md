@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2017-05-05T09:29:12+01:00"
 title = "Formatting Swift code in XCode"
 url = "/formatting-swift-code-in-xcode"
-share_img = "/images/swiftformat.png"
+images = ["/images/swiftformat.png"]
 
 +++
 

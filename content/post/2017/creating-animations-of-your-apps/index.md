@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2017-07-25T09:29:12+01:00"
 title = "Creating animations of your apps"
 url = "/creating-animations-of-your-apps"
-share_img = "/images/stickyheader.gif"
+images = ["/images/stickyheader.gif"]
 
 +++
 

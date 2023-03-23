@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2019-01-09T05:29:12+01:00"
 title = "Why is there a \"lag\" in iOS gesture detection near the edges of the screen?"
 url = "/why-ios-gestures-lag-at-the-screen-edges"
-share_img = "/why-ios-gestures-lag-at-the-screen-edges/quick-recording-middle.png"
+images = ["/why-ios-gestures-lag-at-the-screen-edges/quick-recording-middle.png"]
 
 +++
 

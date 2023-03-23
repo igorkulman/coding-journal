@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2020-08-19T05:29:12+01:00"
 title = "How much time a day do you waste waiting for Xcode builds?"
 url = "/xcode-build-times"
-share_img = "/xcode-build-times/buildtimes.png"
+images = ["/xcode-build-times/buildtimes.png"]
 
 +++
 

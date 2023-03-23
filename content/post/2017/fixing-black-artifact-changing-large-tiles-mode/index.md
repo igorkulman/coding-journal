@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2017-09-21T09:29:12+01:00"
 title = "Fixing black artifact when changing large titles mode in iOS11"
 url = "/fixing-black-artifact-changing-large-tiles-mode"
-share_img = "/images/blackartifact.gif"
+images = ["/images/blackartifact.gif"]
 
 +++
 

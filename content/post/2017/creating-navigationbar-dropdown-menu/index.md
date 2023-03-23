@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2017-09-12T09:29:12+01:00"
 title = "Creating a dropdown menu from iOS navigation bar"
 url = "/creating-navigationbar-dropdown-menu"
-share_img = "/images/dropdown.gif"
+images = ["/images/dropdown.gif"]
 
 +++
 

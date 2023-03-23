@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2017-10-11T09:29:12+01:00"
 title = "More readable XCode build output for CI"
 url = "/more-readable-xcodebuild-output"
-share_img = "/images/xcprettytests.png"
+images = ["/images/xcprettytests.png"]
 
 +++
 

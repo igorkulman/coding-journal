@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2020-07-29T05:29:12+01:00"
 title = "Using Intel Wi-Fi and Bluetooth on a hackintosh"
 url = "/using-intel-wifi-bt-on-macos"
-share_img = "/using-intel-wifi-bt-on-macos/HeliPort.png"
+images = ["/using-intel-wifi-bt-on-macos/HeliPort.png"]
 
 +++
 

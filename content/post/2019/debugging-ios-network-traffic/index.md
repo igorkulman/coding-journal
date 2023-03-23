@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2019-01-30T05:29:12+01:00"
 title = "Debugging iOS network traffic"
 url = "/debugging-ios-network-traffic"
-share_img = "/debugging-ios-network-traffic/logo.png"
+images = ["/debugging-ios-network-traffic/logo.png"]
 
 +++
 

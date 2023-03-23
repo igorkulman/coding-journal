@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2018-12-12T05:29:12+01:00"
 title = "Animating tab bar buttons on tap"
 url = "/animating-tab-bar-buttons"
-share_img = "/images/tw-animation.gif"
+images = ["/images/tw-animation.gif"]
 
 +++
 

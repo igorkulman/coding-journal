@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2018-10-17T08:29:12+01:00"
 title = "Building iOS dependencies with Carthage"
 url = "/building-ios-depedencies-with-carthage"
-share_img = "/building-ios-depedencies-with-carthage/carthage-logo.png"
+images = ["/building-ios-depedencies-with-carthage/carthage-logo.png"]
 
 +++
 

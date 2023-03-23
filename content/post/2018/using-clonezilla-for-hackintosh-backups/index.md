@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2018-02-14T09:29:12+01:00"
 title = "Using CloneZilla for regular hackintosh backups"
 url = "/using-clonezilla-for-hackintosh-backups"
-share_img = "/using-clonezilla-for-hackintosh-backups/clonezilla.jpg"
+images = ["/using-clonezilla-for-hackintosh-backups/clonezilla.jpg"]
 
 +++
 

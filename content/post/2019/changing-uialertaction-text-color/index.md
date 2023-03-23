@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2019-06-26T05:29:12+01:00"
 title = "Changing UIAlertAction text color"
 url = "/changing-uialertaction-text-color"
-share_img = "/changing-uialertaction-text-color/color.png"
+images = ["/changing-uialertaction-text-color/color.png"]
 
 +++
 

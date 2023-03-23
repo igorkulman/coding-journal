@@ -7,7 +7,7 @@ author = "Igor Kulman"
 date = "2018-01-24T09:29:12+01:00"
 title = "Adding MobileIron AppConnect to a Swift application"
 url = "/add-mobile-iron-to-swift-app"
-share_img = "/add-mobile-iron-to-swift-app/mobileiron.png"
+images = ["/add-mobile-iron-to-swift-app/mobileiron.png"]
 
 +++
 
