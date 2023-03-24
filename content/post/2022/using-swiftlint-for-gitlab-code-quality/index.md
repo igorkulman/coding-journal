@@ -21,14 +21,14 @@ This is quite easy because SwifLint can generate a [Code Climate](https://codecl
 
 To set it up in Gitlab you need to modify your `.gitlab-ci.yml` file. First include the code quality template
 
-{{< highlight yaml >}}
+```yaml
 include:
   - template: Code-Quality.gitlab-ci.yml
-{{< /highlight >}}  
+```  
 
 and then add a new job called `code_quality`, it needs to have this exact name to match the included template
 
-{{< highlight yaml >}}
+```yaml
 code_quality:
   dependencies: []
   stage: linting
@@ -41,13 +41,13 @@ code_quality:
     - swiftlint --reporter codeclimate > codequality_report.json 
   tags:
     - iOS-arm
-{{< /highlight >}}    
+```    
 
 This works for a simple project. In my projects I usually use an iOS application project and a few smaller framework projects that the iOS application uses, so instead of `swiftlint --reporter codeclimate > codequality_report.json` I call a custom shell script
 
 <!--more-->
 
-{{< highlight bash >}}
+```bash
 #!/bin/bash
 
 for target in sources/**/.swiftlint.yml
@@ -66,6 +66,6 @@ do
 done
 
 jq -s '[.[][]]' sources/**/codequality_report.json > codequality_report.json
-{{< /highlight >}}
+```
 
 This script finds all the projects in the `sources` folder that contain a SwiftLint rule definition, generates a code climate report for each them and then merges those reports into one single report.

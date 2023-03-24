@@ -16,7 +16,7 @@ Implementation of the above-mentioned scenario is not very complicated, thanks t
 
 Let us reuse the SecondPageViewModel from the last post. Implement IHaveState, add two string properties and use the SaveState and LoadState method to save and load them using the page state dictionary
 
-{{< highlight csharp >}}
+```csharp
 [ImplementPropertyChanged]
 public class SecondPageViewModel: ViewModelBase, IHaveState
 {
@@ -46,11 +46,11 @@ public class SecondPageViewModel: ViewModelBase, IHaveState
         statePageState.Add("Property2", Property2);
     }
 }
-{{< / highlight >}}
+```
 
 To test it, first add two TextBoxes to the SecondPageView with two-way binding
 
-{{< highlight xml >}}
+```xml
  <Grid Background="Red">
   <TextBlock x:Name="Title" />
   <Button Content="Go back" x:Name="GoBack" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top"/>
@@ -60,7 +60,7 @@ To test it, first add two TextBoxes to the SecondPageView with two-way binding
   <TextBox HorizontalAlignment="Left" Margin="80,238,0,0" TextWrapping="Wrap" Text="{Binding Property2, Mode=TwoWay}" VerticalAlignment="Top" Width="170" />
   <TextBlock HorizontalAlignment="Left" Margin="10,248,0,0" TextWrapping="Wrap" Text="Property2:" VerticalAlignment="Top"/>
 </Grid>
-{{< / highlight >}}
+```
 
 Now run the application, navigate to the SecondPageViewModel and fill in the TextBoxes. Switch to Visual Studio and invoke the Suspend and Shutdown command. When you run the application again, you will see the SecondPageViewModel with TextBoxes with the same values as before the suspension.
 

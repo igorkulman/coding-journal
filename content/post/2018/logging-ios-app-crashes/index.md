@@ -24,9 +24,9 @@ It is a Objective-C framework with latest version from 2014, but it still works 
 
 After downloading the latest PLCrashReporter and adding it to your project as a linked framework, you need to import it in bridging header
 
-{{< highlight h >}}
+```c
 #import <CrashReporter/CrashReporter.h>
-{{< / highlight >}}
+```
 
 ### Usage
 
@@ -36,7 +36,7 @@ In the application I currently work on I use [CleanroomLogger](https://github.co
 
 When the application crashes and is opened again, I want to get the crash report and log it. Your use case may be different, you may want to send the crash report to your server, etc.
 
-{{< highlight swift >}}
+```swift
 extension AppDelegate {    
     func setupCrashReporting() {
         guard let crashReporter = PLCrashReporter.shared() else {
@@ -64,4 +64,4 @@ extension AppDelegate {
         crashReporter.purgePendingCrashReport()
     }
 }
-{{< / highlight >}}
+```

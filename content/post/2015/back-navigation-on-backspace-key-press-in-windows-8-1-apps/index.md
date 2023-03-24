@@ -12,7 +12,7 @@ Implementing this functionality is really simple, you just need to handle the Ke
 
 <!--more-->
 
-{{< highlight csharp >}}
+```csharp
  Window.Current.CoreWindow.KeyUp += (_, args) =>
 {
     if (args.VirtualKey == VirtualKey.Back)
@@ -30,6 +30,6 @@ Implementing this functionality is really simple, you just need to handle the Ke
         }
     }
 };
-{{< / highlight >}}
+```
 
 If you implement this in your app, I am sure you will make some of your users more happy.

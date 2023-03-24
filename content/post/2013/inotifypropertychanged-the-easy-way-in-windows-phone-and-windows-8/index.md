@@ -12,7 +12,7 @@ If you develop Windows Phone, Windows 8, Silverlight or WPF apps using the MVVM 
 
 In a typical implementation, you usually have a base class implementing the interface, like
 
-{{< highlight csharp >}}
+```csharp
 public class BaseViewModel : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
@@ -25,13 +25,13 @@ public class BaseViewModel : INotifyPropertyChanged
         }
     }     
 }
-{{< / highlight >}}
+```
 
 or use a framework like MVVMLight, Prism or Caliburn Micro that provides such base class for you. In your view models you have properties using the PropertyChanged method
 
 <!--more-->
 
-{{< highlight csharp >}}
+```csharp
 public class UserViewModel: BaseViewModel
 {
     public string FirstName
@@ -69,7 +69,7 @@ public class UserViewModel: BaseViewModel
         get { return String.Format("{0} {1}", FirstName, Surname); }
     }
 }
-{{< / highlight >}}
+```
 
 You do not need to create such properties by hand, you can [use a snippet][1], but it is still a lot of code to do such a simple thing.
 
@@ -81,7 +81,7 @@ You do not need to create such properties by hand, you can [use a snippet][1], b
 
 Fody has a [PropertyChanged addin][4] that does all the INotifyPropertyChanged plumbing for you. If you want the same behavior as in my typical implementation example, there is no need for a base class. Install the [PropertyChanged.Fody Nuget package][4], decorate your view model class with the ImplementPropertyChanged attribute and use just basic properties
 
-{{< highlight csharp >}}
+```csharp
 [ImplementPropertyChanged]
 public class UserViewModel
 {
@@ -93,7 +93,7 @@ public class UserViewModel
         get { return String.Format("{0} {1}", FirstName, Surname); }
     }                
 }
-{{< / highlight >}}
+```
 
 That is it. Less code, the same behaviour. You can verify it with tools like [Telerik JustDecompile][5].
 
@@ -101,26 +101,26 @@ That is it. Less code, the same behaviour. You can verify it with tools like [Te
 
 Fody does all the plumbing for you. It even knows that the FullName property uses FirstName and Surname and raises the PropertyChanged event for it when any og the two properties changes. The PropertyChanged.Fody addin [contains attributes][6], that you can use to define dependencies 
 
-{{< highlight csharp >}}
+```csharp
 [DependsOn("FirstName ","Surname")]
 public string FullName { get; set; }
-{{< / highlight >}}
+```
 
 or to raise the PropertyChanged event for any other property
 
-{{< highlight csharp >}}
+```csharp
 [AlsoNotifyFor("FullName")]
 public string FirstName { get; set; }
-{{< / highlight >}}
+```
 
 Sometimes you want to execute some additional code in the setter. Fody allows it, just create a method with the [name On\_PropertyName\_Changed][7]
 
-{{< highlight csharp >}}
+```csharp
 public void OnFirstNameChanged()
 {
     Debug.WriteLine("FirstName Changed");
 }
-{{< / highlight >}}
+```
 
 If you use a framework and you want to raise the PropertyChanged event through a method of this framework, it is not a problem. You just need to [set the EventInvokerNames options][8]. The Fody [documentation even describes what to set for some of the frameworks][9] so you do not have to figure it out for yourself.
 

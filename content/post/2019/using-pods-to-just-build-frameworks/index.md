@@ -21,7 +21,7 @@ I use [GRDB.swift](https://github.com/groue/GRDB.swift) to work with the databas
 
 `GRDB.swift` never supported `Carthage` but there was always a way to make it work. I usually just needed to delete some of the shared schemes and run `carthage build` instead of `carthage bootstrap`. I was not able to make `Carthage` work with `4.0`, mainly because the targets changed. There is no `GRDBCipher` target for use with `SQLCipher` anymore, just a `podspec` definition
 
-{{< highlight ruby >}}
+```ruby
   s.subspec 'SQLCipher' do |ss|
     ss.source_files = 'GRDB/**/*.swift', 'Support/*.h'
     ss.framework = 'Foundation'
@@ -32,7 +32,7 @@ I use [GRDB.swift](https://github.com/groue/GRDB.swift) to work with the databas
       'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) SQLITE_HAS_CODEC=1 GRDBCIPHER=1 SQLITE_ENABLE_FTS5=1'
     }
 end
-{{< /highlight>}}
+```
 
 It looks like only using `CocoaPods` and `SwiftPM` is now supported, there is not even an easy way to do manual installation.
 
@@ -48,11 +48,11 @@ There were a few solution that came to mind
 
 This would be the easiest solution. I would just create a `Podfile` with
 
-{{< highlight ruby >}}
+```ruby
 # GRDB with SQLCipher 3
 pod 'GRDB.swift/SQLCipher'
 pod 'SQLCipher', '~> 3.4'
-{{< /highlight>}}
+```
 
 and make it integrate into the existing workspace of my application. 
 
@@ -76,7 +76,7 @@ I created a new iOS framework project called `GRDBCipher`. The name is not impor
 
 I then added `GRDB.swift` and `SQLCipher` using `CocoaPods` to this project
 
-{{< highlight ruby >}}
+```ruby
 platform :ios, '10.0'
 use_frameworks!
 
@@ -85,7 +85,7 @@ target 'GRDBCipher' do
     pod 'GRDB.swift/SQLCipher', :git => 'https://github.com/groue/GRDB.swift', :branch => 'GRDB-4.0'
     pod 'SQLCipher', '3.4.2'
 end
-{{< /highlight>}}
+```
 
 When I built the project Xcode created `GRDB.framework` and `SQLCipher.framework` that looked ready to be used.
 
@@ -111,7 +111,7 @@ Both `GRDB.framework` and `SQLCipher.framework` built as fat libraries can be em
 
 **Update:** Meanwhile I found a much simpler solution. Just install the [cocoapods-rome](https://github.com/CocoaPods/Rome) plugin for `CocoaPods` and use it in a `Podfile`
 
-{{< highlight ruby >}}
+```ruby
 platform :ios, '10.0'
 use_frameworks!
 
@@ -129,6 +129,6 @@ target 'GRDBCipher' do
     pod 'GRDB.swift/SQLCipher'
     pod 'SQLCipher', '~> 4.0'
 end
-{{< /highlight >}}
+```
 
 With this `Podfile` running `pod install` will build both `GRDB.framework` and `SQLCipher.framework`.

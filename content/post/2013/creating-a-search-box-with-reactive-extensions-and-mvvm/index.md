@@ -18,16 +18,16 @@ We need to create an observable from the PropertyChanged event, subscribe to it 
 
 Using the throttle operator we will get exactly the desired behaviour of executing the Search method 0.5 seconds after the user stopped typing. 
 
-{{< highlight csharp >}}
+```csharp
 var observable = Observable.FromEvent<PropertyChangedEventArgs>(this, "PropertyChanged");
 observable.Where(e => e.EventArgs.PropertyName == "SearchTerm").Throttle(TimeSpan.FromSeconds(.5)).ObserveOn(Deployment.Current.Dispatcher).Subscribe(e => Search());
-{{< / highlight >}}
+```
 
 However, there is a small problem. The SearchTerm property changes (and fires the PropertyChanged event) only when the Search box loses focus. We need to make the SearchTerm property change after each letter typed instead. In WPF that would be trivial using UpdateTrigger, but Windows Phone does not support UpdateTrigger. 
 
 We need to create a custom binding utility
 
-{{< highlight csharp >}}
+```csharp
 public class BindingUtility
 {
     public static bool GetUpdateSourceOnChange(DependencyObject d)
@@ -78,12 +78,12 @@ public class BindingUtility
         }
     }
 }
-{{< / highlight >}}
+```
 
 and apply it to the Search box
 
-{{< highlight xml >}}
+```xml
  <TextBox Text="{Binding SearchTerm, Mode=TwoWay}" c:BindingUtility.UpdateSourceOnChange="True"  />
-{{< / highlight >}}
+```
 
  [1]: http://msdn.microsoft.com/en-us/data/gg577609.aspx

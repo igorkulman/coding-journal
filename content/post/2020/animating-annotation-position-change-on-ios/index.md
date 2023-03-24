@@ -24,13 +24,13 @@ If you just update the property you will quickly see that nothing happens, the a
 
 `MKMapView` uses `KVO` to know when the `coordinate` property changes so in Swift you need to mark the `coordinate` property in your `MKAnnotation` as `@objc dynamic` to make it work
 
-{{< highlight swift >}}
+```swift
 final class LocationViewModel: NSObject, MKAnnotation {
     @objc dynamic coordinate: CLLocationCoordinate2D
 
     ...
 }
-{{< /highlight >}}
+```
 
 With this change you will notice that the annotation now moves on the map, but it is not smooth, it basically jumps from the old position to the new one.
 
@@ -42,11 +42,11 @@ With this change you will notice that the annotation now moves on the map, but i
 
 To make the position change smooth you need just use `UIVIew.animate` when updating the `coordinate` property
 
-{{< highlight swift >}}
+```swift
 UIView.animate(0.3) {
     coordinate = updatedPosition
 }
-{{< /highlight >}}
+```
 
 With this change you can see annotation moving smoothly to the new position
  

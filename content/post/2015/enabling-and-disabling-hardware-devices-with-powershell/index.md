@@ -15,9 +15,9 @@ Of course, I was looking for a way to automate this, because I do not think that
 
 It has to be run with administrator privileges to work. Maybe I will go one step further and make this script run each time the notebook wakes up, just to be sure.
 
-{{< highlight powershell >}}
+```powershell
 Import-Module DeviceManagement.psd1
 
 Get-Device | where {$_.name -like "Synaptics FP Sensors*"} | Disable-Device
 Get-Device | where {$_.name -like "Synaptics FP Sensors*"} | Enable-Device
-{{< / highlight >}}
+```

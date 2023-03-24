@@ -12,7 +12,7 @@ I use mainly ints (article id, gallery id &#8230;) as navigation parameters but 
 
 <!--more-->
 
-{{< highlight csharp >}}
+```csharp
 public static class Utils
 {
     public static long MakeLong(int left, int right)
@@ -30,4 +30,4 @@ public static class Utils
         return Tuple.Create(b, a);
     }
 }
-{{< / highlight >}}
+```

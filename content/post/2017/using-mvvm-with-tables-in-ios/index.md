@@ -34,7 +34,7 @@ Of course there is a better, more declarative way.
 
 First you need a ViewModel for all the steps of the flow. My flow is connected to application synchronization, so my ViewModel is called `SyncStepViewModel`
 
-{{< highlight swift >}}
+```swift
 import Foundation
 import RxSwift
 
@@ -57,20 +57,20 @@ class SyncStepViewModel {
         }
     }
 }
-{{< / highlight >}}
+```
 
 This ViewModel has a title, contains property determining if the flow step is currently running, property for the current progress percentage and a computed property for the step title. This computer property just adds the progress percentage at the end of the title when applicable. 
 
 The ViewModel for the screen just needs to hold the array of the flow steps in an observable way, so let's make it easy
 
-{{< highlight swift >}}
+```swift
 import Foundation
 import RxSwift
 
 class SyncViewModel {
     let syncSteps = Variable<[SyncStepViewModel]>([])
 }    
-{{< / highlight >}}
+```
 
 This ViewModel will of course contains some logic to add the flow steps to the array. 
 
@@ -78,7 +78,7 @@ This ViewModel will of course contains some logic to add the flow steps to the a
 
 Binding the `SyncViewModel` to the `UITableView` in the `UIViewController` is really easy
 
-{{< highlight swift >}}
+```swift
 viewModel.syncSteps.asObservable()
             .bindTo(syncStepsTableView.rx.items(cellIdentifier: SyncStepCell.reuseIdentifier, cellType: UITableViewCell.self)) { (row, element, cell) in
                 if let cell = cell as? SyncStepCell {
@@ -86,13 +86,13 @@ viewModel.syncSteps.asObservable()
                 }
             }
             .disposed(by: disposeBag)
-{{< / highlight >}}
+```
 
 It is just a few lines of declarative code and no delegates!
 
 The tricky part is the `UITableViewCell` and making the UI work with the ViewModel. As you can see from the previous snippet, I do not access any of the UI elements of my `SyncStepCell` I just assign the ViewModel. The `SyncStepCell` takes care of the rest using data binding
 
-{{< highlight swift >}}
+```swift
 import Foundation
 import UIKit
 import RxSwift
@@ -117,7 +117,7 @@ class SyncStepCell: UITableViewCell {
         }
     }
 }
-{{< / highlight >}}
+```
 
 My `UITableViewCell` just "waits" for the ViewModel and then sets up all the necessary bindings. Again, no direct access to the UI elements, just making everything work in a simple declarative way.
 

@@ -16,10 +16,10 @@ When developing an iOS application you might get into a situation when you need 
 
 The first method to change the UIApplication base class is using `Info.plist`. It is quite simple, you just need to add a new key `NSPrincipalClass` with a string value representing the name of the desired class, like `AppConnectUIApplication` when using the Mobile Iron AppConnect SDK.
 
-{{< highlight xml >}}
+```xml
 <key>NSPrincipalClass</key>
 <string>AppConnectUIApplication</string>
-{{< /highlight>}}
+```
 
 No actual code changes are required.
 
@@ -27,7 +27,7 @@ No actual code changes are required.
 
 The second method is a bit more complicated but more flexible at the same time. First you need to remove `@UIApplicationMain` from your `AppDelegate` class definition. Then you add a `main.swift` to the root of your project that looks like this
 
-{{< highlight swift >}}
+```swift
 import AppConnect
 import UIKit
 
@@ -37,7 +37,7 @@ UIApplicationMain(
     ACUIApplicationClassName,
     NSStringFromClass(AppDelegate.self)
 )
-{{< /highlight>}}
+```
 
 The third parameter in the `UIApplicationMain` call is the name of the desired class, `ACUIApplicationClassName` in this example. 
 
@@ -47,7 +47,7 @@ The flexibility of this approach comes form the ability to use stuff like compli
 
 Let's say you have two targets in your application, one using the Mobile Iron AppConnect SDK and one using some other MDM SDK. With the first `Info.plist` method you would have to have two separate `Info.plist` files. With this `main.swift` you can do
 
-{{< highlight swift >}}
+```swift
 import UIKit
 
 #if canImport(AppConnect)
@@ -67,4 +67,4 @@ UIApplicationMain(
     NSStringFromClass(AppDelegate.self)
 )
 #endif
-{{< /highlight>}}
+```

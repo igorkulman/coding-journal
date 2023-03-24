@@ -10,13 +10,13 @@ The StorageFolder class does not containt any method to determine if a file with
 
 The first method could take advantage of the GetFilesAsync method that returns a readonly list of all the files in a folder as StorageFile objects. The StorageFile contains a property called Name that you could compare with the given filename. The whole code would look like this
 
-{{< highlight csharp >}}
+```csharp
 public async Task<bool> ContainsFileAsync(this StorageFolder folder, string filename)
 {
     var files = await folder.GetFilesAsync();
     return files.Any(l=>l.Name==filename);
 }
-{{< / highlight >}}
+```
 
 <!--more-->
 
@@ -24,7 +24,7 @@ This method looks fairly simple, elegant and works if the folder contains only a
 
 There is faster way, that works in constant time (about 50ms) even in folders with hundred files, but it is not so elegant. The idea is simple, try to access the files and if you get an exception, just return false.
 
-{{< highlight csharp >}}
+```csharp
 public async Task<bool> ContainsFileAsync(this StorageFolder folder, string filename)
 {
     try
@@ -37,6 +37,6 @@ public async Task<bool> ContainsFileAsync(this StorageFolder folder, string file
         return false;
     }
 }
-{{< / highlight >}}
+```
 
 Although I am a big fan of elegance and readability when coding, I prefer and use the second method.

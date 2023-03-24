@@ -14,15 +14,15 @@ When you use `NSTableView` in an macOS application, there is no direct way to kn
 
 I created a new delegate extending the `NSTableViewDelegate` with one additional method informing about a `NSTableViewCell` getting clicked
 
-{{< highlight swift >}}
+```swift
 protocol NSTableViewClickableDelegate: NSTableViewDelegate {
     func tableView(_ tableView: NSTableView, didClickRow row: Int, didClickColumn: Int)
 }
-{{< /highlight >}}
+```
 
 Then I added an extension to the `NSTableView` to compute the index of the clicked `NSTableViewCell`
 
-{{< highlight swift >}}
+```swift
 extension NSTableView {
     open override func mouseDown(with event: NSEvent) {
         let localLocation = self.convert(event.locationInWindow, to: nil)
@@ -38,7 +38,7 @@ extension NSTableView {
         delegate.tableView(self, didClickRow: clickedRow, didClickColumn: clickedColumn)
     }
 }
-{{< /highlight >}}
+```
 
 To be able to use this extension you just need to implement `NSTableViewClickableDelegate` instead of `NSTableViewDelegate` and use the additional method it provides.
 

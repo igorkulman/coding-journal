@@ -17,35 +17,35 @@ Working on an iOS app I had to implement a filter for the table view displayed o
 
 I found multiple libraries for an iOS dropdown menu, but I liked [BTNavigationDropdownMenu](https://github.com/PhamBaTho/BTNavigationDropdownMenu) the best. The usage is really simple. First you define the items for the dropdown as an string array
 
-{{< highlight swift >}}
+```swift
 let items = filterOptions.map({ $0.description })
-{{< / highlight >}}
+```
 
 create the menu instance
 
-{{< highlight swift >}}
+```swift
 let menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: BTTitle.title("Dropdown Menu"), items: items)
-{{< / highlight >}}
+```
 
 <!--more-->
 
 and set it as the navigation item's title view
 
-{{< highlight swift >}}
+```swift
 navigationItem.titleView = menuView
-{{< / highlight >}}
+```
 
 and react to the user selection
 
-{{< highlight swift >}}
+```swift
 menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
     print("Did select item at index: \(indexPath)")
 }
-{{< / highlight >}}
+```
 
 The library allows you to customize the UI, which will come handy. You can set the arrow to black, disable the tick next to the selected item, remove the item separators or make the the navigation bar title look the same as the default look
 
-{{< highlight swift >}}
+```swift
 menuView.arrowPadding = 15
 menuView.navigationBarTitleFont = UIFont.systemFont(ofSize: 17, weight: UIFontWeightSemibold)
 menuView.cellSelectionColor = StyleKit.getSeparatorColor()
@@ -54,4 +54,4 @@ menuView.arrowTintColor = UIColor.black
 menuView.cellSeparatorColor = menuView.cellBackgroundColor
 menuView.cellTextLabelFont = UIFont.systemFont(ofSize: 16)
 menuView.checkMarkImage = nil
-{{< / highlight >}}
+```

@@ -25,11 +25,11 @@ There are a few tools to help you do that, one of the most flexible of them bein
 
 You can download `GYB` to your project from the `Swift` repository on Github
 
-{{< highlight bash >}}
+```bash
 wget https://github.com/apple/swift/raw/master/utils/gyb
 wget https://github.com/apple/swift/raw/master/utils/gyb.py
 chmod +x gyb
-{{< /highlight >}}
+```
 
 I put it directly to the project directory and include it in the source control for simpler build and CI/CD setup.
 
@@ -43,7 +43,7 @@ This is probably best shown on an actual example. Let's say you have a list of p
 
 You can create a template that generates the protocol from a `CSV` with the permissions
 
-{{< highlight swift >}}
+```swift
 %{
   import csv
   permissions = []
@@ -65,7 +65,7 @@ public protocol Permissions {
     var ${permission}: Permission { get }
     % end
 }
-{{< /highlight >}}
+```
 
 This `GYB` template really looks like a `Swift` source file just with one difference. Instead of manually adding properties for all the permissions you just use a `for` loop to have those properties generated.
 
@@ -73,7 +73,7 @@ You can use `% code: ... % end` to manage control flow, like using the `for` loo
 
 The resulting `Swift` file might look something like this
 
-{{< highlight swift >}}
+```swift
 import Foundation
 
 public enum Permission {
@@ -96,11 +96,11 @@ public protocol Permissions {
     var leaveConversation: Permission { get }
     var attachments: Permission { get }
 }
-{{< /highlight >}}
+```
 
 You can then also generate different implementation of this protocol, for example parsing those permissions from the backend or from an MDM
 
-{{< highlight swift >}}
+```swift
 %{
   import csv
 
@@ -135,11 +135,11 @@ struct AppConfigPermissions: Permissions {
         % end
     }
 }
-{{< /highlight >}}
+```
 
 generates
 
-{{< highlight swift >}}
+```swift
 import Foundation
 
 struct AppConfigPermissions: Permissions {
@@ -183,7 +183,7 @@ struct AppConfigPermissions: Permissions {
         attachments = getPermissionForKey("allowAttachments")
     }
 }
-{{< /highlight >}}
+```
 
 If you then need to add support for a new permission in the future, you **just add it to the CSV file and the Swift code gets regenerated. No need to add the permissions manually** to the protocol or to its different implementations.
 
@@ -195,7 +195,7 @@ I use a script that relies on a naming convention. The template is always called
 
 This script 
 
-{{< highlight bash >}}
+```bash
 for INFILE in ${!SCRIPT_INPUT_FILE_*};
 do
     file=${!INFILE}
@@ -204,7 +204,7 @@ do
         "${PROJECT_DIR}/support/gyb" --line-directive '' -o "${file%.gyb}" "$file"
     fi
 done
-{{< /highlight >}}
+```
 
 is added as a build phase of the Xcode project
 

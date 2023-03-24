@@ -28,9 +28,9 @@ The first step is to choose a unique simulator name for each job. You can genera
 
 First you need to create the new iOS simulator instance at the start of the CI job
 
-{{< highlight bash >}}
+```bash
 xcrun simctl create ${CI_PIPELINE_ID} com.apple.CoreSimulator.SimDeviceType.iPhone-11 `xcrun simctl list runtimes | grep iOS | awk '{print $NF}'`
-{{< /highlight >}}
+```
 
 This command creates a new iOS simulator instance with the given name using the iPhone 11 device and the latest simulator runtime. Using the latest simulator runtime makes sure that when you update Xcode on the CI machine you do not have to do any changes to you CI scripts.
 
@@ -40,7 +40,7 @@ Now that you have a new iOS simulator instance created you can use it to run you
 
 <!--more-->
 
-{{< highlight ruby >}}
+```ruby
 desc "Run all iOS UI tests"
 lane :ios_ui_tests do
   simulator_name = ENV["CI_PIPELINE_ID"]
@@ -48,14 +48,14 @@ lane :ios_ui_tests do
     devices: [simulator_name],
     clean: true)
 end
-{{< /highlight >}}
+```
 
 ### Deleting the new iOS simulator instance
 
 You do not want all the iOS simulator instances to just live on the CI machine forever, you should delete them after use. You just need the name to do that
 
-{{< highlight bash >}}
+```bash
 xcrun simctl delete ${CI_PIPELINE_ID}
-{{< /highlight >}}
+```
 
 Make sure that you do this not only when the CI job succeeds but also when it fails. For example in `Gitlab CI` you can use the `after_script` for that.

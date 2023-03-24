@@ -28,7 +28,7 @@ where "XXXXXXXXXXXXXXXXX" is the correct UUID, `ntfs` is the filesystem and 'ro,
 
 The resulting configuration may look like this
 
-{{< highlight bash >}}
+```bash
 #
 # Warning - this file should only be modified with vifs(8)
 #
@@ -36,4 +36,4 @@ The resulting configuration may look like this
 #
 UUID=8CCC7F74-CB0B-44BE-A423-FEA4B8314646 none ntfs ro,noauto
 UUID=82D51380-0E13-4B98-8CEB-B87715F82056 none ntfs ro,noauto
-{{< / highlight >}}
+```

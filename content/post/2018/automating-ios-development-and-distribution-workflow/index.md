@@ -48,7 +48,7 @@ My setup is really simple
 
 In terms of the Gitlab's `.gitlab-ci.yml`, omitting some pre-build stuff like restoring Carthage cache, setting environment variables, etc. it may be just two phases, one running unit tests on all branches and the other doing build and deploy on the develop branch.
 
-{{< highlight yaml >}}
+```yaml
 stages:
   - unit_tests
   - deploy
@@ -75,13 +75,13 @@ deploy:
     - develop
   tags:  
 - ios_11-0
-{{< / highlight >}}
+```
 
 I use [Fastlane](https://fastlane.tools/), it is a great tool I really recommend. 
 
 Running the tests is really simple
 
-{{< highlight ruby >}}
+```ruby
 desc "Run all unit tests"
 lane :tests do
   run_tests(devices: ["iPhone 8"],
@@ -97,11 +97,11 @@ lane :tests do
             skip_testing: "TeamwireUITests",
             scheme: "Teamwire")
 end
-{{< / highlight >}}
+```
 
 Before building the app I make Fastlane first log into the Apple account (`cert`) and download or regenerate the provisioning profiles (`sigh`) that are needed for the build
 
-{{< highlight ruby >}}
+```ruby
 desc "Builds the app, generates IPA"
 lane :build do
   cert
@@ -121,13 +121,13 @@ lane :build do
               	uploadSymbols: true,                  
                }, include_bitcode: false)
 end
-{{< / highlight >}}
+```
 
 ### Automatic build distribution
 
 As I already mentioned, every time a pull request is merged in Gitlab, the CI creates an ad-hoc IPA and deploys it. 
 
-{{< highlight ruby >}}
+```ruby
 desc "Deploys built app to AppCenter"
 lane :deploy do
   # Deploy to AppCenter
@@ -142,7 +142,7 @@ lane :deploy do
     dsym: "build/Teamwire.app.dSYM.zip"
   )
 end
-{{< / highlight >}}
+```
 
 This step deploys the actual IPA to [AppCenter](https://appcenter.ms/). AppCenter can be used as a build distribution service for free without any serious limitations. You can make it send emails to your testers every time a new build is uploaded or you can just send out the builds manually when needed.
 
@@ -152,7 +152,7 @@ The automatic builds are ad-hoc builds and use the AppStore app id not the devel
 
 I also use a [Fastlane plugin to add a "BETA" word and build number to the app badge before build](https://github.com/HazAT/badge) so testers can easily distinguish if they use the AppStore or the development version. 
 
-{{< highlight ruby >}}
+```ruby
 desc "Sets app badge"
 lane :set_badge do
   version = get_version_number(
@@ -165,7 +165,7 @@ lane :set_badge do
     glob: "/**/YouApp/YouApp/Assets.xcassets/AppIcon.appiconset/*.{png,PNG}",
   )
 end
-{{< / highlight >}}
+```
 
 resulting in
 
@@ -177,7 +177,7 @@ It is a good practice to make your AppStore screenshots show the current version
 
 The idea is simple, you add helper class to you UI tests project and then create a new UI test method that goes over all the screens you want to make a screenshot of calling the helper class at the right moment. 
 
-{{< highlight swift >}}
+```swift
 func testScreenshots() {
   app.switchToProfile()
     snapshot("05-Profile")
@@ -202,11 +202,11 @@ func testScreenshots() {
     addButton.tap()
     snapshot("03-Attachments")
 }
-{{< / highlight >}}
+```
 
 You can configure Fastlane to run this UI test method for different languages and device, generating everything in one go in your `Snapfile`
 
-{{< highlight ruby >}}
+```ruby
  devices([
    "iPhone 7 Plus",
    "iPad Pro (12.9-inch)"
@@ -225,11 +225,11 @@ scheme("TeamwireUITests")
 
 # remove the '#' to clear all previously generated screenshots before creating new ones
 clear_previous_screenshots(true)
-{{< / highlight >}}
+```
 
 And add a Fastline lane to have it execute when you run `fastlane screenshots`
 
-{{< highlight ruby >}}
+```ruby
 platform :ios do
   desc "Generate new localized screenshots"
   lane :screenshots do
@@ -237,7 +237,7 @@ platform :ios do
     frame_screenshots(silver: true)
   end
 end
-{{< / highlight >}}
+```
 
 ### Cooperation with the testers
 

@@ -25,18 +25,18 @@ You can work around this bug by setting the `UINavigationBar.tintAdjustmentMode`
 
 A much better solution is to work around the bug in the `UINavigationControllerDelegate`:
 
-{{< highlight swift >}}
+```swift
 func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
   if #available(iOS 11.2, *) {
     navigationController.navigationBar.tintAdjustmentMode = .normal
     navigationController.navigationBar.tintAdjustmentMode = .automatic
   }
 }
-{{< / highlight >}}
+```
 
 If your application uses just one `UINavigationController` set its delegate and be done with it. If you use more than one, like I do in the application I work on, the best solution is probably creating a custom `UINavigationController` inheriting from the `UINavigationController`, setting it to be its own delegate and work around the bug in the `UINavigationControllerDelegate`:
 
-{{< highlight swift >}}
+```swift
 import Foundation
 import UIKit
 
@@ -79,6 +79,6 @@ extension AppNavigationController: UINavigationControllerDelegate {
     }
 }
 
-{{< / highlight >}}
+```
 
 This way you also have a place to accommodate all the future iOS bugs related to navigation, that will be introduced in the next releases.

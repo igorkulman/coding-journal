@@ -18,22 +18,22 @@ So how do you get rid of all those strings when using custom cells with `UITable
 
 <!--more-->
 
-{{< highlight swift >}}
+```swift
 class UserCell: UITableViewCell, NibReusable
-{{< / highlight >}}
+```
 
 This assumes that your XIB for that class has the same name as the Swift class. The protocol adds to properties to your class, one for the XIB name and another one for the reuse identifier. The default implementation takes care of setting them both to the name of your class.
 
 To register the `UITableViewCell` class you just use
 
-{{< highlight swift >}}
+```swift
 tableView.register(cellType: UserCell.self)
-{{< / highlight >}}
+```
 
 and the actual usage is also very simple
 
-{{< highlight swift >}}
+```swift
 let cell: UserCell = tableView.dequeueReusableCell(for: indexPath)
-{{< / highlight >}}
+```
 
 As promised, both registration and usage of the custom `UITableViewCell` can be done without the use any strings.

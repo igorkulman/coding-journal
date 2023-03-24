@@ -14,7 +14,7 @@ In Windows Phone 8.1 there are strangely two `HttpClient` classes, one in `Syste
 
 Using the `IHttpFilter`, you can easily ignore certificate errors
 
-{{< highlight csharp >}}
+```csharp
     var filter = new HttpBaseProtocolFilter();
 #if DEBUG
     // *******************
@@ -28,6 +28,6 @@ Using the `IHttpFilter`, you can easily ignore certificate errors
 #endif
 
     var httpClient = new Windows.Web.Http.HttpClient(filter);
-{{< / highlight >}}
+```
 
 but you have to get used to doing all the request in a different way, the `Windows.Web.Http.HttpClient` way that differs from the `System.Net.Http.HttpClient` way.

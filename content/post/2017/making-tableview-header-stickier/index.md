@@ -27,35 +27,35 @@ The `contentOffset` may help you with not showing the header when the `UITableVi
 
 By using the `contentInset` property you can affect the scrollable area of the `UITableView`. You can inset the scrollable area top by the height of the header so it is off the screen and you can never scroll to it
 
-{{< highlight swift >}}
+```swift
 tableView.contentInset.top = -1 * headerView.frame.size.height
-{{< / highlight >}}
+```
 
 It remains visible when the `UITableView` bounces. This gives the users a visual clue that something is there and they might try to scroll to it. 
 
 Now we need to detect that the user dragged the `UITableView` to see the whole header. It corespondents to the user scrolling the `UITableView` down so far that the vertical scroll position represented by `contentOffset.y` is less than zero. When that happens we just reset the `contentInset.y` back to `0`. This makes the `UITableView` behave like a standard `UITableView` with a header. 
 
-{{< highlight swift >}}
+```swift
 if scrollView.contentOffset.y < 0 {
     UIView.animate(withDuration: 0.25, animations: {
         self.tableView.contentInset.top = 0
     })
 }
-{{< / highlight >}}
+```
 
 The last step is switching back to the initial states when the user scrolls and the header comes out of view. Again, we check the vertical scroll position represented by the `contentOffset.y` property and when it is more that the header height, we inset the `UITableView` again. 
 
-{{< highlight swift >}}
+```swift
 if scrollView.contentOffset.y > headerView.frame.size.height {
    UIView.animate(withDuration: 0.25, animations: {             
       self.tableView.contentInset.top = -1 * self.headerView.frame.size.height
    })
 }
-{{< / highlight >}}
+```
 
 The best place for both checks seems to be the `scrollViewWillBeginDecelerating` method, making the changes while the scroll is still in progress.
 
-{{< highlight swift >}}
+```swift
 func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
   if scrollView.contentOffset.y < 0 {
     UIView.animate(withDuration: 0.25, animations: {
@@ -67,4 +67,4 @@ func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
     })
   }
 }
-{{< / highlight >}}
+```

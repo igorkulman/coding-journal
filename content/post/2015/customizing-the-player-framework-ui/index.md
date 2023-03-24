@@ -17,7 +17,7 @@ You can now edit the copied XAML file and customize it any way you want. If you 
 
 Finally, you need to apply the style by adding it to the page with your player
 
-{{< highlight xml >}}
+```xml
 <Page.Resoruces> 
     <ResourceDictionary>
         <ResourceDictionary.MergedDictionaries>
@@ -25,4 +25,4 @@ Finally, you need to apply the style by adding it to the page with your player
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
 </Page.Resoruces>
-{{< / highlight >}}
+```

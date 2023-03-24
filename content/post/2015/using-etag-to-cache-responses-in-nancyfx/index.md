@@ -15,7 +15,7 @@ ETag is a HTTP header that acts as a hash of the data. When the server returns a
 
 <!--more-->
 
-{{< highlight csharp >}}
+```csharp
 /// <summary>
 /// Gets response with ETag. Returns empty body if ETag matches (no data changes)
 /// </summary>
@@ -33,7 +33,7 @@ protected Response GetResponseWithEtag(object data, object model)
 
     return Response.AsJson(model).WithHeader("ETag", etag);
 }
-{{< / highlight >}}
+```
 
 **NancyFX impelemntation**
 
@@ -43,7 +43,7 @@ There are two parameters in this method, because you may sometimes want to compu
 
 Using this method is the really simple
 
-{{< highlight csharp >}}
+```csharp
 Get["/startlist/{id}"] = parameters =>
 {
     var startList = _competitionService.GetStartList((int)parameters.id);
@@ -51,6 +51,6 @@ Get["/startlist/{id}"] = parameters =>
 
     return GetResponseWithEtag(startList, model);
 };
-{{< / highlight >}}
+```
 
  [1]: http://frontendplay.com/2013/05/22/http-caching-demystified/

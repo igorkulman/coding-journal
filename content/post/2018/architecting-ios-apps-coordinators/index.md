@@ -20,7 +20,7 @@ There were three big things in particular that I disliked, that I want to show y
 
 When going through some iOS tutorials I found code like this a lot
 
-{{< highlight swift >}}
+```swift
 class ProfileViewController: UIViewController {
   
   @objc func donection(sender: UIButton) {
@@ -28,7 +28,7 @@ class ProfileViewController: UIViewController {
     navigationController?.pushViewController(vc, animated: true)
   }
 }
-{{< / highlight >}}
+```
 
 When you are a long-time iOS developer, you may have seen and probably written code like this. All the tutorials contain code likes this. It may look perfectly OK to you. But for me, coming from the .NET world, this was a real WTF moment:
 
@@ -56,15 +56,15 @@ It may display step 2, it may skip to step 3 if for example step 2 is not needed
 
 You do not need any special frameworks to create coordinators. A coordinator can be a simple protocol with `start` method
 
-{{< highlight swift >}}
+```swift
 protocol Coordinator: class {    
     func start()
 }
-{{< / highlight >}}
+```
 
 where you just put your navigation logic
 
-{{< highlight swift >}}
+```swift
 class RegistrationCoordinator: Coordinator {  
   
   let navigationController: UINavigationController
@@ -93,7 +93,7 @@ extension RegistrationCoordinator: ProfileViewControllerDelegate {
       showPreferencesForm()
     }
 }
-{{< / highlight >}}
+```
 
 It does not even matter how you create the UI for your view controllers. You can create your UI in code, in a XIB file, on the storyboard, the coordinators do not care, as long as you can create an instance of your view controllers in code. 
 
@@ -103,7 +103,7 @@ You can create a whole hierarchy of coordinators if you like, making them as gra
 
 Your application may start with an `AppCoordinator`. 
 
-{{< highlight swift >}}
+```swift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -118,11 +118,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       return true
   }
 }
-{{< / highlight >}}
+```
 
 It checks if the user is already registered. If not, it starts the `RegistrationCoordinator` as its child and waits for it to finish to start the `DashboardCoordinator`.
 
-{{< highlight swift >}}
+```swift
 // MARK: - Coordinator keys
 
 enum AppChildCoordinator {
@@ -170,7 +170,7 @@ extension AppCoordinator: RegistrationCoordinatorDelegate {
     showDashborad()
   }
 }
-{{< / highlight >}}
+```
 
 Notice the `childCoordinators` dictionary in the `AppCoordinator`. We need to store our coordinator instances in this dictionary so ARC does not clean them. We clean them manually when they are no longer needed (`registrationCoordinatorDidFinish()`).
 

@@ -43,7 +43,7 @@ You are not limited to just 1 template file, you can create more. This can be us
 
 The `TemplateInfo.plist` file contains basic template description. The important thing is template `Kind` and the `MainTemplateFile`. You can also set a default filename with `DefaultCompletionName`
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -67,7 +67,7 @@ The `TemplateInfo.plist` file contains basic template description. The important
 </dict>
 </plist>
 
-{{< / highlight >}}
+```
 
 
 #### Template file
@@ -76,7 +76,7 @@ You can put basically anything into the actual template file. You can use text m
 
 My template for a Swift class looks like this
 
-{{< highlight swift >}}
+```swift
 //
 //  ___FILENAME___
 //  ___PROJECTNAME___
@@ -93,6 +93,6 @@ class ___FILEBASENAMEASIDENTIFIER___ {
                 
         }
 }
-{{< / highlight >}}
+```
 
 If you do not want to start from scratch, take a look at [my sample Xcode templates on Github](https://github.com/igorkulman/xcode-templates).

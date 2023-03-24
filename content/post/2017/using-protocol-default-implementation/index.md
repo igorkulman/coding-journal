@@ -20,15 +20,15 @@ Using Swift and protocols there is another way. Protocols in Swift are really si
 
 In Swift, you start with a protocol 
 
-{{< highlight swift >}}
+```swift
 protocol AlertCapable: class {
     func showAlert(message: String)
 }
-{{< / highlight >}}
+```
 
 and add a default implementation of this protocol applicable to all the ViewControllers
 
-{{< highlight swift >}}
+```swift
 
 extension AlertCapable where Self: UIViewController {
     func showAlert(message: String) {
@@ -37,15 +37,15 @@ extension AlertCapable where Self: UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
-{{< / highlight >}}
+```
 
 If you now add this protocol to a ViewController
 
-{{< highlight swift >}}
+```swift
 class RegistrationViewController: UIViewController, AlertCapable {
   ...
 }
-{{< / highlight >}}
+```
 
 the ViewController does not have to implement the `showAlert` because a default implementation exists. It can just use it in any of its methods. 
 

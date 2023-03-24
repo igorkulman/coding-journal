@@ -21,28 +21,28 @@ Luckily there is a way to convert a `NSImage` to grayscale directly in Cocoa.
 
 You first need to create a bitmap representation your `NSImage`
 
-{{< highlight swift >}}
+```swift
 let bitmap = NSBitmapImageRep(cgImage: cgImage)
-{{< /highlight >}}
+```
 
 convert it to grayscale
 
-{{< highlight swift >}}
+```swift
 let grayscale = bitmap.converting(to: .genericGray, renderingIntent: .default)
-{{< /highlight >}}
+```
 
 and then construct an `NSImage` from the result.
 
-{{< highlight swift >}}
+```swift
 let grayImage = NSImage(size: grayscale.size)
 greyImage.addRepresentation(grayscale)
-{{< /highlight >}}
+```
 
 Putting it all together as an NSImage extension might look like this
 
 <!--more-->
 
-{{< highlight swift >}}
+```swift
 extension NSImage {
     func grayOut() -> NSImage? {
         guard let image = cgImage else {
@@ -60,7 +60,7 @@ extension NSImage {
         return grayImage
     }
 }
-{{< /highlight >}}
+```
 
 Applying this method to the flags from the beginning of this post will get you this result
 

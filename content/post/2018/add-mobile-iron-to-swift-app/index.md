@@ -34,23 +34,23 @@ First, add the SDK to the project exactly as the documentation says:
 
 When you encounter the `Use AppConnect’s UIApplication subclass` step you have a problem, you cannot do it in a Swift application the same way as in Objective-C. You need to use the `Info.plist` in your project and add a key called `NSPrincipalClass` with the value of `AppConnectUIApplication` instead. This ensures your main application class inherits from the required AppConnect class. 
 
-{{< highlight xml >}}
+```xml
 <key>NSPrincipalClass</key>
 <string>AppConnectUIApplication</string>
-{{< / highlight >}}
+```
 
 <!--more-->
 
 The AppConnect SDK is now properly added to your project but to actually use it you need to add a bridging header to your project. 
 
-{{< highlight h >}}
+```c
 #import <AppConnect/AppConnect.h>
 
 #ifndef AppConnectBridge_h
 #define AppConnectBridge_h
 
 #endif /* AppConnectBridge_h */
-{{< / highlight >}}
+```
 
 Do not forget to define it as a bridging header in your projects configuration. 
 

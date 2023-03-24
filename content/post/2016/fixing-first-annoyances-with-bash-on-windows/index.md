@@ -26,17 +26,17 @@ If you do not use cmder, you should. It is a nice terminal app, enables copy and
 
 When I installed the Linux Subsystem on Windows I was quite surprised that it spoke to me in Slovak. I have my display language set to English in Windows 10, only my locale is Slovak. To fix this and make it talk English to you just run 
 
-{{< highlight sh >}}
+```bash
 sudo update-locale LANG=en_US.UTF8
-{{< / highlight >}}
+```
 
 **Fixing unable to resolve host MACHINENAME**
 
 When you try some command that works with the Internet you may get an `unable to resolve host MACHINENAME` error message where `MACHINENAME` is the name of your computer. I do not know why this happens but you can fix it by editing `/etc/hosts` and adding your `MACHINENAME` to 127.0.0.1
 
-{{< highlight txt >}}
+```
 127.0.0.1        localhost MYMACHINE
-{{< / highlight >}}
+```
 
 **Using ping**
 
@@ -46,12 +46,12 @@ When you try `ping` you will get and error message saying `ping: icmp open socke
 
 When everything fails, open the command prompt as Administrator and use 
 
-{{< highlight cmd >}}
+```cmd
 lxrun /uninstall /full
-{{< / highlight >}}
+```
 
 to completely uninstall the Linux Subsystem on Windows. Just to be sure, you may also want to remove the `%localappdata%\Lxss` directory. You can install the Linux Subsystem on Windows back using
 
-{{< highlight cmd >}}
+```cmd
 lxrun /install
-{{< / highlight >}}
+```

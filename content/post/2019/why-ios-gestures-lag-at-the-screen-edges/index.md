@@ -51,16 +51,16 @@ This worked because  `func point(inside point: CGPoint, with event: UIEvent?) ->
 
 I decided to use notifications not to introduce any tight coupling between the button and the root view controller. I defined a new notification
 
-{{< highlight swift >}}
+```swift
 extension Notification.Name {
     static let shouldIgnoreSystemGestures = Notification.Name("shouldIgnoreSystemGestures")
 }
-{{< / highlight >}}
+```
 
 The `func point(inside point: CGPoint, with event: UIEvent?) -> Bool`  method on the quick recording button posted the notification to set `var preferredScreenEdgesDeferringSystemGestures: UIRectEdge` as mentioned
 
 
-{{< highlight swift >}}
+```swift
 override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
     let margin: CGFloat = 5
     let area = bounds.insetBy(dx: -margin, dy: -margin)
@@ -68,22 +68,22 @@ override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
     NotificationCenter.default.post(name: .shouldIgnoreSystemGestures, object: res)
 	return res
 }
-{{< / highlight >}}
+```
 
 And the `.touchUpInside` and `.touchDragOutside` posted the notification to set it back
 
-{{< highlight swift >}}
+```swift
 addTarget(self, action: #selector(QuickRecordingButton.revertSystemGesture(sender:)), for: .touchUpInside)
 addTarget(self, action: #selector(QuickRecordingButton.revertSystemGesture(sender:)), for: .touchDragOutside)
 
 @objc func revertSystemGesture(sender _: UIButton) {
 	NotificationCenter.default.post(name: .shouldIgnoreSystemGestures, object: false)
 }
-{{< / highlight >}}
+```
 
 The topmost view controller reacted t the notification
 
-{{< highlight swift >}}
+```swift
 NotificationCenter.default.addObserver(self, selector: #selector(DashboardViewController.checkShouldIgnoreSystemGestures(_:)), name: .shouldIgnoreSystemGestures, object: nil)
 
 
@@ -93,11 +93,11 @@ NotificationCenter.default.addObserver(self, selector: #selector(DashboardViewCo
 	}
 	shouldIgnoreSystemGestures = value
 }
-{{< / highlight >}}
+```
 
 by setting a private property backing the `var preferredScreenEdgesDeferringSystemGestures: UIRectEdge`
 
-{{< highlight swift >}}
+```swift
 private var shouldIgnoreSystemGestures = false {
 	didSet {
 	    setNeedsUpdateOfScreenEdgesDeferringSystemGestures()
@@ -107,4 +107,4 @@ private var shouldIgnoreSystemGestures = false {
 override var preferredScreenEdgesDeferringSystemGestures: UIRectEdge {
 	return shouldIgnoreSystemGestures ? [.bottom, .right] : []
 }
-{{< / highlight >}}
+```

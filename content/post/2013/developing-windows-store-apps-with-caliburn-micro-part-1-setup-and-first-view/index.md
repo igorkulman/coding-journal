@@ -28,12 +28,12 @@ Let&#8217;s start buidling a simple demo application. This demo application will
 
 Create a Blank App. Add the [Caliburn.Micro.Unity.WinRT][7] package from Nuget. It will install all the dependencies you need. Install [PropertyChanged.Fody][8] from Nuget. Next you need to hook up PropertyChanged.Fody with Fody. Open FodyWeavers.xml and change it to
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Weavers>
   <PropertyChanged EventInvokerNames="NotifyOfPropertyChange" />
 </Weavers>
-{{< / highlight >}}
+```
 
 PropertyChanged.Fody now knows that it should call the NotifyOfPropertyChange method from Caliburn Micro when a property gets changed. Let&#8217;s do some cleanup next. Delete MainPage.xaml, rename the Common folder to Resources and create a few additional folders: 
 
@@ -46,7 +46,7 @@ PropertyChanged.Fody now knows that it should call the NotifyOfPropertyChange me
 
 Next make you app inherit from CaliburnUnityApplication by changing App.xaml to
 
-{{< highlight xml >}}
+```xml
 <code:CaliburnUnityApplication
     x:Class="Fraus.WordTrainerBasic.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -61,11 +61,11 @@ Next make you app inherit from CaliburnUnityApplication by changing App.xaml to
         </ResourceDictionary>
     </code:CaliburnUnityApplication.Resources>
 </code:CaliburnUnityApplication>
-{{< / highlight >}}
+```
 
 and cleaning up and changing App.xaml.cs to
 
-{{< highlight csharp >}}
+```csharp
 sealed partial class App : CaliburnUnityApplication
     {        
         public App()
@@ -82,7 +82,7 @@ sealed partial class App : CaliburnUnityApplication
             }
         }
     }
-{{< / highlight >}}
+```
 
 **First ViewModel**
 
@@ -90,7 +90,7 @@ Now you can create your first ViewModel and your first View. Caliburn Micro uses
 
 create a new string property called Title. Add the ImplementPropertyChanged attribute to the class. This makes NotifyPropertyChanged.Fody call the NotifyOfPropertyChange whenever any of the properties (just Title for now) changes. Assing some text to the Title property in the constructor:
 
-{{< highlight csharp >}}
+```csharp
 [ImplementPropertyChanged]
 public class MainViewModel: ViewModelBase
 {
@@ -101,23 +101,23 @@ public class MainViewModel: ViewModelBase
     Title = "Caliburn Demo";
   }
 }
-{{< / highlight >}}
+```
 
 **First View**
 
 Now create a view for the MainViewModel as a Blank Page. According to the naming conventions, it needs to be called MainView and created in the Views folder. Add a TextBlock to the View. To bind the text of this TextBlock to the Title property, you could use Text=&#8221;{Binding Title}&#8221;. This works just fine but you do not have to do it. Just name the TextBlock the same as the property you want it to bind to (in our case Title):
 
-{{< highlight xml >}}
+```xml
 <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
   <TextBlock x:Name="Title" />
 </Grid>
-{{< / highlight >}}
+```
 
 **Navigating to the view**
 
 There is only one more thing left to do. You need to tell the framework to navigate to the MainView when the app starts. This is done in the OnLaunched method in App.xaml.cs
 
-{{< highlight csharp >}}
+```csharp
 sealed partial class App : CaliburnUnityApplication
     {        
         public App()
@@ -134,7 +134,7 @@ sealed partial class App : CaliburnUnityApplication
             }
         }
     }
-{{< / highlight >}}
+```
 
 **Run you app**
 

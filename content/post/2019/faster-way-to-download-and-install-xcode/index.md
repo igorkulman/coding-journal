@@ -25,7 +25,7 @@ Downloading Xcode from the Apple Developer Portal is faster than using the Mac A
 
 Install `aria2` from Homebrew and uses this [Ruby script from Ian Dundas](https://gist.github.com/iandundas/fabe07455e5216442a421922361f698c):
 
-{{< highlight swift >}}
+```swift
 #!/usr/bin/env ruby
 
 print "What is the URL of your Apple Downloads resource?\nURL:"
@@ -37,7 +37,7 @@ token = gets.strip
 command = "aria2c --header \"Host: adcdownload.apple.com\" --header \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\" --header \"Upgrade-Insecure-Requests: 1\" --header \"Cookie: ADCDownloadAuth=#{token}\" --header \"User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Version/10.0 Mobile/14B72 Safari/602.1\" --header \"Accept-Language: en-us\" -x 16 -s 16 #{url} -d ~/Downloads"
 
 exec(command)
-{{< /highlight >}}
+```
 
 This script downloads the given Xcode by URL from the Apple Developer Portal, but uses up to 16 separate connections to do so. You will see a significant download speed improvement.
 
@@ -51,9 +51,9 @@ When copying the `ADCDownloadAuth` cookie make sure you copy the correct value, 
 
 When you install the Xcode xip file you need to extract it. You can double click it in Finder and wait or you can use 
 
-{{< highlight bash >}}
+```bash
 xip -x Xcode11.xip
-{{< /highlight >}}
+```
 
 Using `xip` from the command line is much faster because it does not verify the file signature like double clicking in Finder. Of course this is a potential security risk, so it is up to you to decide if it is worth it.
 

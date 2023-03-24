@@ -12,14 +12,14 @@ In this installment of the series I will show you how user data services. We wil
 
 In next installment we will be showing a list of products, so let&#8217;s create a simple Product class first in the Data directory:
 
-{{< highlight csharp >}}
+```csharp
 [ImplementPropertyChanged]
 public class Product : PropertyChangedBase
 {
   public int Id { get; set; }
   public string Name { get; set; }
 }
-{{< / highlight >}}
+```
 
 PropertyChangedBase is a base class implementing the INotifyPropertyChanged interface and the ImplementPropertyChanged attribute makes sure it&#8217;s method is called for all the property changes. (More about Fody [here][1])
 
@@ -27,17 +27,17 @@ PropertyChangedBase is a base class implementing the INotifyPropertyChanged inte
 
 All the operations will be handled by a service implementing the IProductService interface:
 
-{{< highlight csharp >}}
+```csharp
 public interface IProductService
 {
   List<Product> GetAll();
   Product Get(int id);
 }
-{{< / highlight >}}
+```
 
 You can implement this interface any way you want. To keep things simple I chose an implementation with two hardcoded products:
 
-{{< highlight csharp >}}
+```csharp
 public class ProductService: IProductService
 {
   private readonly List<Product> _products = new List<Product>()
@@ -64,18 +64,18 @@ public class ProductService: IProductService
     return _products.SingleOrDefault(l => l.Id == id);
   }
 }
-{{< / highlight >}}
+```
 
 **Registering services**
 
 All our services need to be registered with the Unity DI container before being used. The place to do it is the App class (App.xaml.cs file). You can override the Configure method to do it:
 
-{{< highlight csharp >}}
+```csharp
 protected override void Configure()
 {
   container.RegisterType<IProductService, ProductService>(new ContainerControlledLifetimeManager());
 }
-{{< / highlight >}}
+```
 
 This registers the ProductService class to the IProductService interface. The new ContainerControlledLifetimeManager() parameter is Unity&#8217;s way of setting the registration to be a singleton.
 
@@ -83,7 +83,7 @@ This registers the ProductService class to the IProductService interface. The ne
 
 Injecting the ProductService into our MainViewModel is very simple. Just declare a IProductService variable and initialize it from constructor. Unity will take care of the rest:
 
-{{< highlight csharp >}}
+```csharp
 [ImplementPropertyChanged]
 public class MainViewModel: ViewModelBase
 {
@@ -96,7 +96,7 @@ public class MainViewModel: ViewModelBase
     Title = "Caliburn Demo";
   }
 }
-{{< / highlight >}}
+```
 
 Next time we will implement a typical master-detail scenario showing products usign the ProductService whe have created. All the code is again [available at GitHub][2].
 

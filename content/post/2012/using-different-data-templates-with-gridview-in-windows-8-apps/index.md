@@ -16,7 +16,7 @@ When inheriting from the DataTemplateSelector you need to override the SelectTem
 
 A custom DataTemplateSelector class may look like this
 
-{{< highlight csharp >}}
+```csharp
 public class MainGridTemplateSelector : DataTemplateSelector
 {
         public DataTemplate MagazineTemplate { get; set; }
@@ -27,25 +27,25 @@ public class MainGridTemplateSelector : DataTemplateSelector
             return (item is MagazineViewModel).IsTop ? BigMagazineTemplate : MagazineTemplate;
         }
 }
-{{< / highlight >}}
+```
 
 This class chooses one of two DataTemplates (MagazineTemplate, BigMagazineTemplate) according to the item&#8217;s IsTop boolean property.
 
 In your XAML, first declare the MainGridTemplateSelector and set the DataTemplate properties class
 
-{{< highlight xml >}}
+```xml
 <common:MainGridTemplateSelector x:Key="MainGridTemplateSelector"
     MagazineTemplate="{StaticResource MagazineTemplate}"
     BigMagazineTemplate="{StaticResource BigMagazineTemplate}" />
-{{< / highlight >}}
+```
 
 Where MagazineTemplate and BigMagazineTemplate are DataTemplates defined in your XAML. Then simply set the ItemTemplateSelector property of the GridView (ListView)
 
-{{< highlight xml >}}
+```xml
 <GridView
      ItemTemplateSelector="{StaticResource MainGridTemplateSelector}"
     …
 />
-{{< / highlight >}}
+```
 
  [1]: http://www.kulman.sk/sk/content/wp7-ako-zobrazovat-objekty-roznych-typov-v-listboxe

@@ -49,11 +49,11 @@ To configure the Wi-Fi networks manually open `itlwm.kext` and find `Info.plist`
 
 You can load `itlwm.kext` immediately
 
-{{< highlight bash >}}
+```bash
 sudo cp -R itlwm.kext /tmp
 sudo chown -R root:wheel /tmp/itlwm.kext
 sudo kextload /tmp/itlwm.kext
-{{< / highlight >}}
+```
 
 Or on every boot, if you use `Clover` just copy the correct kext to `EFI/Clover/Kexts/Other`.
 

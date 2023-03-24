@@ -21,9 +21,9 @@ When working on an iOS app you may sometimes need to inspect or debug the networ
 
 You install mitmproxy from homebrew
 
-{{< highlight swift >}}
+```swift
 brew install mitmproxy
-{{< / highlight >}}
+```
 
 and run the command line interface with a simple `mitmproxy` proxy command. The command line interface takes some time to get used to. If you want something simpler, run the `mitmweb` command to get a web interface.
 

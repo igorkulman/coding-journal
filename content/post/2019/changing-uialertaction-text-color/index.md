@@ -27,7 +27,7 @@ If you dive deep into Apple documentation you will find a KVC called `titleTextC
 
 You can then use a simple extension
 
-{{< highlight swift >}}
+```swift
 extension UIAlertAction {
     var titleTextColor: UIColor? {
         get {
@@ -37,7 +37,7 @@ extension UIAlertAction {
         }
     }
 }
-{{< /highlight>}}
+```
 
 to use the correct shade of red for your destructive actions
 

@@ -24,7 +24,7 @@ Another feature is adding a big red warning image as an attachment to the push n
 
 I already use the image in the main app so I implemented it quite simply, loading it from the asset catalog, saving it into a file and adding that file as an attachment
 
-{{< highlight swift>}}
+```swift
 let image = #imageLiteral(resourceName: "NotificationAlert")
 guard let data = image.jpegData(compressionQuality: 0.8) else {
     return failEarly()
@@ -35,7 +35,7 @@ let imageAttachment = try UNNotificationAttachment(identifier: "image.png", url:
 content.attachments = [imageAttachment]
 contentHandler(content.copy() as! UNNotificationContent)
 
-{{< /highlight >}}
+```
 
 This worked fine on smaller phones but when users started using bigger phone, like iPhone 11, they started complaining that the image is not shown when they receive an alert push notification.
 
@@ -49,7 +49,7 @@ I solved this problem by just adding the image to the app bundle as a file and u
 
 <!--more-->
 
-{{< highlight swift>}}
+```swift
 guard let iconFileUrl = Bundle.main.url(forResource: "avatarAlertNotifications", withExtension: "png") else {   
 	return failEarly()
 }
@@ -57,7 +57,7 @@ guard let iconFileUrl = Bundle.main.url(forResource: "avatarAlertNotifications",
 let imageAttachment = try UNNotificationAttachment(identifier: "image.png", url: iconFileUrl, options: nil)
 content.attachments = [imageAttachment]
 contentHandler(content.copy() as! UNNotificationContent)
-{{< /highlight >}}
+```
 
 Which I probably should have done right from the start as it also results in simpler code.
 
@@ -65,7 +65,7 @@ Which I probably should have done right from the start as it also results in sim
 
 The `Share Extension` in the app accepts a variety of data types, including images. An image can be shared to the `Share Extension` in various ways:
 
-{{< highlight swift>}}
+```swift
 case kUTTypeImage:
     var resultsImage: UIImage?
 
@@ -87,7 +87,7 @@ case kUTTypeImage:
         return
     }
     viewModel.add(attachment: .picture(image))
-{{< /highlight >}}
+```
 
 In every case I converted the data to `UIImage` and resized it before upload. 
 
@@ -97,7 +97,7 @@ When you share an image from `Photos` to a `Share Extension` you get it as a fil
 
 I found a better way, creating a resized `UIImage` directly from the file URL
 
-{{< highlight swift>}}
+```swift
 private func resizeForUpload(_ imageURL: URL) -> UIImage? {
 	let imageSourceOptions = [kCGImageSourceShouldCache: false] as CFDictionary
 	let maxDimensionInPixels: CGFloat = 2000
@@ -112,4 +112,4 @@ private func resizeForUpload(_ imageURL: URL) -> UIImage? {
 
 	return UIImage(cgImage: downsampledImage)
 }
-{{< /highlight >}}
+```

@@ -10,7 +10,7 @@ Uploading a file in ASP.NET MVC is very easy, but there is no easy way to detect
 
 First, get a stream of the uploaded file.
 
-{{< highlight csharp >}}
+```csharp
 [HttpPost]
 public ActionResult FromCSV(HttpPostedFileBase file)
 {
@@ -20,13 +20,13 @@ public ActionResult FromCSV(HttpPostedFileBase file)
         ...
     }
 }
-{{< / highlight >}}
+```
 
 <!--more-->
 
 Next, read the whole file to a byte array
 
-{{< highlight csharp >}}
+```csharp
 public static byte[] ReadFully(Stream input)
 {
     byte[] buffer = new byte[16 * 1024];
@@ -40,11 +40,11 @@ public static byte[] ReadFully(Stream input)
         return ms.ToArray();
      }
 }
-{{< / highlight >}}
+```
 
 Finally the trick is to try all the encodings you think the file may be in and chech if if fails or not
 
-{{< highlight csharp >}}
+```csharp
 private static string[] GetFileContent(Stream input)
 {
     Encoding[] encodings = new Encoding[]{
@@ -65,4 +65,4 @@ private static string[] GetFileContent(Stream input)
 
      return result;
 }
-{{< / highlight >}}
+```

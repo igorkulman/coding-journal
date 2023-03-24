@@ -32,21 +32,21 @@ Another solution is to rotate the `UITableView` by 180 degrees; rotating it upsi
 
 After you rotate the `UITableView`
 
-{{< highlight swift >}}
+```swift
 tableView.transform = CGAffineTransform(rotationAngle: (-.pi))
-{{< / highlight >}}
+```
 
 you have to also rotate all the cells
 
-{{< highlight swift >}}
+```swift
 cell.transform = CGAffineTransform(rotationAngle: (-.pi))
-{{< / highlight >}}
+```
 
 When you do this you immediately notice that the scrollbar is on the wrong side of the `UITableView`. You can fix this by setting
 
-{{< highlight swift >}}
+```swift
 tableView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, tableView.bounds.size.width - 10)
-{{< / highlight >}}
+```
 
 but this is not a very good solution. It depends on the width of the `UITableView` so you have to observe its changes and set it again with every change so the scrollbar is in the correct place when the user rotates the device and changes between portrait and landscape. 
 
@@ -58,13 +58,13 @@ The best solution I found is to flip the `UITableView`'s Y axis. It gives you al
 
 So flip the `UITableView`
 
-{{< highlight swift >}}
+```swift
 tableView.transform = CGAffineTransform(scaleX: 1, y: -1)
-{{< / highlight >}}
+```
 
 and flip your cells in the same way
 
-{{< highlight swift >}}
+```swift
 cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
 
-{{< / highlight >}}
+```

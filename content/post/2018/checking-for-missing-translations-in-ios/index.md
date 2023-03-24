@@ -27,9 +27,9 @@ Then I have a [`Build-Phases`](https://github.com/igorkulman/iOSSampleApp/tree/m
 
 To integrate `verify-string-files` you just need a really simple script, providing the path to the base localization file
 
-{{< highlight bash >}}
+```bash
 ${PROJECT_DIR}/support/verify-string-files -master ${SRCROOT}/iOSSampleApp/Resources/Base.lproj/Localizable.strings
-{{< / highlight >}}
+```
 
 In Xcode, just add a new `Run scrip phase` and call `$SRCROOT/Build-Phases/check-strings` where `check-strings` is the script name. Just do not forget to `chmod +x` the actual file. 
 
@@ -41,19 +41,19 @@ This will result in build errors when there are missing string, shown directly i
 
 If you just want it to produce warning instead of errors, you just add `-warning-level warning` as a parameter
 
-{{< highlight bash >}}
+```bash
 ${PROJECT_DIR}/support/verify-string-files -master ${SRCROOT}/iOSSampleApp/Resources/Base.lproj/Localizable.strings -warning-level warning
-{{< / highlight >}}
+```
 
 or you can make it even better by making the tool produce errors in production builds but warning in debug builds
 
-{{< highlight bash >}}
+```bash
 if [ "${CONFIGURATION}" = "Release" ]; then
 ${PROJECT_DIR}/support/verify-string-files -master ${SRCROOT}/iOSSampleApp/Resources/Base.lproj/Localizable.strings
 else
 ${PROJECT_DIR}/support/verify-string-files -master ${SRCROOT}/iOSSampleApp/Resources/Base.lproj/Localizable.strings -warning-level warning
 fi
-{{< / highlight >}}
+```
 
 ### iOSLocalizationEditor
 

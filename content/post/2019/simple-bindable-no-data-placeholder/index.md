@@ -20,7 +20,7 @@ The easiest way to create a "no data" placeholder for `UITableView` is to set it
 
 I created a simple `UITableView` extension to show the placeholder with a specific message
 
-{{< highlight swift >}}
+```swift
 extension UITableView {
     func setNoDataPlaceholder(_ message: String) {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
@@ -33,11 +33,11 @@ extension UITableView {
         self.separatorStyle = .none
     }
 }
-{{< / highlight >}}
+```
 
 To hide it when no longer needed I created another extension method
 
-{{< highlight swift >}}
+```swift
 extension UITableView {
     func removeNoDataPlaceholder() {
         self.isScrollEnabled = true
@@ -45,7 +45,7 @@ extension UITableView {
         self.separatorStyle = .singleLine
     }
 }
-{{< / highlight >}}
+```
 
 With this I would have to call those two extension method manually depending on the data in the `UITableView` which is unnecessary manual work. 
 
@@ -55,7 +55,7 @@ With this I would have to call those two extension method manually depending on 
 
 I use `RxSwift` in the project so I made it bindable.
 
-{{< highlight swift >}}
+```swift
 extension Reactive where Base: UITableView {
     func isEmpty(message: String) -> Binder<Bool> {
         return Binder(base) { tableView, isEmpty in
@@ -67,14 +67,14 @@ extension Reactive where Base: UITableView {
         }
     }
 }
-{{< / highlight >}}
+```
 
 This extension adds an `isEmpty` function to every `UITableView` that you can call with the desired "no data" message and get back a property that you can use for binding
 
-{{< highlight swift >}}
+```swift
 let isEmpty = tableView.rx.isEmpty(message: L10n.noResponses)
 viewModel.responses.map({ $0.count <= 0 }).distinctUntilChanged().bind(to: isEmpty).disposed(by: disposeBag)
-{{< / highlight >}}
+```
 
 The `L10n.noResponses` is just a [safer way to use translated strings](/using-ios-strings-in-a-safer-way/) and `viewModel.responses` is a [and observable backing the `UITableView` data](/using-mvvm-with-tables-in-ios/).
 

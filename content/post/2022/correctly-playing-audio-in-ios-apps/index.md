@@ -12,11 +12,11 @@ url = "/correctly-playing-audio-in-ios-apps"
 
 When you look for a way to play audio in your iOS application you usually find code like this
 
-{{< highlight swift >}}
+```swift
 player = try AVAudioPlayer(contentsOf: url)
 player.prepareToPlay()
 player.play()
-{{< /highlight >}}
+```
 
 While this code works and will play the given audio file it does not deal with all the nuances of audio playback. 
 
@@ -32,15 +32,15 @@ You use this category for example to play sound effects like the sound of a mess
 
 You set the category on the shared `AVAudioSession` instance
 
-{{< highlight swift >}}
+```swift
 try AVAudioSession.sharedInstance().setCategory(.ambient, mode: .default)
-{{< /highlight >}}
+```
 
 and make it active
 
-{{< highlight swift >}}
+```swift
 try AVAudioSession.sharedInstance().setActive(true)
-{{< /highlight >}}
+```
 
 All the sounds you now play using `AVAudioPlayer` will be played as ambient sounds.
 
@@ -50,10 +50,10 @@ If the audio file you want to play in your application is important, for example
 
 You can achieve this by setting the category to `.playback` 
 
-{{< highlight swift >}}
+```swift
 try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
 try AVAudioSession.sharedInstance().setActive(true)
-{{< /highlight >}}
+```
 
 Remember, setting a category makes it persist for all the consecutive audio playback until you set it to a different value.
 
@@ -67,16 +67,16 @@ But what if you want the users music or podcast to continue after you play your 
 
 It is a good practice to deactivate the `AVAudioSession` and send, notification to all the other applications when you are finished playing your sound
 
-{{< highlight swift >}}
+```swift
 try AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
-{{< /highlight >}}
+```
 
 and reset the session back to the ambient category
 
-{{< highlight swift >}}
+```swift
 try AVAudioSession.sharedInstance().setCategory(.ambient, mode: .default)
 try AVAudioSession.sharedInstance().setActive(true)
-{{< /highlight >}}
+```
 
 Well behaved music or podcast applications should listen for that notification and resume playback when they receive it. 
 
@@ -86,10 +86,10 @@ The problem is that not all the applications do it correctly, not even the ones 
 
 There is an more approach you can use that is something like a hybrid between the two approaches already mentioned. You can set the category to `.playback` with `.duckOthers` as an option.
 
-{{< highlight swift >}}
+```swift
 try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.duckOthers])
 try AVAudioSession.sharedInstance().setActive(true)
-{{< /highlight >}}
+```
 
 If you now play your audio file iOS will "duck" the existing audio playback, so making it less loud but not stopping it, and play your sound file over it.
 

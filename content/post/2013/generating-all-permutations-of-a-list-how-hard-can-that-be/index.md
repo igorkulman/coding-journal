@@ -14,7 +14,7 @@ First I came up with F# code to solve it, after some yield googling:
 
 <!--more-->
 
-{{< highlight fsharp >}}
+```fsharp
 let rec permutations (input: 'a list) = seq {
     if (input.IsEmpty) then 
         yield []
@@ -26,11 +26,11 @@ let rec permutations (input: 'a list) = seq {
                     |> permutations
                     |> Seq.map (fun x->i::x)
     }
-{{< / highlight >}}
+```
 
 When I started to think about a C# solution I got stuck. The functional solution was still resonating in my head so I ended up basically rewriting F# to C#:
 
-{{< highlight fsharp >}}
+```fsharp
 public IEnumerable<IEnumerable<T>> Permutation<T>(IEnumerable<T> input)
 {            
     if (input == null || !input.Any()) yield break;
@@ -45,11 +45,11 @@ public IEnumerable<IEnumerable<T>> Permutation<T>(IEnumerable<T> input)
         }
     }
 }
-{{< / highlight >}}
+```
 
 Looking for other functional solutions I found a realy neat way to generate permutations in Haskell, thanks to the generators
 
-{{< highlight fsharp >}}
+```fsharp
 perms [] = [[]]
 perms xs = [ x:ps | x <- xs , ps <- perms ( xs\\[x] ) ]
-{{< / highlight >}}
+```

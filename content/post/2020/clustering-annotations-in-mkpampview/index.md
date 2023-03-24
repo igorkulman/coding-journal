@@ -28,7 +28,7 @@ Clustering is supported in `MKMapView` on iOS 11 and newer, no need to use any c
 
 Let's say you use a [custom annotation view](/using-custom-annotation-views-in-mkmapview) to show your annotations and you want to add support for clustering. You first create a custom  `MKAnnotationView` in the same way
 
-{{< highlight swift >}}
+```swift
 final class LocationDataMapClusterView: MKAnnotationView {
 
     // MARK: Initialization
@@ -68,7 +68,7 @@ final class LocationDataMapClusterView: MKAnnotationView {
         ...
     }
 }
-{{< /highlight >}}
+```
 
 The idea is the same as when [custom annotation view](/using-custom-annotation-views-in-mkmapview), but there is a difference. You need to define `displayPriority` to tell the map that your cluster annotation has a higher priority that normal annotation.
 
@@ -78,9 +78,9 @@ The idea is the same as when [custom annotation view](/using-custom-annotation-v
 
 The next step is to tell `MKMapView` to user your custom class. 
 
-{{< highlight swift >}}
+```swift
 mapView.register(LocationDataMapClusterView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
-{{< /highlight >}}
+```
 
 You can use `MKMapViewDefaultClusterAnnotationViewReuseIdentifier` as the reuse identifier if you do not plan to use more different custom cluster views.
 
@@ -88,7 +88,7 @@ You can use `MKMapViewDefaultClusterAnnotationViewReuseIdentifier` as the reuse 
 
 The last step you need to do is to define a clustering identifier for your custom annotation views. You can do it in the `mapView(_:viewFor:)` method of the `MKMapViewDelegate` 
 
-{{< highlight swift >}}
+```swift
 func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     switch annotation {    
     case is LocationViewModel:
@@ -101,6 +101,6 @@ func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnota
         return nil
     }
 }
-{{< /highlight >}}
+```
 
 Or in the `init` method of your custom annotation view if you do not need to implement `mapView(_:viewFor:)` in your case.

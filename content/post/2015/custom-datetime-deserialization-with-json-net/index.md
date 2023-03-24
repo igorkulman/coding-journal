@@ -17,7 +17,7 @@ There are two methods in this class to override, WriteJson and ReadJson. All you
 
 Here is a sample implementation:
 
-{{< highlight csharp >}}
+```csharp
 /// <summary>
 /// Custom DateTime JSON serializer/deserializer
 /// </summary>
@@ -64,11 +64,11 @@ public class CustomDateTimeConverter :  DateTimeConverterBase
         return DateTime.Now;
     }
 }
-{{< / highlight >}}
+```
 
 If you want to use your custom converter to serialize or deserialize a property you just need to decorate it with the right attribute.
 
-{{< highlight csharp >}}
+```csharp
 [JsonConverter(typeof(CustomDateTimeConverter))]
 public DateTime? PurchaseDate { get; set; }
-{{< / highlight >}}
+```

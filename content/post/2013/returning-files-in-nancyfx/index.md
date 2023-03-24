@@ -12,14 +12,14 @@ In one use case I generate a ZIP file in the temp folder and I want the API to r
 
 If you have an absolute path of a file, you cannot use it. You need to create a StreamResponse and return the file as an attachment
 
-{{< highlight csharp >}}
+```csharp
 var file = new FileStream(zipPath, FileMode.Open);
 string fileName = //set a filename
 
 var response = new StreamResponse(() => file, MimeTypes.GetMimeType(fileName));
                   
 return response.AsAttachment(fileName);
-{{< / highlight >}}
+```
 
 <!--more-->
 

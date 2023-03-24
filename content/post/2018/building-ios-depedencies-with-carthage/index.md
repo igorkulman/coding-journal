@@ -39,7 +39,7 @@ I personally started with the second approach, but had to abandon it because of 
 
 I [use Gitlab CI to automate my development and deployment workflow](/automating-ios-development-and-distribution-workflow), so I just need to define the cache and run the `carthage bootstrap` before each build
 
-{{< highlight yaml >}}
+```yaml
 cache:
   key: xcode94
   paths:
@@ -47,7 +47,7 @@ cache:
 
 before_script:
 - carthage bootstrap --platform iOS --cache-builds
-{{< / highlight >}}
+```
 
 Gitlab CI restores the built dependencies from the cache, uses them in the build and then caches them again when the build finishes. I use the Xcode version as the cache key (e.g `xcode94`) because every Xcode version typically comes with a different version of Swift causing a need for rebuilding all the dependencies. 
 
@@ -55,8 +55,8 @@ This approach is really simple, your repository will not get big and all the dep
 
 When a new developer joins the project or does a `git pull` with changes requiring building some new dependencies, they can do a neat trick: downloading the CI cache. With a simple 
 
-{{< highlight bash >}}
+```bash
 scp user@build.sever/cache/xcode94/cache.zip && unzip cache.zip && rm cache.zip
-{{< / highlight >}}
+```
 
 the developer can download and use the current build dependencies without wasting time doing any Carthage builds. This of course requires the developers to use the same version of Xcode as the build server, but that is necessary anyways with the way Swift is coupled with Xcode.

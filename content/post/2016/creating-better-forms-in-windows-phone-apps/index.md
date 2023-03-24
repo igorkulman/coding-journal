@@ -29,7 +29,7 @@ The whole experience becomes much better
 
 Implementation is also simple.
 
-{{< highlight csharp >}}
+```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
 {
     base.OnNavigatedTo(e);
@@ -55,4 +55,4 @@ private void OnKeyboardHiding(InputPane sender, InputPaneVisibilityEventArgs arg
 {
     MainPanel.Margin = new Thickness(0);
 }
-{{< / highlight >}}
+```

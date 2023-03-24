@@ -15,7 +15,7 @@ In my current project I had to implement an interesting feature for both Windows
 
 The standard TextBlock used to display the movie titles does not support any kind of letter highlighting, so I had to write a custom one. I created a custom UserControl. The UserControl contains a few dependency properties Text, HighlightedText, HighlightBrush and a TextBlock. When Text or HighlightedText change, the Text is then split into multiple Runs that are added to the TextBlock.
 
-{{< highlight csharp >}}
+```csharp
 private void Update()
 {
     if (string.IsNullOrEmpty(Text) || string.IsNullOrEmpty(HighlightedText))
@@ -48,7 +48,7 @@ private void Update()
         }
     }
 }
-{{< / highlight >}}
+```
 
 The whole working custom control is available at Github: <https://github.com/igorkulman/Kulman.WPA81.HighlightTextBox>.
 

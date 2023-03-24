@@ -15,7 +15,7 @@ If you have already updated to Xcode 11.4 that ships with Swift 5.2 you might ha
 
 I use a script to [generate a list of libraries used in the app and their licenses](/generating-a-list-of-libraries-your-ios-app-uses/) and running it now results in
 
-{{< highlight bash >}}
+```bash
 Stack dump:
 0.	Program arguments: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -interpret test.swift -enable-objc-interop -stack-check -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -color-diagnostics -module-name test
 1.	Apple Swift version 5.2 (swiftlang-1103.0.32.1 clang-1103.0.32.29)
@@ -33,7 +33,7 @@ Stack dump:
 10 libdyld.dylib            0x00007fff71a847fd start + 1
 11 libdyld.dylib            0x000000000000000b start + 2388113423
 fish: '/usr/bin/env xcrun swift fetch_…' terminated by signal SIGSEGV (Address boundary error)
-{{< / highlight >}}
+```
 
 This is a Swift bug [that has been already reported](https://bugs.swift.org/browse/SR-12403).
 

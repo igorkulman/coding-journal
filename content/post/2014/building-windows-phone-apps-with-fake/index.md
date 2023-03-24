@@ -14,7 +14,7 @@ The FAKE script I use can by used with any Windows Phone app, it will build all 
 
 <!--more-->
 
-{{< highlight fsharp >}}
+```fsharp
 // include Fake lib
 #r @"tools\FAKE\tools\FakeLib.dll"
 open Fake
@@ -54,17 +54,17 @@ Target "Default" (fun _ ->
  
 // start build
 Run "Default"
-{{< / highlight >}}
+```
 
 To get the script started, you need a batch file
 
-{{< highlight bat >}}
+```batch
 @echo off
 cls
 "tools\nuget\nuget.exe" "install" "FAKE" "-OutputDirectory" "tools" "-ExcludeVersion"
 "tools\FAKE\tools\Fake.exe" build.fsx
 pause
-{{< / highlight >}}
+```
 
 and Nuget.exe in tools\NuGet directory.
 

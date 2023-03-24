@@ -27,7 +27,7 @@ If you do not have FSI in your path, go to _Preferences | Browse Packages_, find
 
 You can configure Sublime Text 2 to run F# REPL when you invoke a shortcut like _Ctrl+Alt+F_ (Visual Studio 2012 default shortcut for FSI) instead of going to _Tools | SublimeREPL | F#_. Go to _Preferences | Key bindings &#8211; user_ and change it to
 
-{{< highlight json >}}
+```json
 [
     {
         "keys": [
@@ -40,11 +40,11 @@ You can configure Sublime Text 2 to run F# REPL when you invoke a shortcut like 
        "command": "run_existing_window_command"
     }
 ]
-{{< / highlight >}}
+```
 
 You can also configure Sublime Text 2 to set selected code to the F# REPL (_Tools | SublimeREPL | Eval in REPL | Selection_) when you press Ctrl+Shift+Enter just like in Visual Studio 2012 by adding 
 
-{{< highlight json >}}
+```json
 {
     "keys": [
        "ctrl+shift+enter"
@@ -54,11 +54,11 @@ You can also configure Sublime Text 2 to set selected code to the F# REPL (_Tool
     }, 
     "command": "repl_transfer_current"
 }
-{{< / highlight >}}
+```
 
 to the _Preferences | Key bindings &#8211; user_. All the settings files in Sublime Text 2 are JSON, so you need to paste this code into the array, just after the shortcut for F# REPL, separating them by a comma
 
-{{< highlight json >}}
+```json
 [
     {
         "keys": [
@@ -80,7 +80,7 @@ to the _Preferences | Key bindings &#8211; user_. All the settings files in Subl
         "command": "repl_transfer_current"
     }
 ]
-{{< / highlight >}}
+```
 
  [1]: http://www.sublimetext.com/
  [2]: http://www.mono-project.com/Main_Page

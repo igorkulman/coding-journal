@@ -35,7 +35,7 @@ This does not work as expected on iOS 11 and newer. The setter would not allow y
 
 The solution to this was to create a custom class inheriting from `UIWindow` and overriding the `windowLevel` getter with some hard-coded high value
 
-{{< highlight swift >}}
+```swift
 final class MessageContextMenuWindow: UIWindow {
     // needed because just setting the level on iOS 11+ to be more than the keyboard does not work for some reason
     override var windowLevel: UIWindow.Level {
@@ -45,7 +45,7 @@ final class MessageContextMenuWindow: UIWindow {
         set { }
     }
 }
-{{< /highlight>}}
+```
 
 If you now create this window and make it visible, it will be shown on top of your main window without dismissing the keyboard, but it will be transparent for now
 
@@ -59,12 +59,12 @@ The next step was to create a `UIViewController` that will be shown in the new w
 
 First I just set the background to some level of semi-transparent black
 
-{{< highlight swift >}}
+```swift
 let backgroundDuration: TimeInterval = 0.1
 UIView.animate(withDuration: backgroundDuration) {
     self.view.backgroundColor = #colorLiteral(red: 0.01568627451, green: 0.01568627451, blue: 0.05882352941, alpha: 0.5)
 }
-{{< /highlight>}}
+```
 
 to get the dim effect
 
@@ -76,30 +76,30 @@ The next step was taking the original view, for example the `contentView` of the
 
 With `focusedView` as the original view I first created a snapshot from this view
 
-{{< highlight swift >}}
+```swift
 guard let snapshotView = focusedView.snapshotView(afterScreenUpdates: false) else {
     return
 }
-{{< /highlight>}}
+```
 
 This created a new `UIView` that is "flat" (no subviews) and looked exactly like the original view.
 
 This snapshot view then needed to be added to the `UIViewController`
 
-{{< highlight swift >}}
+```swift
 view.addSubview(snapshotView)
-{{< /highlight>}}
+```
 
 The trick here was to position it exactly over the original view in the main application window. To do this I needed to convert the position of the original view to the position in the `UIViewController`
 
-{{< highlight swift >}}
+```swift
 guard let focusedViewSuperview = focusedView.superview else {
     return
 }
 
 let convertedFrame = view.convert(focusedView.frame, from: focusedViewSuperview)
 snapshotView.frame = convertedFrame
-{{< /highlight>}}
+```
 
 With that you can now see the view highlighted        
 
@@ -109,7 +109,7 @@ With that you can now see the view highlighted
 
 The final step was to show the actual context menu. I wanted to keep it simple so I just used an `UITableViewController` with fixed size
 
-{{< highlight swift >}}
+```swift
 override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -117,11 +117,11 @@ override func viewDidLoad() {
     tableView.layoutIfNeeded()
     preferredContentSize = CGSize(width: 200, height: tableView.contentSize.height)
 }
-{{< /highlight>}}
+```
 
 and presented it like a `.popover`
 
-{{< highlight swift >}}
+```swift
 let vc = MessageContextMenuViewController(message: message)
 vc.modalPresentationStyle = .popover
 vc.popoverPresentationController?.delegate = self
@@ -129,17 +129,17 @@ vc.popoverPresentationController?.sourceView = snapshotView
 vc.popoverPresentationController?.sourceRect = snapshotView.bounds
 vc.popoverPresentationController?.backgroundColor = UIColor.white.withAlphaComponent(0.9)
 present(vc, animated: true, completion: nil)
-{{< /highlight>}}
+```
 
 There are two important things here; properly positioning the `popover` and setting its delegate
 
-{{< highlight swift >}}
+```swift
 extension MessageContextMenuWindowViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         return .none
     }
 }
-{{< /highlight>}}
+```
 
 If you forget to set the delegate and override `adaptivePresentationStyle` the `popover` will be shown fullscreen.
 

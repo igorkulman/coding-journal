@@ -19,7 +19,7 @@ Implementing this kind of hovers is really easy thanks to the `ToolTipService` t
 
 <!--more-->
 
-{{< highlight xml >}}
+```xml
 <Grid Height="60"
       Background="Transparent"
       micro:Message.Attach="[Event Tapped] = [Action NavigateToEbooks]">
@@ -29,4 +29,4 @@ Implementing this kind of hovers is really easy thanks to the `ToolTipService` t
     </ToolTipService.ToolTip>
     <!-- icon -->
 </Grid>
-{{< / highlight >}}
+```

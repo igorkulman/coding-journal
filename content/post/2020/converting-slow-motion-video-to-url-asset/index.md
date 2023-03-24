@@ -24,7 +24,7 @@ A slow motion video is an `AVAsset`, just not an `AVURLAsset` but an `AVComposit
 
 The best way to make it work for my upload to backend scenario was to export it to a standard video file
 
-{{< highlight swift >}}
+```swift
 guard let exportSession = AVAssetExportSession(asset: asset, presetName: AVAssetExportPresetMediumQuality) else {
     Log.error?.message("Could not create AVAssetExportSession")
     return
@@ -40,7 +40,7 @@ exportSession.exportAsynchronously {
     let exportedAsset = AVURLAsset(url: targetURL)
     self.processVideoAsset(asset: exportedAsset)
 }
-{{< / highlight >}}
+```
 
 After the slow motion video gets exported it can be converted to an `AVURLAsset` and treated the same way as a normal video file.
 

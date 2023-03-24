@@ -22,7 +22,7 @@ If you use 3rd party libraries as code, for example via `Cocoapods`, you can jus
 
 For example doing `grep -r 'UIWebView' .` in `RxSwift` sources prior to `5.1.0` gives you a lot of results as `RxSwift` has included UIWebView binding before `5.1.0`.
 
-{{< highlight bash >}}
+```bash
 ❯ grep -r 'UIWebView' .
 ./RxCocoa/iOS/UIWebView+Rx.swift://  UIWebView+Rx.swift
 ./RxCocoa/iOS/UIWebView+Rx.swift:    extension Reactive where Base: UIWebView {
@@ -33,13 +33,13 @@ For example doing `grep -r 'UIWebView' .` in `RxSwift` sources prior to `5.1.0` 
 ./RxCocoa/iOS/Proxies/RxWebViewDelegateProxy.swift:extension UIWebView: HasDelegate {
 ./RxCocoa/iOS/Proxies/RxWebViewDelegateProxy.swift:    public typealias Delegate = UIWebViewDelegate
 ...
-{{< / highlight >}}
+```
 
 If your 3rd party libraries come as a `.framework` file without sources, there is a different way to check for `UIWebView`. 
 
 You can use `nm` to get the symbols table of the executable in a `.framework` and do a `grep` there
 
-{{< highlight bash >}}
+```bash
 ❯ nm AWSDK.framework/AWSDK | grep -i UIWebView
                  U _OBJC_CLASS_$_UIWebView
                  U _OBJC_CLASS_$_UIWebView
@@ -55,6 +55,6 @@ You can use `nm` to get the symbols table of the executable in a `.framework` an
 0000000000005768 s l_OBJC_$_PROTOCOL_REFS_UIWebViewDelegate
 AWSDK.framework/AWSDK(UIWebView+LongPress.o):
 ...
-{{< / highlight >}}
+```
 
 <!--more-->

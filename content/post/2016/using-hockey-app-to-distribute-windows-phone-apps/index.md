@@ -24,21 +24,21 @@ One of my clients got persuaded to try this approach after some problem with the
 
 The PFX certificate file I got had an empty password. This is quite a problem for all the Microsoft tools that work with certificates, especially for XapSignTool. I could not make the tools work with an empty password so I had to change the password first. This is done quite easily using using OpenSSL.
 
-{{< highlight bat >}}
+```batch
 openssl pkcs12 -in mycert.pfx -out tmpmycert.pem -nodes
 
 openssl pkcs12 -export -out mycert2.pfx -in tmpmycert.pem
 
 del tmpmycert.pem
-{{< / highlight >}}
+```
 
 **Generating application enrollment token**
 
 To allow the devices to install the signed XAP (or APPX) you need to generate an application enrollment token that will be installed on the devices. The process is quite simple, just call 
 
-{{< highlight bat >}}
+```batch
 %ProgramFiles(x86)%\Microsoft SDKs\Windows Phone\v8.0\Tools\AETGenerator\AETGenerator.exe PFXFile Password
-{{< / highlight >}}
+```
 
 as a result you will get three files: AET.aet, AET.aetx, AET.xml. Get the AET.aetx file and upload it to Hockey App by clicking Add version and drag and dropping the file to the upload dialog. The company profile for your app in Hockey App will get updated using this file. This is done only once.
 
@@ -48,9 +48,9 @@ Each time you submit a new build to Hockey App, you need to sign the binary (XAP
 
 For XAP files it is just calling the right PowerShell script with the correct parameters
 
-{{< highlight bat >}}
+```batch
 powershell.exe -File "%ProgramFiles(x86)%\Microsoft SDKs\Windows Phone\v8.0\Tools\MDILXAPCompile\BuildMDILXap.ps1" -xapfilename "your.xap" –pfxfilename "cert.pfx" -password yourpassword
-{{< / highlight >}}
+```
 
 and the result is .. an error `Signtool Error: This file format cannot be signed because it is not recognized`. So I had to do some research. I found a [developer describing the same problem on StackOverflow](https://stackoverflow.com/questions/20970686/error-signing-windows-phone-xap-file-signtool-error-this-file-format-cannot). The solution was to install [Silverlight 5.1.30514.0](http://downloads.tomsguide.com/silverlight-microsoft,0301-10659.html). This was really strange, it is a Silverlight runtime not an SDK and it does not get installed with Visual Studio or the Windows Phone SDK.
 

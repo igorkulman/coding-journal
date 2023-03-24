@@ -12,7 +12,7 @@ You can use [ScheduledActionService.LaunchForTest][1] to test your background ag
 
 <!--more-->
 
-{{< highlight csharp >}}
+```csharp
 protected override void OnInvoke(ScheduledTask task)
 {   
     ScheduledActionService.LaunchForTest(task.Name, TimeSpan.FromSeconds(60));
@@ -21,7 +21,7 @@ protected override void OnInvoke(ScheduledTask task)
                         
     NotifyComplete();
 }
-{{< / highlight >}}
+```
 
 Your background agent gets executed every minute! 
 

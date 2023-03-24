@@ -14,16 +14,16 @@ The problem with the SemanticZoom component is, that as a child of it&#8217;s S
 
 The key is to notice that both the GridView and the ListView components implement the ISemanticZoomIn­formation interface. Any component implementing this interface can be used as a child of the SemanticZoom.Zo­omedInView and SemanticZoom.ZoomedOutView elements. So lets implement an component called SemanticGrid that inherits from Grid and implements ISemanticZoomInformation
 
-{{< highlight csharp >}}
+```csharp
 public class SemanticGrid: Grid,ISemanticZoomInformation
 {
     ...
 }
-{{< / highlight >}}
+```
 
 Let Visual Studio generate stubs for all the methods and properties in the ISemanticZoomIn­formation inteface. You do not need to implement them, just comment out the throw new NotImplementedException(); from all the methods and change the properties to
 
-{{< highlight csharp >}}
+```csharp
 public bool IsActiveView
 {
     get;
@@ -41,6 +41,6 @@ public SemanticZoom SemanticZoomOwner
      get;
      set;
 }
-{{< / highlight >}}
+```
 
 And you are done. You can use this component with the SemanticZoom component instead of the GridView or the ListView and customize the semantic zoom according to your needs. Also if you wrap a GridView in this SemanticZoomGrid and place it in the SemanticZoom.ZoomedOutView element, the ItemClick handler in the GridView will work and you can implement custom actions.

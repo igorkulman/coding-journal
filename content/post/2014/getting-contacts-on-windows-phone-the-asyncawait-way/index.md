@@ -8,7 +8,7 @@ tags = ["Csharp","Windows Phone"]
 +++
 Getting contacts info on Windows Phone means using a callback based API provided by the Windows Phone SDK
 
-{{< highlight csharp >}}
+```csharp
 private void ButtonContacts_Click(object sender, RoutedEventArgs e)
 {
     Contacts cons = new Contacts();
@@ -25,13 +25,13 @@ void Contacts_SearchCompleted(object sender, ContactsSearchEventArgs e)
     //Do something with the results.
     MessageBox.Show(e.Results.Count().ToString());
 }
-{{< / highlight >}}
+```
 
 I really dislike all the callback-based API so I was looking for a way to convert it to an async/await based API. And it is quite easy to do so
 
 <!--more-->
 
-{{< highlight csharp >}}
+```csharp
     /// <summary>
     /// Address book wrapper
     /// Needs address book permissions to work
@@ -76,7 +76,7 @@ I really dislike all the callback-based API so I was looking for a way to conver
             cons.SearchAsync(String.IsNullOrEmpty(searchTerm) ? string.Empty : searchTerm, filter, null);
         }
     }
-{{< / highlight >}}
+```
 
 You can find this implementation in my [Kulman.WP8][1] library (also [available on Nuget][2])
 

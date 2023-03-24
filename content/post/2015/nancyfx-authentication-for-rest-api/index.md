@@ -18,7 +18,7 @@ There are things you want to do differently in a REST API than on a web page. If
 
 Suppose you have Forms Authentication set up according to the documentation, with a IUserMapper and IUserIdentity implementation. Disabling the redirects is easy, just set a flag on the FormsAuthenticationConfiguration in your Bootstrapper:
 
-{{< highlight csharp >}}
+```csharp
 protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
 {
     base.RequestStartup(container, pipelines, context);
@@ -32,13 +32,13 @@ protected override void RequestStartup(TinyIoCContainer container, IPipelines pi
 
     FormsAuthentication.Enable(pipelines, formsAuthConfiguration);
 }
-{{< / highlight >}}
+```
 
 **Changing Login and Logout methods**
 
 The login implementation from the documentation uses the LoginAndRedirect method. There is also LoginWithoutRedirect method you want to use, but I found out it does not set the authentication cookie (when it does not think the request is an AJAX request), so the login basically does not work. A workaround I found is to call the LoginAndRedirect method, but only get the authentication cookie from the response ad return it manually:
 
-{{< highlight csharp >}}
+```csharp
 Post["/login"] = _ =>
 {
     var loginParams = this.Bind<LoginParams>();
@@ -54,11 +54,11 @@ Post["/login"] = _ =>
         username = user.Username
     }).WithCookie(authResult.Cookies.First());
 };
-{{< / highlight >}}
+```
 
 The logout implementation just needs to call LogoutWithoutRedirect and return HTTP 200:
 
-{{< highlight csharp >}}
+```csharp
 Get["/logout"] = _ =>
 {             
     this.RequiresAuthentication();
@@ -66,7 +66,7 @@ Get["/logout"] = _ =>
     var response = this.LogoutWithoutRedirect();
     return Response.AsText("logout").WithCookie(response.Cookies.First());
 };
-{{< / highlight >}}
+```
 
  [1]: https://www.nuget.org/packages/Nancy.Authentication.Forms/
  [2]: https://github.com/NancyFx/Nancy/wiki/Forms-Authentication

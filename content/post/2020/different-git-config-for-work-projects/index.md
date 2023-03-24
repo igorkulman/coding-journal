@@ -18,16 +18,16 @@ Previously I had my personal `Git` identity set globally and then used local `Gi
 
 I created a `~/.companyName.gitconfig` that overrides just the name, email and GPG signing key to match the work identity
 
-{{< highlight bash >}}
+```bash
 [user]
     name = Igor Kulman
     email = igor@company.name
     signingkey = ABC
-{{< /highlight >}}
+```
 
 I then included this config in my main `~/.gitconfig` just for the `~/Projects/CompanyName` directory
 
-{{< highlight bash >}}
+```bash
 [user]
 	name = Igor Kulman
 	email = igor@kulman.sk
@@ -35,15 +35,15 @@ I then included this config in my main `~/.gitconfig` just for the `~/Projects/C
 ...
 [includeIf "gitdir:~/Projects/CompanyName/"]
     path = ~/.companyName.gitconfig
-{{< /highlight >}}
+```
 
 to achieve exactly what I needed.
 
 To verify and quickly check which `Git` identity is being used in a specific `Git` repository you can use this simple `Git` alias
 
-{{< highlight bash >}}
+```bash
 [alias]    
     whoami = "! git var -l | grep '^GIT_.*_IDENT'"
-{{< /highlight >}}
+```
 
 <!--more-->

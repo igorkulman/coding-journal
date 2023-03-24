@@ -14,7 +14,7 @@ When the app wants to get some data, I perform a GET request including the ETag 
 
 <!--more-->
 
-{{< highlight csharp >}}
+```csharp
 /// <summary>
 /// Gets stream data from the server. Uses ETag to cache data locally
 /// </summary>
@@ -58,7 +58,7 @@ private async Task<Stream> GetData([NotNull] string url)
     }
     return await newFile.OpenStreamForReadAsync().ConfigureAwait(false); //return (fresh) from cache
 }
-{{< / highlight >}}
+```
 
 This approach works with the portable Http client library, that you can use with Windows Phone 8 (Silverlight), 8.1 (Sliverlight), 8.1 XAML and Windows 8/8.1. If you only need to support Windows Phone 8.1 XAML and Windows 8.1, you may want to look into the Windows.Web.Http.HttpClient.
 

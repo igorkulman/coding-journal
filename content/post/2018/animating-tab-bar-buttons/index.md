@@ -21,7 +21,7 @@ The first step is to find the right place to insert the bounce animation into. W
 
 This method gives you the selected `UITabBarItem` but you need to get to the actual view and its image. I found out that the tab bar contains (at least in my case) a background subview and then subviews corresponding to the tab bar buttons, so when a tab bar button at index N is tapped, its subview is at N+1.
 
-{{< highlight swift >}}
+```swift
 class AnimatedTabBarController: UITabBarController {
 
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
@@ -33,18 +33,18 @@ class AnimatedTabBarController: UITabBarController {
         // animate the imageView
     }
 }
-{{< / highlight >}}
+```
 
 To create a bounce animation we can use `CAKeyframeAnimation` and animate the `transform.scale` key path. Basically, you need to make the image bigger, then slightly smaller and original size again. This is the animation I use
 
 <!--more-->
 
-{{< highlight swift >}}
+```swift
 let bounceAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
 bounceAnimation.values = [1.0, 1.4, 0.9, 1.02, 1.0]
 bounceAnimation.duration = TimeInterval(0.3)
 bounceAnimation.calculationMode = CAAnimationCalculationMode.cubic
-{{< / highlight >}}        
+```        
 
 It is more visible as the one in the Twitter app, you can tweak the values to get the animation you like best.
 
@@ -52,7 +52,7 @@ It is more visible as the one in the Twitter app, you can tweak the values to ge
 
 The resulting class code looks like this
 
-{{< highlight swift >}}
+```swift
 class AnimatedTabBarController: UITabBarController {
 
     private var bounceAnimation: CAKeyframeAnimation = {
@@ -72,4 +72,4 @@ class AnimatedTabBarController: UITabBarController {
         imageView.layer.add(bounceAnimation, forKey: nil)
     }
 }
-{{< / highlight >}}
+```

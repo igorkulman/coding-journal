@@ -26,7 +26,7 @@ First you need to install [Ninject.Extensions.Interception][6]. It has no depede
 
 First, create a class implementing the IInterceptor interface
 
-{{< highlight csharp >}}
+```csharp
 public class ErrorLoggingInterceptor : IInterceptor
 {
     private readonly ILogFactory _logFactory;
@@ -57,13 +57,13 @@ public class ErrorLoggingInterceptor : IInterceptor
       }
     }
 }
-{{< / highlight >}}
+```
 
 This class wraps the intercepted method invocation into a try..catch block and logs any occuring exception using my custom ILogFactory, including parameter values.
 
 Next, create a class implementing the InterceptAttribute
 
-{{< highlight csharp >}}
+```csharp
 public class LogErrorAttribute : InterceptAttribute
 {
     public override IInterceptor CreateInterceptor(IProxyRequest request)
@@ -71,19 +71,19 @@ public class LogErrorAttribute : InterceptAttribute
         return request.Context.Kernel.Get<ErrorLoggingInterceptor>();
     }
 }
-{{< / highlight >}}
+```
 
 This attribute uses the Ninject kernel to get an instance of the ErrorLoggingInterceptor so you do not have to concern yourself explictily with providing an ILogFactory implementation, Ninject will do all the work.
 
 Now you can use the LogErrorAttribute to mark any method, but keep in mind that all the marked methods must be virtual
 
-{{< highlight csharp >}}
+```csharp
 [LogError]
 public virtual bool Send(string text, IEnumerable<string> languageCodes, string carId, string type, bool save=true)
 {
     //error in this method will be logged  
 }
-{{< / highlight >}}
+```
 
  [1]: http://www.ninject.org/
  [2]: https://github.com/Fody/Fody

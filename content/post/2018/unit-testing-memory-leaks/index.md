@@ -20,7 +20,7 @@ In my case the problem was a `UIViewController` not being deallocated after bein
 
 SpecLeaks can detect that your are testing a `UIViewController` and also call `viewDidLoad` to fully initialize the `UIViewController`. A simple memory leak test may then look like this
 
-{{< highlight swift >}}
+```swift
 class SomeViewControllerTests: QuickSpec {
     override func spec() {
         describe("SomeViewController") {
@@ -35,7 +35,7 @@ class SomeViewControllerTests: QuickSpec {
         }
     }
 }
-{{< / highlight >}}
+```
 
 You can initialize your view controllers using `init` or get them from story boards, it does not matter. The unit tests will fail for every leaking view `UIViewController`.
 
@@ -43,7 +43,7 @@ You can initialize your view controllers using `init` or get them from story boa
 
 If you think some of your methods may be causing a memory leak when being called at same later point (because they use closures for example), you can also test for that
 
-{{< highlight swift >}}
+```swift
 class SomeViewControllerTests: QuickSpec {
     override func spec() {
         describe("SomeViewController") {
@@ -69,13 +69,13 @@ class SomeViewControllerTests: QuickSpec {
         }
     }
 }
-{{< / highlight >}}
+```
 
 #### Practical example
 
 In my project I use [Swinject](https://github.com/Swinject/Swinject) for Dependency Injection, so in my unit test I just need to set up the Dependency Injection container with mocks or stubs instead of real services 
 
-{{< highlight swift >}}
+```swift
 extension ViewControllerLeakTests {
     func setupDependencies() -> Container {
         let container = Container()
@@ -88,11 +88,11 @@ extension ViewControllerLeakTests {
         return container
     }
 }
-{{< / highlight >}}  
+```  
 
 and then I can initialize the view controllers the exact same way as in the main application.
 
-{{< highlight swift >}}
+```swift
 class ViewControllerLeakTests: QuickSpec {
     override func spec() {
         let container = setupDependencies()
@@ -121,7 +121,7 @@ class ViewControllerLeakTests: QuickSpec {
         ...
     }
 }        
-{{< / highlight >}}        
+```        
 
 where `resolveViewController` is an extension method initializing the `UIViewController` from the right story board, settings its view model if needed, etc.
 

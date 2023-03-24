@@ -10,7 +10,7 @@ Windows Phone Store does not offer developers any sandbox to test in-app purchas
 
 To make in-app purchases implementation easier, I created a simple Windows Phone Store service interface in my [Kulman.WP8][1] library (also [available on Nuget][2])
 
-{{< highlight csharp >}}
+```csharp
     /// <summary>
     /// Interface for Windows Phone Store service
     /// </summary>
@@ -37,7 +37,7 @@ To make in-app purchases implementation easier, I created a simple Windows Phone
         /// <returns>Product price</returns>
         Task<string> GetPrice(string productId);        
     }
-{{< / highlight >}}
+```
 
 <!--more-->
 
@@ -53,7 +53,7 @@ If your app is already in the Windows Phone Store, create an in-app product and 
 
 To mock in-app purchases you can use the [Mock In-App Purchase Library][4]. To make testing easier, implement my interface using this library
 
-{{< highlight csharp >}}
+```csharp
 using MockIAPLib;
 using Store = MockIAPLib;
 
@@ -140,11 +140,11 @@ namespace YourAPP
         }
     }
 }
-{{< / highlight >}}
+```
 
 And setup the products you want to use at your app startup
 
-{{< highlight csharp >}}
+```csharp
 private void SetupMockIAP()
 {
             MockIAP.Init();
@@ -166,17 +166,17 @@ private void SetupMockIAP()
             };
             MockIAP.AddProductListing("img.2", p);
 }
-{{< / highlight >}}
+```
 
 The advantage of this approach is that you just switch the IWindowsStoreService implementation between then mock on and the [real one][3], depending on the situation. For example (Caliburn.Micro Bootstrapper)
 
-{{< highlight csharp >}}
+```csharp
 #if DEBUG
             container.RegisterSingleton(typeof(IWindowsPhoneStoreService), "windowsPhoneStoreService", typeof(MockWindowsPhoneStoreService));
 #else
             container.RegisterSingleton(typeof(IWindowsPhoneStoreService), "windowsPhoneStoreService", typeof(WindowsPhoneStoreService));
 #endif
-{{< / highlight >}}
+```
 
  [1]: https://github.com/igorkulman/Kulman.WP8
  [2]: http://www.nuget.org/packages/Kulman.WP8/

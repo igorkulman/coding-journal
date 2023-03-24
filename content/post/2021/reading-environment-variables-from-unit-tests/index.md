@@ -17,9 +17,9 @@ A typical example might be reading secrets or configuration that is CI/CD specif
 
 In Swift you can read environment variables using the `ProcessInfo.processInfo.environment` dictionary, for example
 
-{{< highlight swift >}}
+```swift
 let host = ProcessInfo.processInfo.environment["apiHost"] ?? "default fallback host"
-{{< /highlight >}}
+```
 
 The problem is this code does not just work, there is one other step you need to do first.
 

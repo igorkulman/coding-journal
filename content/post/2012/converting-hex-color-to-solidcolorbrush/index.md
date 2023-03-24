@@ -8,7 +8,7 @@ tags = ["Csharp","WinRT"]
 +++
 XAML supports stating color definitions as hexa strings (starting with #) but there is no built-in way to do it in C#, you must write your own method to do it, that might look like this
 
-{{< highlight csharp >}}
+```csharp
 public static class ColorHelper
 {
     public static SolidColorBrush GetColorFromHexa(string hexaColor)
@@ -23,6 +23,6 @@ public static class ColorHelper
         );
     }
 }
-{{< / highlight >}}
+```
 
 <!--more-->

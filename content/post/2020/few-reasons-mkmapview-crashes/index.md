@@ -25,11 +25,11 @@ I guessed that `MKMapView` was processing annotation changes when the view contr
 
 The fix for this problem was setting the `MKMapView`'s delegate to `nil` in the view controller's `deinit` method.
 
-{{< highlight swift >}}
+```swift
 deinit {
     mapView.delegate = nil
 }
-{{< /highlight >}}
+```
 
 ### Crashing when animating annotation position changes
 
@@ -41,9 +41,9 @@ If you want to animate the position change on the map, you need to wrap the `coo
 
 The exception said
 
-{{< highlight txt >}}
+```
 Collection was mutated while being enumerated.
-{{< /highlight >}}
+```
 
 but the annotation collection was not really mutated as a whole, some annotation in that collection was mutated by updating its `coordinate` property.
 
@@ -67,7 +67,7 @@ But how do you catch an Objective-C runtime exception in Swift so you can ignore
 
 You can write a simple **Objective-C method that catches and ignores `NSException`s**
 
-{{< highlight objective-c >}}
+```objc
 NS_INLINE NSException * _Nullable tryBlock(void(^_Nonnull tryBlock)(void)) {
     @try {
         tryBlock();
@@ -77,11 +77,11 @@ NS_INLINE NSException * _Nullable tryBlock(void(^_Nonnull tryBlock)(void)) {
     }
     return nil;
 }
-{{< /highlight >}}
+```
 
 and call it from Swift
 
-{{< highlight swift >}}
+```swift
 UIView.animate(withDuration: 0.3) { [weak self] in
     let exception = tryBlock { [weak self] in
         self?.coordinate = data.coordinate
@@ -91,7 +91,7 @@ UIView.animate(withDuration: 0.3) { [weak self] in
         Log.error?.message("Updating live location coordinate failed with \(exception)")
     }
 }
-{{< /highlight >}}
+```
 
 Not exactly a great solution but it was a start.
 

@@ -16,7 +16,7 @@ To be exact, copy & paste works on a `NSTextField` as long as you do not delete 
 
 The key to the implementation is overriding the `performKeyEquivalent` method and manually checking for `cmd + c/v/x/z/a`
 
-{{< highlight swift >}}
+```swift
 final class EditableNSTextField: NSTextField {
 
     private let commandKey = NSEvent.ModifierFlags.command.rawValue
@@ -48,6 +48,6 @@ final class EditableNSTextField: NSTextField {
         return super.performKeyEquivalent(with: event)
     }
 }
-{{< /highlight >}}
+```
 
 <!--more-->
