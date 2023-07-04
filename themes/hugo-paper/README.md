@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Paper <sup><sup><sub>6.13</sub></sup></sup></h1>
+<h1>Paper <sup><sup><sub>6.16</sub></sup></sup></h1>
 
 Demo → [hugo-paper.vercel.app](https://hugo-paper.vercel.app/)
 
@@ -34,7 +34,7 @@ Inside the folder of your Hugo project, run:
 git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
 ```
 
-Open `config.toml`, change `theme` to `"paper"`:
+Open `config.toml` or `hugo.toml`, change `theme` to `"paper"`:
 
 ```toml
 theme = "paper"
@@ -44,7 +44,7 @@ For more information, please read the [official guide](https://gohugo.io/getting
 
 ## Options
 
-Available options to `config.toml`:
+Available options to `config.toml` or `hugo.toml`:
 
 ```toml
 disqusShortname = 'YOUR_DISQUS_SHORTNAME'   # use disqus comments
@@ -57,6 +57,7 @@ disqusShortname = 'YOUR_DISQUS_SHORTNAME'   # use disqus comments
   twitter = 'YOUR_TWITTER_ID'               # twitter.com/YOUR_TWITTER_ID
   github = 'YOUR_GITHUB_ID'                 # github.com/YOUR_GITHUB_ID
   instagram = 'YOUR_INSTAGRAM_ID'           # instagram.com/YOUR_INSTAGRAM_ID
+  linkedin = 'YOUR_LINKEDIN_ID'             # linkedin.com/in/YOUR_LINKEDIN_ID
   mastodon = 'YOUR_MASTODON_LINK'           # e.g. 'https://mastodon.instance/@xxx'
   rss = true                                # show rss icon
 
