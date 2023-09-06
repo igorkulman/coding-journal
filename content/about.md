@@ -5,41 +5,16 @@ subtitle = "Who am I?"
 
 +++
 
-<div id="aboutme-section">
+Doing mobile applications development for over a decade, currently **building iOS applications** after the death of Windows Phone. I helped build privacy focused applications as an **iOS developer** in the ProtonVPN team at [ProtonMail](https://www.protonmail.com) or the industry leading corporate secure messaging application at [Teamwire](https://www.teamwire.eu).
 
-<p class="about-text">
-<span class="fa fa-briefcase about-icon"></span>
-Doing mobile applications development for over a decade, currently <strong>building iOS applications</strong> after the death of Windows Phone. I helped build privacy focused applications as an <strong>iOS developer</strong> in in the VPN team at <a href="https://www.protonmail.com/">ProtonMail</a> or the industry leading corporate secure messaging application at <a href="https://www.teamwire.eu">Teamwire</a>.
-</p>
+Obtained my master's degree in **Computer Science** from the Charles University in Prague (the Faculty of Mathematics and Physics) focusing on **Software Engineering**. 
 
-<p class="about-text">
-<span class="fa fa-graduation-cap about-icon"></span>
-Obtained my master's degree in <strong>Computer Science</strong> from the Charles University in Prague (the Faculty of Mathematics and Physics) focusing on <strong>Software Engineering</strong>. 
-</p>
+This blog mostly covers my **programming experience** venturing into the world of **iOS and Swift** and my previous dealing with **Windows Phone and Windows development**. You can also find some rants here, because I do not like when stuff breaks. 
 
-<p class="about-text">
-<span class="fa fa-code about-icon"></span>
-This blog mostly covers my <strong>programming experience</strong> venturing into the world of <strong>iOS and Swift</strong> and my previous dealing with <strong>Windows Phone and Windows development</strong>. You can also find some rants here, because I do not like when stuff breaks. 
-</p>
+Take a look at my  [open-source software](https://github.com/igorkulman) to get a better understanding of my work.
 
-<p class="about-text">
-<span class="fa fa-file-alt about-icon"></span>
-Take a look at my  <a href="https://github.com/igorkulman">open-source software</a> to get a better understanding of my work.
-</p>
+I also write a [blog in Slovak about non-programming stuff](https://www.kulman.sk), check it out if you are able to read it.
 
-<p class="about-text">
-<span class="fa fa-globe about-icon"></span>
-I also write a <a href="https://www.kulman.sk">blog in Slovak about non-programming stuff</a>, check it out if you are able to read it.
-</p>
+If you want to know more about the way I work, read my [interview about working from home](https://remotehabits.com/interview/interview-with-igor-kulman-a-software-engineer-building-ios-apps-remotely), check out my [macOS and iOS work setup](https://thesweetsetup.com/igor-kulmans-macos-iphone-and-watch-setup) or listen to a [podcast episode about my experience trying to pitch a proposal for Swift](https://devchat.tv/iphreaks/ips-264-pitching-to-swift-with-igor-kulman/).
 
-<p class="about-text">
-<span class="fa fa-microphone about-icon"></span>
-If you want to know more about the way I work, read my <a href="https://remotehabits.com/interview/interview-with-igor-kulman-a-software-engineer-building-ios-apps-remotely">interview about working from home</a>, check out my <a href="https://thesweetsetup.com/igor-kulmans-macos-iphone-and-watch-setup/">macOS and iOS work setup</a> or listen to a <a href="https://devchat.tv/iphreaks/ips-264-pitching-to-swift-with-igor-kulman/">podcast episode about my experience trying to pitch a proposal for Swift</a>.
-</p>
-
-<p class="about-text">
-<span class="fa fa-envelope about-icon"></span>
-Want to get it touch with me? Check the links below in the footer. Email is the preferred form of communication.
-</p>
-
-</div>
+Want to get it touch with me? Send me an email to igor@kulman.sk or find me at [@igorkulman@mastodon.cloud](https://mastodon.cloud/@igorkulman).
