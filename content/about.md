@@ -17,4 +17,4 @@ I also write a [blog in Slovak about non-programming stuff](https://www.kulman.s
 
 If you want to know more about the way I work, read my [interview about working from home](https://remotehabits.com/interview/interview-with-igor-kulman-a-software-engineer-building-ios-apps-remotely), check out my [macOS and iOS work setup](https://thesweetsetup.com/igor-kulmans-macos-iphone-and-watch-setup) or listen to a [podcast episode about my experience trying to pitch a proposal for Swift](https://devchat.tv/iphreaks/ips-264-pitching-to-swift-with-igor-kulman/).
 
-Want to get it touch with me? Send me an email to igor@kulman.sk or find me at [@igorkulman@mastodon.cloud](https://mastodon.cloud/@igorkulman).
+Want to get it touch with me? Send me an email to igor@kulman.sk or find me at [@igorkulman@hachyderm.io](https://hachyderm.io/@igorkulman).
