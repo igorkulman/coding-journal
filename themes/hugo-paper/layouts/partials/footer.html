@@ -33,3 +33,10 @@
 </script>
 <noscript><p><img src="https://analytics.kulman.sk/unicorn?idsite=2&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
+
+{{ if .Type | eq "post" }}
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+    data-id="igorkulman" data-description="Support me on Buy me a coffee!"
+    data-message="If you find this article useful, you can buy me a coffee or two, as you wish." data-color="#5F7FFF"
+    data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+{{ end }}
