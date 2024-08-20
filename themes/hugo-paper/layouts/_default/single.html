@@ -7,7 +7,7 @@
     {{ if ne .Type "page" }}
     <div class="text-xs antialiased opacity-60">
       {{ if .Date }}
-      <time>{{ .Date | time.Format ":date_medium" }}</time>
+      <time>{{ .Date | time.Format ":date_long" }}</time>
       {{ end }}<!---->
       {{ $single_author := or .Params.Author site.Author.name }}
       <!---->
