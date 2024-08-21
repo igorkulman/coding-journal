@@ -7,6 +7,7 @@ author = "Igor Kulman"
 date = "2024-08-21T05:29:12+01:00"
 title = "Drawing custom areas into map snapshots in iOS"
 url = "/custom-areas-in-snapshots"
+images = ["/custom-areas-in-snapshots/locationAttachmentArea.png"]
 
 +++
 
