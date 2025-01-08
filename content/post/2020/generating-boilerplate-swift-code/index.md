@@ -26,8 +26,8 @@ There are a few tools to help you do that, one of the most flexible of them bein
 You can download `GYB` to your project from the `Swift` repository on Github
 
 ```bash
-wget https://github.com/apple/swift/raw/master/utils/gyb
-wget https://github.com/apple/swift/raw/master/utils/gyb.py
+wget https://raw.githubusercontent.com/swiftlang/swift/refs/heads/main/utils/gyb.py
+wget https://raw.githubusercontent.com/swiftlang/swift/refs/heads/main/utils/gyb
 chmod +x gyb
 ```
 
