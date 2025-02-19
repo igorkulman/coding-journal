@@ -1,8 +1,60 @@
 /* Place custom css here. */
 .prose code::before {
-    content: normal
-  }
+    content: normal;
+}
   
-  .prose code::after {
-    content: normal
-  }
+.prose code::after {
+    content: normal;
+}
+
+.support-section {
+    margin: 2.5rem 0;
+    padding: 1.75rem;
+    background-color: #f8f9fa;
+    border-radius: 0.75rem;  /* Using larger radius to match your design */
+    text-align: center;
+}
+
+.support-section p {
+    margin: 0 0 1.25rem;
+    font-size: 1.1rem;
+    color: #374151;  /* Using a softer color that matches your text style */
+    font-weight: 400;
+}
+
+.support-section a {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #333;  /* Changed to match your design's button style */
+    border-radius: 0.75rem;  /* Matching your design's rounded corners */
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.support-section a:hover {
+    background-color: #000;
+    transform: translateY(-1px);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    .support-section {
+        background-color: rgba(255, 255, 255, 0.08);  /* Subtle dark mode background */
+    }
+
+    .support-section p {
+        color: #e5e5e5;
+    }
+
+    .support-section a {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .support-section a:hover {
+        background-color: #e5e5e5;
+    }
+}
