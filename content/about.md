@@ -5,19 +5,23 @@ subtitle = "Who am I?"
 
 +++
 
-📱 I’ve been developing mobile applications for over a decade, now **focused on iOS development** after the demise of Windows Phone. I contributed to privacy-focused applications as an **iOS developer** in the ProtonVPN team at [ProtonMail](https://www.protonmail.com) and helped build an industry-leading corporate secure messaging application at [Teamwire](https://www.teamwire.eu).  
+👋 Hi, I’m Igor!
 
-🎓 I hold a master's degree in **Computer Science** from Charles University in Prague (Faculty of Mathematics and Physics), specializing in **Software Engineering**.  
+📱 I’ve been building mobile apps for over a decade—these days, I’m all about iOS and Swift. (Once upon a time, I wrangled Windows Phone and .NET, but let’s not talk about that. 😉)
 
-🧑‍💻 This blog covers my **programming journey**, exploring **iOS and Swift** development alongside my past experiences with **Windows Phone and Windows development**. You’ll also find the occasional rant—because I dislike when things break.  
+🔒 I’ve worked on privacy-first apps at [ProtonVPN](https://www.protonmail.com)), and helped build secure corporate messaging at [Teamwire](https://www.teamwire.eu). I like making things that respect users and just work.
 
-🖥 Check out my [open-source software](https://github.com/igorkulman) to get a better sense of my work.  
+🎓 I have a master’s in Computer Science from Charles University in Prague, specializing in Software Engineering.
 
-🇸🇰 I also write a [blog in Slovak about non-programming topics](https://www.kulman.sk). If you can read it, feel free to check it out.  
+🧑‍💻 This blog is my programming journal: iOS, Swift, automation, and the occasional rant when tech misbehaves.
 
-🎤 Want to know more about how I work? Read my [interview about working from home](https://remotehabits.com/interview/interview-with-igor-kulman-a-software-engineer-building-ios-apps-remotely), explore my [macOS and iOS work setup](https://thesweetsetup.com/igor-kulmans-macos-iphone-and-watch-setup), or listen to a [podcast episode about my experience pitching a proposal for Swift](https://devchat.tv/iphreaks/ips-264-pitching-to-swift-with-igor-kulman/).  
+🖥 I’m a big fan of open source—check out my [GitHub](https://github.com/igorkulman) for projects, tools, and experiments. I’m also a contributor to [KeePassium](https://github.com/keepassium/KeePassium), a modern open-source password manager for Apple platforms.
 
-### Contact  
+🇸🇰 For my non-tech musings (in Slovak), visit [www.kulman.sk](https://www.kulman.sk).
 
-📧 E-mail: igor@kulman.sk  
-🐘 Mastodon: [@igorkulman@hachyderm.io](https://hachyderm.io/@igorkulman)  
+☕ Always happy to chat about iOS, open source, or remote work—just reach out!
+
+### Contact
+
+📧 E-mail: igor@kulman.sk    
+🐘 Mastodon: [@igorkulman@hachyderm.io](https://hachyderm.io/@igorkulman)
