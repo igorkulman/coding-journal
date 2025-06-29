@@ -1,8 +1,6 @@
 +++
-Categories = ["CI", "Xcode", "iOS"]
 Description = ""
 Tags = ["CI", "Xcode", "iOS"]
-Keywords = ["CI", "Xcode", "iOS"]
 author = "Igor Kulman"
 date = "2021-05-19T05:29:12+01:00"
 title = "Allowing parallel iOS UI tests runs in CI"

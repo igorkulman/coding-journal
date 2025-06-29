@@ -1,7 +1,5 @@
 +++
-Categories = ["macOS", "Hackintosh"]
 Description = ""
-Keywords = ["macOS", "Hackintosh"]
 author = "Igor Kulman"
 date = "2019-03-27T05:29:12+01:00"
 title = "Creating bootable macOS backups"

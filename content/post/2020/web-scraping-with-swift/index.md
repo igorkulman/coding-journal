@@ -1,8 +1,6 @@
 +++
-Categories = ["Swift", "Xcode"]
 Description = ""
 Tags = ["Swift", "Xcode",]
-Keywords = ["Swift", "Xcode"]
 author = "Igor Kulman"
 date = "2020-11-18T05:29:12+01:00"
 title = "Web scraping with Swift"

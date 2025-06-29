@@ -1,8 +1,6 @@
 +++
-Categories = [ "WPF", "NSIS", "Squirrel" ]
 Description = "Currently working on a WPF app as a side project I came upon and interesting requirement regarding installation and deployment of the application. As a result I ended with some Squirrel and NSIS knowledge I would like to share."
 Tags = [ "WPF", "NSIS", "Squirrel"]
-Keywords = [ "WPF", "NSIS", "Squirrel"]
 author = "Igor Kulman"
 date = "2016-06-22T09:29:12+01:00"
 title = "Application deployment with NSIS and Squirrel"

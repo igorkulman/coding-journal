@@ -1,8 +1,6 @@
 +++
-Categories = [ "Windows Phone", "Windows Store", "UWP" ]
 Description = "If you are a Windows Phone user you must know that filling in forms in apps is usually a real pain. There is no good way to move from one input to another or to collapse the keyboard. The whole process becomes a struggle, tapping outside the input fields to collapse the keyboard allowing you to scroll to the next input or to the submit button at the top of the screen, usually occluded by the keyboard."
 Tags = ["Windows Phone", "Windows Store", "UWP"]
-Keywords = ["Windows Phone", "Windows Store", "UWP", "XAML"]
 author = "Igor Kulman"
 date = "2016-03-29T09:29:12+01:00"
 title = "Creating better forms in Windows Phone apps"

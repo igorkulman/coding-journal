@@ -1,8 +1,6 @@
 +++
-Categories = ["Swift", "iOS"]
 Description = ""
 Tags = ["Swift", "iOS"]
-Keywords = ["Swift", "iOS"]
 author = "Igor Kulman"
 date = "2024-04-04T05:29:12+01:00"
 title = "Use OpenVPN as a proxy to more comfortably access internal Gitlab"

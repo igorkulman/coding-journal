@@ -1,8 +1,6 @@
 +++
-Categories = ["Swift", "iOS"]
 Description = ""
 Tags = ["Swift", "iOS"]
-Keywords = ["Swift", "iOS"]
 author = "Igor Kulman"
 date = "2023-03-29T05:29:12+01:00"
 title = "Using Critical Alerts in iOS applications"

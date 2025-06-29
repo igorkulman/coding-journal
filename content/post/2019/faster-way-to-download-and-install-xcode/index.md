@@ -1,8 +1,6 @@
 +++
-Categories = ["iOS", "Swift", "Xcode"]
 Description = "As an iOS developer you need to periodically update your Xcode, on your own machine and on your CI/CD server. There are multiple ways to do this so do not waste your time and use the fastest way possible."
 Tags = ["iOS", "Swift", "Xcode"]
-Keywords = ["iOS", "Swift", "Xcode"]
 author = "Igor Kulman"
 date = "2019-11-20T05:29:12+01:00"
 title = "Faster way to download and install Xcode"

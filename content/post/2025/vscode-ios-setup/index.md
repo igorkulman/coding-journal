@@ -1,8 +1,6 @@
 +++
-Categories = ["Swift", "iOS"]
 Description = ""
 Tags = ["Swift", "iOS"]
-Keywords = ["Swift", "iOS"]
 author = "Igor Kulman"
 date = "2025-02-26T05:29:12+01:00"
 title = "Visual Studio Code setup for iOS development with Copilot"

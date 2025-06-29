@@ -1,8 +1,6 @@
 +++
-Categories = ["iOS", "macOS", "Xcode"]
 Description = "One of the best XCode 9 features is the ability to deploy and debug iOS app on your device over WiFi, with no need to have the device connected to you computer by a cable. The only requirement is that the device runs iOS 11."
 Tags = ["iOS", "macOS", "XCode"]
-Keywords = ["iOS", "macOS", "Xcode", "Debug"]
 author = "Igor Kulman"
 date = "2017-10-07T09:29:12+01:00"
 title = "iOS tip: Wireless debugging from XCode"

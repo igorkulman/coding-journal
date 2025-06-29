@@ -1,8 +1,6 @@
 +++
-Categories = ["Swift", "iOS"]
 Description = "When you have an iOS application running in production, you probably want to know if and why it crashes, so you can fix all your bugs as soon as possible. There are many good services like HockeyApp that can help you with that, but sometimes you are not allowed to use any 3rd party service for this. In this case you have to look for another solution how to get info about all your iOS application crashes and process it by yourself."
 Tags = ["Swift", "iOS"]
-Keywords = ["Swift", "iOS", "Logging", "Crash"]
 author = "Igor Kulman"
 date = "2018-02-28T09:29:12+01:00"
 title = "Logging crashes in a Swift iOS application"

@@ -1,8 +1,6 @@
 +++
-Categories = ["macOS", "Git"]
 Description = ""
 Tags = ["macOS", "Xcode"]
-Keywords = ["macOS", "Git"]
 author = "Igor Kulman"
 date = "2020-12-02T05:29:12+01:00"
 title = "Using different Git config for personal and work projects"

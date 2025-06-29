@@ -1,8 +1,6 @@
 +++
-Categories = ["Swift", "iOS"]
 Description = ""
 Tags = ["Swift", "iOS"]
-Keywords = ["Swift", "iOS"]
 author = "Igor Kulman"
 date = "2024-08-21T05:29:12+01:00"
 title = "Drawing custom areas into map snapshots in iOS"

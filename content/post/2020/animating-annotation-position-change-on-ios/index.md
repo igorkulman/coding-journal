@@ -1,8 +1,6 @@
 +++
-Categories = ["iOS", "Xcode", "MapKit"]
 Description = ""
 Tags = ["iOS", "Xcode", "MapKit"]
-Keywords = ["iOS", "Xcode", "MapKit"]
 author = "Igor Kulman"
 date = "2020-05-13T05:29:12+01:00"
 title = "Animating annotations position change in MKMapView"

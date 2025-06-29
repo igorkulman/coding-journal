@@ -1,8 +1,6 @@
 +++
-Categories = ["iOS", "Xcode", "UIImage"]
 Description = ""
 Tags = ["iOS", "Xcode", "UIImage"]
-Keywords = ["iOS", "Xcode", "UIImage"]
 author = "Igor Kulman"
 date = "2020-05-27T05:29:12+01:00"
 title = "Dealing with memory limits in iOS app extensions"

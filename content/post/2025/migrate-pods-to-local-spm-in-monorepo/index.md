@@ -1,8 +1,6 @@
 +++
-Categories = ["Swift", "iOS"]
 Description = ""
 Tags = ["Swift", "iOS"]
-Keywords = ["Swift", "iOS"]
 author = "Igor Kulman"
 date = "2025-06-18T05:29:12+01:00"
 title = "Migrating internal iOS libraries to a monorepo using Swift Package Manager"

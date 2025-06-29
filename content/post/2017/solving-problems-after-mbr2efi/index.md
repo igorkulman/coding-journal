@@ -1,5 +1,4 @@
 +++
-Categories = [ "Windows", "Hyper-V"]
 Description = "When I upgraded my Windows 10 installation to the Creators Update I wanted to take advantage of the new MBR2GPT.EXE tool. This tool allows you to upgrade your Windows 10 installation to EFI without having to reinstall or loosing any data. My motivation for moving to EFI installation was to be able to boot Windows 10 from Clover, the macOS bootloader in my hackintosh installation, making switching between Windows 10 and macOS easier without involving the BIOS boot menu."
 Tags = ["Windows", "Hyper-V"]
 Keywords =["Windows", "Hyper-V", "VirtualMachine"]

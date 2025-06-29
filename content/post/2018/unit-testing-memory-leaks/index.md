@@ -1,8 +1,6 @@
 +++
-Categories = ["Swift", "iOS", "Xcode"]
 Description = "After adding a new feature to the iOS app I currently works on I noticed an unexpected memory spike after the app was used for a while. This usually means a memory leak; some object not being deallocated after it is no longed need. This is often caused by using `self` without `unowned` / `weak` or by forgetting to make the delegates `weak` can warn you about this case)."
 Tags = ["Swift", "iOS", "Xcode"]
-Keywords = ["Swift", "iOS", "Xcode"]
 author = "Igor Kulman"
 date = "2018-11-28T05:29:12+01:00"
 title = "Unit testing view controller memory leaks"

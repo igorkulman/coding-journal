@@ -1,8 +1,6 @@
 +++
-Categories = [ "iOS"]
 Description = "There are some times when you need to re-sign the IPA of your iOS app with a different certificate. For example, an external developer creates the IPA for you, but it is signed with their personal certificate and you need to re-sign it with yours to deploy it to the App Store. Or one of your clients does not want to have their employees install the iOS app from the App Store but wants to distribute it directly using their MDM tools. "
 Tags = ["iOS"]
-Keywords = ["iOS", "Keychain", "Provisioning", "Resigning", "IPA"]
 author = "Igor Kulman"
 date = "2017-05-23T09:29:12+01:00"
 title = "Re-signing iOS apps"

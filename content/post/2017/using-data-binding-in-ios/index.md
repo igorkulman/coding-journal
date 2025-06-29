@@ -1,8 +1,6 @@
 +++
-Categories = [ "iOS", "Swift", "RxSwift"]
 Description = "When I started working on a native iOS project after a few years of Windows (Phone) development I looked into ways to write a more declarative and more elegant code than the standard iOS way. I wanted to transfer some of my habits over and the first thing I really missed was XAML binding. I did some research on how to do binding in iOS and found a few libraries that make it possible. This allowed me to write better code and I think binding is a concept that all the iOS developer should look into."
 Tags = ["iOS", "Swift", "RxSwift", "MVVM"]
-Keywords = ["iOS", "Swift", "RxSwift", "MVVM", "UITableView", "UIKit"]
 author = "Igor Kulman"
 date = "2017-03-14T09:29:12+01:00"
 title = "Using data binding in iOS"

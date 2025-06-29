@@ -1,8 +1,6 @@
 +++
-Categories = ["macOS", "Hackintosh"]
 Description = "Apple blocks NVIDIA from releasing graphic drivers for Mojave, so I had no choice but to switch to an RX 570. The macOS experience was smooth, but the GPU is not a food product."
 Tags = ["macOS", "Hackintosh"]
-Keywords = ["macOS", "Hackintosh"]
 author = "Igor Kulman"
 date = "2019-02-27T05:29:12+01:00"
 title = "Switching my Hackintosh from NVIDIA to AMD because of Mojave"

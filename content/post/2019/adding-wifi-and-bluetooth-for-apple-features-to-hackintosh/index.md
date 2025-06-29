@@ -1,8 +1,6 @@
 +++
-Categories = ["macOS", "Hackintosh"]
 Description = "When I started with my hackintosh I did not have Wi-Fi or Bluetooth support in it. I used Ethernet to connect to my home network and it worked fine, I had no need for Wi-Fi. Later I wanted to use more Apple-specific features, so I started looking for how to make them work with my hackintosh."
 Tags = ["macOS", "Hackintosh"]
-Keywords = ["macOS", "Hackintosh"]
 author = "Igor Kulman"
 date = "2019-06-12T05:29:12+01:00"
 title = "Adding Wi-Fi and Bluetooth to hackintosh to enable Apple-specific features"

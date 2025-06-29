@@ -1,8 +1,6 @@
 +++
-Categories = ["iOS", "Swift"]
 Description = "If you work on something like an chat app, you may need to use the UITableView in a way where data is filled from bottom to top. An example of this is a chat detail screen, where you want the `UITableView` to show the latest messages at the bottom when loaded, new messages are added to the bottom and immediately shown and older messages are loaded on top when the user scrolls to the top of the UITableView."
 Tags = ["iOS", "Swift"]
-Keywords = ["iOS", "macOS", "UIKit", "UITableView"]
 author = "Igor Kulman"
 date = "2017-11-08T09:29:12+01:00"
 title = "Filling UITableView with data from bottom to top"

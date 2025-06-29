@@ -1,8 +1,6 @@
 +++
-Categories = ["Swift", "iOS", "Xcode"]
 Description = "A few weeks ago I encountered a strange problem when working on an iOS application that seemed really strange at first sight."
 Tags = ["Swift", "iOS", "Xcode"]
-Keywords = ["Swift", "iOS", "Xcode"]
 author = "Igor Kulman"
 date = "2019-01-09T05:29:12+01:00"
 title = "Why is there a \"lag\" in iOS gesture detection near the edges of the screen?"

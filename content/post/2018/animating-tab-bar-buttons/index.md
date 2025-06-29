@@ -1,8 +1,6 @@
 +++
-Categories = ["Swift", "iOS", "Xcode"]
 Description = "If you use the Twitter app on iOS you might have noticed that tapping the buttons in the tab bar makes them bounces. This is a very subtle animation that I really like so I decided to do the same for the tab bar in the app I currently work on. "
 Tags = ["Swift", "iOS", "Xcode"]
-Keywords = ["Swift", "iOS", "Xcode"]
 author = "Igor Kulman"
 date = "2018-12-12T05:29:12+01:00"
 title = "Animating tab bar buttons on tap"

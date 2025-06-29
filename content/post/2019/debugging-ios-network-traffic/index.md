@@ -1,8 +1,6 @@
 +++
-Categories = ["macOS", "iOS", "mitmproxy"]
 Description = "When working on an iOS app you may sometimes need to inspect or debug the network traffic between the app and the server to see what exactly is going on. Or you may be just curious to see what data other apps send about you to their servers. The way to achieve this is to run a proxy on your computer and route all the traffic from your iOS device through that proxy. "
 Tags = ["macOS", "iOS", "mitmproxy"]
-Keywords = ["macOS", "iOS", "mitmproxy"]
 author = "Igor Kulman"
 date = "2019-01-30T05:29:12+01:00"
 title = "Debugging iOS network traffic"

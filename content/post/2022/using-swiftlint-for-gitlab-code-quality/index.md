@@ -1,8 +1,6 @@
 +++
-Categories = ["Swift", "iOS"]
 Description = ""
 Tags = ["Swift", "iOS"]
-Keywords = ["Swift", "iOS"]
 author = "Igor Kulman"
 date = "2022-06-15T05:29:12+01:00"
 title = "Using SwiftLint to generate code quality report for Gitlab"

@@ -1,8 +1,6 @@
 +++
-Categories = ["Windows Phone", "Windows Store", "Windows 8"]
 Description = ""
 Tags = ["Windows Phone", "Windows Store", "Windows 8"]
-Keywords = ["Windows Phone", "Windows Store", "Windows 8"]
 author = "Igor Kulman"
 date = "2021-08-25T05:29:12+01:00"
 title = "My experience dealing with Microsoft in the old Windows Phone times"

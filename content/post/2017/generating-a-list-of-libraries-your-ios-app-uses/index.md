@@ -1,5 +1,4 @@
 +++
-Categories = [ "iOS"]
 Description = "If you work on an iOS app that is a bit more corporate you probably need to show the list of all the libraries you use with their licenses somewhere in the app. Creating and updating this list by hand is a pain. If you use Carthage to manage all your dependencies (and you really should) there is a handy script by Piet Brauer I contributed to that will help you. "
 Tags = ["iOS", "Carthage"]
 Keywords =["iOS", "Carthage", "OpenSource", "GitHub"]

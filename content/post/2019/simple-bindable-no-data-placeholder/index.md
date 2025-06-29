@@ -1,8 +1,6 @@
 +++
-Categories = ["iOS", "Xcode", "RxSwift"]
 Description = "Almost every iOS application uses UITableView to display some kind of data and in many cases the data can be missing. In such situation you typically want to display some kind of no data placeholder. The placeholder fills in the empty space and can tell the user what needs to be done to get the data."
 Tags = ["iOS", "Xcode", "RxSwift"]
-Keywords = ["iOS", "Xcode", "RxSwift"]
 author = "Igor Kulman"
 date = "2019-03-13T05:29:12+01:00"
 title = "Simple bindable \"no data\" placeholder for UITableView"

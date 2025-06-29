@@ -1,8 +1,6 @@
 +++
-Categories = ["Swift", "iOS", "Xcode"]
 Description = "In all my iOS projects I use and strongly prefer Carthage. It is easy to use, does not do any changes to your project, all the dependencies are built just once and then linked to the project as dynamic frameworks. There are many good posts about the advantages of Carthage compared to CocoaPods so in this post I will just focus on the actual usage, mainly in CI."
 Tags = ["Swift", "iOS", "Xcode"]
-Keywords = ["Swift", "iOS", "Xcode"]
 author = "Igor Kulman"
 date = "2018-10-17T08:29:12+01:00"
 title = "Building iOS dependencies with Carthage"

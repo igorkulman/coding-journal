@@ -1,8 +1,6 @@
 +++
-Categories = [ "Web", "Hugo", "Disqus"]
 Description = "My blog is a static website generated using Hugo and running on Netlify but I still want to allow readers to leave comments on my posts so I use Disqus like many other blogs. The advantage of Disqus is that you do not need to host the comments your self, and I cannot with a static website, you just embed a JavaScript file and everything is taken care of. There are a few alternatives to Disqus but none of them works very well so there is basically no other option if you want to have comments on a static website. The problem with Disqus is that this one JavaScript file you embed to your website makes about 50 requests when a page loads. And that is a lot!"
 Tags =[ "Web", "Hugo", "Disqus"]
-Keywords = [ "Web", "Hugo", "Disqus"]
 author = "Igor Kulman"
 date = "2017-05-30T09:29:12+01:00"
 title = "Delaying Disqus comments to save (a ton of) requests"

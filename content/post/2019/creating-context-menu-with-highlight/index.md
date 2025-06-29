@@ -1,8 +1,6 @@
 +++
-Categories = ["iOS", "Swift", "Xcode"]
 Description = "The iOS messaging application I work on features a context menu in the chat. You long-press any message in the chat and the context menu appears. This menu was originally implemented using the standard UIMenuController. The UIMenuController is an old-style iOS API that is hard to use and does not work very well. In some situations tapping its items just did not call the assigned selectors and the menu did not work."
 Tags = ["iOS", "Swift", "Xcode"]
-Keywords = ["iOS", "Swift", "Xcode"]
 author = "Igor Kulman"
 date = "2019-08-14T05:29:12+01:00"
 title = "Creating iOS context menu with highlight and dim"

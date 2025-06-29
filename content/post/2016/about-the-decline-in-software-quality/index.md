@@ -1,8 +1,6 @@
 +++
-Categories = [ "Rants"]
 Description = "In the last few months I have been noticing a huge decline in software quality on every device I use. It seems to me like bad quality software is a current trend, especially for big corporations like Microsoft or Apple. Even though I consider Apple more of a fashion company than a technology company I think it is unacceptable for software from such big companies to works as bad as it does."
 Tags = [ "Rants"]
-Keywords = [ "Rants", "Bugs"]
 author = "Igor Kulman"
 date = "2016-10-26T09:29:12+01:00"
 title = "About the decline in software quality"

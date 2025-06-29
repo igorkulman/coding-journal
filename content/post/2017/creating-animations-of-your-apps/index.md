@@ -1,8 +1,6 @@
 +++
-Categories = ["macOS", "Software", "Windows"]
 Description = "They say that a picture is worth a thousand words so whenever I create an issue, a pull request or write a blog post about and application or some visual stuff I include a relevant image. Sometimes an image is not enough and an animation is needed to better describe the issue, or show the content of your pull request."
 Tags = ["macOS", "Software", "Windows"]
-Keywords = ["macOS", "Software", "Windows", "Tools"]
 author = "Igor Kulman"
 date = "2017-07-25T09:29:12+01:00"
 title = "Creating animations of your apps"

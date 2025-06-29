@@ -1,12 +1,10 @@
 +++
-Categories = [ "MacOS", "Hackintosh"]
 Description = ""
 author = "Igor Kulman"
 date = "2017-03-29T09:29:12+01:00"
 title = "My experience running a hackintosh"
 url = "/my-experience-running-a-hackintosh"
 Tags = ["MacOS", "Hackintosh"]
-Keywords = ["MacOS", "Hackintosh", "Experience"]
 images = ["/images/hackintosh.png"]
 
 +++

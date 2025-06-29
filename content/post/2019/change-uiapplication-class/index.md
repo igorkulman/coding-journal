@@ -1,8 +1,6 @@
 +++
-Categories = ["iOS", "Swift", "Xcode"]
 Description = "When developing an iOS application you might get into a situation when you need to change the UIApplication base class. It is often a requirement when using various MDM SDKs, like the Mobile Iron AppConnect SDK. There are two ways to do that in a Swift application, both with some advantages and disadvantages."
 Tags = ["iOS", "Swift", "Xcode"]
-Keywords = ["iOS", "Swift", "Xcode"]
 author = "Igor Kulman"
 date = "2019-10-30T05:29:12+01:00"
 title = "Changing UIApplication base class"

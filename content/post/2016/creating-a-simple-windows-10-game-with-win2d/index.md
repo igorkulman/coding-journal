@@ -1,8 +1,6 @@
 +++
-Categories = [ "Windows Phone", "Windows Store", "UWP" ]
 Description = "Some time ago while looking at some pixel art work I got an idea to create a retro pixel art game for Windows 10. The choice was obvious, Sokoban. I have a very special relationship with the Sokoban game. The Delpi version of Sokoban was the first game I ever created. I later ported it to all the platforms I played with, namely J2ME (for my Siemens S60 phone), Linux (using Kylix which was basically a Delphi for Linux), Windows Phone 7 and now Sokoban Pixel for the Universal Windows Platform."
 Tags = ["Windows Phone", "Windows Store", "UWP"]
-Keywords = ["Windows Phone", "Windows Store", "UWP", "Win2D", "XAML"]
 author = "Igor Kulman"
 date = "2016-06-15T09:29:12+01:00"
 title = "Creating a simple Windows 10 game with Win2D"

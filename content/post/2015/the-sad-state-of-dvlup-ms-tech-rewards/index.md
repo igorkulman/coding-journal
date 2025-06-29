@@ -1,8 +1,6 @@
 +++
-Categories = [ "Rants" ]
 Description = "If you are a Windows Phone developer you must know DVLUP. It was a program for developers developed by Nokia. The idea was simple. Do Windows Phone development related challenges, make your apps better thanks to them, get points, exchange points for rewards. Sounds good, does it not?"
 Tags = ["Rants" ]
-Keywords = ["Rants", "Bugs" ]
 author = "Igor Kulman"
 date = "2015-11-25T12:41:12+01:00"
 title = "The sad state of DVLUP (MS Tech Rewards)"

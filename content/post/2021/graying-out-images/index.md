@@ -1,8 +1,6 @@
 +++
-Categories = ["Swift", "Xcode", "Cocoa"]
 Description = ""
 Tags = ["Swift", "Xcode", "Cocoa"]
-Keywords = ["Swift", "Xcode", "Cocoa"]
 author = "Igor Kulman"
 date = "2021-02-17T05:29:12+01:00"
 title = "Graying out images in Cocoa"

@@ -1,8 +1,6 @@
 +++
-Categories = ["macOS", "hackintosh"]
 Description = ""
 Tags = ["macOS", "hackintosh"]
-Keywords = ["macOS", "hackintosh"]
 author = "Igor Kulman"
 date = "2020-07-29T05:29:12+01:00"
 title = "Using Intel Wi-Fi and Bluetooth on a hackintosh"

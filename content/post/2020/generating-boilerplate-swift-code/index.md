@@ -1,8 +1,6 @@
 +++
-Categories = ["iOS", "Xcode"]
 Description = ""
 Tags = ["iOS", "Xcode"]
-Keywords = ["iOS", "Xcode"]
 author = "Igor Kulman"
 date = "2020-10-07T05:29:12+01:00"
 title = "Generating boilerplate Swift code with GYB"

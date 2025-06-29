@@ -1,8 +1,6 @@
 +++
-Categories = ["macOS", "Xcode"]
 Description = "If you updated to Xcode 11.4 that ships with Swift 5.2 you might have noticed that your Swift scripts all started crashing when accessing anything related to URL. Luckily I found a workaround!"
 Tags = ["macOS", "Xcode"]
-Keywords = ["macOS", "Xcode"]
 author = "Igor Kulman"
 date = "2020-03-26T05:29:12+01:00"
 title = "Workaround for Swift scripts crashing after update to Xcode 11.4"

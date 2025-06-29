@@ -1,8 +1,6 @@
 +++
-Categories = ["macOS", "Hardware"]
 Description = "When my ISP had a problem resulting in Internet outage for multiple hours and I needed to work, I wanted to tether the LTE connection from my iPhone 6S to my hackintosh running macOS Sierra. It has no Wi-Fi card so the only was was tethering over USB cable. "
 Tags = ["Hardware", "macOS"]
-Keywords = ["Hardware", "macOS", "Tethering"]
 author = "Igor Kulman"
 date = "2017-09-19T09:29:12+01:00"
 title = "Fixing problems with iPhone USB tethering on macOS"

@@ -1,8 +1,6 @@
 +++
-Categories = ["Swift", "iOS", "Xcode"]
 Description = ""
 Tags = ["Swift", "iOS", "Xcode"]
-Keywords = ["Swift", "iOS", "XCode"]
 author = "Igor Kulman"
 date = "2023-07-12T05:29:12+01:00"
 title = "A few Xcode debugging tips"

@@ -1,8 +1,6 @@
 +++
-Categories = [ "Windows Phone", "Windows Store", "XAML" ]
 Description = "If you develop Windows Phone apps, you surely had to use the WebView component at least once. Any you must have realized, that it kind of sucks. One of the problems is that it swallows all the gestures and manipulation events. This means you cannot put it into a Pivot, you cannot detect swipe left or right gestures to navigate to next or previous article .. or can you?"
 Tags = ["Windows Phone", "Windows Store", "XAML" ]
-Keywords = ["Windows Phone", "Windows Store", "XAML", "WebView"]
 author = "Igor Kulman"
 date = "2015-12-07T09:29:12+01:00"
 title = "Detecting gestures over WebView on Windows Phone"

@@ -1,8 +1,6 @@
 +++
-Categories = ["Git", "Xcode", "iOS"]
 Description = ""
 Tags = ["Git", "Xcode", "iOS"]
-Keywords = ["Git", "Xcode", "iOS"]
 author = "Igor Kulman"
 date = "2021-12-21T05:29:12+01:00"
 title = "Automatically merging conflicts in Xcode project files"

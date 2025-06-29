@@ -1,8 +1,6 @@
 +++
-Categories = [ "iOS", "Swift"]
 Description = "Working on na iOS app I had to solve a interesting UI problem. The screen had to contain a UITableView with a header. The header should not have been visible when the screen was displayed. In fact the header should not have been visible when the user just scrolled the UITableView up and down, it only had to become visible when the user dragged the UITableView down, similar to doing pull to refresh. Scrolling the UITableView then hides the header again."
 Tags = ["iOS", "Swift"]
-Keywords = ["iOS", "Swift", "UITableView", "UIScrollView", "UIKit"]
 author = "Igor Kulman"
 date = "2017-06-14T09:29:12+01:00"
 title = "Making UITableView's header 'stickier'"

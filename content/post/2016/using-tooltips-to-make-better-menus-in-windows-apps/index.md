@@ -1,8 +1,6 @@
 +++
-Categories = [ "Windows Phone", "Windows Store", "UWP" ]
 Description = "If you use Windows apps with navigation menus consisting of icons, you may have noticed that some of those apps show you a text when hovering above those icons. This is a nice touch for the users, allowing them to quickly grasp the meaning of the menu icons without the need to click them or to expand the menu (if available)."
 Tags = ["Windows Phone", "Windows Store", "UWP"]
-Keywords = ["Windows Phone", "Windows Store", "UWP", "XAML"]
 author = "Igor Kulman"
 date = "2016-03-23T09:29:12+01:00"
 title = "Using Tooltips to make better menus in Windows apps"

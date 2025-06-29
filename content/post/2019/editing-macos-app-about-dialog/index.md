@@ -1,8 +1,6 @@
 +++
-Categories = ["macOS", "Xcode"]
 Description = "When you create a macOS app and keep the default menu, you automatically get an About dialog. This dialog shows basic info about the app. If you want to add more information to this dialog there is no obvious way to do it. You need to start reading the Apple documentation to finally discover that it is actually quite simple."
 Tags = ["macOS", "Xcode"]
-Keywords = ["macOS", "Xcode"]
 author = "Igor Kulman"
 date = "2019-05-29T05:29:12+01:00"
 title = "Editing macOS app About dialog"

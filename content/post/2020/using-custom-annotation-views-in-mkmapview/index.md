@@ -1,8 +1,6 @@
 +++
-Categories = ["iOS", "Xcode", "MapKit"]
 Description = ""
 Tags = ["iOS", "Xcode", "MapKit"]
-Keywords = ["iOS", "Xcode", "MapKit"]
 author = "Igor Kulman"
 date = "2020-04-29T05:29:12+01:00"
 title = "Using custom annotation views in MKMapView"

@@ -1,8 +1,6 @@
 +++
-Categories = ["iOS", "Xcode", "MapKit"]
 Description = ""
 Tags = ["iOS", "Xcode", "MapKit"]
-Keywords = ["iOS", "Xcode", "MapKit"]
 author = "Igor Kulman"
 date = "2020-06-10T05:29:12+01:00"
 title = "A few reason why your MKMapView unexpectedly crashes and how to fix them"

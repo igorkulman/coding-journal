@@ -1,8 +1,6 @@
 +++
-Categories = [ "Windows Phone", "Windows Store", "UWP" ]
 Description = "When developing Windows Phone apps you may encounter a use case when you have to allow the user to either pick a photo from the photos gallery in the photo or a take a new photo using the phone's camera. One example of this may be the registration process when the user may choose a profile picture. In Windows Phone 8.1, this task is quite simple, just use the FileOpenPicker. It allows you to pick a photo from the gallery or take a new photo. Just take a look at this animation showing how the users takes a new photo using the phone's camera."
 Tags = ["Windows Phone", "Windows Store", "UWP"]
-Keywords = ["Windows Phone", "Windows Store", "UWP", "XAML"]
 author = "Igor Kulman"
 date = "2016-03-14T09:29:12+01:00"
 title = "Choosing an image from gallery or camera a bit better in Universal Windows apps"
