@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["iOS", "Swift", "RxSwift", "MVVM"]
+Tags = ["iOS", "Swift", "RxSwift", "MVVM", "UITableView"]
 author = "Igor Kulman"
 date = "2017-03-21T09:29:12+01:00"
 title = "Using MVVM with tables and cells in iOS"
@@ -22,7 +22,7 @@ Let's start with simple example scenario. You want to show progress of some flow
 
 ## The classic iOS way
 
-Now imagine you want to implement this scenario in the classic iOS way. You will have a list of some model. Every time you add an item to the list you need to refresh the table. Every time you change something on a model in the list you need to refresh the table and of course you need a table delegate to manipulate the UI according to the properties of the model. 
+Now imagine you want to implement this scenario in the classic iOS way. You will have a list of some model. Every time you add an item to the list you need to refresh the table. Every time you change something on a model in the list you need to refresh the table and of course you need a table delegate to manipulate the UI according to the properties of the model.
 
 Of course there is a better, more declarative way.
 
@@ -40,12 +40,12 @@ class SyncStepViewModel {
     let isRunning = Variable(true)
     let percentComplete = Variable<Int>(0)
     let stepTitle: Observable<String>
-    
+
     private let title: String
-    
+
     init(title: String) {
         self.title = title
-        
+
         stepTitle = Observable.combineLatest(isRunning.asObservable(), percentComplete.asObservable()) {
             (running: Bool, percent: Int) -> String in if (running && percent>0) {
                 return "\(title) \(percent)%"
@@ -57,7 +57,7 @@ class SyncStepViewModel {
 }
 ```
 
-This ViewModel has a title, contains property determining if the flow step is currently running, property for the current progress percentage and a computed property for the step title. This computer property just adds the progress percentage at the end of the title when applicable. 
+This ViewModel has a title, contains property determining if the flow step is currently running, property for the current progress percentage and a computed property for the step title. This computer property just adds the progress percentage at the end of the title when applicable.
 
 The ViewModel for the screen just needs to hold the array of the flow steps in an observable way, so let's make it easy
 
@@ -67,10 +67,10 @@ import RxSwift
 
 class SyncViewModel {
     let syncSteps = Variable<[SyncStepViewModel]>([])
-}    
+}
 ```
 
-This ViewModel will of course contains some logic to add the flow steps to the array. 
+This ViewModel will of course contains some logic to add the flow steps to the array.
 
 ### Table and cells binding
 
@@ -97,13 +97,13 @@ import RxSwift
 
 class SyncStepCell: UITableViewCell {
     static let reuseIdentifier = "SyncStepCell"
-    
+
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var checkmarkImage: UIImageView!
-    
+
     var disposeBag = DisposeBag()
-    
+
     var viewModel: SyncStepViewModel? {
         didSet {
             if let vm = viewModel {

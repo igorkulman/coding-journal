@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["Swift", "iOS"]
+Tags = ["iOS", "Swift", "Notifications", "Critical Alerts"]
 author = "Igor Kulman"
 date = "2023-03-29T05:29:12+01:00"
 title = "Using Critical Alerts in iOS applications"
@@ -17,7 +17,7 @@ Last month I had to implement Critical Alerts in a project so I finally got a ch
 
 ## Critical Alerts
 
-Critical Alerts are special alert notifications that are shown to the user even if the device is muted or in Do not Disturb mode. 
+Critical Alerts are special alert notifications that are shown to the user even if the device is muted or in Do not Disturb mode.
 
 This makes Critical Alerts quite intrusive so I guess it is a good thing not every app can just use them right away but it requires permissions from Apple.
 
@@ -27,7 +27,7 @@ The resulting alert notifications are clearly marked as critical on the device
 
 ## Getting the special entitlements
 
-As mentioned before, the first step is [getting the special entitlements from Apple using the developer portal](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/). 
+As mentioned before, the first step is [getting the special entitlements from Apple using the developer portal](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/).
 
 After Apple approves your request you will get the special entitlements and you can used them in your provisioning profile. That means you have to regenerate your provisioning profiles for development and AppStore, or create a set of new ones.
 
@@ -40,7 +40,7 @@ In your project you need to add the `com.apple.developer.usernotifications.criti
 
 ## Asking the user for permissions
 
-To use the Critical Alerts in your iOS applications you first need to ask the user for permission. 
+To use the Critical Alerts in your iOS applications you first need to ask the user for permission.
 
 This is done by adding an additional `.criticalAlert` option when asking for notification permissions
 
@@ -68,15 +68,15 @@ Critical Alerts then show separately in the application's notifications settings
 
 ## Notification payload
 
-To send Critical Alerts notifications to your iOS application you need to adjust the notification payload. 
+To send Critical Alerts notifications to your iOS application you need to adjust the notification payload.
 
 The only change needed is to convert the `sound` property to a dictionary
 
 ```json
-{  
-   "aps":{  
+{
+   "aps":{
        "alert":"Critical Alerts notification",
-       "sound": {  
+       "sound": {
          "critical": 1,
          "name": "default",
          "volume": 1.0
@@ -92,8 +92,8 @@ marking the sound as critical.
 If you use an `Notification Service Extension` in your iOS application you can change any incoming alert notification to a Critical Alerts notification by mutating the `sound` property of the `UNMutableNotificationContent`.
 
 ```swift
-content.sound = 
-    customAlertSoundFileName.flatMap { UNNotificationSound.criticalSoundNamed(UNNotificationSoundName($0), withAudioVolume: 1) } 
+content.sound =
+    customAlertSoundFileName.flatMap { UNNotificationSound.criticalSoundNamed(UNNotificationSoundName($0), withAudioVolume: 1) }
     ?? UNNotificationSound.defaultCriticalSound(withAudioVolume: 1)
 ```
 

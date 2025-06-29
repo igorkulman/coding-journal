@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["macOS", "Xcode"]
+Tags = ["macOS", "Xcode", "Git", "Workflows"]
 author = "Igor Kulman"
 date = "2020-12-02T05:29:12+01:00"
 title = "Using different Git config for personal and work projects"
@@ -8,7 +8,7 @@ url = "/different-git-config-for-work-projects"
 
 +++
 
-I use the same machines to work on both personal and work projects. I usually have to use a different `Git` identity for the work projects than for my personal projects. 
+I use the same machines to work on both personal and work projects. I usually have to use a different `Git` identity for the work projects than for my personal projects.
 
 Previously I had my personal `Git` identity set globally and then used local `Git` configs to override it in work projects. This worked just fine but it was too much work. There is a better solution.
 
@@ -40,7 +40,7 @@ to achieve exactly what I needed.
 To verify and quickly check which `Git` identity is being used in a specific `Git` repository you can use this simple `Git` alias
 
 ```bash
-[alias]    
+[alias]
     whoami = "! git var -l | grep '^GIT_.*_IDENT'"
 ```
 

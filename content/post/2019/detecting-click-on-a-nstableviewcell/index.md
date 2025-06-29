@@ -1,6 +1,6 @@
 +++
 Description = "When you use NSTableView in an macOS application, there is no direct way to know a specific NSTableViewCell was clicked by the user. In my Localization Editor project I wanted the user to be able to focus a NSTextField when clicking anywhere in the NSTableViewCell it is contained in, so I had to implement it myself."
-Tags = ["macOS", "Swift"]
+Tags = ["macOS", "Swift", "NSTableView", "NSTableViewCell", "AppKit"]
 author = "Igor Kulman"
 date = "2019-04-24T05:29:12+01:00"
 title = "Detecting click on a specific NSTableViewCell"

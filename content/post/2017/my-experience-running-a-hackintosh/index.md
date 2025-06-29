@@ -4,7 +4,7 @@ author = "Igor Kulman"
 date = "2017-03-29T09:29:12+01:00"
 title = "My experience running a hackintosh"
 url = "/my-experience-running-a-hackintosh"
-Tags = ["MacOS", "Hackintosh"]
+Tags = ["macOS", "Hackintosh"]
 images = ["/images/hackintosh.png"]
 
 +++
@@ -37,14 +37,14 @@ I installed macOS on a separate SSD, so I had no problem with the UEFI loader co
 
 ## Performance
 
-I performed some tests with the few benchmarks that have both a Windows and a macOS version and the results were quite similar. There was basically no performance degradation on the macOS. I compared my Geekbench 4 results to the Apple hardware and I was quite surprised. My more than 3 years old desktop computer had basically the same single core performance score as a i5 MacBook Pro (13-inch Late 2016) and about 20% better multicore performance as this MacBook Pro. 
+I performed some tests with the few benchmarks that have both a Windows and a macOS version and the results were quite similar. There was basically no performance degradation on the macOS. I compared my Geekbench 4 results to the Apple hardware and I was quite surprised. My more than 3 years old desktop computer had basically the same single core performance score as a i5 MacBook Pro (13-inch Late 2016) and about 20% better multicore performance as this MacBook Pro.
 
 I know it is not fair to compare desktop computers to laptops (desktop i5 has 4 cores, laptop i5 only 2) but I am still amazed that the current generation overpriced i5 MacBook Pro does not have a better performance that my more than 3 years old desktop. And I still have some room for overclocking. I think [Apple has really given up on machines for developers](https://news.ycombinator.com/item?id=13797042).
 
 ## Using macOS and software
 
-I was surprised that basically everything worked out of the box. I had some problems getting my microphone to work but I finally solved it basically by accident when reading a [reddit thread](https://www.reddit.com/r/hackintosh/comments/4gp7mj/need_help_getting_alc887_microphone_working_el/). I even got iMessage working [following this quite long tutorial](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/). 
+I was surprised that basically everything worked out of the box. I had some problems getting my microphone to work but I finally solved it basically by accident when reading a [reddit thread](https://www.reddit.com/r/hackintosh/comments/4gp7mj/need_help_getting_alc887_microphone_working_el/). I even got iMessage working [following this quite long tutorial](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/).
 
 My Windows keyboard [needed some setup](using-macos-with-a-windows-keyboard). The back and forward buttons on my gaming mouse do not work, but I got around it using [BetterTouchTool](http://sunpech.com/2015/04/map-your-mouses-back-and-forward). If you have a WiFi card (I do not) it will probably not work. There are some alternatives you can use, like [this WiFi card with Bluetooth that even support hand-off](https://www.amazon.de/Bluetooth-PCI-Express-BCM94360CD-Hackintosh-Flughafen/dp/B00MBP25UK/ref=sr_1_1?ie=UTF8&qid=1487424169&sr=8-1&keywords=Hackintosh).
 
-Software like XCode also runs fine, including iOS simulators. Overall macOS behaves just like it was installed on an Apple machine. The macOS updates also work without a problem, just check [tonymacx86.com](https://www.tonymacx86.com/) before applying them to be sure. 
+Software like XCode also runs fine, including iOS simulators. Overall macOS behaves just like it was installed on an Apple machine. The macOS updates also work without a problem, just check [tonymacx86.com](https://www.tonymacx86.com/) before applying them to be sure.

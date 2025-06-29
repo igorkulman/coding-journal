@@ -3,8 +3,7 @@ title = "Being a polyglot programmer"
 author = "Igor Kulman"
 date = "2012-11-06"
 url = "/being-a-polyglot-programmer/"
-categories = ["Programming in general"]
-tags = ["Csharp","Fsharp","Java","LINQ","NoSQL"]
+Tags = ["CSharp", "FSharp", "Java", "LINQ", "NoSQL", "Programming"]
 +++
 Many programmers learn one platform, one language and stay in their monoculture. Learning many different programming languages can definitely change your programming style and the way you think about problems. It was certainly beneficial for me, here is why.
 

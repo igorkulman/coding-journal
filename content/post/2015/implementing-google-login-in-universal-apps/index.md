@@ -3,15 +3,13 @@ title = "Implementing Google login in Universal Apps"
 author = "Igor Kulman"
 date = "2015-07-01"
 url = "/implementing-google-login-in-universal-apps/"
-categories = ["Windows Store", "Windows Phone"]
-tags = ["Windows Store", "Windows Phone", "XAML"]
-keywords = ["Windows Store", "Windows Phone", "XAML", "Google", "OAuth"]
+Tags = ["Windows Store", "Windows Phone", "XAML", "Google", "OAuth", "Authentication"]
 +++
 In a recent project I had to implement Google login to an Universal App. I decided to use the native [WebAuthenticationBroker][1] control and the implementation was not as straightforward as I hoped. By implementing Google login I mean getting the authentication token that you can then use with your server API.
 
 WebAuthenticationBroker is a good idea but it is implemented rather poorly. It works differently on Windows 8.1 and Windows Phone 8.1 due to the &#8220;AndContinue&#8221; pattern that Windows Phone 8.1 forces on you. You can solve this with [some ifdefs and platform specific code, as always][2].
 
-The real problem s that the [MSDN sample][3] states it works with Google login but it does not. The sample thinks it gets the authentication token but it does not, it just gets the success code that you have to exchange for the authentication token yourself. 
+The real problem s that the [MSDN sample][3] states it works with Google login but it does not. The sample thinks it gets the authentication token but it does not, it just gets the success code that you have to exchange for the authentication token yourself.
 
 <!--more-->
 
@@ -35,7 +33,7 @@ You use this config with a WebAuthenticationBroker call
 #if WINDOWS_APP
     var auth = await WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.UseTitle, Config.GoogleStartUri, Config.GoogleEndUri);
     Debug.WriteLine(auth.ResponseData);
-    
+
     var successCode = GetGoogleSuccessCode(auth.ResponseData);
     var token = GetToken(successCode);
     //do something with the authentication token
@@ -44,7 +42,7 @@ You use this config with a WebAuthenticationBroker call
 #endif
 ```
 
-on Windows 8.1 you get the response data immediately. On Windows Phone 8.1, you have to implement the &#8220;AndContinue&#8221; pattern. 
+on Windows 8.1 you get the response data immediately. On Windows Phone 8.1, you have to implement the &#8220;AndContinue&#8221; pattern.
 
 You use the response data to parse out the success code
 
@@ -75,12 +73,12 @@ public async Task<string> GetToken(string code)
     var auth = await client.PostAsync("https://accounts.google.com/o/oauth2/token", new FormUrlEncodedContent(new[]
     {
         new KeyValuePair<string, string>("code", code),
-        new KeyValuePair<string, string>("client_id",Config.GoogleAppId), 
-        new KeyValuePair<string, string>("client_secret",Config.GoogleAppSecret), 
+        new KeyValuePair<string, string>("client_id",Config.GoogleAppId),
+        new KeyValuePair<string, string>("client_secret",Config.GoogleAppSecret),
         new KeyValuePair<string, string>("grant_type","authorization_code"),
-        new KeyValuePair<string, string>("redirect_uri","urn:ietf:wg:oauth:2.0:oob"),  
+        new KeyValuePair<string, string>("redirect_uri","urn:ietf:wg:oauth:2.0:oob"),
     }));
-    
+
     var data = await auth.Content.ReadAsStringAsync();
     Debug.WriteLine(data);
     var j = JToken.Parse(data);

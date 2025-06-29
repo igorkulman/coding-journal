@@ -3,9 +3,7 @@ title = "Using ETag to cache responses in NancyFX"
 author = "Igor Kulman"
 date = "2015-04-15"
 url = "/using-etag-to-cache-responses-in-nancyfx/"
-categories = ["Windows Azure"]
-tags = ["ASP","Azure","NancyFX"]
-keywords = ["ASP","Azure","NancyFX", "Cloud"]
+Tags = ["ASP.NET", "Azure", "NancyFX", "Caching", "ETag", "API"]
 +++
 Caching data is usually a good idea, especially when creating APIs for mobile clients and the user may pay for each transferred byte. There are many approaches to caching data (I recommend reading [this article][1]), in my last NancyFX project I used ETag.
 
@@ -39,7 +37,7 @@ protected Response GetResponseWithEtag(object data, object model)
 
 To implement caching using ETag in NancyFX I use a method in my base module
 
-There are two parameters in this method, because you may sometimes want to compute the ETag from only a part of the returned model. 
+There are two parameters in this method, because you may sometimes want to compute the ETag from only a part of the returned model.
 
 Using this method is the really simple
 

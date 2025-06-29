@@ -3,8 +3,7 @@ title = "Automatically push your Git repos before computer shutdown"
 author = "Igor Kulman"
 date = "2015-02-02"
 url = "/automatically-push-your-git-repos-before-computer-shutdown/"
-categories = ["PowerShell"]
-tags = ["Git","PowerShell"]
+Tags = ["Git", "PowerShell", "Automation", "Workflows"]
 +++
 I use two computers, my desktop computer located at home and set up for work and play and a work notebook (company provided) that I usually leave at the office. I use both computers for work and sometimes I forget to do &#8216;git push&#8217; when working at my home desktop computer. The next day, when using the work notebook, I wonder where the code from the previous day has disappeared.
 
@@ -15,7 +14,7 @@ Of course, I can solve it by connecting to my home Raspberry Pi through SSH, wak
 So I came up with a really simple PowerShell script to iterate to a directory with git projects and execute &#8216;git push&#8217; on all of them
 
 ```powershell
-Get-ChildItem D:\Projects\Apps | ForEach-Object { 
+Get-ChildItem D:\Projects\Apps | ForEach-Object {
     cd $_.FullName
     git push
 }

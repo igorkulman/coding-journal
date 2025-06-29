@@ -3,8 +3,7 @@ title = "Computing hashes in WinRT"
 author = "Igor Kulman"
 date = "2012-11-15"
 url = "/computing-hashes-in-winrt/"
-categories = ["WinRT"]
-tags = ["Csharp","Hashing","MD5","SHA1","WinRT"]
+Tags = ["CSharp", "Hashing", "MD5", "SHA1", "WinRT"]
 +++
 If you ever generated a MD5 or SHA hash in C# you problaby uset the classes from the System.Security.Cryptography namespace. This namespace is not available in WinRT, you have to use the Windows.Security.Cryptography.Core instead. This namespace contians a class called HashAlgorithmProvider that can be used to generate hashes using MD5 and SHA (SHA1, SHA256, SHA384, SHA512). A simple method to generate a hash for a string using a given algorithm may look like this
 
@@ -32,7 +31,7 @@ public static string GetSha1(string s)
 public static string GetSha256(string s)
 {
     return GetHash(HashAlgorithmNames.Sha256, s);
-}       
+}
 
 public static string GetSha384(string s)
 {

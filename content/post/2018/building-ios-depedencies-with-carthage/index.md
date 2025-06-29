@@ -1,6 +1,6 @@
 +++
 Description = "In all my iOS projects I use and strongly prefer Carthage. It is easy to use, does not do any changes to your project, all the dependencies are built just once and then linked to the project as dynamic frameworks. There are many good posts about the advantages of Carthage compared to CocoaPods so in this post I will just focus on the actual usage, mainly in CI."
-Tags = ["Swift", "iOS", "Xcode"]
+Tags = ["iOS", "Swift", "Carthage", "Dependency Management", "CI"]
 author = "Igor Kulman"
 date = "2018-10-17T08:29:12+01:00"
 title = "Building iOS dependencies with Carthage"
@@ -24,7 +24,7 @@ Developers typically try to speed things up with multiple approaches
 * **Keeping `Carthage/Checkouts` in source control**. This makes the repository bigger by keeping unnecessary files, the checkout is faster but the build is still slow.
 * **Keeping `Carthage/Build` in source control**. This also makes the repository bigger, potentially much bigger if you update your dependencies often, but the build times are super fast as there is nothing to actually build.
 * **Caching the Carthage builds in CI**. This does not make the repository bigger and can be really fast when done properly
-* **Caching the Carthage builds using tools like [Rome](https://github.com/blender/Rome)**. This does not make the repository bigger and can be very powerful and flexible, but typically requires a paid 3rd party storage service like Amazon S3. 
+* **Caching the Carthage builds using tools like [Rome](https://github.com/blender/Rome)**. This does not make the repository bigger and can be very powerful and flexible, but typically requires a paid 3rd party storage service like Amazon S3.
 
 <!--more-->
 
@@ -47,11 +47,11 @@ before_script:
 - carthage bootstrap --platform iOS --cache-builds
 ```
 
-Gitlab CI restores the built dependencies from the cache, uses them in the build and then caches them again when the build finishes. I use the Xcode version as the cache key (e.g `xcode94`) because every Xcode version typically comes with a different version of Swift causing a need for rebuilding all the dependencies. 
+Gitlab CI restores the built dependencies from the cache, uses them in the build and then caches them again when the build finishes. I use the Xcode version as the cache key (e.g `xcode94`) because every Xcode version typically comes with a different version of Swift causing a need for rebuilding all the dependencies.
 
-This approach is really simple, your repository will not get big and all the dependencies are built just once per Xcode version in the CI. 
+This approach is really simple, your repository will not get big and all the dependencies are built just once per Xcode version in the CI.
 
-When a new developer joins the project or does a `git pull` with changes requiring building some new dependencies, they can do a neat trick: downloading the CI cache. With a simple 
+When a new developer joins the project or does a `git pull` with changes requiring building some new dependencies, they can do a neat trick: downloading the CI cache. With a simple
 
 ```bash
 scp user@build.sever/cache/xcode94/cache.zip && unzip cache.zip && rm cache.zip

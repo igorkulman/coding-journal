@@ -1,6 +1,6 @@
 +++
 Description = "When developing an iOS application you might get into a situation when you need to change the UIApplication base class. It is often a requirement when using various MDM SDKs, like the Mobile Iron AppConnect SDK. There are two ways to do that in a Swift application, both with some advantages and disadvantages."
-Tags = ["iOS", "Swift", "Xcode"]
+Tags = ["iOS", "Swift", "Xcode", "UIApplication", "MDM"]
 author = "Igor Kulman"
 date = "2019-10-30T05:29:12+01:00"
 title = "Changing UIApplication base class"
@@ -31,17 +31,17 @@ import UIKit
 
 UIApplicationMain(
     CommandLine.argc,
-    CommandLine.unsafeArgv, 
+    CommandLine.unsafeArgv,
     ACUIApplicationClassName,
     NSStringFromClass(AppDelegate.self)
 )
 ```
 
-The third parameter in the `UIApplicationMain` call is the name of the desired class, `ACUIApplicationClassName` in this example. 
+The third parameter in the `UIApplicationMain` call is the name of the desired class, `ACUIApplicationClassName` in this example.
 
 <!--more-->
 
-The flexibility of this approach comes form the ability to use stuff like complier conditionals. 
+The flexibility of this approach comes form the ability to use stuff like complier conditionals.
 
 Let's say you have two targets in your application, one using the Mobile Iron AppConnect SDK and one using some other MDM SDK. With the first `Info.plist` method you would have to have two separate `Info.plist` files. With this `main.swift` you can do
 
@@ -53,14 +53,14 @@ import AppConnect
 
 UIApplicationMain(
     CommandLine.argc,
-    CommandLine.unsafeArgv, 
+    CommandLine.unsafeArgv,
     ACUIApplicationClassName,
     NSStringFromClass(AppDelegate.self)
 )
 #else
 UIApplicationMain(
     CommandLine.argc,
-    CommandLine.unsafeArgv, 
+    CommandLine.unsafeArgv,
     nil,
     NSStringFromClass(AppDelegate.self)
 )

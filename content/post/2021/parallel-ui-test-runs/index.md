@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["CI", "Xcode", "iOS"]
+Tags = ["CI", "Xcode", "iOS", "UI Tests"]
 author = "Igor Kulman"
 date = "2021-05-19T05:29:12+01:00"
 title = "Allowing parallel iOS UI tests runs in CI"
@@ -42,7 +42,7 @@ Now that you have a new iOS simulator instance created you can use it to run you
 desc "Run all iOS UI tests"
 lane :ios_ui_tests do
   simulator_name = ENV["CI_PIPELINE_ID"]
-  scan(scheme: "your-app-scheme",     
+  scan(scheme: "your-app-scheme",
     devices: [simulator_name],
     clean: true)
 end

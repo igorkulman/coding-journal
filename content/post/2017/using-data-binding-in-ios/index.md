@@ -1,6 +1,6 @@
 +++
 Description = "When I started working on a native iOS project after a few years of Windows (Phone) development I looked into ways to write a more declarative and more elegant code than the standard iOS way. I wanted to transfer some of my habits over and the first thing I really missed was XAML binding. I did some research on how to do binding in iOS and found a few libraries that make it possible. This allowed me to write better code and I think binding is a concept that all the iOS developer should look into."
-Tags = ["iOS", "Swift", "RxSwift", "MVVM"]
+Tags = ["iOS", "Swift", "RxSwift", "MVVM", "Data Binding"]
 author = "Igor Kulman"
 date = "2017-03-14T09:29:12+01:00"
 title = "Using data binding in iOS"
@@ -26,13 +26,13 @@ There are number of things that need to happen
 - Setting the validation state should also set the mobile number text field text color
 - Setting the validation state should also set the Next button enabled state
 
-That is quite a lot of things if you add the validation logic (I use the [libPhoneNumber-iOS](https://github.com/iziz/libPhoneNumber-iOS)). 
+That is quite a lot of things if you add the validation logic (I use the [libPhoneNumber-iOS](https://github.com/iziz/libPhoneNumber-iOS)).
 
 ## The classic iOS way
 
-Now imagine you want to implement this scenario in the classic iOS way. You will have one Massive View Controller that would do many things.  
+Now imagine you want to implement this scenario in the classic iOS way. You will have one Massive View Controller that would do many things.
 
-You will have a method that does validation and sets the mobile number text field text color and the Next button enabled state according to the result of this validation. Then you will have a delegate for the mobile number text field and you will have to call the validation method with every change. And finally you will have to change all the code that sets the selected country and call the validation method after each set. Of course you can use `didSet` but that will add a bad coupling between your model and your UI. 
+You will have a method that does validation and sets the mobile number text field text color and the Next button enabled state according to the result of this validation. Then you will have a delegate for the mobile number text field and you will have to call the validation method with every change. And finally you will have to change all the code that sets the selected country and call the validation method after each set. Of course you can use `didSet` but that will add a bad coupling between your model and your UI.
 
 There must be a better, more declarative way!
 
@@ -53,7 +53,7 @@ class NumberSelectionViewModel {
     let selectedCountry = Observable<CountryDefinition?>(nil)
     let phoneNumber = Observable<String?>(nil)
     let isValid: Signal<Bool, Property<Any>.Error>
-    
+
     init() {
         isValid = combineLatest(self.selectedCountry, self.phoneNumber) {
             (country: CountryDefinition?, number: String?) in if let number = number, let parsedNumber = try? NBPhoneNumberUtil.sharedInstance().parse(number, defaultRegion: country?.isoCode ?? "de") {
@@ -79,7 +79,7 @@ I used Bond for a while but when I wanted to do more reactive programming, Bond 
 
 ### RxSwift vs ReactiveSwift
 
-[RxSwift](https://github.com/ReactiveX/RxSwift) and [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) are two most popular reactive programming libraries for iOS. I recommend you read an [article comparing those two libraries](https://www.raywenderlich.com/126522/reactivecocoa-vs-rxswift) and choose the one that you like best. I chose RxSwift because it is a Swift implementation of the .NET Reactive Extensions I am familiar with and the documentation is so much better. There is also a [RxSwift community repository](https://github.com/RxSwiftCommunity/) with extension that add support for table views, gestures, etc. 
+[RxSwift](https://github.com/ReactiveX/RxSwift) and [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) are two most popular reactive programming libraries for iOS. I recommend you read an [article comparing those two libraries](https://www.raywenderlich.com/126522/reactivecocoa-vs-rxswift) and choose the one that you like best. I chose RxSwift because it is a Swift implementation of the .NET Reactive Extensions I am familiar with and the documentation is so much better. There is also a [RxSwift community repository](https://github.com/RxSwiftCommunity/) with extension that add support for table views, gestures, etc.
 
 The ViewModel looks a bit different when using RxSwift than when using Bond, but the main idea is the same
 
@@ -88,8 +88,8 @@ class NumberSelectionViewModel {
     let selectedCountry = Variable<CountryDefinition?>(nil)
     let phoneNumber = Variable<String?>(nil)
     let isValid : Observable<Bool>
-    
-    init() {        
+
+    init() {
         isValid = Observable.combineLatest(selectedCountry.asObservable(), phoneNumber.asObservable()) {
             (country: CountryDefinition?, number: String?)->Bool in if let number = number, let parsedNumber = try? NBPhoneNumberUtil.sharedInstance().parse(number, defaultRegion: country?.isoCode ?? "de") {
                 return NBPhoneNumberUtil.sharedInstance().isValidNumber(parsedNumber)

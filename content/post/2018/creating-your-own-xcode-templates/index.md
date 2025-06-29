@@ -1,6 +1,6 @@
 +++
 Description = "Working on an iOS or macOS project in Xcode you typically create classes with the same structure over and over again. I use coordinators so I am creating new `UIViewControllers`, each time referencing RxSwift, having methods for setting up UI, bindings .. most of the time also containing a delegate for the coordinator. Having to create files with the same structure over and over again manually is a waste of time, a much better solution is creating Xcode file templates for those files."
-Tags = ["Swift", "iOS", "Xcode"]
+Tags = ["iOS", "Swift", "Xcode", "Templates", "Productivity"]
 author = "Igor Kulman"
 date = "2018-07-18T08:29:12+01:00"
 title = "Creating and using your own Xcode file templates"
@@ -9,9 +9,9 @@ images = ["/images/XcodeTemplates.png"]
 
 +++
 
-Working on an iOS or macOS project in Xcode you typically create classes with the same structure over and over again. 
+Working on an iOS or macOS project in Xcode you typically create classes with the same structure over and over again.
 
-I [use coordinators](/architecting-ios-apps-coordinators) so I am creating new `UIViewControllers`, each time referencing RxSwift, having methods for setting up UI, bindings .. most of the time also containing a delegate for the coordinator. 
+I [use coordinators](/architecting-ios-apps-coordinators) so I am creating new `UIViewControllers`, each time referencing RxSwift, having methods for setting up UI, bindings .. most of the time also containing a delegate for the coordinator.
 
 Having to create files with the same structure over and over again manually is a waste of time, a much better solution is creating Xcode file templates for those files.
 
@@ -25,7 +25,7 @@ All the Xcode custom file templates are located in `~/Library/Developer/Xcode/Te
 
 ### File template structure
 
-Each file template is a separate folder with a name ending in `.xctemplate`. If you want to create a simple "Swift Class" file template, you have to create a folder named `Swift Class.xctemplate` in `~/Library/Developer/Xcode/Templates/File Templates/Custom`. 
+Each file template is a separate folder with a name ending in `.xctemplate`. If you want to create a simple "Swift Class" file template, you have to create a folder named `Swift Class.xctemplate` in `~/Library/Developer/Xcode/Templates/File Templates/Custom`.
 
 Each file template folder should contain at least 3 files:
 
@@ -86,9 +86,9 @@ My template for a Swift class looks like this
 import Foundation
 
 class ___FILEBASENAMEASIDENTIFIER___ {
-        
+
         init() {
-                
+
         }
 }
 ```

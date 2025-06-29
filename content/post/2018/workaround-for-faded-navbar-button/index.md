@@ -1,6 +1,6 @@
 +++
 Description = "The iOS 11 has many bugs, more are introduced with every update. I only just recently discovered a bug in the registration part of the application I work on."
-Tags = ["Swift", "iOS"]
+Tags = ["Swift", "iOS", "UINavigationBar", "iOS Bugs"]
 author = "Igor Kulman"
 date = "2018-03-27T08:29:12+01:00"
 title = "Workaround for UINavigationBar button remaining faded after back navigation"
@@ -9,7 +9,7 @@ images = ["/images/ios112bug.gif"]
 
 +++
 
-The iOS 11 has many bugs, more are introduced with every update. I only just recently discovered a bug in the registration part of the application I work on. 
+The iOS 11 has many bugs, more are introduced with every update. I only just recently discovered a bug in the registration part of the application I work on.
 
 The registration flow contains a few screens to gather the user data. The navigation among those screens ([managed by a coordinator](/architecting-ios-apps-coordinators/)) is done by Back and Next buttons in the `UINavigationBar`. The users can at any time get back to the previous screen, and if they are running iOS 11.2 they will see the bug:
 
@@ -59,7 +59,7 @@ class AppNavigationController: UINavigationController {
         setup()
     }
 
-    private func setup() {        
+    private func setup() {
         delegate = self
     }
 }

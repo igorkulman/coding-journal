@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["iOS", "Xcode"]
+Tags = ["iOS", "Xcode", "Swift", "Code Generation", "GYB"]
 author = "Igor Kulman"
 date = "2020-10-07T05:29:12+01:00"
 title = "Generating boilerplate Swift code with GYB"
@@ -11,13 +11,13 @@ images = ["/generating-boilerplate-swift-code/BuildPhase.png"]
 
 How many times how you copied and pasted some code in your current codebase because there was no good way to abstract it? Maybe because it was some repeating code required by a framework or mapping of some data transfer structures.
 
-Writing such boilerplate code is an error-prone waste of time, especially when there is a much better way: generating that code. 
+Writing such boilerplate code is an error-prone waste of time, especially when there is a much better way: generating that code.
 
 There are a few tools to help you do that, one of the most flexible of them being `GYB`.
 
 ### What is GYB?
 
-`GYB` is a lightweight templating system that allows you to use `Python` to generate text files. Those text files can be `Swift` source code files or anything else you need.  
+`GYB` is a lightweight templating system that allows you to use `Python` to generate text files. Those text files can be `Swift` source code files or anything else you need.
 
 `GYB` is used in the `Swift` standard library codebase so it works well for generating `Swift` source code and it is a proven technology that works.
 
@@ -189,9 +189,9 @@ If you then need to add support for a new permission in the future, you **just a
 
 With the `GYB` templates created you now need to make Xcode generate the `Swift` source files from those templates. Ideally only when the templates change, not on every build.
 
-I use a script that relies on a naming convention. The template is always called `SomeFile.swift.gyb` and it generated `SomeFile.swift`. 
+I use a script that relies on a naming convention. The template is always called `SomeFile.swift.gyb` and it generated `SomeFile.swift`.
 
-This script 
+This script
 
 ```bash
 for INFILE in ${!SCRIPT_INPUT_FILE_*};

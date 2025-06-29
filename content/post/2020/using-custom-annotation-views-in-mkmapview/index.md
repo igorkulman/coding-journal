@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["iOS", "Xcode", "MapKit"]
+Tags = ["iOS", "Xcode", "MapKit", "MKMapView", "Custom Views"]
 author = "Igor Kulman"
 date = "2020-04-29T05:29:12+01:00"
 title = "Using custom annotation views in MKMapView"
@@ -14,7 +14,7 @@ If you want to display completely custom views as "pins" on the map in your iOS 
 
 ### Custom view implementation
 
-Visually you represent an `MKAnnotation` with a `MKAnnotationView`. You can create a custom class that subclasses `MKAnnotationView` and implement your custom UI in that class. 
+Visually you represent an `MKAnnotation` with a `MKAnnotationView`. You can create a custom class that subclasses `MKAnnotationView` and implement your custom UI in that class.
 
 Here is an sample `MKAnnotationView` with fixed size that displays just one custom view
 
@@ -55,7 +55,7 @@ The `MKAnnotationView` is by default aligned to its corresponding position on ma
 
 ### Registering the custom view with MKMapView
 
-The next step is to tell `MKMapView` to user your custom class. 
+The next step is to tell `MKMapView` to user your custom class.
 
 #### Using single custom MKAnnotationView
 
@@ -73,7 +73,7 @@ This is enough to make `MKMapView` to completely handle creating and recycling i
 
 #### Using multiple custom MKAnnotationViews
 
-If you want to use multiple types of annotations in your `MKMapView`, you need to register them all with different reuse identifiers. 
+If you want to use multiple types of annotations in your `MKMapView`, you need to register them all with different reuse identifiers.
 
 ```swift
 mapView.register(LocationAnnotationView.self, forAnnotationViewWithReuseIdentifier: LocationAnnotationView.reuseIdentifier)
@@ -86,12 +86,12 @@ Next you need to implement the `mapView(_:viewFor:)` method of the `MKMapViewDel
 
 ```swift
 func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-    switch annotation {    
+    switch annotation {
     case is LocationViewModel:
         return mapView.dequeueReusableAnnotationView(withIdentifier: LocationAnnotationView.reuseIdentifier, for: annotation)
     case is LiveLocationDataViewModel:
-        return mapView.dequeueReusableAnnotationView(withIdentifier: LiveLocationDataMapAnnotationView.reuseIdentifier, for: annotation)    
-    default:        
+        return mapView.dequeueReusableAnnotationView(withIdentifier: LiveLocationDataMapAnnotationView.reuseIdentifier, for: annotation)
+    default:
         return nil
     }
 }

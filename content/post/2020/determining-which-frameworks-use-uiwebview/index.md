@@ -1,6 +1,6 @@
 +++
 Description = "Apple has deprecated UIWebView and will not be accepting new apps with UIWebView starting April 2020 and app updates with UIWebView starting December 2020. If your app uses UIWebView you should replace it with WKWebView."
-Tags = ["iOS", "Xcode", "UIWebView"]
+Tags = ["iOS", "Xcode", "UIWebView", "WKWebView", "App Review"]
 author = "Igor Kulman"
 date = "2020-03-18T05:29:12+01:00"
 title = "Determining which frameworks use UIWebView"
@@ -8,7 +8,7 @@ url = "/determining-which-frameworks-use-uiwebview"
 
 +++
 
-Apple has deprecated `UIWebView` and will not be accepting new apps with `UIWebView` starting April 2020 and app updates with `UIWebView` starting December 2020. If your app uses `UIWebView` you should replace it with `WKWebView`. 
+Apple has deprecated `UIWebView` and will not be accepting new apps with `UIWebView` starting April 2020 and app updates with `UIWebView` starting December 2020. If your app uses `UIWebView` you should replace it with `WKWebView`.
 
 The check for `UIWebView` has already been implemented as a warning after a build submission:
 
@@ -16,7 +16,7 @@ The check for `UIWebView` has already been implemented as a warning after a buil
 
 Removing `UIWebView` from your app might seem quite straightforward, but you probably use some 3rd party libraries and they might also contain `UIWebView`. You need to find all of them and update them, if available, or replace them. This process is not exactly trivial.
 
-If you use 3rd party libraries as code, for example via `Cocoapods`, you can just do a text search for `UIWebView` in their sources. 
+If you use 3rd party libraries as code, for example via `Cocoapods`, you can just do a text search for `UIWebView` in their sources.
 
 For example doing `grep -r 'UIWebView' .` in `RxSwift` sources prior to `5.1.0` gives you a lot of results as `RxSwift` has included UIWebView binding before `5.1.0`.
 
@@ -33,7 +33,7 @@ For example doing `grep -r 'UIWebView' .` in `RxSwift` sources prior to `5.1.0` 
 ...
 ```
 
-If your 3rd party libraries come as a `.framework` file without sources, there is a different way to check for `UIWebView`. 
+If your 3rd party libraries come as a `.framework` file without sources, there is a different way to check for `UIWebView`.
 
 You can use `nm` to get the symbols table of the executable in a `.framework` and do a `grep` there
 

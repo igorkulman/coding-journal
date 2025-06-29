@@ -1,6 +1,6 @@
 +++
 Description = "As an iOS developer you need to periodically update your Xcode, on your own machine and on your CI/CD server. There are multiple ways to do this so do not waste your time and use the fastest way possible."
-Tags = ["iOS", "Swift", "Xcode"]
+Tags = ["iOS", "Xcode", "Installation", "CI", "Development Tools"]
 author = "Igor Kulman"
 date = "2019-11-20T05:29:12+01:00"
 title = "Faster way to download and install Xcode"
@@ -9,13 +9,13 @@ images = ["/faster-way-to-download-and-install-xcode/xcode-icon-17.jpg"]
 
 +++
 
-As an iOS developer you need to periodically update your Xcode, on your own machine and on your CI/CD server if you [automate your development workflow](/automating-ios-development-and-distribution-workflow/). There are multiple ways to do this so do not waste your time and use the fastest way possible. 
+As an iOS developer you need to periodically update your Xcode, on your own machine and on your CI/CD server if you [automate your development workflow](/automating-ios-development-and-distribution-workflow/). There are multiple ways to do this so do not waste your time and use the fastest way possible.
 
 ### Forget Mac App Store, use Apple Developer Portal
 
 Installing Xcode from the Mac App Store might seem like a convenient way to do so but it is too slow and inflexible. You cannot use the Mac App Store to install multiple version of Xcode at the same time if you need them, like when testing with a Xcode beta for an upcoming iOS release. Download from the Mac App Store is incredibly slow and sometimes not even available for days after release (like 11.2.1).
 
-The place to go is the [Apple Developer Portal](https://developer.apple.com/download/) where you can find all the Xcode versions, including the betas. 
+The place to go is the [Apple Developer Portal](https://developer.apple.com/download/) where you can find all the Xcode versions, including the betas.
 
 ### Faster download with `aria2`
 
@@ -39,15 +39,15 @@ exec(command)
 
 This script downloads the given Xcode by URL from the Apple Developer Portal, but uses up to 16 separate connections to do so. You will see a significant download speed improvement.
 
-Make sure you use the "More" site at [https://developer.apple.com/download/more/](https://developer.apple.com/download/) even for downloading the latest version of Xcode. 
+Make sure you use the "More" site at [https://developer.apple.com/download/more/](https://developer.apple.com/download/) even for downloading the latest version of Xcode.
 
 ![Apple Developer Portal downloads](more.png)
 
-When copying the `ADCDownloadAuth` cookie make sure you copy the correct value, Safari adds all kinds stuff around it when you just use "copy value". 
+When copying the `ADCDownloadAuth` cookie make sure you copy the correct value, Safari adds all kinds stuff around it when you just use "copy value".
 
 ### Faster install with `xip` and deleting previous Xcode first
 
-When you install the Xcode xip file you need to extract it. You can double click it in Finder and wait or you can use 
+When you install the Xcode xip file you need to extract it. You can double click it in Finder and wait or you can use
 
 ```bash
 xip -x Xcode11.xip

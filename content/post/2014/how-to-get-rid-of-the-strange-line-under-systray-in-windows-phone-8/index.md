@@ -3,14 +3,13 @@ title = "How to get rid of the strange line under systray in Windows Phone 8"
 author = "Igor Kulman"
 date = "2014-03-24"
 url = "/how-to-get-rid-of-the-strange-line-under-systray-in-windows-phone-8/"
-categories = ["Windows Phone"]
-tags = ["Csharp","Windows Phone","XAML"]
+Tags = ["CSharp", "Windows Phone", "XAML", "UI", "System Tray", "Bug Fix"]
 +++
-If you create an Windows Phone 8 app and test it only on WVGA and 720p devices or emulators, you may be surprised how you app looks on a WXGA device (or emulator). 
+If you create an Windows Phone 8 app and test it only on WVGA and 720p devices or emulators, you may be surprised how you app looks on a WXGA device (or emulator).
 
 ![1px bug](line.png)
 
-I have not been able the reason why this happens but the solution is quite simple. Set your page's top border to -1. 
+I have not been able the reason why this happens but the solution is quite simple. Set your page's top border to -1.
 
 <!--more-->
 

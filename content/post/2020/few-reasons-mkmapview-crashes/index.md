@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["iOS", "Xcode", "MapKit"]
+Tags = ["iOS", "Xcode", "MapKit", "MKMapView", "Debugging"]
 author = "Igor Kulman"
 date = "2020-06-10T05:29:12+01:00"
 title = "A few reason why your MKMapView unexpectedly crashes and how to fix them"
@@ -9,15 +9,15 @@ series = "Using MKMapView and MapKit on iOS"
 
 +++
 
-In the last few months I have been working more intensively with `MapKit`, doing more advanced operations like [clustering map annotations](/clustering-annotations-in-mkpampview) or [animating annotation position changes](/animating-annotation-position-change-on-ios). 
+In the last few months I have been working more intensively with `MapKit`, doing more advanced operations like [clustering map annotations](/clustering-annotations-in-mkpampview) or [animating annotation position changes](/animating-annotation-position-change-on-ios).
 
 I have encountered a few problem resulting in `MKMapView` quite unexpectedly crashing the whole application that I had to fix, or maybe better to say, work around.
 
 ### MKMapView crashing the view controller on dismiss
 
-During the application testing I noticed a very strange bug. Sometimes when I dismissed the view controller with `MKMapView` the application just crashed. 
+During the application testing I noticed a very strange bug. Sometimes when I dismissed the view controller with `MKMapView` the application just crashed.
 
-Debugging I noticed that it happened when the annotations on the map were updated just a short while before dismissing the view controller and the crash log pointed to `mapView(_:viewFor:)`. 
+Debugging I noticed that it happened when the annotations on the map were updated just a short while before dismissing the view controller and the crash log pointed to `mapView(_:viewFor:)`.
 
 I guessed that `MKMapView` was processing annotation changes when the view controller was already `deallocated`. The `MKMapView` was still alive, tried to call its delegate, which was that deallocated view controller, and crashed.
 
@@ -47,11 +47,11 @@ but the annotation collection was not really mutated as a whole, some annotation
 
 #### Theory about the crash
 
-The circumstances of the crash led me to believe that there was some timing issue, my code updating the annotation at the same the `MKMapView` processes it in some way. 
+The circumstances of the crash led me to believe that there was some timing issue, my code updating the annotation at the same the `MKMapView` processes it in some way.
 
 Which would make sense, when the user moves the map or zooms it there might be some processing needed to bring annotations into view or hide them.
 
-The interesting thing was **this only happened when using annotation clustering**. It never happened with "plain" annotations. 
+The interesting thing was **this only happened when using annotation clustering**. It never happened with "plain" annotations.
 
 With this observation it looked like `MKMapView` trying to recompute the clusters causing the crash.
 
@@ -61,7 +61,7 @@ With this observation it looked like `MKMapView` trying to recompute the cluster
 
 The first idea was to just catch and ignore the exception, the annotation data gets updated quite frequently in the application so loosing a few data points that will later get updated anyway does not have to be a big deal.
 
-But how do you catch an Objective-C runtime exception in Swift so you can ignore it? Turns out there is a way. 
+But how do you catch an Objective-C runtime exception in Swift so you can ignore it? Turns out there is a way.
 
 You can write a simple **Objective-C method that catches and ignores `NSException`s**
 
@@ -120,6 +120,6 @@ The main problem with this solution was that with the user interacting a lot wit
 
 In my specific case there was an easy optimization I could make. When the application receives a data update for a specific annotation it can first remove a data update for the same annotation from the queue.
 
-The reason is that the user only cares about the final position of the annotations. There is no point moving an annotation to some intermediate position just to move it again to the final position a while later on the next queue pass. 
+The reason is that the user only cares about the final position of the annotations. There is no point moving an annotation to some intermediate position just to move it again to the final position a while later on the next queue pass.
 
 With this optimization the queue can never be bigger that the total number of annotations.

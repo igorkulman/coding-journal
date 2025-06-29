@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["macOS", "hackintosh"]
+Tags = ["macOS", "Hackintosh", "Intel", "Wi-Fi", "Bluetooth"]
 author = "Igor Kulman"
 date = "2020-07-29T05:29:12+01:00"
 title = "Using Intel Wi-Fi and Bluetooth on a hackintosh"
@@ -9,9 +9,9 @@ images = ["/using-intel-wifi-bt-on-macos/HeliPort.png"]
 
 +++
 
-If you use a hackintosh you have to choose your hardware carefully to make sure it is supported by macOS. You can get [Wi-Fi + Bluetooth card used by Apple as I did in my desktop](/adding-wifi-and-bluetooth-for-apple-features-to-hackintosh/), but sometimes you do not have much choice. 
+If you use a hackintosh you have to choose your hardware carefully to make sure it is supported by macOS. You can get [Wi-Fi + Bluetooth card used by Apple as I did in my desktop](/adding-wifi-and-bluetooth-for-apple-features-to-hackintosh/), but sometimes you do not have much choice.
 
-When I turned by old `Thinkpad T440s` into a hackintosh I bought a Wi-Fi dongle because the `Intel AC7260` Wi-Fi + Bluetooth card is not supported by macOS, no Intel cards are. 
+When I turned by old `Thinkpad T440s` into a hackintosh I bought a Wi-Fi dongle because the `Intel AC7260` Wi-Fi + Bluetooth card is not supported by macOS, no Intel cards are.
 
 Later I discovered and [open-source project that aims to make Intel Wi-Fi and Bluetooth work on macOS](https://github.com/OpenIntelWireless) and I was able to make the `Intel AC7260` card work, no dongles needed.
 
@@ -29,13 +29,13 @@ After reboot Bluetooth will appear in System Preferences and you will be able to
 
 ### Wi-Fi driver
 
-To get Intel Wi-Fi working you need [itlwm](https://github.com/OpenIntelWireless/itlwm). Similar to `IntelBluetoothFirmware` it is a macOS kernel extension using firmware from Linux. 
+To get Intel Wi-Fi working you need [itlwm](https://github.com/OpenIntelWireless/itlwm). Similar to `IntelBluetoothFirmware` it is a macOS kernel extension using firmware from Linux.
 
 Make sure your specific Intel card is supported and download the [latest release](https://github.com/OpenIntelWireless/itlwm/releases). The release includes two kexts; `itlwm.kext` and `itlwmx.kext`. The `itlwmx.kext` is for use with the Intel X cards, like `Intel X200`, the `itlwm.kext` is for all the older cards like mine.
 
 #### Networks management
 
-When loaded, `itlwm.kext` makes your Intel Wi-Fi card available as an Ethernet card, not as a Wi-Fi card. This means you will not get the classic macOS user interface for connecting to Wi-Fi networks. 
+When loaded, `itlwm.kext` makes your Intel Wi-Fi card available as an Ethernet card, not as a Wi-Fi card. This means you will not get the classic macOS user interface for connecting to Wi-Fi networks.
 
 You need to either configure your Wi-Fi networks either manually or use a custom Wi-Fi management app.
 
@@ -61,7 +61,7 @@ Make sure you do not use any of `AirportBrcmFixup`, `BT4LEContinuityFixup`, `Brc
 
 If you do not want to manage your Wi-Fi networks editing the `Info.plist` file in `itlwm.kext` or `itlwmx.kext` there is a project called [HeliPort](https://github.com/OpenIntelWireless/HeliPort).
 
-This project aims to replicate the standard macOS Wi-Fi management UI. 
+This project aims to replicate the standard macOS Wi-Fi management UI.
 
 ![HeliPort features](HeliPort.png)
 

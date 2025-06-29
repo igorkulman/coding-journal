@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["Swift", "iOS", "Xcode"]
+Tags = ["iOS", "Swift", "Xcode", "Debugging"]
 author = "Igor Kulman"
 date = "2023-07-12T05:29:12+01:00"
 title = "A few Xcode debugging tips"
@@ -16,7 +16,7 @@ Let me show you a few commands I use for development with very specific use case
 
 When I get to work on a new code base the best way for me to get oriented in the iOS application is to know what `UIViewController` is currently being displayed on screen.
 
-You can easily print the name of the current `UIViewController` without any code changes, just by creating a symbolic breakpoint for `-[UIViewController viewDidLoad]` that logs `%B` and executed the `po $arg1` debugger command. 
+You can easily print the name of the current `UIViewController` without any code changes, just by creating a symbolic breakpoint for `-[UIViewController viewDidLoad]` that logs `%B` and executed the `po $arg1` debugger command.
 
 ![-[UIViewController viewDidLoad] breakpoint](didLoadBreakpoint.png)
 
@@ -26,7 +26,7 @@ Additionally you can use the `Move breakpoint to: User` option to make it availa
 
 ### Autofill forms with breakpoints
 
-Filling in forms is a tedious task especially when you have to do it repeatedly, like filling in email and password when testing the login flow. 
+Filling in forms is a tedious task especially when you have to do it repeatedly, like filling in email and password when testing the login flow.
 
 You can add some code that fills it for your but a much better way is to set a breakpoint and let it execute a debugger command to fill the form for you without doing any changes to your actual code.
 
@@ -38,7 +38,7 @@ I usually add this breakpoint add the end of the `viewDidLoad` method in a `UIVi
 
 ### Change method return value
 
-When debugging my code I sometimes want to see what happens of a specific method or a property getter returns a different value. 
+When debugging my code I sometimes want to see what happens of a specific method or a property getter returns a different value.
 
 I could stop the debugging, comment out the real code, add a return with that specific value, rebuild .. but that would be a waste of time when a breakpoint can do the same thing without stopping and rebuilding the application.
 

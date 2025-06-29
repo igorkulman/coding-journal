@@ -1,5 +1,6 @@
 +++
 Description = ""
+Tags = ["macOS", "Hackintosh", "Backup", "CloneZilla", "Carbon Copy Cloner"]
 author = "Igor Kulman"
 date = "2019-03-27T05:29:12+01:00"
 title = "Creating bootable macOS backups"
@@ -8,7 +9,7 @@ images = ["/creating-bootable-macos-backups/logo.png"]
 
 +++
 
-If you use a Hackintosh you need a good backup solution. The chance of something going wrong is a bit higher than when running macOS on an Apple computer. Any macOS update can theoretically break your installation, you can break you Clover setup by accident or you SSD might just die. 
+If you use a Hackintosh you need a good backup solution. The chance of something going wrong is a bit higher than when running macOS on an Apple computer. Any macOS update can theoretically break your installation, you can break you Clover setup by accident or you SSD might just die.
 
 With a good backup solution you should be up and running in a few minutes after any of those problems occur. I tried a few solutions as my requirements changed.
 
@@ -28,9 +29,9 @@ The problem is that requirements change over time, most of the time after proble
 
 #### Inflexibility for smaller fixes
 
-One time I updated **Clover** and my Hackintosh did not boot, got stuck on some error message. The problem was that the **Clover** installer decided not to check `OsxAptioFix3Drv-64.efi` by default anymore and this module got deleted. 
+One time I updated **Clover** and my Hackintosh did not boot, got stuck on some error message. The problem was that the **Clover** installer decided not to check `OsxAptioFix3Drv-64.efi` by default anymore and this module got deleted.
 
-Doing a full restore from an image seemed like a waste of time when I just needed to restore one missing file. I used **Clover** on my `Unibeast` flash drive that I keep safe and booted the Hackintosh with it. This screwed up iMessage (different serial number). I then reinstalled **Clover** checking `OsxAptioFix3Drv-64.efi`, booted backed normally and fixed iMessage. 
+Doing a full restore from an image seemed like a waste of time when I just needed to restore one missing file. I used **Clover** on my `Unibeast` flash drive that I keep safe and booted the Hackintosh with it. This screwed up iMessage (different serial number). I then reinstalled **Clover** checking `OsxAptioFix3Drv-64.efi`, booted backed normally and fixed iMessage.
 
 This made me realize that image based backups are not ideal for real world problems (you probably screw up your **EFI** or **kext**s more often that your SSD dies) and I got looking for some other solution.
 
@@ -40,7 +41,7 @@ I stumbled upon [Carbon Copy Cloner](https://bombich.com/); a backup tool that o
 
 ### Preparing the SSD
 
-Once you plug in the backup SSD, you need to format it to **Mac OS Extended (Journaled)**. Do not just format the existing partition (if any already exists), format the whole drive. 
+Once you plug in the backup SSD, you need to format it to **Mac OS Extended (Journaled)**. Do not just format the existing partition (if any already exists), format the whole drive.
 
 <!--more-->
 
