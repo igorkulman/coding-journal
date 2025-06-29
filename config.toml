@@ -13,17 +13,17 @@ enableRobotsTXT = true
   post = "/:slug/"
 
 [params]
-  github = "igorkulman"  
+  github = "igorkulman"
   rss = true
   comments = false
   showRelatedPosts = true
   color = 'light'
-  mastodon = "https://hachyderm.io/@igorkulman"  
+  mastodon = "https://hachyderm.io/@igorkulman"
   avatar = "igor@kulman.sk"
   name = 'Coding Journal'
-  bio = 'Adventures in the world of Swift and iOS, reminiscing about the days of C#, F# and Windows development'
+  bio = 'iOS & Swift developer. Open source fan. Building privacy-first apps and sharing what I learn.'
   disableHLJS = true
-  linkedin = "igorkulman"  
+  linkedin = "igorkulman"
 
 [[menu.main]]
     name = "About me"
@@ -41,4 +41,4 @@ weight = 150
 [[related.indices]]
 name  = "tags"
 weight = 100
- 
+
