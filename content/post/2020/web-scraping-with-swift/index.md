@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["Swift", "Xcode",]
+Tags = ["Swift", "Web Scraping", "SwiftSoup", "HTML Parsing", "Hacker News"]
 author = "Igor Kulman"
 date = "2020-11-18T05:29:12+01:00"
 title = "Web scraping with Swift"
@@ -31,7 +31,7 @@ let content = try String(contentsOf: URL(string: "https://news.ycombinator.com/"
 let doc: Document = try SwiftSoup.parse(content)
 ```
 
-Looking at the `HTML` you can see it uses a table layout and all the posts are in a rows of a table with a class called `itemlist`. 
+Looking at the `HTML` you can see it uses a table layout and all the posts are in a rows of a table with a class called `itemlist`.
 
 <!--more-->
 

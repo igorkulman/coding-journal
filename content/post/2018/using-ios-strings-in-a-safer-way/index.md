@@ -1,6 +1,6 @@
 +++
 Description = "When developing any application it is a good practice not to hard-code your strings but to use some kind of a strings file. In iOS you typically use the standard Localizable.strings file as storage and some string based API to use those strings. This of course works but it is not exactly safe, if you make a typo the compiler has no way to warn you and you, or worse your customers, will find out at runtime. There is a better way."
-Tags = ["Swift", "iOS"]
+Tags = ["iOS", "Swift", "Localization", "Type Safety"]
 author = "Igor Kulman"
 date = "2018-04-18T08:29:12+01:00"
 title = "Using iOS strings in a safer way"
@@ -8,7 +8,7 @@ url = "/using-ios-strings-in-a-safer-way"
 
 +++
 
-When developing any application it is a good practice not to hard-code your strings but to use some kind of a strings file. In iOS you typically use the standard `Localizable.strings` file as storage and some string based API to use those strings, like 
+When developing any application it is a good practice not to hard-code your strings but to use some kind of a strings file. In iOS you typically use the standard `Localizable.strings` file as storage and some string based API to use those strings, like
 
 ```swift
 extension String {

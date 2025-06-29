@@ -1,6 +1,6 @@
 +++
 Description = "The iOS messaging application I work on features a context menu in the chat. You long-press any message in the chat and the context menu appears. This menu was originally implemented using the standard UIMenuController. The UIMenuController is an old-style iOS API that is hard to use and does not work very well. In some situations tapping its items just did not call the assigned selectors and the menu did not work."
-Tags = ["iOS", "Swift", "Xcode"]
+Tags = ["iOS", "Swift", "Xcode", "Context Menu", "UIKit"]
 author = "Igor Kulman"
 date = "2019-08-14T05:29:12+01:00"
 title = "Creating iOS context menu with highlight and dim"
@@ -9,9 +9,9 @@ images = ["/creating-context-menu-with-highlight/Menu.png"]
 
 +++
 
-The iOS messaging application I work on features a context menu in the chat. You long-press any message in the chat and the context menu appears. This menu was originally implemented using the standard `UIMenuController`. 
+The iOS messaging application I work on features a context menu in the chat. You long-press any message in the chat and the context menu appears. This menu was originally implemented using the standard `UIMenuController`.
 
-The `UIMenuController` is an old-style iOS API that is hard to use and does not work very well. In some situations tapping its items just did not call the assigned selectors and the menu did not work. 
+The `UIMenuController` is an old-style iOS API that is hard to use and does not work very well. In some situations tapping its items just did not call the assigned selectors and the menu did not work.
 
 As part of the ongoing redesign of the application I decided to implement a new custom context menu that would look as the designer imagined and more importantly work reliably. I did not want to use any 3rd party library to keep it as simple and possible.
 
@@ -19,7 +19,7 @@ Using just `UIKit` I came up with a context menu with a dim effect and a highlig
 
 ![Context menu with highlight and dim](animation.gif)
 
-Here is how I approached building it. 
+Here is how I approached building it.
 
 <!--more-->
 
@@ -27,9 +27,9 @@ Here is how I approached building it.
 
 The first step was to create a new `UIWindow` and put it on top of the main application window. This was needed mostly to show the context menu as a standard `UIViewController` presented as `.popover` without dismissing the keyboard.
 
-If you just create a new `UIWindow` and make it visible, it is shown under the keyboard window. To make it show above the keyboard window you need to set its `windowLevel` to a value higher that the `windowLevel` of the keyboard window. 
+If you just create a new `UIWindow` and make it visible, it is shown under the keyboard window. To make it show above the keyboard window you need to set its `windowLevel` to a value higher that the `windowLevel` of the keyboard window.
 
-This does not work as expected on iOS 11 and newer. The setter would not allow you to assign a value higher than the `windowLevel` of the keyboard window, it will be always `1` less. 
+This does not work as expected on iOS 11 and newer. The setter would not allow you to assign a value higher than the `windowLevel` of the keyboard window, it will be always `1` less.
 
 The solution to this was to create a custom class inheriting from `UIWindow` and overriding the `windowLevel` getter with some hard-coded high value
 
@@ -51,7 +51,7 @@ If you now create this window and make it visible, it will be shown on top of yo
 
 ### 2. `UIViewController` with the original view snapshot
 
-The next step was to create a `UIViewController` that will be shown in the new window. 
+The next step was to create a `UIViewController` that will be shown in the new window.
 
 #### Dim effect
 
@@ -70,7 +70,7 @@ to get the dim effect
 
 #### Highlighted original view
 
-The next step was taking the original view, for example the `contentView` of the `UITableViewCell` and highlight it in this new `UIViewController`. 
+The next step was taking the original view, for example the `contentView` of the `UITableViewCell` and highlight it in this new `UIViewController`.
 
 With `focusedView` as the original view I first created a snapshot from this view
 
@@ -99,7 +99,7 @@ let convertedFrame = view.convert(focusedView.frame, from: focusedViewSuperview)
 snapshotView.frame = convertedFrame
 ```
 
-With that you can now see the view highlighted        
+With that you can now see the view highlighted
 
 ![Highlight effect](HighlightEffect.png)
 

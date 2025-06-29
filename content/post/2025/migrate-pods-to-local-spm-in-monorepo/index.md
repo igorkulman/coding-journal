@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["Swift", "iOS"]
+Tags = ["iOS", "Swift", "SPM", "Monorepo"]
 author = "Igor Kulman"
 date = "2025-06-18T05:29:12+01:00"
 title = "Migrating internal iOS libraries to a monorepo using Swift Package Manager"

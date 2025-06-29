@@ -3,15 +3,13 @@ title = "My year with the Raspberry Pi and what I used it for"
 author = "Igor Kulman"
 date = "2015-02-13"
 url = "/my-year-with-the-raspberry-pi-and-what-i-used-it-for/"
-categories = ["Programming in general"]
-tags = ["IoT","Raspberry Pi"]
-keywords = ["IoT","Raspberry Pi", "nodejs", "Linux", "Kodi"]
+Tags = ["IoT", "Raspberry Pi", "Linux", "Node.js", "Kodi", "Hardware"]
 +++
 I have been owning and using a Raspberry Pi for over a year now. I started with Raspberry Pi model B and now I added Raspberry Pi 2 immediately after it was announced. Thanks to the fact that an IoT version of Windows 10 will run on the Pi, there is quite a hype about the Pi 2. Many people who did not care about the Pi before are now buying it because of that hype. And mostly they do not know what to do with it. So here is a list of things I used the Pi for, maybe you can get inspired.
 
 **Media center**
 
-I always wanted a small cheap low power media center to watch downloaded TV shows on the TV. The Pi was an ideal machine to built. I connected the Pi to a power source, ethernet, external hard drive the TV using HDMI. My distro of choice was [RaspBMC][1] at first but then I switched to [XBIAN][2]. Using this setup, the PI run XBMC (a media center software), that scanned the connected hard drive, found all the downloaded TV shows, and downloaded their metadata to make the experience better. Thanks to HDMI throughput I was able to control XBMC on the PI using the TV remote, not keyboard or mouse needed. 
+I always wanted a small cheap low power media center to watch downloaded TV shows on the TV. The Pi was an ideal machine to built. I connected the Pi to a power source, ethernet, external hard drive the TV using HDMI. My distro of choice was [RaspBMC][1] at first but then I switched to [XBIAN][2]. Using this setup, the PI run XBMC (a media center software), that scanned the connected hard drive, found all the downloaded TV shows, and downloaded their metadata to make the experience better. Thanks to HDMI throughput I was able to control XBMC on the PI using the TV remote, not keyboard or mouse needed.
 
 <!--more-->
 
@@ -27,17 +25,17 @@ I am not a hardware guy but I wanted to do some hardware experimenters to use th
 
 ![Raspberry Pi with temperature sensor](pitherm.jpg)
 
-Reading the temperature using the command line is not really comfortable, so I created a web UI for the thermometer. I wrote it in Node.js, because it seemed like an interesting platform to try. I made the whole project open source, and you can find it at <https://github.com/igorkulman/rpi-thermometer>. 
+Reading the temperature using the command line is not really comfortable, so I created a web UI for the thermometer. I wrote it in Node.js, because it seemed like an interesting platform to try. I made the whole project open source, and you can find it at <https://github.com/igorkulman/rpi-thermometer>.
 
 ![Temperature UI](pi-ui.png)
 
-Later I added a WiFi module and tried powering the PI from a battery bank. I basically created a WiFi enabled thermometer, that looked a bit strange. I think I need to get a small LCD display, so there is no need to open a browser when you just want to know the temperature. 
+Later I added a WiFi module and tried powering the PI from a battery bank. I basically created a WiFi enabled thermometer, that looked a bit strange. I think I need to get a small LCD display, so there is no need to open a browser when you just want to know the temperature.
 
 {{% github-repo "igorkulman/rpi-thermometer" %}}
 
 **NAS and backups**
 
-I had an external disk connected to the PI so I also ran Samba. I used it to offload some of my data to the PI. I am quite a paranoid person, so I also cloned all my personal and work Git repos to the PI and wrote a script that ran &#8220;git pull&#8221; on all of them every night. 
+I had an external disk connected to the PI so I also ran Samba. I used it to offload some of my data to the PI. I am quite a paranoid person, so I also cloned all my personal and work Git repos to the PI and wrote a script that ran &#8220;git pull&#8221; on all of them every night.
 
 **Audio streaming in the office**
 
@@ -47,7 +45,7 @@ So I connected the PI to the speakers and found and installed [Music Box][7] on 
 
 **Windows 10?**
 
-Running a version of Windows 10 on the Pi is really interesting when you think about it, but everything I did with the Pi I was able to do without Windows. I could do it because there was a ton of open source ready made tools to help me. At least in the beginning, this will be a problem with Windows 10. I am sure it will take some time for people to create things like thermometer drivers, GPIO control libraries, etc. 
+Running a version of Windows 10 on the Pi is really interesting when you think about it, but everything I did with the Pi I was able to do without Windows. I could do it because there was a ton of open source ready made tools to help me. At least in the beginning, this will be a problem with Windows 10. I am sure it will take some time for people to create things like thermometer drivers, GPIO control libraries, etc.
 
 But there is one area I can see Windows 10 to excel on the Pi, and that is building GUI apps, especially touch enabled ones. Imagine you want to build something like a kiosk with a touchscreen and you need an app for that. Using Windows 10 instead of Linux will be much easier because building GUI app on Linux using QT or GTK is quite a pain, creating a Metro (universal) app is much easier.
 

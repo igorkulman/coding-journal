@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["Git", "Xcode", "iOS"]
+Tags = ["Git", "Xcode", "iOS", "Merge Conflicts"]
 author = "Igor Kulman"
 date = "2021-12-21T05:29:12+01:00"
 title = "Automatically merging conflicts in Xcode project files"

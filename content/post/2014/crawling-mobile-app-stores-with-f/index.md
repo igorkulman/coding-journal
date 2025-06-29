@@ -3,8 +3,7 @@ title = "Crawling mobile app stores with F#"
 author = "Igor Kulman"
 date = "2014-04-07"
 url = "/crawling-mobile-app-stores-with-f/"
-categories = ["Functional programming"]
-tags = ["Fsharp","Windows Phone","Windows Store"]
+Tags = ["FSharp", "Windows Phone", "Windows Store", "App Store", "Web Scraping", "API"]
 +++
 Some time ago I needed a way to programatically search the Apple AppStore and Google Play Store to get some info about apps for a project. I decided to write an F# script for that task and later added support for Windows Phone Store.
 
@@ -39,7 +38,7 @@ let searchAppStore (term:string) (country:string) =
     let data = http (sprintf "http://itunes.apple.com/search?term=%s&entity=software&country=%s" term country)
     let res = AppStoreData.Parse data
     res.Results
-    |> Seq.map (fun x-> {Name=x.TrackName; Package=x.BundleId; IconUrl=x.ArtworkUrl60; StoreUrl = ""})   
+    |> Seq.map (fun x-> {Name=x.TrackName; Package=x.BundleId; IconUrl=x.ArtworkUrl60; StoreUrl = ""})
 ```
 
 Just downloading the JSON transforming the data to our type.
@@ -49,10 +48,10 @@ Just downloading the JSON transforming the data to our type.
 Searching in Google Play Store is a bit more of a challenge. There is no API I could found so I had to parse the html returned from the web version of Google Play Store. The web can change at any time so I need to be aware of this fact and fix the method if it happens.
 
 ```fsharp
- let searchAppStore term =   
+ let searchAppStore term =
         let data = http (sprintf "https://play.google.com/store/search?q=%s&c=apps&num=100" term)
         let doc = new HtmlDocument()
-        doc.LoadHtml(data)        
+        doc.LoadHtml(data)
         seq {
             for div in doc.DocumentNode.SelectNodes("//div") do
                 if (div.Attributes.Contains("class") && div.Attributes.["class"].Value="card no-rationale square-cover apps small") then
@@ -71,7 +70,7 @@ There is no official API for searching the Windows Phone Store but I was given a
 ```fsharp
 type AppStoreData = XmlProvider<"http://marketplaceedgeservice.windowsphone.com/v8/catalog/apps?os=8.0.10521.0&cc=CZ&lang=en-US&chunkSize=50&q=igor%20kulman">
 
-    let searchAppStore term country=   
+    let searchAppStore term country=
         let data = http (sprintf "http://marketplaceedgeservice.windowsphone.com/v8/catalog/apps?os=8.0.10521.0&cc=%s&lang=en-US&chunkSize=50&q=%s" country term)
         let res = AppStoreData.Parse data
         res.Entries

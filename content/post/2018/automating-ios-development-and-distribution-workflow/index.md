@@ -1,6 +1,6 @@
 +++
 Description = "I am a big fan of automation in software development so when I started doing iOS development one of my goals was to automate everything on the iOS project. No more manual versioning, manual build distribution... let the computers do the work for me. Here is the setup I ended up with."
-Tags = ["Swift", "iOS", "Xcode"]
+Tags = ["Swift", "iOS", "Xcode", "Automation", "CI", "Gitlab"]
 author = "Igor Kulman"
 date = "2018-09-26T08:29:12+01:00"
 title = "Automating your iOS app development and distribution workflow"
@@ -9,9 +9,9 @@ images = ["/automating-ios-development-and-distribution-workflow/automate.png"]
 
 +++
 
-I am a big fan of automation in software development so when I started doing iOS development one of my goals was to automate everything on the iOS project. 
+I am a big fan of automation in software development so when I started doing iOS development one of my goals was to automate everything on the iOS project.
 
-No more manual versioning, manual build distribution... let the computers do the work for me. Here is the setup I ended up with. 
+No more manual versioning, manual build distribution... let the computers do the work for me. Here is the setup I ended up with.
 
 ### Separate app ids for development and distribution
 
@@ -35,7 +35,7 @@ With this setup, I can
 
 ### Automatic builds and tests with Gitlab
 
-The iOS project I work on uses self-hosted [Gitlab](https://gitlab.com/) instance, so using Gitlab CI was the obvious choice. You just need a machine with macOS that is always online, install the [Gitlab runner](https://docs.gitlab.com/runner/), connect it to the Gitlab instance and you are done. Everything else is just a matter of configuration in a file in your repository. 
+The iOS project I work on uses self-hosted [Gitlab](https://gitlab.com/) instance, so using Gitlab CI was the obvious choice. You just need a machine with macOS that is always online, install the [Gitlab runner](https://docs.gitlab.com/runner/), connect it to the Gitlab instance and you are done. Everything else is just a matter of configuration in a file in your repository.
 
 <!--more-->
 
@@ -68,14 +68,14 @@ deploy:
   script:
     - fastlane set_badge
     - fastlane build
-    - fastlane deploy 
+    - fastlane deploy
   only:
     - develop
-  tags:  
+  tags:
 - ios_11-0
 ```
 
-I use [Fastlane](https://fastlane.tools/), it is a great tool I really recommend. 
+I use [Fastlane](https://fastlane.tools/), it is a great tool I really recommend.
 
 Running the tests is really simple
 
@@ -89,7 +89,7 @@ lane :tests do
   run_tests(devices: ["iPhone 8"],
             workspace: "sources/Teamwire.xcworkspace",
             scheme: "Core")
-  
+
   run_tests(devices: ["iPhone 8"],
             workspace: "sources/Teamwire.xcworkspace",
             skip_testing: "TeamwireUITests",
@@ -103,27 +103,27 @@ Before building the app I make Fastlane first log into the Apple account (`cert`
 desc "Builds the app, generates IPA"
 lane :build do
   cert
-  
+
   identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
   notification_extension_identifier = identifier + ".NotificationServiceExtension"
   share_extension_identifier = identifier + ".ShareExtension"
 
   sigh(adhoc: true, app_identifier: identifier)
   sigh(adhoc: true, app_identifier: notification_extension_identifier)
-  sigh(adhoc: true, app_identifier: share_extension_identifier)  
-  
+  sigh(adhoc: true, app_identifier: share_extension_identifier)
+
   gym(scheme: "Teamwire", clean: true, workspace: "sources/Teamwire.xcworkspace", output_directory: "build", output_name: "Teamwire.ipa",
               export_options: {
               	method: "ad-hoc",
               	iCloudContainerEnvironment: "Production",
-              	uploadSymbols: true,                  
+              	uploadSymbols: true,
                }, include_bitcode: false)
 end
 ```
 
 ### Automatic build distribution
 
-As I already mentioned, every time a pull request is merged in Gitlab, the CI creates an ad-hoc IPA and deploys it. 
+As I already mentioned, every time a pull request is merged in Gitlab, the CI creates an ad-hoc IPA and deploys it.
 
 ```ruby
 desc "Deploys built app to AppCenter"
@@ -144,11 +144,11 @@ end
 
 This step deploys the actual IPA to [AppCenter](https://appcenter.ms/). AppCenter can be used as a build distribution service for free without any serious limitations. You can make it send emails to your testers every time a new build is uploaded or you can just send out the builds manually when needed.
 
-Not only the app IPA but also debug symbols are uploaded to AppCenter for symbolication. When testers send me logs from the app and they include a crash log, I just upload the crash log to AppCenter and it gets automatically symbolicated in a few minutes. I do not have to do it manually and I can link the symbolicated crash log to an issue in Gitlab that I typically create for every reported crash. 
+Not only the app IPA but also debug symbols are uploaded to AppCenter for symbolication. When testers send me logs from the app and they include a crash log, I just upload the crash log to AppCenter and it gets automatically symbolicated in a few minutes. I do not have to do it manually and I can link the symbolicated crash log to an issue in Gitlab that I typically create for every reported crash.
 
 The automatic builds are ad-hoc builds and use the AppStore app id not the development app id to be as close to the AppStore version as possible.
 
-I also use a [Fastlane plugin to add a "BETA" word and build number to the app badge before build](https://github.com/HazAT/badge) so testers can easily distinguish if they use the AppStore or the development version. 
+I also use a [Fastlane plugin to add a "BETA" word and build number to the app badge before build](https://github.com/HazAT/badge) so testers can easily distinguish if they use the AppStore or the development version.
 
 ```ruby
 desc "Sets app badge"
@@ -158,8 +158,8 @@ lane :set_badge do
     target: "YouApp")
   build = number_of_commits.to_s
 
-  add_badge(                
-    shield: version+"-"+build+"-green",    
+  add_badge(
+    shield: version+"-"+build+"-green",
     glob: "/**/YouApp/YouApp/Assets.xcassets/AppIcon.appiconset/*.{png,PNG}",
   )
 end
@@ -173,7 +173,7 @@ resulting in
 
 It is a good practice to make your AppStore screenshots show the current version of the app and change them as the app UI changes. Making new screenshots manually is a real pain, especially if your app is localized into multiple languages or you do not use the screenshots directly but embed them into images with some marketing texts. Luckily you can [automate the process with Fastlane](https://docs.fastlane.tools/getting-started/ios/screenshots/).
 
-The idea is simple, you add helper class to you UI tests project and then create a new UI test method that goes over all the screens you want to make a screenshot of calling the helper class at the right moment. 
+The idea is simple, you add helper class to you UI tests project and then create a new UI test method that goes over all the screens you want to make a screenshot of calling the helper class at the right moment.
 
 ```swift
 func testScreenshots() {
@@ -185,11 +185,11 @@ func testScreenshots() {
 
     app.switchToInbox()
     snapshot("01-Inbox")
-        
+
     let tablesQuery = app.tables
     tablesQuery.cells.element(boundBy: 0).tap()
     snapshot("06-Alert-Chat-detail")
-        
+
     app.navigationBars.buttons.element(boundBy: 0).tap()
 
     app.tables.cells.element(boundBy: 2).tap()

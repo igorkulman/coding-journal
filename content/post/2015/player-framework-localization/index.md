@@ -3,14 +3,13 @@ title = "Player Framework localization"
 author = "Igor Kulman"
 date = "2015-04-27"
 url = "/player-framework-localization/"
-categories = ["Windows Phone","Windows Store"]
-tags = ["Windows Phone","Windows Store","XAML", "PlayerFramework"]
+Tags = ["Windows Phone", "Windows Store", "XAML", "Player Framework", "Localization", "Video"]
 +++
-In my recent universal (Windows Phone 8.1 and Windows 8.1) project I implemented PlayReady DRM protected smooth streaming movies playback using the [Player Framework][1]. This projects seems to be dead, but it is still the best option when implementing any kind of video playback. 
+In my recent universal (Windows Phone 8.1 and Windows 8.1) project I implemented PlayReady DRM protected smooth streaming movies playback using the [Player Framework][1]. This projects seems to be dead, but it is still the best option when implementing any kind of video playback.
 
-One of the first things I had to do was localize it&#8217;s controls, because the app I worked on was in Czech and Slovak, not in English (the only language the Player Framework supports out of the box). Not all the texts an be localized, but the most visible ones like button labels and error messages can. 
+One of the first things I had to do was localize it&#8217;s controls, because the app I worked on was in Czech and Slovak, not in English (the only language the Player Framework supports out of the box). Not all the texts an be localized, but the most visible ones like button labels and error messages can.
 
-To create your own localization, I suggest you create a new RESW file in your project. You can use and existing one, but I prefer to separate the texts for the Player Framework from texts for the rest of the app. 
+To create your own localization, I suggest you create a new RESW file in your project. You can use and existing one, but I prefer to separate the texts for the Player Framework from texts for the rest of the app.
 
 <!--more-->
 

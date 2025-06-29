@@ -1,6 +1,6 @@
 +++
 Description = "When I started with my hackintosh I did not have Wi-Fi or Bluetooth support in it. I used Ethernet to connect to my home network and it worked fine, I had no need for Wi-Fi. Later I wanted to use more Apple-specific features, so I started looking for how to make them work with my hackintosh."
-Tags = ["macOS", "Hackintosh"]
+Tags = ["macOS", "Hackintosh", "Wi-Fi", "Bluetooth", "Apple Features"]
 author = "Igor Kulman"
 date = "2019-06-12T05:29:12+01:00"
 title = "Adding Wi-Fi and Bluetooth to hackintosh to enable Apple-specific features"
@@ -9,7 +9,7 @@ images = ["/adding-wifi-and-bluetooth-for-apple-features-to-hackintosh/card.jpg"
 
 +++
 
-When I [started with my hackintosh](/my-experience-running-a-hackintosh/) I did not have Wi-Fi or Bluetooth support in it. I used Ethernet to connect to my home network and it worked fine, I had no need for Wi-Fi. 
+When I [started with my hackintosh](/my-experience-running-a-hackintosh/) I did not have Wi-Fi or Bluetooth support in it. I used Ethernet to connect to my home network and it worked fine, I had no need for Wi-Fi.
 
 Later I wanted to use more "Apple-specific" features, so I started looking for how to make them work with my hackintosh.
 
@@ -20,7 +20,7 @@ Adding Bluetooth support to a hackintosh is quite easy, you just need to buy any
 * [IOGear Bluetooth 4.0 Adapter](https://www.amazon.de/dp/B007MKMJGO)
 * [GMYLE Bluetooth 4.0 Adapter](https://www.amazon.de/IOGEAR-GBU521-BLUETOOTH-MICRO-ADAPTER/dp/B007GFX0PY)
 
-All of them are natively supported in macOS, no extra drivers are needed. 
+All of them are natively supported in macOS, no extra drivers are needed.
 
 ### GMYLE Bluetooth 4.0 Adapter
 
@@ -40,9 +40,9 @@ Justa s a side note, **iMessage** worked right from the start, Bluetooth is not 
 
 ### Wi-Fi required for some Apple-specific features
 
-The one thing that I was missing was **AirDrop**. I started taking screenshots regularly on my iPhone during development and testing and there was no easy way to move them to the hackintosh without **AirDrop**. 
+The one thing that I was missing was **AirDrop**. I started taking screenshots regularly on my iPhone during development and testing and there was no easy way to move them to the hackintosh without **AirDrop**.
 
-To make **AirDrop** and additional features like **Handoff** work you need not only Bluetooth but also an internal Wi-Fi card. 
+To make **AirDrop** and additional features like **Handoff** work you need not only Bluetooth but also an internal Wi-Fi card.
 
 <!--more-->
 
@@ -54,7 +54,7 @@ There are a few companies that sell the PCIe card and a Wi-Fi + Bluetooth module
 
 ### ABWB 802,11 AC WI-FI + Bluetooth 4.0 PCI-Express (PCI-E) BCM943602CS Combo Card
 
-I bought [ABWB 802,11 AC WI-FI + Bluetooth 4.0 PCI-Express (PCI-E) BCM943602CS Combo Card](https://www.amazon.de/Bluetooth-PCI-Express-BCM943602CS-Hackintosh-Flughafen/dp/B00MBP25UK), found it on German Amazon. 
+I bought [ABWB 802,11 AC WI-FI + Bluetooth 4.0 PCI-Express (PCI-E) BCM943602CS Combo Card](https://www.amazon.de/Bluetooth-PCI-Express-BCM943602CS-Hackintosh-Flughafen/dp/B00MBP25UK), found it on German Amazon.
 
 ![WiFI card](card.jpg)
 
@@ -62,9 +62,9 @@ On AliExpress you can find the [FV-T919 PCIe card](https://www.aliexpress.com/it
 
 #### Installation
 
-This product contains the mentioned **BCM943602CS** module. You need to connect it to a PCIe slot on your motherboard (works with x1 and x4) to get Wi-Fi to work. 
+This product contains the mentioned **BCM943602CS** module. You need to connect it to a PCIe slot on your motherboard (works with x1 and x4) to get Wi-Fi to work.
 
-To get the Bluetooth to work you need to connect the provided microUSB cable from the card to a USB header on the motherboard. 
+To get the Bluetooth to work you need to connect the provided microUSB cable from the card to a USB header on the motherboard.
 
 Alternatively you can use a classic microUSB cable to connect it to a working USB port on the motherboard, but I have not tried that.
 
@@ -75,7 +75,7 @@ Using this PCIe card I got
 * everything that already work with just the Bluetooth adapter (that I now no longer need)
 * **Wi-Fi** - I can now connect to my Wi-Fi network, but I still prefer Ethernet
 * **AirDrop** - sending files between my hackintosh and iPhone
-* **Handoff** - if I open a website in Safari on iPhone the hackintosh offers to continue look at it in desktop Firefox 
+* **Handoff** - if I open a website in Safari on iPhone the hackintosh offers to continue look at it in desktop Firefox
 * **Watch unlock** - my hackintosh unlocks automatically when I come close to it wearing my Apple Watch, no need to type the password
 * **Apple Pay in Safari** - I can use Apple Pay in Safari on the hackintosh and confirm the payment on my Apple Watch
 

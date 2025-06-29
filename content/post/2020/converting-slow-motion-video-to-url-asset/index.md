@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["iOS", "Xcode"]
+Tags = ["iOS", "Xcode", "AVAsset", "Video", "PHAsset"]
 author = "Igor Kulman"
 date = "2020-07-22T05:29:12+01:00"
 title = "Converting slow motion video to an URL asset for upload"
@@ -8,17 +8,17 @@ url = "/converting-slow-motion-video-to-url-asset"
 
 +++
 
-In the iOS application I currently work on the users can choose a video from the device's gallery and that video gets uploaded to the backend. 
+In the iOS application I currently work on the users can choose a video from the device's gallery and that video gets uploaded to the backend.
 
-This functionality has always worked fine but recently somebody tried to upload s slow motion video and the application was not able to handle it. 
+This functionality has always worked fine but recently somebody tried to upload s slow motion video and the application was not able to handle it.
 
 Turns out slow motion videos need a special case, they work a bit differently than normal videos.
 
 When you pick a video from the device's gallery you get a `PHAsset` of type `.video`. You can use `PHImageManager` to load it as `AVAsset`.
 
-The application just tried to cast it to `AVURLAsset` and processed it as a video file stored at some url that can be converted to `Data` and uploaded to the backend. 
+The application just tried to cast it to `AVURLAsset` and processed it as a video file stored at some url that can be converted to `Data` and uploaded to the backend.
 
-A slow motion video is an `AVAsset`, just not an `AVURLAsset` but an `AVComposition` and it needs to be treated differently. 
+A slow motion video is an `AVAsset`, just not an `AVURLAsset` but an `AVComposition` and it needs to be treated differently.
 
 The best way to make it work for my upload to backend scenario was to export it to a standard video file
 

@@ -3,12 +3,11 @@ title = "Building Windows Phone apps with FAKE"
 author = "Igor Kulman"
 date = "2014-03-31"
 url = "/building-windows-phone-apps-with-fake/"
-categories = ["Windows Phone"]
-tags = ["Fsharp","FAKE","Windows Phone"]
+Tags = ["FSharp", "FAKE", "Windows Phone", "Build Automation", "CI"]
 +++
 [FAKE][1] is a build automation system with capabilities which are similar to make and rake. It is using an easy domain-specific language (DSL) so that you can start using it without learning F#. If you need more than the default functionality you can either write F# or simply reference .NET assemblies.
 
-I have been using FAKE for quite some time now on some fairly complex projects for not only building but also running tests and creating and pushing Nuget packages and I really like. I decided to add FAKE build scripts to my Windows Phone apps to make the process of generating a XAP file for the Windows Phone Store easier. 
+I have been using FAKE for quite some time now on some fairly complex projects for not only building but also running tests and creating and pushing Nuget packages and I really like. I decided to add FAKE build scripts to my Windows Phone apps to make the process of generating a XAP file for the Windows Phone Store easier.
 
 The FAKE script I use can by used with any Windows Phone app, it will build all the projects and copy the XAP file to a release directory.
 
@@ -18,7 +17,7 @@ The FAKE script I use can by used with any Windows Phone app, it will build all 
 // include Fake lib
 #r @"tools\FAKE\tools\FakeLib.dll"
 open Fake
- 
+
 RestorePackages()
 
 // Properties
@@ -38,7 +37,7 @@ Target "Build" (fun _ ->
 )
 
 Target "Deploy" (fun _ ->
-    !! (buildDir + "*.xap")         
+    !! (buildDir + "*.xap")
         |> Copy releaseDir
 )
 
@@ -47,11 +46,11 @@ Target "Default" (fun _ ->
 )
 
 // Dependencies
-"Clean"  
-  ==> "Build"  
+"Clean"
+  ==> "Build"
   ==> "Deploy"
-  ==> "Default" 
- 
+  ==> "Default"
+
 // start build
 Run "Default"
 ```

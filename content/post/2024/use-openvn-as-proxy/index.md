@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["Swift", "iOS"]
+Tags = ["OpenVPN", "Proxy", "GitLab", "DevOps"]
 author = "Igor Kulman"
 date = "2024-04-04T05:29:12+01:00"
 title = "Use OpenVPN as a proxy to more comfortably access internal Gitlab"
@@ -43,7 +43,7 @@ services:
         volumes:
             - ./config.ovpn:/config/config.ovpn
         environment:
-            - LOCAL_NETWORK=192.168.1.1/24            
+            - LOCAL_NETWORK=192.168.1.1/24
             - OPENVPN_USERNAME=username
             - OPENVPN_PASSWORD=password
         ports:

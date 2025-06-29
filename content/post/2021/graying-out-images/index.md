@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["Swift", "Xcode", "Cocoa"]
+Tags = ["Swift", "Xcode", "Cocoa", "macOS", "Image Processing"]
 author = "Igor Kulman"
 date = "2021-02-17T05:29:12+01:00"
 title = "Graying out images in Cocoa"
@@ -9,7 +9,7 @@ images = ["/graying-out-images/flags.png"]
 
 +++
 
-I have been working on a macOS application recently where I encountered an interesting task to grey out flags for countries that are disabled. 
+I have been working on a macOS application recently where I encountered an interesting task to grey out flags for countries that are disabled.
 
 ![Colorful flags](flags-original.png)
 

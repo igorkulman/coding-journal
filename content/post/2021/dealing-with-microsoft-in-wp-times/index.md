@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["Windows Phone", "Windows Store", "Windows 8"]
+Tags = ["Windows Phone", "Windows Store", "Windows 8", "Microsoft"]
 author = "Igor Kulman"
 date = "2021-08-25T05:29:12+01:00"
 title = "My experience dealing with Microsoft in the old Windows Phone times"
@@ -8,7 +8,7 @@ url = "/dealing-with-microsoft-in-wp-times"
 
 +++
 
-This summer marks exactly a decade since I started doing mobile apps development. My first mobile app was called MyTVShows and was released to the Windows Phone Store in summer of 2011. 
+This summer marks exactly a decade since I started doing mobile apps development. My first mobile app was called MyTVShows and was released to the Windows Phone Store in summer of 2011.
 
 The app solved a practical problem for me, keeping track of new episodes. I later rewrote the app as TvTime which was one of my most successful Windows Phone apps.
 
@@ -20,17 +20,17 @@ Disclaimer: Microsoft is a huge company so my experience is hopefully not the ge
 
 ## Windows Phone app competitions
 
-In 2012 the Czech Microsoft started a competition giving every developer a Nokia Lumia 800 for publishing 3 apps to the Windows Phone Store. 
+In 2012 the Czech Microsoft started a competition giving every developer a Nokia Lumia 800 for publishing 3 apps to the Windows Phone Store.
 
 The problem was the quality of those apps did not matter at all. The goal was to increases the number of the apps as much as possible, probably reaching some arbitrary number set by Redmond.
 
 ![Nokia Lumia 800](lumia.jpg)
 
-The Czech Windows Phone Store was flooded by crappy apps created only because of this competition, not having any real value for the user. I remember an app with one input and one button doing some kind of number conversion. 
+The Czech Windows Phone Store was flooded by crappy apps created only because of this competition, not having any real value for the user. I remember an app with one input and one button doing some kind of number conversion.
 
 Microsoft just wanted to bump the app numbers count by any means necessary to be able to compare the Windows Phone Store to other mobile app stores.
 
-This also reminded me that Microsoft was really bad at competitions overall, another example was [destroying DVLUP after purchasing Nokia](/the-sad-state-of-dvlup-ms-tech-rewards/). 
+This also reminded me that Microsoft was really bad at competitions overall, another example was [destroying DVLUP after purchasing Nokia](/the-sad-state-of-dvlup-ms-tech-rewards/).
 
 <!--more-->
 
@@ -58,7 +58,7 @@ I quickly added a way for all the news articles to be translated to into English
 
 ### Czech Windows 8 development conference
 
-In May 2012 Czech Microsoft organized a conference about Windows 8 development. I was invited as a speaker on the topic of Windows Store having some recent dealings with it. 
+In May 2012 Czech Microsoft organized a conference about Windows 8 development. I was invited as a speaker on the topic of Windows Store having some recent dealings with it.
 
 ![W8K conference](win8konference.png)
 
@@ -74,13 +74,13 @@ Microsoft just could not understand that in 2013 their Windows 8 competing with 
 
 ## Windows 8 projects
 
-In Slovakia the developer evangelist I had a good relation with was replaced by a different one. He was a total bullshitter. 
+In Slovakia the developer evangelist I had a good relation with was replaced by a different one. He was a total bullshitter.
 
 He called me multiple times, promised several Windows 8 projects. He never deliver of any of his promises. When I actually needed something from him he just completely ignored me. Not just me but also my clients that I built the apps for.
 
-During this period, Slovak and Czech Microsoft launched a Windows Store app competition with a category called "applications for quantity". For real. 
+During this period, Slovak and Czech Microsoft launched a Windows Store app competition with a category called "applications for quantity". For real.
 
-In this category they rewarded developers with the largest number of published apps, of course, regardless of quality. 
+In this category they rewarded developers with the largest number of published apps, of course, regardless of quality.
 
 The infestation of Windows Store with poorly built apps continued. I did not care much about Windows 8 and the Windows Store but I still liked Windows Phone and really disliked how Microsoft was handling this.
 
@@ -88,11 +88,11 @@ The developer evangelist finally arranged two projects for me. Both projects cam
 
 The graphic designer was definitely an iOS user because the designs for Windows 8 were full of gradients and reflections, created for just one resolution. He probably never saw any Windows 8 apps, knew nothing about the "Metro" style.
 
-In the Czech Republic the developer evangelist I dealt with before was also replaced, also by a total bullshitter. We agreed to create big Windows 8 news app for a customer who already had a popular iPad app. 
+In the Czech Republic the developer evangelist I dealt with before was also replaced, also by a total bullshitter. We agreed to create big Windows 8 news app for a customer who already had a popular iPad app.
 
 ![Windows 8 app for the Czech Economic News magazine](hn.jpg)
 
-This developer evangelist promised us a promotion in the Windows Store, promotion of the application at hardware vendors, creation and publication of a case-study and publication and promotion of an article about creating an application on MSDN and other portals. 
+This developer evangelist promised us a promotion in the Windows Store, promotion of the application at hardware vendors, creation and publication of a case-study and publication and promotion of an article about creating an application on MSDN and other portals.
 
 Of course, none of this ever happened. I wrote about a five page text about developing the applications, the challenges encountered and solutions used that never got published anywhere.
 
@@ -106,13 +106,13 @@ I contacted the Slovak developer evangelist but he totally ignored me. To this d
 
 When finishing one for the Slovak projects I needed to implement a way for the user to buy daily issues of a magazine. I made a recommendation to the client not to use in-app purchases as Microsoft was boasting at the time that apps in Windows Store could implement any payment mechanism they wanted.
 
-The in-app purchases had a ton of problems at that time and they did not even support creating more than I think 100 separate items so absolutely useless for a magazine with daily new issues. 
+The in-app purchases had a ton of problems at that time and they did not even support creating more than I think 100 separate items so absolutely useless for a magazine with daily new issues.
 
 The client decided to consult with Slovak Microsoft. The result was I was taken off the project, probably at the developer evangelists insistence. He never responded to my emails so I can just guess but it would be consistent with other behavior.
 
 ## Conclusion
 
-Sometimes I miss the old Windows Phone times. I was creating a new mobile app from scratch every few months in my day job and on the side. 
+Sometimes I miss the old Windows Phone times. I was creating a new mobile app from scratch every few months in my day job and on the side.
 
 Basically every company getting some funding wanted a mobile app, some even an Windows Phone app, as having a mobile app was considered to be trendy, even though most of the apps were never updated.
 

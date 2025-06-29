@@ -1,6 +1,6 @@
 +++
 Description = "A few weeks ago I encountered a strange problem when working on an iOS application that seemed really strange at first sight."
-Tags = ["Swift", "iOS", "Xcode"]
+Tags = ["Swift", "iOS", "Xcode", "Gestures", "UIEdge"]
 author = "Igor Kulman"
 date = "2019-01-09T05:29:12+01:00"
 title = "Why is there a \"lag\" in iOS gesture detection near the edges of the screen?"
@@ -25,7 +25,7 @@ and moved up with the keyboard
 
 ### The problem
 
-When the keyboard was visible the quick recording button worked as expected, but when the quick recording button was at the bottom of the screen there was a "lag", a delay of about 1 second, between touching the button and the `.touchDown` even firing. 
+When the keyboard was visible the quick recording button worked as expected, but when the quick recording button was at the bottom of the screen there was a "lag", a delay of about 1 second, between touching the button and the `.touchDown` even firing.
 
 <!--more-->
 
@@ -45,7 +45,7 @@ Always just setting `[.bottom, .right]` had some negative effects, I had to swip
 
 The key seemed to be to set `var preferredScreenEdgesDeferringSystemGestures: UIRectEdge` to `[.bottom, .right]` only when the user was going to press quick the recording button, like in `func point(inside point: CGPoint, with event: UIEvent?) -> Bool` and then setting it back to `[]` when the user released the button.
 
-This worked because  `func point(inside point: CGPoint, with event: UIEvent?) -> Bool` got called without any "lag" twice immediately when the user started holding the quick recording button. The first execution of this method adjusted `var preferredScreenEdgesDeferringSystemGestures: UIRectEdge` and the `.touchDown` event got then fired almost immediately with no noticeable "lag". I then reset `var preferredScreenEdgesDeferringSystemGestures: UIRectEdge` when the user stopped holding the button. 
+This worked because  `func point(inside point: CGPoint, with event: UIEvent?) -> Bool` got called without any "lag" twice immediately when the user started holding the quick recording button. The first execution of this method adjusted `var preferredScreenEdgesDeferringSystemGestures: UIRectEdge` and the `.touchDown` event got then fired almost immediately with no noticeable "lag". I then reset `var preferredScreenEdgesDeferringSystemGestures: UIRectEdge` when the user stopped holding the button.
 
 I decided to use notifications not to introduce any tight coupling between the button and the root view controller. I defined a new notification
 

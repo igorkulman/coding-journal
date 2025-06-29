@@ -1,9 +1,9 @@
 +++
 Description = ""
-Tags = ["iOS", "Xcode"]
+Tags = ["Swift", "Xcode", "Error Handling", "Logging"]
 author = "Igor Kulman"
 date = "2020-04-15T05:29:12+01:00"
-title = "Logging error messages from assert and fatalerror"
+title = "Logging error messages from assert and fatalError"
 url = "/logging-error-messages-from-assert-and-fatalerror"
 
 +++
@@ -52,9 +52,9 @@ func formatLogMessage(_ logString: String, file: StaticString = #file, function:
 }
 ```
 
-Instead of calling `fatalerror(message:)` I now call `fail(message:)` instead in all the places it is needed and the message is always logged. 
+Instead of calling `fatalerror(message:)` I now call `fail(message:)` instead in all the places it is needed and the message is always logged.
 
-As a downside if you have debugger attached it stops in the actual `fatalerror` call not on the `fail` method call, so you need to move one method up in the stack trace to see the actual place your application failed. 
+As a downside if you have debugger attached it stops in the actual `fatalerror` call not on the `fail` method call, so you need to move one method up in the stack trace to see the actual place your application failed.
 
 For me it is worth it, I am much more interested in the error messages in the logs than this.
 

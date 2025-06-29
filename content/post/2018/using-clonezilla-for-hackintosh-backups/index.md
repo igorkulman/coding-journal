@@ -1,6 +1,6 @@
 +++
 Description = "If you are a macOS user you may be used to Time Machine as the standard for backups. Time Machine is fine if you want to backup your files and configuration, but if for example your disk dies or your hackintosh completely breaks with some bad update, there are better and faster ways to get it up and running again. "
-Tags = ["macOS", "Clonezilla", "Hackintosh"]
+Tags = ["macOS", "Hackintosh", "Backup", "CloneZilla"]
 author = "Igor Kulman"
 date = "2018-02-14T09:29:12+01:00"
 title = "Using CloneZilla for regular hackintosh backups"
@@ -11,7 +11,7 @@ images = ["/using-clonezilla-for-hackintosh-backups/clonezilla.jpg"]
 
 **Update**: With macOS Catalina I switched to [bootable daily incremental backups](/creating-bootable-macos-backups).
 
-If you are a macOS user you may be used to Time Machine as the standard for backups. Time Machine is fine if you want to backup your files and configuration, but if for example your disk dies or your hackintosh completely breaks with some bad update, there are better and faster ways to get it up and running again. 
+If you are a macOS user you may be used to Time Machine as the standard for backups. Time Machine is fine if you want to backup your files and configuration, but if for example your disk dies or your hackintosh completely breaks with some bad update, there are better and faster ways to get it up and running again.
 
 ## Requirements
 
@@ -22,7 +22,7 @@ Basically everything comes down to your backup requirements. These are mine
 * no need for the ability to restore single files (all work data are in Git and Dropbox)
 * reasonable backup and restore speed
 
-Looking at different backup solutions I chose [Clonezilla](http://clonezilla.org/). It is not exactly the most user-friendly solution, but it is a very powerful one if you know what you are doing. 
+Looking at different backup solutions I chose [Clonezilla](http://clonezilla.org/). It is not exactly the most user-friendly solution, but it is a very powerful one if you know what you are doing.
 
 <!--more-->
 
@@ -34,11 +34,11 @@ Once a week I, or before a macOS update I
 * save the macOS SSD as an image file to a data HDD
 * delete old backups to keep just 4 latest ones
 
-Although I use High Sierra I kept the *HFS+* file system. One of the reasons was that Clonezilla understands *HFS+* when saving the image file. 
+Although I use High Sierra I kept the *HFS+* file system. One of the reasons was that Clonezilla understands *HFS+* when saving the image file.
 
 This means the resulting backups are only as big as the actually used disk space on my macOS SSD. I use a 256 GB SSD for macOS but the backups currently have only 63 GB which is my used disk space. It takes Clonezilla about 10 minutes to do the backup.
 
-Clonezilla can of course also backup *APFS* partitions but just with a sector by sector backup (basically a *dd*), meaning the resulting image file is the same size as the SSD no matter what amount of disk space you actually use. 
+Clonezilla can of course also backup *APFS* partitions but just with a sector by sector backup (basically a *dd*), meaning the resulting image file is the same size as the SSD no matter what amount of disk space you actually use.
 
 ## Test
 

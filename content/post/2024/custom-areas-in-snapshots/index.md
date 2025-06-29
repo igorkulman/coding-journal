@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["Swift", "iOS"]
+Tags = ["iOS", "Swift", "MapKit", "Snapshots"]
 author = "Igor Kulman"
 date = "2024-08-21T05:29:12+01:00"
 title = "Drawing custom areas into map snapshots in iOS"
@@ -37,7 +37,7 @@ snapShotter.start { snapshot, error in
 
     completion(snapshot.image)
 }
-```                
+```
 
 When sharing a location the user can also draw one or more overlays to designate something important around the location, so I needed to add those ares also to the map preview for better experience.
 
@@ -62,7 +62,7 @@ overlays.forEach {
         context.addLine(to: snapshot.point(for: $0.coordinates[i]))
     }
     context.closePath()
-       
+
     context.setFillColor(color.withAlphaComponent(0.2).cgColor)
     context.setStrokeColor(alpha.cgColor)
     context.setLineWidth(2)

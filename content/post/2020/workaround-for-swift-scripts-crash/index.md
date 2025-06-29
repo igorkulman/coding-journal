@@ -1,6 +1,6 @@
 +++
 Description = "If you updated to Xcode 11.4 that ships with Swift 5.2 you might have noticed that your Swift scripts all started crashing when accessing anything related to URL. Luckily I found a workaround!"
-Tags = ["macOS", "Xcode"]
+Tags = ["Swift", "Scripting", "Crash", "Workaround"]
 author = "Igor Kulman"
 date = "2020-03-26T05:29:12+01:00"
 title = "Workaround for Swift scripts crashing after update to Xcode 11.4"
@@ -9,7 +9,7 @@ images = ["/workaround-for-swift-scripts-crash/Swift_logo.png"]
 
 +++
 
-If you have already updated to Xcode 11.4 that ships with Swift 5.2 you might have noticed that your Swift scripts all started crashing when accessing anything related to `URL`. 
+If you have already updated to Xcode 11.4 that ships with Swift 5.2 you might have noticed that your Swift scripts all started crashing when accessing anything related to `URL`.
 
 I use a script to [generate a list of libraries used in the app and their licenses](/generating-a-list-of-libraries-your-ios-app-uses/) and running it now results in
 
@@ -35,7 +35,7 @@ fish: '/usr/bin/env xcrun swift fetch_…' terminated by signal SIGSEGV (Address
 
 This is a Swift bug [that has been already reported](https://bugs.swift.org/browse/SR-12403).
 
-Luckily **I found a workaround!**. 
+Luckily **I found a workaround!**.
 
 If you do not run the script directly with `swift` but instead compile it first with `swiftc` and then run the binary, everything works just fine.
 

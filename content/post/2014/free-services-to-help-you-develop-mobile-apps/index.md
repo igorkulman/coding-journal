@@ -1,6 +1,7 @@
 +++
 title = "Free services to help you develop mobile apps"
 author = "Igor Kulman"
+Tags = ["Mobile Development", "Analytics", "Crash Reporting", "Windows Phone", "Services"]
 date = "2014-03-05"
 url = "/free-services-to-help-you-develop-mobile-apps/"
 categories = ["Windows Phone"]

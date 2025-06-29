@@ -3,10 +3,9 @@ title = "Visual Studio extensions to make your life easier"
 author = "Igor Kulman"
 date = "2015-11-02"
 url = "/visual-studio-extensions-to-make-your-life-easier/"
-categories = ["Programming in general"]
-tags = ["Visual Studio"]
+Tags = ["Visual Studio", "Extensions", "Productivity", "Development Tools"]
 +++
-This blog post is inspired by the [7 open-source Visual Studio Extensions to make your life easier][1] article. In the article Igal Tabachnik showed his favorite Visual Studio extensions, that were quite interesting. I also use a few Visual Studio extensions that make my life easier, so I decided to share. 
+This blog post is inspired by the [7 open-source Visual Studio Extensions to make your life easier][1] article. In the article Igal Tabachnik showed his favorite Visual Studio extensions, that were quite interesting. I also use a few Visual Studio extensions that make my life easier, so I decided to share.
 
 <!--more-->
 
@@ -18,7 +17,7 @@ Small and simple extension with just one task, displaying indent and page width 
 
 **[VSColorOutput][4]**
 
-VSColorOutput can change the color of a line emitted to the output window based on specified rules. The rules consist of regular expressions. Rules map to classifications which in turn map to colors. The default patterns will color build errors in red, warnings in yellow/gold and successful build messages in green. It also colors the output of debug messages when running an app, so you can easily sort exceptions and your custom debug messages containing certain words. 
+VSColorOutput can change the color of a line emitted to the output window based on specified rules. The rules consist of regular expressions. Rules map to classifications which in turn map to colors. The default patterns will color build errors in red, warnings in yellow/gold and successful build messages in green. It also colors the output of debug messages when running an app, so you can easily sort exceptions and your custom debug messages containing certain words.
 
 ![VSColorOutput](vscoloroutput.png)
 
@@ -30,7 +29,7 @@ By default, Visual Studio shows the name of the opened solution name in the titl
 
 **[AsyncFixer][9]**
 
-AsyncFixer helps developers in finding and correcting 3 common async/await misuses. AsyncFixer was tested with hundreds of C# apps and successfully handles many corner cases. AsyncFixer will work just in the IDE and work as an analyzer on every project you open in Visual Studio. It can also operate in batch mode to correct all misuses in the document, project, or solution. 
+AsyncFixer helps developers in finding and correcting 3 common async/await misuses. AsyncFixer was tested with hundreds of C# apps and successfully handles many corner cases. AsyncFixer will work just in the IDE and work as an analyzer on every project you open in Visual Studio. It can also operate in batch mode to correct all misuses in the document, project, or solution.
 
 ![AsyncFixer](asyncfixer-1.gif)
 

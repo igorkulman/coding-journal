@@ -1,6 +1,6 @@
 +++
 Description = "When working on an iOS app you may sometimes need to inspect or debug the network traffic between the app and the server to see what exactly is going on. Or you may be just curious to see what data other apps send about you to their servers. The way to achieve this is to run a proxy on your computer and route all the traffic from your iOS device through that proxy. "
-Tags = ["macOS", "iOS", "mitmproxy"]
+Tags = ["macOS", "iOS", "mitmproxy", "Network Debugging"]
 author = "Igor Kulman"
 date = "2019-01-30T05:29:12+01:00"
 title = "Debugging iOS network traffic"
@@ -9,7 +9,7 @@ images = ["/debugging-ios-network-traffic/logo.png"]
 
 +++
 
-When working on an iOS app you may sometimes need to inspect or debug the network traffic between the app and the server to see what exactly is going on. Or you may be just curious to see what data other apps send about you to their servers. The way to achieve this is to run a proxy on your computer and route all the traffic from your iOS device through that proxy. 
+When working on an iOS app you may sometimes need to inspect or debug the network traffic between the app and the server to see what exactly is going on. Or you may be just curious to see what data other apps send about you to their servers. The way to achieve this is to run a proxy on your computer and route all the traffic from your iOS device through that proxy.
 
 ## mitmproxy
 
@@ -41,7 +41,7 @@ This is sufficient to debug HTTP traffic, but if you want to debug HTTPS traffic
 
 ### Certificate
 
-Open Safari on your iOS device, navigate to `mitm.it` and install the certificate for the Apple devices. 
+Open Safari on your iOS device, navigate to `mitm.it` and install the certificate for the Apple devices.
 
 ![Installing certificate on iOS](cert.png)
 
@@ -51,7 +51,7 @@ Then go to **Settings | General | About | Certificate Trust Settings** and give 
 
 ## Debugging network requests
 
-You can now start doing network requests on your iOS device by opening websites in Safari, using various apps and see them in mitmproxy. 
+You can now start doing network requests on your iOS device by opening websites in Safari, using various apps and see them in mitmproxy.
 
 Apps that take security more seriously will stop working, because they do certificate pinning and there is no good way to debug their network requests (try refreshing the feed in Twitter for example).
 

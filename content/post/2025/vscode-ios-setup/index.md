@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["Swift", "iOS"]
+Tags = ["iOS", "Swift", "VSCode", "Development Environment"]
 author = "Igor Kulman"
 date = "2025-02-26T05:29:12+01:00"
 title = "Visual Studio Code setup for iOS development with Copilot"
@@ -49,7 +49,7 @@ The configuration gets saved to the `.vscode/settings.json` file, and you need t
 }
 ```
 
-Next, make Sweetpad generate the build server configuration for you. You can access the command from the command palette (`Cmd + Shift + P`). 
+Next, make Sweetpad generate the build server configuration for you. You can access the command from the command palette (`Cmd + Shift + P`).
 
 ![Generate build server config](generateconfig.png)
 
@@ -87,16 +87,16 @@ This will also get rid of any previously shown errors that were caused by depend
 
 You can now press `F5` to run the app, but a better way is to properly set up the debugger.
 
-Open the Debug pane, click **Create a launch.json file**, and select `Sweetpad (LLDB)`. 
+Open the Debug pane, click **Create a launch.json file**, and select `Sweetpad (LLDB)`.
 
 ![Generating debugger configuration](debugsetup.png)
 
 This will create a default configuration for you that should work without any additional changes, so just save it. The created file is `.vscode/launch.json`.
 
 ```json
-{    
+{
     "version": "0.2.0",
-    "configurations": [    
+    "configurations": [
         {
             "type": "sweetpad-lldb",
             "request": "attach",

@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = [ "Hugo", "static", "Wordpress"]
+Tags = ["Hugo", "Static Site", "WordPress", "Blog"]
 author = "Igor Kulman"
 date = "2015-11-23T13:13:55+01:00"
 title = "Going static: From Wordpress to Hugo"
@@ -16,7 +16,7 @@ There are [quite a few static site generators](https://www.staticgen.com/) out t
 
 <!--more-->
 
-[Hugo](https://gohugo.io/) is a static site generator written in Go. That means no dependencies, just one binary you download and use. On Windows, you can even [get it using Chocolatey](https://chocolatey.org/packages/hugo). It has a [nice tutorial](https://gohugo.io/overview/quickstart/), a lively community and a few ready made themes. 
+[Hugo](https://gohugo.io/) is a static site generator written in Go. That means no dependencies, just one binary you download and use. On Windows, you can even [get it using Chocolatey](https://chocolatey.org/packages/hugo). It has a [nice tutorial](https://gohugo.io/overview/quickstart/), a lively community and a few ready made themes.
 
 **Getting the content from Wordpress**
 
@@ -24,6 +24,6 @@ If you are coming to Hugo from Wordpress, there is a [plugin to export all the c
 
 **Hosting on Github Pages**
 
-One of the things I wanted to try after switching to a static website was hosting it on [Github Pages](https://pages.github.com/), because the Git deployment story is more comfortable than copying or syncing the generated content over FTP to my hosting provider. Github Pages also offer kind of a CDN for your content. Setting it all up is not very complicated, there is a [tutorial in Hugo documentation that will walk you through the process](https://gohugo.io/tutorials/github-pages-blog/). 
+One of the things I wanted to try after switching to a static website was hosting it on [Github Pages](https://pages.github.com/), because the Git deployment story is more comfortable than copying or syncing the generated content over FTP to my hosting provider. Github Pages also offer kind of a CDN for your content. Setting it all up is not very complicated, there is a [tutorial in Hugo documentation that will walk you through the process](https://gohugo.io/tutorials/github-pages-blog/).
 
 However, there are a few limitations when using with Github Pages. There are no redirects, so I could not redirect my RRS feed to the new one. A much bigger problem is that there is no way to set caching time for static resources like CSS and JS files.

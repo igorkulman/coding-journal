@@ -1,6 +1,6 @@
 +++
 Description = ""
-Tags = ["Swift", "iOS", "Xcode"]
+Tags = ["iOS", "Swift", "UITableView", "UX"]
 author = "Igor Kulman"
 date = "2024-01-31T05:29:12+01:00"
 title = "Using reordering and selection at the same time in UITableView"
