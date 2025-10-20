@@ -4,43 +4,13 @@
       >{{ site.Title }}</a
     >
   </div>
-
-  <div
-    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
+  
+  <!-- Mobile menu checkbox (CSS-only toggle) -->
+  <input type="checkbox" id="menu-toggle" class="hidden" />
+  <label for="menu-toggle" class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden" aria-label="Menu">
+  </label>
 
   {{ $bg_color := $.Scratch.Get "bg_color" }}<!---->
-
-  <script>
-    // base
-    const htmlClass = document.documentElement.classList;
-    setTimeout(() => {
-      htmlClass.remove('not-ready');
-    }, 10);
-
-    // mobile menu
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
-    });
-
-    // dark theme - automatic based on system
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '{{ $bg_color }}'.replace(/"/g, '');
-    const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
-      htmlClass[isDark ? 'add' : 'remove']('dark');
-    };
-
-    // init and listen for system theme changes
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    setDark(darkScheme.matches);
-    darkScheme.addEventListener('change', (event) => {
-      setDark(event.matches);
-    });
-  </script>
 
   <div
     class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"

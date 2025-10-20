@@ -2,7 +2,7 @@
 .prose code::before {
     content: normal;
 }
-  
+
 .prose code::after {
     content: normal;
 }
@@ -11,14 +11,14 @@
     margin: 2.5rem 0;
     padding: 1.75rem;
     background-color: #f8f9fa;
-    border-radius: 0.75rem;  /* Using larger radius to match your design */
+    border-radius: 0.75rem; /* Using larger radius to match your design */
     text-align: center;
 }
 
 .support-section p {
     margin: 0 0 1.25rem;
     font-size: 1.1rem;
-    color: #374151;  /* Using a softer color that matches your text style */
+    color: #374151; /* Using a softer color that matches your text style */
     font-weight: 400;
 }
 
@@ -28,8 +28,8 @@
     font-size: 0.95rem;
     font-weight: 500;
     color: #fff;
-    background-color: #333;  /* Changed to match your design's button style */
-    border-radius: 0.75rem;  /* Matching your design's rounded corners */
+    background-color: #333; /* Changed to match your design's button style */
+    border-radius: 0.75rem; /* Matching your design's rounded corners */
     text-decoration: none;
     transition: all 0.2s ease;
 }
@@ -42,7 +42,12 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     .support-section {
-        background-color: rgba(255, 255, 255, 0.08);  /* Subtle dark mode background */
+        background-color: rgba(
+            255,
+            255,
+            255,
+            0.08
+        ); /* Subtle dark mode background */
     }
 
     .support-section p {
@@ -56,5 +61,158 @@
 
     .support-section a:hover {
         background-color: #e5e5e5;
+    }
+}
+
+/* CSS-only mobile menu toggle */
+#menu-toggle {
+    display: none;
+}
+
+/* When menu is checked, show the navigation */
+#menu-toggle:checked ~ .nav-wrapper {
+    top: 0;
+}
+
+/* Transform the menu button when checked */
+#menu-toggle:checked + .btn-menu::before {
+    width: 1.5rem;
+    transform: translateY(5.5px) rotate(45deg);
+}
+
+#menu-toggle:checked + .btn-menu::after {
+    width: 1.5rem;
+    transform: translateY(-5.5px) rotate(-45deg);
+}
+
+/* Override any .open class styles since we're not using JavaScript */
+.open {
+    overflow: visible !important;
+}
+
+.open .btn-menu::before,
+.open .btn-menu::after {
+    transform: none !important;
+    width: 1.25rem !important;
+}
+
+.open .nav-wrapper {
+    top: 100% !important;
+}
+
+/* CSS-only dark theme using prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+    /* Meta theme color */
+    meta[name="theme-color"] {
+        content: "#000";
+    }
+
+    /* Body dark theme styles */
+    body::before {
+        position: fixed;
+        inset: 0px;
+        content: "";
+        background-color: rgb(0 0 0 / 0.85);
+    }
+
+    /* Button styles */
+    .btn {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+        --tw-text-opacity: 1;
+        color: rgb(0 0 0 / var(--tw-text-opacity));
+    }
+
+    /* Link hover styles */
+    .link:hover {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+    }
+
+    /* Menu button styles */
+    .btn-menu::before,
+    .btn-menu::after {
+        --tw-invert: invert(100%);
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+            var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
+            var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    }
+
+    /* Article text */
+    article {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+    }
+
+    /* Navigation wrapper */
+    .nav-wrapper {
+        --tw-bg-opacity: 1;
+        background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+    }
+
+    /* Background colors */
+    .dark\:\!bg-black\/80 {
+        background-color: rgb(0 0 0 / 0.8) !important;
+    }
+
+    .dark\:\!bg-white\/90 {
+        background-color: rgb(255 255 255 / 0.9) !important;
+    }
+
+    .dark\:bg-black {
+        --tw-bg-opacity: 1;
+        background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+    }
+
+    .dark\:bg-white\/\[8\%\] {
+        background-color: rgb(255 255 255 / 8%);
+    }
+
+    /* Text colors */
+    .dark\:text-white {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+    }
+
+    /* Invert filter */
+    .dark\:invert {
+        --tw-invert: invert(100%);
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+            var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
+            var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    }
+
+    /* Background position */
+    .dark\:\[background-position\:right\] {
+        background-position: right;
+    }
+
+    /* Hover states */
+    .dark\:hover\:bg-white\/\[12\%\]:hover {
+        background-color: rgb(255 255 255 / 12%);
+    }
+
+    .dark\:\[\&\>\*\:hover\]\:bg-white\/\[3\%\] > *:hover {
+        background-color: rgb(255 255 255 / 3%);
+    }
+
+    /* Prose invert */
+    .dark\:prose-invert {
+        --tw-prose-body: var(--tw-prose-invert-body);
+        --tw-prose-headings: var(--tw-prose-invert-headings);
+        --tw-prose-lead: var(--tw-prose-invert-lead);
+        --tw-prose-links: var(--tw-prose-invert-links);
+        --tw-prose-bold: var(--tw-prose-invert-bold);
+        --tw-prose-counters: var(--tw-prose-invert-counters);
+        --tw-prose-bullets: var(--tw-prose-invert-bullets);
+        --tw-prose-hr: var(--tw-prose-invert-hr);
+        --tw-prose-quotes: var(--tw-prose-invert-quotes);
+        --tw-prose-quote-borders: var(--tw-prose-invert-quote-borders);
+        --tw-prose-captions: var(--tw-prose-invert-captions);
+        --tw-prose-code: var(--tw-prose-invert-code);
+        --tw-prose-pre-code: var(--tw-prose-invert-pre-code);
+        --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
+        --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
+        --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
     }
 }

@@ -10,7 +10,8 @@
   <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ site.Title }}</title>
 
   <!-- meta -->
-  <meta name="theme-color" />
+  <meta name="theme-color" content="{{ $.Scratch.Get "bg_color" }}" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)" />
 
   <!-- author -->
   {{ $site_author := or site.Author.name site.Params.name site.Title }}
