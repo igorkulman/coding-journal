@@ -1,14 +1,15 @@
 <div align="center">
 
-Link in bio to **widgets**,
-your online **home screen**. ➫ [kee.so](https://kee.so/)
+gorgeous framer templates ☞ [21beats.lemonsqueezy.com](https://21beats.lemonsqueezy.com/)
+
+your online home screen ☞ [kee.so](https://kee.so/)
 
 </div>
 
 ---
 
 <div align="center">
-<h1>Paper <sup><sup><sub>6.28</sub></sup></sup></h1>
+<h1>Paper <sup><sup><sub>6.30</sub></sup></sup></h1>
 
 Demo → [hugo-paper.vercel.app](https://hugo-paper.vercel.app/)
 
