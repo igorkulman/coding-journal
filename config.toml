@@ -23,7 +23,6 @@ enableRobotsTXT = true
   name = 'Coding Journal'
   bio = 'iOS & Swift developer. Open source fan. Building privacy-first apps and sharing what I learn.'
   disableHLJS = true
-  linkedin = "igorkulman"
 
 [[menu.main]]
     name = "About me"
@@ -41,4 +40,3 @@ weight = 150
 [[related.indices]]
 name  = "tags"
 weight = 100
-
