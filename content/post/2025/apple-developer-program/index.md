@@ -77,10 +77,22 @@ It’s a strange feeling — wanting to build something useful and meaningful, h
 
 ## Even a GDPR request did not help
 
-After exhausting all normal support routes, I filed a formal GDPR request asking Apple for access to the data used in the automated decision that blocks my enrollment. 
+After exhausting all normal support routes, I filed a formal GDPR request asking Apple for access to the data used in the automated decision that blocks my enrollment.
 
 Under Article 22 they must allow a human review. Apple responded with a template email that ignored the request entirely and redirected me back to the same developer support that had already told me there is no recourse.
 
 ![GDPR response](gdpr.png)
 
 **That is it.**
+
+## Update: I eventually managed to enroll — but the core problem remains
+
+After publishing this post, several people reached out to me privately with similar experiences and suggestions.
+
+After additional attempts, I was eventually able to enroll in the Apple Developer Program by creating a completely new Apple ID and retrying the payment process multiple times. This required a new email address, a new phone number, and several days of trial and error, without any indication from Apple whether this approach would work at all.
+
+Importantly, my original Apple ID remained fully functional throughout this process — App Store purchases, iCloud, and other Apple services continued to work normally. The only thing blocked was enrollment in the Developer Program.
+
+Some people suggested that this could be related to internal fraud or compliance systems, such as AML checks. I have no way to verify this, and Apple did not confirm or deny anything. My GDPR request resulted only in a generic response redirecting me back to developer support.
+
+While I am glad I was eventually able to proceed, the core issue remains unchanged: when Apple refuses developer enrollment, there is no explanation, no appeal process, and no actionable feedback. Whether the rejection is caused by automation, policy, or error, developers are left guessing — and in my case, solving the problem required workarounds rather than guidance.
