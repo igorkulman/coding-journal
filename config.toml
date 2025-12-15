@@ -25,7 +25,7 @@ enableRobotsTXT = true
   disableHLJS = true
 
 [[menu.main]]
-    name = "About me"
+    name = "About"
     url = "/about/"
     weight = 1
 
