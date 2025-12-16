@@ -5,6 +5,7 @@ author = "Igor Kulman"
 date = "2026-01-14T05:29:12+01:00"
 title = "The Japanese reading problem that finally made me build my own app"
 url = "/japanese-reading-problem"
+series = "Building Yomu"
 
 +++
 
