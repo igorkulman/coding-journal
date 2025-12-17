@@ -213,3 +213,53 @@
         --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
     }
 }
+.project-yomu {
+  margin-bottom: 3rem;
+}
+
+.yomu-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.yomu-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 9px;
+  flex-shrink: 0;
+}
+
+.yomu-meta h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.yomu-tagline {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
+
+.yomu-description {
+  margin-top: 0.75rem;
+}
+
+.yomu-link {
+  margin-top: 0.5rem;
+}
+
+/* light / dark logo switching */
+.logo-dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo-light {
+    display: none;
+  }
+  .logo-dark {
+    display: block;
+  }
+}

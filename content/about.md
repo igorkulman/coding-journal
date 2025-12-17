@@ -13,7 +13,7 @@ subtitle = "Who am I?"
 
 🎓 I have a master’s degree in Computer Science from Charles University in Prague, with a specialization in Software Engineering.
 
-🧑‍💻 This blog is my programming journal: iOS, Swift, automation, and the occasional rant when tech misbehaves.
+🧑‍💻 This site is my programming journal: iOS, Swift, automation, and the occasional rant when tech misbehaves. I also keep a short overview of things I’m building and have worked on on the [Projects](/projects) page.
 
 🖥 I’m a big fan of open source—check out my [GitHub](https://github.com/igorkulman) for projects, tools, and experiments. I’m also a contributor to [KeePassium](https://github.com/keepassium/KeePassium), a modern open-source password manager for Apple platforms.
 
