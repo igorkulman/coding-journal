@@ -30,6 +30,11 @@
   <meta name="author" content="{{- $site_author -}}" />
   {{- end -}}
 
+  <!-- fediverse creator -->
+  {{- if site.Params.mastodon -}}
+  <meta name="fediverse:creator" content="@igorkulman@hachyderm.io" />
+  {{- end -}}
+
   <!-- css & js -->
   {{- $main := resources.Get "main.css" -}}
   <!---->
