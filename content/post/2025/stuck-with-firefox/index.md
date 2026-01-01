@@ -6,6 +6,7 @@ author = "Igor Kulman"
 date = "2025-12-30T07:00:00+01:00"
 title = "Still using Firefox — but not because of its vision"
 url = "/stuck-with-firefox"
+images = ["/stuck-with-firefox/firefox.png"]
 +++
 
 For years I have been using Firefox as my primary browser. Not out of ideology or nostalgia, but because it did the job well enough and stayed out of the way. Lately, however, I have been increasingly uncomfortable with where Firefox is heading — and yet I am still using it.

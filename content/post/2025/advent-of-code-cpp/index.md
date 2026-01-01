@@ -6,6 +6,7 @@ author = "Igor Kulman"
 date = "2025-12-23T07:00:00+01:00"
 title = "Advent of Code 2025: Modern C++ and Zed"
 url = "advent-of-code-cpp"
+images = ["/advent-of-code-cpp/advent-of-code.png"]
 +++
 
 At a client I currently work for, we started a small **code club** a few months ago. The idea was simple: regularly try something outside our day-to-day stack.
