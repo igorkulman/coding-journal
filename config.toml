@@ -27,7 +27,12 @@ enableRobotsTXT = true
 [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 1
+    weight = 3
+
+[[menu.main]]
+    name = "Apps"
+    url = "https://apps.kulman.sk"
+    weight = 2
 
 [related]
 threshold = 80
