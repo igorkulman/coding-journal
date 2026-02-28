@@ -21,14 +21,6 @@
 
   <section>{{ .Content }}</section>
 
-  {{ if ne .Type "page" }}
-  <div class="support-section">
-    <p>Enjoyed this article? Support my work by buying me a coffee! ☕️</p>
-    <a href="https://buymeacoffee.com/igorkulman" target="_blank" rel="noopener noreferrer">
-        Buy Me a Coffee
-    </a>
-  </div>
-  {{ end }}
 
   {{ if .Params.series }}
   <h4 class="see-also">{{ .Params.series }}</h4>
