@@ -21,6 +21,7 @@ enableRobotsTXT = true
   mastodon = "https://hachyderm.io/@igorkulman"
   avatar = "https://blog.kulman.sk/images/avatar.jpg"
   name = 'Coding Journal'
+  author = 'Igor Kulman'
   bio = 'iOS & Swift developer. Open source fan. Building privacy-first apps and sharing what I learn.'
   disableHLJS = true
 
