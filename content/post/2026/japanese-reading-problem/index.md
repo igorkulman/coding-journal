@@ -114,9 +114,7 @@ If the sentence contained even harder kanji, Yomu would keep furigana for those 
 
 This does not magically make Japanese easy.
 
-You still have to struggle.
-You still have to look things up.
-You still have to reread sentences.
+You still have to struggle, look things up, and reread sentences.
 
 The difficulty shifts back toward recognizing kanji and parsing sentences, rather than relying on pronunciation hints.
 
