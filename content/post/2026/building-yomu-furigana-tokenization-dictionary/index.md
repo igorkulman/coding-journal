@@ -9,8 +9,7 @@ series = "Building Yomu"
 
 +++
 
-This is the second part of a short series about building [Yomu](https://yomuapp.kulman.sk), an iOS app for reading Japanese text with adaptive furigana.
-In the [first post](/japanese-reading-problem), I described the reading problem that motivated the project. This one focuses on the technical core: how the app actually processes and renders Japanese text.
+This is the second part of a short series about building [Yomu](https://yomuapp.kulman.sk), an iOS app for reading Japanese text with adaptive furigana. In the [first post](/japanese-reading-problem), I described the reading problem that motivated the project. This one focuses on the technical core: how the app actually processes and renders Japanese text.
 
 I am intentionally skipping large parts of the app here — UI, persistence, OCR, monetization. They are either standard iOS work or not particularly interesting in the context of Japanese text processing. What follows are the parts that turned out to be non-trivial.
 
@@ -68,11 +67,7 @@ There are no spaces, and several things are happening at once:
 - Particles are attached to words
 - The dictionary form of a word often does not appear in the text at all
 
-For example:
-
-> 食べました
-is not a dictionary entry. The dictionary form is
-> 食べる
+For example, *食べました* is not a dictionary entry. The dictionary form is *食べる*.
 
 If a user taps inside *食べました*, the app must understand:
 - where the word boundaries are

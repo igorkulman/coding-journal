@@ -7,8 +7,7 @@ date = "2026-03-11T07:00:00+01:00"
 url = "/beating-app-store-review"
 +++
 
-Shipping a small, focused app on the App Store sounds straightforward.
-Build the app, make sure it works, submit it, done.
+Shipping a small, focused app on the App Store sounds straightforward: build the app, make sure it works, submit it, done.
 
 That was my assumption when I finished my first iOS game — a minimal, offline, pixel‑art push‑box puzzle inspired by classic warehouse logic games.
 
@@ -63,8 +62,7 @@ The first rejection cited Guideline 4.2 – Design – Minimum Functionality:
 
 This was confusing at first. The app had many levels, working controls, multiple screens, and no obvious missing features.
 
-The issue was not whether the game *worked*.
-It was whether it **looked complete to a reviewer opening it for the first time**.
+The issue was not whether the game *worked*. It was whether it **looked complete to a reviewer opening it for the first time**.
 
 What was missing from Apple’s perspective:
 
@@ -129,9 +127,7 @@ Despite the game being clearly in a long‑established genre, I was asked to rem
 
 What ultimately worked was renaming the app to a neutral, original name and removing the genre term from visible metadata.
 
-Nothing about the gameplay changed.
-Sometimes, the only fix is to just do what they ask, even if it feels silly.
-Arguing rarely helps; compliance usually does.
+Nothing about the gameplay changed. Sometimes, the only fix is to just do what they ask, even if it feels silly. Arguing rarely helps; compliance usually does.
 
 ## What actually made the app pass review
 
@@ -146,9 +142,7 @@ The changes that finally pushed the app through review were mostly about present
 - Calm, specific review notes
 - Screenshots framed as features, not raw gameplay
 
-None of these changed the core game.
-They changed how finished it *looked*.
-I did not add more content. I just made it more obvious that the content was there.
+None of these changed the core game. They changed how finished it *looked*. I did not add more content. I just made it more obvious that the content was there.
 
 ## What I learned
 

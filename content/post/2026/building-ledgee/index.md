@@ -16,12 +16,9 @@ Not because it was bad. Many of them were actually great.
 
 **The problem was different: they expected a mindset I simply do not have.**
 
-Most days I do not want to “analyze spending behavior.”  
-I just want to record that I spent money and continue with my day.
+Most days I do not want to “analyze spending behavior.” I just want to record that I spent money and continue with my day.
 
-If entering an expense takes effort, I postpone it.  
-If I postpone it, I forget.  
-If I forget, the app is useless.  
+If entering an expense takes effort, I postpone it. If I postpone it, I forget. If I forget, the app is useless.
 
 **That is the whole motivation behind Ledgee.**
 
@@ -44,9 +41,7 @@ Instead of building “another personal finance app,” I focused on the one mom
 
 </div>
 
-No forms.
-No confirmation screens.
-No extra “Save” tap.
+No forms, no confirmation screens, no extra “Save” tap.
 
 The app assumes the default action is: this should be recorded immediately.
 
@@ -70,19 +65,15 @@ So I made something intentionally small that does a few things well:
 
 That’s it.
 
-**No account.  
-No subscription.  
-No analytics about your life choices.**
+**No account, no subscription, no analytics about your life choices.**
 
 ## Native software still matters
 
 Ledgee is a fully native iOS app because **I still believe native software matters.**.
 
-It supports light and dark mode, Dynamic Type, and iCloud sync.  
-Your data stays private and is backed up automatically across your devices.
+It supports light and dark mode, Dynamic Type, and iCloud sync. Your data stays private and is backed up automatically across your devices.
 
-You do not create a new account just to type “coffee 4.50”.  
-The app uses system capabilities that already exist and work well.
+You do not create a new account just to type “coffee 4.50”. The app uses system capabilities that already exist and work well.
 
 For this kind of utility app, that approach feels more honest than building custom infrastructure for things the system already does well.
 
@@ -95,8 +86,7 @@ There are always ideas: budgets, tags, charts, import from bank statements, inte
 
 Some of those may show up later, but only if they do not slow down the core flow.
 
-The goal is still the same:
-record quickly, keep a clear monthly view, and have a reliable ledger.
+The goal is still the same: record quickly, keep a clear monthly view, and have a reliable ledger.
 
 <div class="screenshots-row">
 
