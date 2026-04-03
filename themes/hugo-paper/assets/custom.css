@@ -286,7 +286,7 @@
 }
 
 /* Calm single screenshot (iPad / overview) */
-.prose img:not(.inline):not(.emoji):not(.icon) {
+.prose article img:not(.inline):not(.emoji):not(.icon) {
   max-width: 88%;
   margin-left: auto;
   margin-right: auto;
