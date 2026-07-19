@@ -1,2 +1,4 @@
 https://coding-journal.netlify.com/* https://blog.kulman.sk/:splat 301!
 http://coding-journal.netlify.com/* https://blog.kulman.sk/:splat 301!
+/np/x.js https://umami-one-cyan.vercel.app/script.js 200
+/np/api/send https://umami-one-cyan.vercel.app/api/send 200
