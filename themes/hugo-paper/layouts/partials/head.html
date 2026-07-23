@@ -116,6 +116,14 @@
 
   <!-- canonical -->
   <link rel="canonical" href="{{- .Permalink -}}" />
+
+  <!-- webmentions -->
+  {{- with site.Params.webmention }}
+  <link rel="webmention" href="{{- . -}}" />
+  {{- end }}
+  {{- with site.Params.pingback }}
+  <link rel="pingback" href="{{- . -}}" />
+  {{- end }}
   {{- end -}}
   <!---->
   
