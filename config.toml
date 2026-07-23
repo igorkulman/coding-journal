@@ -17,6 +17,7 @@ enableRobotsTXT = true
   rss = true
   comments = false
   webmention = "https://webmention.io/blog.kulman.sk/webmention"
+  webmentionTarget = "https://blog.kulman.sk"
   pingback = "https://webmention.io/blog.kulman.sk/xmlrpc"
   showRelatedPosts = true
   color = 'light'

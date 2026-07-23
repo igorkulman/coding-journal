@@ -71,6 +71,23 @@
   </footer>
   {{- end -}}
 
+  <!-- Webmention reactions -->
+  {{- if and $isPost site.Params.webmentionTarget -}}
+  {{- $webmentionTarget := printf "%s%s" (strings.TrimSuffix "/" site.Params.webmentionTarget) .RelPermalink -}}
+  <section
+    id="webmentions"
+    class="webmentions"
+    data-webmentions
+    data-target="{{- $webmentionTarget -}}"
+    data-api="/webmention-api"
+    hidden
+  >
+    <h4 class="webmentions-title">Reactions</h4>
+    <div class="webmention-groups"></div>
+  </section>
+  <script defer src="{{- `webmentions.js` | relURL -}}"></script>
+  {{- end -}}
+
   <!-- Post Nav -->
   {{- if not site.Params.disablePostNavigation -}}<!---->
   {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}<!---->
