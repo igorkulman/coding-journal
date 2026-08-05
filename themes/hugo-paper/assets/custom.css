@@ -412,3 +412,13 @@
     gap: 0.5rem;
   }
 }
+
+/* Keep Carbon above the fold without interrupting the article. */
+@media (min-width: 1366px) {
+  .carbon-ads:has(#carbon-responsive) {
+    position: absolute;
+    left: calc(100% + 1.5rem);
+    width: min(300px, calc((100vw - var(--w)) / 2 - 3rem));
+    min-height: 155px;
+  }
+}

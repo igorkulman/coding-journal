@@ -28,8 +28,9 @@
     {{- end -}}
   </header>
 
-  <section class="e-content">{{ .Content }}</section>
+  {{- if $isPost -}}{{- partial "carbon-ads.html" . -}}{{- end -}}
 
+  <section class="e-content">{{ .Content }}</section>
 
   {{ if .Params.series }}
   <h4 class="see-also">{{ .Params.series }}</h4>
