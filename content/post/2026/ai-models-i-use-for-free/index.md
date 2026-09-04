@@ -2,7 +2,7 @@
 title = "Free AI models for the small stuff"
 description = "How I use free AI models with Pi for simple tasks, and the limits and privacy trade-offs that come with them."
 author = "Igor Kulman"
-date = "2026-09-30T05:29:12+01:00"
+date = "2026-10-14T05:29:12+01:00"
 tags = ["AI", "Coding Agents", "Developer Tools"]
 keywords = ["free AI models", "OpenCode Zen", "Gemini API", "Mistral API", "AI coding", "coding agents"]
 url = "/ai-models-i-use-for-free"
